@@ -1,6 +1,5 @@
 import os
 import re
-import shutil
 from dlmf_to_md import parse_dlmf_to_markdown
 
 def process_dlmf_files():
@@ -38,17 +37,5 @@ def process_dlmf_files():
             
             print(f"Converted {item} to {output_filename}")
         
-        # Copy folders matching the pattern [0-9]+
-        # elif os.path.isdir(input_path) and re.match(r'^[0-9]+$', item):
-        #     output_path = os.path.join(output_dir, item)
-            
-        #     # Remove destination directory if it exists
-        #     if os.path.exists(output_path):
-        #         shutil.rmtree(output_path)
-            
-        #     # Copy directory recursively
-        #     shutil.copytree(input_path, output_path)
-        #     print(f"Copied directory {item}")
-
 if __name__ == "__main__":
     process_dlmf_files()

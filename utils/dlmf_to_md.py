@@ -1,6 +1,47 @@
 import re
 from bs4 import BeautifulSoup
 
+def postprocess(full_markdown):
+    toc_sections = full_markdown.split("## Table of Contents")
+    if len(toc_sections) > 1:
+        # First part before any TOC
+        result = toc_sections[0]
+        
+        # Add first TOC
+        result += "## Table of Contents" + toc_sections[1]
+        
+        # Add remaining content without TOC headers
+        for i in range(2, len(toc_sections)):
+            # Find where the next section header starts
+            section_lines = toc_sections[i].split('\n')
+            section_start = 0
+            
+            for j, line in enumerate(section_lines):
+                if line.startswith('##') and not "Table of Contents" in line:
+                    section_start = j
+                    break
+            
+            # Add content from that section onwards
+            if section_start > 0:
+                result += '\n' + '\n'.join(section_lines[section_start:])
+            else:
+                # If no section header found, just add everything after the next empty line
+                for j, line in enumerate(section_lines):
+                    if line.strip() == '':
+                        section_start = j + 1
+                        break
+                
+                if section_start > 0:
+                    result += '\n' + '\n'.join(section_lines[section_start:])
+    else:
+        # No duplicate TOCs
+        result = full_markdown
+    
+    # fix multiple newlines in TOCs
+    result = re.sub(r'\#\# Table of Contents\n{4,}', '## Table of Contents\n\n', result)
+    result = re.sub(r'\n{5,}- ', '\n- ', result)
+    return result
+
 def parse_dlmf_to_markdown(html_content):
     """
     Parse DLMF HTML content and convert it to markdown format.
@@ -22,8 +63,124 @@ def parse_dlmf_to_markdown(html_content):
     
     # Process the content recursively
     process_content(content_area, markdown_content)
+    result = '\n'.join(markdown_content)
+    result = postprocess(result)
+    return result
+
+def parse_toc(toc_element):
+    """
+    Parse a table of contents element into markdown format, handling any depth of nesting.
     
-    return '\n'.join(markdown_content)
+    Args:
+        toc_element: BeautifulSoup element containing the table of contents
+        
+    Returns:
+        str: Markdown representation of the table of contents
+    """
+    if not toc_element:
+        return ""
+    
+    result = []
+    
+    # Add a title for the TOC
+    result.append("## Table of Contents\n")
+    
+    # Process the TOC recursively
+    process_toc_list(toc_element, result, level=0)
+    
+    return "\n".join(result)
+
+def process_toc_list(list_element, result, level=0):
+    """
+    Process a TOC list element recursively, handling any depth of nesting.
+    
+    Args:
+        list_element: BeautifulSoup list element to process
+        result: List to append markdown lines to
+        level: Current nesting level (for indentation)
+    """
+    # Get all direct TOC entries in this list
+    entries = list_element.find_all('li', class_='ltx_tocentry', recursive=False)
+    
+    for entry in entries:
+        # Get entry ID if available
+        entry_id = entry.get('id', '')
+        
+        # Check if this entry has a direct link or is a category
+        link = entry.find('a', class_='ltx_ref', recursive=False)
+        
+        if link:
+            # This is a linked entry (section, subsection, etc.)
+            href = link.get('href', '')
+            if href.endswith('.html'):
+                href = href.replace('.html', '.md')
+            
+            ref_title = link.find('span', class_='ltx_ref_title')
+            if not ref_title:
+                continue
+                
+            tag_span = ref_title.find('span', class_='ltx_tag')
+            section_num = tag_span.get_text().strip() if tag_span else ""
+            
+            # Extract title by handling both normal text and math elements
+            section_title = ""
+            for content in ref_title.contents:
+                if content == tag_span:
+                    continue
+                    
+                if isinstance(content, str):
+                    section_title += content
+                elif content.name == 'math':
+                    # Extract alttext from math tag and wrap it in $ for LaTeX rendering
+                    alt_text = content.get('alttext', '')
+                    if alt_text:
+                        section_title += f"${alt_text}$"
+                else:
+                    section_title += content.get_text()
+            
+            section_title = section_title.strip()
+            
+            # Format with proper indentation and add ID anchor if available
+            indent = "  " * level
+            if entry_id:
+                result.append(f"{indent}- <a id=\"{entry_id}\"></a>[{section_num} - {section_title}](./{href})")
+            else:
+                if section_num:
+                    result.append(f"{indent}- [{section_num} - {section_title}](./{href})")
+                else:
+                    result.append(f"{indent}- [{section_title}](./{href})")
+        else:
+            # This is a category/chapter title without direct link
+            title_span = entry.find('span', class_='ltx_text', recursive=False)
+            if not title_span:
+                continue
+                
+            # Extract title by handling both normal text and math elements
+            title = ""
+            for content in title_span.contents:
+                if isinstance(content, str):
+                    title += content
+                elif content.name == 'math':
+                    # Extract alttext from math tag and wrap it in $ for LaTeX rendering
+                    alt_text = content.get('alttext', '')
+                    if alt_text:
+                        title += f"${alt_text}$"
+                else:
+                    title += content.get_text()
+            
+            title = title.strip()
+            
+            # Format with proper indentation and add ID anchor if available
+            indent = "  " * level
+            if entry_id:
+                result.append(f"{indent}- <a id=\"{entry_id}\"></a>**{title}**")
+            else:
+                result.append(f"{indent}- **{title}**")
+        
+        # Process any nested lists (recursively)
+        nested_list = entry.find(['ol', 'ul'], class_='ltx_toclist')
+        if nested_list:
+            process_toc_list(nested_list, result, level + 1)
 
 def parse_equation_group(equation_group_table):
     """
@@ -108,6 +265,12 @@ def process_content(element, markdown_content):
     # Skip if not an element
     if not element or not element.name:
         return
+    
+    # Process table of contents
+    if element.name == 'ul' and 'ltx_toclist' in element.get('class', []):
+        toc_md = parse_toc(element)
+        if toc_md:
+            markdown_content.append("## Table of Contents\n\n" + toc_md)
     
     # Process subsection headers
     # Process h2 subsection headers

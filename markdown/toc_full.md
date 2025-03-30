@@ -1,0 +1,1070 @@
+# Table of Contents (Full)
+
+- 1 - Algebraic and Analytic Methods
+  - **Notation**
+      - 1.1 - Special Notation
+  - **Topics of Discussion**
+      - 1.2 - Elementary Algebra
+      - 1.3 - Determinants, Linear Operators, and Spectral Expansions
+      - 1.4 - Calculus of One Variable
+      - 1.5 - Calculus of Two or More Variables
+      - 1.6 - Vectors and Vector-Valued Functions
+      - 1.7 - Inequalities
+      - 1.8 - Fourier Series
+      - 1.9 - Calculus of a Complex Variable
+      - 1.10 - Functions of a Complex Variable
+      - 1.11 - Zeros of Polynomials
+      - 1.12 - Continued Fractions
+      - 1.13 - Differential Equations
+      - 1.14 - Integral Transforms
+      - 1.15 - Summability Methods
+      - 1.16 - Distributions
+      - 1.17 - Integral and Series Representations of the Dirac Delta
+      - 1.18 - Linear Second Order Differential Operators and Eigenfunction Expansions
+- 2 - Asymptotic Approximations
+  - **Areas**
+      - 2.1 - Definitions and Elementary Properties
+      - 2.2 - Transcendental Equations
+      - 2.3 - Integrals of a Real Variable
+      - 2.4 - Contour Integrals
+      - 2.5 - Mellin Transform Methods
+      - 2.6 - Distributional Methods
+      - 2.7 - Differential Equations
+      - 2.8 - Differential Equations with a Parameter
+      - 2.9 - Difference Equations
+      - 2.10 - Sums and Sequences
+      - 2.11 - Remainder Terms; Stokes Phenomenon
+- 3 - Numerical Methods
+  - **Areas**
+      - 3.1 - Arithmetics and Error Measures
+      - 3.2 - Linear Algebra
+      - 3.3 - Interpolation
+      - 3.4 - Differentiation
+      - 3.5 - Quadrature
+      - 3.6 - Linear Difference Equations
+      - 3.7 - Ordinary Differential Equations
+      - 3.8 - Nonlinear Equations
+      - 3.9 - Acceleration of Convergence
+      - 3.10 - Continued Fractions
+      - 3.11 - Approximation Techniques
+      - 3.12 - Mathematical Constants
+- 4 - Elementary Functions
+  - **Notation**
+      - 4.1 - Special Notation
+  - **Logarithm, Exponential, Powers**
+      - 4.2 - Definitions
+      - 4.3 - Graphics
+      - 4.4 - Special Values and Limits
+      - 4.5 - Inequalities
+      - 4.6 - Power Series
+      - 4.7 - Derivatives and Differential Equations
+      - 4.8 - Identities
+      - 4.9 - Continued Fractions
+      - 4.10 - Integrals
+      - 4.11 - Sums
+      - 4.12 - Generalized Logarithms and Exponentials
+      - 4.13 - Lambert $W$-Function
+  - **Trigonometric Functions**
+      - 4.14 - Definitions and Periodicity
+      - 4.15 - Graphics
+      - 4.16 - Elementary Properties
+      - 4.17 - Special Values and Limits
+      - 4.18 - Inequalities
+      - 4.19 - Maclaurin Series and Laurent Series
+      - 4.20 - Derivatives and Differential Equations
+      - 4.21 - Identities
+      - 4.22 - Infinite Products and Partial Fractions
+      - 4.23 - Inverse Trigonometric Functions
+      - 4.24 - Inverse Trigonometric Functions: Further Properties
+      - 4.25 - Continued Fractions
+      - 4.26 - Integrals
+      - 4.27 - Sums
+  - **Hyperbolic Functions**
+      - 4.28 - Definitions and Periodicity
+      - 4.29 - Graphics
+      - 4.30 - Elementary Properties
+      - 4.31 - Special Values and Limits
+      - 4.32 - Inequalities
+      - 4.33 - Maclaurin Series and Laurent Series
+      - 4.34 - Derivatives and Differential Equations
+      - 4.35 - Identities
+      - 4.36 - Infinite Products and Partial Fractions
+      - 4.37 - Inverse Hyperbolic Functions
+      - 4.38 - Inverse Hyperbolic Functions: Further Properties
+      - 4.39 - Continued Fractions
+      - 4.40 - Integrals
+      - 4.41 - Sums
+  - **Applications**
+      - 4.42 - Solution of Triangles
+      - 4.43 - Cubic Equations
+      - 4.44 - Other Applications
+  - **Computation**
+      - 4.45 - Methods of Computation
+      - 4.46 - Tables
+      - 4.47 - Approximations
+      - 4.48 - Software
+- 5 - Gamma Function
+  - **Notation**
+      - 5.1 - Special Notation
+  - **Properties**
+      - 5.2 - Definitions
+      - 5.3 - Graphics
+      - 5.4 - Special Values and Extrema
+      - 5.5 - Functional Relations
+      - 5.6 - Inequalities
+      - 5.7 - Series Expansions
+      - 5.8 - Infinite Products
+      - 5.9 - Integral Representations
+      - 5.10 - Continued Fractions
+      - 5.11 - Asymptotic Expansions
+      - 5.12 - Beta Function
+      - 5.13 - Integrals
+      - 5.14 - Multidimensional Integrals
+      - 5.15 - Polygamma Functions
+      - 5.16 - Sums
+      - 5.17 - Barnes’ $G$-Function (Double Gamma Function)
+      - 5.18 - $q$-Gamma and $q$-Beta Functions
+  - **Applications**
+      - 5.19 - Mathematical Applications
+      - 5.20 - Physical Applications
+  - **Computation**
+      - 5.21 - Methods of Computation
+      - 5.22 - Tables
+      - 5.23 - Approximations
+      - 5.24 - Software
+- 6 - Exponential, Logarithmic, Sine, and Cosine Integrals
+  - **Notation**
+      - 6.1 - Special Notation
+  - **Properties**
+      - 6.2 - Definitions and Interrelations
+      - 6.3 - Graphics
+      - 6.4 - Analytic Continuation
+      - 6.5 - Further Interrelations
+      - 6.6 - Power Series
+      - 6.7 - Integral Representations
+      - 6.8 - Inequalities
+      - 6.9 - Continued Fraction
+      - 6.10 - Other Series Expansions
+      - 6.11 - Relations to Other Functions
+      - 6.12 - Asymptotic Expansions
+      - 6.13 - Zeros
+      - 6.14 - Integrals
+      - 6.15 - Sums
+  - **Applications**
+      - 6.16 - Mathematical Applications
+      - 6.17 - Physical Applications
+  - **Computation**
+      - 6.18 - Methods of Computation
+      - 6.19 - Tables
+      - 6.20 - Approximations
+      - 6.21 - Software
+- 7 - Error Functions, Dawson’s and Fresnel Integrals
+  - **Notation**
+      - 7.1 - Special Notation
+  - **Properties**
+      - 7.2 - Definitions
+      - 7.3 - Graphics
+      - 7.4 - Symmetry
+      - 7.5 - Interrelations
+      - 7.6 - Series Expansions
+      - 7.7 - Integral Representations
+      - 7.8 - Inequalities
+      - 7.9 - Continued Fractions
+      - 7.10 - Derivatives
+      - 7.11 - Relations to Other Functions
+      - 7.12 - Asymptotic Expansions
+      - 7.13 - Zeros
+      - 7.14 - Integrals
+      - 7.15 - Sums
+      - 7.16 - Generalized Error Functions
+      - 7.17 - Inverse Error Functions
+      - 7.18 - Repeated Integrals of the Complementary Error Function
+      - 7.19 - Voigt Functions
+  - **Applications**
+      - 7.20 - Mathematical Applications
+      - 7.21 - Physical Applications
+  - **Computation**
+      - 7.22 - Methods of Computation
+      - 7.23 - Tables
+      - 7.24 - Approximations
+      - 7.25 - Software
+- 8 - Incomplete Gamma and Related Functions
+  - **Notation**
+      - 8.1 - Special Notation
+  - **Incomplete Gamma Functions**
+      - 8.2 - Definitions and Basic Properties
+      - 8.3 - Graphics
+      - 8.4 - Special Values
+      - 8.5 - Confluent Hypergeometric Representations
+      - 8.6 - Integral Representations
+      - 8.7 - Series Expansions
+      - 8.8 - Recurrence Relations and Derivatives
+      - 8.9 - Continued Fractions
+      - 8.10 - Inequalities
+      - 8.11 - Asymptotic Approximations and Expansions
+      - 8.12 - Uniform Asymptotic Expansions for Large Parameter
+      - 8.13 - Zeros
+      - 8.14 - Integrals
+      - 8.15 - Sums
+      - 8.16 - Generalizations
+  - **Related Functions**
+      - 8.17 - Incomplete Beta Functions
+      - 8.18 - Asymptotic Expansions of $I_{x}\left(a,b\right)$
+      - 8.19 - Generalized Exponential Integral
+      - 8.20 - Asymptotic Expansions of $E_{p}\left(z\right)$
+      - 8.21 - Generalized Sine and Cosine Integrals
+  - **Applications**
+      - 8.22 - Mathematical Applications
+      - 8.23 - Statistical Applications
+      - 8.24 - Physical Applications
+  - **Computation**
+      - 8.25 - Methods of Computation
+      - 8.26 - Tables
+      - 8.27 - Approximations
+      - 8.28 - Software
+- 9 - Airy and Related Functions
+  - **Notation**
+      - 9.1 - Special Notation
+  - **Airy Functions**
+      - 9.2 - Differential Equation
+      - 9.3 - Graphics
+      - 9.4 - Maclaurin Series
+      - 9.5 - Integral Representations
+      - 9.6 - Relations to Other Functions
+      - 9.7 - Asymptotic Expansions
+      - 9.8 - Modulus and Phase
+      - 9.9 - Zeros
+      - 9.10 - Integrals
+      - 9.11 - Products
+  - **Related Functions**
+      - 9.12 - Scorer Functions
+      - 9.13 - Generalized Airy Functions
+      - 9.14 - Incomplete Airy Functions
+  - **Applications**
+      - 9.15 - Mathematical Applications
+      - 9.16 - Physical Applications
+  - **Computation**
+      - 9.17 - Methods of Computation
+      - 9.18 - Tables
+      - 9.19 - Approximations
+      - 9.20 - Software
+- 10 - Bessel Functions
+  - **Notation**
+      - 10.1 - Special Notation
+  - **Bessel and Hankel Functions**
+      - 10.2 - Definitions
+      - 10.3 - Graphics
+      - 10.4 - Connection Formulas
+      - 10.5 - Wronskians and Cross-Products
+      - 10.6 - Recurrence Relations and Derivatives
+      - 10.7 - Limiting Forms
+      - 10.8 - Power Series
+      - 10.9 - Integral Representations
+      - 10.10 - Continued Fractions
+      - 10.11 - Analytic Continuation
+      - 10.12 - Generating Function and Associated Series
+      - 10.13 - Other Differential Equations
+      - 10.14 - Inequalities; Monotonicity
+      - 10.15 - Derivatives with Respect to Order
+      - 10.16 - Relations to Other Functions
+      - 10.17 - Asymptotic Expansions for Large Argument
+      - 10.18 - Modulus and Phase Functions
+      - 10.19 - Asymptotic Expansions for Large Order
+      - 10.20 - Uniform Asymptotic Expansions for Large Order
+      - 10.21 - Zeros
+      - 10.22 - Integrals
+      - 10.23 - Sums
+      - 10.24 - Functions of Imaginary Order
+  - **Modified Bessel Functions**
+      - 10.25 - Definitions
+      - 10.26 - Graphics
+      - 10.27 - Connection Formulas
+      - 10.28 - Wronskians and Cross-Products
+      - 10.29 - Recurrence Relations and Derivatives
+      - 10.30 - Limiting Forms
+      - 10.31 - Power Series
+      - 10.32 - Integral Representations
+      - 10.33 - Continued Fractions
+      - 10.34 - Analytic Continuation
+      - 10.35 - Generating Function and Associated Series
+      - 10.36 - Other Differential Equations
+      - 10.37 - Inequalities; Monotonicity
+      - 10.38 - Derivatives with Respect to Order
+      - 10.39 - Relations to Other Functions
+      - 10.40 - Asymptotic Expansions for Large Argument
+      - 10.41 - Asymptotic Expansions for Large Order
+      - 10.42 - Zeros
+      - 10.43 - Integrals
+      - 10.44 - Sums
+      - 10.45 - Functions of Imaginary Order
+      - 10.46 - Generalized and Incomplete Bessel Functions; Mittag-Leffler Function
+  - **Spherical Bessel Functions**
+      - 10.47 - Definitions and Basic Properties
+      - 10.48 - Graphs
+      - 10.49 - Explicit Formulas
+      - 10.50 - Wronskians and Cross-Products
+      - 10.51 - Recurrence Relations and Derivatives
+      - 10.52 - Limiting Forms
+      - 10.53 - Power Series
+      - 10.54 - Integral Representations
+      - 10.55 - Continued Fractions
+      - 10.56 - Generating Functions
+      - 10.57 - Uniform Asymptotic Expansions for Large Order
+      - 10.58 - Zeros
+      - 10.59 - Integrals
+      - 10.60 - Sums
+  - **Kelvin Functions**
+      - 10.61 - Definitions and Basic Properties
+      - 10.62 - Graphs
+      - 10.63 - Recurrence Relations and Derivatives
+      - 10.64 - Integral Representations
+      - 10.65 - Power Series
+      - 10.66 - Expansions in Series of Bessel Functions
+      - 10.67 - Asymptotic Expansions for Large Argument
+      - 10.68 - Modulus and Phase Functions
+      - 10.69 - Uniform Asymptotic Expansions for Large Order
+      - 10.70 - Zeros
+      - 10.71 - Integrals
+  - **Applications**
+      - 10.72 - Mathematical Applications
+      - 10.73 - Physical Applications
+  - **Computation**
+      - 10.74 - Methods of Computation
+      - 10.75 - Tables
+      - 10.76 - Approximations
+      - 10.77 - Software
+- 11 - Struve and Related Functions
+  - **Notation**
+      - 11.1 - Special Notation
+  - **Struve and Modified Struve Functions**
+      - 11.2 - Definitions
+      - 11.3 - Graphics
+      - 11.4 - Basic Properties
+      - 11.5 - Integral Representations
+      - 11.6 - Asymptotic Expansions
+      - 11.7 - Integrals and Sums
+      - 11.8 - Analogs to Kelvin Functions
+  - **Related Functions**
+      - 11.9 - Lommel Functions
+      - 11.10 - Anger–Weber Functions
+      - 11.11 - Asymptotic Expansions of Anger–Weber Functions
+  - **Applications**
+      - 11.12 - Physical Applications
+  - **Computation**
+      - 11.13 - Methods of Computation
+      - 11.14 - Tables
+      - 11.15 - Approximations
+      - 11.16 - Software
+- 12 - Parabolic Cylinder Functions
+  - **Notation**
+      - 12.1 - Special Notation
+  - **Properties**
+      - 12.2 - Differential Equations
+      - 12.3 - Graphics
+      - 12.4 - Power-Series Expansions
+      - 12.5 - Integral Representations
+      - 12.6 - Continued Fraction
+      - 12.7 - Relations to Other Functions
+      - 12.8 - Recurrence Relations and Derivatives
+      - 12.9 - Asymptotic Expansions for Large Variable
+      - 12.10 - Uniform Asymptotic Expansions for Large Parameter
+      - 12.11 - Zeros
+      - 12.12 - Integrals
+      - 12.13 - Sums
+      - 12.14 - The Function $W\left(a,x\right)$
+      - 12.15 - Generalized Parabolic Cylinder Functions
+  - **Applications**
+      - 12.16 - Mathematical Applications
+      - 12.17 - Physical Applications
+  - **Computation**
+      - 12.18 - Methods of Computation
+      - 12.19 - Tables
+      - 12.20 - Approximations
+      - 12.21 - Software
+- 13 - Confluent Hypergeometric Functions
+  - **Notation**
+      - 13.1 - Special Notation
+  - **Kummer Functions**
+      - 13.2 - Definitions and Basic Properties
+      - 13.3 - Recurrence Relations and Derivatives
+      - 13.4 - Integral Representations
+      - 13.5 - Continued Fractions
+      - 13.6 - Relations to Other Functions
+      - 13.7 - Asymptotic Expansions for Large Argument
+      - 13.8 - Asymptotic Approximations for Large Parameters
+      - 13.9 - Zeros
+      - 13.10 - Integrals
+      - 13.11 - Series
+      - 13.12 - Products
+      - 13.13 - Addition and Multiplication Theorems
+  - **Whittaker Functions**
+      - 13.14 - Definitions and Basic Properties
+      - 13.15 - Recurrence Relations and Derivatives
+      - 13.16 - Integral Representations
+      - 13.17 - Continued Fractions
+      - 13.18 - Relations to Other Functions
+      - 13.19 - Asymptotic Expansions for Large Argument
+      - 13.20 - Uniform Asymptotic Approximations for Large $\mu$
+      - 13.21 - Uniform Asymptotic Approximations for Large $\kappa$
+      - 13.22 - Zeros
+      - 13.23 - Integrals
+      - 13.24 - Series
+      - 13.25 - Products
+      - 13.26 - Addition and Multiplication Theorems
+  - **Applications**
+      - 13.27 - Mathematical Applications
+      - 13.28 - Physical Applications
+  - **Computation**
+      - 13.29 - Methods of Computation
+      - 13.30 - Tables
+      - 13.31 - Approximations
+      - 13.32 - Software
+- 14 - Legendre and Related Functions
+  - **Notation**
+      - 14.1 - Special Notation
+  - **Real Arguments**
+      - 14.2 - Differential Equations
+      - 14.3 - Definitions and Hypergeometric Representations
+      - 14.4 - Graphics
+      - 14.5 - Special Values
+      - 14.6 - Integer Order
+      - 14.7 - Integer Degree and Order
+      - 14.8 - Behavior at Singularities
+      - 14.9 - Connection Formulas
+      - 14.10 - Recurrence Relations and Derivatives
+      - 14.11 - Derivatives with Respect to Degree or Order
+      - 14.12 - Integral Representations
+      - 14.13 - Trigonometric Expansions
+      - 14.14 - Continued Fractions
+      - 14.15 - Uniform Asymptotic Approximations
+      - 14.16 - Zeros
+      - 14.17 - Integrals
+      - 14.18 - Sums
+      - 14.19 - Toroidal (or Ring) Functions
+      - 14.20 - Conical (or Mehler) Functions
+  - **Complex Arguments**
+      - 14.21 - Definitions and Basic Properties
+      - 14.22 - Graphics
+      - 14.23 - Values on the Cut
+      - 14.24 - Analytic Continuation
+      - 14.25 - Integral Representations
+      - 14.26 - Uniform Asymptotic Expansions
+      - 14.27 - Zeros
+      - 14.28 - Sums
+      - 14.29 - Generalizations
+  - **Applications**
+      - 14.30 - Spherical and Spheroidal Harmonics
+      - 14.31 - Other Applications
+  - **Computation**
+      - 14.32 - Methods of Computation
+      - 14.33 - Tables
+      - 14.34 - Software
+- 15 - Hypergeometric Function
+  - **Notation**
+      - 15.1 - Special Notation
+  - **Properties**
+      - 15.2 - Definitions and Analytical Properties
+      - 15.3 - Graphics
+      - 15.4 - Special Cases
+      - 15.5 - Derivatives and Contiguous Functions
+      - 15.6 - Integral Representations
+      - 15.7 - Continued Fractions
+      - 15.8 - Transformations of Variable
+      - 15.9 - Relations to Other Functions
+      - 15.10 - Hypergeometric Differential Equation
+      - 15.11 - Riemann’s Differential Equation
+      - 15.12 - Asymptotic Approximations
+      - 15.13 - Zeros
+      - 15.14 - Integrals
+      - 15.15 - Sums
+      - 15.16 - Products
+  - **Applications**
+      - 15.17 - Mathematical Applications
+      - 15.18 - Physical Applications
+  - **Computation**
+      - 15.19 - Methods of Computation
+      - 15.20 - Software
+- 16 - Generalized Hypergeometric Functions and Meijer G-Function
+  - **Notation**
+      - 16.1 - Special Notation
+  - **Generalized Hypergeometric Functions**
+      - 16.2 - Definition and Analytic Properties
+      - 16.3 - Derivatives and Contiguous Functions
+      - 16.4 - Argument Unity
+      - 16.5 - Integral Representations and Integrals
+      - 16.6 - Transformations of Variable
+      - 16.7 - Relations to Other Functions
+      - 16.8 - Differential Equations
+      - 16.9 - Zeros
+      - 16.10 - Expansions in Series of ${{}_{p}F_{q}}$ Functions
+      - 16.11 - Asymptotic Expansions
+      - 16.12 - Products
+  - **Two-Variable Hypergeometric Functions**
+      - 16.13 - Appell Functions
+      - 16.14 - Partial Differential Equations
+      - 16.15 - Integral Representations and Integrals
+      - 16.16 - Transformations of Variables
+  - **Meijer $G$-Function**
+      - 16.17 - Definition
+      - 16.18 - Special Cases
+      - 16.19 - Identities
+      - 16.20 - Integrals and Series
+      - 16.21 - Differential Equation
+      - 16.22 - Asymptotic Expansions
+  - **Applications**
+      - 16.23 - Mathematical Applications
+      - 16.24 - Physical Applications
+  - **Computation**
+      - 16.25 - Methods of Computation
+      - 16.26 - Approximations
+      - 16.27 - Software
+- 17 - q-Hypergeometric and Related Functions
+  - **Notation**
+      - 17.1 - Special Notation
+  - **Properties**
+      - 17.2 - Calculus
+      - 17.3 - $q$-Elementary and $q$-Special Functions
+      - 17.4 - Basic Hypergeometric Functions
+      - 17.5 - ${{}_{0}\phi_{0}},{{}_{1}\phi_{0}},{{}_{1}\phi_{1}}$ Functions
+      - 17.6 - ${{}_{2}\phi_{1}}$ Function
+      - 17.7 - Special Cases of Higher ${{}_{r}\phi_{s}}$ Functions
+      - 17.8 - Special Cases of ${{}_{r}\psi_{r}}$ Functions
+      - 17.9 - Further Transformations of ${{}_{r+1}\phi_{r}}$ Functions
+      - 17.10 - Transformations of ${{}_{r}\psi_{r}}$ Functions
+      - 17.11 - Transformations of $q$-Appell Functions
+      - 17.12 - Bailey Pairs
+      - 17.13 - Integrals
+      - 17.14 - Constant Term Identities
+      - 17.15 - Generalizations
+  - **Applications**
+      - 17.16 - Mathematical Applications
+      - 17.17 - Physical Applications
+  - **Computation**
+      - 17.18 - Methods of Computation
+      - 17.19 - Software
+- 18 - Orthogonal Polynomials
+  - **Notation**
+      - 18.1 - Notation
+  - **General Orthogonal Polynomials**
+      - 18.2 - General Orthogonal Polynomials
+  - **Classical Orthogonal Polynomials**
+      - 18.3 - Definitions
+      - 18.4 - Graphics
+      - 18.5 - Explicit Representations
+      - 18.6 - Symmetry, Special Values, and Limits to Monomials
+      - 18.7 - Interrelations and Limit Relations
+      - 18.8 - Differential Equations
+      - 18.9 - Recurrence Relations and Derivatives
+      - 18.10 - Integral Representations
+      - 18.11 - Relations to Other Functions
+      - 18.12 - Generating Functions
+      - 18.13 - Continued Fractions
+      - 18.14 - Inequalities
+      - 18.15 - Asymptotic Approximations
+      - 18.16 - Zeros
+      - 18.17 - Integrals
+      - 18.18 - Sums
+  - **Askey Scheme**
+      - 18.19 - Hahn Class: Definitions
+      - 18.20 - Hahn Class: Explicit Representations
+      - 18.21 - Hahn Class: Interrelations
+      - 18.22 - Hahn Class: Recurrence Relations and Differences
+      - 18.23 - Hahn Class: Generating Functions
+      - 18.24 - Hahn Class: Asymptotic Approximations
+      - 18.25 - Wilson Class: Definitions
+      - 18.26 - Wilson Class: Continued
+  - **Other Orthogonal Polynomials**
+      - 18.27 - $q$-Hahn Class
+      - 18.28 - Askey–Wilson Class
+      - 18.29 - Asymptotic Approximations for $q$-Hahn and Askey–Wilson Classes
+      - 18.30 - Associated OP’s
+      - 18.31 - Bernstein–Szegő Polynomials
+      - 18.32 - OP’s with Respect to Freud Weights
+      - 18.33 - Polynomials Orthogonal on the Unit Circle
+      - 18.34 - Bessel Polynomials
+      - 18.35 - Pollaczek Polynomials
+      - 18.36 - Miscellaneous Polynomials
+      - 18.37 - Classical OP’s in Two or More Variables
+  - **Applications**
+      - 18.38 - Mathematical Applications
+      - 18.39 - Applications in the Physical Sciences
+  - **Computation**
+      - 18.40 - Methods of Computation
+      - 18.41 - Tables
+      - 18.42 - Software
+- 19 - Elliptic Integrals
+  - **Notation**
+      - 19.1 - Special Notation
+  - **Legendre’s Integrals**
+      - 19.2 - Definitions
+      - 19.3 - Graphics
+      - 19.4 - Derivatives and Differential Equations
+      - 19.5 - Maclaurin and Related Expansions
+      - 19.6 - Special Cases
+      - 19.7 - Connection Formulas
+      - 19.8 - Quadratic Transformations
+      - 19.9 - Inequalities
+      - 19.10 - Relations to Other Functions
+      - 19.11 - Addition Theorems
+      - 19.12 - Asymptotic Approximations
+      - 19.13 - Integrals of Elliptic Integrals
+      - 19.14 - Reduction of General Elliptic Integrals
+  - **Symmetric Integrals**
+      - 19.15 - Advantages of Symmetry
+      - 19.16 - Definitions
+      - 19.17 - Graphics
+      - 19.18 - Derivatives and Differential Equations
+      - 19.19 - Taylor and Related Series
+      - 19.20 - Special Cases
+      - 19.21 - Connection Formulas
+      - 19.22 - Quadratic Transformations
+      - 19.23 - Integral Representations
+      - 19.24 - Inequalities
+      - 19.25 - Relations to Other Functions
+      - 19.26 - Addition Theorems
+      - 19.27 - Asymptotic Approximations and Expansions
+      - 19.28 - Integrals of Elliptic Integrals
+      - 19.29 - Reduction of General Elliptic Integrals
+  - **Applications**
+      - 19.30 - Lengths of Plane Curves
+      - 19.31 - Probability Distributions
+      - 19.32 - Conformal Map onto a Rectangle
+      - 19.33 - Triaxial Ellipsoids
+      - 19.34 - Mutual Inductance of Coaxial Circles
+      - 19.35 - Other Applications
+  - **Computation**
+      - 19.36 - Methods of Computation
+      - 19.37 - Tables
+      - 19.38 - Approximations
+      - 19.39 - Software
+- 20 - Theta Functions
+  - **Notation**
+      - 20.1 - Special Notation
+  - **Properties**
+      - 20.2 - Definitions and Periodic Properties
+      - 20.3 - Graphics
+      - 20.4 - Values at $z$ = 0
+      - 20.5 - Infinite Products and Related Results
+      - 20.6 - Power Series
+      - 20.7 - Identities
+      - 20.8 - Watson’s Expansions
+      - 20.9 - Relations to Other Functions
+      - 20.10 - Integrals
+      - 20.11 - Generalizations and Analogs
+  - **Applications**
+      - 20.12 - Mathematical Applications
+      - 20.13 - Physical Applications
+  - **Computation**
+      - 20.14 - Methods of Computation
+      - 20.15 - Tables
+      - 20.16 - Software
+- 21 - Multidimensional Theta Functions
+  - **Notation**
+      - 21.1 - Special Notation
+  - **Properties**
+      - 21.2 - Definitions
+      - 21.3 - Symmetry and Quasi-Periodicity
+      - 21.4 - Graphics
+      - 21.5 - Modular Transformations
+      - 21.6 - Products
+  - **Applications**
+      - 21.7 - Riemann Surfaces
+      - 21.8 - Abelian Functions
+      - 21.9 - Integrable Equations
+  - **Computation**
+      - 21.10 - Methods of Computation
+      - 21.11 - Software
+- 22 - Jacobian Elliptic Functions
+  - **Notation**
+      - 22.1 - Special Notation
+  - **Properties**
+      - 22.2 - Definitions
+      - 22.3 - Graphics
+      - 22.4 - Periods, Poles, and Zeros
+      - 22.5 - Special Values
+      - 22.6 - Elementary Identities
+      - 22.7 - Landen Transformations
+      - 22.8 - Addition Theorems
+      - 22.9 - Cyclic Identities
+      - 22.10 - Maclaurin Series
+      - 22.11 - Fourier and Hyperbolic Series
+      - 22.12 - Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series
+      - 22.13 - Derivatives and Differential Equations
+      - 22.14 - Integrals
+      - 22.15 - Inverse Functions
+      - 22.16 - Related Functions
+      - 22.17 - Moduli Outside the Interval [0,1]
+  - **Applications**
+      - 22.18 - Mathematical Applications
+      - 22.19 - Physical Applications
+  - **Computation**
+      - 22.20 - Methods of Computation
+      - 22.21 - Tables
+      - 22.22 - Software
+- 23 - Weierstrass Elliptic and Modular Functions
+  - **Notation**
+      - 23.1 - Special Notation
+  - **Weierstrass Elliptic Functions**
+      - 23.2 - Definitions and Periodic Properties
+      - 23.3 - Differential Equations
+      - 23.4 - Graphics
+      - 23.5 - Special Lattices
+      - 23.6 - Relations to Other Functions
+      - 23.7 - Quarter Periods
+      - 23.8 - Trigonometric Series and Products
+      - 23.9 - Laurent and Other Power Series
+      - 23.10 - Addition Theorems and Other Identities
+      - 23.11 - Integral Representations
+      - 23.12 - Asymptotic Approximations
+      - 23.13 - Zeros
+      - 23.14 - Integrals
+  - **Modular Functions**
+      - 23.15 - Definitions
+      - 23.16 - Graphics
+      - 23.17 - Elementary Properties
+      - 23.18 - Modular Transformations
+      - 23.19 - Interrelations
+  - **Applications**
+      - 23.20 - Mathematical Applications
+      - 23.21 - Physical Applications
+  - **Computation**
+      - 23.22 - Methods of Computation
+      - 23.23 - Tables
+      - 23.24 - Software
+- 24 - Bernoulli and Euler Polynomials
+  - **Notation**
+      - 24.1 - Special Notation
+  - **Properties**
+      - 24.2 - Definitions and Generating Functions
+      - 24.3 - Graphs
+      - 24.4 - Basic Properties
+      - 24.5 - Recurrence Relations
+      - 24.6 - Explicit Formulas
+      - 24.7 - Integral Representations
+      - 24.8 - Series Expansions
+      - 24.9 - Inequalities
+      - 24.10 - Arithmetic Properties
+      - 24.11 - Asymptotic Approximations
+      - 24.12 - Zeros
+      - 24.13 - Integrals
+      - 24.14 - Sums
+      - 24.15 - Related Sequences of Numbers
+      - 24.16 - Generalizations
+  - **Applications**
+      - 24.17 - Mathematical Applications
+      - 24.18 - Physical Applications
+  - **Computation**
+      - 24.19 - Methods of Computation
+      - 24.20 - Tables
+      - 24.21 - Software
+- 25 - Zeta and Related Functions
+  - **Notation**
+      - 25.1 - Special Notation
+  - **Riemann Zeta Function**
+      - 25.2 - Definition and Expansions
+      - 25.3 - Graphics
+      - 25.4 - Reflection Formulas
+      - 25.5 - Integral Representations
+      - 25.6 - Integer Arguments
+      - 25.7 - Integrals
+      - 25.8 - Sums
+      - 25.9 - Asymptotic Approximations
+      - 25.10 - Zeros
+  - **Related Functions**
+      - 25.11 - Hurwitz Zeta Function
+      - 25.12 - Polylogarithms
+      - 25.13 - Periodic Zeta Function
+      - 25.14 - Lerch’s Transcendent
+      - 25.15 - Dirichlet $L$-functions
+  - **Applications**
+      - 25.16 - Mathematical Applications
+      - 25.17 - Physical Applications
+  - **Computation**
+      - 25.18 - Methods of Computation
+      - 25.19 - Tables
+      - 25.20 - Approximations
+      - 25.21 - Software
+- 26 - Combinatorial Analysis
+  - **Notation**
+      - 26.1 - Special Notation
+  - **Properties**
+      - 26.2 - Basic Definitions
+      - 26.3 - Lattice Paths: Binomial Coefficients
+      - 26.4 - Lattice Paths: Multinomial Coefficients and Set Partitions
+      - 26.5 - Lattice Paths: Catalan Numbers
+      - 26.6 - Other Lattice Path Numbers
+      - 26.7 - Set Partitions: Bell Numbers
+      - 26.8 - Set Partitions: Stirling Numbers
+      - 26.9 - Integer Partitions: Restricted Number and Part Size
+      - 26.10 - Integer Partitions: Other Restrictions
+      - 26.11 - Integer Partitions: Compositions
+      - 26.12 - Plane Partitions
+      - 26.13 - Permutations: Cycle Notation
+      - 26.14 - Permutations: Order Notation
+      - 26.15 - Permutations: Matrix Notation
+      - 26.16 - Multiset Permutations
+      - 26.17 - The Twelvefold Way
+      - 26.18 - Counting Techniques
+  - **Applications**
+      - 26.19 - Mathematical Applications
+      - 26.20 - Physical Applications
+  - **Computation**
+      - 26.21 - Tables
+      - 26.22 - Software
+- 27 - Functions of Number Theory
+  - **Notation**
+      - 27.1 - Special Notation
+  - **Multiplicative Number Theory**
+      - 27.2 - Functions
+      - 27.3 - Multiplicative Properties
+      - 27.4 - Euler Products and Dirichlet Series
+      - 27.5 - Inversion Formulas
+      - 27.6 - Divisor Sums
+      - 27.7 - Lambert Series as Generating Functions
+      - 27.8 - Dirichlet Characters
+      - 27.9 - Quadratic Characters
+      - 27.10 - Periodic Number-Theoretic Functions
+      - 27.11 - Asymptotic Formulas: Partial Sums
+      - 27.12 - Asymptotic Formulas: Primes
+  - **Additive Number Theory**
+      - 27.13 - Functions
+      - 27.14 - Unrestricted Partitions
+  - **Applications**
+      - 27.15 - Chinese Remainder Theorem
+      - 27.16 - Cryptography
+      - 27.17 - Other Applications
+  - **Computation**
+      - 27.18 - Methods of Computation: Primes
+      - 27.19 - Methods of Computation: Factorization
+      - 27.20 - Methods of Computation: Other Number-Theoretic Functions
+      - 27.21 - Tables
+      - 27.22 - Software
+- 28 - Mathieu Functions and Hill’s Equation
+  - **Notation**
+      - 28.1 - Special Notation
+  - **Mathieu Functions of Integer Order**
+      - 28.2 - Definitions and Basic Properties
+      - 28.3 - Graphics
+      - 28.4 - Fourier Series
+      - 28.5 - Second Solutions $\operatorname{fe}_{n}$, $\operatorname{ge}_{n}$
+      - 28.6 - Expansions for Small $q$
+      - 28.7 - Analytic Continuation of Eigenvalues
+      - 28.8 - Asymptotic Expansions for Large $q$
+      - 28.9 - Zeros
+      - 28.10 - Integral Equations
+      - 28.11 - Expansions in Series of Mathieu Functions
+  - **Mathieu Functions of Noninteger Order**
+      - 28.12 - Definitions and Basic Properties
+      - 28.13 - Graphics
+      - 28.14 - Fourier Series
+      - 28.15 - Expansions for Small $q$
+      - 28.16 - Asymptotic Expansions for Large $q$
+      - 28.17 - Stability as $x\to\pm\infty$
+      - 28.18 - Integrals and Integral Equations
+      - 28.19 - Expansions in Series of $\operatorname{me}_{\nu+2n}$ Functions
+  - **Modified Mathieu Functions**
+      - 28.20 - Definitions and Basic Properties
+      - 28.21 - Graphics
+      - 28.22 - Connection Formulas
+      - 28.23 - Expansions in Series of Bessel Functions
+      - 28.24 - Expansions in Series of Cross-Products of Bessel Functions or Modified Bessel Functions
+      - 28.25 - Asymptotic Expansions for Large $\Re z$
+      - 28.26 - Asymptotic Approximations for Large $q$
+      - 28.27 - Addition Theorems
+      - 28.28 - Integrals, Integral Representations, and Integral Equations
+  - **Hill’s Equation**
+      - 28.29 - Definitions and Basic Properties
+      - 28.30 - Expansions in Series of Eigenfunctions
+      - 28.31 - Equations of Whittaker–Hill and Ince
+  - **Applications**
+      - 28.32 - Mathematical Applications
+      - 28.33 - Physical Applications
+  - **Computation**
+      - 28.34 - Methods of Computation
+      - 28.35 - Tables
+      - 28.36 - Software
+- 29 - Lamé Functions
+  - **Notation**
+      - 29.1 - Special Notation
+  - **Lamé Functions**
+      - 29.2 - Differential Equations
+      - 29.3 - Definitions and Basic Properties
+      - 29.4 - Graphics
+      - 29.5 - Special Cases and Limiting Forms
+      - 29.6 - Fourier Series
+      - 29.7 - Asymptotic Expansions
+      - 29.8 - Integral Equations
+      - 29.9 - Stability
+      - 29.10 - Lamé Functions with Imaginary Periods
+      - 29.11 - Lamé Wave Equation
+  - **Lamé Polynomials**
+      - 29.12 - Definitions
+      - 29.13 - Graphics
+      - 29.14 - Orthogonality
+      - 29.15 - Fourier Series and Chebyshev Series
+      - 29.16 - Asymptotic Expansions
+      - 29.17 - Other Solutions
+  - **Applications**
+      - 29.18 - Mathematical Applications
+      - 29.19 - Physical Applications
+  - **Computation**
+      - 29.20 - Methods of Computation
+      - 29.21 - Tables
+      - 29.22 - Software
+- 30 - Spheroidal Wave Functions
+  - **Notation**
+      - 30.1 - Special Notation
+  - **Properties**
+      - 30.2 - Differential Equations
+      - 30.3 - Eigenvalues
+      - 30.4 - Functions of the First Kind
+      - 30.5 - Functions of the Second Kind
+      - 30.6 - Functions of Complex Argument
+      - 30.7 - Graphics
+      - 30.8 - Expansions in Series of Ferrers Functions
+      - 30.9 - Asymptotic Approximations and Expansions
+      - 30.10 - Series and Integrals
+      - 30.11 - Radial Spheroidal Wave Functions
+      - 30.12 - Generalized and Coulomb Spheroidal Functions
+  - **Applications**
+      - 30.13 - Wave Equation in Prolate Spheroidal Coordinates
+      - 30.14 - Wave Equation in Oblate Spheroidal Coordinates
+      - 30.15 - Signal Analysis
+  - **Computation**
+      - 30.16 - Methods of Computation
+      - 30.17 - Tables
+      - 30.18 - Software
+- 31 - Heun Functions
+  - **Notation**
+      - 31.1 - Special Notation
+  - **Properties**
+      - 31.2 - Differential Equations
+      - 31.3 - Basic Solutions
+      - 31.4 - Solutions Analytic at Two Singularities: Heun Functions
+      - 31.5 - Solutions Analytic at Three Singularities: Heun Polynomials
+      - 31.6 - Path-Multiplicative Solutions
+      - 31.7 - Relations to Other Functions
+      - 31.8 - Solutions via Quadratures
+      - 31.9 - Orthogonality
+      - 31.10 - Integral Equations and Representations
+      - 31.11 - Expansions in Series of Hypergeometric Functions
+      - 31.12 - Confluent Forms of Heun’s Equation
+      - 31.13 - Asymptotic Approximations
+      - 31.14 - General Fuchsian Equation
+      - 31.15 - Stieltjes Polynomials
+  - **Applications**
+      - 31.16 - Mathematical Applications
+      - 31.17 - Physical Applications
+  - **Computation**
+      - 31.18 - Methods of Computation
+- 32 - Painlevé Transcendents
+  - **Notation**
+      - 32.1 - Special Notation
+  - **Properties**
+      - 32.2 - Differential Equations
+      - 32.3 - Graphics
+      - 32.4 - Isomonodromy Problems
+      - 32.5 - Integral Equations
+      - 32.6 - Hamiltonian Structure
+      - 32.7 - Bäcklund Transformations
+      - 32.8 - Rational Solutions
+      - 32.9 - Other Elementary Solutions
+      - 32.10 - Special Function Solutions
+      - 32.11 - Asymptotic Approximations for Real Variables
+      - 32.12 - Asymptotic Approximations for Complex Variables
+  - **Applications**
+      - 32.13 - Reductions of Partial Differential Equations
+      - 32.14 - Combinatorics
+      - 32.15 - Orthogonal Polynomials
+      - 32.16 - Physical Applications
+  - **Computation**
+      - 32.17 - Methods of Computation
+- 33 - Coulomb Functions
+  - **Notation**
+      - 33.1 - Special Notation
+  - **Variables $\rho,\eta$**
+      - 33.2 - Definitions and Basic Properties
+      - 33.3 - Graphics
+      - 33.4 - Recurrence Relations and Derivatives
+      - 33.5 - Limiting Forms for Small $\rho$, Small $|\eta|$, or Large $\ell$
+      - 33.6 - Power-Series Expansions in $\rho$
+      - 33.7 - Integral Representations
+      - 33.8 - Continued Fractions
+      - 33.9 - Expansions in Series of Bessel Functions
+      - 33.10 - Limiting Forms for Large $\rho$ or Large $\left|\eta\right|$
+      - 33.11 - Asymptotic Expansions for Large $\rho$
+      - 33.12 - Asymptotic Expansions for Large $\eta$
+      - 33.13 - Complex Variable and Parameters
+  - **Variables $r,\epsilon$**
+      - 33.14 - Definitions and Basic Properties
+      - 33.15 - Graphics
+      - 33.16 - Connection Formulas
+      - 33.17 - Recurrence Relations and Derivatives
+      - 33.18 - Limiting Forms for Large $\ell$
+      - 33.19 - Power-Series Expansions in $r$
+      - 33.20 - Expansions for Small $|\epsilon|$
+      - 33.21 - Asymptotic Approximations for Large $|r|$
+  - **Physical Applications**
+      - 33.22 - Particle Scattering and Atomic and Molecular Spectra
+  - **Computation**
+      - 33.23 - Methods of Computation
+      - 33.24 - Tables
+      - 33.25 - Approximations
+      - 33.26 - Software
+- 34 - 3⁢j,6⁢j,9⁢j Symbols
+  - **Notation**
+      - 34.1 - Special Notation
+  - **Properties**
+      - 34.2 - Definition: $\mathit{3j}$ Symbol
+      - 34.3 - Basic Properties: $\mathit{3j}$ Symbol
+      - 34.4 - Definition: $\mathit{6j}$ Symbol
+      - 34.5 - Basic Properties: $\mathit{6j}$ Symbol
+      - 34.6 - Definition: $\mathit{9j}$ Symbol
+      - 34.7 - Basic Properties: $\mathit{9j}$ Symbol
+      - 34.8 - Approximations for Large Parameters
+      - 34.9 - Graphical Method
+      - 34.10 - Zeros
+      - 34.11 - Higher-Order $3nj$ Symbols
+  - **Applications**
+      - 34.12 - Physical Applications
+  - **Computation**
+      - 34.13 - Methods of Computation
+      - 34.14 - Tables
+      - 34.15 - Software
+- 35 - Functions of Matrix Argument
+  - **Notation**
+      - 35.1 - Special Notation
+  - **Properties**
+      - 35.2 - Laplace Transform
+      - 35.3 - Multivariate Gamma and Beta Functions
+      - 35.4 - Partitions and Zonal Polynomials
+      - 35.5 - Bessel Functions of Matrix Argument
+      - 35.6 - Confluent Hypergeometric Functions of Matrix Argument
+      - 35.7 - Gaussian Hypergeometric Function of Matrix Argument
+      - 35.8 - Generalized Hypergeometric Functions of Matrix Argument
+  - **Applications**
+      - 35.9 - Applications
+  - **Computation**
+      - 35.10 - Methods of Computation
+      - 35.11 - Tables
+      - 35.12 - Software
+- 36 - Integrals with Coalescing Saddles
+  - **Notation**
+      - 36.1 - Special Notation
+  - **Properties**
+      - 36.2 - Catastrophes and Canonical Integrals
+      - 36.3 - Visualizations of Canonical Integrals
+      - 36.4 - Bifurcation Sets
+      - 36.5 - Stokes Sets
+      - 36.6 - Scaling Relations
+      - 36.7 - Zeros
+      - 36.8 - Convergent Series Expansions
+      - 36.9 - Integral Identities
+      - 36.10 - Differential Equations
+      - 36.11 - Leading-Order Asymptotics
+  - **Applications**
+      - 36.12 - Uniform Approximation of Integrals
+      - 36.13 - Kelvin’s Ship-Wave Pattern
+      - 36.14 - Other Physical Applications
+  - **Computation**
+      - 36.15 - Methods of Computation

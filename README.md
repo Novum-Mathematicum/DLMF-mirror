@@ -102,7 +102,10 @@ This version contains no images.
 
 1. Download the local mirror of DLMF.
 2. Put it into a folder named `html`.
-3. Run `python dlmf_to_md_directory.py`.
+3. Run `python dlmf_to_md_directory.py` to generate the main files.
+4. Run `./collate_markdown.sh` to group them into folders.
+5. Run `python generate_index.py` to generate the index files.
+6. Run `python generate_toc.py` to generate the table of contents (full version and succinct version).
 
 ### Notes
 
