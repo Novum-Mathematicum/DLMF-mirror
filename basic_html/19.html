@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: Chapter 19 Elliptic Integrals</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/19";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="index.html" rel="start" title=""/>
+<link href="18.42.html" rel="prev" title="§18.42 Software ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="19.1.html" rel="next" title="§19.1 Special Notation ‣ Notation ‣ Chapter 19 Elliptic Integrals"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<link href="19.1.html" rel="section" title="§19.1 Special Notation ‣ Notation ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.2.html" rel="section" title="§19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.3.html" rel="section" title="§19.3 Graphics ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.4.html" rel="section" title="§19.4 Derivatives and Differential Equations ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.5.html" rel="section" title="§19.5 Maclaurin and Related Expansions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.6.html" rel="section" title="§19.6 Special Cases ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.7.html" rel="section" title="§19.7 Connection Formulas ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.8.html" rel="section" title="§19.8 Quadratic Transformations ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.9.html" rel="section" title="§19.9 Inequalities ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.10.html" rel="section" title="§19.10 Relations to Other Functions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.11.html" rel="section" title="§19.11 Addition Theorems ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.12.html" rel="section" title="§19.12 Asymptotic Approximations ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.13.html" rel="section" title="§19.13 Integrals of Elliptic Integrals ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.14.html" rel="section" title="§19.14 Reduction of General Elliptic Integrals ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.15.html" rel="section" title="§19.15 Advantages of Symmetry ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.16.html" rel="section" title="§19.16 Definitions ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.17.html" rel="section" title="§19.17 Graphics ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.18.html" rel="section" title="§19.18 Derivatives and Differential Equations ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.19.html" rel="section" title="§19.19 Taylor and Related Series ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.20.html" rel="section" title="§19.20 Special Cases ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.21.html" rel="section" title="§19.21 Connection Formulas ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.22.html" rel="section" title="§19.22 Quadratic Transformations ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.23.html" rel="section" title="§19.23 Integral Representations ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.24.html" rel="section" title="§19.24 Inequalities ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.25.html" rel="section" title="§19.25 Relations to Other Functions ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.26.html" rel="section" title="§19.26 Addition Theorems ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.27.html" rel="section" title="§19.27 Asymptotic Approximations and Expansions ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.28.html" rel="section" title="§19.28 Integrals of Elliptic Integrals ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.29.html" rel="section" title="§19.29 Reduction of General Elliptic Integrals ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.30.html" rel="section" title="§19.30 Lengths of Plane Curves ‣ Applications ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.31.html" rel="section" title="§19.31 Probability Distributions ‣ Applications ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.32.html" rel="section" title="§19.32 Conformal Map onto a Rectangle ‣ Applications ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.33.html" rel="section" title="§19.33 Triaxial Ellipsoids ‣ Applications ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.34.html" rel="section" title="§19.34 Mutual Inductance of Coaxial Circles ‣ Applications ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.35.html" rel="section" title="§19.35 Other Applications ‣ Applications ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.36.html" rel="section" title="§19.36 Methods of Computation ‣ Computation ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.37.html" rel="section" title="§19.37 Tables ‣ Computation ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.38.html" rel="section" title="§19.38 Approximations ‣ Computation ‣ Chapter 19 Elliptic Integrals"/>
+<link href="19.39.html" rel="section" title="§19.39 Software ‣ Computation ‣ Chapter 19 Elliptic Integrals"/>
+<link href="about/bio/BCCarlson.html" rel="author" title="B. C. Carlson"/>
+<meta content="Legendre’s elliptic integrals, applications, mathematical, symmetric elliptic integrals" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="19.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="19.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<section class="ltx_chapter ltx_leqno">
+<h1 class="ltx_title ltx_title_chapter">
+<span class="ltx_tag ltx_tag_chapter">Chapter 19 </span>Elliptic Integrals</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname"><a href="about/bio/BCCarlson.html">B. C. Carlson</a>
+</span><span class="ltx_author_notes">
+<span class="ltx_contact ltx_role_affiliation">Mathematics Department and Ames Laboratory
+(U.S. Department of Energy),
+Iowa State University,
+Ames, Iowa.
+</span></span></span>
+</div>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Acknowledgements:</dt>
+<dd class="ltx_acknowledgements">The parts of this chapter that deal with Legendre’s integrals
+are based in part on
+<cite class="ltx_cite ltx_citemacro_citet">Abramowitz and Stegun (<a class="ltx_ref" href="bib/index.html#bib24" title="Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables">1964</a>, Chapter 17)</cite> by L. M. Milne-Thomson. I am greatly
+indebted to R. C. Winther for indispensable technical support and to
+F. W. J. Olver for long-sustained encouragement of a new approach to
+elliptic integrals. I thank
+E. Neuman for improvements to §§<a class="ltx_ref" href="19.9.html" title="§19.9 Inequalities ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_tag">19.9</span></a> and <a class="ltx_ref" href="19.24.html#i" title="§19.24(i) Complete Integrals ‣ §19.24 Inequalities ‣ Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_tag">19.24(i)</span></a>.</dd>
+<dt>Notes:</dt>
+<dd>The main references used for writing this chapter are
+<cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib752" title="Higher Transcendental Functions. Vol. II">1953b</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Byerly (<a class="ltx_ref" href="bib/B.html#bib399" title="Elements of the Integral Calculus">1888</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Cazenave (<a class="ltx_ref" href="bib/C.html#bib461" title="Intégrales et Fonctions Elliptiques en Vue des Applications">1969</a>)</cite>,
+and <cite class="ltx_cite ltx_citemacro_citet">Byrd and Friedman (<a class="ltx_ref" href="bib/B.html#bib400" title="Handbook of Elliptic Integrals for Engineers and Scientists">1971</a>)</cite> for Legendre’s integrals, and
+<cite class="ltx_cite ltx_citemacro_citet">Carlson (<a class="ltx_ref" href="bib/C.html#bib434" title="Special Functions of Applied Mathematics">1977b</a>)</cite> for symmetric integrals. For additional bibliographic
+reading see <cite class="ltx_cite ltx_citemacro_citet">Armitage and Eberlein (<a class="ltx_ref" href="bib/index.html#bib2736" title="Elliptic Functions">2006</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Cayley (<a class="ltx_ref" href="bib/C.html#bib460" title="An Elementary Treatise on Elliptic Functions">1895</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Greenhill (<a class="ltx_ref" href="bib/G.html#bib983" title="The Applications of Elliptic Functions">1892</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citealias"><a class="ltx_ref" href="bib/L.html#bib1402" title="Traité des fonctions elliptiques et des intégrales Eulériennes">Legendre (1825–1832)</a></cite>, <cite class="ltx_cite ltx_citemacro_citet">Tricomi (<a class="ltx_ref" href="bib/T.html#bib2277" title="Funzioni Ellittiche">1951</a>)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Whittaker and Watson (<a class="ltx_ref" href="bib/W.html#bib2404" title="A Course of Modern Analysis">1927</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="about/bio/BCCarlson.html#S0.I1.ix1.p1" title="Profile Bille C. Carlson ‣ About the Project"><span class="ltx_text ltx_ref_title"><span class="ltx_text ltx_font_italic">Profile<span class="ltx_text"> </span></span>Bille C. Carlson</span></a>,
+<a class="ltx_ref" href="about/staff.html#S2.I1.ix6.p1" title="Chapter Authors ‣ Project Staff ‣ About the Project"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Chapter Authors</span></a>,
+<a class="ltx_ref" href="about/staff.html#S4.I1.ix3.p1" title="Associate Editors ‣ Project Staff ‣ About the Project"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Associate Editors</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.1.I4.ix3.p1" title="In Other Changes ‣ Version 1.0.1 (June 27, 2011) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.1) for  References</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.3.I1.ix4" title="In Errata ‣ Version 1.1.3 (September 15, 2021) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.3) for  Chapter <span class="ltx_text ltx_ref_tag">19</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.p3" title="Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_title">Version 1.2.0 (March 27, 2024)</span></a>,
+<a class="ltx_ref" href="front/introduction.html#notations.p3" title="Notation for the Special Functions ‣ Mathematical Introduction"><span class="ltx_text ltx_ref_title">Notation for the Special Functions</span></a>,
+<a class="ltx_ref" href="front/introduction.html#organization.p3" title="Organization and Objective ‣ Mathematical Introduction"><span class="ltx_text ltx_ref_title">Organization and Objective</span></a>,
+<a class="ltx_ref" href="software/index.html#S1.t1.r71" title="Software Cross Index ‣ Software Index"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Software Cross Index</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="19.html" title="">http://dlmf.nist.gov/19</a></dd>
+<dt>Addition (effective with 1.0.1):</dt>
+<dd>
+<cite class="ltx_cite ltx_citemacro_citet">Armitage and Eberlein (<a class="ltx_ref" href="bib/index.html#bib2736" title="Elliptic Functions">2006</a>)</cite> was added as a general reference for this chapter.
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_gallery">
+<span style="height:100px">  </span>
+<span style="height:100px">  </span>
+</div>
+<div class="ltx_page_columns">
+<div class="ltx_page_column1">
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry" id="PT1">
+<span class="ltx_text">Notation</span>
+<ol class="ltx_toclist ltx_toclist_part">
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.1.html" title="In Notation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.1 </span>Special Notation</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry" id="PT2">
+<span class="ltx_text">Legendre’s Integrals</span>
+<ol class="ltx_toclist ltx_toclist_part">
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.2.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.2 </span>Definitions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.3.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.3 </span>Graphics</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.4.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.4 </span>Derivatives and Differential Equations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.5.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.5 </span>Maclaurin and Related Expansions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.6.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.6 </span>Special Cases</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.7.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.7 </span>Connection Formulas</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.8.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.8 </span>Quadratic Transformations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.9.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.9 </span>Inequalities</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.10.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.10 </span>Relations to Other Functions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.11.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.11 </span>Addition Theorems</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.12.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.12 </span>Asymptotic Approximations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.13.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.13 </span>Integrals of Elliptic Integrals</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.14.html" title="In Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.14 </span>Reduction of General Elliptic Integrals</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry" id="PT3">
+<span class="ltx_text">Symmetric Integrals</span>
+<ol class="ltx_toclist ltx_toclist_part">
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.15.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.15 </span>Advantages of Symmetry</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.16.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.16 </span>Definitions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.17.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.17 </span>Graphics</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.18.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.18 </span>Derivatives and Differential Equations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.19.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.19 </span>Taylor and Related Series</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.20.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.20 </span>Special Cases</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.21.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.21 </span>Connection Formulas</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.22.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.22 </span>Quadratic Transformations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.23.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.23 </span>Integral Representations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.24.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.24 </span>Inequalities</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.25.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.25 </span>Relations to Other Functions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.26.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.26 </span>Addition Theorems</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.27.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.27 </span>Asymptotic Approximations and Expansions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.28.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.28 </span>Integrals of Elliptic Integrals</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.29.html" title="In Symmetric Integrals ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.29 </span>Reduction of General Elliptic Integrals</span></a></li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="ltx_page_column2">
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry" id="PT4">
+<span class="ltx_text">Applications</span>
+<ol class="ltx_toclist ltx_toclist_part">
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.30.html" title="In Applications ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.30 </span>Lengths of Plane Curves</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.31.html" title="In Applications ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.31 </span>Probability Distributions</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.32.html" title="In Applications ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.32 </span>Conformal Map onto a Rectangle</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.33.html" title="In Applications ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.33 </span>Triaxial Ellipsoids</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.34.html" title="In Applications ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.34 </span>Mutual Inductance of Coaxial Circles</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.35.html" title="In Applications ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.35 </span>Other Applications</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry" id="PT5">
+<span class="ltx_text">Computation</span>
+<ol class="ltx_toclist ltx_toclist_part">
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.36.html" title="In Computation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.36 </span>Methods of Computation</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.37.html" title="In Computation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.37 </span>Tables</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.38.html" title="In Computation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.38 </span>Approximations</span></a></li>
+<li class="ltx_tocentry"><a class="ltx_ref ltx_toc" href="19.39.html" title="In Computation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.39 </span>Software</span></a></li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="18.42.html" rel="prev" title="In Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.42 </span>Software</span></a><a class="ltx_ref" href="19.1.html" rel="next" title="In Notation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">19.1 </span>Special Notation</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

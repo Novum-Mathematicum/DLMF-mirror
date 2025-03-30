@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/24.17";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="24.html#PT3" rel="up" title="Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.html" rel="up up" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="index.html" rel="start" title=""/>
+<link href="24.16.html" rel="prev" title="§24.16 Generalizations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.18.html" rel="next" title="§24.18 Physical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.1.html" rel="section" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.2.html" rel="section" title="§24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.3.html" rel="section" title="§24.3 Graphs ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.4.html" rel="section" title="§24.4 Basic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.5.html" rel="section" title="§24.5 Recurrence Relations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.6.html" rel="section" title="§24.6 Explicit Formulas ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.7.html" rel="section" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.8.html" rel="section" title="§24.8 Series Expansions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.9.html" rel="section" title="§24.9 Inequalities ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.10.html" rel="section" title="§24.10 Arithmetic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.11.html" rel="section" title="§24.11 Asymptotic Approximations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.12.html" rel="section" title="§24.12 Zeros ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.13.html" rel="section" title="§24.13 Integrals ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.14.html" rel="section" title="§24.14 Sums ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.15.html" rel="section" title="§24.15 Related Sequences of Numbers ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.16.html" rel="section" title="§24.16 Generalizations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.18.html" rel="section" title="§24.18 Physical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.19.html" rel="section" title="§24.19 Methods of Computation ‣ Computation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.20.html" rel="section" title="§24.20 Tables ‣ Computation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.21.html" rel="section" title="§24.21 Software ‣ Computation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Bernoulli, Bernoulli and Euler numbers and polynomials, Bernoulli and Euler polynomials, Bernoulli monosplines, Bernoulli polynomials, Boole, Boole summation formula, Euler polynomials, Euler splines, Euler–Maclaurin, Euler–Maclaurin formula, Fermat’s last theorem, Riemann zeta function, applications, calculus of finite differences, cardinal, cardinal monosplines, cardinal spline functions, cardinal splines, cyclotomic fields, generalization, mathematical, monosplines, number theory, relations to other functions, spline functions, summation formulas" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="24.17.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="24.17.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="24.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24 </span>Bernoulli and Euler Polynomials</span></a><a class="ltx_ref" href="24.html#PT3" rel="up" title="In Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title">Applications</span></a><a class="ltx_ref" href="24.16.html" rel="prev" title="In Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.16 </span>Generalizations</span></a><a class="ltx_ref" href="24.18.html" rel="next" title="In Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.18 </span>Physical Applications</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§24.17 </span>Mathematical Applications</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20polynomials">Bernoulli polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%20polynomials">Euler polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=mathematical">mathematical</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="24.17.html" title="">http://dlmf.nist.gov/24.17</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="24.17.html#i"><span class="ltx_tag ltx_tag_subsection">§24.17(i) </span>Summation</a></li>
+<li class="ltx_tocentry"><a href="24.17.html#ii"><span class="ltx_tag ltx_tag_subsection">§24.17(ii) </span>Spline Functions</a></li>
+<li class="ltx_tocentry"><a href="24.17.html#iii"><span class="ltx_tag ltx_tag_subsection">§24.17(iii) </span>Number Theory</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§24.17(i) </span>Summation</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Temme (<a class="ltx_ref" href="bib/T.html#bib2230" title="Special Functions: An Introduction to the Classical Functions of Mathematical Physics">1996b</a>, pp. 17 and 18)</cite> or
+<cite class="ltx_cite ltx_citemacro_citet">Nörlund (<a class="ltx_ref" href="bib/N.html#bib1730" title="Vorlesungen über Differenzenrechnung">1924</a>, pp. 29–36)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.i" title="">http://dlmf.nist.gov/24.17.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Euler–Maclaurin Summation Formula</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%E2%80%93Maclaurin">Euler–Maclaurin</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%E2%80%93Maclaurin%20formula">Euler–Maclaurin formula</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=generalization">generalization</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=summation%20formulas">summation formulas</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#i.info" title="§24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">See §<a class="ltx_ref" href="2.10.html#i" title="§2.10(i) Euler–Maclaurin Formula ‣ §2.10 Sums and Sequences ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.10(i)</span></a>. For a generalization see
+<cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, p. 284)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Boole Summation Formula</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Boole">Boole</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Boole%20summation%20formula">Boole summation formula</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=summation%20formulas">summation formulas</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#i.info" title="§24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">Let <math altimg="m3.png" altimg-height="21px" altimg-valign="-5px" altimg-width="92px" alttext="0\leq h\leq 1" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./24.17#Px2.p1" title="parameter">h</mi><mo>≤</mo><mn>1</mn></mrow></math> and <math altimg="m24.png" altimg-height="17px" altimg-valign="-6px" altimg-width="43px" alttext="a,m" class="ltx_Math" display="inline"><mrow><mi href="./24.17#Px2.p1" title="integer">a</mi><mo>,</mo><mi href="./24.1#t1.r1" title="integer">m</mi></mrow></math>, and <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="integer">n</mi></math> be integers such that <math altimg="m37.png" altimg-height="16px" altimg-valign="-3px" altimg-width="55px" alttext="n&gt;a" class="ltx_Math" display="inline"><mrow><mi href="./24.17#Px2.p1" title="integer">n</mi><mo>&gt;</mo><mi href="./24.17#Px2.p1" title="integer">a</mi></mrow></math>,
+<math altimg="m31.png" altimg-height="18px" altimg-valign="-3px" altimg-width="61px" alttext="m&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">m</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, and <math altimg="m26.png" altimg-height="28px" altimg-valign="-7px" altimg-width="73px" alttext="f^{(m)}(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">m</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is absolutely integrable over <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="[a,n]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi href="./24.17#Px2.p1" title="integer">a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi href="./24.17#Px2.p1" title="integer">n</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>. Then with the
+notation of §<a class="ltx_ref" href="24.2.html#iii" title="§24.2(iii) Periodic Bernoulli and Euler Functions ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.2(iii)</span></a></p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="144px" altimg-valign="-31px" altimg-width="715px" alttext="\sum_{j=a}^{n-1}(-1)^{j}f(j+h)=\frac{1}{2}\sum_{k=0}^{m-1}\frac{E_{k}\left(h%
+\right)}{k!}\left((-1)^{n-1}f^{(k)}(n)+(-1)^{a}f^{(k)}(a)\right)+R_{m}(n)," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./24.1#t1.r1" title="integer">j</mi><mo>=</mo><mi href="./24.17#Px2.p1" title="integer">a</mi></mrow><mrow><mi href="./24.17#Px2.p1" title="integer">n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><msup><mrow><mo lspace="0em" stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.1#t1.r1" title="integer">j</mi></msup><mo>⁢</mo><mrow><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./24.1#t1.r1" title="integer">j</mi><mo>+</mo><mi href="./24.17#Px2.p1" title="parameter">h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./24.1#t1.r1" title="integer">k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./24.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mfrac><mrow><msub><mi href="./24.2#ii" title="Euler polynomials">E</mi><mi href="./24.1#t1.r1" title="integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.17#Px2.p1" title="parameter">h</mi><mo>)</mo></mrow></mrow><mrow><mi href="./24.1#t1.r1" title="integer">k</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.17#Px2.p1" title="integer">n</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msup><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">k</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.17#Px2.p1" title="integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.17#Px2.p1" title="integer">a</mi></msup><mo>⁢</mo><mrow><msup><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">k</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.17#Px2.p1" title="integer">a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi href="./24.17#Px2.p1" title="remainder">R</mi><mi href="./24.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.17#Px2.p1" title="integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#ii" title="§24.2(ii) Euler Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="E_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#ii" title="Euler polynomials">E</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: Euler polynomials</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">j</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">k</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="parameter">h</mi></math>:  parameter</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m25.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="integer">a</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m26.png" altimg-height="28px" altimg-valign="-7px" altimg-width="73px" alttext="f^{(m)}(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">m</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  integrable function</a> and
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="R_{m}(n)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px2.p1" title="remainder">R</mi><mi href="./24.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.17#Px2.p1" title="integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E1" title="">http://dlmf.nist.gov/24.17.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px2.info" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#i.info" title="§24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="82px" altimg-valign="-21px" altimg-width="451px" alttext="R_{m}(n)=\frac{1}{2(m-1)!}\int_{a}^{n}f^{(m)}(x)\widetilde{E}_{m-1}\left(h-x%
+\right)\,\mathrm{d}x." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./24.17#Px2.p1" title="remainder">R</mi><mi href="./24.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.17#Px2.p1" title="integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./24.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mi href="./24.17#Px2.p1" title="integer">a</mi><mi href="./24.17#Px2.p1" title="integer">n</mi></msubsup><mrow><mrow><msup><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">m</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Euler functions">E</mi><mo href="./24.2#iii" title="periodic Euler functions">~</mo></mover><mrow><mi href="./24.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./24.17#Px2.p1" title="parameter">h</mi><mo>−</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.2.html#iii" title="§24.2(iii) Periodic Bernoulli and Euler Functions ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m22.png" altimg-height="30px" altimg-valign="-7px" altimg-width="62px" alttext="\widetilde{E}_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Euler functions">E</mi><mo href="./24.2#iii" title="periodic Euler functions">~</mo></mover><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: periodic Euler functions</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="parameter">h</mi></math>:  parameter</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m25.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="integer">a</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.17#Px2.p1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m26.png" altimg-height="28px" altimg-valign="-7px" altimg-width="73px" alttext="f^{(m)}(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./24.17#Px2.p1" title="integrable function">f</mi><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">m</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  integrable function</a> and
+<a class="ltx_ref" href="24.17.html#Px2.p1" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="R_{m}(n)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px2.p1" title="remainder">R</mi><mi href="./24.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.17#Px2.p1" title="integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E2" title="">http://dlmf.nist.gov/24.17.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px2.info" title="Boole Summation Formula ‣ §24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#i.info" title="§24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Calculus of Finite Differences</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=calculus%20of%20finite%20differences">calculus of finite differences</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#i.info" title="§24.17(i) Summation ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(i)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<p class="ltx_p">See <cite class="ltx_cite ltx_citemacro_citet">Milne-Thomson (<a class="ltx_ref" href="bib/M.html#bib1638" title="The Calculus of Finite Differences">1933</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Nörlund (<a class="ltx_ref" href="bib/N.html#bib1730" title="Vorlesungen über Differenzenrechnung">1924</a>)</cite>, or
+<cite class="ltx_cite ltx_citemacro_citet">Jordan (<a class="ltx_ref" href="bib/J.html#bib1189" title="Calculus of Finite Differences">1965</a>)</cite>. For a more modern perspective see
+<cite class="ltx_cite ltx_citemacro_citet">Graham<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/G.html#bib974" title="Concrete Mathematics: A Foundation for Computer Science">1994</a>)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§24.17(ii) </span>Spline Functions</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.11.html#vi.p2" title="§3.11(vi) Splines ‣ §3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.11(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.ii" title="">http://dlmf.nist.gov/24.17.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Euler Splines</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%20splines">Euler splines</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cardinal">cardinal</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cardinal%20spline%20functions">cardinal spline functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cardinal%20splines">cardinal splines</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=monosplines">monosplines</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spline%20functions">spline functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Schumaker (<a class="ltx_ref" href="bib/S.html#bib2027" title="Spline Functions: Basic Theory">1981</a>, pp. 152–153)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Schoenberg (<a class="ltx_ref" href="bib/S.html#bib2015" title="Cardinal Spline Interpolation">1973</a>, pp. 40–41 and 101)</cite>.</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<p class="ltx_p">Let <math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="28px" alttext="\mathcal{S}_{n}" class="ltx_Math" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub></math> denote the class of functions that have <math altimg="m34.png" altimg-height="19px" altimg-valign="-4px" altimg-width="53px" alttext="n-1" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>−</mo><mn>1</mn></mrow></math> continuous
+derivatives on <math altimg="m17.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi></math> and are polynomials of degree at most <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math> in each
+interval <math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="88px" alttext="(k,k+1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./24.1#t1.r1" title="integer">k</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mrow><mi href="./24.1#t1.r1" title="integer">k</mi><mo>+</mo><mn>1</mn></mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, <math altimg="m30.png" altimg-height="19px" altimg-valign="-3px" altimg-width="55px" alttext="k\in\mathbb{Z}" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">k</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow></math>. The members of <math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="28px" alttext="\mathcal{S}_{n}" class="ltx_Math" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub></math> are called
+<em class="ltx_emph ltx_font_italic">cardinal spline functions</em>. The functions
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="67px" altimg-valign="-27px" altimg-width="248px" alttext="S_{n}(x)=\frac{\widetilde{E}_{n}\left(x+\tfrac{1}{2}n+\tfrac{1}{2}\right)}{%
+\widetilde{E}_{n}\left(\tfrac{1}{2}n+\tfrac{1}{2}\right)}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi>S</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Euler functions">E</mi><mo href="./24.2#iii" title="periodic Euler functions">~</mo></mover><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Euler functions">E</mi><mo href="./24.2#iii" title="periodic Euler functions">~</mo></mover><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m35.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=0,1,\dots" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#iii" title="§24.2(iii) Periodic Bernoulli and Euler Functions ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m22.png" altimg-height="30px" altimg-valign="-7px" altimg-width="62px" alttext="\widetilde{E}_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Euler functions">E</mi><mo href="./24.2#iii" title="periodic Euler functions">~</mo></mover><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: periodic Euler functions</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E3" title="">http://dlmf.nist.gov/24.17.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px4.info" title="Euler Splines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">are called <em class="ltx_emph ltx_font_italic">Euler splines of degree</em> <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>.
+For each <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>, <math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="S_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi>S</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the unique bounded function such that
+<math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="106px" alttext="S_{n}(x)\in\mathcal{S}_{n}" class="ltx_Math" display="inline"><mrow><mrow><msub><mi>S</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub></mrow></math> and</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="30px" altimg-valign="-7px" altimg-width="145px" alttext="S_{n}(k)=(-1)^{k}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi>S</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.1#t1.r1" title="integer">k</mi></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m30.png" altimg-height="19px" altimg-valign="-3px" altimg-width="55px" alttext="k\in\mathbb{Z}" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">k</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m15.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t2.r20" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbb{Z}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></math>: set of all integers</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">k</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E4" title="">http://dlmf.nist.gov/24.17.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px4.info" title="Euler Splines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The function <math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="S_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi>S</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also optimal in a certain sense; see
+<cite class="ltx_cite ltx_citemacro_citet">Schoenberg (<a class="ltx_ref" href="bib/S.html#bib2014" title="Norm inequalities for a certain class of C ∞ functions">1971</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px5">
+<h3 class="ltx_title ltx_title_paragraph">Bernoulli Monosplines</h3>
+<div class="ltx_metadata ltx_info" id="Px5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli">Bernoulli</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20monosplines">Bernoulli monosplines</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cardinal%20monosplines">cardinal monosplines</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=monosplines">monosplines</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spline%20functions">spline functions</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px5.p1">
+<p class="ltx_p">A function of the form <math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="x^{n}-S(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">x</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msup><mo>−</mo><mrow><mi>S</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, with <math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="117px" alttext="S(x)\in\mathcal{S}_{n-1}" class="ltx_Math" display="inline"><mrow><mrow><mi>S</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><msub><mi class="ltx_font_mathcaligraphic">𝒮</mi><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math> is
+called a <em class="ltx_emph ltx_font_italic">cardinal monospline of degree</em> <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>.
+Again with the notation of §<a class="ltx_ref" href="24.2.html#iii" title="§24.2(iii) Periodic Bernoulli and Euler Functions ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.2(iii)</span></a> define
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="69px" altimg-valign="-28px" altimg-width="316px" alttext="M_{n}(x)=\begin{cases}\widetilde{B}_{n}\left(x\right)-B_{n},&amp;n\text{ even},\\
+\widetilde{B}_{n}\left(x+\frac{1}{2}\right),&amp;n\text{ odd}.\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Bernoulli functions">B</mi><mo href="./24.2#iii" title="periodic Bernoulli functions">~</mo></mover><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow><mo>−</mo><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mtext> even</mtext></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Bernoulli functions">B</mi><mo href="./24.2#iii" title="periodic Bernoulli functions">~</mo></mover><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>+</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mtext> odd</mtext></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m4.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="24.2.html#iii" title="§24.2(iii) Periodic Bernoulli and Euler Functions ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m21.png" altimg-height="30px" altimg-valign="-7px" altimg-width="63px" alttext="\widetilde{B}_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Bernoulli functions">B</mi><mo href="./24.2#iii" title="periodic Bernoulli functions">~</mo></mover><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: periodic Bernoulli functions</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.17.html#Px5.p1" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="M_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E5" title="">http://dlmf.nist.gov/24.17.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px5.info" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p"><math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="M_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a monospline of degree <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>, and it follows from
+(<a class="ltx_ref" href="24.4.html#E25" title="(24.4.25) ‣ §24.4(vi) Special Values ‣ §24.4 Basic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.4.25</span></a>) and (<a class="ltx_ref" href="24.4.html#E27" title="(24.4.27) ‣ §24.4(vi) Special Values ‣ §24.4 Basic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.4.27</span></a>) that</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="27px" altimg-valign="-7px" altimg-width="109px" alttext="M_{n}(k)=0," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r1" title="integer">k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m30.png" altimg-height="19px" altimg-valign="-3px" altimg-width="55px" alttext="k\in\mathbb{Z}" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">k</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m15.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t2.r20" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbb{Z}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></math>: set of all integers</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">k</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.17.html#Px5.p1" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="M_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="24.17.html#Px5.p1" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E6" title="">http://dlmf.nist.gov/24.17.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px5.info" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">For each <math altimg="m36.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> the function <math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="M_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also the unique cardinal
+monospline of degree <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math> satisfying (<a class="ltx_ref" href="24.17.html#E6" title="(24.17.6) ‣ Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.17.6</span></a>), provided that</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="56px" altimg-valign="-7px" altimg-width="173px" alttext="M_{n}(x)=O\left(|x|^{\gamma}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mrow><mo stretchy="false">|</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">|</mo></mrow><mi>γ</mi></msup><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m42.png" altimg-height="18px" altimg-valign="-4px" altimg-width="85px" alttext="x\to\pm\infty" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.17.html#Px5.p1" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="M_{n}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.17#Px5.p1" title="function">M</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E7" title="">http://dlmf.nist.gov/24.17.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px5.info" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for some positive constant <math altimg="m14.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi>γ</mi></math>.</p>
+</div>
+<div class="ltx_para" id="Px5.p2">
+<p class="ltx_p">For any <math altimg="m39.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 2" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>≥</mo><mn>2</mn></mrow></math> the function</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.17.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="59px" altimg-valign="-7px" altimg-width="224px" alttext="F(x)=\widetilde{B}_{n}\left(x\right)-2^{-n}B_{n}" class="ltx_Math" display="block"><mrow><mrow><mi>F</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Bernoulli functions">B</mi><mo href="./24.2#iii" title="periodic Bernoulli functions">~</mo></mover><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msup><mn>2</mn><mrow><mo>−</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msup><mo>⁢</mo><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m4.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="24.2.html#iii" title="§24.2(iii) Periodic Bernoulli and Euler Functions ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m21.png" altimg-height="30px" altimg-valign="-7px" altimg-width="63px" alttext="\widetilde{B}_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mover accent="true"><mi href="./24.2#iii" title="periodic Bernoulli functions">B</mi><mo href="./24.2#iii" title="periodic Bernoulli functions">~</mo></mover><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: periodic Bernoulli functions</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.E8" title="">http://dlmf.nist.gov/24.17.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.17.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.17.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.17.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#Px5.info" title="Bernoulli Monosplines ‣ §24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#ii.info" title="§24.17(ii) Spline Functions ‣ §24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17(ii)</span></a>,
+<a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">is the unique cardinal monospline of degree <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math> having the least supremum norm
+<math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\|F\|_{\infty}" class="ltx_Math" display="inline"><msub><mrow><mo stretchy="false">‖</mo><mi>F</mi><mo stretchy="false">‖</mo></mrow><mi mathvariant="normal">∞</mi></msub></math> on <math altimg="m17.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi></math> (minimality property).
+</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§24.17(iii) </span>Number Theory</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20and%20Euler%20numbers%20and%20polynomials">Bernoulli and Euler numbers and polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20and%20Euler%20polynomials">Bernoulli and Euler polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20polynomials">Bernoulli polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%20polynomials">Euler polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fermat%20last%20theorem">Fermat’s last theorem</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Riemann%20zeta%20function">Riemann zeta function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cyclotomic%20fields">cyclotomic fields</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=mathematical">mathematical</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=number%20theory">number theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relations%20to%20other%20functions">relations to other functions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.17.iii" title="">http://dlmf.nist.gov/24.17.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.17.html#info" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.17</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Bernoulli and Euler numbers and polynomials occur in: number theory via
+(<a class="ltx_ref" href="24.4.html#E7" title="(24.4.7) ‣ §24.4(iii) Sums of Powers ‣ §24.4 Basic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.4.7</span></a>), (<a class="ltx_ref" href="24.4.html#E8" title="(24.4.8) ‣ §24.4(iii) Sums of Powers ‣ §24.4 Basic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.4.8</span></a>), and other identities involving
+sums of powers; the Riemann zeta function and <math altimg="m6.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="L" class="ltx_Math" display="inline"><mi>L</mi></math>-series (§<a class="ltx_ref" href="25.15.html" title="§25.15 Dirichlet 𝐿-functions ‣ Related Functions ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">25.15</span></a>,
+<cite class="ltx_cite ltx_citemacro_citet">Apostol (<a class="ltx_ref" href="bib/index.html#bib115" title="Introduction to Analytic Number Theory">1976</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Ireland and Rosen (<a class="ltx_ref" href="bib/I.html#bib1132" title="A Classical Introduction to Modern Number Theory">1990</a>)</cite>); arithmetic of
+cyclotomic fields and the classical theory of Fermat’s last theorem
+(<cite class="ltx_cite ltx_citemacro_citet">Ribenboim (<a class="ltx_ref" href="bib/R.html#bib1945" title="13 Lectures on Fermat’s Last Theorem">1979</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Washington (<a class="ltx_ref" href="bib/W.html#bib2370" title="Introduction to Cyclotomic Fields">1997</a>)</cite>); <math altimg="m40.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./24.1#t1.r3" title="prime">p</mi></math>-adic analysis
+(<cite class="ltx_cite ltx_citemacro_citet">Koblitz (<a class="ltx_ref" href="bib/K.html#bib1298" title="p -adic Numbers, p -adic Analysis, and Zeta-Functions">1984</a>, Chapter 2)</cite>).
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="24.16.html" rel="prev" title="In Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.16 </span>Generalizations</span></a><a class="ltx_ref" href="24.18.html" rel="next" title="In Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.18 </span>Physical Applications</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

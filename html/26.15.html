@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/26.15";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="26.html#PT2" rel="up" title="Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.html" rel="up up" title="Chapter 26 Combinatorial Analysis"/>
+<link href="index.html" rel="start" title=""/>
+<link href="26.14.html" rel="prev" title="§26.14 Permutations: Order Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.16.html" rel="next" title="§26.16 Multiset Permutations ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.1.html" rel="section" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.2.html" rel="section" title="§26.2 Basic Definitions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.3.html" rel="section" title="§26.3 Lattice Paths: Binomial Coefficients ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.4.html" rel="section" title="§26.4 Lattice Paths: Multinomial Coefficients and Set Partitions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.5.html" rel="section" title="§26.5 Lattice Paths: Catalan Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.6.html" rel="section" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.7.html" rel="section" title="§26.7 Set Partitions: Bell Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.8.html" rel="section" title="§26.8 Set Partitions: Stirling Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.9.html" rel="section" title="§26.9 Integer Partitions: Restricted Number and Part Size ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.10.html" rel="section" title="§26.10 Integer Partitions: Other Restrictions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.11.html" rel="section" title="§26.11 Integer Partitions: Compositions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.12.html" rel="section" title="§26.12 Plane Partitions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.13.html" rel="section" title="§26.13 Permutations: Cycle Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.14.html" rel="section" title="§26.14 Permutations: Order Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.16.html" rel="section" title="§26.16 Multiset Permutations ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.17.html" rel="section" title="§26.17 The Twelvefold Way ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.18.html" rel="section" title="§26.18 Counting Techniques ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.19.html" rel="section" title="§26.19 Mathematical Applications ‣ Applications ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.20.html" rel="section" title="§26.20 Physical Applications ‣ Applications ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.21.html" rel="section" title="§26.21 Tables ‣ Computation ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.22.html" rel="section" title="§26.22 Software ‣ Computation ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Ferrers board, inversion numbers, matrix notation, permutations, problème des ménages, restricted position, rook polynomial, sign" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="26.15.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="26.15.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="26.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26 </span>Combinatorial Analysis</span></a><a class="ltx_ref" href="26.html#PT2" rel="up" title="In Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="26.14.html" rel="prev" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.14 </span>Permutations: Order Notation</span></a><a class="ltx_ref" href="26.16.html" rel="next" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.16 </span>Multiset Permutations</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§26.15 </span>Permutations: Matrix Notation</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inversion%20numbers">inversion numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix%20notation">matrix notation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=permutations">permutations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=restricted%20position">restricted position</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=rook%20polynomial">rook polynomial</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sign">sign</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Stanley (<a class="ltx_ref" href="bib/S.html#bib2157" title="Enumerative Combinatorics. Vol. 1">1997</a>, pp. 71–76)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Tucker (<a class="ltx_ref" href="bib/T.html#bib2285" title="Applied Combinatorics">2006</a>, pp. 335–345)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="26.18.html#Px2.p1" title="Example 2 ‣ §26.18 Counting Techniques ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.18</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix1.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="26.15.html" title="">http://dlmf.nist.gov/26.15</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<p class="ltx_p">The set <math altimg="m32.png" altimg-height="21px" altimg-valign="-5px" altimg-width="33px" alttext="\mathfrak{S}_{n}" class="ltx_Math" display="inline"><msub><mi href="./26.13#p1" title="set of permutations of {1,2,…,𝑛}">𝔖</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msub></math> (§<a class="ltx_ref" href="26.13.html" title="§26.13 Permutations: Cycle Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.13</span></a>) can be identified with the set of
+<math altimg="m43.png" altimg-height="18px" altimg-valign="-4px" altimg-width="55px" alttext="n\times n" class="ltx_Math" display="inline"><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow></math> matrices of 0’s and 1’s with exactly one 1 in each row and
+column. The permutation <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./26.15#p1" title="permutation">σ</mi></math> corresponds to the matrix in which there is a
+1 at the intersection of row <math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></math> with column <math altimg="m34.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="\sigma(j)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p1" title="permutation">σ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and 0’s in all
+other positions. The permutation <math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="87px" alttext="35247816" class="ltx_Math" display="inline"><mn>35247816</mn></math> corresponds to the matrix</p>
+</div>
+<div class="ltx_para" id="p2">
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="212px" altimg-valign="-96px" altimg-width="279px" alttext="\begin{bmatrix}0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;1&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;1\\
+1&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0&amp;0\\
+0&amp;0&amp;0&amp;0&amp;0&amp;1&amp;0&amp;0\end{bmatrix}" class="ltx_Math" display="block"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E1" title="">http://dlmf.nist.gov/26.15.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">sign of the permutation</em> <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./26.15#p1" title="permutation">σ</mi></math> is the sign of the determinant of
+its matrix representation. The <em class="ltx_emph ltx_font_italic">inversion number</em> of <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./26.15#p1" title="permutation">σ</mi></math> is a sum of
+products of pairs of entries in the matrix representation of <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./26.15#p1" title="permutation">σ</mi></math>:
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="40px" altimg-valign="-13px" altimg-width="189px" alttext="\mathop{\mathrm{inv}}(\sigma)=\sum a_{gh}a_{k\ell}," class="ltx_Math" display="block"><mrow><mrow><mrow><mo movablelimits="false" rspace="0em">inv</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p1" title="permutation">σ</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><mo movablelimits="false">∑</mo><mrow><msub><mi>a</mi><mrow><mi>g</mi><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">h</mi></mrow></msub><mo>⁢</mo><msub><mi>a</mi><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>⁢</mo><mi href="./26.1#t1.r2" mathvariant="normal" title="nonnegative integer">ℓ</mi></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">h</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="\ell" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" mathvariant="normal" title="nonnegative integer">ℓ</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.15.html#p1" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./26.15#p1" title="permutation">σ</mi></math>:  permutation</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E2" title="">http://dlmf.nist.gov/26.15.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where the sum is over <math altimg="m11.png" altimg-height="22px" altimg-valign="-6px" altimg-width="132px" alttext="1\leq g&lt;k\leq n" class="ltx_Math" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>g</mi><mo>&lt;</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>≤</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow></math> and <math altimg="m42.png" altimg-height="21px" altimg-valign="-5px" altimg-width="131px" alttext="n\geq h&gt;\ell\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>≥</mo><mi href="./26.1#t1.r2" title="nonnegative integer">h</mi><mo>&gt;</mo><mi href="./26.1#t1.r2" mathvariant="normal" title="nonnegative integer">ℓ</mi><mo>≥</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="p3">
+<p class="ltx_p">The matrix represents the placement of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math> nonattacking rooks on an
+<math altimg="m43.png" altimg-height="18px" altimg-valign="-4px" altimg-width="55px" alttext="n\times n" class="ltx_Math" display="inline"><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow></math> chessboard, that is, rooks that share neither a row nor a column
+with any other rook. A <em class="ltx_emph ltx_font_italic">permutation with restricted position</em> specifies a
+subset <math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="293px" alttext="B\subseteq\{1,2,\ldots,n\}\times\{1,2,\ldots,n\}" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo href="./front/introduction#common.t2.r3" title="is, or is contained in">⊆</mo><mrow><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo rspace="0.055em" stretchy="false">}</mo></mrow><mo rspace="0.222em">×</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. If <math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="92px" alttext="(j,k)\in B" class="ltx_Math" display="inline"><mrow><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./26.15#p3" title="subset">B</mi></mrow></math>,
+then <math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\sigma(j)\neq k" class="ltx_Math" display="inline"><mrow><mrow><mi href="./26.15#p1" title="permutation">σ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></math>. The number of <em class="ltx_emph ltx_font_italic">derangements</em> of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math> is the
+number of permutations with forbidden positions
+<math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="267px" alttext="B=\{(1,1),(2,2),\ldots,(n,n)\}" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo>,</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>2</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>2</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="p4">
+<p class="ltx_p">Let <math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the number of ways of placing <math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></math> nonattacking rooks on the
+squares of <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>. Define <math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="94px" alttext="r_{0}(B)=1" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. For the problem of derangements,
+<math altimg="m45.png" altimg-height="32px" altimg-valign="-12px" altimg-width="112px" alttext="r_{j}(B)=\genfrac{(}{)}{0.0pt}{}{n}{j}" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></math>. The <em class="ltx_emph ltx_font_italic">rook polynomial</em> is the generating function
+for <math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="70px" altimg-valign="-31px" altimg-width="219px" alttext="R(x,B)=\sum_{j=0}^{n}r_{j}(B)\,x^{j}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0.170em">⁢</mo><msup><mi href="./26.1#t1.r1" title="real variable">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a>,
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a> and
+<a class="ltx_ref" href="26.15.html#p4" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="R(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  rook polynomial</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E3" title="">http://dlmf.nist.gov/26.15.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="p5">
+<p class="ltx_p">If <math altimg="m14.png" altimg-height="21px" altimg-valign="-5px" altimg-width="122px" alttext="B=B_{1}\cup B_{2}" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo>=</mo><mrow><msub><mi href="./26.15#p3" title="subset">B</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><msub><mi href="./26.15#p3" title="subset">B</mi><mn>2</mn></msub></mrow></mrow></math>, where no element of <math altimg="m22.png" altimg-height="21px" altimg-valign="-5px" altimg-width="29px" alttext="B_{1}" class="ltx_Math" display="inline"><msub><mi href="./26.15#p3" title="subset">B</mi><mn>1</mn></msub></math> is in the same row or column
+as any element of <math altimg="m23.png" altimg-height="21px" altimg-valign="-5px" altimg-width="29px" alttext="B_{2}" class="ltx_Math" display="inline"><msub><mi href="./26.15#p3" title="subset">B</mi><mn>2</mn></msub></math>, then</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="270px" alttext="R(x,B)=R(x,B_{1})\,R(x,B_{2})." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><msub><mi href="./26.15#p3" title="subset">B</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0.170em">⁢</mo><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><msub><mi href="./26.15#p3" title="subset">B</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html#p4" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="R(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  rook polynomial</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E4" title="">http://dlmf.nist.gov/26.15.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">For <math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="92px" alttext="(j,k)\in B" class="ltx_Math" display="inline"><mrow><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./26.15#p3" title="subset">B</mi></mrow></math>, <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="B\setminus[j,k]" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo href="./front/introduction#common.t2.r19" title="set subtraction">∖</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></mrow></math> denotes <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math> after removal of all
+elements of the form <math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="(j,t)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi>t</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> or <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="49px" alttext="(t,k)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>t</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, <math altimg="m47.png" altimg-height="21px" altimg-valign="-6px" altimg-width="128px" alttext="t=1,2,\ldots,n" class="ltx_Math" display="inline"><mrow><mi>t</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow></mrow></math>.
+<math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="86px" alttext="B\setminus(j,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo href="./front/introduction#common.t2.r19" title="set subtraction">∖</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math> denotes <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math> with the element <math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(j,k)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> removed.</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="27px" altimg-valign="-7px" altimg-width="416px" alttext="R(x,B)=x\,R(x,B\setminus[j,k])+R(x,B\setminus(j,k))." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./26.1#t1.r1" title="real variable">x</mi><mo lspace="0.170em">⁢</mo><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mrow><mi href="./26.15#p3" title="subset">B</mi><mo href="./front/introduction#common.t2.r19" title="set subtraction">∖</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mrow><mi href="./26.15#p3" title="subset">B</mi><mo href="./front/introduction#common.t2.r19" title="set subtraction">∖</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r30" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="[\NVar{a},\NVar{b}]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>: closed interval</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r29" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>: open interval</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t2.r19" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="15px" alttext="\setminus" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t2.r19" title="set subtraction">∖</mo></math>: set subtraction</a>,
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html#p4" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="R(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p4" title="rook polynomial">R</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  rook polynomial</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E5" title="">http://dlmf.nist.gov/26.15.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="p6">
+<p class="ltx_p"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="N_{k}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15#p6" title="generating function">N</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of permutations in <math altimg="m32.png" altimg-height="21px" altimg-valign="-5px" altimg-width="33px" alttext="\mathfrak{S}_{n}" class="ltx_Math" display="inline"><msub><mi href="./26.13#p1" title="set of permutations of {1,2,…,𝑛}">𝔖</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msub></math> for which exactly <math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math> of
+the pairs <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="(j,\sigma(j))" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mrow><mi href="./26.15#p1" title="permutation">σ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo stretchy="false">)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> are elements of <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>. <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="N(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the generating
+function:
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="68px" altimg-valign="-29px" altimg-width="232px" alttext="N(x,B)=\sum_{k=0}^{n}N_{k}(B)\,x^{k}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mrow><msub><mi href="./26.15#p6" title="generating function">N</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0.170em">⁢</mo><msup><mi href="./26.1#t1.r1" title="real variable">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html#p6" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="N(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  generating function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E6" title="">http://dlmf.nist.gov/26.15.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="68px" altimg-valign="-29px" altimg-width="344px" alttext="N(x,B)=\sum_{k=0}^{n}r_{k}(B)(n-k)!(x-1)^{k}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a>,
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a> and
+<a class="ltx_ref" href="26.15.html#p6" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="N(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  generating function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E7" title="">http://dlmf.nist.gov/26.15.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The number of permutations that avoid <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math> is</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="68px" altimg-valign="-29px" altimg-width="405px" alttext="N_{0}(B)\equiv N(0,B)=\sum_{k=0}^{n}(-1)^{k}r_{k}(B)(n-k)!." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./26.15#p6" title="generating function">N</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r9" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo></math>: equals by definition</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a>,
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a> and
+<a class="ltx_ref" href="26.15.html#p6" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="N(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  generating function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E8" title="">http://dlmf.nist.gov/26.15.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h2 class="ltx_title ltx_title_paragraph">Example 1</h2>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=probl%C3%A8me%20des%20m%C3%A9nages">problème des ménages</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">problème des ménages</em> asks for the number of ways of seating
+<math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math> married couples around a circular table with labeled seats so that no men
+are adjacent, no women are adjacent, and no husband and wife are adjacent.
+There are <math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="49px" alttext="2(n!)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math> ways to place the wives. Let
+<math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="456px" alttext="B=\{(j,j),(j,j+1)\&gt;|\&gt;1\leq j&lt;n\}\cup\{(n,n),(n,1)\}" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo>,</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo>+</mo><mn>1</mn></mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow><mo lspace="0.220em" rspace="0em">|</mo><mrow><mn> 1</mn><mo>≤</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo>&lt;</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo stretchy="false">}</mo></mrow><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><mrow><mo stretchy="false">{</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo>,</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. Then</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="56px" altimg-valign="-22px" altimg-width="247px" alttext="r_{k}(B)=\frac{2n}{2n-k}\genfrac{(}{)}{0.0pt}{}{2n-k}{k}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></mfrac><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E9" title="">http://dlmf.nist.gov/26.15.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#Px1.info" title="Example 1 ‣ §26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a>,
+<a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The solution is</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="68px" altimg-valign="-29px" altimg-width="501px" alttext="2(n!)N_{0}(B)=2(n!)\sum_{k=0}^{n}(-1)^{k}\frac{2n}{2n-k}\genfrac{(}{)}{0.0pt}{%
+}{2n-k}{k}{(n-k)!}." class="ltx_Math" display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./26.15#p6" title="generating function">N</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></mfrac><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html#p6" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="N(x,B)" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p6" title="generating function">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>,</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  generating function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E10" title="">http://dlmf.nist.gov/26.15.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#Px1.info" title="Example 1 ‣ §26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a>,
+<a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h2 class="ltx_title ltx_title_paragraph">Example 2</h2>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Ferrers%20board">Ferrers board</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Ferrers board</em> of shape <math altimg="m4.png" altimg-height="25px" altimg-valign="-7px" altimg-width="132px" alttext="(b_{1},b_{2},\ldots,b_{n})" class="ltx_Math" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msub><mo stretchy="false">)</mo></mrow></math>,
+<math altimg="m10.png" altimg-height="21px" altimg-valign="-5px" altimg-width="206px" alttext="0\leq b_{1}\leq b_{2}\leq\cdots\leq b_{n}" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><msub><mi>b</mi><mn>1</mn></msub><mo>≤</mo><msub><mi>b</mi><mn>2</mn></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>b</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msub></mrow></math>, is the set
+<math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="322px" alttext="B=\{(j,k)\&gt;|\&gt;1\leq j\leq n,1\leq k\leq b_{j}\}" class="ltx_Math" display="inline"><mrow><mi href="./26.15#p3" title="subset">B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow><mo lspace="0.220em" rspace="0em">|</mo><mrow><mrow><mn> 1</mn><mo>≤</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo>≤</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>,</mo><mrow><mn>1</mn><mo>≤</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>≤</mo><msub><mi>b</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. For this set,</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="70px" altimg-valign="-31px" altimg-width="436px" alttext="\sum_{k=0}^{n}r_{n-k}(B){\left(x-k+1\right)_{k}}=\prod_{j=1}^{n}(x+b_{j}-j+1)." class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∏</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi><mo>=</mo><mn>1</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>+</mo><msub><mi>b</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m49.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E11" title="">http://dlmf.nist.gov/26.15.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E11.png">png</a>
+</dd>
+<dt>Errata (effective with 1.1.2):</dt>
+<dd>
+The Pochhammer symbol now links to its definition.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#Px2.info" title="Example 2 ‣ §26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a>,
+<a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">If <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math> is the Ferrers board of shape <math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="164px" alttext="(0,1,2,\ldots,n-1)" class="ltx_Math" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math>, then</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="68px" altimg-valign="-29px" altimg-width="288px" alttext="\sum_{k=0}^{n}r_{n-k}(B){\left(x-k+1\right)_{k}}=x^{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi href="./26.1#t1.r1" title="real variable">x</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msub></mrow></mrow><mo>=</mo><msup><mi href="./26.1#t1.r1" title="real variable">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m49.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="26.1.html#t1.r1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.1#t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E12" title="">http://dlmf.nist.gov/26.15.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E12.png">png</a>
+</dd>
+<dt>Errata (effective with 1.1.2):</dt>
+<dd>
+The Pochhammer symbol now links to its definition.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#Px2.info" title="Example 2 ‣ §26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a>,
+<a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and therefore by (<a class="ltx_ref" href="26.8.html#E10" title="(26.8.10) ‣ §26.8(ii) Generating Functions ‣ §26.8 Set Partitions: Stirling Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.8.10</span></a>),</p>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.15.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="56px" altimg-valign="-7px" altimg-width="186px" alttext="r_{n-k}(B)=S\left(n,k\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./26.8#i.p3" title="Stirling number of the second kind">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.8.html#i.p3" title="§26.8(i) Definitions ‣ §26.8 Set Partitions: Stirling Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="S\left(\NVar{n},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./26.8#i.p3" title="Stirling number of the second kind">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi class="ltx_nvar" href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>)</mo></mrow></mrow></math>: Stirling number of the second kind</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.15.html#p3" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./26.15#p3" title="subset">B</mi></math>:  subset</a> and
+<a class="ltx_ref" href="26.15.html" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="r_{j}(B)" class="ltx_Math" display="inline"><mrow><msub><mi href="./26.15" title="number of rook positions">r</mi><mi href="./26.1#t1.r2" title="nonnegative integer">j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.15#p3" title="subset">B</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of rook positions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.15.E13" title="">http://dlmf.nist.gov/26.15.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.15.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.15.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.15.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.15.html#Px2.info" title="Example 2 ‣ §26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a>,
+<a class="ltx_ref" href="26.15.html#info" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.15</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="26.14.html" rel="prev" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.14 </span>Permutations: Order Notation</span></a><a class="ltx_ref" href="26.16.html" rel="next" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.16 </span>Multiset Permutations</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

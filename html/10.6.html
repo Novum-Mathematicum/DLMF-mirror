@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/10.6";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="10.html#PT2" rel="up" title="Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.html" rel="up up" title="Chapter 10 Bessel Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="10.5.html" rel="prev" title="§10.5 Wronskians and Cross-Products ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.7.html" rel="next" title="§10.7 Limiting Forms ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.1.html" rel="section" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.2.html" rel="section" title="§10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.3.html" rel="section" title="§10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.4.html" rel="section" title="§10.4 Connection Formulas ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.5.html" rel="section" title="§10.5 Wronskians and Cross-Products ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.7.html" rel="section" title="§10.7 Limiting Forms ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.8.html" rel="section" title="§10.8 Power Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.9.html" rel="section" title="§10.9 Integral Representations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.10.html" rel="section" title="§10.10 Continued Fractions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.11.html" rel="section" title="§10.11 Analytic Continuation ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.12.html" rel="section" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.13.html" rel="section" title="§10.13 Other Differential Equations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.14.html" rel="section" title="§10.14 Inequalities; Monotonicity ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.15.html" rel="section" title="§10.15 Derivatives with Respect to Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.16.html" rel="section" title="§10.16 Relations to Other Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.17.html" rel="section" title="§10.17 Asymptotic Expansions for Large Argument ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.18.html" rel="section" title="§10.18 Modulus and Phase Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.19.html" rel="section" title="§10.19 Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.20.html" rel="section" title="§10.20 Uniform Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.21.html" rel="section" title="§10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.22.html" rel="section" title="§10.22 Integrals ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.23.html" rel="section" title="§10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.24.html" rel="section" title="§10.24 Functions of Imaginary Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.25.html" rel="section" title="§10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.26.html" rel="section" title="§10.26 Graphics ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.27.html" rel="section" title="§10.27 Connection Formulas ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.28.html" rel="section" title="§10.28 Wronskians and Cross-Products ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.29.html" rel="section" title="§10.29 Recurrence Relations and Derivatives ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.30.html" rel="section" title="§10.30 Limiting Forms ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.31.html" rel="section" title="§10.31 Power Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.32.html" rel="section" title="§10.32 Integral Representations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.33.html" rel="section" title="§10.33 Continued Fractions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.34.html" rel="section" title="§10.34 Analytic Continuation ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.35.html" rel="section" title="§10.35 Generating Function and Associated Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.36.html" rel="section" title="§10.36 Other Differential Equations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.37.html" rel="section" title="§10.37 Inequalities; Monotonicity ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.38.html" rel="section" title="§10.38 Derivatives with Respect to Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.39.html" rel="section" title="§10.39 Relations to Other Functions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.40.html" rel="section" title="§10.40 Asymptotic Expansions for Large Argument ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.41.html" rel="section" title="§10.41 Asymptotic Expansions for Large Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.42.html" rel="section" title="§10.42 Zeros ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.43.html" rel="section" title="§10.43 Integrals ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.44.html" rel="section" title="§10.44 Sums ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.45.html" rel="section" title="§10.45 Functions of Imaginary Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.46.html" rel="section" title="§10.46 Generalized and Incomplete Bessel Functions; Mittag-Leffler Function ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.47.html" rel="section" title="§10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.48.html" rel="section" title="§10.48 Graphs ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.49.html" rel="section" title="§10.49 Explicit Formulas ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.50.html" rel="section" title="§10.50 Wronskians and Cross-Products ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.51.html" rel="section" title="§10.51 Recurrence Relations and Derivatives ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.52.html" rel="section" title="§10.52 Limiting Forms ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.53.html" rel="section" title="§10.53 Power Series ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.54.html" rel="section" title="§10.54 Integral Representations ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.55.html" rel="section" title="§10.55 Continued Fractions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.56.html" rel="section" title="§10.56 Generating Functions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.57.html" rel="section" title="§10.57 Uniform Asymptotic Expansions for Large Order ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.58.html" rel="section" title="§10.58 Zeros ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.59.html" rel="section" title="§10.59 Integrals ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.60.html" rel="section" title="§10.60 Sums ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.61.html" rel="section" title="§10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.62.html" rel="section" title="§10.62 Graphs ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.63.html" rel="section" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.64.html" rel="section" title="§10.64 Integral Representations ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.65.html" rel="section" title="§10.65 Power Series ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.66.html" rel="section" title="§10.66 Expansions in Series of Bessel Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.67.html" rel="section" title="§10.67 Asymptotic Expansions for Large Argument ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.68.html" rel="section" title="§10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.69.html" rel="section" title="§10.69 Uniform Asymptotic Expansions for Large Order ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.70.html" rel="section" title="§10.70 Zeros ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.71.html" rel="section" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.72.html" rel="section" title="§10.72 Mathematical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.73.html" rel="section" title="§10.73 Physical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.74.html" rel="section" title="§10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.75.html" rel="section" title="§10.75 Tables ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.76.html" rel="section" title="§10.76 Approximations ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.77.html" rel="section" title="§10.77 Software ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Bessel functions, Hankel functions, cross-products, cylinder functions, derivatives, explicit forms, recurrence relations" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="10.6.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="10.6.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="10.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Bessel Functions</span></a><a class="ltx_ref" href="10.html#PT2" rel="up" title="In Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title">Bessel and Hankel Functions</span></a><a class="ltx_ref" href="10.5.html" rel="prev" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.5 </span>Wronskians and Cross-Products</span></a><a class="ltx_ref" href="10.7.html" rel="next" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.7 </span>Limiting Forms</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§10.6 </span>Recurrence Relations and Derivatives</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="10.6.html" title="">http://dlmf.nist.gov/10.6</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="10.6.html#i"><span class="ltx_tag ltx_tag_subsection">§10.6(i) </span>Recurrence Relations</a></li>
+<li class="ltx_tocentry"><a href="10.6.html#ii"><span class="ltx_tag ltx_tag_subsection">§10.6(ii) </span>Derivatives</a></li>
+<li class="ltx_tocentry"><a href="10.6.html#iii"><span class="ltx_tag ltx_tag_subsection">§10.6(iii) </span>Cross-Products</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.6(i) </span>Recurrence Relations</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Hankel%20functions">Hankel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cylinder%20functions">cylinder functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=recurrence%20relations">recurrence relations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="10.6.html#E1" title="(10.6.1) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.1</span></a>) and (<a class="ltx_ref" href="10.6.html#E2" title="(10.6.2) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.2</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, pp. 58–59, 240–242)</cite> or
+<cite class="ltx_cite ltx_citemacro_citet">Watson (<a class="ltx_ref" href="bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp. 45, 66, 73–74)</cite>. (<a class="ltx_ref" href="10.6.html#E3" title="(10.6.3) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.3</span></a>) are
+special cases, and (<a class="ltx_ref" href="10.6.html#E4" title="(10.6.4) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.4</span></a>), (<a class="ltx_ref" href="10.6.html#E5" title="(10.6.5) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.5</span></a>) follow by
+straightforward substitution.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.1.3.I2.ix4" title="In Other Changes ‣ Version 1.1.3 (September 15, 2021) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.3) for  Subsections <span class="ltx_text ltx_ref_tag">10.6(i)</span>, <span class="ltx_text ltx_ref_tag">10.29(i)</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.3.I2.ix8.p1" title="In Other Changes ‣ Version 1.1.3 (September 15, 2021) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.3) for  References</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.i" title="">http://dlmf.nist.gov/10.6.i</a></dd>
+<dt>Addition (effective with 1.1.3):</dt>
+<dd>
+A sentence was added just below (<a class="ltx_ref" href="10.6.html#E5" title="(10.6.5) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.5</span></a>) regarding results on modified
+quotients of the form <math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="160px" alttext="\ifrac{z\mathscr{C}_{\nu\pm 1}\left(z\right)}{\mathscr{C}_{\nu}\left(z\right)}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>±</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math>.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">With <math altimg="m49.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathscr{C}_{\nu}\left(z\right)" class="ltx_Math" display="inline"><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> defined as in §<a class="ltx_ref" href="10.2.html#ii" title="§10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.2(ii)</span></a>,</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m28.png" altimg-height="70px" altimg-valign="-7px" altimg-width="124px" alttext="\displaystyle\mathscr{C}_{\nu-1}\left(z\right)+\mathscr{C}_{\nu+1}\left(z\right)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="40px" altimg-valign="-7px" altimg-width="157px" alttext="\displaystyle=(2\nu/z)\mathscr{C}_{\nu}\left(z\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mo>/</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m29.png" altimg-height="70px" altimg-valign="-7px" altimg-width="124px" alttext="\displaystyle\mathscr{C}_{\nu-1}\left(z\right)-\mathscr{C}_{\nu+1}\left(z\right)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m13.png" altimg-height="40px" altimg-valign="-7px" altimg-width="108px" alttext="\displaystyle=2\mathscr{C}_{\nu}'\left(z\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msubsup><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#Px5.p1" title="Cylinder Functions ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m48.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathscr{C}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: cylinder function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.27</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.51.html#i.info" title="§10.51(i) Unmodified Functions ‣ §10.51 Recurrence Relations and Derivatives ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.51(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#ii.info" title="§10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(ii)</span></a>,
+<a class="ltx_ref" href="10.63.html#i.info" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(i)</span></a>,
+<a class="ltx_ref" href="10.74.html#iv.p1" title="§10.74(iv) Recurrence Relations ‣ §10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.74(iv)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E1" title="">http://dlmf.nist.gov/10.6.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E1a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E1b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m30.png" altimg-height="40px" altimg-valign="-7px" altimg-width="78px" alttext="\displaystyle\mathscr{C}_{\nu}'\left(z\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m21.png" altimg-height="70px" altimg-valign="-7px" altimg-width="150px" alttext="\displaystyle=\mathscr{C}_{\nu-1}\left(z\right)-(\nu/z)\mathscr{C}_{\nu}\left(%
+z\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>/</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m30.png" altimg-height="40px" altimg-valign="-7px" altimg-width="78px" alttext="\displaystyle\mathscr{C}_{\nu}'\left(z\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="70px" altimg-valign="-7px" altimg-width="150px" alttext="\displaystyle=-\mathscr{C}_{\nu+1}\left(z\right)+(\nu/z)\mathscr{C}_{\nu}\left%
+(z\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>/</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#Px5.p1" title="Cylinder Functions ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m48.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathscr{C}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: cylinder function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.27</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.21.html#ii.info" title="§10.21(ii) Analytic Properties ‣ §10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.21(ii)</span></a>,
+<a class="ltx_ref" href="10.22.html#i.info" title="§10.22(i) Indefinite Integrals ‣ §10.22 Integrals ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.22(i)</span></a>,
+<a class="ltx_ref" href="10.22.html#ii.info" title="§10.22(ii) Integrals over Finite Intervals ‣ §10.22 Integrals ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.22(ii)</span></a>,
+<a class="ltx_ref" href="10.5.html#info" title="§10.5 Wronskians and Cross-Products ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.5</span></a>,
+<a class="ltx_ref" href="10.51.html#i.info" title="§10.51(i) Unmodified Functions ‣ §10.51 Recurrence Relations and Derivatives ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.51(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.63.html#i.info" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(i)</span></a>,
+<a class="ltx_ref" href="10.63.html#ii.info" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a>,
+<a class="ltx_ref" href="10.74.html#vi.p1" title="§10.74(vi) Zeros and Associated Values ‣ §10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.74(vi)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E2" title="">http://dlmf.nist.gov/10.6.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E2a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E2b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="E3X">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m24.png" altimg-height="40px" altimg-valign="-7px" altimg-width="74px" alttext="\displaystyle J_{0}'\left(z\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>0</mn><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="40px" altimg-valign="-7px" altimg-width="111px" alttext="\displaystyle=-J_{1}\left(z\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m25.png" altimg-height="40px" altimg-valign="-7px" altimg-width="76px" alttext="\displaystyle Y_{0}'\left(z\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mn>0</mn><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="40px" altimg-valign="-7px" altimg-width="111px" alttext="\displaystyle=-Y_{1}\left(z\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="E3Xa">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m40.png" altimg-height="41px" altimg-valign="-8px" altimg-width="100px" alttext="\displaystyle{H^{(1)}_{0}}'\left(z\right)" class="ltx_Math" display="inline"><mrow><mmultiscripts><mi href="./10.2#E5" title="Bessel function of the third kind (or Hankel function)">H</mi><mn>0</mn><mrow><mo href="./10.2#E5" stretchy="false" title="Bessel function of the third kind (or Hankel function)">(</mo><mn href="./10.2#E5" title="Bessel function of the third kind (or Hankel function)">1</mn><mo href="./10.2#E5" stretchy="false" title="Bessel function of the third kind (or Hankel function)">)</mo></mrow><mrow></mrow><mo>′</mo></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m11.png" altimg-height="41px" altimg-valign="-8px" altimg-width="131px" alttext="\displaystyle=-{H^{(1)}_{1}}\left(z\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msubsup><mi href="./10.2#E5" title="Bessel function of the third kind (or Hankel function)">H</mi><mn>1</mn><mrow><mo href="./10.2#E5" stretchy="false" title="Bessel function of the third kind (or Hankel function)">(</mo><mn href="./10.2#E5" title="Bessel function of the third kind (or Hankel function)">1</mn><mo href="./10.2#E5" stretchy="false" title="Bessel function of the third kind (or Hankel function)">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m41.png" altimg-height="41px" altimg-valign="-8px" altimg-width="100px" alttext="\displaystyle{H^{(2)}_{0}}'\left(z\right)" class="ltx_Math" display="inline"><mrow><mmultiscripts><mi href="./10.2#E6" title="Bessel function of the third kind (or Hankel function)">H</mi><mn>0</mn><mrow><mo href="./10.2#E6" stretchy="false" title="Bessel function of the third kind (or Hankel function)">(</mo><mn href="./10.2#E6" title="Bessel function of the third kind (or Hankel function)">2</mn><mo href="./10.2#E6" stretchy="false" title="Bessel function of the third kind (or Hankel function)">)</mo></mrow><mrow></mrow><mo>′</mo></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m12.png" altimg-height="41px" altimg-valign="-8px" altimg-width="131px" alttext="\displaystyle=-{H^{(2)}_{1}}\left(z\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msubsup><mi href="./10.2#E6" title="Bessel function of the third kind (or Hankel function)">H</mi><mn>1</mn><mrow><mo href="./10.2#E6" stretchy="false" title="Bessel function of the third kind (or Hankel function)">(</mo><mn href="./10.2#E6" title="Bessel function of the third kind (or Hankel function)">2</mn><mo href="./10.2#E6" stretchy="false" title="Bessel function of the third kind (or Hankel function)">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="7">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m42.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="10.2.html#E3" title="(10.2.3) ‣ Bessel Function of the Second Kind (Weber’s Function) ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="Y_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the second kind</a>,
+<a class="ltx_ref" href="10.2.html#E5" title="(10.2.5) ‣ Bessel Functions of the Third Kind (Hankel Functions) ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m68.png" altimg-height="31px" altimg-valign="-7px" altimg-width="76px" alttext="{H^{(1)}_{\NVar{\nu}}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./10.2#E5" title="Bessel function of the third kind (or Hankel function)">H</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi><mrow><mo href="./10.2#E5" stretchy="false" title="Bessel function of the third kind (or Hankel function)">(</mo><mn href="./10.2#E5" title="Bessel function of the third kind (or Hankel function)">1</mn><mo href="./10.2#E5" stretchy="false" title="Bessel function of the third kind (or Hankel function)">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the third kind (or Hankel function)</a>,
+<a class="ltx_ref" href="10.2.html#E6" title="(10.2.6) ‣ Bessel Functions of the Third Kind (Hankel Functions) ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m69.png" altimg-height="31px" altimg-valign="-7px" altimg-width="76px" alttext="{H^{(2)}_{\NVar{\nu}}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./10.2#E6" title="Bessel function of the third kind (or Hankel function)">H</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi><mrow><mo href="./10.2#E6" stretchy="false" title="Bessel function of the third kind (or Hankel function)">(</mo><mn href="./10.2#E6" title="Bessel function of the third kind (or Hankel function)">2</mn><mo href="./10.2#E6" stretchy="false" title="Bessel function of the third kind (or Hankel function)">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the third kind (or Hankel function)</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.28</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E3" title="">http://dlmf.nist.gov/10.6.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E3c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E3d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E3c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E3d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E3a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E3b.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E3c.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E3d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">If <math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="175px" alttext="f_{\nu}(z)=z^{p}\mathscr{C}_{\nu}\left(\lambda z^{q}\right)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mi>p</mi></msup><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>λ</mi><mo>⁢</mo><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mi>q</mi></msup></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math>, where <math altimg="m61.png" altimg-height="17px" altimg-valign="-6px" altimg-width="34px" alttext="p,q" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math>, and
+<math altimg="m47.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi>λ</mi></math> (<math altimg="m50.png" altimg-height="22px" altimg-valign="-6px" altimg-width="37px" alttext="\neq 0" class="ltx_Math" display="inline"><mrow><mi></mi><mo>≠</mo><mn>0</mn></mrow></math>) are real or complex constants, then
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m31.png" altimg-height="27px" altimg-valign="-7px" altimg-width="169px" alttext="\displaystyle f_{\nu-1}(z)+f_{\nu+1}(z)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="29px" altimg-valign="-7px" altimg-width="175px" alttext="\displaystyle=(2\nu/\lambda)z^{-q}f_{\nu}(z)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mo>/</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi>q</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m1.png" altimg-height="27px" altimg-valign="-7px" altimg-width="316px" alttext="\displaystyle(p+\nu q)f_{\nu-1}(z)+(p-\nu q)f_{\nu+1}(z)" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>−</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="29px" altimg-valign="-7px" altimg-width="183px" alttext="\displaystyle=(2\nu/\lambda)z^{1-q}f_{\nu}^{\prime}(z)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mo>/</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mrow><mn>1</mn><mo>−</mo><mi>q</mi></mrow></msup><mo>⁢</mo><mrow><msubsup><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a> and
+<a class="ltx_ref" href="10.6.html#i.p3" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m57.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="f_{\nu}(z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math></a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.29</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E4" title="">http://dlmf.nist.gov/10.6.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E4a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E4b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E4a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E4b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E4a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E4b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m39.png" altimg-height="28px" altimg-valign="-7px" altimg-width="64px" alttext="\displaystyle zf_{\nu}^{\prime}(z)" class="ltx_Math" display="inline"><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>⁢</mo><mrow><msubsup><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m20.png" altimg-height="27px" altimg-valign="-7px" altimg-width="291px" alttext="\displaystyle=\lambda qz^{q}f_{\nu-1}(z)+(p-\nu q)f_{\nu}(z)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mi>q</mi></msup><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>−</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m39.png" altimg-height="28px" altimg-valign="-7px" altimg-width="64px" alttext="\displaystyle zf_{\nu}^{\prime}(z)" class="ltx_Math" display="inline"><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>⁢</mo><mrow><msubsup><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="27px" altimg-valign="-7px" altimg-width="307px" alttext="\displaystyle=-\lambda qz^{q}f_{\nu+1}(z)+(p+\nu q)f_{\nu}(z)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mi>q</mi></msup><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a> and
+<a class="ltx_ref" href="10.6.html#i.p3" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m57.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="f_{\nu}(z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.6#i.p3" title="𝑓_𝜈(𝑧)">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math></a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.29</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.3.I2.ix4.p1" title="In Other Changes ‣ Version 1.1.3 (September 15, 2021) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.3) for  Subsections <span class="ltx_text ltx_ref_tag">10.6(i)</span>, <span class="ltx_text ltx_ref_tag">10.29(i)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E5" title="">http://dlmf.nist.gov/10.6.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E5a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E5b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#i.info" title="§10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(i)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">For results on modified quotients of the form <math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="160px" alttext="\ifrac{z\mathscr{C}_{\nu\pm 1}\left(z\right)}{\mathscr{C}_{\nu}\left(z\right)}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>±</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math> see
+<cite class="ltx_cite ltx_citemacro_citet">Onoe (<a class="ltx_ref" href="bib/O.html#bib2948" title="Formulae and Tables, The Modified Quotients of Cylinder Functions">1955</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Onoe (<a class="ltx_ref" href="bib/O.html#bib2945" title="Modified quotients of cylinder functions">1956</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.6(ii) </span>Derivatives</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Hankel%20functions">Hankel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cylinder%20functions">cylinder functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=explicit%20forms">explicit forms</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="10.6.html#E6" title="(10.6.6) ‣ §10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.6</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Watson (<a class="ltx_ref" href="bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp. 46)</cite>. For
+(<a class="ltx_ref" href="10.6.html#E7" title="(10.6.7) ‣ §10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.7</span></a>) use induction combined with the second of
+(<a class="ltx_ref" href="10.6.html#E1" title="(10.6.1) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.1</span></a>).</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.ii" title="">http://dlmf.nist.gov/10.6.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">For <math altimg="m58.png" altimg-height="22px" altimg-valign="-6px" altimg-width="126px" alttext="k=0,1,2,\dotsc" class="ltx_Math" display="inline"><mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m27.png" altimg-height="111px" altimg-valign="-22px" altimg-width="118px" alttext="\displaystyle\left(\frac{1}{z}\frac{\mathrm{d}}{\mathrm{d}z}\right)^{k}\left(z%
+^{\nu}\mathscr{C}_{\nu}\left(z\right)\right)" class="ltx_Math" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi href="./10.1#t1.r4" title="complex variable">z</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msup><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m23.png" altimg-height="40px" altimg-valign="-7px" altimg-width="163px" alttext="\displaystyle=z^{\nu-k}\mathscr{C}_{\nu-k}\left(z\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex10">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m26.png" altimg-height="96px" altimg-valign="-22px" altimg-width="131px" alttext="\displaystyle\left(\frac{1}{z}\frac{\mathrm{d}}{\mathrm{d}z}\right)^{k}(z^{-%
+\nu}\mathscr{C}_{\nu}\left(z\right))" class="ltx_Math" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi href="./10.1#t1.r4" title="complex variable">z</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="40px" altimg-valign="-7px" altimg-width="229px" alttext="\displaystyle=(-1)^{k}z^{-\nu-k}\mathscr{C}_{\nu+k}\left(z\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><msup><mi href="./10.1#t1.r4" title="complex variable">z</mi><mrow><mrow><mo>−</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mo>−</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#Px5.p1" title="Cylinder Functions ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m48.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathscr{C}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: cylinder function</a>,
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m44.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m55.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="10.1.html#t1.r2" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.30</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.6.html#ii.info" title="§10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E6" title="">http://dlmf.nist.gov/10.6.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E6a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E6b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#ii.info" title="§10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(ii)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.6.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="111px" altimg-valign="-28px" altimg-width="386px" alttext="{\mathscr{C}_{\nu}}^{(k)}\left(z\right)=\frac{1}{2^{k}}\sum_{n=0}^{k}(-1)^{n}%
+\genfrac{(}{)}{0.0pt}{}{k}{n}\mathscr{C}_{\nu-k+2n}\left(z\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msup><mn>2</mn><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></msup></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./10.1#t1.r1" title="integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./10.1#t1.r1" title="integer">n</mi></msup><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mi href="./10.1#t1.r1" title="integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mrow><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r1" title="integer">n</mi></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m45.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="10.2.html#Px5.p1" title="Cylinder Functions ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m48.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathscr{C}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi class="ltx_font_mathscript" href="./10.2#Px5.p1" title="cylinder function">𝒞</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: cylinder function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r1" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./10.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="10.1.html#t1.r2" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.31</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.6.html#ii.info" title="§10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E7" title="">http://dlmf.nist.gov/10.6.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#ii.info" title="§10.6(ii) Derivatives ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(ii)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.6(iii) </span>Cross-Products</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cross-products">cross-products</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=recurrence%20relations">recurrence relations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Goodwin (<a class="ltx_ref" href="bib/G.html#bib955" title="Recurrence relations for cross-products of Bessel functions">1949a</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.iii" title="">http://dlmf.nist.gov/10.6.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Let</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex11">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m33.png" altimg-height="19px" altimg-valign="-6px" altimg-width="27px" alttext="\displaystyle p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m17.png" altimg-height="128px" altimg-valign="-7px" altimg-width="88px" alttext="\displaystyle=J_{\nu}\left(a\right)Y_{\nu}\left(b\right)-J_{\nu}\left(b\right)%
+Y_{\nu}\left(a\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex12">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m35.png" altimg-height="19px" altimg-valign="-6px" altimg-width="26px" alttext="\displaystyle q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m16.png" altimg-height="128px" altimg-valign="-7px" altimg-width="88px" alttext="\displaystyle=J_{\nu}\left(a\right)Y_{\nu}'\left(b\right)-J_{\nu}'\left(b%
+\right)Y_{\nu}\left(a\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex13">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m37.png" altimg-height="18px" altimg-valign="-5px" altimg-width="26px" alttext="\displaystyle r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m15.png" altimg-height="128px" altimg-valign="-7px" altimg-width="88px" alttext="\displaystyle=J_{\nu}'\left(a\right)Y_{\nu}\left(b\right)-J_{\nu}\left(b\right%
+)Y_{\nu}'\left(a\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex14">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m38.png" altimg-height="18px" altimg-valign="-5px" altimg-width="27px" alttext="\displaystyle s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m14.png" altimg-height="128px" altimg-valign="-7px" altimg-width="88px" alttext="\displaystyle=J_{\nu}'\left(a\right)Y_{\nu}'\left(b\right)-J_{\nu}'\left(b%
+\right)Y_{\nu}'\left(a\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m62.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span>,
+<span class="ltx_text"><math altimg="m63.png" altimg-height="17px" altimg-valign="-6px" altimg-width="24px" alttext="q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span>,
+<span class="ltx_text"><math altimg="m64.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span> and
+<span class="ltx_text"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m42.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="10.2.html#E3" title="(10.2.3) ‣ Bessel Function of the Second Kind (Weber’s Function) ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="Y_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the second kind</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.32</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E8" title="">http://dlmf.nist.gov/10.6.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E8a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E8b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E8c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E8d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E8a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E8b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E8c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E8d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E8a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E8b.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E8c.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E8d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#iii.info" title="§10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(iii)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m53.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m54.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math> are independent of <math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>. Then</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex15">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.6.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m32.png" altimg-height="23px" altimg-valign="-7px" altimg-width="116px" alttext="\displaystyle p_{\nu+1}-p_{\nu-1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.6#E8" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="48px" altimg-valign="-16px" altimg-width="169px" alttext="\displaystyle=-\frac{2\nu}{a}q_{\nu}-\frac{2\nu}{b}r_{\nu}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mi>b</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex16">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m34.png" altimg-height="23px" altimg-valign="-7px" altimg-width="92px" alttext="\displaystyle q_{\nu+1}+r_{\nu}" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.6#E8" title="cross-product">q</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m18.png" altimg-height="48px" altimg-valign="-16px" altimg-width="191px" alttext="\displaystyle=\frac{\nu}{a}p_{\nu}-\frac{\nu+1}{b}p_{\nu+1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mi>b</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex17">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m36.png" altimg-height="23px" altimg-valign="-7px" altimg-width="92px" alttext="\displaystyle r_{\nu+1}+q_{\nu}" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.6#E8" title="cross-product">r</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m19.png" altimg-height="48px" altimg-valign="-16px" altimg-width="191px" alttext="\displaystyle=\frac{\nu}{b}p_{\nu}-\frac{\nu+1}{a}p_{\nu+1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mi>b</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mi>a</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex18">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m38.png" altimg-height="18px" altimg-valign="-5px" altimg-width="27px" alttext="\displaystyle s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m22.png" altimg-height="52px" altimg-valign="-16px" altimg-width="242px" alttext="\displaystyle=\tfrac{1}{2}p_{\nu+1}+\tfrac{1}{2}p_{\nu-1}-\frac{\nu^{2}}{ab}p_%
+{\nu}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msup><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m62.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m63.png" altimg-height="17px" altimg-valign="-6px" altimg-width="24px" alttext="q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m64.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a> and
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.33</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E9" title="">http://dlmf.nist.gov/10.6.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E9a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E9b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E9c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E9d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E9a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E9b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E9c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E9d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E9a.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E9b.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E9c.png">png</a>, <a href="http://dlmf.nist.gov/10.6.E9d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#iii.info" title="§10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(iii)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.6.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="29px" altimg-valign="-7px" altimg-width="224px" alttext="p_{\nu}s_{\nu}-q_{\nu}r_{\nu}=4/(\pi^{2}ab)." class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mn>2</mn></msup><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m62.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m63.png" altimg-height="17px" altimg-valign="-6px" altimg-width="24px" alttext="q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m64.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a> and
+<a class="ltx_ref" href="10.6.html#E8" title="(10.6.8) ‣ §10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.6#E8" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.34</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.6.E10" title="">http://dlmf.nist.gov/10.6.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.6.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.6.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.6.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.6.html#iii.info" title="§10.6(iii) Cross-Products ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6(iii)</span></a>,
+<a class="ltx_ref" href="10.6.html#info" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.6</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="10.5.html" rel="prev" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.5 </span>Wronskians and Cross-Products</span></a><a class="ltx_ref" href="10.7.html" rel="next" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.7 </span>Limiting Forms</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

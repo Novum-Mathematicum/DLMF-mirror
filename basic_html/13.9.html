@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/13.9";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="13.html#PT2" rel="up" title="Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.html" rel="up up" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="13.8.html" rel="prev" title="§13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.10.html" rel="next" title="§13.10 Integrals ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.1.html" rel="section" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.2.html" rel="section" title="§13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.3.html" rel="section" title="§13.3 Recurrence Relations and Derivatives ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.4.html" rel="section" title="§13.4 Integral Representations ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.5.html" rel="section" title="§13.5 Continued Fractions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.6.html" rel="section" title="§13.6 Relations to Other Functions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.7.html" rel="section" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.8.html" rel="section" title="§13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.10.html" rel="section" title="§13.10 Integrals ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.11.html" rel="section" title="§13.11 Series ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.12.html" rel="section" title="§13.12 Products ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.13.html" rel="section" title="§13.13 Addition and Multiplication Theorems ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.14.html" rel="section" title="§13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.15.html" rel="section" title="§13.15 Recurrence Relations and Derivatives ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.16.html" rel="section" title="§13.16 Integral Representations ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.17.html" rel="section" title="§13.17 Continued Fractions ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.18.html" rel="section" title="§13.18 Relations to Other Functions ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.19.html" rel="section" title="§13.19 Asymptotic Expansions for Large Argument ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.20.html" rel="section" title="§13.20 Uniform Asymptotic Approximations for Large 𝜇 ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.21.html" rel="section" title="§13.21 Uniform Asymptotic Approximations for Large 𝜅 ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.22.html" rel="section" title="§13.22 Zeros ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.23.html" rel="section" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.24.html" rel="section" title="§13.24 Series ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.25.html" rel="section" title="§13.25 Products ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.26.html" rel="section" title="§13.26 Addition and Multiplication Theorems ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.27.html" rel="section" title="§13.27 Mathematical Applications ‣ Applications ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.28.html" rel="section" title="§13.28 Physical Applications ‣ Applications ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.29.html" rel="section" title="§13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.30.html" rel="section" title="§13.30 Tables ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.31.html" rel="section" title="§13.31 Approximations ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.32.html" rel="section" title="§13.32 Software ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Kummer functions, asymptotic approximations, distribution, inequalities, number of, zeros" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="13.9.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="13.9.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="13.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13 </span>Confluent Hypergeometric Functions</span></a><a class="ltx_ref" href="13.html#PT2" rel="up" title="In Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title">Kummer Functions</span></a><a class="ltx_ref" href="13.8.html" rel="prev" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.8 </span>Asymptotic Approximations for Large Parameters</span></a><a class="ltx_ref" href="13.10.html" rel="next" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.10 </span>Integrals</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§13.9 </span>Zeros</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.22.html#p1" title="§13.22 Zeros ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.22</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="13.9.html" title="">http://dlmf.nist.gov/13.9</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="13.9.html#i"><span class="ltx_tag ltx_tag_subsection">§13.9(i) </span>Zeros of <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></a></li>
+<li class="ltx_tocentry"><a href="13.9.html#ii"><span class="ltx_tag ltx_tag_subsection">§13.9(ii) </span>Zeros of <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.9(i) </span>Zeros of <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kummer%20functions">Kummer functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20approximations">asymptotic approximations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=distribution">distribution</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inequalities">inequalities</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=number%20of">number of</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Buchholz (<a class="ltx_ref" href="bib/B.html#bib363" title="The Confluent Hypergeometric Function with Special Emphasis on Its Applications">1969</a>, §17)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, §6.16)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Slater (<a class="ltx_ref" href="bib/S.html#bib2098" title="Confluent Hypergeometric Functions">1960</a>, Chapter 6)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Tricomi (<a class="ltx_ref" href="bib/T.html#bib2276" title="Über die Abzählung der Nullstellen der konfluenten hypergeometrischen Funktionen">1950a</a>)</cite>.
+The proof of (<a class="ltx_ref" href="13.9.html#E8" title="(13.9.8) ‣ §13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.9.8</span></a>) is given in <cite class="ltx_cite ltx_citemacro_citet">Tricomi (<a class="ltx_ref" href="bib/T.html#bib2274" title="Sugli zeri delle funzioni di cui si conosce una rappresentazione asintotica">1947</a>)</cite>.
+(<a class="ltx_ref" href="13.9.html#E9" title="(13.9.9) ‣ §13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.9.9</span></a>) follows from (<a class="ltx_ref" href="13.7.html#E2" title="(13.7.2) ‣ §13.7(i) Poincaré-Type Expansions ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.7.2</span></a>).
+For the paragraph following (<a class="ltx_ref" href="13.9.html#E9" title="(13.9.9) ‣ §13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.9.9</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Andrews<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/index.html#bib103" title="Special Functions">1999</a>, §4.16)</cite>.
+For (<a class="ltx_ref" href="13.9.html#E10" title="(13.9.10) ‣ §13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.9.10</span></a>) use (<a class="ltx_ref" href="13.8.html#E9" title="(13.8.9) ‣ §13.8(iii) Large 𝑎 ‣ §13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.8.9</span></a>) and the
+asymptotics of zeros of Bessel functions (§<a class="ltx_ref" href="10.21.html#vi" title="§10.21(vi) McMahon’s Asymptotic Expansions for Large Zeros ‣ §10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.21(vi)</span></a>).</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  References</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.i" title="">http://dlmf.nist.gov/13.9.i</a></dd>
+<dt>Addition (effective with 1.0.5):</dt>
+<dd>
+The reference to <cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2769" title="Interlacing of the zeros of contiguous hypergeometric functions">2008</a>)</cite> has been added near the end of this subsection.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">If <math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m52.png" altimg-height="22px" altimg-valign="-6px" altimg-width="193px" alttext="b-a\neq 0,-1,-2,\dots" class="ltx_Math" display="inline"><mrow><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, then <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has infinitely
+many <math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>-zeros in <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>. When <math altimg="m44.png" altimg-height="22px" altimg-valign="-6px" altimg-width="74px" alttext="a,b\in\mathbb{R}" class="ltx_Math" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi></mrow></math> the number of real zeros is
+finite. Let
+<math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the number of positive zeros. Then</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E1">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="62px" alttext="\displaystyle p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="89px" alttext="\displaystyle=\left\lceil-a\right\rceil," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m46.png" altimg-height="18px" altimg-valign="-3px" altimg-width="53px" alttext="a&lt;0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, <math altimg="m56.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="b\geq 0" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>≥</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r18" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lceil\NVar{x}\right\rceil" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></math>: ceiling of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E1" title="">http://dlmf.nist.gov/13.9.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E2">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="62px" alttext="\displaystyle p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m49.png" altimg-height="20px" altimg-valign="-5px" altimg-width="53px" alttext="a\geq 0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>≥</mo><mn>0</mn></mrow></math>, <math altimg="m56.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="b\geq 0" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>≥</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E2" title="">http://dlmf.nist.gov/13.9.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E3">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="62px" alttext="\displaystyle p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=1," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m49.png" altimg-height="20px" altimg-valign="-5px" altimg-width="53px" alttext="a\geq 0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>≥</mo><mn>0</mn></mrow></math>, <math altimg="m5.png" altimg-height="20px" altimg-valign="-4px" altimg-width="105px" alttext="-1&lt;b&lt;0" class="ltx_Math" display="inline"><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E3" title="">http://dlmf.nist.gov/13.9.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="90px" altimg-valign="-9px" altimg-width="212px" alttext="p(a,b)=\left\lfloor-\tfrac{1}{2}b\right\rfloor-\left\lfloor-\tfrac{1}{2}(b+1)%
+\right\rfloor," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>b</mi></mrow></mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow><mo>−</mo><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m49.png" altimg-height="20px" altimg-valign="-5px" altimg-width="53px" alttext="a\geq 0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>≥</mo><mn>0</mn></mrow></math>, <math altimg="m59.png" altimg-height="21px" altimg-valign="-5px" altimg-width="67px" alttext="b\leq-1" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>≤</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r17" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor\NVar{x}\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math>: floor of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E4" title="">http://dlmf.nist.gov/13.9.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="86px" altimg-valign="-7px" altimg-width="146px" alttext="p(a,b)=\left\lceil-a\right\rceil-\left\lceil-b\right\rceil," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>−</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="121px" alttext="\left\lceil-a\right\rceil\geq\left\lceil-b\right\rceil" class="ltx_Math" display="inline"><mrow><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>≥</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></mrow></math>, <math altimg="m46.png" altimg-height="18px" altimg-valign="-3px" altimg-width="53px" alttext="a&lt;0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, <math altimg="m53.png" altimg-height="19px" altimg-valign="-3px" altimg-width="51px" alttext="b&lt;0" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>&lt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r18" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lceil\NVar{x}\right\rceil" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></math>: ceiling of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E5" title="">http://dlmf.nist.gov/13.9.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="266px" altimg-valign="-9px" altimg-width="193px" alttext="p(a,b)=\left\lfloor\tfrac{1}{2}\left(\left\lceil-b\right\rceil-\left\lceil-a%
+\right\rceil+1\right)\right\rfloor-\left\lfloor\tfrac{1}{2}\left(\left\lceil-b%
+\right\rceil-\left\lceil-a\right\rceil\right)\right\rfloor," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>−</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow><mo>−</mo><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>−</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m31.png" altimg-height="25px" altimg-valign="-7px" altimg-width="159px" alttext="\left\lceil-b\right\rceil&gt;\left\lceil-a\right\rceil&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>&gt;</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r18" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lceil\NVar{x}\right\rceil" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></math>: ceiling of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r17" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor\NVar{x}\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math>: floor of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E6" title="">http://dlmf.nist.gov/13.9.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The number of negative real zeros <math altimg="m62.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="n(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#E7" title="number of negative real zeros">n</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> is given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="27px" altimg-valign="-7px" altimg-width="188px" alttext="n(a,b)=p(b-a,b)." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#E7" title="number of negative real zeros">n</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m62.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="n(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#E7" title="number of negative real zeros">n</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of negative real zeros (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="13.9.html#i.p1" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="p(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i.p1" title="number of positive zeros">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E7" title="">http://dlmf.nist.gov/13.9.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">When <math altimg="m46.png" altimg-height="18px" altimg-valign="-3px" altimg-width="53px" alttext="a&lt;0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math> and <math altimg="m54.png" altimg-height="19px" altimg-valign="-3px" altimg-width="51px" alttext="b&gt;0" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math> let <math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="26px" alttext="\phi_{r}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p2" title="positive zeros">ϕ</mi><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></msub></math>, <math altimg="m65.png" altimg-height="21px" altimg-valign="-6px" altimg-width="125px" alttext="r=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, be the positive zeros of <math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="M\left(a,b,x\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>
+arranged in increasing order of magnitude, and let 
+<math altimg="m61.png" altimg-height="24px" altimg-valign="-8px" altimg-width="56px" alttext="j_{b-1,r}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p2" title="positive zero of Bessel">j</mi><mrow><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></mrow></msub></math> be the <math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></math>th positive zero of the Bessel function
+<math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="J_{b-1}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> (§<a class="ltx_ref" href="10.21.html#i" title="§10.21(i) Distribution ‣ §10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.21(i)</span></a>). Then</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="150px" altimg-valign="-28px" altimg-width="361px" alttext="\phi_{r}=\frac{j_{b-1,r}^{2}}{2b-4a}\left(1+\frac{2b(b-2)+j_{b-1,r}^{2}}{3(2b-%
+4a)^{2}}\right)+O\left(\frac{1}{a^{5}}\right)," class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./13.9#i.p2" title="positive zeros">ϕ</mi><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></msub><mo>=</mo><mrow><mrow><mfrac><msubsup><mi href="./13.9#i.p2" title="positive zero of Bessel">j</mi><mrow><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></mrow><mn>2</mn></msubsup><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><mi>a</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><msubsup><mi href="./13.9#i.p2" title="positive zero of Bessel">j</mi><mrow><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></mrow><mn>2</mn></msubsup></mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><msup><mi>a</mi><mn>5</mn></msup></mfrac><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="13.9.html#i" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m65.png" altimg-height="21px" altimg-valign="-6px" altimg-width="125px" alttext="r=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></a>,
+<a class="ltx_ref" href="13.9.html#i.p2" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="26px" alttext="\phi_{r}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p2" title="positive zeros">ϕ</mi><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></msub></math>:  positive zeros</a> and
+<a class="ltx_ref" href="13.9.html#i.p2" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m60.png" altimg-height="24px" altimg-valign="-8px" altimg-width="34px" alttext="j_{b,r}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p2" title="positive zero of Bessel">j</mi><mrow><mi>b</mi><mo>,</mo><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></mrow></msub></math>:  positive zero of Bessel</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.22.html#p2" title="§13.22 Zeros ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.22</span></a>,
+<a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E8" title="">http://dlmf.nist.gov/13.9.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">as <math altimg="m51.png" altimg-height="18px" altimg-valign="-4px" altimg-width="84px" alttext="a\to-\infty" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo stretchy="false">→</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> with <math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></math> fixed.
+</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">Inequalities for <math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="26px" alttext="\phi_{r}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p2" title="positive zeros">ϕ</mi><mi href="./13.9#i" title="𝑟={1,2,3,…}">r</mi></msub></math> are given in <cite class="ltx_cite ltx_citemacro_citet">Gatteschi (<a class="ltx_ref" href="bib/G.html#bib865" title="New inequalities for the zeros of confluent hypergeometric functions">1990</a>)</cite>, and
+identities involving infinite series of all of the complex zeros of
+<math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="M\left(a,b,x\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> are given in <cite class="ltx_cite ltx_citemacro_citet">Ahmed and Muldoon (<a class="ltx_ref" href="bib/index.html#bib42" title="On the zeros of confluent hypergeometric functions. III. Characterization by means of nonlinear equations">1980</a>)</cite>.
+</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">For fixed <math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="74px" alttext="a,b\in\mathbb{C}" class="ltx_Math" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></mrow></math> the large <math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>-zeros of <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> satisfy</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="132px" altimg-valign="-22px" altimg-width="444px" alttext="z=\pm(2n+a)\pi\mathrm{i}+\ln\left(-\frac{\Gamma\left(a\right)}{\Gamma\left(b-a%
+\right)}\left(\pm 2n\pi\mathrm{i}\right)^{b-2a}\right)+O\left(n^{-1}\ln n%
+\right)," class="ltx_Math" display="block"><mrow><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>=</mo><mrow><mrow><mo>±</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow><mo>+</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mrow><mo>+</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mo>±</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mrow><mo>)</mo></mrow><mrow><mi>b</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m36.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E9" title="">http://dlmf.nist.gov/13.9.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math> is a large positive integer, and the logarithm takes its principal
+value (§<a class="ltx_ref" href="4.2.html#i" title="§4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.2(i)</span></a>).</p>
+</div>
+<div class="ltx_para" id="i.p5">
+<p class="ltx_p">Let  <math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="29px" alttext="P_{\alpha}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p5" title="closure of domain">P</mi><mi>α</mi></msub></math> denote the closure of the domain that is bounded by the parabola
+<math altimg="m68.png" altimg-height="26px" altimg-valign="-7px" altimg-width="143px" alttext="y^{2}=4\alpha(x+\alpha)" class="ltx_Math" display="inline"><mrow><msup><mi href="./13.1#p1.t1.r3" title="real variable">y</mi><mn>2</mn></msup><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>+</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and contains the origin.
+Then <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has no zeros in the regions
+<math altimg="m20.png" altimg-height="25px" altimg-valign="-9px" altimg-width="48px" alttext="P_{\ifrac{b}{a}}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p5" title="closure of domain">P</mi><mrow><mi>b</mi><mo lspace="0em" rspace="0em">/</mo><mi>a</mi></mrow></msub></math>, if <math altimg="m7.png" altimg-height="21px" altimg-valign="-5px" altimg-width="90px" alttext="0&lt;b\leq a" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>≤</mo><mi>a</mi></mrow></math>;
+<math altimg="m18.png" altimg-height="21px" altimg-valign="-5px" altimg-width="27px" alttext="P_{1}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p5" title="closure of domain">P</mi><mn>1</mn></msub></math>, if <math altimg="m8.png" altimg-height="21px" altimg-valign="-5px" altimg-width="90px" alttext="1\leq a\leq b" class="ltx_Math" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>≤</mo><mi>b</mi></mrow></math>;
+<math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="29px" alttext="P_{\alpha}" class="ltx_Math" display="inline"><msub><mi href="./13.9#i.p5" title="closure of domain">P</mi><mi>α</mi></msub></math>, where <math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="268px" alttext="\alpha=\ifrac{(2a-b+ab)}{(a(a+1))}" class="ltx_Math" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, if <math altimg="m6.png" altimg-height="18px" altimg-valign="-3px" altimg-width="91px" alttext="0&lt;a&lt;1" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mn>1</mn></mrow></math> and
+<math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="179px" alttext="a\leq b&lt;\ifrac{2a}{(1-a)}" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>≤</mo><mi>b</mi><mo>&lt;</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The same results apply for the <math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>th partial sums
+of the Maclaurin series
+(<a class="ltx_ref" href="13.2.html#E2" title="(13.2.2) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.2.2</span></a>) of <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="i.p6">
+<p class="ltx_p">More information on the location of real zeros can be found in
+<cite class="ltx_cite ltx_citemacro_citet">Zarzo<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/Z.html#bib2484" title="Distribution of zeros of Gauss and Kummer hypergeometric functions. A semiclassical approach">1995</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2769" title="Interlacing of the zeros of contiguous hypergeometric functions">2008</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="i.p7">
+<p class="ltx_p">For fixed <math altimg="m55.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math> and <math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math> in <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math> the large <math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math>-zeros of <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> are
+given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="146px" altimg-valign="-16px" altimg-width="458px" alttext="a=-\frac{\pi^{2}}{4z}\left(n^{2}+(b-\tfrac{3}{2})n\right)-\frac{1}{16z}\left((%
+b-\tfrac{3}{2})^{2}\pi^{2}+\tfrac{4}{3}z^{2}-8b(z-1)-4b^{2}-3\right)+O\left(n^%
+{-1}\right)," class="ltx_Math" display="block"><mrow><mrow><mi>a</mi><mo>=</mo><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mn>2</mn></msup><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mstyle displaystyle="false"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><mn>16</mn><mo>⁢</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mstyle displaystyle="false"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>4</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mn>2</mn></msup></mrow></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>3</mn></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E10" title="">http://dlmf.nist.gov/13.9.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math> is a large positive integer.
+</p>
+</div>
+<div class="ltx_para" id="i.p8">
+<p class="ltx_p">For fixed <math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math> in <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math> the function
+<math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="M\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E2" title="=₁𝐹₁(𝑎;𝑏;𝑧) Kummer confluent hypergeometric function">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has only a finite number of <math altimg="m55.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math>-zeros.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.9(ii) </span>Zeros of <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kummer%20functions">Kummer functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=number%20of">number of</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Buchholz (<a class="ltx_ref" href="bib/B.html#bib363" title="The Confluent Hypergeometric Function with Special Emphasis on Its Applications">1969</a>, §17)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, §6.16)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Slater (<a class="ltx_ref" href="bib/S.html#bib2098" title="Confluent Hypergeometric Functions">1960</a>, Chapter 6)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Tricomi (<a class="ltx_ref" href="bib/T.html#bib2276" title="Über die Abzählung der Nullstellen der konfluenten hypergeometrischen Funktionen">1950a</a>)</cite>.
+For (<a class="ltx_ref" href="13.9.html#E16" title="(13.9.16) ‣ §13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.9.16</span></a>) use (<a class="ltx_ref" href="13.8.html#E10" title="(13.8.10) ‣ §13.8(iii) Large 𝑎 ‣ §13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.8.10</span></a>) and the
+asymptotics of zeros of Bessel functions (§<a class="ltx_ref" href="10.21.html#vi" title="§10.21(vi) McMahon’s Asymptotic Expansions for Large Zeros ‣ §10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.21(vi)</span></a>).
+For the final paragraph of this subsection apply Kummer’s
+transformation (<a class="ltx_ref" href="13.2.html#E39" title="(13.2.39) ‣ Kummer’s Transformations ‣ §13.2(vii) Connection Formulas ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.2.39</span></a>) to the final term in the
+connection relation (<a class="ltx_ref" href="13.2.html#E42" title="(13.2.42) ‣ Kummer’s Transformations ‣ §13.2(vii) Connection Formulas ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.2.42</span></a>) and then use the asymptotic
+relation (<a class="ltx_ref" href="13.8.html#E1" title="(13.8.1) ‣ §13.8(i) Large |𝑏|, Fixed 𝑎 and 𝑧 ‣ §13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.8.1</span></a>).</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  References</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.ii" title="">http://dlmf.nist.gov/13.9.ii</a></dd>
+<dt>Addition (effective with 1.0.5):</dt>
+<dd>
+The reference to <cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2769" title="Interlacing of the zeros of contiguous hypergeometric functions">2008</a>)</cite> has been added near the end of this subsection.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">For fixed <math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m55.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math> in <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>, <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has a finite number of
+<math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>-zeros in the sector <math altimg="m71.png" altimg-height="29px" altimg-valign="-9px" altimg-width="209px" alttext="|\operatorname{ph}z|\leq\tfrac{3}{2}\pi-\delta(&lt;\tfrac{3}{2}\pi)" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></mrow><mspace width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>&lt;</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Let <math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="65px" alttext="T(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> be
+the total number of zeros in the sector <math altimg="m70.png" altimg-height="25px" altimg-valign="-7px" altimg-width="97px" alttext="|\operatorname{ph}z|&lt;\pi" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></math>,
+<math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="P(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the corresponding number of positive zeros, and
+<math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math>, <math altimg="m55.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math>, and <math altimg="m45.png" altimg-height="20px" altimg-valign="-4px" altimg-width="85px" alttext="a-b+1" class="ltx_Math" display="inline"><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow></math> be nonintegers. For the case <math altimg="m58.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="b\leq 1" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>≤</mo><mn>1</mn></mrow></math></p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="56px" altimg-valign="-7px" altimg-width="182px" alttext="T(a,b)=\left\lfloor-a\right\rfloor+1," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow><mo>+</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m46.png" altimg-height="18px" altimg-valign="-3px" altimg-width="53px" alttext="a&lt;0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, <math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="203px" alttext="\Gamma\left(a\right)\Gamma\left(a-b+1\right)&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r17" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor\NVar{x}\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math>: floor of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#ii.p1" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="65px" alttext="T(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E11" title="">http://dlmf.nist.gov/13.9.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="56px" altimg-valign="-7px" altimg-width="149px" alttext="T(a,b)=\left\lfloor-a\right\rfloor," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m46.png" altimg-height="18px" altimg-valign="-3px" altimg-width="53px" alttext="a&lt;0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="203px" alttext="\Gamma\left(a\right)\Gamma\left(a-b+1\right)&lt;0" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r17" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor\NVar{x}\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math>: floor of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#ii.p1" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="65px" alttext="T(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E12" title="">http://dlmf.nist.gov/13.9.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="27px" altimg-valign="-7px" altimg-width="111px" alttext="T(a,b)=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m47.png" altimg-height="18px" altimg-valign="-3px" altimg-width="53px" alttext="a&gt;0" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="13.9.html#ii.p1" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="65px" alttext="T(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of zeros</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E13" title="">http://dlmf.nist.gov/13.9.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E14">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.14</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E14.png" altimg-height="56px" altimg-valign="-7px" altimg-width="204px" alttext="P(a,b)=\left\lceil b-a-1\right\rceil," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi><mo>−</mo><mn>1</mn></mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m41.png" altimg-height="20px" altimg-valign="-4px" altimg-width="88px" alttext="a+1&lt;b" class="ltx_Math" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>b</mi></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E14.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r18" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lceil\NVar{x}\right\rceil" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></math>: ceiling of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="13.9.html#ii.p1" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="P(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E14" title="">http://dlmf.nist.gov/13.9.E14</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E14.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E14.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E14.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E15">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.15</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E15.png" altimg-height="27px" altimg-valign="-7px" altimg-width="112px" alttext="P(a,b)=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m42.png" altimg-height="21px" altimg-valign="-5px" altimg-width="88px" alttext="a+1\geq b" class="ltx_Math" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mo>≥</mo><mi>b</mi></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E15.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="13.9.html#ii.p1" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="P(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of positive zeros</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E15" title="">http://dlmf.nist.gov/13.9.E15</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E15.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E15.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E15.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">For the case <math altimg="m57.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="b\geq 1" class="ltx_Math" display="inline"><mrow><mi>b</mi><mo>≥</mo><mn>1</mn></mrow></math> we can use <math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="258px" alttext="T(a,b)=T(a-b+1,2-b)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./13.9#ii.p1" title="number of zeros">T</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="261px" alttext="P(a,b)=P(a-b+1,2-b)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./13.9#ii.p1" title="number of positive zeros">P</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>−</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">In <cite class="ltx_cite ltx_citemacro_citet">Wimp (<a class="ltx_ref" href="bib/W.html#bib2418" title="On the zeros of a confluent hypergeometric function">1965</a>)</cite> it is shown that if <math altimg="m44.png" altimg-height="22px" altimg-valign="-6px" altimg-width="74px" alttext="a,b\in\mathbb{R}" class="ltx_Math" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi></mrow></math> and <math altimg="m9.png" altimg-height="20px" altimg-valign="-4px" altimg-width="114px" alttext="2a-b&gt;-1" class="ltx_Math" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mi>b</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>,
+then <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has no zeros in the sector
+<math altimg="m72.png" altimg-height="29px" altimg-valign="-9px" altimg-width="110px" alttext="|\operatorname{ph}{z}|\leq\frac{1}{2}\pi" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">Inequalities for the zeros of <math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="91px" alttext="U\left(a,b,x\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> are given in
+<cite class="ltx_cite ltx_citemacro_citet">Gatteschi (<a class="ltx_ref" href="bib/G.html#bib865" title="New inequalities for the zeros of confluent hypergeometric functions">1990</a>)</cite>. See also <cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2769" title="Interlacing of the zeros of contiguous hypergeometric functions">2008</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="ii.p4">
+<p class="ltx_p">For fixed <math altimg="m55.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math> and <math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math> in <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math> the large <math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math>-zeros of <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> are
+given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E16">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.9.16</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E16.png" altimg-height="74px" altimg-valign="-22px" altimg-width="725px" alttext="a=-n-\frac{2}{\pi}\sqrt{zn}-\frac{2z}{\pi^{2}}+\tfrac{1}{2}b+\tfrac{1}{4}+%
+\frac{z^{2}\left(\frac{1}{3}-4\pi^{-2}\right)+z-(b-1)^{2}+\frac{1}{4}}{4\pi%
+\sqrt{zn}}+O\left(\frac{1}{n}\right)," class="ltx_Math" display="block"><mrow><mrow><mi>a</mi><mo>=</mo><mrow><mrow><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mrow><mfrac><mn>2</mn><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mfrac><mo>⁢</mo><msqrt><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></msqrt></mrow><mo>−</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mn>2</mn></msup></mfrac></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>+</mo><mfrac><mrow><mrow><mrow><mrow><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>−</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msqrt><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></msqrt></mrow></mfrac><mo>+</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mfrac><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E16.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m40.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="about/news/index.html#S1.I1.i46.p1" title="In Recent News ‣ DLMF Project News ‣ About the Project"><span class="ltx_text ltx_ref_tag">DLMF Update; Version 1.0.13</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.12.I2.ix4" title="In Other Changes ‣ Version 1.0.12 (September 9, 2016) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.12) for  Equation (<span class="ltx_text ltx_ref_tag">13.9.16</span>)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.13.I1.ix1" title="In Other Changes ‣ Version 1.0.13 (September 16, 2016) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.13) for  Equation (<span class="ltx_text ltx_ref_tag">13.9.16</span>)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.13.I1.ix1.p1" title="In Other Changes ‣ Version 1.0.13 (September 16, 2016) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.13) for  Equation (<span class="ltx_text ltx_ref_tag">13.9.16</span>)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.9.E16" title="">http://dlmf.nist.gov/13.9.E16</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.9.E16.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.9.E16.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.9.E16.png">png</a>
+</dd>
+<dt>Errata (effective with 1.0.13):</dt>
+<dd>
+In applying changes in Version 1.0.12 to this equation, an editing error was made; it has been corrected.
+
+<p><span class="ltx_font_italic">Reported 2016-09-12 by Adri Olde Daalhuis</span></p>
+</dd>
+<dt>Errata (effective with 1.0.12):</dt>
+<dd>
+Originally this equation was expressed in terms of the asymptotic symbol <math altimg="m40.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>. As a consequence of the use of
+the <math altimg="m14.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="O" class="ltx_Math" display="inline"><mi href="./2.1#E3" title="order not exceeding">O</mi></math> order symbol on the right hand side, <math altimg="m40.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math> was replaced by <math altimg="m10.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="=" class="ltx_Math" display="inline"><mo>=</mo></math>.
+
+<p><span class="ltx_font_italic">Reported 2016-07-11 by Rudi Weikard</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.9.html#ii.info" title="§13.9(ii) Zeros of 𝑈(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#info" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math> is a large positive integer.</p>
+</div>
+<div class="ltx_para" id="ii.p5">
+<p class="ltx_p">For fixed <math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m69.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math> in <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>,
+<math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(a,b,z\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has two infinite strings of <math altimg="m55.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math>-zeros that are asymptotic to the
+imaginary axis as <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="|b|\to\infty" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>b</mi><mo stretchy="false">|</mo></mrow><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="13.8.html" rel="prev" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.8 </span>Asymptotic Approximations for Large Parameters</span></a><a class="ltx_ref" href="13.10.html" rel="next" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.10 </span>Integrals</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

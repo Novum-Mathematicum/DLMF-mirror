@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/22.12";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="22.html#PT2" rel="up" title="Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.html" rel="up up" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="22.11.html" rel="prev" title="§22.11 Fourier and Hyperbolic Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.13.html" rel="next" title="§22.13 Derivatives and Differential Equations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.1.html" rel="section" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.2.html" rel="section" title="§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.3.html" rel="section" title="§22.3 Graphics ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.4.html" rel="section" title="§22.4 Periods, Poles, and Zeros ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.5.html" rel="section" title="§22.5 Special Values ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.6.html" rel="section" title="§22.6 Elementary Identities ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.7.html" rel="section" title="§22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.8.html" rel="section" title="§22.8 Addition Theorems ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.9.html" rel="section" title="§22.9 Cyclic Identities ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.10.html" rel="section" title="§22.10 Maclaurin Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.11.html" rel="section" title="§22.11 Fourier and Hyperbolic Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.13.html" rel="section" title="§22.13 Derivatives and Differential Equations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.14.html" rel="section" title="§22.14 Integrals ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.15.html" rel="section" title="§22.15 Inverse Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.16.html" rel="section" title="§22.16 Related Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.17.html" rel="section" title="§22.17 Moduli Outside the Interval [0,1] ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.18.html" rel="section" title="§22.18 Mathematical Applications ‣ Applications ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.19.html" rel="section" title="§22.19 Physical Applications ‣ Applications ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.20.html" rel="section" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.21.html" rel="section" title="§22.21 Tables ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.22.html" rel="section" title="§22.22 Software ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.SB1.html" rel="sidebar" title="Sidebar 22.SB1: Decay of a Soliton in a Bose–Einstein Condensate ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Eisenstein series, Jacobian elliptic functions, expansions in doubly-infinite partial fractions, trigonometric series expansions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="22.12.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="22.12.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="22.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22 </span>Jacobian Elliptic Functions</span></a><a class="ltx_ref" href="22.html#PT2" rel="up" title="In Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="22.11.html" rel="prev" title="In Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.11 </span>Fourier and Hyperbolic Series</span></a><a class="ltx_ref" href="22.13.html" rel="next" title="In Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.13 </span>Derivatives and Differential Equations</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§22.12 </span>Expansions in Other Trigonometric Series and Doubly-Infinite Partial
+Fractions: Eisenstein Series</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Eisenstein%20series">Eisenstein series</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobian%20elliptic%20functions">Jacobian elliptic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=expansions%20in%20doubly-infinite%20partial%20fractions">expansions in doubly-infinite partial fractions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=trigonometric%20series%20expansions">trigonometric series expansions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For the first right-hand sides of (<a class="ltx_ref" href="22.12.html#E2" title="(22.12.2) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.2</span></a>)–(<a class="ltx_ref" href="22.12.html#E4" title="(22.12.4) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.4</span></a>)
+see <cite class="ltx_cite ltx_citemacro_citet">Lawden (<a class="ltx_ref" href="bib/L.html#bib1385" title="Elliptic Functions and Applications">1989</a>, (8.8.3), (8.8.4), and (8.8.7))</cite>. The first right-hand sides
+of (<a class="ltx_ref" href="22.12.html#E5" title="(22.12.5) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.5</span></a>)–(<a class="ltx_ref" href="22.12.html#E13" title="(22.12.13) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.13</span></a>) can be obtained from the first right-hand
+sides of (<a class="ltx_ref" href="22.12.html#E2" title="(22.12.2) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.2</span></a>)–(<a class="ltx_ref" href="22.12.html#E4" title="(22.12.4) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.4</span></a>) by translations of the variable in
+accordance with the intersection of the first four rows and first four columns of
+Table <a class="ltx_ref" href="22.4.html#T3" title="Table 22.4.3 ‣ §22.4(iii) Translation by Half or Quarter Periods ‣ §22.4 Periods, Poles, and Zeros ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.4.3</span></a>. For example, in the case of (<a class="ltx_ref" href="22.12.html#E5" title="(22.12.5) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.5</span></a>) we apply
+the translation <math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="217px" alttext="\operatorname{cd}\left(z,k\right)=\operatorname{sn}\left(z+K,k\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E8" title="Jacobian elliptic function">cd</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./22.1#t1.r2" title="complex">z</mi><mo>+</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math> to (<a class="ltx_ref" href="22.12.html#E2" title="(22.12.2) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.2</span></a>). The
+second right-hand sides of (<a class="ltx_ref" href="22.12.html#E2" title="(22.12.2) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.2</span></a>)–(<a class="ltx_ref" href="22.12.html#E13" title="(22.12.13) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.13</span></a>) can be obtained from
+the corresponding first right-hand sides by substituting, as appropriate, the expansions
+<math altimg="m35.png" altimg-height="29px" altimg-valign="-10px" altimg-width="337px" alttext="\pi\csc\left(\pi\zeta\right)=\sum_{m=-\infty}^{\infty}(-1)^{m}/(\zeta-m)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi>ζ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ζ</mi><mo>−</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> or
+<math altimg="m34.png" altimg-height="33px" altimg-valign="-10px" altimg-width="378px" alttext="\pi\cot\left(\pi\zeta\right)=\lim_{M\to\infty}\sum_{m=-M}^{M}1/(\zeta-m)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi>ζ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><msub><mo lspace="0.1389em" rspace="0em">lim</mo><mrow><mi>M</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mrow><msubsup><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi>M</mi></mrow></mrow><mi>M</mi></msubsup><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ζ</mi><mo>−</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math>; compare
+(<a class="ltx_ref" href="4.22.html#E5" title="(4.22.5) ‣ §4.22 Infinite Products and Partial Fractions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.22.5</span></a>) and (<a class="ltx_ref" href="4.22.html#E3" title="(4.22.3) ‣ §4.22 Infinite Products and Partial Fractions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.22.3</span></a>).
+See also <cite class="ltx_cite ltx_citemacro_citet">Walker (<a class="ltx_ref" href="bib/W.html#bib2359" title="Elliptic Functions. A Constructive Approach">1996</a>, §5.1)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Weil (<a class="ltx_ref" href="bib/W.html#bib2387" title="Elliptic Functions According to Eisenstein and Kronecker">1999</a>, pp. 14–47)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="22.12.html" title="">http://dlmf.nist.gov/22.12</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<p class="ltx_p">With <math altimg="m42.png" altimg-height="19px" altimg-valign="-3px" altimg-width="52px" alttext="t\in\mathbb{C}" class="ltx_Math" display="inline"><mrow><mi>t</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></mrow></math> and</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="79px" altimg-valign="-7px" altimg-width="109px" alttext="\tau=i{K^{\prime}}\left(k\right)/K\left(k\right)," class="ltx_Math" display="block"><mrow><mrow><mi href="./22.1#t1.r7" title="ratio">τ</mi><mo>=</mo><mrow><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow><mo>/</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="19.2.html#E8_1" title="(19.2.8_1) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="{K^{\prime}}\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complementary complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E1" title="">http://dlmf.nist.gov/22.12.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="111px" altimg-valign="-30px" altimg-width="771px" alttext="2Kk\operatorname{sn}\left(2Kt,k\right)=\sum_{n=-\infty}^{\infty}\frac{\pi}{%
+\sin\left(\pi(t-(n+\frac{1}{2})\tau)\right)}=\sum_{n=-\infty}^{\infty}\left(%
+\sum_{m=-\infty}^{\infty}\frac{(-1)^{m}}{t-m-(n+\frac{1}{2})\tau}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mo>(</mo><mrow><munderover><mo lspace="0em" movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mrow><mi>t</mi><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a>,
+<a class="ltx_ref" href="22.12.html#p1" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E2" title="">http://dlmf.nist.gov/22.12.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="111px" altimg-valign="-30px" altimg-width="779px" alttext="2iKk\operatorname{cn}\left(2Kt,k\right)=\sum_{n=-\infty}^{\infty}\frac{(-1)^{n%
+}\pi}{\sin\left(\pi(t-(n+\frac{1}{2})\tau)\right)}=\sum_{n=-\infty}^{\infty}%
+\left(\sum_{m=-\infty}^{\infty}\frac{(-1)^{m+n}}{t-m-(n+\frac{1}{2})\tau}%
+\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mo>(</mo><mrow><munderover><mo lspace="0em" movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mrow><mi>t</mi><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E5" title="(22.2.5) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{cn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E3" title="">http://dlmf.nist.gov/22.12.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="2iK\operatorname{dn}\left(2Kt,k\right)=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n%
+}\frac{\pi}{\tan\left(\pi(t-(n+\frac{1}{2})\tau)\right)}=\lim_{N\to\infty}\sum%
+_{n=-N}^{N}(-1)^{n}\left(\lim_{M\to\infty}\sum_{m=-M}^{M}\frac{1}{t-m-(n+\frac%
+{1}{2})\tau}\right)." class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mn>2</mn><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><munder><mo lspace="0em" movablelimits="false" rspace="0em">lim</mo><mrow><mi>M</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi>M</mi></mrow></mrow><mi>M</mi></munderover><mfrac><mn>1</mn><mrow><mi>t</mi><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E6" title="(22.2.6) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\operatorname{dn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="4.14.html#E4" title="(4.14.4) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="48px" alttext="\tan\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: tangent function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a>,
+<a class="ltx_ref" href="22.12.html#p1" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E4" title="">http://dlmf.nist.gov/22.12.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The double sums in (<a class="ltx_ref" href="22.12.html#E2" title="(22.12.2) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.2</span></a>)–(<a class="ltx_ref" href="22.12.html#E4" title="(22.12.4) ‣ §22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.12.4</span></a>) are convergent but
+not absolutely convergent, hence the order of the summations is important.
+Compare §<a class="ltx_ref" href="20.5.html#iii" title="§20.5(iii) Double Products ‣ §20.5 Infinite Products and Related Results ‣ Properties ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.5(iii)</span></a>.</p>
+</div>
+<div class="ltx_para" id="p2">
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="40px" altimg-valign="-7px" altimg-width="166px" alttext="\displaystyle 2Kk\operatorname{cd}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E8" title="Jacobian elliptic function">cd</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m16.png" altimg-height="76px" altimg-valign="-30px" altimg-width="707px" alttext="\displaystyle=\sum_{n=-\infty}^{\infty}\frac{\pi}{\sin\left(\pi(t+\frac{1}{2}-%
+(n+\frac{1}{2})\tau)\right)}=\sum_{n=-\infty}^{\infty}\left(\sum_{m=-\infty}^{%
+\infty}\frac{(-1)^{m}}{t+\frac{1}{2}-m-(n+\frac{1}{2})\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E8" title="(22.2.8) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{cd}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E8" title="Jacobian elliptic function">cd</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E5" title="">http://dlmf.nist.gov/22.12.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m2.png" altimg-height="40px" altimg-valign="-7px" altimg-width="205px" alttext="\displaystyle-2iKkk^{\prime}\operatorname{sd}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>⁢</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E7" title="Jacobian elliptic function">sd</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m13.png" altimg-height="76px" altimg-valign="-30px" altimg-width="707px" alttext="\displaystyle=\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}\pi}{\sin\left(\pi(t+%
+\frac{1}{2}-(n+\frac{1}{2})\tau)\right)}=\sum_{n=-\infty}^{\infty}\left(\sum_{%
+m=-\infty}^{\infty}\frac{(-1)^{m+n}}{t+\frac{1}{2}-m-(n+\frac{1}{2})\tau}%
+\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E7" title="(22.2.7) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sd}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E7" title="Jacobian elliptic function">sd</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a>,
+<a class="ltx_ref" href="22.1.html#t1.r4" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m41.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="k^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></math>:  complementary modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E6" title="">http://dlmf.nist.gov/22.12.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="40px" altimg-valign="-7px" altimg-width="181px" alttext="\displaystyle 2iKk^{\prime}\operatorname{nd}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">nd</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="152px" altimg-valign="-31px" altimg-width="550px" alttext="\displaystyle=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi%
+(t+\frac{1}{2}-(n+\frac{1}{2})\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-%
+1)^{n}\lim_{M\to\infty}\left(\sum_{m=-M}^{M}\frac{1}{t+\frac{1}{2}-m-(n+\frac{%
+1}{2})\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo lspace="0.167em">⁢</mo><mrow><munder><mo movablelimits="false" rspace="0em">lim</mo><mrow><mi>M</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi>M</mi></mrow></mrow><mi>M</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E6" title="(22.2.6) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m29.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\operatorname{nd}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">nd</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="4.14.html#E4" title="(4.14.4) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="48px" alttext="\tan\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: tangent function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a>,
+<a class="ltx_ref" href="22.1.html#t1.r4" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m41.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="k^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></math>:  complementary modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E7" title="">http://dlmf.nist.gov/22.12.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E8">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="40px" altimg-valign="-7px" altimg-width="154px" alttext="\displaystyle 2K\operatorname{dc}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mrow><mi href="./22.2#E8" title="Jacobian elliptic function">dc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m17.png" altimg-height="76px" altimg-valign="-30px" altimg-width="597px" alttext="\displaystyle=\sum_{n=-\infty}^{\infty}\frac{\pi}{\sin\left(\pi(t+\frac{1}{2}-%
+n\tau)\right)}=\sum_{n=-\infty}^{\infty}\left(\sum_{m=-\infty}^{\infty}\frac{(%
+-1)^{m}}{t+\frac{1}{2}-m-n\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E8" title="(22.2.8) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{dc}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E8" title="Jacobian elliptic function">dc</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E8" title="">http://dlmf.nist.gov/22.12.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E9">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="40px" altimg-valign="-7px" altimg-width="171px" alttext="\displaystyle 2Kk^{\prime}\operatorname{nc}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">nc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m14.png" altimg-height="76px" altimg-valign="-30px" altimg-width="597px" alttext="\displaystyle=\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}\pi}{\sin\left(\pi(t+%
+\frac{1}{2}-n\tau)\right)}=\sum_{n=-\infty}^{\infty}\left(\sum_{m=-\infty}^{%
+\infty}\frac{(-1)^{m+n}}{t+\frac{1}{2}-m-n\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E5" title="(22.2.5) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{nc}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">nc</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a>,
+<a class="ltx_ref" href="22.1.html#t1.r4" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m41.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="k^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></math>:  complementary modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E9" title="">http://dlmf.nist.gov/22.12.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E10">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m1.png" altimg-height="40px" altimg-valign="-7px" altimg-width="184px" alttext="\displaystyle-2Kk^{\prime}\operatorname{sc}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E9" title="Jacobian elliptic function">sc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m11.png" altimg-height="79px" altimg-valign="-31px" altimg-width="860px" alttext="\displaystyle=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi%
+(t+\frac{1}{2}-n\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\left(%
+\lim_{M\to\infty}\sum_{m=-M}^{M}\frac{1}{t+\frac{1}{2}-m-n\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><munder><mo lspace="0em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>M</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi>M</mi></mrow></mrow><mi>M</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E9" title="(22.2.9) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m31.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="\operatorname{sc}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E9" title="Jacobian elliptic function">sc</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E4" title="(4.14.4) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="48px" alttext="\tan\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: tangent function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a>,
+<a class="ltx_ref" href="22.1.html#t1.r4" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m41.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="k^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></math>:  complementary modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E10" title="">http://dlmf.nist.gov/22.12.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E11">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="40px" altimg-valign="-7px" altimg-width="153px" alttext="\displaystyle 2K\operatorname{ns}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">ns</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m18.png" altimg-height="76px" altimg-valign="-30px" altimg-width="517px" alttext="\displaystyle=\sum_{n=-\infty}^{\infty}\frac{\pi}{\sin\left(\pi(t-n\tau)\right%
+)}=\sum_{n=-\infty}^{\infty}\left(\sum_{m=-\infty}^{\infty}\frac{(-1)^{m}}{t-m%
+-n\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mrow><mi>t</mi><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{ns}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">ns</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E11" title="">http://dlmf.nist.gov/22.12.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E12">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="40px" altimg-valign="-7px" altimg-width="153px" alttext="\displaystyle 2K\operatorname{ds}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mrow><mi href="./22.2#E7" title="Jacobian elliptic function">ds</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m15.png" altimg-height="76px" altimg-valign="-30px" altimg-width="517px" alttext="\displaystyle=\sum_{n=-\infty}^{\infty}\frac{(-1)^{n}\pi}{\sin\left(\pi(t-n%
+\tau)\right)}=\sum_{n=-\infty}^{\infty}\left(\sum_{m=-\infty}^{\infty}\frac{(-%
+1)^{m+n}}{t-m-n\tau}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mrow><mi>t</mi><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E7" title="(22.2.7) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{ds}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E7" title="Jacobian elliptic function">ds</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m37.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E12" title="">http://dlmf.nist.gov/22.12.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E13">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.12.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="151px" alttext="\displaystyle 2K\operatorname{cs}\left(2Kt,k\right)" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mrow><mi href="./22.2#E9" title="Jacobian elliptic function">cs</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo lspace="0.222em">⁡</mo></mrow><mo rspace="0.222em">⁢</mo><mi>t</mi></mrow><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m12.png" altimg-height="79px" altimg-valign="-31px" altimg-width="780px" alttext="\displaystyle=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\frac{\pi}{\tan\left(\pi%
+(t-n\tau)\right)}=\lim_{N\to\infty}\sum_{n=-N}^{N}(-1)^{n}\left(\lim_{M\to%
+\infty}\sum_{m=-M}^{M}\frac{1}{t-m-n\tau}\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>−</mo><mi>N</mi></mrow></mrow><mi>N</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><munder><mo lspace="0em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi>M</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>−</mo><mi>M</mi></mrow></mrow><mi>M</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>t</mi><mo>−</mo><mi>m</mi><mo>−</mo><mrow><mi>n</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E9" title="(22.2.9) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="\operatorname{cs}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E9" title="Jacobian elliptic function">cs</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E4" title="(4.14.4) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="48px" alttext="\tan\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: tangent function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r7" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math>:  ratio</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.12.E13" title="">http://dlmf.nist.gov/22.12.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.12.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.12.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.12.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.12.html#info" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.12</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="22.11.html" rel="prev" title="In Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.11 </span>Fourier and Hyperbolic Series</span></a><a class="ltx_ref" href="22.13.html" rel="next" title="In Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.13 </span>Derivatives and Differential Equations</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

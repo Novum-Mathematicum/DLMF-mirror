@@ -1,0 +1,948 @@
+/* ======================================================================
+   Stylesheet for DLMF
+   ====================================================================== */
+@namespace mml url(http://www.w3.org/1998/Math/MathML);
+@font-face {
+    font-family: "STIXMath";
+    src: url("STIXTwoMath-Regular.woff2"); }
+body { margin:0px; padding:0px;  }
+ /* width Needed for IE ?*/
+body { width:100%;
+       color:#000000; }
+
+body.textfont_default   { font-family:"DejaVu LGC Serif",serif; }
+body.textfont_sans      { font-family:"DejaVu LGC Sans","Lucida Sans",sans-serif; }
+body.fontsize_default   { font-size: 100%; }
+body.fontsize_small     { font-size:  80%; }
+body.fontsize_large     { font-size: 120%; }
+body.fontsize_verylarge { font-size: 140%; }
+
+
+/* stix or firefox issue? */
+/*mml|math { font-size:110%; }*/
+math,
+mml|math { font-family: "STIXMath"; }
+/* ======================================================================
+   Navigation Bar */
+
+.ltx_page_navbar { z-index:10; }
+body.titlefont_default .ltx_page_navbar {
+    font-family:"DejaVu LGC Sans Condensed","Lucida Sans",sans-serif; font-size:90%; }
+body.titlefont_serif   .ltx_page_navbar {
+    font-family:"DejaVu LGC Serif",serif; font-size:90%; }
+
+.ltx_page_navbar a
+   { text-decoration:none; }
+
+body.color_default .ltx_page_navbar {
+    background-color:#d3dce6; border-right:1px solid #a4abb2; border-bottom:1px solid #a4abb2; }
+body.color_gold    .ltx_page_navbar {
+    background-color:#e6e6d3; border-right:1px solid #b2b2a4; border-bottom:1px solid #b2b2a4; }
+/*
+body.color_default .ltx_page_navbar li     {
+    list-style-image:url("dia-blue.png"); }
+body.color_gold    .ltx_page_navbar li     {
+    list-style-image:url("dia-gold.png"); }
+*/
+.ltx_page_navbar ul { position:relative; left:-15px; margin-top:0;}
+.ltx_page_navbar form  { display:inline; }
+.ltx_page_navbar form li { white-space:normal; }
+.ltx_page_navbar form input { width:7.5em; }
+.ltx_page_navbar form > input { width:7em; }
+
+/*.ltx_page_navbar .ltx_page_navsponsors { font-size:70%; text-align:center; margin-right:10px; }*/
+.ltx_page_navbar .ltx_page_navsponsors  {
+   text-align:center; margin-right:10px; }
+.ltx_page_navbar .ltx_page_navwhatsnew  {
+   font-style:italic; font-size:100%; }
+.ltx_page_navbar .ltx_page_navabout {
+   font-size:70%; text-align:center; }
+
+/* --- left navbar --- */
+body.navbar_default .ltx_page_main {
+    position:absolute; left:130px; top:0px;  right:0px; bottom:0px; }
+
+body.navbar_default .ltx_page_navbar {
+    width:130px; min-height:330px;
+    background-position:right; overflow:hidden;
+    position:fixed; left:0px; top:0px; }
+
+body.navbar_default .ltx_page_navbar .ltx_page_navitem_search {
+    width:70px; }
+body.navbar_default .ltx_page_navitems:after {
+    height:12px;
+    display:block; content:" "; text-align:center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 12px 12px; }
+
+body.navbar_default.color_default .ltx_page_navitems:after {
+    background-image:url('dia-blue.png');
+    background-image:url('dia-blue.svg'),none; }
+body.navbar_default.color_gold .ltx_page_navitems:after {
+    background-image:url('dia-gold.png');
+    background-image:url('dia-gold.svg'),none; }
+
+body.navbar_default .ltx_page_navbar {
+    float:left; }/* NN4 */
+
+body.navbar_default .ltx_page_navbar {
+    float:none;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 2px 5px #888; }
+
+.ltx_page_navlogo span {
+    display:none; }
+
+body.navbar_default .ltx_page_navlogo a,
+body.navbar_popup .ltx_page_navbar:hover .ltx_page_navlogo a {
+    width:128px; height:128px; display:block;
+    background-repeat:no-repeat;
+    background-size: 128px 128px; }
+body.navbar_default.color_default .ltx_page_navlogo a,
+body.navbar_popup.color_default .ltx_page_navbar:hover .ltx_page_navlogo a {
+    background-image:url('DLMFLogo-blue.png');
+    background-image:url('DLMFLogo-blue.svg'),none; }
+body.navbar_default.color_gold .ltx_page_navlogo a,
+body.navbar_popup.color_gold .ltx_page_navbar:hover .ltx_page_navlogo a {
+    background-image:url('DLMFLogo-gold.png');
+    background-image:url('DLMFLogo-gold.svg'),none; }
+
+/* --- popup navbar --- */
+
+body.navbar_popup .ltx_page_main {
+    position:absolute; left:34px; top:0px; right:0px; bottom:0px; }
+body.navbar_popup .ltx_page_navbar {
+    width:34px; min-height:330px; position:fixed; left:0px; top:0px; overflow:hidden; }
+body.navbar_popup .ltx_page_navlogo img {
+    visibility:hidden; }
+body.navbar_popup .ltx_page_navlogo {
+    width:32px; height:128px; display:block; 
+    background-repeat:no-repeat;
+    background-size: 32px 128px; }
+body.navbar_popup.color_default .ltx_page_navlogo {
+    background-image:url('DLMFLogoV-blue.png');
+    background-image:url('DLMFLogoV-blue.svg'),none; }
+body.navbar_popup.color_gold .ltx_page_navlogo {
+    background-image:url('DLMFLogoV-gold.png');
+    background-image:url('DLMFLogoV-gold.svg'),none; }
+
+body.navbar_popup .ltx_page_navitems,
+body.navbar_popup .ltx_page_navsponsors {
+    display:none; }
+
+body.navbar_popup .ltx_page_navbar:hover,
+body.navbar_popup .ltx_page_navbar_hover
+  { height:auto; width:130px; }
+body.navbar_popup .ltx_page_navbar:hover .ltx_page_navlogo img,
+body.navbar_popup .ltx_page_navbar_hover .ltx_page_navlogo img {
+  visibility:visible; }
+body.navbar_popup .ltx_page_navbar:hover .ltx_page_navlogo,
+body.navbar_popup .ltx_page_navbar_hover .ltx_page_navlogo {
+  background-image:none; }
+body.navbar_popup .ltx_page_navbar:hover .ltx_page_navitems,
+body.navbar_popup .ltx_page_navbar_hover .ltx_page_navitems,
+body.navbar_popup .ltx_page_navbar:hover .ltx_page_navsponsors,
+body.navbar_popup .ltx_page_navbar_hover .ltx_page_navsponsors {
+    display:block; }
+
+body.navbar_popup .ltx_page_navitems:after {
+    height:12px;
+    display:block; content:" "; text-align:center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 12px 12px; }
+body.navbar_popup.color_default .ltx_page_navitems:after {
+    background-image:url('dia-blue.png');
+    background-image:url('dia-blue.svg'),none; }
+body.navbar_popup.color_gold .ltx_page_navitems:after {
+    background-image:url('dia-gold.png');
+    background-image:url('dia-gold.svg'),none; }
+
+body.navbar_popup .ltx_page_navbar {
+    float:none;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 2px 5px #888; }
+
+/* --- top navbar --- */
+body.navbar_top .ltx_page_navlogo a {
+    width:160px; height:64px; display:block;
+    background-repeat:no-repeat;
+    background-size: 160px 64px; }
+body.navbar_top.color_default .ltx_page_navlogo a {
+    background-image:url('DLMFLogoH-blue.png');
+    background-image:url('DLMFLogoH-blue.svg'),none; }
+body.navbar_top.color_gold .ltx_page_navlogo a {
+    background-image:url('DLMFLogoH-gold.png');
+    background-image:url('DLMFLogoH-gold.svg'),none; }
+
+body.navbar_top .ltx_page_navbar {
+    width:99%; display:table; padding-bottom:5px;}
+body.navbar_top .ltx_page_navlogo,
+body.navbar_top .ltx_page_navitems,
+body.navbar_top .ltx_page_navsponsors {
+    display:table-cell; }
+body.navbar_top .ltx_page_navlogo,
+body.navbar_top .ltx_page_navsponsors {
+    vertical-align:middle; }
+body.navbar_top .ltx_page_navitems {
+    text-align:center; vertical-align:bottom; }
+/*
+body.navbar_top .ltx_page_navlogo {
+  float:left; }
+*/
+/*
+body.navbar_top .ltx_page_navitems {
+  text-align:center; vertical-align:top; }
+*/
+/*
+body.navbar_top .ltx_page_navsponsors {
+  float:right; }
+*/
+/*
+body.navbar_top .ltx_page_navbar:after {
+    content:"."; display:block; height:0; clear:both; visibility:hidden; }
+*/
+body.navbar_top .ltx_page_navitems ul,
+body.navbar_top .ltx_page_navitems li {
+    display:inline; }
+/*
+body.navbar_top .ltx_page_navbar > .ltx_page_navitem
+  { display:table-cell; }
+*/
+
+body.navbar_top .ltx_page_navbar {
+    float:none;
+    box-shadow: 0px 2px 5px #888; }
+
+body.navbar_top .ltx_page_navitems ul:after,
+body.navbar_top .ltx_page_navitems li:before {
+    width:12px;
+    display:inline-block;
+    content:"\A0"; text-align:center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 12px 12px; }
+body.navbar_top.color_default .ltx_page_navitems ul:after,
+body.navbar_top.color_default .ltx_page_navitems li:before {
+    background-image:url('dia-blue.png');
+    background-image:url('dia-blue.svg'),none; }
+body.navbar_top.color_gold .ltx_page_navitems ul:after,
+body.navbar_top.color_gold .ltx_page_navitems li:before {
+    background-image:url('dia-gold.png');
+    background-image:url('dia-gold.svg'),none; }
+ 
+/* ======================================================================
+  Main content area: */
+.ltx_page_content {
+    padding-top:10px; padding-bottom:10px;  }
+
+body.color_default .ltx_page_header { border-bottom: 3px double #a4abb2; }
+body.color_default .ltx_page_footer { border-top:    3px double #a4abb2; }
+body.color_gold    .ltx_page_header { border-bottom: 3px double #b2b2a4; }
+body.color_gold    .ltx_page_footer { border-top:    3px double #b2b2a4; }
+
+.ltx_siblings:after,
+.ltx_nist_links:after,
+.ltx_page_content:after {
+    content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.ltx_nist_logo {
+    float:left; }
+.ltx_nist_links{
+    margin-top:2em; }
+/* ======================================================================
+   Headers & Footers */
+
+body.titlefont_default .ltx_page_header,
+body.titlefont_default .ltx_page_footer
+  { font-family:"DejaVu LGC Sans Condensed","Lucida Sans",sans-serif; }
+body.titlefont_serif .ltx_page_header,
+body.titlefont_serif .ltx_page_footer
+  { font-family:"DejaVu LGC Serif",serif; }
+
+.ltx_page_header .ltx_ref[rel="up"],
+.ltx_page_header .ltx_ref[rel="up up"],
+.ltx_page_header .ltx_ref[rel="up up up"]
+  { display:block; font-size: 180%;}
+.ltx_page_header .ltx_ref[rel="prev"],
+.ltx_page_footer .ltx_ref[rel="prev"] { float:left; width:45%; } 
+.ltx_page_header .ltx_ref[rel="next"],
+.ltx_page_footer .ltx_ref[rel="next"] { float:right; width:45%; text-align:right;}
+
+body.color_default .ltx_page_header .ltx_ref[rel="up"]:before,
+body.color_default .ltx_page_header .ltx_ref[rel="up up"]:before,
+body.color_default .ltx_page_footer .ltx_ref[rel="up"]:before,
+body.color_default .ltx_page_footer .ltx_ref[rel="up up"]:before {
+    content:" "; display:inline-block;
+    background-image:url('uarrow-blue.png');
+    background-image:url('uarrow-blue.svg'),none;
+    background-size:24px 24px; vertical-align:-0.2em;
+    width:24px; height:24px; }
+body.color_default .ltx_page_header .ltx_ref[rel="prev"]:before,
+body.color_default .ltx_page_footer .ltx_ref[rel="prev"]:before {
+    content:" "; display:inline-block;
+    background-image:url('larrow-blue.png');
+    background-image:url('larrow-blue.svg'),none;
+    background-size:24px 24px; vertical-align:-0.6em;
+    width:24px; height:24px; }
+body.color_default .ltx_page_header .ltx_ref[rel="next"]:after,
+body.color_default .ltx_page_footer .ltx_ref[rel="next"]:after {
+    content:" "; display:inline-block;
+    background-image:url('rarrow-blue.png');
+    background-image:url('rarrow-blue.svg'),none;
+    background-size:24px 24px; vertical-align:-0.6em;
+    width:24px; height:24px; }
+
+body.color_gold .ltx_page_header .ltx_ref[rel="up"]:before,
+body.color_gold .ltx_page_header .ltx_ref[rel="up up"]:before,
+body.color_gold .ltx_page_footer .ltx_ref[rel="up"]:before,
+body.color_gold .ltx_page_footer .ltx_ref[rel="up up"]:before {
+    content:" "; display:inline-block;
+    background-image:url('uarrow-gold.png');
+    background-image:url('uarrow-gold.svg'),none;
+    background-size:24px 24px; vertical-align:-0.2em;
+    width:24px; height:24px; }
+body.color_gold .ltx_page_header .ltx_ref[rel="prev"]:before,
+body.color_gold .ltx_page_footer .ltx_ref[rel="prev"]:before {
+    content:" "; display:inline-block;
+    background-image:url('larrow-gold.png');
+    background-image:url('larrow-gold.svg'),none;
+    background-size:24px 24px; vertical-align:-0.6em;
+    width:24px; height:24px; }
+
+body.color_gold .ltx_page_header .ltx_ref[rel="next"]:after,
+body.color_gold .ltx_page_footer .ltx_ref[rel="next"]:after {
+    content:" "; display:inline-block;
+    background-image:url('rarrow-gold.png');
+    background-image:url('rarrow-gold.svg'),none;
+    background-size:24px 24px; vertical-align:-0.6em;
+    width:24px; height:24px; }
+
+/* ======================================================================
+   Interesting Document Elements
+   ====================================================================== */
+
+/* ======================================================================
+   FrontMatter. */
+
+/* ---------------------------------------- 
+   Headings */
+
+h1,h2,h3,h4,h5 
+  { margin: 0.5em -30px 0.25em -20px; padding: 0.1em 0em 0.1em 0.2em; }
+h6
+  { margin:2px; padding:2px; }
+h1, h6 { border:none; }
+
+.ltx_subtitle
+  { text-align:center; font-size: 125%; font-style: italic;
+    padding-left:0.2em; margin-left:-0.5em; }
+.ltx_subtitle a { text-decoration:none; }
+.ltx_subtitle a img { vertical-align:-35px; }
+.ltx_title_chapter
+  { font-weight: bold; font-size: 170%; text-align:center; }
+.ltx_title_section,
+.ltx_title_sidebar
+  { font-weight: bold; font-size: 140%; text-align:left; }
+.ltx_title_subsection,
+.ltx_title_subsubsection
+  { font-weight: bold; font-size: 120%; text-align:left; }
+.ltx_title_paragraph,
+.ltx_hittag
+  { font-weight: bold; font-size: 110%; text-align:left; }
+h6 { font-style: italic; font-size: 100%; text-align:left; } /* other headings */
+
+.ltx_title_document,
+.ltx_title_index,
+.ltx_title_bibliography,
+.ltx_title_glossary
+  { font-weight: bold; font-size: 140%; text-align:center; }
+
+.ltx_title_mainpage
+  { font-weight: bold; font-size: 200%; text-align:center; font-style: normal; margin-right:70px;
+    background-color:transparent!important; border-style:none!important; }
+
+body.titlefont_default .ltx_title,
+body.titlefont_default .ltx_subtitle
+  { font-family:"DejaVu LGC Sans Condensed","Lucida Sans",sans-serif; font-weight:bold; }
+body.titlefont_serif .ltx_title,
+body.titlefont_serif .ltx_subtitle
+  { font-family:"DejaVu LGC Serif",serif; font-weight:bold}
+
+body.color_default .ltx_title_section,
+body.color_default .ltx_title_sidebar
+  { background-color:#bcc4cc; border: 1px solid #bcc4cc; border-top: 3px double #a4abb2; }
+body.color_default .ltx_title_subsection,
+body.color_default .ltx_title_subsubsection,
+body.color_default .ltx_hittag
+  { background-color:#c7d0d9; border: 1px solid #c7d0d9; border-top: 1px solid #a4abb2; }
+body.color_default .ltx_title_paragraph
+  { background-color:#d3dce6; border: 1px solid #d3dce6; border-top: 1px solid #a4abb2; }
+body.color_default .ltx_title_document,
+body.color_default .ltx_title_index,
+body.color_default .ltx_title_bibliography,
+body.color_default .ltx_title_glossary
+  { background-color:#d3dce6; border: 1px solid #d3dce6; border-top: 3px double #a4abb2; }
+
+body.color_gold .ltx_title_section,
+body.color_gold .ltx_title_sidebar
+  { background-color:#ccccbc; border: 1px solid #ccccbc; border-top: 3px double #b2b2a4; }
+body.color_gold .ltx_title_subsection,
+body.color_gold .ltx_title_subsubsection,
+body.color_gold .ltx_hittag
+  { background-color:#d9d9c7; border: 1px solid #d9d9c7; border-top: 1px solid #b2b2a4; }
+body.color_gold .ltx_title_paragraph
+  { background-color:#e6e6d3; border: 1px solid #e6e6d3; border-top: 1px solid #b2b2a4; }
+
+body.color_gold .ltx_title_document,
+body.color_gold .ltx_title_index,
+body.color_gold .ltx_title_bibliography,
+body.color_gold .ltx_title_glossary
+  { background-color:#e6e6d3; border: 1px solid #e6e6d3; border-top: 3px double #b2b2a4; }
+
+.ltx_gallery { display:table; width:88%; max-height:120px;
+	       margin:0.5em 5% 0.5em 5%; padding:1%; text-align:center; }
+.ltx_gallery * { margin:0 1em 0 1em;}
+body.color_default form button,
+body.color_default .ltx_gallery {
+  background-color:#d3dce6; border: 1px solid #a4abb2; }
+body.color_gold form button,
+body.color_gold .ltx_gallery {
+  background-color:#e6e6d3; border: 1px solid #b2b2a4; }
+.ltx_gallery {
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 5px #888; }
+
+.ltx_role_authors,
+.ltx_role_author
+  { display:block; text-align:center; }
+.ltx_role_author .ltx_personname
+  { font-weight:bold;  display:block; text-align:center; }
+.ltx_role_affiliation {
+    font-size: 80%; font-weight:normal; text-align:center; 
+    display:block; text-align:center; }
+.ltx_abstract    { margin:1em 4em 1em 4em; }
+
+.ltx_sidebar_authors {
+    display:block; float:right; font-style:italic; }
+/* ======================================================================
+   Links. */
+
+a:visited { color:#6040B0; }
+a:link:hover, A:visited:hover   { color:#A02030; } 
+a:active  { color:#0000FF; }
+
+/* the inherit overrides the color change that would normally apply to links in mathml */
+mml|math * { text-decoration:none; color:inherit; }
+/* But make marked variables (in notations) gray */
+mml|math .ltx_nvar { color:#808080; }
+
+/* but make the hover still work! */
+mml|math *:link:hover,
+mml|math *:visited:hover  { color:#A02030; } 
+mml|math *:active  { color:#0000FF; }
+
+/* This does the same for MathJax (note: such an mo turns to <a><span class='mo'>..)*/
+.MathJax a  { text-decoration:none; color:inherit; }
+.MathJax a:hover,
+.MathJax a:hover  { color:#A02030; } 
+.MathJax a:active  { color:#0000FF; }
+
+img { border:0px; } /* No dadburned borders! */
+.ltx_stub, a:visited.ltx_stub  { color:#90A0C0; }
+
+/*,
+
+*/
+body.color_default .selected,
+body.color_default .ltx_info.selected .ltx_infocontent
+  { background-color: #dfe8f2 !important;
+    border:  3px double #a4abb2 !important; margin-top:-3px; margin-bottom:-3px; }
+/* worrysome margin adjustment to keep from reflowing! */
+/* ,body.color_gold .ltx_info.selected .ltx_infocontent
+*/
+body.color_gold .selected
+
+  { background-color: #f2f2df !important;
+    border:  3px double #b2b2a4 !important; margin-top:-3px; margin-bottom:-3px; }
+.ltx_info.selected .ltx_infocontent
+{ display:block !important; 
+  position:relative !important; 
+  float:right; }
+body.color_default .ltx_info.selected,
+body.color_gold .ltx_info.selected {
+    border: none !important;
+    background-color: transparent!important; }
+/*  
+
+*/
+
+/* ======================================================================
+   TOCs. */
+
+body.titlefont_default .ltx_tocentry
+  { font-family:"DejaVu LGC Sans Condensed","Lucida Sans",sans-serif; }
+body.titlefont_default .ltx_toc_compact,
+body.titlefont_default .ltx_toc_verycompact
+  { font-family:"DejaVu LGC Sans Condensed","Lucida Sans",sans-serif; font-size: 80%; }
+body.titlefont_serif .ltx_tocentry
+  { font-family:"DejaVu LGC Serif",serif; }
+body.titlefont_serif .ltx_toc_compact,
+body.titlefont_serif .ltx_toc_verycompact
+  { font-family:"DejaVu LGC Serif",serif; font-size: 80%; }
+
+.ltx_tocentry .ltx_ref,
+.ltx_toc_compact a,
+.ltx_toc_verycompact a
+  { text-decoration:none; }
+
+li.ltx_tocentry { list-style-type:none; }
+.ltx_toc_compact,
+.ltx_toc_verycompact { text-align:center; }
+
+.ltx_toclist_mainpage { margin-left:2em;  }
+.ltx_toclist_mainpage .ltx_tag
+  { position:absolute; margin-left:-2em; display:inline-block; width:1.5em; text-align:right; }
+.ltx_toclist_part { margin-left:4em; padding-left:0;}
+.ltx_toclist_part .ltx_tag
+  { position:absolute; margin-left:-4em; display:inline-block; width:3.5em; text-align:right; }
+.ltx_toclist_section { margin-left:6em; padding-left:0;}
+/*
+.ltx_toclist_section .ltx_tag
+  { position:absolute; margin-left:-5em; display:inline-block; width:4.5em; text-align:left; }
+*/
+.ltx_toclist_section .ltx_tag
+  { position:absolute; margin-left:-6em; display:inline-block; width:6em; text-align:left;
+    white-space:nowrap; }
+.ltx_toclist_section .ltx_ref .ltx_tag {
+    display:inline; position:relative; }
+/* but 2nd tag (as if nested) doesn't position itself specially*/
+span.ltx_ref .ltx_tag {position:static; margin:0; width:auto; }
+
+body.titlefont_default .ltx_ref_tag,
+body.titlefont_default .ltx_ref_title,
+body.titlefont_default .ltx_tag    { font-family:"DejaVu LGC Sans Condensed","Lucida Sans",sans-serif; }
+
+body.titlefont_serif   .ltx_ref_tag,
+body.titlefont_serif   .ltx_ref_title,
+body.titlefont_serif   .ltx_tag    { font-family:"DejaVu LGC Serif",serif; }
+
+/* make random(except caption, itself?) text in LOF thumbnails smaller */
+.ltx_tocentry .ltx_figure .ltx_tabular {font-size:70%;}
+.ltx_tocentry .ltx_figure,
+.ltx_tocentry .ltx_figure .ltx_caption
+{ margin:0em; }
+body.color_default .ltx_toc_lof .ltx_tocentry_chapter > .ltx_ref,
+body.color_default .ltx_toc_lot .ltx_tocentry_chapter > .ltx_ref {
+  background-color:#bcc4cc; border: 1px solid #bcc4cc; border-top: 3px double #a4abb2;
+  display:block; width:100%; }
+body.color_gold .ltx_toc_lof .ltx_tocentry_chapter > .ltx_ref,
+body.color_gold .ltx_toc_lot .ltx_tocentry_chapter > .ltx_ref    {
+  background-color:#ccccbc; border: 1px solid #ccccbc; border-top: 3px double #b2b2a4;
+  display:block; width:100%; }
+
+/* ======================================================================
+   Forms. */
+
+button { font-weight:bold; font-size:100%; padding:0;} /* have to be explicit! */
+:disabled { color:#AAAAAA; border-style:solid; border-color:#AAAAAA; }
+/* ======================================================================
+   Equations. */
+
+/* for unaligned equations */
+/*div.ltx_equation { width:100%; margin:0.5em 0 0.5em 0; vertical-align:middle; text-align:center;}*/
+/*div.ltx_equation .ltx_refnum     { float:left; width:4em; text-align:left;} */
+/*.ltx_tag_equation     { float:left; width:4em; text-align:left;}
+div.ltx_equation .ltx_tag        { float:left; width:4em; text-align:left;}
+div.ltx_equation .ltx_constraint { float:right; white-space:nowrap; text-align:right; }
+*/
+/*
+.ltx_equation td { width:auto; }
+table.ltx_equation,
+table.ltx_equationgroup { width:100%; }
+*/
+/* Hide this from IE */
+/*
+tr > td.ltx_eqn_center_padleft,
+tr > td.ltx_eqn_center_padright { width:50%; }
+tr > td.ltx_eqn_left_padleft,
+tr > td.ltx_eqn_right_padright { min-width:2em; },
+tr > td.ltx_eqn_left_padright,
+tr > td.ltx_eqn_right_padleft  { width:100%; }
+*/
+/* ======================================================================
+   Figures. */
+
+.ltx_figure { margin:2em 0.5em 0.5em 0.5em; text-align:center; }
+.ltx_figure * { margin:0em; }
+.ltx_figure .ltx_caption { margin:0 2em 0 2em; }
+.ltx_figure .ltx_subfigure { width:50%; }
+/*.ltx_figure .ltx_figure { width:50%; }*/
+
+/* experimental: flex model, to center short captions, justify long ones */
+.ltx_table,
+.ltx_figure {
+    display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.ltx_table .ltx_caption,
+.ltx_figure .ltx_caption {
+    text-align:justify; }
+
+/* nonsense so IE11 handles flex align-items:center
+   (giving the width kinda defeats the whole purpose, but oh well...) */
+/*
+@media all and (-ms-high-contrast: none), (-ms-high-contrast:active) {
+.ltx_table .ltx_caption,
+.ltx_figure .ltx_caption {
+    width:50%; }
+}
+*/
+/* patch up titles embedded in magfigures */
+.ltx_figure .ltx_title_subsection {
+    width:100%; }
+
+.ltx_align_floatleft   { margin-right:2em; }
+.ltx_align_floatright  { margin-left:2em; }
+
+/* ======================================================================
+   Tables. */
+
+.ltx_table { margin-top:2em; text-align:center; }
+.ltx_table * { margin:0em; }
+.ltx_table table td { padding:0.1em 0.5em 0.1em 0.5em; }
+/* non `justify'd columns (from latex) should NOT wrap */
+.ltx_table td[align='left'],
+.ltx_table td[align='right'],
+.ltx_table td[align='center']
+  { white-space:nowrap; }
+.ltx_table td[width] { white-space:normal !important; }
+p[width] { white-space:normal !important; }
+
+body.color_default .ltx_th
+  { background-color:#d3dce6; 
+    font-weight:normal; }
+body.color_gold .ltx_th
+   { background-color:#e6e6d3;
+   font-weight:normal; }
+
+/* ======================================================================
+   Sidebar pages. */
+
+.ltx_sidebar .ltx_figure + div p:first-letter { font-size:330%; float:left; }
+.ltx_sidebar p { width:90%; padding:0 5% 0 5%; }
+
+/* ======================================================================
+   Bibliography. */
+
+.ltx_biblist { list-style-type:none; padding:0; }
+/*.biblist li { padding: 0em 0em 0.5em 2em;}*/
+.ltx_biblist li { padding: 0em 1em 0.5em 1em;}
+.ltx_bibitem .ltx_tag { font-weight:bold; margin-left:-1em;}
+
+.ltx_bib_title  { font-style:italic; }
+.ltx_bib_volume { font-weight:bold; }
+
+/* ======================================================================
+   Glossary/Notations. */
+
+/* override boldness in glossaries */
+.ltx_list_notation dt.ltx_glossaryentry { font-weight: normal; }
+
+/* ======================================================================
+   Lists. */
+dt {  font-weight: bold; }
+/*.description dt { display:compact; }*/
+.ltx_description dd { margin-left:2em; }
+.ltx_item .ltx_tag + .ltx_para,
+.ltx_item .ltx_tag + .ltx_para .ltx_p { display:inline; }
+
+.ltx_itemize .ltx_item {
+    margin-top: 0.25em; margin-bottom: 0.25em; }
+/* ======================================================================
+   General Text 
+   ====================================================================== */
+
+p {  text-align:justify; }
+.ltx_math { vertical-align:middle; }
+
+/* These are for links w/o an actual destination. */
+/* ??? span.ltx_ref { font-weight: bold; } *//* for a link to "here". */
+span.ltx_broken { font-weight: bold; color:red; } /* for a link to an unknown object. */
+span.ltx_disabled { color:grey; }
+
+.ltx_important { font-weight:bold; }
+
+/* ======================================================================
+   Meta Info
+   ====================================================================== */
+/* classes referenced in js, not prefixed:
+   selected, shown, hover */
+.ltx_info { display:none; white-space:normal; }
+#hideinfo, #showinfo { display:none; }
+	   	    
+
+@media all {
+/*   #showinfo { display:list-item; }
+   body.color_default #hideinfo,
+   body.color_default #showinfo {
+       list-style-image:url("info-blue.png");
+       list-style-image:url("info-blue.svg"),none; }
+   body.color_gold #hideinfo,
+   body.color_gold #showinfo {
+       list-style-image:url("info-gold.png");
+          list-style-image:url("info-gold.svg"),none; }
+*/
+  .ltx_info { width:100%; display:block; margin:0; padding:0; position:relative; right:-20px;  }
+  .ltx_infoicon { float:right;  height:0px;  right:-8px; position:absolute; top:-30px; }
+  .ltx_infoicon img {  vertical-align:top; padding:0px 0px 28px 8px; }
+  .ltx_info.ltx_fixed .ltx_infoicon { display:none; }
+/*
+   body.color_default .ltx_infoiconimg
+      { background-image:url(info-blue.png); background-repeat:no-repeat; }
+   body.color_gold .ltx_infoiconimg
+      { background-image:url(info-gold.png); background-repeat:no-repeat; }
+*/
+/*  .ltx_infoicon { width:24px; height:24px; }*/
+  .ltx_infoicon {
+      background-repeat:no-repeat;
+      background-size: 24px 24px; }
+  .ltx_infoicon span { display:none; }
+
+  body.color_default .ltx_infoicon {
+      background-image:url(info-blue.png);
+      background-image:url(info-blue.svg),none; }
+  body.color_gold .ltx_infoicon {
+      background-image:url(info-gold.png);
+      background-image:url(info-gold.svg),none; }
+  body.color_default .ltx_errataiconimg {
+      background-image:url(errata-blue.png);
+      background-repeat:no-repeat; }
+  body.color_gold .ltx_errataiconimg {
+      background-image:url(errata-gold.png);
+      background-repeat:no-repeat; }
+
+/*  .info      */
+ .ltx_infocontent { display:none; }
+ .ltx_infocontent
+     { padding:0.5em; font-size:90%; text-align:left; top:-3px; right:0px; width:70%; }
+ .ltx_infocontent {  position:absolute; float:none; z-index:11; }
+ .ltx_infocontent.shown { display:block !important; position:relative !important; float:right !important; z-index:10; }
+.ltx_info:hover .ltx_infocontent,
+.ltx_infocontent:hover { display:block !important; position:absolute; z-index:11; }
+/*
+float:none; 
+*/
+.ltx_metadata:after
+    { content:"."; display:block; clear:both; height:0; visibility:hidden; }
+
+ .ltx_infocontent dl  {margin:0 0 0 0; padding:0; }
+ .ltx_infocontent dd  {margin-left:2em; }
+}
+
+/* what is "fixed" ? */
+body.color_default .ltx_infocontent
+   { background-color:#d3dce6;
+     border: 4px outset #a4abb2; }
+body.color_default .ltx_fixedinfocontent,
+body.color_default .ltx_fixed .ltx_infocontent,
+body.color_default .ltx_infocontent.shown
+   { background-color:#d3dce6 !important; 
+     border: 4px inset #a4abb2 !important; }
+
+body.color_gold .ltx_infocontent
+   { background-color:#e6e6d3;
+     border: 4px outset #b2b2a4; }
+body.color_gold .ltx_fixedinfocontent,
+body.color_gold .ltx_infocontent.shown
+   { background-color:#e6e6d3 !important; 
+     border: 4px inset #b2b2a4 !important; }
+
+.ltx_no_datalink .ltx_listing .ltx_listing_data { display:none; }
+/* ======================================================================
+  Search Hit Lists...
+   ====================================================================== */
+
+.ltx_hitnote { font-size:70%; }
+/*
+.ltx_subhit { float:left; margin-left:-1em;
+	   text-decoration:none; }
+*/
+.ltx_subhit { position:absolute; left:0; margin-left:1em;
+	   text-decoration:none; }
+/* .hilite background color isn't predictable in math */
+*[class~="hilite"] { color:#FF0000; }
+*[class~="hilitebg"] { background-color:#FFE0E0; }
+
+/* recover table structure within hit lists */
+.ltx_hitcontent .ltx_eqn_div {display:table; }
+.ltx_hitcontent .ltx_eqn_div > span { display:table-cell; }
+
+/* ======================================================================
+  Ad-Hoc...
+   ====================================================================== */
+
+/* ======= News Items ============ */
+/*.recentnews { width:70%; margin:0.5em 10% 0.5em 10%; */
+.ltx_recentnews    { margin:1em 4em 1em 4em; padding:0.2em; 
+		 font-size:90%;}
+.ltx_recentnews ul { margin:0.2em; padding-left:1em; }
+body.color_default .ltx_recentnews {
+  background-color:#d3dce6; border: 1px solid #a4abb2; }
+body.color_gold .ltx_recentnews {
+  background-color:#e6e6d3; border: 1px solid #b2b2a4; }
+.ltx_recentnews {
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 5px #888; }
+.ltx_newsitem { list-style-type:none; }
+dl.ltx_news dt.ltx_newsitem { float:none; }
+.ltx_NEW { font-weight:bold; font-style:italic; color:#D06060; }
+/* ========== Software  table ========= */
+/*.softwaretable table { width: 50em; }*/
+
+/* No prefixes on this stuff (yet?) */
+.softwaretable { margin-left: 0; margin-right:0;}
+.softwaretable table { border-collapse:separate; border-spacing:0px; }
+/* Heading stuff */
+.softwaretable .ltx_th             { white-space:normal !important; }
+
+/* this stuff for vertical headings. */
+.softwaretable .packagerow.implementedcol img { position:relative; bottom:-10px;}
+/* IE. workaround; doesn't recognize the -10px; */
+.softwaretable .languagerow { padding-top:10px; font-size:70%; }
+tr > td.languagerow { padding-top:0px !important; }
+
+.softwaretable .softchapter,
+.softwaretable .languagerow,
+.softwaretable .othercol    {white-space:normal !important;}
+.softwaretable .languagerow,
+.softwaretable tbody .ltx_th { font-weight:normal!important;}
+
+.softwaretable .sectioncol {
+    width:14em; font-size:80%; padding-left:1em; text-indent:-1em; }
+.softwaretable .othercol   {
+    width:7em; font-size:80%; }
+.softwaretable .implementedcol {
+    width:24px; max-width:24px; font-size:80%; 
+    margin:0px; padding-left:0px; padding-right:0px;
+    text-align:center; }
+
+/* set to abs widths, so that floatheader js scroller works
+.softwaretable .sectioncol { width:150px; padding-left:1em; }
+.softwaretable .othercol   { width:60px; }
+*/
+
+/* Use Green scheme for this table. */
+.softwaretable table th.ltx_th { background-color: #C0FFC0; }
+.softwaretable .col0 { background-color:#D0FFD0 !important; }
+.softwaretable .col1 { background-color:#F0FFF0 !important; }
+
+.softwaretable a
+   { text-decoration:none; }
+
+/* Vertical scrolling of the software table */
+/* ANNOYing IE version.*/
+/*.softwaretable {  position:relative; height:400px; overflow-x:hidden; overflow-y:scroll; }*/
+.softwaretable thead { display:block; width:100%; border-bottom:1px solid black; }
+.softwaretable tbody { display:block; width:100%; height: 500px; overflow-y:scroll; }
+
+/*.softwaretable {  height:400px; overflow-x:hidden; overflow-y:scroll; }*/
+
+/*.softwaretable thead tr { width:100%; }
+.softwaretable thead tr { position:absolute; top:expression(this.offsetParent.scrollTop); }
+*/
+.floatHeader { border-bottom: 3px double black; }
+/*.softwaretable thead tr { width:100%; min-width:100%; }*/
+/*
+.softwaretable thead { position:absolute; top:expression(this.offsetParent.scrollTop); }
+.softwaretable tbody { height: auto; }
+*/
+/* Hide this from IE */
+/* ***** Also: commented out to use floatheader js.*/
+
+/*.softwaretable >  table >  tbody { height: 40ex; max-height:40ex; overflow:scroll; overflow-x:hidden; }
+*/
+/*.tabular td { block-progression:tb; glyph-orientation-vertical: 90deg; }*/
+
+/* ======================================================================
+   Support for Visualization pop-up */
+
+/*
+#mask { display:none;
+	background-color:#101010; opacity:0.65; filter:alpha(opacity=65);
+	position:absolute; top:0px; left:0px; width:100%; z-index:99; }
+*/
+#vizfallback { display:none;
+	  position:absolute; z-index:100; width:20em; padding:0.5em; text-align:left; }
+body.color_default #vizfallback
+   { background-color:#d3dce6;
+     border: 4px outset #a4abb2; }
+body.color_gold #vizfallback
+   { background-color:#e6e6d3;
+     border: 4px outset #b2b2a4; }
+#vizfallback input,
+#vizfallback button { margin:0.2em 0.5em; }
+
+.ltx_magnifiable.ltx_icon span,
+.ltx_3dgraphic.ltx_icon span {
+    display:none; }
+.ltx_magnifiable.ltx_icon,
+.ltx_3dgraphic.ltx_icon {
+    vertical-align:-0.6em;
+    width:24px; height:24px;
+    display:inline-block; content:" ";
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 24px 24px; }
+.ltx_magnifiable.ltx_icon {
+    background-image:url('mag.png');
+    background-image:url('mag.svg'),none; }
+.ltx_3dgraphic.ltx_icon {
+    background-image:url('3d-icon.png');
+    background-image:url('3d-icon.svg'),none; }
+.ltx_magnifiable { cursor: zoom-in; }
+.ltx_3dgraphic   { cursor: url(3d-icon.png), move; }
+
+/* ======================================================================
+   Mouse cursors */
+.ltx_help        { cursor: help; }
+.ltx_customize   { cursor: context-menu; }
+.ltx_icon:hover { transform: scale(1.3,1.3); }
+.ltx_icon { width:24px; height:24px; }
+
+/* ======================================================================
+   jQuery.leaveNotice support, adapted to match DLMF style */
+/* The style for the blackout div that appears when the exit dialog is shown. */
+#ln-blackout {
+    position:fixed; top:0; left:0;
+    width:100%; height:100%; background-color:#000;}
+
+/* This style is for a container that holds the message dialog box. It has been added primarily to help with positioning. I know some people would complain about this, but it seems more efficient this way even it is isn't semanitc. */
+#ln-messageHolder {
+    position:fixed; top:150px; left:0; width:100%; z-index:200; }
+
+/* This style is for the div that holds the actual exit dialog. */
+#ln-messageBox {
+    width:460px; margin:0 auto; min-height:200px;
+    background-color:#fff; border-radius:10px;
+    text-align:center; padding:20px;}
+body.color_default #ln-messageBox {
+    background-color: #d3dce6;
+    border:  4px outset #a4abb2; }
+body.color_gold  #ln-messageBox {
+    background-color: #e6e6d3;
+    border:  4px outset #b2b2a4; }
+
+/* This style is applied to the link that closes the dialog. */
+a#ln-cancelLink {
+    background-color:#e6e6e6; font-weight:bold; padding:5px; color:#666;
+    text-decoration:none; text-transform:uppercase; font-size:0.8em;}
+a#ln-cancelLink:hover {
+    background-color:#666; color:#e6e6e6;}
+
+/* This style is for the box that holds the section that says where the user is being directed to. */
+body.color_default .setoff {
+    border:  4px inset #a4abb2; }
+body.color_gold .setoff {
+    border:  4px inset #b2b2a4; }
+.setoff {
+    border-radius:5px;
+    padding:5px; background-color:#fff; }

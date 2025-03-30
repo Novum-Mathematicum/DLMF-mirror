@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/10.12";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="10.html#PT2" rel="up" title="Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.html" rel="up up" title="Chapter 10 Bessel Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="10.11.html" rel="prev" title="§10.11 Analytic Continuation ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.13.html" rel="next" title="§10.13 Other Differential Equations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.1.html" rel="section" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.2.html" rel="section" title="§10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.3.html" rel="section" title="§10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.4.html" rel="section" title="§10.4 Connection Formulas ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.5.html" rel="section" title="§10.5 Wronskians and Cross-Products ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.6.html" rel="section" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.7.html" rel="section" title="§10.7 Limiting Forms ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.8.html" rel="section" title="§10.8 Power Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.9.html" rel="section" title="§10.9 Integral Representations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.10.html" rel="section" title="§10.10 Continued Fractions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.11.html" rel="section" title="§10.11 Analytic Continuation ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.13.html" rel="section" title="§10.13 Other Differential Equations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.14.html" rel="section" title="§10.14 Inequalities; Monotonicity ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.15.html" rel="section" title="§10.15 Derivatives with Respect to Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.16.html" rel="section" title="§10.16 Relations to Other Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.17.html" rel="section" title="§10.17 Asymptotic Expansions for Large Argument ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.18.html" rel="section" title="§10.18 Modulus and Phase Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.19.html" rel="section" title="§10.19 Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.20.html" rel="section" title="§10.20 Uniform Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.21.html" rel="section" title="§10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.22.html" rel="section" title="§10.22 Integrals ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.23.html" rel="section" title="§10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.24.html" rel="section" title="§10.24 Functions of Imaginary Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.25.html" rel="section" title="§10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.26.html" rel="section" title="§10.26 Graphics ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.27.html" rel="section" title="§10.27 Connection Formulas ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.28.html" rel="section" title="§10.28 Wronskians and Cross-Products ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.29.html" rel="section" title="§10.29 Recurrence Relations and Derivatives ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.30.html" rel="section" title="§10.30 Limiting Forms ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.31.html" rel="section" title="§10.31 Power Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.32.html" rel="section" title="§10.32 Integral Representations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.33.html" rel="section" title="§10.33 Continued Fractions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.34.html" rel="section" title="§10.34 Analytic Continuation ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.35.html" rel="section" title="§10.35 Generating Function and Associated Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.36.html" rel="section" title="§10.36 Other Differential Equations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.37.html" rel="section" title="§10.37 Inequalities; Monotonicity ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.38.html" rel="section" title="§10.38 Derivatives with Respect to Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.39.html" rel="section" title="§10.39 Relations to Other Functions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.40.html" rel="section" title="§10.40 Asymptotic Expansions for Large Argument ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.41.html" rel="section" title="§10.41 Asymptotic Expansions for Large Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.42.html" rel="section" title="§10.42 Zeros ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.43.html" rel="section" title="§10.43 Integrals ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.44.html" rel="section" title="§10.44 Sums ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.45.html" rel="section" title="§10.45 Functions of Imaginary Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.46.html" rel="section" title="§10.46 Generalized and Incomplete Bessel Functions; Mittag-Leffler Function ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.47.html" rel="section" title="§10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.48.html" rel="section" title="§10.48 Graphs ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.49.html" rel="section" title="§10.49 Explicit Formulas ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.50.html" rel="section" title="§10.50 Wronskians and Cross-Products ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.51.html" rel="section" title="§10.51 Recurrence Relations and Derivatives ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.52.html" rel="section" title="§10.52 Limiting Forms ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.53.html" rel="section" title="§10.53 Power Series ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.54.html" rel="section" title="§10.54 Integral Representations ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.55.html" rel="section" title="§10.55 Continued Fractions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.56.html" rel="section" title="§10.56 Generating Functions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.57.html" rel="section" title="§10.57 Uniform Asymptotic Expansions for Large Order ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.58.html" rel="section" title="§10.58 Zeros ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.59.html" rel="section" title="§10.59 Integrals ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.60.html" rel="section" title="§10.60 Sums ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.61.html" rel="section" title="§10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.62.html" rel="section" title="§10.62 Graphs ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.63.html" rel="section" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.64.html" rel="section" title="§10.64 Integral Representations ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.65.html" rel="section" title="§10.65 Power Series ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.66.html" rel="section" title="§10.66 Expansions in Series of Bessel Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.67.html" rel="section" title="§10.67 Asymptotic Expansions for Large Argument ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.68.html" rel="section" title="§10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.69.html" rel="section" title="§10.69 Uniform Asymptotic Expansions for Large Order ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.70.html" rel="section" title="§10.70 Zeros ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.71.html" rel="section" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.72.html" rel="section" title="§10.72 Mathematical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.73.html" rel="section" title="§10.73 Physical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.74.html" rel="section" title="§10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.75.html" rel="section" title="§10.75 Tables ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.76.html" rel="section" title="§10.76 Approximations ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.77.html" rel="section" title="§10.77 Software ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Bessel functions, Jacobi–Anger expansions, generating functions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="10.12.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="10.12.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="10.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Bessel Functions</span></a><a class="ltx_ref" href="10.html#PT2" rel="up" title="In Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title">Bessel and Hankel Functions</span></a><a class="ltx_ref" href="10.11.html" rel="prev" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.11 </span>Analytic Continuation</span></a><a class="ltx_ref" href="10.13.html" rel="next" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.13 </span>Other Differential Equations</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§10.12 </span>Generating Function and Associated Series</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobi%E2%80%93Anger%20expansions">Jacobi–Anger expansions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=generating%20functions">generating functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="10.12.html#E1" title="(10.12.1) ‣ §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.12.1</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, pp. 55–56)</cite>. For
+(<a class="ltx_ref" href="10.12.html#E2" title="(10.12.2) ‣ §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.12.2</span></a>)–(<a class="ltx_ref" href="10.12.html#E6" title="(10.12.6) ‣ §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.12.6</span></a>) set <math altimg="m25.png" altimg-height="22px" altimg-valign="-2px" altimg-width="64px" alttext="t=e^{i\theta}" class="ltx_Math" display="inline"><mrow><mi>t</mi><mo>=</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></math> and
+<math altimg="m22.png" altimg-height="22px" altimg-valign="-2px" altimg-width="36px" alttext="ie^{i\theta}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></math>, and apply other straighforward substitutions, including
+differentiations with respect to <math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="15px" alttext="\theta" class="ltx_Math" display="inline"><mi>θ</mi></math> in the case of (<a class="ltx_ref" href="10.12.html#E6" title="(10.12.6) ‣ §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.12.6</span></a>).
+See also <cite class="ltx_cite ltx_citemacro_citet">Watson (<a class="ltx_ref" href="bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp. 22–23)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.23.html#Px2.p4" title="Graf’s and Gegenbauer’s Addition Theorems ‣ §10.23(ii) Addition Theorems ‣ §10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.23(ii)</span></a>,
+<a class="ltx_ref" href="10.23.html#ii.info" title="§10.23(ii) Addition Theorems ‣ §10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.23(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.7.I5.ix9.p1" title="In Other Changes ‣ Version 1.0.7 (March 21, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.7) for  Other</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="10.12.html" title="">http://dlmf.nist.gov/10.12</a></dd>
+<dt>Addition (effective with 1.0.7):</dt>
+<dd>
+Equations (<a class="ltx_ref" href="10.12.html#E2" title="(10.12.2) ‣ §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.12.2</span></a>) and (<a class="ltx_ref" href="10.12.html#E3" title="(10.12.3) ‣ §10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.12.3</span></a>) have been identified
+as Jacobi–Anger expansions.
+
+<p><span class="ltx_font_italic">Suggested 2012-12-28 by Alexander Barnett</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<p class="ltx_p">For <math altimg="m29.png" altimg-height="19px" altimg-valign="-3px" altimg-width="55px" alttext="z\in\mathbb{C}" class="ltx_Math" display="inline"><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></mrow></math> and <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="103px" alttext="t\in\mathbb{C}\setminus\{0\}" class="ltx_Math" display="inline"><mrow><mi>t</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi><mo href="./front/introduction#common.t2.r19" title="set subtraction">∖</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.12.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="96px" altimg-valign="-30px" altimg-width="274px" alttext="e^{\frac{1}{2}z(t-t^{-1})}=\sum_{m=-\infty}^{\infty}t^{m}J_{m}\left(z\right)." class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><msup><mi>t</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./10.1#t1.r1" title="integer">m</mi><mo>=</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mi>t</mi><mi href="./10.1#t1.r1" title="integer">m</mi></msup><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="10.1.html#t1.r1" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./10.1#t1.r1" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.41</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a>,
+<a class="ltx_ref" href="10.23.html#Px5.p2" title="Examples ‣ §10.23(iii) Series Expansions of Arbitrary Functions ‣ §10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.23(iii)</span></a>,
+<a class="ltx_ref" href="10.35.html#info" title="§10.35 Generating Function and Associated Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.35</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.12.E1" title="">http://dlmf.nist.gov/10.12.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.12.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="p2">
+<p class="ltx_p">Jacobi–Anger expansions: for <math altimg="m27.png" altimg-height="22px" altimg-valign="-6px" altimg-width="75px" alttext="z,\theta\in\mathbb{C}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>,</mo><mi>θ</mi></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></mrow></math>,
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.12.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="40px" altimg-valign="-7px" altimg-width="124px" alttext="\displaystyle\cos\left(z\sin\theta\right)" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="135px" altimg-valign="-29px" altimg-width="145px" alttext="\displaystyle=J_{0}\left(z\right)+2\sum_{k=1}^{\infty}J_{2k}\left(z\right)\cos%
+\left(2k\theta\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="40px" altimg-valign="-7px" altimg-width="122px" alttext="\displaystyle\sin\left(z\sin\theta\right)" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="101px" altimg-valign="-29px" altimg-width="163px" alttext="\displaystyle=2\sum_{k=0}^{\infty}J_{2k+1}\left(z\right)\sin\left((2k+1)\theta%
+\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r2" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.42, 9.1.43</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.12.E2" title="">http://dlmf.nist.gov/10.12.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.12.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E2a.png">png</a>, <a href="http://dlmf.nist.gov/10.12.E2b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.12.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="40px" altimg-valign="-7px" altimg-width="126px" alttext="\displaystyle\cos\left(z\cos\theta\right)" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="135px" altimg-valign="-29px" altimg-width="195px" alttext="\displaystyle=J_{0}\left(z\right)+2\sum_{k=1}^{\infty}(-1)^{k}J_{2k}\left(z%
+\right)\cos\left(2k\theta\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="40px" altimg-valign="-7px" altimg-width="124px" alttext="\displaystyle\sin\left(z\cos\theta\right)" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="101px" altimg-valign="-29px" altimg-width="212px" alttext="\displaystyle=2\sum_{k=0}^{\infty}(-1)^{k}J_{2k+1}\left(z\right)\cos\left((2k+%
+1)\theta\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r2" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./10.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.44, 9.1.45</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.12.E3" title="">http://dlmf.nist.gov/10.12.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.12.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E3a.png">png</a>, <a href="http://dlmf.nist.gov/10.12.E3b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.12.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="142px" altimg-valign="-7px" altimg-width="168px" alttext="1=J_{0}\left(z\right)+2J_{2}\left(z\right)+2J_{4}\left(z\right)+2J_{6}\left(z%
+\right)+\dotsb," class="ltx_Math" display="block"><mrow><mrow><mn>1</mn><mo>=</mo><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>4</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>6</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.46</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.74.html#iv.p2" title="§10.74(iv) Recurrence Relations ‣ §10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.74(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.12.E4" title="">http://dlmf.nist.gov/10.12.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.12.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.12.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="15px" altimg-valign="-2px" altimg-width="48px" alttext="\displaystyle\cos z" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="128px" altimg-valign="-7px" altimg-width="158px" alttext="\displaystyle=J_{0}\left(z\right)-2J_{2}\left(z\right)+2J_{4}\left(z\right)-2J%
+_{6}\left(z\right)+\dotsb," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>4</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>6</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="20px" altimg-valign="-2px" altimg-width="46px" alttext="\displaystyle\sin z" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="99px" altimg-valign="-7px" altimg-width="158px" alttext="\displaystyle=2J_{1}\left(z\right)-2J_{3}\left(z\right)+2J_{5}\left(z\right)-\dotsb," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>5</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>−</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.1.47, 9.1.48</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.12.E5" title="">http://dlmf.nist.gov/10.12.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.12.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E5a.png">png</a>, <a href="http://dlmf.nist.gov/10.12.E5b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.12.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="31px" altimg-valign="-9px" altimg-width="76px" alttext="\displaystyle\tfrac{1}{2}z\cos z" class="ltx_Math" display="inline"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="128px" altimg-valign="-7px" altimg-width="168px" alttext="\displaystyle=J_{1}\left(z\right)-9J_{3}\left(z\right)+25J_{5}\left(z\right)-4%
+9J_{7}\left(z\right)+\dotsb," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mn>25</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>5</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>−</mo><mrow><mn>49</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>7</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="31px" altimg-valign="-9px" altimg-width="73px" alttext="\displaystyle\tfrac{1}{2}z\sin z" class="ltx_Math" display="inline"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="99px" altimg-valign="-7px" altimg-width="165px" alttext="\displaystyle=4J_{2}\left(z\right)-16J_{4}\left(z\right)+36J_{6}\left(z\right)%
+-\dotsi." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mn>16</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>4</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mn>36</mn><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mn>6</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>−</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a> and
+<a class="ltx_ref" href="10.1.html#t1.r4" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./10.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a>,
+<a class="ltx_ref" href="10.23.html#Px5.p2" title="Examples ‣ §10.23(iii) Series Expansions of Arbitrary Functions ‣ §10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.23(iii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.12.E6" title="">http://dlmf.nist.gov/10.12.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.12.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.12.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.12.E6a.png">png</a>, <a href="http://dlmf.nist.gov/10.12.E6b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.12.html#info" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.12</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="10.11.html" rel="prev" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.11 </span>Analytic Continuation</span></a><a class="ltx_ref" href="10.13.html" rel="next" title="In Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.13 </span>Other Differential Equations</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

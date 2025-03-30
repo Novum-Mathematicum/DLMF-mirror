@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/13.23";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="13.html#PT3" rel="up" title="Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.html" rel="up up" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="13.22.html" rel="prev" title="§13.22 Zeros ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.24.html" rel="next" title="§13.24 Series ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.1.html" rel="section" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.2.html" rel="section" title="§13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.3.html" rel="section" title="§13.3 Recurrence Relations and Derivatives ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.4.html" rel="section" title="§13.4 Integral Representations ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.5.html" rel="section" title="§13.5 Continued Fractions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.6.html" rel="section" title="§13.6 Relations to Other Functions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.7.html" rel="section" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.8.html" rel="section" title="§13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.9.html" rel="section" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.10.html" rel="section" title="§13.10 Integrals ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.11.html" rel="section" title="§13.11 Series ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.12.html" rel="section" title="§13.12 Products ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.13.html" rel="section" title="§13.13 Addition and Multiplication Theorems ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.14.html" rel="section" title="§13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.15.html" rel="section" title="§13.15 Recurrence Relations and Derivatives ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.16.html" rel="section" title="§13.16 Integral Representations ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.17.html" rel="section" title="§13.17 Continued Fractions ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.18.html" rel="section" title="§13.18 Relations to Other Functions ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.19.html" rel="section" title="§13.19 Asymptotic Expansions for Large Argument ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.20.html" rel="section" title="§13.20 Uniform Asymptotic Approximations for Large 𝜇 ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.21.html" rel="section" title="§13.21 Uniform Asymptotic Approximations for Large 𝜅 ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.22.html" rel="section" title="§13.22 Zeros ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.24.html" rel="section" title="§13.24 Series ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.25.html" rel="section" title="§13.25 Products ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.26.html" rel="section" title="§13.26 Addition and Multiplication Theorems ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.27.html" rel="section" title="§13.27 Mathematical Applications ‣ Applications ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.28.html" rel="section" title="§13.28 Physical Applications ‣ Applications ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.29.html" rel="section" title="§13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.30.html" rel="section" title="§13.30 Tables ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.31.html" rel="section" title="§13.31 Approximations ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.32.html" rel="section" title="§13.32 Software ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Fourier transforms, Hankel transforms, Laplace transforms, Mellin transforms, Whittaker functions, compendia, in terms of Whittaker functions, integral transforms, integral transforms in terms of, integrals" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="13.23.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="13.23.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="13.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13 </span>Confluent Hypergeometric Functions</span></a><a class="ltx_ref" href="13.html#PT3" rel="up" title="In Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title">Whittaker Functions</span></a><a class="ltx_ref" href="13.22.html" rel="prev" title="In Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.22 </span>Zeros</span></a><a class="ltx_ref" href="13.24.html" rel="next" title="In Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.24 </span>Series</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§13.23 </span>Integrals</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="12.12.html#Px1.p2" title="Nicholson-type Integral ‣ §12.12 Integrals ‣ Properties ‣ Chapter 12 Parabolic Cylinder Functions"><span class="ltx_text ltx_ref_tag">§12.12</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="13.23.html" title="">http://dlmf.nist.gov/13.23</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="13.23.html#i"><span class="ltx_tag ltx_tag_subsection">§13.23(i) </span>Laplace and Mellin Transforms</a></li>
+<li class="ltx_tocentry"><a href="13.23.html#ii"><span class="ltx_tag ltx_tag_subsection">§13.23(ii) </span>Fourier Transforms</a></li>
+<li class="ltx_tocentry"><a href="13.23.html#iii"><span class="ltx_tag ltx_tag_subsection">§13.23(iii) </span>Hankel Transforms</a></li>
+<li class="ltx_tocentry"><a href="13.23.html#iv"><span class="ltx_tag ltx_tag_subsection">§13.23(iv) </span>Integral Transforms in terms of Whittaker Functions</a></li>
+<li class="ltx_tocentry"><a href="13.23.html#v"><span class="ltx_tag ltx_tag_subsection">§13.23(v) </span>Other Integrals</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.23(i) </span>Laplace and Mellin Transforms</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20transforms">Laplace transforms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transforms">Mellin transforms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Whittaker%20functions">Whittaker functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Buchholz (<a class="ltx_ref" href="bib/B.html#bib363" title="The Confluent Hypergeometric Function with Special Emphasis on Its Applications">1969</a>, §10)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, §6.10)</cite>,
+and <cite class="ltx_cite ltx_citemacro_citet">Slater (<a class="ltx_ref" href="bib/S.html#bib2098" title="Confluent Hypergeometric Functions">1960</a>, Chapter 3)</cite>.
+(<a class="ltx_ref" href="13.23.html#E3" title="(13.23.3) ‣ §13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.23.3</span></a>) and (<a class="ltx_ref" href="13.23.html#E5" title="(13.23.5) ‣ §13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.23.5</span></a>) can also be derived as
+limiting forms of (<a class="ltx_ref" href="13.23.html#E1" title="(13.23.1) ‣ §13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.23.1</span></a>) and (<a class="ltx_ref" href="13.23.html#E4" title="(13.23.4) ‣ §13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.23.4</span></a>),
+respectively; compare (<a class="ltx_ref" href="15.4.html#E20" title="(15.4.20) ‣ §15.4(ii) Argument Unity ‣ §15.4 Special Cases ‣ Properties ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">15.4.20</span></a>).</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.i" title="">http://dlmf.nist.gov/13.23.i</a></dd>
+<dt>Clarification (effective with 1.2.1):</dt>
+<dd>
+Just below (<a class="ltx_ref" href="13.23.html#E7" title="(13.23.7) ‣ §13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.23.7</span></a>), we added “For the particular loop
+contour, see Figure <a class="ltx_ref" href="5.9.html#F1" title="Figure 5.9.1 ‣ Hankel’s Loop Integral ‣ §5.9(i) Gamma Function ‣ §5.9 Integral Representations ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.9.1</span></a>.”
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">For the notation see §§<a class="ltx_ref" href="15.1.html" title="§15.1 Special Notation ‣ Notation ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">15.1</span></a>, <a class="ltx_ref" href="15.2.html#i" title="§15.2(i) Gauss Series ‣ §15.2 Definitions and Analytical Properties ‣ Properties ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">15.2(i)</span></a>, and
+<a class="ltx_ref" href="10.25.html#ii" title="§10.25(ii) Standard Solutions ‣ §10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.25(ii)</span></a>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="130px" altimg-valign="-32px" altimg-width="716px" alttext="\int_{0}^{\infty}e^{-zt}t^{\nu-1}M_{\kappa,\mu}\left(t\right)\,\mathrm{d}t=%
+\frac{\Gamma\left(\mu+\nu+\tfrac{1}{2}\right)}{\left(z+\frac{1}{2}\right)^{\mu%
++\nu+\frac{1}{2}}}\*{{}_{2}F_{1}}\left({\tfrac{1}{2}+\mu-\kappa,\tfrac{1}{2}+%
+\mu+\nu\atop 1+2\mu};\frac{1}{z+\frac{1}{2}}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>μ</mi><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><msup><mrow><mo>(</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow><mrow><mi>μ</mi><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mfrac><mo>⁢</mo><mrow><mmultiscripts><mi href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">F</mi><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">1</mn><mrow></mrow><mprescripts></mprescripts><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">2</mn><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>κ</mi></mrow><mo>,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi><mo>+</mo><mi>ν</mi></mrow></mrow><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow></mfrac><mo>;</mo><mfrac><mn>1</mn><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m22.png" altimg-height="29px" altimg-valign="-9px" altimg-width="145px" alttext="\Re\mu+\nu+\tfrac{1}{2}&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mrow><mi>μ</mi><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>,
+<math altimg="m18.png" altimg-height="29px" altimg-valign="-9px" altimg-width="71px" alttext="\Re z&gt;\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>&gt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="16.2.html" title="§16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><math altimg="m45.png" altimg-height="25px" altimg-valign="-7px" altimg-width="123px" alttext="{{}_{2}F_{1}}\left(\NVar{a},\NVar{b};\NVar{c};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mmultiscripts><mi href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">F</mi><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">1</mn><mrow></mrow><mprescripts></mprescripts><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">2</mn><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_nvar" href="./16.1#t1.r5" title="real or complex parameters">a</mi><mo>,</mo><mi class="ltx_nvar" href="./16.1#t1.r5" title="real or complex parameters">b</mi></mrow><mo>;</mo><mi class="ltx_nvar">c</mi><mo>;</mo><mi class="ltx_nvar" href="./16.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="129px" alttext="=F\left(\NVar{a},\NVar{b};\NVar{c};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./16.1#t1.r5" title="real or complex parameters">a</mi><mo>,</mo><mi class="ltx_nvar" href="./16.1#t1.r5" title="real or complex parameters">b</mi><mo>;</mo><mi class="ltx_nvar">c</mi><mo>;</mo><mi class="ltx_nvar" href="./16.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math> notation for Gauss’ hypergeometric function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20transform">Laplace transform</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E1" title="">http://dlmf.nist.gov/13.23.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="164px" altimg-valign="-21px" altimg-width="246px" alttext="\int_{0}^{\infty}e^{-zt}t^{\mu-\frac{1}{2}}M_{\kappa,\mu}\left(t\right)\,%
+\mathrm{d}t=\Gamma\left(2\mu+1\right)\left(z+\tfrac{1}{2}\right)^{-\kappa-\mu-%
+\frac{1}{2}}\*\left(z-\tfrac{1}{2}\right)^{\kappa-\mu-\frac{1}{2}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>μ</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>+</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>)</mo></mrow><mrow><mrow><mo>−</mo><mi>κ</mi></mrow><mo>−</mo><mi>μ</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>−</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>)</mo></mrow><mrow><mi>κ</mi><mo>−</mo><mi>μ</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m23.png" altimg-height="29px" altimg-valign="-9px" altimg-width="89px" alttext="\Re\mu&gt;-\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>,
+<math altimg="m18.png" altimg-height="29px" altimg-valign="-9px" altimg-width="71px" alttext="\Re z&gt;\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>&gt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20transform">Laplace transform</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E2" title="">http://dlmf.nist.gov/13.23.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="68px" altimg-valign="-25px" altimg-width="634px" alttext="\frac{1}{\Gamma\left(1+2\mu\right)}\int_{0}^{\infty}e^{-\frac{1}{2}t}t^{\nu-1}%
+M_{\kappa,\mu}\left(t\right)\,\mathrm{d}t=\frac{\Gamma\left(\mu+\nu+\frac{1}{2%
+}\right)\Gamma\left(\kappa-\nu\right)}{\Gamma\left(\frac{1}{2}+\mu+\kappa%
+\right)\Gamma\left(\frac{1}{2}+\mu-\nu\right)}," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>μ</mi><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>κ</mi><mo>−</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi><mo>+</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m6.png" altimg-height="29px" altimg-valign="-9px" altimg-width="195px" alttext="-\tfrac{1}{2}-\Re\mu&lt;\Re\nu&lt;\Re\kappa" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>ν</mi></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>κ</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a> and
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20transform">Laplace transform</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E3" title="">http://dlmf.nist.gov/13.23.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="181px" altimg-valign="-22px" altimg-width="562px" alttext="\int_{0}^{\infty}e^{-zt}t^{\nu-1}W_{\kappa,\mu}\left(t\right)\,\mathrm{d}t=%
+\Gamma\left(\tfrac{1}{2}+\mu+\nu\right)\Gamma\left(\tfrac{1}{2}-\mu+\nu\right)%
+\*{{}_{2}{\mathbf{F}}_{1}}\left({\tfrac{1}{2}-\mu+\nu,\tfrac{1}{2}+\mu+\nu%
+\atop\nu-\kappa+1};\tfrac{1}{2}-z\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>+</mo><mi>μ</mi><mo>+</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>−</mo><mi>μ</mi></mrow><mo>+</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mmultiscripts><mi href="./16.2#E5" title="scaled (or Olver’s) generalized hypergeometric function">𝐅</mi><mn>1</mn><mrow></mrow><mprescripts></mprescripts><mn>2</mn><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>−</mo><mi>μ</mi></mrow><mo>+</mo><mi>ν</mi></mrow><mo>,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi><mo>+</mo><mi>ν</mi></mrow></mrow><mrow><mrow><mi>ν</mi><mo>−</mo><mi>κ</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac><mo>;</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>−</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m21.png" altimg-height="29px" altimg-valign="-9px" altimg-width="159px" alttext="\Re\left(\nu+\tfrac{1}{2}\right)&gt;|\Re\mu|" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>&gt;</mo><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></math>,
+<math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="87px" alttext="\Re z&gt;-\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="16.2.html#E5" title="(16.2.5) ‣ §16.2(v) Behavior with Respect to Parameters ‣ §16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><math altimg="m46.png" altimg-height="26px" altimg-valign="-8px" altimg-width="112px" alttext="{{}_{\NVar{p}}{\mathbf{F}}_{\NVar{q}}}\left(\NVar{\mathbf{a}};\NVar{\mathbf{b}%
+};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mmultiscripts><mi href="./16.2#E5" title="scaled (or Olver’s) generalized hypergeometric function">𝐅</mi><mi class="ltx_nvar" href="./16.1#t1.r1" title="nonnegative integer">q</mi><mrow></mrow><mprescripts></mprescripts><mi class="ltx_nvar" href="./16.1#t1.r1" title="nonnegative integer">p</mi><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐚</mi><mo>;</mo><mi class="ltx_nvar">𝐛</mi><mo>;</mo><mi class="ltx_nvar" href="./16.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> or <math altimg="m47.png" altimg-height="29px" altimg-valign="-9px" altimg-width="96px" alttext="{{}_{\NVar{p}}{\mathbf{F}}_{\NVar{q}}}\left({\NVar{\mathbf{a}}\atop\NVar{%
+\mathbf{b}}};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mmultiscripts><mi href="./16.2#E5" title="scaled (or Olver’s) generalized hypergeometric function">𝐅</mi><mi class="ltx_nvar" href="./16.1#t1.r1" title="nonnegative integer">q</mi><mrow></mrow><mprescripts></mprescripts><mi class="ltx_nvar" href="./16.1#t1.r1" title="nonnegative integer">p</mi><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mi class="ltx_nvar">𝐚</mi><mi class="ltx_nvar">𝐛</mi></mfrac><mo>;</mo><mi class="ltx_nvar" href="./16.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: scaled (or Olver’s) generalized hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20transform">Laplace transform</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E4" title="">http://dlmf.nist.gov/13.23.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="68px" altimg-valign="-25px" altimg-width="819px" alttext="\int_{0}^{\infty}e^{\frac{1}{2}t}t^{\nu-1}W_{\kappa,\mu}\left(t\right)\,%
+\mathrm{d}t=\frac{\Gamma\left(\frac{1}{2}+\mu+\nu\right)\Gamma\left(\frac{1}{2%
+}-\mu+\nu\right)\Gamma\left(-\kappa-\nu\right)}{\Gamma\left(\frac{1}{2}+\mu-%
+\kappa\right)\Gamma\left(\frac{1}{2}-\mu-\kappa\right)}," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi><mo>+</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>−</mo><mi>μ</mi></mrow><mo>+</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mi>κ</mi></mrow><mo>−</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>−</mo><mi>μ</mi><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m48.png" altimg-height="29px" altimg-valign="-9px" altimg-width="207px" alttext="|\Re\mu|-\tfrac{1}{2}&lt;\Re\nu&lt;-\Re\kappa" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow><mo stretchy="false">|</mo></mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>ν</mi></mrow><mo>&lt;</mo><mrow><mo rspace="0.167em">−</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>κ</mi></mrow></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a> and
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>
+</dd>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a></dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E5" title="">http://dlmf.nist.gov/13.23.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="130px" altimg-valign="-25px" altimg-width="433px" alttext="\frac{1}{\Gamma\left(1+2\mu\right)2\pi\mathrm{i}}\int_{-\infty}^{(0+)}e^{zt+%
+\frac{1}{2}t^{-1}}t^{\kappa}M_{\kappa,\mu}\left(t^{-1}\right)\,\mathrm{d}t=%
+\frac{z^{-\kappa-\frac{1}{2}}}{\Gamma\left(\frac{1}{2}+\mu-\kappa\right)}I_{2%
+\mu}\left(2\sqrt{z}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo rspace="0em">+</mo></mrow><mo stretchy="false">)</mo></mrow></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>t</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mi>κ</mi></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi>t</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mrow><mo>−</mo><mi>κ</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mi href="./10.25#E2" title="modified Bessel function of the first kind">I</mi><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></msqrt></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m17.png" altimg-height="19px" altimg-valign="-3px" altimg-width="68px" alttext="\Re z&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.25.html#E2" title="(10.25.2) ‣ §10.25(ii) Standard Solutions ‣ §10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="I_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.25#E2" title="modified Bessel function of the first kind">I</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Bessel function of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E6" title="">http://dlmf.nist.gov/13.23.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="130px" altimg-valign="-25px" altimg-width="408px" alttext="\frac{1}{2\pi\mathrm{i}}\int_{-\infty}^{(0+)}e^{zt+\frac{1}{2}t^{-1}}t^{\kappa%
+}W_{\kappa,\mu}\left(t^{-1}\right)\,\mathrm{d}t=\frac{2z^{-\kappa-\frac{1}{2}}%
+}{\Gamma\left(\frac{1}{2}+\mu-\kappa\right)\Gamma\left(\frac{1}{2}-\mu-\kappa%
+\right)}K_{2\mu}\left(2\sqrt{z}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo rspace="0em">+</mo></mrow><mo stretchy="false">)</mo></mrow></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>t</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mi>κ</mi></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi>t</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mrow><mo>−</mo><mi>κ</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>−</mo><mi>μ</mi><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mi href="./10.25#E3" title="modified Bessel function of the second kind">K</mi><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></msqrt></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m17.png" altimg-height="19px" altimg-valign="-3px" altimg-width="68px" alttext="\Re z&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.25.html#E3" title="(10.25.3) ‣ §10.25(ii) Standard Solutions ‣ §10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="K_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.25#E3" title="modified Bessel function of the second kind">K</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Bessel function of the second kind</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.1.I2.ix3.p1" title="In Other Changes ‣ Version 1.2.1 (June 15, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.1) for  Figure <span class="ltx_text ltx_ref_tag">5.9.1</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E7" title="">http://dlmf.nist.gov/13.23.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#i.info" title="§13.23(i) Laplace and Mellin Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(i)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">For the particular loop contour, see Figure <a class="ltx_ref" href="5.9.html#F1" title="Figure 5.9.1 ‣ Hankel’s Loop Integral ‣ §5.9(i) Gamma Function ‣ §5.9 Integral Representations ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.9.1</span></a>.</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">For additional Laplace and Mellin transforms see
+<cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib753" title="Tables of Integral Transforms. Vol. I">1954a</a>, §§4.22, 5.20, 6.9, 7.5)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Marichev (<a class="ltx_ref" href="bib/M.html#bib1546" title="Handbook of Integral Transforms of Higher Transcendental Functions: Theory and Algorithmic Tables">1983</a>, pp. 283–287)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Oberhettinger and Badii (<a class="ltx_ref" href="bib/O.html#bib1746" title="Tables of Laplace Transforms">1973</a>, §1.17)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Oberhettinger (<a class="ltx_ref" href="bib/O.html#bib1744" title="Tables of Mellin Transforms">1974</a>, §§1.13, 2.8)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1906" title="Integrals and Series: Direct Laplace Transforms, Vol. 4">1992a</a>, §§3.34, 3.35)</cite>. Inverse Laplace transforms
+are given in
+<cite class="ltx_cite ltx_citemacro_citet">Oberhettinger and Badii (<a class="ltx_ref" href="bib/O.html#bib1746" title="Tables of Laplace Transforms">1973</a>, §2.16)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1907" title="Integrals and Series: Inverse Laplace Transforms, Vol. 5">1992b</a>, §§3.33, 3.34)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.23(ii) </span>Fourier Transforms</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fourier%20transforms">Fourier transforms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Whittaker%20functions">Whittaker functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, §6.15.2)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.ii" title="">http://dlmf.nist.gov/13.23.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\frac{1}{\Gamma\left(1+2\mu\right)}\int_{0}^{\infty}\cos\left(2xt\right)e^{-%
+\frac{1}{2}t^{2}}t^{-2\mu-1}M_{\kappa,\mu}\left(t^{2}\right)\,\mathrm{d}t=%
+\frac{\sqrt{\pi}e^{-\frac{1}{2}x^{2}}x^{\mu+\kappa-1}}{2\Gamma\left(\frac{1}{2%
+}+\mu+\kappa\right)}W_{\frac{1}{2}\kappa-\frac{3}{2}\mu,\frac{1}{2}\kappa+%
+\frac{1}{2}\mu}\left(x^{2}\right)," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mfrac><mn>1</mn><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>⁢</mo><mi>t</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi>t</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mrow><mi>μ</mi><mo>+</mo><mi>κ</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi><mo>+</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>κ</mi></mrow><mo>−</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>κ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>μ</mi></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m20.png" altimg-height="29px" altimg-valign="-9px" altimg-width="146px" alttext="\Re\left(\kappa+\mu\right)&gt;-\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>κ</mi><mo>+</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow><mo>&gt;</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m25.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E8" title="">http://dlmf.nist.gov/13.23.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#ii.info" title="§13.23(ii) Fourier Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(ii)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">For additional Fourier transforms see <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib753" title="Tables of Integral Transforms. Vol. I">1954a</a>, §§1.14, 2.14, 3.3)</cite>
+and <cite class="ltx_cite ltx_citemacro_citet">Oberhettinger (<a class="ltx_ref" href="bib/O.html#bib1745" title="Tables of Fourier Transforms and Fourier Transforms of Distributions">1990</a>, §§1.22, 2.22)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.23(iii) </span>Hankel Transforms</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Hankel%20transforms">Hankel transforms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Whittaker%20functions">Whittaker functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Notes:</dt>
+<dd>Combine §<a class="ltx_ref" href="13.10.html#v" title="§13.10(v) Hankel Transforms ‣ §13.10 Integrals ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.10(v)</span></a> with (<a class="ltx_ref" href="13.14.html#E4" title="(13.14.4) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.14.4</span></a>),
+(<a class="ltx_ref" href="13.14.html#E5" title="(13.14.5) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.14.5</span></a>).</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.iii" title="">http://dlmf.nist.gov/13.23.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">For the notation see §<a class="ltx_ref" href="10.2.html#ii" title="§10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.2(ii)</span></a>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\int_{0}^{\infty}e^{-\frac{1}{2}t}t^{\mu-\frac{1}{2}(\nu+1)}M_{\kappa,\mu}%
+\left(t\right)J_{\nu}\left(2\sqrt{xt}\right)\,\mathrm{d}t=\frac{\Gamma\left(1+%
+2\mu\right)}{\Gamma\left(\frac{1}{2}-\mu+\kappa+\nu\right)}\*e^{-\frac{1}{2}x}%
+x^{\frac{1}{2}(\kappa-\mu-\frac{3}{2})}\*M_{\frac{1}{2}(\kappa+3\mu-\nu+\frac{%
+1}{2}),\frac{1}{2}(\kappa-\mu+\nu-\frac{1}{2})}\left(x\right)," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>μ</mi><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>⁢</mo><mi>t</mi></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>−</mo><mi>μ</mi></mrow><mo>+</mo><mi>κ</mi><mo>+</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>−</mo><mi>μ</mi><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>κ</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>−</mo><mi>ν</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>κ</mi><mo>−</mo><mi>μ</mi></mrow><mo>+</mo><mi>ν</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m40.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math altimg="m7.png" altimg-height="29px" altimg-valign="-9px" altimg-width="255px" alttext="-\tfrac{1}{2}&lt;\Re\mu&lt;\Re\left(\kappa+\tfrac{1}{2}\nu\right)+\tfrac{3}{4}" class="ltx_Math" display="inline"><mrow><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow><mo>&lt;</mo><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>κ</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>ν</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E9" title="">http://dlmf.nist.gov/13.23.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#iii.info" title="§13.23(iii) Hankel Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(iii)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\frac{1}{\Gamma\left(1+2\mu\right)}\int_{0}^{\infty}e^{-\frac{1}{2}t}t^{\frac{%
+1}{2}(\nu-1)-\mu}M_{\kappa,\mu}\left(t\right)J_{\nu}\left(2\sqrt{xt}\right)\,%
+\mathrm{d}t=\frac{e^{-\frac{1}{2}x}x^{\frac{1}{2}(\kappa+\mu-\frac{3}{2})}}{%
+\Gamma\left(\frac{1}{2}+\mu+\kappa\right)}\*W_{\frac{1}{2}(\kappa-3\mu+\nu+%
+\frac{1}{2}),\frac{1}{2}(\kappa+\mu-\nu-\frac{1}{2})}\left(x\right)," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mfrac><mn>1</mn><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mi>μ</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>⁢</mo><mi>t</mi></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>κ</mi><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi><mo>+</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>κ</mi><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>κ</mi><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>ν</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m40.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math altimg="m5.png" altimg-height="29px" altimg-valign="-9px" altimg-width="246px" alttext="-1&lt;\Re\nu&lt;2\Re\left(\mu+\kappa\right)+\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>ν</mi></mrow><mo>&lt;</mo><mrow><mrow><mn>2</mn><mo lspace="0.167em">⁢</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>μ</mi><mo>+</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E10" title="">http://dlmf.nist.gov/13.23.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#iii.info" title="§13.23(iii) Hankel Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(iii)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\int_{0}^{\infty}e^{\frac{1}{2}t}t^{\frac{1}{2}(\nu-1)-\mu}W_{\kappa,\mu}\left%
+(t\right)J_{\nu}\left(2\sqrt{xt}\right)\,\mathrm{d}t=\frac{\Gamma\left(\nu-2%
+\mu+1\right)}{\Gamma\left(\frac{1}{2}+\mu-\kappa\right)}\*e^{\frac{1}{2}x}x^{%
+\frac{1}{2}(\mu-\kappa-\frac{3}{2})}\*W_{\frac{1}{2}(\kappa+3\mu-\nu-\frac{1}{%
+2}),\frac{1}{2}(\kappa-\mu+\nu+\frac{1}{2})}\left(x\right)," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mi>μ</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>⁢</mo><mi>t</mi></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>ν</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>−</mo><mi>κ</mi><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>κ</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>−</mo><mi>ν</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>κ</mi><mo>−</mo><mi>μ</mi></mrow><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m40.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math altimg="m31.png" altimg-height="29px" altimg-valign="-9px" altimg-width="364px" alttext="\max(2\Re\mu-1,-1)&lt;\Re\nu&lt;2\Re\mu-\kappa+\tfrac{3}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo lspace="0.167em">⁢</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow></mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>ν</mi></mrow><mo>&lt;</mo><mrow><mrow><mn>2</mn><mo lspace="0.167em">⁢</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mrow><mi>μ</mi><mo>−</mo><mi>κ</mi></mrow></mrow></mrow><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E11" title="">http://dlmf.nist.gov/13.23.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#iii.info" title="§13.23(iii) Hankel Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(iii)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\int_{0}^{\infty}e^{-\frac{1}{2}t}t^{\frac{1}{2}(\nu-1)-\mu}W_{\kappa,\mu}%
+\left(t\right)J_{\nu}\left(2\sqrt{xt}\right)\,\mathrm{d}t=\frac{\Gamma\left(%
+\nu-2\mu+1\right)}{\Gamma\left(\frac{3}{2}-\mu-\kappa+\nu\right)}\*e^{-\frac{1%
+}{2}x}x^{\frac{1}{2}(\mu+\kappa-\frac{3}{2})}\*M_{\frac{1}{2}(\kappa-3\mu+\nu+%
+\frac{1}{2}),\frac{1}{2}(\nu-\mu-\kappa+\frac{1}{2})}\left(x\right)," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mi>μ</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>⁢</mo><mi>t</mi></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>ν</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>−</mo><mi>μ</mi><mo>−</mo><mi>κ</mi></mrow><mo>+</mo><mi>ν</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>μ</mi><mo>+</mo><mi>κ</mi></mrow><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>κ</mi><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>+</mo><mi>ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ν</mi><mo>−</mo><mi>μ</mi><mo>−</mo><mi>κ</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m40.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="223px" alttext="\max(2\Re\mu-1,-1)&lt;\Re\nu" class="ltx_Math" display="inline"><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo lspace="0.167em">⁢</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow></mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>ν</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E12" title="">http://dlmf.nist.gov/13.23.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#iii.info" title="§13.23(iii) Hankel Transforms ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(iii)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">For additional Hankel transforms and also other Bessel transforms
+see <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib754" title="Tables of Integral Transforms. Vol. II">1954b</a>, §8.18)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Oberhettinger (<a class="ltx_ref" href="bib/O.html#bib1742" title="Tables of Bessel Transforms">1972</a>, §1.16 and 3.4.42–46, 4.4.45–47, 5.94–97)</cite>.
+</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.23(iv) </span>Integral Transforms in terms of Whittaker Functions</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Whittaker%20functions">Whittaker functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=in%20terms%20of%20Whittaker%20functions">in terms of Whittaker functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20transforms">integral transforms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20transforms%20in%20terms%20of">integral transforms in terms of</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Snow (<a class="ltx_ref" href="bib/S.html#bib2131" title="Hypergeometric and Legendre Functions with Applications to Integral Equations of Potential Theory">1952</a>, Chapter XI)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.10.html#vi.p1" title="§13.10(vi) Other Integrals ‣ §13.10 Integrals ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.10(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.iv" title="">http://dlmf.nist.gov/13.23.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">Let  <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="f(x)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> be absolutely integrable on the interval  <math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="[r,R]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>r</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>R</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math> for all positive <math altimg="m39.png" altimg-height="19px" altimg-valign="-3px" altimg-width="58px" alttext="r&lt;R" class="ltx_Math" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mi>R</mi></mrow></math>,
+<math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="138px" alttext="f(x)=O\left(x^{\rho_{0}}\right)" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><msub><mi>ρ</mi><mn>0</mn></msub></msup><mo>)</mo></mrow></mrow></mrow></math> as <math altimg="m42.png" altimg-height="19px" altimg-valign="-4px" altimg-width="75px" alttext="x\to 0+" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">→</mo><mrow><mn>0</mn><mo>+</mo></mrow></mrow></math>, and
+<math altimg="m36.png" altimg-height="26px" altimg-valign="-7px" altimg-width="158px" alttext="f(x)=O\left(e^{-\rho_{1}x}\right)" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><msub><mi>ρ</mi><mn>1</mn></msub><mo>⁢</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow></msup><mo>)</mo></mrow></mrow></mrow></math> as <math altimg="m43.png" altimg-height="18px" altimg-valign="-4px" altimg-width="85px" alttext="x\to+\infty" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, where
+<math altimg="m35.png" altimg-height="29px" altimg-valign="-9px" altimg-width="65px" alttext="\rho_{1}&gt;\frac{1}{2}" class="ltx_Math" display="inline"><mrow><msub><mi>ρ</mi><mn>1</mn></msub><mo>&gt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>. Then for <math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi>μ</mi></math> in the half-plane <math altimg="m24.png" altimg-height="29px" altimg-valign="-9px" altimg-width="281px" alttext="\Re\mu\geq\mu_{1}&gt;\max\left(-\rho_{0},\Re\kappa-\frac{1}{2}\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>μ</mi></mrow><mo>≥</mo><msub><mi>μ</mi><mn>1</mn></msub><mo>&gt;</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><msub><mi>ρ</mi><mn>0</mn></msub></mrow><mo>,</mo><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi>κ</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E13">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="46px" alttext="\displaystyle g(\mu)" class="ltx_Math" display="inline"><mrow><mi>g</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="61px" altimg-valign="-21px" altimg-width="367px" alttext="\displaystyle=\frac{1}{\Gamma\left(1+2\mu\right)}\int_{0}^{\infty}f(x)x^{-%
+\frac{3}{2}}M_{\kappa,\mu}\left(x\right)\,\mathrm{d}x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E2" title="(13.14.2) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E13" title="">http://dlmf.nist.gov/13.23.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#iv.info" title="§13.23(iv) Integral Transforms in terms of Whittaker Functions ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(iv)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E14">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.23.14</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m3.png" altimg-height="27px" altimg-valign="-7px" altimg-width="47px" alttext="\displaystyle f(x)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="95px" altimg-valign="-24px" altimg-width="343px" alttext="\displaystyle=\frac{1}{\pi\mathrm{i}\sqrt{x}}\int_{\mu_{1}-\mathrm{i}\infty}^{%
+\mu_{1}+\mathrm{i}\infty}\mu g(\mu)\Gamma\left(\tfrac{1}{2}+\mu-\kappa\right)W%
+_{\kappa,\mu}\left(x\right)\,\mathrm{d}\mu." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msqrt><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><msub><mi>μ</mi><mn>1</mn></msub><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mrow><msub><mi>μ</mi><mn>1</mn></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">∞</mi></mrow></mrow></msubsup></mstyle><mrow><mi>μ</mi><mo>⁢</mo><mrow><mi>g</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi>μ</mi></mrow><mo>−</mo><mi>κ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>μ</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E14.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.14.html#E3" title="(13.14.3) ‣ Standard Solutions ‣ §13.14(i) Differential Equation ‣ §13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\NVar{\kappa},\NVar{\mu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi class="ltx_nvar">κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi class="ltx_nvar">μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Whittaker confluent hypergeometric function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m26.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.E14" title="">http://dlmf.nist.gov/13.23.E14</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.23.E14.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.23.E14.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.23.E14.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#iv.info" title="§13.23(iv) Integral Transforms in terms of Whittaker Functions ‣ §13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23(iv)</span></a>,
+<a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">For additional integral transforms see <cite class="ltx_cite ltx_citemacro_citet">Magnus<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/M.html#bib1534" title="Formulas and Theorems for the Special Functions of Mathematical Physics">1966</a>, p. 189)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1907" title="Integrals and Series: Inverse Laplace Transforms, Vol. 5">1992b</a>, §§4.3.39–4.3.42)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Wimp (<a class="ltx_ref" href="bib/W.html#bib2417" title="A class of integral transforms">1964</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.23(v) </span>Other Integrals</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Whittaker%20functions">Whittaker functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=compendia">compendia</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.14.I3.ix2.p1" title="In Other Changes ‣ Version 1.0.14 (December 21, 2016) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.14) for  Subsections <span class="ltx_text ltx_ref_tag">8.18(ii)</span>–<span class="ltx_text ltx_ref_tag">8.11(v)</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.23.v" title="">http://dlmf.nist.gov/13.23.v</a></dd>
+<dt>Addition (effective with 1.0.14):</dt>
+<dd>
+A sentence was added at the end of this section to provide cross-references
+to certain generalized orthogonality integrals in terms of Whittaker functions.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.23.html#info" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.23</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">Additional integrals involving confluent hypergeometric functions can be found
+in <cite class="ltx_cite ltx_citemacro_citet">Apelblat (<a class="ltx_ref" href="bib/index.html#bib111" title="Table of Definite and Infinite Integrals">1983</a>, pp. 388–392)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib754" title="Tables of Integral Transforms. Vol. II">1954b</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Gradshteyn and Ryzhik (<a class="ltx_ref" href="bib/G.html#bib972" title="Table of integrals, series, and products">2015</a>, §7.6)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1905" title="Integrals and Series: More Special Functions, Vol. 3">1990</a>, §§1.13, 1.14, 2.19, 4.2.2)</cite>. See also
+(<a class="ltx_ref" href="13.16.html#E2" title="(13.16.2) ‣ §13.16(i) Integrals Along the Real Line ‣ §13.16 Integral Representations ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.16.2</span></a>), (<a class="ltx_ref" href="13.16.html#E6" title="(13.16.6) ‣ §13.16(i) Integrals Along the Real Line ‣ §13.16 Integral Representations ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.16.6</span></a>), (<a class="ltx_ref" href="13.16.html#E7" title="(13.16.7) ‣ §13.16(i) Integrals Along the Real Line ‣ §13.16 Integral Representations ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.16.7</span></a>).
+Generalized orthogonality integrals (<a class="ltx_ref" href="33.14.html#E13" title="(33.14.13) ‣ §33.14(iv) Solutions 𝑠(ϵ,ℓ;𝑟) and 𝑐(ϵ,ℓ;𝑟) ‣ §33.14 Definitions and Basic Properties ‣ Variables 𝑟,ϵ ‣ Chapter 33 Coulomb Functions"><span class="ltx_text ltx_ref_tag">33.14.13</span></a>) and (<a class="ltx_ref" href="33.14.html#E15" title="(33.14.15) ‣ §33.14(iv) Solutions 𝑠(ϵ,ℓ;𝑟) and 𝑐(ϵ,ℓ;𝑟) ‣ §33.14 Definitions and Basic Properties ‣ Variables 𝑟,ϵ ‣ Chapter 33 Coulomb Functions"><span class="ltx_text ltx_ref_tag">33.14.15</span></a>)
+can be expressed in terms of Whittaker functions via the definitions in that section.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="13.22.html" rel="prev" title="In Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.22 </span>Zeros</span></a><a class="ltx_ref" href="13.24.html" rel="next" title="In Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.24 </span>Series</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/3.8";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="3.html#PT1" rel="up" title="Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.html" rel="up up" title="Chapter 3 Numerical Methods"/>
+<link href="index.html" rel="start" title=""/>
+<link href="3.7.html" rel="prev" title="§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.9.html" rel="next" title="§3.9 Acceleration of Convergence ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.1.html" rel="section" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.2.html" rel="section" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.3.html" rel="section" title="§3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.4.html" rel="section" title="§3.4 Differentiation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.5.html" rel="section" title="§3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.6.html" rel="section" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.7.html" rel="section" title="§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.9.html" rel="section" title="§3.9 Acceleration of Convergence ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.10.html" rel="section" title="§3.10 Continued Fractions ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.11.html" rel="section" title="§3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.12.html" rel="section" title="§3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Bairstow’s method (for zeros of polynomials), Halley’s rule, Julia sets, Newton’s rule (or method), Rouché’s theorem, Steffensen’s method, Wilkinson’s, Wilkinson’s polynomial, acceleration, bisection method, computation, conditioning, convergence, cubic, deflation, eigenvalue methods, explicit formulas, fixed point, fixed points, fixed-point methods, fractals, geometric, interpolation, inverse linear, iterative methods, linear, local, multiplicity, nonlinear equations, numerical solutions, of equations, of the , of the , phase principle, polynomials, quadratic, regula falsi, roots, secant method, simple, systems, zeros of analytic functions, zeros of polynomials" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="3.8.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="3.8.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="3.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Numerical Methods</span></a><a class="ltx_ref" href="3.html#PT1" rel="up" title="In Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title">Areas</span></a><a class="ltx_ref" href="3.7.html" rel="prev" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7 </span>Ordinary Differential Equations</span></a><a class="ltx_ref" href="3.9.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.9 </span>Acceleration of Convergence</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§3.8 </span>Nonlinear Equations</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=multiplicity">multiplicity</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=nonlinear%20equations">nonlinear equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solutions">numerical solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=of%20equations">of equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=roots">roots</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=simple">simple</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros%20of%20analytic%20functions">zeros of analytic functions</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="29.20.html#i.p2" title="§29.20(i) Lamé Functions ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(i)</span></a>,
+<a class="ltx_ref" href="3.3.html#v.p1" title="§3.3(v) Inverse Interpolation ‣ §3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.3(v)</span></a>,
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="3.8.html" title="">http://dlmf.nist.gov/3.8</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="3.8.html#i"><span class="ltx_tag ltx_tag_subsection">§3.8(i) </span>Introduction</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#ii"><span class="ltx_tag ltx_tag_subsection">§3.8(ii) </span>Newton’s Rule</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#iii"><span class="ltx_tag ltx_tag_subsection">§3.8(iii) </span>Other Methods</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#iv"><span class="ltx_tag ltx_tag_subsection">§3.8(iv) </span>Zeros of Polynomials</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#v"><span class="ltx_tag ltx_tag_subsection">§3.8(v) </span>Zeros of Analytic Functions</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#vi"><span class="ltx_tag ltx_tag_subsection">§3.8(vi) </span>Conditioning of Zeros</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#vii"><span class="ltx_tag ltx_tag_subsection">§3.8(vii) </span>Systems of Nonlinear Equations</a></li>
+<li class="ltx_tocentry"><a href="3.8.html#viii"><span class="ltx_tag ltx_tag_subsection">§3.8(viii) </span>Fixed-Point Iterations: Fractals</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(i) </span>Introduction</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=acceleration">acceleration</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=convergence">convergence</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cubic">cubic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=fixed%20point">fixed point</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=fixed%20points">fixed points</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=geometric">geometric</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=linear">linear</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=local">local</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=nonlinear%20equations">nonlinear equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=of%20the%20pth%20order">of the <math altimg="m89.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math>th order</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=quadratic">quadratic</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.74.html#vi.p1" title="§10.74(vi) Zeros and Associated Values ‣ §10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.74(vi)</span></a>,
+<a class="ltx_ref" href="29.20.html#i.p3" title="§29.20(i) Lamé Functions ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(i)</span></a>,
+<a class="ltx_ref" href="3.11.html#i.p5" title="§3.11(i) Minimax Polynomial Approximations ‣ §3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.11(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#iv.p2" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iv)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.i" title="">http://dlmf.nist.gov/3.8.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">The equation to be solved is</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="27px" altimg-valign="-7px" altimg-width="90px" alttext="f(z)=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#i.p3" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E1" title="">http://dlmf.nist.gov/3.8.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#i.info" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(i)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m118.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi>z</mi></math> is a real or complex variable and the function <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> is nonlinear.
+Solutions are called <em class="ltx_emph ltx_font_italic">roots</em> of the equation, or <em class="ltx_emph ltx_font_italic">zeros</em> of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math>. If
+<math altimg="m57.png" altimg-height="25px" altimg-valign="-7px" altimg-width="90px" alttext="f(z_{0})=0" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="f^{\prime}(z_{0})\neq 0" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, then <math altimg="m125.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="z_{0}" class="ltx_Math" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> is a <em class="ltx_emph ltx_font_italic">simple zero</em> of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math>. If
+<math altimg="m58.png" altimg-height="28px" altimg-valign="-7px" altimg-width="348px" alttext="f(z_{0})=f^{\prime}(z_{0})=\cdots=f^{(m-1)}(z_{0})=0" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math altimg="m61.png" altimg-height="28px" altimg-valign="-7px" altimg-width="119px" alttext="f^{(m)}(z_{0})\neq 0" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, then
+<math altimg="m125.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="z_{0}" class="ltx_Math" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> is a zero of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> of <em class="ltx_emph ltx_font_italic">multiplicity <math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi>m</mi></math></em>; compare §<a class="ltx_ref" href="1.10.html#i" title="§1.10(i) Taylor’s Theorem for Complex Variables ‣ §1.10 Functions of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.10(i)</span></a>.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">Sometimes the equation takes the form</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="27px" altimg-valign="-7px" altimg-width="90px" alttext="z=\phi(z)," class="ltx_Math" display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.8.html#i.p3" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(i)</span></a>,
+<a class="ltx_ref" href="3.8.html#viii.p1" title="§3.8(viii) Fixed-Point Iterations: Fractals ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(viii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E2" title="">http://dlmf.nist.gov/3.8.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#i.info" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(i)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and the solutions are called <em class="ltx_emph ltx_font_italic">fixed points</em> of <math altimg="m35.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\phi" class="ltx_Math" display="inline"><mi>ϕ</mi></math>.
+</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">Equations (<a class="ltx_ref" href="3.8.html#E1" title="(3.8.1) ‣ §3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.1</span></a>) and (<a class="ltx_ref" href="3.8.html#E2" title="(3.8.2) ‣ §3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.2</span></a>) are usually solved
+by iterative methods.
+Let <math altimg="m127.png" altimg-height="17px" altimg-valign="-6px" altimg-width="85px" alttext="z_{1},z_{2},\dots" class="ltx_Math" display="inline"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> be a sequence of approximations to a root, or fixed
+point, <math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="15px" alttext="\zeta" class="ltx_Math" display="inline"><mi href="./3.8#i.p3" title="fixed point">ζ</mi></math>. If</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="313px" alttext="\left|z_{n+1}-\zeta\right|&lt;A{\left|z_{n}-\zeta\right|}^{p}" class="ltx_Math" display="block"><mrow><mrow><mo>|</mo><mrow><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><mi href="./3.8#i.p3" title="fixed point">ζ</mi></mrow><mo>|</mo></mrow><mo>&lt;</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mrow><mo>|</mo><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>−</mo><mi href="./3.8#i.p3" title="fixed point">ζ</mi></mrow><mo>|</mo></mrow><mi>p</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.8.html#i.p3" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="15px" alttext="\zeta" class="ltx_Math" display="inline"><mi href="./3.8#i.p3" title="fixed point">ζ</mi></math>:  fixed point</a></dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">3.9.2</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#i.p3" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E3" title="">http://dlmf.nist.gov/3.8.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#i.info" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(i)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for all <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math> sufficiently large, where <math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi>A</mi></math> and <math altimg="m89.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math> are independent of <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math>, then
+the sequence is said to have <em class="ltx_emph ltx_font_italic">convergence of the</em> <math altimg="m89.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math>th <em class="ltx_emph ltx_font_italic">order</em>.
+(More precisely, <math altimg="m89.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math> is the largest of the possible set of indices for
+(<a class="ltx_ref" href="3.8.html#E3" title="(3.8.3) ‣ §3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.3</span></a>).) If <math altimg="m85.png" altimg-height="21px" altimg-valign="-6px" altimg-width="53px" alttext="p=1" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow></math> and <math altimg="m23.png" altimg-height="19px" altimg-valign="-3px" altimg-width="58px" alttext="A&lt;1" class="ltx_Math" display="inline"><mrow><mi>A</mi><mo>&lt;</mo><mn>1</mn></mrow></math>, then the convergence is said
+to be <em class="ltx_emph ltx_font_italic">linear</em> or <em class="ltx_emph ltx_font_italic">geometric</em>. If <math altimg="m86.png" altimg-height="21px" altimg-valign="-6px" altimg-width="53px" alttext="p=2" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>2</mn></mrow></math>, then the convergence is
+<em class="ltx_emph ltx_font_italic">quadratic</em>; if <math altimg="m87.png" altimg-height="21px" altimg-valign="-6px" altimg-width="53px" alttext="p=3" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>3</mn></mrow></math>, then the convergence is <em class="ltx_emph ltx_font_italic">cubic</em>, and so on.
+</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">An iterative method converges <em class="ltx_emph ltx_font_italic">locally</em> to a solution <math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="15px" alttext="\zeta" class="ltx_Math" display="inline"><mi href="./3.8#i.p3" title="fixed point">ζ</mi></math> if there
+exists a neighborhood <math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.8#i.p4" title="neighborhood">N</mi></math> of <math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="15px" alttext="\zeta" class="ltx_Math" display="inline"><mi href="./3.8#i.p3" title="fixed point">ζ</mi></math> such that <math altimg="m129.png" altimg-height="22px" altimg-valign="-6px" altimg-width="68px" alttext="z_{n}\to\zeta" class="ltx_Math" display="inline"><mrow><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi href="./3.8#i.p3" title="fixed point">ζ</mi></mrow></math> whenever the
+initial approximation <math altimg="m125.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="z_{0}" class="ltx_Math" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> lies within <math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.8#i.p4" title="neighborhood">N</mi></math>.
+</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(ii) </span>Newton’s Rule</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Newton%20rule%20%28or%20method%29">Newton’s rule (or method)</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=convergence">convergence</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib895" title="Numerical Analysis. An Introduction">1997a</a>, pp. 230–234)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="29.20.html#iii.p1" title="§29.20(iii) Zeros ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(iii)</span></a>,
+<a class="ltx_ref" href="3.3.html#Px8.p2" title="Example ‣ §3.3(v) Inverse Interpolation ‣ §3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.3(v)</span></a>,
+<a class="ltx_ref" href="4.45.html#iii.p1" title="§4.45(iii) Lambert 𝑊-Function ‣ §4.45 Methods of Computation ‣ Computation ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.45(iii)</span></a>,
+<a class="ltx_ref" href="6.18.html#iii.p1" title="§6.18(iii) Zeros ‣ §6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18(iii)</span></a>,
+<a class="ltx_ref" href="8.25.html#iii.p1" title="§8.25(iii) Asymptotic Expansions ‣ §8.25 Methods of Computation ‣ Computation ‣ Chapter 8 Incomplete Gamma and Related Functions"><span class="ltx_text ltx_ref_tag">§8.25(iii)</span></a>,
+<a class="ltx_ref" href="9.17.html#v.p1" title="§9.17(v) Zeros ‣ §9.17 Methods of Computation ‣ Computation ‣ Chapter 9 Airy and Related Functions"><span class="ltx_text ltx_ref_tag">§9.17(v)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.ii" title="">http://dlmf.nist.gov/3.8.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">This is an iterative method for real twice-continuously differentiable, or
+complex analytic, functions:</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="56px" altimg-valign="-21px" altimg-width="189px" alttext="z_{n+1}=z_{n}-\frac{f(z_{n})}{f^{\prime}(z_{n})}," class="ltx_Math" display="block"><mrow><mrow><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>−</mo><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m77.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=0,1,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">3.9.5</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#ii.p2" title="§3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E4" title="">http://dlmf.nist.gov/3.8.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#ii.info" title="§3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">If <math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="15px" alttext="\zeta" class="ltx_Math" display="inline"><mi>ζ</mi></math> is a simple zero, then the iteration converges locally and
+quadratically. For multiple zeros the convergence is linear, but if the
+multiplicity <math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi>m</mi></math> is known then quadratic convergence can be restored by
+multiplying the ratio <math altimg="m59.png" altimg-height="25px" altimg-valign="-7px" altimg-width="119px" alttext="f(z_{n})/f^{\prime}(z_{n})" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><msup><mi>f</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> in (<a class="ltx_ref" href="3.8.html#E4" title="(3.8.4) ‣ §3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.4</span></a>) by <math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi>m</mi></math>.
+</p>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">For real functions <math altimg="m51.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="f(x)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> the sequence of approximations to a real zero <math altimg="m40.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="\xi" class="ltx_Math" display="inline"><mi>ξ</mi></math>
+will always converge (and converge quadratically) if either:</p>
+<ul class="ltx_itemize" id="I1">
+<li class="ltx_item" id="I1.ix1" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span>
+<div class="ltx_para" id="I1.ix1.p1">
+<p class="ltx_p"><math altimg="m53.png" altimg-height="25px" altimg-valign="-7px" altimg-width="152px" alttext="f(x_{0})f^{\prime\prime}(x_{0})&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> and <math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="f^{\prime}(x)" class="ltx_Math" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math altimg="m62.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="f^{\prime\prime}(x)" class="ltx_Math" display="inline"><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> do not change sign
+between <math altimg="m110.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{0}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> and <math altimg="m40.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="\xi" class="ltx_Math" display="inline"><mi>ξ</mi></math> (monotonic convergence).</p>
+</div>
+</li>
+<li class="ltx_item" id="I1.ix2" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span>
+<div class="ltx_para" id="I1.ix2.p1">
+<p class="ltx_p"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="152px" alttext="f(x_{0})f^{\prime\prime}(x_{0})&lt;0" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, <math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="f^{\prime}(x)" class="ltx_Math" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math altimg="m62.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="f^{\prime\prime}(x)" class="ltx_Math" display="inline"><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> do not change sign in the interval
+<math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="72px" alttext="(x_{0},x_{1})" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, and <math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="103px" alttext="\xi\in[x_{0},x_{1}]" class="ltx_Math" display="inline"><mrow><mi>ξ</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><msub><mi>x</mi><mn>0</mn></msub><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></mrow></math> (monotonic convergence after the first
+iteration).</p>
+</div>
+</li>
+</ul>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Example</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#ii.info" title="§3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p"><math altimg="m49.png" altimg-height="25px" altimg-valign="-7px" altimg-width="155px" alttext="f(x)=x-\tan x" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>−</mo><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow></math>. The first positive zero of <math altimg="m51.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="f(x)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> lies in the interval
+<math altimg="m20.png" altimg-height="29px" altimg-valign="-9px" altimg-width="68px" alttext="(\pi,\frac{3}{2}\pi)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>; see Figure <a class="ltx_ref" href="4.15.html#F3" title="Figure 4.15.3 ‣ §4.15(i) Real Arguments ‣ §4.15 Graphics ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.15.3</span></a>. From this graph
+we estimate an initial value <math altimg="m109.png" altimg-height="20px" altimg-valign="-5px" altimg-width="90px" alttext="x_{0}=4.65" class="ltx_Math" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mn>4.65</mn></mrow></math>. Newton’s rule is given by</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.8.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m17.png" altimg-height="20px" altimg-valign="-7px" altimg-width="51px" alttext="\displaystyle x_{n+1}" class="ltx_Math" display="inline"><msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="86px" alttext="\displaystyle=\phi(x_{n})," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="27px" altimg-valign="-7px" altimg-width="47px" alttext="\displaystyle\phi(x)" class="ltx_Math" display="inline"><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="26px" altimg-valign="-4px" altimg-width="201px" alttext="\displaystyle=x+x{\cot}^{2}x-\cot x." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mi>x</mi><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.14#E7" title="cotangent function">cot</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>−</mo><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="4.14.html#E7" title="(4.14.7) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="46px" alttext="\cot\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cotangent function</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E5" title="">http://dlmf.nist.gov/3.8.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E5a.png">png</a>, <a href="http://dlmf.nist.gov/3.8.E5b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px1.info" title="Example ‣ §3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#ii.info" title="§3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Results appear in Table <a class="ltx_ref" href="3.8.html#T1" title="Table 3.8.1 ‣ Example ‣ §3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.1</span></a>. The choice of <math altimg="m110.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{0}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> here is
+critical. When <math altimg="m112.png" altimg-height="20px" altimg-valign="-5px" altimg-width="111px" alttext="x_{0}\leq 4.2875" class="ltx_Math" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>≤</mo><mn>4.2875</mn></mrow></math> or <math altimg="m111.png" altimg-height="20px" altimg-valign="-5px" altimg-width="111px" alttext="x_{0}\geq 4.7125" class="ltx_Math" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>≥</mo><mn>4.7125</mn></mrow></math>, Newton’s rule does not
+converge to the required zero. The convergence is faster when we use instead
+the function <math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="197px" alttext="f(x)=x\cos x-\sin x" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow><mo>−</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow></mrow></math>; in addition, the successful
+interval for the starting value <math altimg="m110.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{0}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> is larger.</p>
+</div>
+<figure class="ltx_table" id="T1">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 3.8.1: </span>Newton’s rule for <math altimg="m106.png" altimg-height="19px" altimg-valign="-4px" altimg-width="125px" alttext="x-\tan x=0" class="ltx_Math" display="inline"><mrow><mrow><mi>x</mi><mo>−</mo><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T1.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T1.t1.r1">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt"><math altimg="m115.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi>x</mi><mi>n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T1.t1.r2">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_t">0</th>
+<td class="ltx_td ltx_align_left ltx_border_t">4.65000 00000 000</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r3">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">1</th>
+<td class="ltx_td ltx_align_left">4.60567 66065 900</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r4">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">2</th>
+<td class="ltx_td ltx_align_left">4.55140 53475 751</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r5">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">3</th>
+<td class="ltx_td ltx_align_left">4.50903 76975 617</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r6">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">4</th>
+<td class="ltx_td ltx_align_left">4.49455 61600 185</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r7">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_T">5</th>
+<td class="ltx_td ltx_align_left ltx_border_T">4.49341 56569 391</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r8">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">6</th>
+<td class="ltx_td ltx_align_left">4.49340 94580 903</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r9">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">7</th>
+<td class="ltx_td ltx_align_left">4.49340 94579 091</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r10">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b">8</th>
+<td class="ltx_td ltx_align_left ltx_border_b">4.49340 94579 091</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="4.14.html#E4" title="(4.14.4) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="48px" alttext="\tan\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: tangent function</a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.8.html#Px1.p1" title="Example ‣ §3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#Px7.p3" title="Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.T1" title="">http://dlmf.nist.gov/3.8.T1</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px1.info" title="Example ‣ §3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#ii.info" title="§3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(ii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</section>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(iii) </span>Other Methods</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.iii" title="">http://dlmf.nist.gov/3.8.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Bisection Method</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=bisection%20method">bisection method</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib895" title="Numerical Analysis. An Introduction">1997a</a>, pp. 217–225)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Ostrowski (<a class="ltx_ref" href="bib/O.html#bib1820" title="Solution of Equations in Euclidean and Banach Spaces">1973</a>, Chapters 3–11)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Traub (<a class="ltx_ref" href="bib/T.html#bib2267" title="Iterative Methods for the Solution of Equations">1964</a>, pp. 268–269)</cite>.</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">If <math altimg="m48.png" altimg-height="25px" altimg-valign="-7px" altimg-width="119px" alttext="f(a)f(b)&lt;0" class="ltx_Math" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math> with <math altimg="m44.png" altimg-height="19px" altimg-valign="-3px" altimg-width="52px" alttext="a&lt;b" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math>, then the interval <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="[a,b]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math> contains one or more
+zeros of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math>. Bisection of this interval is used to decide where at least one
+zero is located. All zeros of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> in the original interval <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="[a,b]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math> can be
+computed to any predetermined accuracy. Convergence is slow however; see
+<cite class="ltx_cite ltx_citemacro_citet">Kaufman and Lenker (<a class="ltx_ref" href="bib/K.html#bib1236" title="Linear convergence and the bisection algorithm">1986</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Nievergelt (<a class="ltx_ref" href="bib/N.html#bib1722" title="Bisection hardly ever converges linearly">1995</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Regula Falsi</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=interpolation">interpolation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inverse%20linear">inverse linear</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=regula%20falsi">regula falsi</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<p class="ltx_p">Let <math altimg="m110.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{0}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> and <math altimg="m113.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{1}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> be such that <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="101px" alttext="f_{0}=f(x_{0})" class="ltx_Math" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math altimg="m68.png" altimg-height="25px" altimg-valign="-7px" altimg-width="101px" alttext="f_{1}=f(x_{1})" class="ltx_Math" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> have
+opposite signs. Inverse linear interpolation
+(§<a class="ltx_ref" href="3.3.html#v" title="§3.3(v) Inverse Interpolation ‣ §3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.3(v)</span></a>) is used to obtain the first approximation:</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="53px" altimg-valign="-20px" altimg-width="339px" alttext="x_{2}=x_{1}-\frac{x_{1}-x_{0}}{f_{1}-f_{0}}f_{1}=\frac{f_{1}x_{0}-f_{0}x_{1}}{%
+f_{1}-f_{0}}." class="ltx_Math" display="block"><mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mrow><mfrac><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>−</mo><msub><mi>f</mi><mn>0</mn></msub></mrow></mfrac><mo>⁢</mo><msub><mi>f</mi><mn>1</mn></msub></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>−</mo><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>−</mo><msub><mi>f</mi><mn>0</mn></msub></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">3.9.3</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#Px4.p1" title="Secant Method ‣ §3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E6" title="">http://dlmf.nist.gov/3.8.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px3.info" title="Regula Falsi ‣ §3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">We continue with <math altimg="m114.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{2}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math> and either <math altimg="m110.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{0}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> or <math altimg="m113.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{1}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math>, depending which of <math altimg="m67.png" altimg-height="22px" altimg-valign="-6px" altimg-width="24px" alttext="f_{0}" class="ltx_Math" display="inline"><msub><mi>f</mi><mn>0</mn></msub></math>
+and <math altimg="m69.png" altimg-height="22px" altimg-valign="-6px" altimg-width="24px" alttext="f_{1}" class="ltx_Math" display="inline"><msub><mi>f</mi><mn>1</mn></msub></math> is of opposite sign to <math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="f(x_{2})" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>, and so on. The convergence is
+linear, and again more than one zero may occur in the original interval
+<math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="67px" alttext="[x_{0},x_{1}]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><msub><mi>x</mi><mn>0</mn></msub><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Secant Method</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=secant%20method">secant method</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<p class="ltx_p">Whether or not <math altimg="m67.png" altimg-height="22px" altimg-valign="-6px" altimg-width="24px" alttext="f_{0}" class="ltx_Math" display="inline"><msub><mi>f</mi><mn>0</mn></msub></math> and <math altimg="m69.png" altimg-height="22px" altimg-valign="-6px" altimg-width="24px" alttext="f_{1}" class="ltx_Math" display="inline"><msub><mi>f</mi><mn>1</mn></msub></math> have opposite signs, <math altimg="m114.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{2}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math> is computed as in
+(<a class="ltx_ref" href="3.8.html#E6" title="(3.8.6) ‣ Regula Falsi ‣ §3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.6</span></a>). If the wanted zero <math altimg="m40.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="\xi" class="ltx_Math" display="inline"><mi>ξ</mi></math> is simple, then the method
+converges locally with order of convergence
+<math altimg="m88.png" altimg-height="30px" altimg-valign="-9px" altimg-width="238px" alttext="p=\frac{1}{2}(1+\sqrt{5})=1.618\ldots\," class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1.618</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>. Because the method requires
+only one function evaluation per iteration, its numerical efficiency is
+ultimately higher than that of Newton’s method. There is no guaranteed
+convergence: the first approximation <math altimg="m114.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{2}" class="ltx_Math" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math> may be outside <math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="67px" alttext="[x_{0},x_{1}]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><msub><mi>x</mi><mn>0</mn></msub><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px5">
+<h3 class="ltx_title ltx_title_paragraph">Steffensen’s Method</h3>
+<div class="ltx_metadata ltx_info" id="Px5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Steffensen%20method">Steffensen’s method</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px5.p1">
+<p class="ltx_p">This iterative method for solving <math altimg="m117.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="z=\phi(z)" class="ltx_Math" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="57px" altimg-valign="-21px" altimg-width="343px" alttext="z_{n+1}=z_{n}-\frac{(\phi(z_{n})-z_{n})^{2}}{\phi(\phi(z_{n}))-2\phi(z_{n})+z_%
+{n}}," class="ltx_Math" display="block"><mrow><mrow><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><msub><mi>z</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mrow><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>+</mo><msub><mi>z</mi><mi>n</mi></msub></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m76.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E7" title="">http://dlmf.nist.gov/3.8.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px5.info" title="Steffensen’s Method ‣ §3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">It converges locally and quadratically for both <math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi></math> and <math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>.</p>
+</div>
+<div class="ltx_para" id="Px5.p2">
+<p class="ltx_p">For other efficient derivative-free methods, see <cite class="ltx_cite ltx_citemacro_citet">Le (<a class="ltx_ref" href="bib/L.html#bib1390" title="An efficient derivative-free method for solving nonlinear equations">1985</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px6">
+<h3 class="ltx_title ltx_title_paragraph">Eigenvalue Methods</h3>
+<div class="ltx_metadata ltx_info" id="Px6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvalue%20methods">eigenvalue methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iii.info" title="§3.8(iii) Other Methods ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px6.p1">
+<p class="ltx_p">For the computation of zeros of orthogonal polynomials as eigenvalues of finite
+tridiagonal matrices (§<a class="ltx_ref" href="3.5.html#vi" title="§3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(vi)</span></a>), see
+<cite class="ltx_cite ltx_citemacro_citet">Gil<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/G.html#bib935" title="Numerical Methods for Special Functions">2007a</a>, pp. 205–207)</cite>. For the computation of zeros of Bessel
+functions, Coulomb functions, and conical functions as eigenvalues of finite
+parts of infinite tridiagonal matrices, see <cite class="ltx_cite ltx_citemacro_citet">Grad and Zakrajšek (<a class="ltx_ref" href="bib/G.html#bib969" title="Method for evaluation of zeros of Bessel functions">1973</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Ikebe (<a class="ltx_ref" href="bib/I.html#bib2681" title="The zeros of regular Coulomb wave functions and of their derivatives">1975</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Ikebe<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/I.html#bib1122" title="Computing zeros and orders of Bessel functions">1991</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Ball (<a class="ltx_ref" href="bib/B.html#bib182" title="Automatic computation of zeros of Bessel functions and other special functions">2000</a>)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Gil<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/G.html#bib935" title="Numerical Methods for Special Functions">2007a</a>, pp. 205–213)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(iv) </span>Zeros of Polynomials</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=deflation">deflation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=explicit%20formulas">explicit formulas</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=polynomials">polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros%20of%20polynomials">zeros of polynomials</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For Bairstow’s method see <cite class="ltx_cite ltx_citemacro_citet">National Physical Laboratory (<a class="ltx_ref" href="bib/N.html#bib1700" title="Modern Computing Methods">1961</a>, pp. 57–59)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="29.20.html#i.p3" title="§29.20(i) Lamé Functions ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.iv" title="">http://dlmf.nist.gov/3.8.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">The polynomial</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="29px" altimg-valign="-7px" altimg-width="329px" alttext="p(z)=a_{n}z^{n}+a_{n-1}z^{n-1}+\dots+a_{0}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>n</mi></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>z</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m47.png" altimg-height="22px" altimg-valign="-6px" altimg-width="65px" alttext="a_{n}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  polynomial (locally)</span></dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#vi.p2" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E8" title="">http://dlmf.nist.gov/3.8.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">has <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math> zeros in <math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>, counting each zero according to its multiplicity.
+Explicit formulas for the zeros are available if <math altimg="m80.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\leq 4" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>≤</mo><mn>4</mn></mrow></math>; see
+§§<a class="ltx_ref" href="1.11.html#iii" title="§1.11(iii) Polynomials of Degrees Two, Three, and Four ‣ §1.11 Zeros of Polynomials ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.11(iii)</span></a> and <a class="ltx_ref" href="4.43.html" title="§4.43 Cubic Equations ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.43</span></a>. No explicit general formulas
+exist when <math altimg="m79.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 5" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>5</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">After a zero <math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="15px" alttext="\zeta" class="ltx_Math" display="inline"><mi>ζ</mi></math> has been computed, the factor <math altimg="m116.png" altimg-height="22px" altimg-valign="-6px" altimg-width="51px" alttext="z-\zeta" class="ltx_Math" display="inline"><mrow><mi>z</mi><mo>−</mo><mi>ζ</mi></mrow></math> is factored out
+of <math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> as a by-product of Horner’s scheme (§<a class="ltx_ref" href="1.11.html#i" title="§1.11(i) Division Algorithm ‣ §1.11 Zeros of Polynomials ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.11(i)</span></a>) for the
+computation of <math altimg="m81.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(\zeta)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. In this way polynomials of successively lower degree
+can be used to find the remaining zeros. (This process is called
+<em class="ltx_emph ltx_font_italic">deflation</em>.)
+However, to guard against the accumulation of rounding
+errors, a final iteration for each zero should also be performed on the
+original polynomial <math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<section class="ltx_paragraph" id="Px7">
+<h3 class="ltx_title ltx_title_paragraph">Example</h3>
+<div class="ltx_metadata ltx_info" id="Px7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px7.p1">
+<p class="ltx_p"><math altimg="m82.png" altimg-height="26px" altimg-valign="-7px" altimg-width="125px" alttext="p(z)=z^{4}-1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>z</mi><mn>4</mn></msup><mo>−</mo><mn>1</mn></mrow></mrow></math>. The zeros are <math altimg="m37.png" altimg-height="19px" altimg-valign="-4px" altimg-width="31px" alttext="\pm 1" class="ltx_Math" display="inline"><mrow><mo>±</mo><mn>1</mn></mrow></math> and <math altimg="m38.png" altimg-height="20px" altimg-valign="-4px" altimg-width="26px" alttext="\pm\mathrm{i}" class="ltx_Math" display="inline"><mrow><mo>±</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></math>. Newton’s method is
+given by</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.8.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m18.png" altimg-height="20px" altimg-valign="-7px" altimg-width="49px" alttext="\displaystyle z_{n+1}" class="ltx_Math" display="inline"><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="27px" altimg-valign="-7px" altimg-width="84px" alttext="\displaystyle=\phi(z_{n})," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="27px" altimg-valign="-7px" altimg-width="46px" alttext="\displaystyle\phi(z)" class="ltx_Math" display="inline"><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="52px" altimg-valign="-16px" altimg-width="105px" alttext="\displaystyle=\frac{3z^{4}+1}{4z^{3}}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>z</mi><mn>4</mn></msup></mrow><mo>+</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow></mfrac></mstyle></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">3.9.6</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#viii.p2" title="§3.8(viii) Fixed-Point Iterations: Fractals ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(viii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E9" title="">http://dlmf.nist.gov/3.8.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E9a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E9b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E9a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E9b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E9a.png">png</a>, <a href="http://dlmf.nist.gov/3.8.E9b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px7.info" title="Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px7.p2">
+<p class="ltx_p">The results for <math altimg="m124.png" altimg-height="20px" altimg-valign="-5px" altimg-width="77px" alttext="z_{0}=1.5" class="ltx_Math" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mn>1.5</mn></mrow></math> are given in Table <a class="ltx_ref" href="3.8.html#T2" title="Table 3.8.2 ‣ Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.2</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T2">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 3.8.2: </span>Newton’s rule for <math altimg="m122.png" altimg-height="23px" altimg-valign="-4px" altimg-width="98px" alttext="z^{4}-1=0" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>z</mi><mn>4</mn></msup><mo>−</mo><mn>1</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T2.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T2.t1.r1">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt"><math altimg="m128.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="z_{n}" class="ltx_Math" display="inline"><msub><mi>z</mi><mi>n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T2.t1.r2">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_t">0</th>
+<td class="ltx_td ltx_align_left ltx_border_t">1.50000 00000 000</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r3">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">1</th>
+<td class="ltx_td ltx_align_left">1.19907 40740 741</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r4">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">2</th>
+<td class="ltx_td ltx_align_left">1.04431 68969 414</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r5">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">3</th>
+<td class="ltx_td ltx_align_left">1.00274 20038 676</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r6">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_T">4</th>
+<td class="ltx_td ltx_align_left ltx_border_T">1.00001 12265 490</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r7">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">5</th>
+<td class="ltx_td ltx_align_left">1.00000 00001 891</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r8">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b">6</th>
+<td class="ltx_td ltx_align_left ltx_border_b">1.00000 00000 000</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#Px7.p2" title="Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.T2" title="">http://dlmf.nist.gov/3.8.T2</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px7.info" title="Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="Px7.p3">
+<p class="ltx_p">As in the case of Table <a class="ltx_ref" href="3.8.html#T1" title="Table 3.8.1 ‣ Example ‣ §3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.1</span></a> the quadratic nature of convergence
+is clearly evident: as the zero is approached, the number of correct decimal
+places doubles at each iteration.</p>
+</div>
+<div class="ltx_para" id="Px7.p4">
+<p class="ltx_p">Newton’s rule can also be used for complex zeros of <math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>. However, when the
+coefficients are all real, complex arithmetic can be avoided by the following
+iterative process.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px8">
+<h3 class="ltx_title ltx_title_paragraph">Bairstow’s Method</h3>
+<div class="ltx_metadata ltx_info" id="Px8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bairstow%20method%20%28for%20zeros%20of%20polynomials%29">Bairstow’s method (for zeros of polynomials)</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px8.p1">
+<p class="ltx_p">Let <math altimg="m121.png" altimg-height="23px" altimg-valign="-4px" altimg-width="103px" alttext="z^{2}-sz-t" class="ltx_Math" display="inline"><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mrow><mi>s</mi><mo>⁢</mo><mi>z</mi></mrow><mo>−</mo><mi>t</mi></mrow></math> be an approximation to the real quadratic factor of <math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+that corresponds to a pair of conjugate complex zeros or to a pair of real
+zeros. We construct sequences <math altimg="m93.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="q_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mi>j</mi></msub></math> and <math altimg="m97.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="r_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.8#E10" title="sequence">r</mi><mi>j</mi></msub></math>, <math altimg="m71.png" altimg-height="22px" altimg-valign="-6px" altimg-width="168px" alttext="j=n+1,n,\dots,0" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi>n</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn></mrow></mrow></math>, from
+<math altimg="m94.png" altimg-height="22px" altimg-valign="-7px" altimg-width="153px" alttext="q_{n+1}=r_{n+1}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>, <math altimg="m95.png" altimg-height="17px" altimg-valign="-6px" altimg-width="123px" alttext="q_{n}=r_{n}=a_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mi>n</mi></msub><mo>=</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>, and for <math altimg="m73.png" altimg-height="22px" altimg-valign="-6px" altimg-width="90px" alttext="j\leq n-1" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>≤</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></math>,</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.8.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="21px" altimg-valign="-8px" altimg-width="25px" alttext="\displaystyle q_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mi>j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="25px" altimg-valign="-8px" altimg-width="200px" alttext="\displaystyle=a_{j}+sq_{j+1}+tq_{j+2}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>+</mo><mrow><mi>s</mi><mo>⁢</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="21px" altimg-valign="-8px" altimg-width="25px" alttext="\displaystyle r_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.8#E10" title="sequence">r</mi><mi>j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="25px" altimg-valign="-8px" altimg-width="199px" alttext="\displaystyle=q_{j}+sr_{j+1}+tr_{j+2}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mi>j</mi></msub><mo>+</mo><mrow><mi>s</mi><mo>⁢</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m97.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="r_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.8#E10" title="sequence">r</mi><mi>j</mi></msub></math>:  sequence (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.8.html#Px8.p2" title="Bairstow’s Method ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m91.png" altimg-height="25px" altimg-valign="-7px" altimg-width="42px" alttext="q(x)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  real-valued function</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E10" title="">http://dlmf.nist.gov/3.8.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E10a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E10b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E10a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E10b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E10a.png">png</a>, <a href="http://dlmf.nist.gov/3.8.E10b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px8.info" title="Bairstow’s Method ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then the next approximation to the quadratic factor is
+<math altimg="m119.png" altimg-height="26px" altimg-valign="-7px" altimg-width="238px" alttext="z^{2}-(s+\Delta s)z-(t+\Delta t)" class="ltx_Math" display="inline"><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>+</mo><mrow><mo lspace="0em" rspace="0.167em">Δ</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mo lspace="0em" rspace="0.167em">Δ</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, where</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.8.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="20px" altimg-valign="-2px" altimg-width="34px" alttext="\displaystyle\Delta s" class="ltx_Math" display="inline"><mrow><mo rspace="0.167em">Δ</mo><mi>s</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="52px" altimg-valign="-22px" altimg-width="139px" alttext="\displaystyle=\frac{r_{3}q_{0}-r_{2}q_{1}}{r_{2}^{2}-\ell r_{3}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mn>0</mn></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mn>1</mn></msub></mrow></mrow><mrow><msubsup><mi href="./3.8#E10" title="sequence">r</mi><mn>2</mn><mn>2</mn></msubsup><mo>−</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>3</mn></msub></mrow></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="20px" altimg-valign="-2px" altimg-width="31px" alttext="\displaystyle\Delta t" class="ltx_Math" display="inline"><mrow><mo rspace="0.167em">Δ</mo><mi>t</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="55px" altimg-valign="-22px" altimg-width="129px" alttext="\displaystyle=\frac{\ell q_{1}-r_{2}q_{0}}{r_{2}^{2}-\ell r_{3}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mn>0</mn></msub></mrow></mrow><mrow><msubsup><mi href="./3.8#E10" title="sequence">r</mi><mn>2</mn><mn>2</mn></msubsup><mo>−</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>3</mn></msub></mrow></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="20px" altimg-valign="-2px" altimg-width="15px" alttext="\displaystyle\ell" class="ltx_Math" display="inline"><mi mathvariant="normal">ℓ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="22px" altimg-valign="-5px" altimg-width="114px" alttext="\displaystyle=sr_{2}+tr_{3}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>s</mi><mo>⁢</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi href="./3.8#E10" title="sequence">r</mi><mn>3</mn></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.8.html#E10" title="(3.8.10) ‣ Bairstow’s Method ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m97.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="r_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.8#E10" title="sequence">r</mi><mi>j</mi></msub></math>:  sequence</a> and
+<a class="ltx_ref" href="3.8.html#Px8.p2" title="Bairstow’s Method ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m91.png" altimg-height="25px" altimg-valign="-7px" altimg-width="42px" alttext="q(x)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  real-valued function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E11" title="">http://dlmf.nist.gov/3.8.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E11a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E11b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E11c.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E11a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E11b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E11c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E11a.png">png</a>, <a href="http://dlmf.nist.gov/3.8.E11b.png">png</a>, <a href="http://dlmf.nist.gov/3.8.E11c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px8.info" title="Bairstow’s Method ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px8.p2">
+<p class="ltx_p">The method converges locally and quadratically, except when the wanted
+quadratic factor is a multiple factor of <math altimg="m92.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="q(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>. On the last iteration
+<math altimg="m96.png" altimg-height="26px" altimg-valign="-7px" altimg-width="272px" alttext="q_{n}z^{n-2}+q_{n-1}z^{n-3}+\dots+q_{2}" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>z</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>z</mi><mrow><mi>n</mi><mo>−</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi href="./3.8#Px8.p2" title="real-valued function">q</mi><mn>2</mn></msub></mrow></math> is the quotient on dividing
+<math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="41px" alttext="p(z)" class="ltx_Math" display="inline"><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> by <math altimg="m121.png" altimg-height="23px" altimg-valign="-4px" altimg-width="103px" alttext="z^{2}-sz-t" class="ltx_Math" display="inline"><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mrow><mi>s</mi><mo>⁢</mo><mi>z</mi></mrow><mo>−</mo><mi>t</mi></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px9">
+<h3 class="ltx_title ltx_title_paragraph">Example</h3>
+<div class="ltx_metadata ltx_info" id="Px9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros%20of%20polynomials">zeros of polynomials</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px9.p1">
+<p class="ltx_p"><math altimg="m83.png" altimg-height="26px" altimg-valign="-7px" altimg-width="180px" alttext="p(z)=z^{4}-2z^{2}+1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.8#E8" title="polynomial">p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>z</mi><mn>4</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>. With the starting values <math altimg="m100.png" altimg-height="29px" altimg-valign="-9px" altimg-width="64px" alttext="s_{0}=\frac{7}{4}" class="ltx_Math" display="inline"><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>=</mo><mfrac><mn>7</mn><mn>4</mn></mfrac></mrow></math>,
+<math altimg="m104.png" altimg-height="29px" altimg-valign="-9px" altimg-width="78px" alttext="t_{0}=-\frac{1}{2}" class="ltx_Math" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>, an approximation to the quadratic factor
+<math altimg="m120.png" altimg-height="26px" altimg-valign="-7px" altimg-width="206px" alttext="z^{2}-2z+1=(z-1)^{2}" class="ltx_Math" display="inline"><mrow><mrow><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math> is computed (<math altimg="m98.png" altimg-height="17px" altimg-valign="-2px" altimg-width="52px" alttext="s=2" class="ltx_Math" display="inline"><mrow><mi>s</mi><mo>=</mo><mn>2</mn></mrow></math>, <math altimg="m102.png" altimg-height="19px" altimg-valign="-4px" altimg-width="66px" alttext="t=-1" class="ltx_Math" display="inline"><mrow><mi>t</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>). Table
+<a class="ltx_ref" href="3.8.html#T3" title="Table 3.8.3 ‣ Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.3</span></a> gives the successive values of <math altimg="m99.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi>s</mi></math> and <math altimg="m103.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi>t</mi></math>. The
+quadratic nature of the convergence is evident.</p>
+</div>
+<figure class="ltx_table" id="T3">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 3.8.3: </span>Bairstow’s method for factoring <math altimg="m123.png" altimg-height="23px" altimg-valign="-4px" altimg-width="116px" alttext="z^{4}-2z^{2}+1" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>z</mi><mn>4</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mn>1</mn></mrow></math>.
+
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T3.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T3.t1.r1">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt"><math altimg="m101.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="s_{n}" class="ltx_Math" display="inline"><msub><mi>s</mi><mi>n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt"><math altimg="m105.png" altimg-height="20px" altimg-valign="-5px" altimg-width="23px" alttext="t_{n}" class="ltx_Math" display="inline"><msub><mi>t</mi><mi>n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T3.t1.r2">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_t">0</th>
+<td class="ltx_td ltx_align_left ltx_border_t">1.75000 00000 000</td>
+<td class="ltx_td ltx_align_left ltx_border_t">
+<math altimg="m22.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math>0.50000 00000 000</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r3">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">1</th>
+<td class="ltx_td ltx_align_left">2.13527 29454 109</td>
+<td class="ltx_td ltx_align_left">
+<math altimg="m22.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math>1.21235 75284 943</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r4">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">2</th>
+<td class="ltx_td ltx_align_left">2.01786 10488 956</td>
+<td class="ltx_td ltx_align_left">
+<math altimg="m22.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math>1.02528 61401 539</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r5">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">3</th>
+<td class="ltx_td ltx_align_left">2.00036 06329 466</td>
+<td class="ltx_td ltx_align_left">
+<math altimg="m22.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math>1.00047 63067 522</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r6">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">4</th>
+<td class="ltx_td ltx_align_left">2.00000 01474 803</td>
+<td class="ltx_td ltx_align_left">
+<math altimg="m22.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math>1.00000 01858 298</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r7">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b">5</th>
+<td class="ltx_td ltx_align_left ltx_border_b">2.00000 00000 000</td>
+<td class="ltx_td ltx_align_left ltx_border_b">
+<math altimg="m22.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math>1.00000 00000 000</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.8.html#Px9.p1" title="Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.T3" title="">http://dlmf.nist.gov/3.8.T3</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px9.info" title="Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#iv.info" title="§3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(iv)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="Px9.p2">
+<p class="ltx_p">This example illustrates the fact that the method succeeds even if the two zeros
+of the wanted quadratic factor are real and the same.</p>
+</div>
+<div class="ltx_para" id="Px9.p3">
+<p class="ltx_p">For further information on the computation of zeros of polynomials see
+<cite class="ltx_cite ltx_citemacro_citet">McNamee (<a class="ltx_ref" href="bib/M.html#bib1588" title="Numerical Methods for Roots of Polynomials. Part I">2007</a>)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(v) </span>Zeros of Analytic Functions</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Halley%20rule">Halley’s rule</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Rouch%C3%A9%20theorem">Rouché’s theorem</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=phase%20principle">phase principle</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Hildebrand (<a class="ltx_ref" href="bib/H.html#bib1077" title="Introduction to Numerical Analysis">1974</a>, p. 582)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.74.html#vi.p1" title="§10.74(vi) Zeros and Associated Values ‣ §10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.74(vi)</span></a>,
+<a class="ltx_ref" href="9.17.html#v.p1" title="§9.17(v) Zeros ‣ §9.17 Methods of Computation ‣ Computation ‣ Chapter 9 Airy and Related Functions"><span class="ltx_text ltx_ref_tag">§9.17(v)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.10.I2.ix6.p1" title="In Other Changes ‣ Version 1.0.10 (August 7, 2015) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.10) for  References</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.v" title="">http://dlmf.nist.gov/3.8.v</a></dd>
+<dt>Addition (effective with 1.0.10):</dt>
+<dd>
+A sentence was added to refer to <cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2835" title="Computing the complex zeros of special functions">2013</a>)</cite> on the distribution of complex zeros for linear homogeneous
+second-order differential equations.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">Newton’s rule is the most frequently used iterative process for accurate
+computation of real or complex zeros of analytic functions <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="f(z)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Another
+iterative method is <em class="ltx_emph ltx_font_italic">Halley’s rule</em>:
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="56px" altimg-valign="-21px" altimg-width="432px" alttext="z_{n+1}=z_{n}-\frac{f(z_{n})}{f^{\prime}(z_{n})-(f^{\prime\prime}(z_{n})f(z_{n%
+})/(2f^{\prime}(z_{n})))}." class="ltx_Math" display="block"><mrow><mrow><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>−</mo><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E12" title="">http://dlmf.nist.gov/3.8.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#v.info" title="§3.8(v) Zeros of Analytic Functions ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(v)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">This is useful when <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="f(z)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies a second-order linear differential
+equation because of the ease of computing <math altimg="m63.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="f^{\prime\prime}(z_{n})" class="ltx_Math" display="inline"><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>. The rule converges
+locally and is cubically convergent.</p>
+</div>
+<div class="ltx_para" id="v.p2">
+<p class="ltx_p">Initial approximations to the zeros can often be found from asymptotic or other
+approximations to <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="f(z)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>, or by application of the phase principle or
+Rouché’s theorem; see §<a class="ltx_ref" href="1.10.html#iv" title="§1.10(iv) Residue Theorem ‣ §1.10 Functions of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.10(iv)</span></a>.
+These results are also useful in
+ensuring that no zeros are overlooked when the complex plane is being searched.
+</p>
+</div>
+<div class="ltx_para" id="v.p3">
+<p class="ltx_p">For an example involving the Airy functions, see <cite class="ltx_cite ltx_citemacro_citet">Fabijonas and Olver (<a class="ltx_ref" href="bib/F.html#bib771" title="On the reversion of an asymptotic expansion and the zeros of the Airy functions">1999</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="v.p4">
+<p class="ltx_p">For fixed-point methods for computing zeros of special functions, see
+<cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2042" title="The zeros of special functions from a fixed point method">2002</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Gil and Segura (<a class="ltx_ref" href="bib/G.html#bib919" title="Computing the zeros and turning points of solutions of second order homogeneous linear ODEs">2003</a>)</cite>,
+and <cite class="ltx_cite ltx_citemacro_citet">Gil<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/G.html#bib935" title="Numerical Methods for Special Functions">2007a</a>, Chapter 7)</cite>. For describing the distribution of complex zeros
+of solutions of linear homogeneous second-order differential equations by methods based on the
+Liouville–Green (WKB) approximation, see <cite class="ltx_cite ltx_citemacro_citet">Segura (<a class="ltx_ref" href="bib/S.html#bib2835" title="Computing the complex zeros of special functions">2013</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="vi">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(vi) </span>Conditioning of Zeros</h2>
+<div class="ltx_metadata ltx_info" id="vi.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=conditioning">conditioning</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros%20of%20analytic%20functions">zeros of analytic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros%20of%20polynomials">zeros of polynomials</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.vi" title="">http://dlmf.nist.gov/3.8.vi</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vi.p1">
+<p class="ltx_p">Suppose <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="f(z)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> also depends on a parameter <math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./3.8#vi.p1" title="parameter">α</mi></math>, denoted by <math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="f(z,\alpha)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>z</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./3.8#vi.p1" title="parameter">α</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math>.
+Then the sensitivity of a simple zero <math altimg="m118.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi>z</mi></math> to changes in <math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./3.8#vi.p1" title="parameter">α</mi></math> is given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="56px" altimg-valign="-22px" altimg-width="180px" alttext="\frac{\mathrm{d}z}{\mathrm{d}\alpha}=-\ifrac{\frac{\partial f}{\partial\alpha}%
+}{\frac{\partial f}{\partial z}}." class="ltx_Math" display="block"><mrow><mrow><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi>z</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./3.8#vi.p1" title="parameter">α</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi href="./3.8#vi.p1" title="parameter">α</mi></mrow></mfrac><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>z</mi></mrow></mfrac></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m108.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m108.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m34.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m108.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="3.8.html#vi.p1" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./3.8#vi.p1" title="parameter">α</mi></math>:  parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E13" title="">http://dlmf.nist.gov/3.8.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#vi.info" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="vi.p2">
+<p class="ltx_p">Thus if <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> is the polynomial (<a class="ltx_ref" href="3.8.html#E8" title="(3.8.8) ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.8</span></a>) and <math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./3.8#vi.p1" title="parameter">α</mi></math> is the
+coefficient <math altimg="m46.png" altimg-height="19px" altimg-valign="-8px" altimg-width="24px" alttext="a_{j}" class="ltx_Math" display="inline"><msub><mi>a</mi><mi>j</mi></msub></math>, say, then</p>
+<table class="ltx_equation ltx_eqn_table" id="E14">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.14</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E14.png" altimg-height="58px" altimg-valign="-22px" altimg-width="142px" alttext="\frac{\mathrm{d}z}{\mathrm{d}a_{j}}=-\frac{z^{j}}{f^{\prime}(z)}." class="ltx_Math" display="block"><mrow><mrow><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi>z</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><msub><mi>a</mi><mi>j</mi></msub></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mfrac><msup><mi>z</mi><mi>j</mi></msup><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E14.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m108.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.8.html#Px10.p1" title="Example. Wilkinson’s Polynomial ‣ §3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#vi.p2" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E14" title="">http://dlmf.nist.gov/3.8.E14</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E14.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E14.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E14.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#vi.info" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">For moderate or large values of <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math> it is not uncommon for the magnitude of the
+right-hand side of (<a class="ltx_ref" href="3.8.html#E14" title="(3.8.14) ‣ §3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.14</span></a>) to be very large compared with
+unity, signifying that the computation of zeros of polynomials is often an
+ill-posed problem.</p>
+</div>
+<section class="ltx_paragraph" id="Px10">
+<h3 class="ltx_title ltx_title_paragraph">Example. Wilkinson’s Polynomial</h3>
+<div class="ltx_metadata ltx_info" id="Px10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Wilkinson%E2%80%99s">Wilkinson’s</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Wilkinson%20polynomial">Wilkinson’s polynomial</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=nonlinear%20equations">nonlinear equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solutions">numerical solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=polynomials">polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros%20of%20analytic%20functions">zeros of analytic functions</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#vi.info" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px10.p1">
+<p class="ltx_p">The zeros of</p>
+<table class="ltx_equation ltx_eqn_table" id="E15">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.15</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E15.png" altimg-height="27px" altimg-valign="-7px" altimg-width="305px" alttext="p(x)=(x-1)(x-2)\cdots(x-20)" class="ltx_Math" display="block"><mrow><mrow><mi>p</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mn>20</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E15.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E15" title="">http://dlmf.nist.gov/3.8.E15</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E15.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E15.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E15.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px10.info" title="Example. Wilkinson’s Polynomial ‣ §3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#vi.info" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">are well separated but extremely ill-conditioned. Consider <math altimg="m107.png" altimg-height="17px" altimg-valign="-2px" altimg-width="65px" alttext="x=20" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>20</mn></mrow></math> and
+<math altimg="m70.png" altimg-height="22px" altimg-valign="-6px" altimg-width="62px" alttext="j=19" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mn>19</mn></mrow></math>. We have <math altimg="m90.png" altimg-height="25px" altimg-valign="-7px" altimg-width="113px" alttext="p^{\mspace{1.0mu}\prime}(20)=19!" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>20</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>19</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></math> and <math altimg="m45.png" altimg-height="20px" altimg-valign="-5px" altimg-width="261px" alttext="a_{19}=1+2+\dots+20=210" class="ltx_Math" display="inline"><mrow><msub><mi>a</mi><mn>19</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mn>20</mn></mrow><mo>=</mo><mn>210</mn></mrow></math>. The
+perturbation factor (<a class="ltx_ref" href="3.8.html#E14" title="(3.8.14) ‣ §3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.14</span></a>) is given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E16">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.16</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E16.png" altimg-height="55px" altimg-valign="-19px" altimg-width="328px" alttext="\frac{\mathrm{d}x}{\mathrm{d}a_{19}}=-\frac{20^{19}}{19!}=(-4.30\dots)\times 1%
+0^{7}." class="ltx_Math" display="block"><mrow><mrow><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi>x</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><msub><mi>a</mi><mn>19</mn></msub></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mfrac><msup><mn>20</mn><mn>19</mn></msup><mrow><mn>19</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mrow><mn>4.30</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><msup><mn>10</mn><mn>7</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E16.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m60.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m108.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E16" title="">http://dlmf.nist.gov/3.8.E16</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E16.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E16.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E16.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#Px10.info" title="Example. Wilkinson’s Polynomial ‣ §3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#vi.info" title="§3.8(vi) Conditioning of Zeros ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(vi)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px10.p2">
+<p class="ltx_p">Corresponding numerical factors in this example for other zeros and other
+values of <math altimg="m72.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi>j</mi></math> are obtained in <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib890" title="Questions of Numerical Condition Related to Polynomials">1984</a>, §4)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="vii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(vii) </span>Systems of Nonlinear Equations</h2>
+<div class="ltx_metadata ltx_info" id="vii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=fixed-point%20methods">fixed-point methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=nonlinear%20equations">nonlinear equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=systems">systems</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.vii" title="">http://dlmf.nist.gov/3.8.vii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vii.p1">
+<p class="ltx_p">For fixed-point iterations and Newton’s method for solving systems of nonlinear
+equations, see <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib895" title="Numerical Analysis. An Introduction">1997a</a>, Chapter 4, §9)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Ortega and Rheinboldt (<a class="ltx_ref" href="bib/O.html#bib1816" title="Iterative Solution of Nonlinear Equations in Several Variables">1970</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="viii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.8(viii) </span>Fixed-Point Iterations: Fractals</h2>
+<div class="ltx_metadata ltx_info" id="viii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Julia%20sets">Julia sets</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=fixed-point%20methods">fixed-point methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=fractals">fractals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20methods">iterative methods</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.viii" title="">http://dlmf.nist.gov/3.8.viii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="viii.p1">
+<p class="ltx_p">The convergence of iterative methods</p>
+<table class="ltx_equation ltx_eqn_table" id="E17">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.8.17</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E17.png" altimg-height="27px" altimg-valign="-7px" altimg-width="131px" alttext="z_{n+1}=\phi(z_{n})," class="ltx_Math" display="block"><mrow><mrow><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mi>ϕ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m77.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=0,1,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E17.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.8.E17" title="">http://dlmf.nist.gov/3.8.E17</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.8.E17.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.8.E17.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.8.E17.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.8.html#viii.info" title="§3.8(viii) Fixed-Point Iterations: Fractals ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8(viii)</span></a>,
+<a class="ltx_ref" href="3.8.html#info" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.8</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for solving fixed-point problems (<a class="ltx_ref" href="3.8.html#E2" title="(3.8.2) ‣ §3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.2</span></a>) cannot always be
+predicted, especially in the complex plane.</p>
+</div>
+<div class="ltx_para" id="viii.p2">
+<p class="ltx_p">Consider, for example, (<a class="ltx_ref" href="3.8.html#E9" title="(3.8.9) ‣ Example ‣ §3.8(iv) Zeros of Polynomials ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8.9</span></a>). Starting this iteration in the
+neighborhood of one of the four zeros <math altimg="m36.png" altimg-height="22px" altimg-valign="-6px" altimg-width="62px" alttext="\pm 1,\pm\mathrm{i}" class="ltx_Math" display="inline"><mrow><mrow><mo>±</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>±</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mrow></math>, sequences <math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="\{z_{n}\}" class="ltx_Math" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>
+are generated that converge to these zeros. For an arbitrary starting point
+<math altimg="m126.png" altimg-height="21px" altimg-valign="-5px" altimg-width="64px" alttext="z_{0}\in\mathbb{C}" class="ltx_Math" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></mrow></math>, convergence cannot be predicted, and the boundary of the
+set of points <math altimg="m125.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="z_{0}" class="ltx_Math" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> that generate a sequence converging to a particular zero
+has a very complicated structure. It is called a <em class="ltx_emph ltx_font_italic">Julia set</em>.
+In general the Julia set of an analytic function <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="f(z)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a <em class="ltx_emph ltx_font_italic">fractal</em>,
+that is, a set that is self-similar. See <cite class="ltx_cite ltx_citemacro_citet">Julia (<a class="ltx_ref" href="bib/J.html#bib1198" title="Memoire sur l’itération des fonctions rationnelles">1918</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Devaney (<a class="ltx_ref" href="bib/D.html#bib652" title="An Introduction to Chaotic Dynamical Systems">1986</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="3.7.html" rel="prev" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7 </span>Ordinary Differential Equations</span></a><a class="ltx_ref" href="3.9.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.9 </span>Acceleration of Convergence</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

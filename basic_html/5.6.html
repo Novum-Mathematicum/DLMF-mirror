@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/5.6";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="5.html#PT2" rel="up" title="Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.html" rel="up up" title="Chapter 5 Gamma Function"/>
+<link href="index.html" rel="start" title=""/>
+<link href="5.5.html" rel="prev" title="§5.5 Functional Relations ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.7.html" rel="next" title="§5.7 Series Expansions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.1.html" rel="section" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"/>
+<link href="5.2.html" rel="section" title="§5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.3.html" rel="section" title="§5.3 Graphics ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.4.html" rel="section" title="§5.4 Special Values and Extrema ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.5.html" rel="section" title="§5.5 Functional Relations ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.7.html" rel="section" title="§5.7 Series Expansions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.8.html" rel="section" title="§5.8 Infinite Products ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.9.html" rel="section" title="§5.9 Integral Representations ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.10.html" rel="section" title="§5.10 Continued Fractions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.11.html" rel="section" title="§5.11 Asymptotic Expansions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.12.html" rel="section" title="§5.12 Beta Function ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.13.html" rel="section" title="§5.13 Integrals ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.14.html" rel="section" title="§5.14 Multidimensional Integrals ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.15.html" rel="section" title="§5.15 Polygamma Functions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.16.html" rel="section" title="§5.16 Sums ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.17.html" rel="section" title="§5.17 Barnes’ 𝐺-Function (Double Gamma Function) ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.18.html" rel="section" title="§5.18 𝑞-Gamma and 𝑞-Beta Functions ‣ Properties ‣ Chapter 5 Gamma Function"/>
+<link href="5.19.html" rel="section" title="§5.19 Mathematical Applications ‣ Applications ‣ Chapter 5 Gamma Function"/>
+<link href="5.20.html" rel="section" title="§5.20 Physical Applications ‣ Applications ‣ Chapter 5 Gamma Function"/>
+<link href="5.21.html" rel="section" title="§5.21 Methods of Computation ‣ Computation ‣ Chapter 5 Gamma Function"/>
+<link href="5.22.html" rel="section" title="§5.22 Tables ‣ Computation ‣ Chapter 5 Gamma Function"/>
+<link href="5.23.html" rel="section" title="§5.23 Approximations ‣ Computation ‣ Chapter 5 Gamma Function"/>
+<link href="5.24.html" rel="section" title="§5.24 Software ‣ Computation ‣ Chapter 5 Gamma Function"/>
+<link href="5.SB1.html" rel="sidebar" title="Sidebar 5.SB1: Gamma &amp; Digamma Phase Plots ‣ Chapter 5 Gamma Function"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="gamma function, inequalities, maxima and minima, psi function" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="5.6.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="5.6.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="5.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Gamma Function</span></a><a class="ltx_ref" href="5.html#PT2" rel="up" title="In Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="5.5.html" rel="prev" title="In Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.5 </span>Functional Relations</span></a><a class="ltx_ref" href="5.7.html" rel="next" title="In Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.7 </span>Series Expansions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§5.6 </span>Inequalities</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=gamma%20function">gamma function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inequalities">inequalities</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=maxima%20and%20minima">maxima and minima</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="5.6.html" title="">http://dlmf.nist.gov/5.6</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="5.6.html#i"><span class="ltx_tag ltx_tag_subsection">§5.6(i) </span>Real Variables</a></li>
+<li class="ltx_tocentry"><a href="5.6.html#ii"><span class="ltx_tag ltx_tag_subsection">§5.6(ii) </span>Complex Variables</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§5.6(i) </span>Real Variables</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="5.6.html#E1" title="(5.6.1) ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.1</span></a>) see §<a class="ltx_ref" href="5.11.html#ii" title="§5.11(ii) Error Bounds and Exponential Improvement ‣ §5.11 Asymptotic Expansions ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.11(ii)</span></a>; for
+(<a class="ltx_ref" href="5.6.html#E2" title="(5.6.2) ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.2</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib881" title="A harmonic mean inequality for the gamma function">1974</a>)</cite>; for
+(<a class="ltx_ref" href="5.6.html#E3" title="(5.6.3) ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.3</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Alzer (<a class="ltx_ref" href="bib/index.html#bib68" title="A harmonic mean inequality for the gamma function">1997a</a>)</cite>; for
+(<a class="ltx_ref" href="5.6.html#E4" title="(5.6.4) ‣ Gautschi’s Inequality ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.4</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib870" title="Some elementary inequalities relating to the gamma and incomplete gamma function">1959b</a>)</cite> or <cite class="ltx_cite ltx_citemacro_citet">Laforgia (<a class="ltx_ref" href="bib/L.html#bib1361" title="Further inequalities for the gamma function">1984</a>)</cite>, and for
+(<a class="ltx_ref" href="5.6.html#E5" title="(5.6.5) ‣ Kershaw’s Inequality ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.5</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Kershaw (<a class="ltx_ref" href="bib/K.html#bib1260" title="Some extensions of W. Gautschi’s inequalities for the gamma function">1983</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Lorch (<a class="ltx_ref" href="bib/L.html#bib1460" title="Comparison of a pair of upper bounds for a ratio of gamma functions">2002</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.0.10.I2.ix6.p1" title="In Other Changes ‣ Version 1.0.10 (August 7, 2015) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.10) for  References</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.17.I2.ix14.p1" title="In Other Changes ‣ Version 1.0.17 (December 22, 2017) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.17) for  References</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  References</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.7.I5.ix7.p1" title="In Other Changes ‣ Version 1.0.7 (March 21, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.7) for  References</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.i" title="">http://dlmf.nist.gov/5.6.i</a></dd>
+<dt>Clarification (effective with 1.0.17):</dt>
+<dd>
+A mention of the references <cite class="ltx_cite ltx_citemacro_citet">Mortici (<a class="ltx_ref" href="bib/M.html#bib2811" title="New sharp bounds for gamma and digamma functions">2011b</a>, <a class="ltx_ref" href="bib/M.html#bib2812" title="Further improvements of some double inequalities for bounding the gamma function">2013b</a>)</cite> was removed because
+the results contained therein are weaker than (<a class="ltx_ref" href="5.6.html#E1" title="(5.6.1) ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.1</span></a>).
+</dd>
+<dt>Addition (effective with 1.0.10):</dt>
+<dd>
+The reference to <cite class="ltx_cite ltx_citemacro_citet">Mortici (<a class="ltx_ref" href="bib/M.html#bib2812" title="Further improvements of some double inequalities for bounding the gamma function">2013b</a>)</cite> has been added at the end of this subsection.
+</dd>
+<dt>Addition (effective with 1.0.7):</dt>
+<dd>
+The reference to <cite class="ltx_cite ltx_citemacro_citet">Mortici (<a class="ltx_ref" href="bib/M.html#bib2811" title="New sharp bounds for gamma and digamma functions">2011b</a>)</cite> has been added at the end of this subsection.
+</dd>
+<dt>Addition (effective with 1.0.5):</dt>
+<dd>
+References to <cite class="ltx_cite ltx_citemacro_citet">Alzer (<a class="ltx_ref" href="bib/index.html#bib2758" title="Gamma function inequalities">2008</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Qi (<a class="ltx_ref" href="bib/Q.html#bib2759" title="A new lower bound in the second Kershaw’s double inequality">2008</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Koumandos and Lamprecht (<a class="ltx_ref" href="bib/K.html#bib2760" title="Some completely monotonic functions of positive order">2010</a>)</cite>
+have been added at the end of this subsection. Also,
+(<a class="ltx_ref" href="5.6.html#E5" title="(5.6.5) ‣ Kershaw’s Inequality ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.5</span></a>) has been identified as Kershaw’s Inequality.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Throughout this subsection <math altimg="m16.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="53px" altimg-valign="-7px" altimg-width="361px" alttext="1&lt;(2\pi)^{-1/2}x^{(1/2)-x}e^{x}\Gamma\left(x\right)&lt;e^{1/(12x)}," class="ltx_Math" display="block"><mrow><mrow><mn>1</mn><mo>&lt;</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./5.1#t1.r3" title="real variable">x</mi><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mi href="./5.1#t1.r3" title="real variable">x</mi></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mi href="./5.1#t1.r3" title="real variable">x</mi></msup><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>&lt;</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>12</mn><mo>⁢</mo><mi href="./5.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m8.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E1" title="">http://dlmf.nist.gov/5.6.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="53px" altimg-valign="-21px" altimg-width="195px" alttext="\frac{1}{\Gamma\left(x\right)}+\frac{1}{\Gamma\left(1/x\right)}\leq 2," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>/</mo><mi href="./5.1#t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow><mo>≤</mo><mn>2</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E2" title="">http://dlmf.nist.gov/5.6.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="53px" altimg-valign="-21px" altimg-width="246px" alttext="\frac{1}{(\Gamma\left(x\right))^{2}}+\frac{1}{(\Gamma\left(1/x\right))^{2}}%
+\leq 2," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>/</mo><mi href="./5.1#t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow><mo>≤</mo><mn>2</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E3" title="">http://dlmf.nist.gov/5.6.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Gautschi’s Inequality</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="56px" altimg-valign="-21px" altimg-width="289px" alttext="x^{1-s}&lt;\frac{\Gamma\left(x+1\right)}{\Gamma\left(x+s\right)}&lt;(x+1)^{1-s}," class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./5.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>−</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></mrow></msup><mo>&lt;</mo><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>&lt;</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m1.png" altimg-height="18px" altimg-valign="-3px" altimg-width="90px" alttext="0&lt;s&lt;1" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi><mo>&lt;</mo><mn>1</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="5.1.html#t1.r5" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></math>:  real or complex variable</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E4" title="">http://dlmf.nist.gov/5.6.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#Px1.info" title="Gautschi’s Inequality ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Kershaw’s Inequality</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inequalities">inequalities</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=psi%20function">psi function</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="149px" altimg-valign="-21px" altimg-width="658px" alttext="\exp\left((1-s)\psi\left(x+s^{1/2}\right)\right)\leq\frac{\Gamma\left(x+1%
+\right)}{\Gamma\left(x+s\right)}\leq\exp\left((1-s)\psi\left(x+\tfrac{1}{2}(s+%
+1)\right)\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi href="./5.2#E2" title="psi (or digamma) function">ψ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><msup><mi href="./5.1#t1.r5" title="real or complex variable">s</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>≤</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi href="./5.2#E2" title="psi (or digamma) function">ψ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./5.1#t1.r5" title="real or complex variable">s</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m1.png" altimg-height="18px" altimg-valign="-3px" altimg-width="90px" alttext="0&lt;s&lt;1" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi href="./5.1#t1.r5" title="real or complex variable">s</mi><mo>&lt;</mo><mn>1</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="5.2.html#E2" title="(5.2.2) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="49px" alttext="\psi\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E2" title="psi (or digamma) function">ψ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: psi (or digamma) function</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m4.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="5.1.html#t1.r5" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m15.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./5.1#t1.r5" title="real or complex variable">s</mi></math>:  real or complex variable</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E5" title="">http://dlmf.nist.gov/5.6.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#Px2.info" title="Kershaw’s Inequality ‣ §5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#i.info" title="§5.6(i) Real Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(i)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px2.p2">
+<p class="ltx_p">For further results see <cite class="ltx_cite ltx_citemacro_citet">Alzer (<a class="ltx_ref" href="bib/index.html#bib2758" title="Gamma function inequalities">2008</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Qi (<a class="ltx_ref" href="bib/Q.html#bib2759" title="A new lower bound in the second Kershaw’s double inequality">2008</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Koumandos and Lamprecht (<a class="ltx_ref" href="bib/K.html#bib2760" title="Some completely monotonic functions of positive order">2010</a>)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§5.6(ii) </span>Complex Variables</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="5.6.html#E6" title="(5.6.6) ‣ §5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.6</span></a>)–(<a class="ltx_ref" href="5.6.html#E7" title="(5.6.7) ‣ §5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.7</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Carlson (<a class="ltx_ref" href="bib/C.html#bib434" title="Special Functions of Applied Mathematics">1977b</a>, p. 51)</cite>; for
+(<a class="ltx_ref" href="5.6.html#E8" title="(5.6.8) ‣ §5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.8</span></a>)–(<a class="ltx_ref" href="5.6.html#E9" title="(5.6.9) ‣ §5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.6.9</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Paris and Kaminski (<a class="ltx_ref" href="bib/P.html#bib1845" title="Asymptotics and Mellin-Barnes Integrals">2001</a>, p. 34)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.ii" title="">http://dlmf.nist.gov/5.6.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="70px" altimg-valign="-7px" altimg-width="125px" alttext="|\Gamma\left(x+\mathrm{i}y\right)|\leq|\Gamma\left(x\right)|," class="ltx_Math" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./5.1#t1.r3" title="real variable">y</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m6.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">y</mi></math>:  real variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">6.1.26</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E6" title="">http://dlmf.nist.gov/5.6.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="99px" altimg-valign="-7px" altimg-width="134px" alttext="|\Gamma\left(x+\mathrm{i}y\right)|\geq(\operatorname{sech}\left(\pi y\right))^%
+{1/2}\Gamma\left(x\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./5.1#t1.r3" title="real variable">y</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≥</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./5.1#t1.r3" title="real variable">y</mi></mrow><mo>)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m19.png" altimg-height="29px" altimg-valign="-9px" altimg-width="57px" alttext="x\geq\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>≥</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m8.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.28.html#E6" title="(4.28.6) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m7.png" altimg-height="18px" altimg-valign="-2px" altimg-width="56px" alttext="\operatorname{sech}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic secant function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m6.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">y</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E7" title="">http://dlmf.nist.gov/5.6.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">For <math altimg="m12.png" altimg-height="21px" altimg-valign="-5px" altimg-width="88px" alttext="b-a\geq 1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./5.1#t1.r5" title="real or complex variable">b</mi><mo>−</mo><mi href="./5.1#t1.r5" title="real or complex variable">a</mi></mrow><mo>≥</mo><mn>1</mn></mrow></math>, <math altimg="m11.png" altimg-height="20px" altimg-valign="-5px" altimg-width="53px" alttext="a\geq 0" class="ltx_Math" display="inline"><mrow><mi href="./5.1#t1.r5" title="real or complex variable">a</mi><mo>≥</mo><mn>0</mn></mrow></math>, and <math altimg="m21.png" altimg-height="22px" altimg-valign="-6px" altimg-width="98px" alttext="z=x+iy" class="ltx_Math" display="inline"><mrow><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo>=</mo><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./5.1#t1.r3" title="real variable">y</mi></mrow></mrow></mrow></math> with <math altimg="m16.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="62px" altimg-valign="-22px" altimg-width="300px" alttext="\left|\frac{\Gamma\left(z+a\right)}{\Gamma\left(z+b\right)}\right|\leq\frac{1}%
+{|z|^{b-a}}." class="ltx_Math" display="block"><mrow><mrow><mrow><mo>|</mo><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo>+</mo><mi href="./5.1#t1.r5" title="real or complex variable">a</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo>+</mo><mi href="./5.1#t1.r5" title="real or complex variable">b</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>|</mo></mrow><mo>≤</mo><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">|</mo><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mrow><mi href="./5.1#t1.r5" title="real or complex variable">b</mi><mo>−</mo><mi href="./5.1#t1.r5" title="real or complex variable">a</mi></mrow></msup></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="5.1.html#t1.r4" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./5.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="5.1.html#t1.r5" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m10.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./5.1#t1.r5" title="real or complex variable">a</mi></math>:  real or complex variable</a> and
+<a class="ltx_ref" href="5.1.html#t1.r5" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./5.1#t1.r5" title="real or complex variable">b</mi></math>:  real or complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E8" title="">http://dlmf.nist.gov/5.6.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">For <math altimg="m18.png" altimg-height="20px" altimg-valign="-5px" altimg-width="54px" alttext="x\geq 0" class="ltx_Math" display="inline"><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>≥</mo><mn>0</mn></mrow></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">5.6.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="72px" altimg-valign="-9px" altimg-width="435px" alttext="|\Gamma\left(z\right)|\leq(2\pi)^{1/2}|z|^{x-(1/2)}e^{-\pi|y|/2}\exp\left(%
+\tfrac{1}{6}|z|^{-1}\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mrow><mi href="./5.1#t1.r3" title="real variable">x</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi href="./5.1#t1.r3" title="real variable">y</mi><mo stretchy="false">|</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>6</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi href="./5.1#t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m8.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m4.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="5.1.html#t1.r3" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./5.1#t1.r3" title="real variable">y</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="5.1.html#t1.r4" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./5.1#t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/5.6.E9" title="">http://dlmf.nist.gov/5.6.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/5.6.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/5.6.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/5.6.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="5.6.html#ii.info" title="§5.6(ii) Complex Variables ‣ §5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6(ii)</span></a>,
+<a class="ltx_ref" href="5.6.html#info" title="§5.6 Inequalities ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.6</span></a> and
+<a class="ltx_ref" href="5.html#info" title="Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">Ch.5</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="5.5.html" rel="prev" title="In Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.5 </span>Functional Relations</span></a><a class="ltx_ref" href="5.7.html" rel="next" title="In Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.7 </span>Series Expansions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/3.6";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="3.html#PT1" rel="up" title="Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.html" rel="up up" title="Chapter 3 Numerical Methods"/>
+<link href="index.html" rel="start" title=""/>
+<link href="3.5.html" rel="prev" title="§3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.7.html" rel="next" title="§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.1.html" rel="section" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.2.html" rel="section" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.3.html" rel="section" title="§3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.4.html" rel="section" title="§3.4 Differentiation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.5.html" rel="section" title="§3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.7.html" rel="section" title="§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.8.html" rel="section" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.9.html" rel="section" title="§3.9 Acceleration of Convergence ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.10.html" rel="section" title="§3.10 Continued Fractions ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.11.html" rel="section" title="§3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.12.html" rel="section" title="§3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Anger–Weber functions, Bessel functions, Miller’s algorithm, Olver’s algorithm, backward recursion, backward recursion method, boundary-value methods, boundary-value methods or problems, computation, computation by recursion, difference equations, distinguished solutions, homogeneous equations, inhomogeneous equations, minimal solutions, normalizing factor, numerical solution, recessive solutions, stability" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="3.6.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="3.6.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="3.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Numerical Methods</span></a><a class="ltx_ref" href="3.html#PT1" rel="up" title="In Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title">Areas</span></a><a class="ltx_ref" href="3.5.html" rel="prev" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Quadrature</span></a><a class="ltx_ref" href="3.7.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7 </span>Ordinary Differential Equations</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§3.6 </span>Linear Difference Equations</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solution">numerical solution</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.13.html#v.p1" title="§11.13(v) Difference Equations ‣ §11.13 Methods of Computation ‣ Computation ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.13(v)</span></a>,
+<a class="ltx_ref" href="14.32.html#p1" title="§14.32 Methods of Computation ‣ Computation ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.32</span></a>,
+<a class="ltx_ref" href="18.40.html#i.p1" title="§18.40(i) Computation of Polynomials ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(i)</span></a>,
+<a class="ltx_ref" href="28.34.html#I4.ix2.p1" title="In §28.34(iii) Floquet Solutions ‣ §28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">item (d)</span></a>,
+<a class="ltx_ref" href="29.20.html#i.p2" title="§29.20(i) Lamé Functions ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(i)</span></a>,
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>,
+<a class="ltx_ref" href="30.16.html#ii.p3" title="§30.16(ii) Spheroidal Wave Functions of the First Kind ‣ §30.16 Methods of Computation ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.16(ii)</span></a>,
+<a class="ltx_ref" href="33.23.html#iv.p1" title="§33.23(iv) Recurrence Relations ‣ §33.23 Methods of Computation ‣ Computation ‣ Chapter 33 Coulomb Functions"><span class="ltx_text ltx_ref_tag">§33.23(iv)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="3.6.html" title="">http://dlmf.nist.gov/3.6</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="3.6.html#i"><span class="ltx_tag ltx_tag_subsection">§3.6(i) </span>Introduction</a></li>
+<li class="ltx_tocentry"><a href="3.6.html#ii"><span class="ltx_tag ltx_tag_subsection">§3.6(ii) </span>Homogeneous Equations</a></li>
+<li class="ltx_tocentry"><a href="3.6.html#iii"><span class="ltx_tag ltx_tag_subsection">§3.6(iii) </span>Miller’s Algorithm</a></li>
+<li class="ltx_tocentry"><a href="3.6.html#iv"><span class="ltx_tag ltx_tag_subsection">§3.6(iv) </span>Inhomogeneous Equations</a></li>
+<li class="ltx_tocentry"><a href="3.6.html#v"><span class="ltx_tag ltx_tag_subsection">§3.6(v) </span>Olver’s Algorithm</a></li>
+<li class="ltx_tocentry"><a href="3.6.html#vi"><span class="ltx_tag ltx_tag_subsection">§3.6(vi) </span>Examples</a></li>
+<li class="ltx_tocentry"><a href="3.6.html#vii"><span class="ltx_tag ltx_tag_subsection">§3.6(vii) </span>Linear Difference Equations of Other Orders</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(i) </span>Introduction</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m82.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\Delta" class="ltx_Math" display="inline"><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi></math>: forward difference operator</span></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="2.9.html#i.p1" title="§2.9(i) Distinct Characteristic Values ‣ §2.9 Difference Equations ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">§2.9(i)</span></a>,
+<a class="ltx_ref" href="26.8.html#v.p5" title="§26.8(v) Identities ‣ §26.8 Set Partitions: Stirling Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.8(v)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.i" title="">http://dlmf.nist.gov/3.6.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Many special functions satisfy second-order recurrence relations, or difference
+equations, of the form
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="25px" altimg-valign="-7px" altimg-width="296px" alttext="a_{n}w_{n+1}-b_{n}w_{n}+c_{n}w_{n-1}=d_{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>+</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>=</mo><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient (locally)</span>,
+<span class="ltx_text"><math altimg="m130.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></math>:  coefficient (locally)</span>,
+<span class="ltx_text"><math altimg="m131.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></math>:  coefficient (locally)</span> and
+<span class="ltx_text"><math altimg="m134.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="d_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></math>:  coefficient (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#iv.p1" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(iv)</span></a>,
+<a class="ltx_ref" href="3.6.html#v.p1" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E1" title="">http://dlmf.nist.gov/3.6.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#i.info" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(i)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">or equivalently,</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="29px" altimg-valign="-7px" altimg-width="545px" alttext="a_{n}\Delta^{2}w_{n-1}+(2a_{n}-b_{n})\Delta w_{n-1}+(a_{n}-b_{n}+c_{n})w_{n-1}%
+=d_{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>⁢</mo><mrow><msup><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mn>2</mn></msup><mo>⁡</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></mrow><mo>−</mo><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mo>⁡</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>−</mo><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></mrow><mo>+</mo><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>=</mo><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m82.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\Delta" class="ltx_Math" display="inline"><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi></math>: forward difference operator</a>,
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m130.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m131.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m134.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="d_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E2" title="">http://dlmf.nist.gov/3.6.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#i.info" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(i)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m81.png" altimg-height="23px" altimg-valign="-7px" altimg-width="196px" alttext="\Delta w_{n-1}=w_{n}-w_{n-1}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mo>⁡</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub><mo>−</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></math>,
+<math altimg="m83.png" altimg-height="26px" altimg-valign="-7px" altimg-width="239px" alttext="\Delta^{2}w_{n-1}=\Delta w_{n}-\Delta w_{n-1}" class="ltx_Math" display="inline"><mrow><mrow><msup><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mn>2</mn></msup><mo>⁡</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><mrow><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mo>⁡</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow><mo>−</mo><mrow><mi href="./3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mo>⁡</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow></math>, and <math altimg="m152.png" altimg-height="19px" altimg-valign="-3px" altimg-width="56px" alttext="n\in\mathbb{Z}" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow></math>. If
+<math altimg="m133.png" altimg-height="21px" altimg-valign="-5px" altimg-width="64px" alttext="d_{n}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></math>, <math altimg="m91.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\forall n" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r12" rspace="0.167em" title="for every">∀</mo><mi>n</mi></mrow></math>, then the difference equation is <em class="ltx_emph ltx_font_italic">homogeneous</em>;
+otherwise it is <em class="ltx_emph ltx_font_italic">inhomogeneous</em>.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">Difference equations are simple and attractive for computation. In practice,
+however, problems of severe instability often arise and in
+§§<a class="ltx_ref" href="3.6.html#ii" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(ii)</span></a>–<a class="ltx_ref" href="3.6.html#vii" title="§3.6(vii) Linear Difference Equations of Other Orders ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(vii)</span></a> we show how these
+difficulties may be overcome.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(ii) </span>Homogeneous Equations</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=backward%20recursion">backward recursion</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=backward%20recursion%20method">backward recursion method</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=distinguished%20solutions">distinguished solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=homogeneous%20equations">homogeneous equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=minimal%20solutions">minimal solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solution">numerical solution</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=recessive%20solutions">recessive solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=stability">stability</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="15.19.html#iv.p1" title="§15.19(iv) Recurrence Relations ‣ §15.19 Methods of Computation ‣ Computation ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">§15.19(iv)</span></a>,
+<a class="ltx_ref" href="3.6.html#i.p2" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.ii" title="">http://dlmf.nist.gov/3.6.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Given numerical values of <math altimg="m158.png" altimg-height="16px" altimg-valign="-5px" altimg-width="28px" alttext="w_{0}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub></math> and <math altimg="m160.png" altimg-height="16px" altimg-valign="-5px" altimg-width="28px" alttext="w_{1}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>1</mn></msub></math>, the solution <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> of the equation</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="285px" alttext="a_{n}w_{n+1}-b_{n}w_{n}+c_{n}w_{n-1}=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>+</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m130.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m131.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#ii.p1" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(ii)</span></a>,
+<a class="ltx_ref" href="3.6.html#ii.p2" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(ii)</span></a>,
+<a class="ltx_ref" href="3.6.html#v.p1" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a>,
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E3" title="">http://dlmf.nist.gov/3.6.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#ii.info" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(ii)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with <math altimg="m128.png" altimg-height="22px" altimg-valign="-6px" altimg-width="65px" alttext="a_{n}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>, <math altimg="m91.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\forall n" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r12" rspace="0.167em" title="for every">∀</mo><mi>n</mi></mrow></math>, can be computed recursively for
+<math altimg="m149.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=2,3,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>. Unless exact arithmetic is being used, however, each step of
+the calculation introduces rounding errors. These errors have the effect of
+perturbing the solution by unwanted small multiples of <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> and of an
+independent solution <math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math>, say. This is of little consequence if the wanted
+solution is growing in magnitude at least as fast as any other solution of
+(<a class="ltx_ref" href="3.6.html#E3" title="(3.6.3) ‣ §3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.3</span></a>), and the recursion process is <em class="ltx_emph ltx_font_italic">stable</em>.</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">But suppose that <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> is a nontrivial solution such that</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="113px" alttext="w_{n}/g_{n}\to 0," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub><mo>/</mo><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a> and
+<a class="ltx_ref" href="3.6.html#ii.p1" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math>:  solution</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E4" title="">http://dlmf.nist.gov/3.6.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#ii.info" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(ii)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> is said to be a <em class="ltx_emph ltx_font_italic">recessive</em> (equivalently, <em class="ltx_emph ltx_font_italic">minimal</em> or
+<em class="ltx_emph ltx_font_italic">distinguished</em>) <em class="ltx_emph ltx_font_italic">solution</em> as <math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>, and it is unique
+except for a constant factor. In this situation the unwanted multiples of <math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math>
+grow more rapidly than the wanted solution, and the computations are
+<em class="ltx_emph ltx_font_italic">unstable</em>. Stability can be restored, however, by <em class="ltx_emph ltx_font_italic">backward
+recursion</em>, provided that <math altimg="m132.png" altimg-height="22px" altimg-valign="-6px" altimg-width="63px" alttext="c_{n}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub><mo>≠</mo><mn>0</mn></mrow></math>, <math altimg="m91.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\forall n" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r12" rspace="0.167em" title="for every">∀</mo><mi>n</mi></mrow></math>: starting from <math altimg="m165.png" altimg-height="16px" altimg-valign="-5px" altimg-width="35px" alttext="w_{N}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi href="./3.6#ii.p2" title="backward recursion start">N</mi></msub></math> and
+<math altimg="m162.png" altimg-height="18px" altimg-valign="-7px" altimg-width="56px" alttext="w_{N+1}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#ii.p2" title="backward recursion start">N</mi><mo>+</mo><mn>1</mn></mrow></msub></math>, with <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#ii.p2" title="backward recursion start">N</mi></math> large, equation (<a class="ltx_ref" href="3.6.html#E3" title="(3.6.3) ‣ §3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.3</span></a>) is applied to generate
+in succession <math altimg="m163.png" altimg-height="18px" altimg-valign="-7px" altimg-width="188px" alttext="w_{N-1},w_{N-2},\dots,w_{0}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#ii.p2" title="backward recursion start">N</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#ii.p2" title="backward recursion start">N</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub></mrow></math>. The unwanted multiples of <math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math>
+now decay in comparison with <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>, hence are of little consequence.
+</p>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">The values of <math altimg="m165.png" altimg-height="16px" altimg-valign="-5px" altimg-width="35px" alttext="w_{N}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi href="./3.6#ii.p2" title="backward recursion start">N</mi></msub></math> and <math altimg="m162.png" altimg-height="18px" altimg-valign="-7px" altimg-width="56px" alttext="w_{N+1}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#ii.p2" title="backward recursion start">N</mi><mo>+</mo><mn>1</mn></mrow></msub></math> needed to begin the backward recursion may be
+available, for example, from asymptotic expansions (§<a class="ltx_ref" href="2.9.html" title="§2.9 Difference Equations ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.9</span></a>).
+However, there are alternative procedures that do not require <math altimg="m165.png" altimg-height="16px" altimg-valign="-5px" altimg-width="35px" alttext="w_{N}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi href="./3.6#ii.p2" title="backward recursion start">N</mi></msub></math> and
+<math altimg="m162.png" altimg-height="18px" altimg-valign="-7px" altimg-width="56px" alttext="w_{N+1}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#ii.p2" title="backward recursion start">N</mi><mo>+</mo><mn>1</mn></mrow></msub></math> to be known in advance. These are described in
+§§ <a class="ltx_ref" href="3.6.html#iii" title="§3.6(iii) Miller’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(iii)</span></a> and <a class="ltx_ref" href="3.6.html#v" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(v)</span></a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(iii) </span>Miller’s Algorithm</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Miller%20algorithm">Miller’s algorithm</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=homogeneous%20equations">homogeneous equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=normalizing%20factor">normalizing factor</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solution">numerical solution</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#Px1.p1" title="Example 1. Bessel Functions ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#ii.p3" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(ii)</span></a>,
+<a class="ltx_ref" href="6.18.html#ii.p1" title="§6.18(ii) Auxiliary Functions ‣ §6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.iii" title="">http://dlmf.nist.gov/3.6.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Because the recessive solution of a homogeneous equation is the fastest growing
+solution in the backward direction, it occurred to J.C.P. Miller
+(<cite class="ltx_cite ltx_citemacro_citet">Bickley<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/B.html#bib278" title="Bessel Functions. Part II: Functions of Positive Integer Order">1952</a>, pp. xvi–xvii)</cite>) that arbitrary “trial values” can be
+assigned to <math altimg="m165.png" altimg-height="16px" altimg-valign="-5px" altimg-width="35px" alttext="w_{N}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi href="./3.6#ii.p2" title="backward recursion start">N</mi></msub></math> and <math altimg="m162.png" altimg-height="18px" altimg-valign="-7px" altimg-width="56px" alttext="w_{N+1}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#ii.p2" title="backward recursion start">N</mi><mo>+</mo><mn>1</mn></mrow></msub></math>, for example, <math altimg="m68.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math> and <math altimg="m67.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math>. A “trial solution”
+is then computed by backward recursion, in the course of which the original
+components of the unwanted solution <math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math> die away. It therefore remains to
+apply a normalizing factor <math altimg="m84.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi mathvariant="normal">Λ</mi></math>. The process is then repeated with a
+higher value of <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#ii.p2" title="backward recursion start">N</mi></math>, and the normalized solutions compared. If agreement is not
+within a prescribed tolerance the cycle is continued.</p>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">The normalizing factor <math altimg="m84.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi mathvariant="normal">Λ</mi></math> can be the true value of <math altimg="m158.png" altimg-height="16px" altimg-valign="-5px" altimg-width="28px" alttext="w_{0}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub></math> divided by its
+trial value, or <math altimg="m84.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi mathvariant="normal">Λ</mi></math> can be chosen to satisfy a known property of the
+wanted solution of the form</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="67px" altimg-valign="-28px" altimg-width="139px" alttext="\sum_{n=0}^{\infty}\lambda_{n}w_{n}=1," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi href="./3.6#iii.p2" title="constants">λ</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a> and
+<a class="ltx_ref" href="3.6.html#iii.p2" title="§3.6(iii) Miller’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m95.png" altimg-height="21px" altimg-valign="-5px" altimg-width="28px" alttext="\lambda_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#iii.p2" title="constants">λ</mi><mi>n</mi></msub></math>:  constants</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E5" title="">http://dlmf.nist.gov/3.6.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#iii.info" title="§3.6(iii) Miller’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(iii)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where the <math altimg="m94.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi>λ</mi></math>’s are constants. The latter method is usually superior when the
+true value of <math altimg="m158.png" altimg-height="16px" altimg-valign="-5px" altimg-width="28px" alttext="w_{0}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub></math> is zero or pathologically small.
+</p>
+</div>
+<div class="ltx_para" id="iii.p3">
+<p class="ltx_p">For further information on Miller’s algorithm, including examples,
+convergence proofs, and error analyses, see <cite class="ltx_cite ltx_citemacro_citet">Wimp (<a class="ltx_ref" href="bib/W.html#bib2421" title="Computation with Recurrence Relations">1984</a>, Chapter 4)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib877" title="Computational aspects of three-term recurrence relations">1967</a>, <a class="ltx_ref" href="bib/G.html#bib894" title="The Computation of Special Functions by Linear Difference Equations">1997b</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1785" title="Error analysis of Miller’s recurrence algorithm">1964a</a>)</cite>. See
+also <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib877" title="Computational aspects of three-term recurrence relations">1967</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Gil<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/G.html#bib935" title="Numerical Methods for Special Functions">2007a</a>, Chapter 4)</cite> for the
+computation of recessive solutions via continued fractions.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(iv) </span>Inhomogeneous Equations</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=backward%20recursion%20method">backward recursion method</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=boundary-value%20methods">boundary-value methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=boundary-value%20methods%20or%20problems">boundary-value methods or problems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inhomogeneous%20equations">inhomogeneous equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solution">numerical solution</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1790" title="Numerical solution of second-order linear difference equations">1967a</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.6.html#v.p1" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.iv" title="">http://dlmf.nist.gov/3.6.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">Similar principles apply to equation (<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.1</span></a>) when <math altimg="m129.png" altimg-height="22px" altimg-valign="-6px" altimg-width="85px" alttext="a_{n}c_{n}\neq 0" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math>,
+<math altimg="m91.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\forall n" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r12" rspace="0.167em" title="for every">∀</mo><mi>n</mi></mrow></math>, and <math altimg="m135.png" altimg-height="22px" altimg-valign="-6px" altimg-width="64px" alttext="d_{n}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub><mo>≠</mo><mn>0</mn></mrow></math> for some, or all, values of <math altimg="m151.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math>. If, as
+<math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>, the wanted solution <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> grows (decays) in magnitude at least
+as fast as any solution of the corresponding homogeneous equation, then forward
+(backward) recursion is stable.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">A new problem arises, however, if, as <math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>, the asymptotic behavior
+of <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> is intermediate to those of two independent solutions <math altimg="m141.png" altimg-height="22px" altimg-valign="-6px" altimg-width="26px" alttext="f_{n}" class="ltx_Math" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math> and <math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math>
+of the corresponding inhomogeneous equation (the complementary functions). More
+precisely, assume that <math altimg="m139.png" altimg-height="22px" altimg-valign="-6px" altimg-width="62px" alttext="f_{0}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>, <math altimg="m143.png" altimg-height="22px" altimg-valign="-6px" altimg-width="64px" alttext="g_{n}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub><mo>≠</mo><mn>0</mn></mrow></math> for all sufficiently large
+<math altimg="m151.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math>, and as <math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.6.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="27px" altimg-valign="-7px" altimg-width="60px" alttext="\displaystyle f_{n}/g_{n}" class="ltx_Math" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>/</mo><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="23px" altimg-valign="-6px" altimg-width="49px" alttext="\displaystyle\to 0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo stretchy="false">→</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="27px" altimg-valign="-7px" altimg-width="64px" alttext="\displaystyle w_{n}/g_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub><mo>/</mo><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="19px" altimg-valign="-2px" altimg-width="49px" alttext="\displaystyle\to 0." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo stretchy="false">→</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a> and
+<a class="ltx_ref" href="3.6.html#ii.p1" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m142.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#ii.p1" title="solution">g</mi><mi>n</mi></msub></math>:  solution</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E6" title="">http://dlmf.nist.gov/3.6.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E6a.png">png</a>, <a href="http://dlmf.nist.gov/3.6.E6b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#iv.info" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(iv)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then computation of <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> by forward recursion is unstable. If it also happens
+that <math altimg="m140.png" altimg-height="25px" altimg-valign="-7px" altimg-width="105px" alttext="f_{n}/w_{n}\to 0" class="ltx_Math" display="inline"><mrow><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>/</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow></math> as <math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>, then computation of <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> by backward
+recursion is unstable as well. However, <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> can be computed successfully in
+these circumstances by <em class="ltx_emph ltx_font_italic">boundary-value methods</em>, as follows.
+</p>
+</div>
+<div class="ltx_para" id="iv.p3">
+<p class="ltx_p">Let us assume the normalizing condition is of the form <math altimg="m157.png" altimg-height="21px" altimg-valign="-5px" altimg-width="68px" alttext="w_{0}=\lambda" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub><mo>=</mo><mi href="./3.6#iv.p3" title="constant">λ</mi></mrow></math>, where
+<math altimg="m94.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.6#iv.p3" title="constant">λ</mi></math> is a constant, and then solve the following tridiagonal system of
+algebraic equations for the unknowns
+<math altimg="m161.png" altimg-height="34px" altimg-valign="-10px" altimg-width="200px" alttext="w_{1}^{(N)},w_{2}^{(N)},\dots,w_{N-1}^{(N)}" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow></math>; see §<a class="ltx_ref" href="3.2.html#ii" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2(ii)</span></a>.
+Here <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi></math> is an arbitrary positive integer.
+</p>
+</div>
+<div class="ltx_para" id="iv.p4">
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="458px" altimg-valign="-75px" altimg-width="373px" alttext="\begin{bmatrix}-b_{1}&amp;a_{1}&amp;&amp;&amp;0\\
+c_{2}&amp;-b_{2}&amp;a_{2}\\
+&amp;\ddots&amp;\ddots&amp;\ddots\\
+&amp;&amp;c_{N-2}&amp;-b_{N-2}&amp;a_{N-2}\\
+0&amp;&amp;&amp;c_{N-1}&amp;-b_{N-1}\end{bmatrix}\begin{bmatrix}w_{1}^{(N)}\\
+w_{2}^{(N)}\\
+\vdots\\
+w_{N-2}^{(N)}\\
+w_{N-1}^{(N)}\end{bmatrix}=\begin{bmatrix}d_{1}-c_{1}\lambda\\
+d_{2}\\
+\vdots\\
+d_{N-2}\\
+d_{N-1}\end{bmatrix}." class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><msub><mi href="./3.6#E1" title="coefficient">b</mi><mn>1</mn></msub></mrow></mtd><mtd><msub><mi href="./3.6#E1" title="coefficient">a</mi><mn>1</mn></msub></mtd><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><msub><mi href="./3.6#E1" title="coefficient">c</mi><mn>2</mn></msub></mtd><mtd><mrow><mo>−</mo><msub><mi href="./3.6#E1" title="coefficient">b</mi><mn>2</mn></msub></mrow></mtd><mtd><msub><mi href="./3.6#E1" title="coefficient">a</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><msub><mi href="./3.6#E1" title="coefficient">c</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>2</mn></mrow></msub></mtd><mtd><mrow><mo>−</mo><msub><mi href="./3.6#E1" title="coefficient">b</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>2</mn></mrow></msub></mrow></mtd><mtd><msub><mi href="./3.6#E1" title="coefficient">a</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd><mtd><msub><mi href="./3.6#E1" title="coefficient">c</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><mrow><mo>−</mo><msub><mi href="./3.6#E1" title="coefficient">b</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr><mtr><mtd><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>2</mn></mrow><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr><mtr><mtd><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>1</mn></mrow><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><msub><mi href="./3.6#E1" title="coefficient">d</mi><mn>1</mn></msub><mo>−</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">c</mi><mn>1</mn></msub><mo>⁢</mo><mi href="./3.6#iv.p3" title="constant">λ</mi></mrow></mrow></mtd></mtr><mtr><mtd><msub><mi href="./3.6#E1" title="coefficient">d</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi href="./3.6#E1" title="coefficient">d</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi href="./3.6#E1" title="coefficient">d</mi><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#iv.p3" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi></math>:  arbitrary positive integer</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m130.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m131.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m134.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="d_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="3.6.html#iv.p3" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m94.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.6#iv.p3" title="constant">λ</mi></math>:  constant</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E7" title="">http://dlmf.nist.gov/3.6.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#iv.info" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(iv)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then as <math altimg="m77.png" altimg-height="18px" altimg-valign="-2px" altimg-width="76px" alttext="N\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> with <math altimg="m151.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math> fixed, <math altimg="m168.png" altimg-height="29px" altimg-valign="-5px" altimg-width="107px" alttext="w_{n}^{(N)}\to w_{n}" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mi href="./3.6#iv.p3" title="arbitrary positive integer">N</mi><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">→</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(v) </span>Olver’s Algorithm</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Olver%20algorithm">Olver’s algorithm</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.74.html#iv.p2" title="§10.74(iv) Recurrence Relations ‣ §10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.74(iv)</span></a>,
+<a class="ltx_ref" href="13.29.html#iv.p1" title="§13.29(iv) Recurrence Relations ‣ §13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.29(iv)</span></a>,
+<a class="ltx_ref" href="3.6.html#Px1.p1" title="Example 1. Bessel Functions ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#Px2.p2" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#ii.p3" title="§3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(ii)</span></a>,
+<a class="ltx_ref" href="3.7.html#iii.p4" title="§3.7(iii) Taylor-Series Method: Boundary-Value Problems ‣ §3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.7(iii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.v" title="">http://dlmf.nist.gov/3.6.v</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">To apply the method just described a succession of values can be prescribed for
+the arbitrary integer <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></math> and the results compared. However, a more powerful
+procedure combines the solution of the algebraic equations with the
+determination of the optimum value of <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></math>. It is applicable equally to the
+computation of the recessive solution of the homogeneous equation
+(<a class="ltx_ref" href="3.6.html#E3" title="(3.6.3) ‣ §3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.3</span></a>) or the computation of any solution <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> of the
+inhomogeneous equation (<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.1</span></a>) for which the conditions of
+§<a class="ltx_ref" href="3.6.html#iv" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(iv)</span></a> are satisfied.</p>
+</div>
+<div class="ltx_para" id="v.p2">
+<p class="ltx_p">Suppose again that <math altimg="m139.png" altimg-height="22px" altimg-valign="-6px" altimg-width="62px" alttext="f_{0}\neq 0" class="ltx_Math" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>, <math altimg="m158.png" altimg-height="16px" altimg-valign="-5px" altimg-width="28px" alttext="w_{0}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub></math> is given, and we wish to calculate
+<math altimg="m159.png" altimg-height="17px" altimg-valign="-6px" altimg-width="141px" alttext="w_{1},w_{2},\dots,w_{M}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>1</mn></msub><mo>,</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi href="./3.6#v.p2" title="order">M</mi></msub></mrow></math> to a prescribed relative accuracy <math altimg="m90.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./3.6#v.p2" title="relative accuracy">ϵ</mi></math> for a given
+value of <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="M" class="ltx_Math" display="inline"><mi href="./3.6#v.p2" title="order">M</mi></math>. We first compute, by forward recurrence, the solution <math altimg="m156.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="p_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></math> of
+the homogeneous equation (<a class="ltx_ref" href="3.6.html#E3" title="(3.6.3) ‣ §3.6(ii) Homogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.3</span></a>) with initial values <math altimg="m154.png" altimg-height="21px" altimg-valign="-6px" altimg-width="62px" alttext="p_{0}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>,
+<math altimg="m155.png" altimg-height="21px" altimg-valign="-6px" altimg-width="62px" alttext="p_{1}=1" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math>. At the same time we construct a sequence <math altimg="m138.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="e_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></math>, <math altimg="m146.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=0,1,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,
+defined by</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="215px" alttext="a_{n}e_{n}=c_{n}e_{n-1}-d_{n}p_{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#E8" title="sequence">e</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m138.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="e_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></math>:  sequence (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m156.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="p_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></math>:  solutions</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m131.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">c</mi><mi>n</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m134.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="d_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E8" title="">http://dlmf.nist.gov/3.6.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#v.info" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">beginning with <math altimg="m136.png" altimg-height="16px" altimg-valign="-5px" altimg-width="75px" alttext="e_{0}=w_{0}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#E8" title="sequence">e</mi><mn>0</mn></msub><mo>=</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mn>0</mn></msub></mrow></math>. (This part of the process is equivalent to forward
+elimination.) The computation is continued until a value <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></math> (<math altimg="m93.png" altimg-height="21px" altimg-valign="-5px" altimg-width="49px" alttext="\geq M" class="ltx_Math" display="inline"><mrow><mi></mi><mo>≥</mo><mi href="./3.6#v.p2" title="order">M</mi></mrow></math>) is
+reached for which</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="118px" altimg-valign="-22px" altimg-width="296px" alttext="\left|\frac{e_{N}}{p_{N}p_{N+1}}\right|\leq\epsilon\min_{1\leq n\leq M}\left|%
+\frac{e_{n}}{p_{n}p_{n+1}}\right|." class="ltx_Math" display="block"><mrow><mrow><mrow><mo>|</mo><mfrac><msub><mi href="./3.6#E8" title="sequence">e</mi><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></msub><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></msub><mo>⁢</mo><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mrow><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mfrac><mo>|</mo></mrow><mo>≤</mo><mrow><mi href="./3.6#v.p2" title="relative accuracy">ϵ</mi><mo lspace="0.167em">⁢</mo><mrow><munder><mi>min</mi><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi href="./3.6#v.p2" title="order">M</mi></mrow></munder><mo>⁡</mo><mrow><mo>|</mo><mfrac><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mfrac><mo>|</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#v.p1" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></math>:  arbitrary positive integer</a>,
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m90.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./3.6#v.p2" title="relative accuracy">ϵ</mi></math>:  relative accuracy</a>,
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="M" class="ltx_Math" display="inline"><mi href="./3.6#v.p2" title="order">M</mi></math>:  order</a>,
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m156.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="p_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></math>:  solutions</a> and
+<a class="ltx_ref" href="3.6.html#E8" title="(3.6.8) ‣ §3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m138.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="e_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></math>:  sequence</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.6.html#Px2.p2" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E9" title="">http://dlmf.nist.gov/3.6.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#v.info" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> is generated by backward recursion from</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="23px" altimg-valign="-7px" altimg-width="224px" alttext="p_{n+1}w_{n}=p_{n}w_{n+1}+e_{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m156.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="p_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></math>:  solutions</a> and
+<a class="ltx_ref" href="3.6.html#E8" title="(3.6.8) ‣ §3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m138.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="e_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></math>:  sequence</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E10" title="">http://dlmf.nist.gov/3.6.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#v.info" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(v)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">starting with <math altimg="m164.png" altimg-height="20px" altimg-valign="-5px" altimg-width="73px" alttext="w_{N}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi href="./3.6#v.p1" title="arbitrary positive integer">N</mi></msub><mo>=</mo><mn>0</mn></mrow></math>. (This part of the process is back substitution.)</p>
+</div>
+<div class="ltx_para" id="v.p3">
+<p class="ltx_p">An example is included in the next subsection. For further information,
+including a more general form of normalizing condition, other examples,
+convergence proofs, and error analyses, see <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1790" title="Numerical solution of second-order linear difference equations">1967a</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Olver and Sookne (<a class="ltx_ref" href="bib/O.html#bib1812" title="Note on backward recurrence algorithms">1972</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Wimp (<a class="ltx_ref" href="bib/W.html#bib2421" title="Computation with Recurrence Relations">1984</a>, Chapter 6)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="vi">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(vi) </span>Examples</h2>
+<div class="ltx_metadata ltx_info" id="vi.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.vi" title="">http://dlmf.nist.gov/3.6.vi</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Example 1. Bessel Functions</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bessel%20functions">Bessel functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Miller%20algorithm">Miller’s algorithm</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation%20by%20recursion">computation by recursion</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">The difference equation</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="24px" altimg-valign="-7px" altimg-width="245px" alttext="w_{n+1}-2nw_{n}+w_{n-1}=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>+</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m148.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=1,2,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E11" title="">http://dlmf.nist.gov/3.6.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px1.info" title="Example 1. Bessel Functions ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">is satisfied by <math altimg="m72.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="J_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> and <math altimg="m79.png" altimg-height="25px" altimg-valign="-7px" altimg-width="58px" alttext="Y_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>, where
+<math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="J_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m80.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="Y_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math> are the Bessel functions of the first
+kind. For large <math altimg="m151.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="94px" altimg-valign="-22px" altimg-width="242px" alttext="J_{n}\left(1\right)\sim\frac{1}{(2\pi n)^{1/2}}\left(\frac{e}{2n}\right)^{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow><mo href="./2.1#E1" title="asymptotic equality">∼</mo><mrow><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mfrac><mo>)</mo></mrow><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E2" title="(10.2.2) ‣ Bessel Function of the First Kind ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m71.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="J_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the first kind</a>,
+<a class="ltx_ref" href="2.1.html#E1" title="(2.1.1) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m101.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#E1" title="asymptotic equality">∼</mo></math>: asymptotic equality</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m100.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m99.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E12" title="">http://dlmf.nist.gov/3.6.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px1.info" title="Example 1. Bessel Functions ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="159px" altimg-valign="-22px" altimg-width="168px" alttext="Y_{n}\left(1\right)\sim\left(\frac{2}{\pi n}\right)^{1/2}\left(\frac{2n}{e}%
+\right)^{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow><mo href="./2.1#E1" title="asymptotic equality">∼</mo><mrow><msup><mrow><mo>(</mo><mfrac><mn>2</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi>n</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.2.html#E3" title="(10.2.3) ‣ Bessel Function of the Second Kind (Weber’s Function) ‣ §10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m78.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="Y_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Bessel function of the second kind</a>,
+<a class="ltx_ref" href="2.1.html#E1" title="(2.1.1) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m101.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#E1" title="asymptotic equality">∼</mo></math>: asymptotic equality</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m100.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m99.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E13" title="">http://dlmf.nist.gov/3.6.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px1.info" title="Example 1. Bessel Functions ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">(§<a class="ltx_ref" href="10.19.html#i" title="§10.19(i) Asymptotic Forms ‣ §10.19 Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.19(i)</span></a>). Thus <math altimg="m79.png" altimg-height="25px" altimg-valign="-7px" altimg-width="58px" alttext="Y_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> is dominant and can be computed
+by forward recursion, whereas <math altimg="m72.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="J_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> is recessive and has to be
+computed by backward recursion. The backward recursion can be carried out using
+independently computed values of <math altimg="m70.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="J_{N}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>N</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> and <math altimg="m69.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="J_{N+1}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> or
+by use of Miller’s algorithm (§<a class="ltx_ref" href="3.6.html#iii" title="§3.6(iii) Miller’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(iii)</span></a>) or Olver’s algorithm
+(§<a class="ltx_ref" href="3.6.html#v" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(v)</span></a>).
+</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Example 2. Weber Function</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Anger%E2%80%93Weber%20functions">Anger–Weber functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">The Weber function <math altimg="m98.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="\mathbf{E}_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> satisfies</p>
+<table class="ltx_equation ltx_eqn_table" id="E14">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.14</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E14.png" altimg-height="27px" altimg-valign="-7px" altimg-width="406px" alttext="w_{n+1}-2nw_{n}+w_{n-1}=-(2/\pi)(1-(-1)^{n})," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>+</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>/</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E14.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m100.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E14" title="">http://dlmf.nist.gov/3.6.E14</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E14.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E14.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E14.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px2.info" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for <math altimg="m148.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=1,2,\dots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, and as <math altimg="m153.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E15">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.15</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m2.png" altimg-height="40px" altimg-valign="-7px" altimg-width="88px" alttext="\displaystyle\mathbf{E}_{2n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="53px" altimg-valign="-21px" altimg-width="136px" alttext="\displaystyle\sim\frac{2}{(4n^{2}-1)\pi}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#E1" title="asymptotic equality">∼</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E15.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="11.10.html#E2" title="(11.10.2) ‣ §11.10(i) Definitions ‣ §11.10 Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m97.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="\mathbf{E}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Weber function</a>,
+<a class="ltx_ref" href="2.1.html#E1" title="(2.1.1) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m101.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#E1" title="asymptotic equality">∼</mo></math>: asymptotic equality</a> and
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m100.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E15" title="">http://dlmf.nist.gov/3.6.E15</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E15.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E15.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E15.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px2.info" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E16">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.16</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m1.png" altimg-height="40px" altimg-valign="-7px" altimg-width="109px" alttext="\displaystyle\mathbf{E}_{2n+1}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="53px" altimg-valign="-21px" altimg-width="127px" alttext="\displaystyle\sim\frac{2}{(2n+1)\pi};" class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#E1" title="asymptotic equality">∼</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mfrac></mstyle></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E16.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="11.10.html#E2" title="(11.10.2) ‣ §11.10(i) Definitions ‣ §11.10 Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m97.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="\mathbf{E}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Weber function</a>,
+<a class="ltx_ref" href="2.1.html#E1" title="(2.1.1) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m101.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#E1" title="asymptotic equality">∼</mo></math>: asymptotic equality</a> and
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m100.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E16" title="">http://dlmf.nist.gov/3.6.E16</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E16.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E16.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E16.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px2.info" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">see §<a class="ltx_ref" href="11.11.html#ii" title="§11.11(ii) Large |𝜈|, Fixed 𝑧 ‣ §11.11 Asymptotic Expansions of Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.11(ii)</span></a>. Thus the asymptotic behavior of the particular
+solution <math altimg="m98.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="\mathbf{E}_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> is intermediate to those of the complementary
+functions <math altimg="m72.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="J_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> and <math altimg="m79.png" altimg-height="25px" altimg-valign="-7px" altimg-width="58px" alttext="Y_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.2#E3" title="Bessel function of the second kind">Y</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>; moreover, the conditions for
+Olver’s algorithm are satisfied. We apply the algorithm to compute
+<math altimg="m98.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="\mathbf{E}_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> to 8S for the range <math altimg="m147.png" altimg-height="21px" altimg-valign="-6px" altimg-width="141px" alttext="n=1,2,\dots,10" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>10</mn></mrow></mrow></math>, beginning with the
+value <math altimg="m96.png" altimg-height="25px" altimg-valign="-7px" altimg-width="211px" alttext="\mathbf{E}_{0}\left(1\right)=-0.56865\;\,663" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mn>0.56865  663</mn></mrow></mrow></math> obtained from the Maclaurin series
+expansion (§<a class="ltx_ref" href="11.10.html#iii" title="§11.10(iii) Maclaurin Series ‣ §11.10 Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.10(iii)</span></a>).</p>
+</div>
+<div class="ltx_para" id="Px2.p2">
+<p class="ltx_p">In the notation of §<a class="ltx_ref" href="3.6.html#v" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(v)</span></a> we have <math altimg="m74.png" altimg-height="18px" altimg-valign="-2px" altimg-width="75px" alttext="M=10" class="ltx_Math" display="inline"><mrow><mi href="./3.6#v.p2" title="order">M</mi><mo>=</mo><mn>10</mn></mrow></math> and
+<math altimg="m89.png" altimg-height="29px" altimg-valign="-9px" altimg-width="122px" alttext="\epsilon=\tfrac{1}{2}\times 10^{-8}" class="ltx_Math" display="inline"><mrow><mi>ϵ</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>8</mn></mrow></msup></mrow></mrow></math>. The least value of <math altimg="m76.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi>N</mi></math> that satisfies
+(<a class="ltx_ref" href="3.6.html#E9" title="(3.6.9) ‣ §3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.9</span></a>) is found to be 16. The results of the computations are
+displayed in Table <a class="ltx_ref" href="3.6.html#T1" title="Table 3.6.1 ‣ Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6.1</span></a>. The values of <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> for
+<math altimg="m147.png" altimg-height="21px" altimg-valign="-6px" altimg-width="141px" alttext="n=1,2,\dots,10" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>10</mn></mrow></mrow></math> are the wanted values of <math altimg="m98.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="\mathbf{E}_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>. (It should
+be observed that for <math altimg="m150.png" altimg-height="18px" altimg-valign="-3px" altimg-width="65px" alttext="n&gt;10" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>10</mn></mrow></math>,
+however, the <math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math> are progressively poorer approximations to <math altimg="m98.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="\mathbf{E}_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>:
+the underlined digits are in error.)</p>
+</div>
+<figure class="ltx_table" id="T1">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 3.6.1: </span>Weber function <math altimg="m166.png" altimg-height="25px" altimg-valign="-7px" altimg-width="115px" alttext="w_{n}=\mathbf{E}_{n}\left(1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub><mo>=</mo><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow></math> computed by Olver’s algorithm.
+
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T1.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T1.t1.r1">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt"><math altimg="m151.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" colspan="2"><math altimg="m156.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="p_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" colspan="2"><math altimg="m138.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="e_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" colspan="2"><math altimg="m137.png" altimg-height="25px" altimg-valign="-7px" altimg-width="116px" alttext="e_{n}/(p_{n}p_{n+1})" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" colspan="2"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T1.t1.r2">
+<td class="ltx_td ltx_align_right ltx_border_t">0</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_t"><math altimg="m10.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.00000\;000" class="ltx_Math" display="inline"><mn>0.00000 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_t"></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_t"><math altimg="m9.png" altimg-height="19px" altimg-valign="-4px" altimg-width="125px" alttext="-0.56865\;663" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>0.56865 663</mn></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_t"></td>
+<td class="ltx_td ltx_border_t" colspan="2"></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_t"><math altimg="m9.png" altimg-height="19px" altimg-valign="-4px" altimg-width="125px" alttext="-0.56865\;663" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>0.56865 663</mn></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r3">
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m11.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.10000\;000" class="ltx_Math" display="inline"><mn>0.10000 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m118.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{1}" class="ltx_Math" display="inline"><mn>×10¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m59.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.70458\;291" class="ltx_Math" display="inline"><mn>0.70458 291</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.35229\;146" class="ltx_Math" display="inline"><mn>0.35229 146</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m47.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.43816\;243" class="ltx_Math" display="inline"><mn>0.43816 243</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r4">
+<td class="ltx_td ltx_align_right">2</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m24.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.20000\;000" class="ltx_Math" display="inline"><mn>0.20000 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m118.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{1}" class="ltx_Math" display="inline"><mn>×10¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m59.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.70458\;291" class="ltx_Math" display="inline"><mn>0.70458 291</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m53.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.50327\;351" class="ltx_Math" display="inline"><mn>0.50327 351</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m20.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.17174\;195" class="ltx_Math" display="inline"><mn>0.17174 195</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r5">
+<td class="ltx_td ltx_align_right">3</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m58.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.70000\;000" class="ltx_Math" display="inline"><mn>0.70000 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m118.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{1}" class="ltx_Math" display="inline"><mn>×10¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m65.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.96172\;597" class="ltx_Math" display="inline"><mn>0.96172 597</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m118.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{1}" class="ltx_Math" display="inline"><mn>×10¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m34.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.34347\;356" class="ltx_Math" display="inline"><mn>0.34347 356</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m26.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.24880\;538" class="ltx_Math" display="inline"><mn>0.24880 538</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r6">
+<td class="ltx_td ltx_align_right">4</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m43.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.40000\;000" class="ltx_Math" display="inline"><mn>0.40000 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m119.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{2}" class="ltx_Math" display="inline"><mn>×10²</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m65.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.96172\;597" class="ltx_Math" display="inline"><mn>0.96172 597</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m118.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{1}" class="ltx_Math" display="inline"><mn>×10¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m61.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.76815\;174" class="ltx_Math" display="inline"><mn>0.76815 174</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m108.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-3}" class="ltx_Math" display="inline"><mn>×10⁻³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m51.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.47850\;795" class="ltx_Math" display="inline"><mn>0.47850 795</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r7">
+<td class="ltx_td ltx_align_right ltx_border_T">5</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m30.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.31300\;000" class="ltx_Math" display="inline"><mn>0.31300 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m120.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{3}" class="ltx_Math" display="inline"><mn>×10³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m44.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.40814\;124" class="ltx_Math" display="inline"><mn>0.40814 124</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m120.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{3}" class="ltx_Math" display="inline"><mn>×10³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m45.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.42199\;534" class="ltx_Math" display="inline"><mn>0.42199 534</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m108.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-3}" class="ltx_Math" display="inline"><mn>×10⁻³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m16.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.13400\;098" class="ltx_Math" display="inline"><mn>0.13400 098</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r8">
+<td class="ltx_td ltx_align_right">6</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.30900\;000" class="ltx_Math" display="inline"><mn>0.30900 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m121.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{4}" class="ltx_Math" display="inline"><mn>×10⁴</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m44.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.40814\;124" class="ltx_Math" display="inline"><mn>0.40814 124</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m120.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{3}" class="ltx_Math" display="inline"><mn>×10³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m36.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.35924\;754" class="ltx_Math" display="inline"><mn>0.35924 754</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m109.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-5}" class="ltx_Math" display="inline"><mn>×10⁻⁵</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m21.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.18919\;443" class="ltx_Math" display="inline"><mn>0.18919 443</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r9">
+<td class="ltx_td ltx_align_right">7</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m37.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.36767\;000" class="ltx_Math" display="inline"><mn>0.36767 000</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m122.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{5}" class="ltx_Math" display="inline"><mn>×10⁵</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m50.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.47221\;340" class="ltx_Math" display="inline"><mn>0.47221 340</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m122.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{5}" class="ltx_Math" display="inline"><mn>×10⁵</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m27.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.25102\;029" class="ltx_Math" display="inline"><mn>0.25102 029</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m109.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-5}" class="ltx_Math" display="inline"><mn>×10⁻⁵</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m64.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.93032\;343" class="ltx_Math" display="inline"><mn>0.93032 343</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r10">
+<td class="ltx_td ltx_align_right">8</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m54.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.51164\;800" class="ltx_Math" display="inline"><mn>0.51164 800</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m123.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{6}" class="ltx_Math" display="inline"><mn>×10⁶</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m50.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.47221\;340" class="ltx_Math" display="inline"><mn>0.47221 340</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m122.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{5}" class="ltx_Math" display="inline"><mn>×10⁵</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m15.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.11324\;804" class="ltx_Math" display="inline"><mn>0.11324 804</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m110.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-7}" class="ltx_Math" display="inline"><mn>×10⁻⁷</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m12.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.10293\;811" class="ltx_Math" display="inline"><mn>0.10293 811</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r11">
+<td class="ltx_td ltx_align_right ltx_border_T">9</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m62.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.81496\;010" class="ltx_Math" display="inline"><mn>0.81496 010</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m124.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{7}" class="ltx_Math" display="inline"><mn>×10⁷</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.10423\;616" class="ltx_Math" display="inline"><mn>0.10423 616</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m125.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{8}" class="ltx_Math" display="inline"><mn>×10⁸</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m63.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.87496\;485" class="ltx_Math" display="inline"><mn>0.87496 485</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m111.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-8}" class="ltx_Math" display="inline"><mn>×10⁻⁸</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m60.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.71668\;638" class="ltx_Math" display="inline"><mn>0.71668 638</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r12">
+<td class="ltx_td ltx_align_right">10</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m18.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.14618\;117" class="ltx_Math" display="inline"><mn>0.14618 117</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m126.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{9}" class="ltx_Math" display="inline"><mn>×10⁹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.10423\;616" class="ltx_Math" display="inline"><mn>0.10423 616</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m125.png" altimg-height="23px" altimg-valign="-4px" altimg-width="51px" alttext="\times 10^{8}" class="ltx_Math" display="inline"><mn>×10⁸</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m25.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.24457\;824" class="ltx_Math" display="inline"><mn>0.24457 824</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m102.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-10}" class="ltx_Math" display="inline"><mn>×10⁻¹⁰</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m57.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.65021\;292" class="ltx_Math" display="inline"><mn>0.65021 292</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m107.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-2}" class="ltx_Math" display="inline"><mn>×10⁻²</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r13">
+<td class="ltx_td ltx_align_right">11</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.29154\;738" class="ltx_Math" display="inline"><mn>0.29154 738</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m112.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{10}" class="ltx_Math" display="inline"><mn>×10¹⁰</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.37225\;201" class="ltx_Math" display="inline"><mn>0.37225 201</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m112.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{10}" class="ltx_Math" display="inline"><mn>×10¹⁰</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m23.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.19952\;026" class="ltx_Math" display="inline"><mn>0.19952 026</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m102.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-10}" class="ltx_Math" display="inline"><mn>×10⁻¹⁰</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m55.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.58373\;946" class="ltx_Math" display="inline"><mn>0.58373 946</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r14">
+<td class="ltx_td ltx_align_right">12</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m56.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.63994\;242" class="ltx_Math" display="inline"><mn>0.63994 242</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m113.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{11}" class="ltx_Math" display="inline"><mn>×10¹¹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.37225\;201" class="ltx_Math" display="inline"><mn>0.37225 201</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m112.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{10}" class="ltx_Math" display="inline"><mn>×10¹⁰</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.37946\;279" class="ltx_Math" display="inline"><mn>0.37946 279</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m103.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-13}" class="ltx_Math" display="inline"><mn>×10⁻¹³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m49.png" altimg-height="21px" altimg-valign="-6px" altimg-width="109px" alttext="0.44851\;3\underline{87}" class="ltx_Math" display="inline"><mrow><mn>0.44851 3</mn><mo>⁢</mo><munder accentunder="true"><mn>87</mn><mo>¯</mo></munder></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m107.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-2}" class="ltx_Math" display="inline"><mn>×10⁻²</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r15">
+<td class="ltx_td ltx_align_right ltx_border_T">13</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m19.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.15329\;463" class="ltx_Math" display="inline"><mn>0.15329 463</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m114.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{13}" class="ltx_Math" display="inline"><mn>×10¹³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m22.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.19555\;304" class="ltx_Math" display="inline"><mn>0.19555 304</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m114.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{13}" class="ltx_Math" display="inline"><mn>×10¹³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m31.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.32057\;909" class="ltx_Math" display="inline"><mn>0.32057 909</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m103.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-13}" class="ltx_Math" display="inline"><mn>×10⁻¹³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_T"><math altimg="m52.png" altimg-height="21px" altimg-valign="-6px" altimg-width="109px" alttext="0.49269\;\underline{383}" class="ltx_Math" display="inline"><mrow><mn>0.49269</mn><mo lspace="0.280em">⁢</mo><munder accentunder="true"><mn>383</mn><mo>¯</mo></munder></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_T"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r16">
+<td class="ltx_td ltx_align_right">14</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m41.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.39792\;611" class="ltx_Math" display="inline"><mn>0.39792 611</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m115.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{14}" class="ltx_Math" display="inline"><mn>×10¹⁴</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m22.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.19555\;304" class="ltx_Math" display="inline"><mn>0.19555 304</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m114.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{13}" class="ltx_Math" display="inline"><mn>×10¹³</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m48.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.44167\;174" class="ltx_Math" display="inline"><mn>0.44167 174</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m104.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-16}" class="ltx_Math" display="inline"><mn>×10⁻¹⁶</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m32.png" altimg-height="21px" altimg-valign="-6px" altimg-width="109px" alttext="0.327\underline{92\;861}" class="ltx_Math" display="inline"><mrow><mn>0.327</mn><mo>⁢</mo><munder accentunder="true"><mn>92 861</mn><mo>¯</mo></munder></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m107.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-2}" class="ltx_Math" display="inline"><mn>×10⁻²</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r17">
+<td class="ltx_td ltx_align_right">15</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m14.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.11126\;602" class="ltx_Math" display="inline"><mn>0.11126 602</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m116.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{16}" class="ltx_Math" display="inline"><mn>×10¹⁶</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m17.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.14186\;384" class="ltx_Math" display="inline"><mn>0.14186 384</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m116.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{16}" class="ltx_Math" display="inline"><mn>×10¹⁶</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m40.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.38242\;250" class="ltx_Math" display="inline"><mn>0.38242 250</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m104.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-16}" class="ltx_Math" display="inline"><mn>×10⁻¹⁶</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right"><math altimg="m46.png" altimg-height="21px" altimg-valign="-6px" altimg-width="109px" alttext="0.425\underline{50\;628}" class="ltx_Math" display="inline"><mrow><mn>0.425</mn><mo>⁢</mo><munder accentunder="true"><mn>50 628</mn><mo>¯</mo></munder></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left"><math altimg="m106.png" altimg-height="23px" altimg-valign="-4px" altimg-width="63px" alttext="\times 10^{-1}" class="ltx_Math" display="inline"><mn>×10⁻¹</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r18">
+<td class="ltx_td ltx_align_right ltx_border_b">16</td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_b"><math altimg="m33.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.33340\;012" class="ltx_Math" display="inline"><mn>0.33340 012</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_b"><math altimg="m117.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{17}" class="ltx_Math" display="inline"><mn>×10¹⁷</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_b"><math altimg="m17.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.14186\;384" class="ltx_Math" display="inline"><mn>0.14186 384</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_b"><math altimg="m116.png" altimg-height="23px" altimg-valign="-4px" altimg-width="59px" alttext="\times 10^{16}" class="ltx_Math" display="inline"><mn>×10¹⁶</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_b"><math altimg="m42.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="0.39924\;861" class="ltx_Math" display="inline"><mn>0.39924 861</mn></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_b"><math altimg="m105.png" altimg-height="23px" altimg-valign="-4px" altimg-width="72px" alttext="\times 10^{-19}" class="ltx_Math" display="inline"><mn>×10⁻¹⁹</mn></math></td>
+<td class="ltx_td ltx_nopad_r ltx_align_right ltx_border_b"><math altimg="m66.png" altimg-height="21px" altimg-valign="-6px" altimg-width="109px" alttext="0.\underline{00000\;000}" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo lspace="0em" rspace="0.167em">.</mo><munder accentunder="true"><mn>00000 000</mn><mo>¯</mo></munder></mrow></math></td>
+<td class="ltx_td ltx_nopad_l ltx_align_left ltx_border_b"></td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="11.10.html#E2" title="(11.10.2) ‣ §11.10(i) Definitions ‣ §11.10 Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m97.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="\mathbf{E}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.10#E2" title="Weber function">𝐄</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Weber function</a>,
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#v.p2" title="§3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m156.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="p_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#v.p2" title="solutions">p</mi><mi>n</mi></msub></math>:  solutions</a> and
+<a class="ltx_ref" href="3.6.html#E8" title="(3.6.8) ‣ §3.6(v) Olver’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m138.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="e_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E8" title="sequence">e</mi><mi>n</mi></msub></math>:  sequence</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Olver%20algorithm">Olver’s algorithm</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.6.html#Px2.p2" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.T1" title="">http://dlmf.nist.gov/3.6.T1</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#Px2.info" title="Example 2. Weber Function ‣ §3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#vi.info" title="§3.6(vi) Examples ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vi)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</section>
+</section>
+<section class="ltx_subsection" id="vii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.6(vii) </span>Linear Difference Equations of Other Orders</h2>
+<div class="ltx_metadata ltx_info" id="vii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=boundary-value%20methods">boundary-value methods</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=boundary-value%20methods%20or%20problems">boundary-value methods or problems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=difference%20equations">difference equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=numerical%20solution">numerical solution</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="16.25.html#p1" title="§16.25 Methods of Computation ‣ Computation ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.25</span></a>,
+<a class="ltx_ref" href="3.6.html#i.p2" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.vii" title="">http://dlmf.nist.gov/3.6.vii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vii.p1">
+<p class="ltx_p">Similar considerations apply to the first-order equation</p>
+<table class="ltx_equation ltx_eqn_table" id="E17">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.17</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="203px" alttext="a_{n}w_{n+1}-b_{n}w_{n}=d_{n}." class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E17.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m130.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">b</mi><mi>n</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m134.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="d_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E17" title="">http://dlmf.nist.gov/3.6.E17</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E17.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E17.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E17.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#vii.info" title="§3.6(vii) Linear Difference Equations of Other Orders ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vii)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Thus in the inhomogeneous case it may sometimes be necessary to recur backwards
+to achieve stability. For analyses and examples see <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib894" title="The Computation of Special Functions by Linear Difference Equations">1997b</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="vii.p2">
+<p class="ltx_p">For a difference equation of order <math altimg="m145.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi>k</mi></math> (<math altimg="m92.png" altimg-height="20px" altimg-valign="-5px" altimg-width="37px" alttext="\geq 3" class="ltx_Math" display="inline"><mrow><mi></mi><mo>≥</mo><mn>3</mn></mrow></math>),
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E18">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.6.18</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="435px" alttext="a_{n,k}w_{n+k}+a_{n,k-1}w_{n+k-1}+\dots+a_{n,0}w_{n}=d_{n}," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mrow><mi>n</mi><mo>,</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mi>n</mi><mo>+</mo><mi>k</mi></mrow></msub></mrow><mo>+</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mrow><mi>n</mi><mo>,</mo><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mrow><mrow><mi>n</mi><mo>+</mo><mi>k</mi></mrow><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi href="./3.6#E1" title="coefficient">a</mi><mrow><mi>n</mi><mo>,</mo><mn>0</mn></mrow></msub><mo>⁢</mo><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E18.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#i.p1" title="§3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m167.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#i.p1" title="sequence">w</mi><mi>n</mi></msub></math>:  sequence</a>,
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m127.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">a</mi><mi>n</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="3.6.html#E1" title="(3.6.1) ‣ §3.6(i) Introduction ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m134.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="d_{n}" class="ltx_Math" display="inline"><msub><mi href="./3.6#E1" title="coefficient">d</mi><mi>n</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.6.E18" title="">http://dlmf.nist.gov/3.6.E18</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.6.E18.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.6.E18.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.6.E18.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.6.html#vii.info" title="§3.6(vii) Linear Difference Equations of Other Orders ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(vii)</span></a>,
+<a class="ltx_ref" href="3.6.html#info" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">or for systems of <math altimg="m145.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi>k</mi></math> first-order inhomogeneous equations, boundary-value
+methods are the rule rather than the exception. Typically <math altimg="m144.png" altimg-height="20px" altimg-valign="-4px" altimg-width="50px" alttext="k-\ell" class="ltx_Math" display="inline"><mrow><mi>k</mi><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow></math> conditions
+are prescribed at the beginning of the range, and <math altimg="m87.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="\ell" class="ltx_Math" display="inline"><mi mathvariant="normal">ℓ</mi></math> conditions at the end.
+Here <math altimg="m88.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\ell\in[0,k]" class="ltx_Math" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mn>0</mn><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>k</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></mrow></math>, and its actual value depends on the asymptotic behavior
+of the wanted solution in relation to those of the other solutions. Within this
+framework forward and backward recursion may be regarded as the special cases
+<math altimg="m85.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\ell=0" class="ltx_Math" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mn>0</mn></mrow></math> and <math altimg="m86.png" altimg-height="18px" altimg-valign="-2px" altimg-width="52px" alttext="\ell=k" class="ltx_Math" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mi>k</mi></mrow></math>, respectively.</p>
+</div>
+<div class="ltx_para" id="vii.p3">
+<p class="ltx_p">For further information see <cite class="ltx_cite ltx_citemacro_citet">Wimp (<a class="ltx_ref" href="bib/W.html#bib2421" title="Computation with Recurrence Relations">1984</a>, Chapters 7–8)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Cash and Zahar (<a class="ltx_ref" href="bib/C.html#bib459" title="A Unified Approach to Recurrence Algorithms">1994</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Lozier (<a class="ltx_ref" href="bib/L.html#bib1476" title="Numerical Solution of Linear Difference Equations">1980</a>)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="3.5.html" rel="prev" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Quadrature</span></a><a class="ltx_ref" href="3.7.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.7 </span>Ordinary Differential Equations</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

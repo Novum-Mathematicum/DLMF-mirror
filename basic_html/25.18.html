@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §25.18 Methods of Computation ‣ Computation ‣ Chapter 25 Zeta and Related Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/25.18";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="25.html#PT5" rel="up" title="Computation ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.html" rel="up up" title="Chapter 25 Zeta and Related Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="25.17.html" rel="prev" title="§25.17 Physical Applications ‣ Applications ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.19.html" rel="next" title="§25.19 Tables ‣ Computation ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.1.html" rel="section" title="§25.1 Special Notation ‣ Notation ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.2.html" rel="section" title="§25.2 Definition and Expansions ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.3.html" rel="section" title="§25.3 Graphics ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.4.html" rel="section" title="§25.4 Reflection Formulas ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.5.html" rel="section" title="§25.5 Integral Representations ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.6.html" rel="section" title="§25.6 Integer Arguments ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.7.html" rel="section" title="§25.7 Integrals ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.8.html" rel="section" title="§25.8 Sums ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.9.html" rel="section" title="§25.9 Asymptotic Approximations ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.10.html" rel="section" title="§25.10 Zeros ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.11.html" rel="section" title="§25.11 Hurwitz Zeta Function ‣ Related Functions ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.12.html" rel="section" title="§25.12 Polylogarithms ‣ Related Functions ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.13.html" rel="section" title="§25.13 Periodic Zeta Function ‣ Related Functions ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.14.html" rel="section" title="§25.14 Lerch’s Transcendent ‣ Related Functions ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.15.html" rel="section" title="§25.15 Dirichlet 𝐿-functions ‣ Related Functions ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.16.html" rel="section" title="§25.16 Mathematical Applications ‣ Applications ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.17.html" rel="section" title="§25.17 Physical Applications ‣ Applications ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.19.html" rel="section" title="§25.19 Tables ‣ Computation ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.20.html" rel="section" title="§25.20 Approximations ‣ Computation ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="25.21.html" rel="section" title="§25.21 Software ‣ Computation ‣ Chapter 25 Zeta and Related Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Bose–Einstein integrals, Fermi–Dirac integrals, Hurwitz zeta function, Riemann zeta function, computation, counting, dilogarithms, on critical line or strip, polylogarithms, zeros" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="25.18.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="25.18.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="25.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">25 </span>Zeta and Related Functions</span></a><a class="ltx_ref" href="25.html#PT5" rel="up" title="In Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="25.17.html" rel="prev" title="In Applications ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">25.17 </span>Physical Applications</span></a><a class="ltx_ref" href="25.19.html" rel="next" title="In Computation ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">25.19 </span>Tables</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§25.18 </span>Methods of Computation</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="25.18.html" title="">http://dlmf.nist.gov/25.18</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="25.html#info" title="Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.25</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="25.18.html#i"><span class="ltx_tag ltx_tag_subsection">§25.18(i) </span>Function Values and Derivatives</a></li>
+<li class="ltx_tocentry"><a href="25.18.html#ii"><span class="ltx_tag ltx_tag_subsection">§25.18(ii) </span>Zeros</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§25.18(i) </span>Function Values and Derivatives</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bose%E2%80%93Einstein%20integrals">Bose–Einstein integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fermi%E2%80%93Dirac%20integrals">Fermi–Dirac integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Hurwitz%20zeta%20function">Hurwitz zeta function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Riemann%20zeta%20function">Riemann zeta function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=counting">counting</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=dilogarithms">dilogarithms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=polylogarithms">polylogarithms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  References</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/25.18.i" title="">http://dlmf.nist.gov/25.18.i</a></dd>
+<dt>Addition (effective with 1.0.5):</dt>
+<dd>
+The references to <cite class="ltx_cite ltx_citemacro_citet">Coffey (<a class="ltx_ref" href="bib/C.html#bib2778" title="An efficient algorithm for the Hurwitz zeta and related functions">2009</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Zudilin (<a class="ltx_ref" href="bib/Z.html#bib2779" title="Approximations to -, di- and tri-logarithms">2007</a>)</cite> have been added
+near the end of this subsection.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="25.18.html#info" title="§25.18 Methods of Computation ‣ Computation ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">§25.18</span></a> and
+<a class="ltx_ref" href="25.html#info" title="Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.25</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">The principal tools for computing <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="44px" alttext="\zeta\left(s\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.2#E1" title="Riemann zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./25.1#t1.r5" title="complex variable">s</mi><mo>)</mo></mrow></mrow></math> are the expansion
+(<a class="ltx_ref" href="25.2.html#E9" title="(25.2.9) ‣ §25.2(iii) Representations by the Euler–Maclaurin Formula ‣ §25.2 Definition and Expansions ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">25.2.9</span></a>) for general values of <math altimg="m6.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./25.1#t1.r5" title="complex variable">s</mi></math>, and the Riemann–Siegel formula
+(<a class="ltx_ref" href="25.10.html#E3" title="(25.10.3) ‣ §25.10(ii) Riemann–Siegel Formula ‣ §25.10 Zeros ‣ Riemann Zeta Function ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">25.10.3</span></a>) (extended to higher terms) for
+<math altimg="m3.png" altimg-height="29px" altimg-valign="-9px" altimg-width="91px" alttext="\zeta\left(\frac{1}{2}+it\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.2#E1" title="Riemann zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>)</mo></mrow></mrow></math>. Details are provided in
+<cite class="ltx_cite ltx_citemacro_citet">Haselgrove and Miller (<a class="ltx_ref" href="bib/H.html#bib1055" title="Tables of the Riemann Zeta Function">1960</a>)</cite>. See also <cite class="ltx_cite ltx_citemacro_citet">Allasia and Besenghi (<a class="ltx_ref" href="bib/index.html#bib64" title="Numerical Calculation of the Riemann Zeta Function and Generalizations by Means of the Trapezoidal Rule">1989</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Butzer and Hauss (<a class="ltx_ref" href="bib/B.html#bib396" title="Riemann zeta function: Rapidly converging series and integral representations">1992</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Kerimov (<a class="ltx_ref" href="bib/K.html#bib1247" title="Methods of computing the Riemann zeta-function and some generalizations of it">1980</a>)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Yeremin<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/Y.html#bib2469" title="The calculation of the Riemann zeta function in the complex domain">1985</a>)</cite>. Calculations relating to derivatives of
+<math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="44px" alttext="\zeta\left(s\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.2#E1" title="Riemann zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./25.1#t1.r5" title="complex variable">s</mi><mo>)</mo></mrow></mrow></math> and/or <math altimg="m4.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="\zeta\left(s,a\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.11#E1" title="Hurwitz zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./25.1#t1.r5" title="complex variable">s</mi><mo>,</mo><mi href="./25.1#t1.r4" title="real or complex parameter">a</mi><mo>)</mo></mrow></mrow></math> can be found in
+<cite class="ltx_cite ltx_citemacro_citet">Apostol (<a class="ltx_ref" href="bib/index.html#bib117" title="Formulas for higher derivatives of the Riemann zeta function">1985a</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Choudhury (<a class="ltx_ref" href="bib/C.html#bib494" title="The Riemann zeta-function and its derivatives">1995</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Miller and Adamchik (<a class="ltx_ref" href="bib/M.html#bib1618" title="Derivatives of the Hurwitz zeta function for rational arguments">1998</a>)</cite>,
+and <cite class="ltx_cite ltx_citemacro_citet">Yeremin<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/Y.html#bib2470" title="Computation of the derivatives of the Riemann zeta-function in the complex domain">1988</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">For the Hurwitz zeta function <math altimg="m4.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="\zeta\left(s,a\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.11#E1" title="Hurwitz zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./25.1#t1.r5" title="complex variable">s</mi><mo>,</mo><mi href="./25.1#t1.r4" title="real or complex parameter">a</mi><mo>)</mo></mrow></mrow></math> see
+<cite class="ltx_cite ltx_citemacro_citet">Spanier and Oldham (<a class="ltx_ref" href="bib/S.html#bib2137" title="An Atlas of Functions">1987</a>, p. 653)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Coffey (<a class="ltx_ref" href="bib/C.html#bib2778" title="An efficient algorithm for the Hurwitz zeta and related functions">2009</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">For dilogarithms and polylogarithms see <cite class="ltx_cite ltx_citemacro_citet">Jacobs and Lambert (<a class="ltx_ref" href="bib/J.html#bib1154" title="On the numerical calculation of polylogarithms">1972</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Osácar<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/O.html#bib1818" title="Numerical evaluation of the dilogarithm of complex argument">1995</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Spanier and Oldham (<a class="ltx_ref" href="bib/S.html#bib2137" title="An Atlas of Functions">1987</a>, pp. 231–232)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Zudilin (<a class="ltx_ref" href="bib/Z.html#bib2779" title="Approximations to -, di- and tri-logarithms">2007</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">For Fermi–Dirac and Bose–Einstein integrals see <cite class="ltx_cite ltx_citemacro_citet">Cloutman (<a class="ltx_ref" href="bib/C.html#bib531" title="Numerical evaluation of the Fermi-Dirac integrals">1989</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib891" title="On the computation of generalized Fermi-Dirac and Bose-Einstein integrals">1993</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Mohankumar and Natarajan (<a class="ltx_ref" href="bib/M.html#bib1645" title="The accurate evaluation of a particular Fermi-Dirac integral">1997</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Natarajan and Mohankumar (<a class="ltx_ref" href="bib/N.html#bib1692" title="On the numerical evaluation of the generalised Fermi-Dirac integrals">1993</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Paszkowski (<a class="ltx_ref" href="bib/P.html#bib1852" title="Evaluation of Fermi-Dirac Integral">1988</a>, <a class="ltx_ref" href="bib/P.html#bib1853" title="Evaluation of the Fermi-Dirac integral of half-integer order">1991</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Pichon (<a class="ltx_ref" href="bib/P.html#bib1875" title="Numerical calculation of the generalized Fermi-Dirac integrals">1989</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Sagar (<a class="ltx_ref" href="bib/S.html#bib1990" title="A Gaussian quadrature for the calculation of generalized Fermi-Dirac integrals">1991a</a>, <a class="ltx_ref" href="bib/S.html#bib1991" title="On the evaluation of the Fermi-Dirac integrals">b</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§25.18(ii) </span>Zeros</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Riemann%20zeta%20function">Riemann zeta function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=on%20critical%20line%20or%20strip">on critical line or strip</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/25.18.ii" title="">http://dlmf.nist.gov/25.18.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="25.18.html#info" title="§25.18 Methods of Computation ‣ Computation ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">§25.18</span></a> and
+<a class="ltx_ref" href="25.html#info" title="Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.25</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Most numerical calculations of the Riemann zeta function are concerned with
+locating zeros of <math altimg="m3.png" altimg-height="29px" altimg-valign="-9px" altimg-width="91px" alttext="\zeta\left(\frac{1}{2}+it\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.2#E1" title="Riemann zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>)</mo></mrow></mrow></math> in an effort to prove or
+disprove the Riemann hypothesis, which states that all nontrivial zeros of
+<math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="44px" alttext="\zeta\left(s\right)" class="ltx_Math" display="inline"><mrow><mi href="./25.2#E1" title="Riemann zeta function">ζ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./25.1#t1.r5" title="complex variable">s</mi><mo>)</mo></mrow></mrow></math> lie on the critical line <math altimg="m2.png" altimg-height="29px" altimg-valign="-9px" altimg-width="70px" alttext="\Re s=\frac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./25.1#t1.r5" title="complex variable">s</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>.
+Calculations to date (2008) have found no nontrivial zeros off the critical
+line. For recent investigations see, for example, <cite class="ltx_cite ltx_citemacro_citet">van de Lune<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/V.html#bib2311" title="On the zeros of the Riemann zeta function in the critical strip. IV">1986</a>)</cite>
+and <cite class="ltx_cite ltx_citemacro_citet">Odlyzko (<a class="ltx_ref" href="bib/O.html#bib1748" title="On the distribution of spacings between zeros of the zeta function">1987</a>)</cite>. For earlier work see <cite class="ltx_cite ltx_citemacro_citet">Haselgrove and Miller (<a class="ltx_ref" href="bib/H.html#bib1055" title="Tables of the Riemann Zeta Function">1960</a>)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="25.17.html" rel="prev" title="In Applications ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">25.17 </span>Physical Applications</span></a><a class="ltx_ref" href="25.19.html" rel="next" title="In Computation ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">25.19 </span>Tables</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

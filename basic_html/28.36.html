@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §28.36 Software ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/28.36";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="28.html#PT7" rel="up" title="Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.html" rel="up up" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="index.html" rel="start" title=""/>
+<link href="28.35.html" rel="prev" title="§28.35 Tables ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="next" title="Chapter 29 Lamé Functions"/>
+<link href="28.1.html" rel="section" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.2.html" rel="section" title="§28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.3.html" rel="section" title="§28.3 Graphics ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.4.html" rel="section" title="§28.4 Fourier Series ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.html" rel="section" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.6.html" rel="section" title="§28.6 Expansions for Small 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.7.html" rel="section" title="§28.7 Analytic Continuation of Eigenvalues ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.8.html" rel="section" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.9.html" rel="section" title="§28.9 Zeros ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.10.html" rel="section" title="§28.10 Integral Equations ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.11.html" rel="section" title="§28.11 Expansions in Series of Mathieu Functions ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.12.html" rel="section" title="§28.12 Definitions and Basic Properties ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.13.html" rel="section" title="§28.13 Graphics ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.14.html" rel="section" title="§28.14 Fourier Series ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.15.html" rel="section" title="§28.15 Expansions for Small 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.16.html" rel="section" title="§28.16 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.17.html" rel="section" title="§28.17 Stability as 𝑥→±∞ ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.18.html" rel="section" title="§28.18 Integrals and Integral Equations ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.19.html" rel="section" title="§28.19 Expansions in Series of me_{𝜈+2⁢𝑛} Functions ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.20.html" rel="section" title="§28.20 Definitions and Basic Properties ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.21.html" rel="section" title="§28.21 Graphics ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.22.html" rel="section" title="§28.22 Connection Formulas ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.23.html" rel="section" title="§28.23 Expansions in Series of Bessel Functions ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.24.html" rel="section" title="§28.24 Expansions in Series of Cross-Products of Bessel Functions or Modified Bessel Functions ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.25.html" rel="section" title="§28.25 Asymptotic Expansions for Large ℜ𝑧 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.26.html" rel="section" title="§28.26 Asymptotic Approximations for Large 𝑞 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.27.html" rel="section" title="§28.27 Addition Theorems ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.28.html" rel="section" title="§28.28 Integrals, Integral Representations, and Integral Equations ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.29.html" rel="section" title="§28.29 Definitions and Basic Properties ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.30.html" rel="section" title="§28.30 Expansions in Series of Eigenfunctions ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.31.html" rel="section" title="§28.31 Equations of Whittaker–Hill and Ince ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.32.html" rel="section" title="§28.32 Mathematical Applications ‣ Applications ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.33.html" rel="section" title="§28.33 Physical Applications ‣ Applications ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.34.html" rel="section" title="§28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.35.html" rel="section" title="§28.35 Tables ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="28.36.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="28.36.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="28.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28 </span>Mathieu Functions and Hill’s Equation</span></a><a class="ltx_ref" href="28.html#PT7" rel="up" title="In Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="28.35.html" rel="prev" title="In Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.35 </span>Tables</span></a><a class="ltx_ref" href="29.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29 </span>Lamé Functions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§28.36 </span>Software</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="28.36.html" title="">http://dlmf.nist.gov/28.36</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="28.36.html#i"><span class="ltx_tag ltx_tag_subsection">§28.36(i) </span>Introduction</a></li>
+<li class="ltx_tocentry"><a href="28.36.html#ii"><span class="ltx_tag ltx_tag_subsection">§28.36(ii) </span>Characteristic Exponents and Eigenvalues</a></li>
+<li class="ltx_tocentry"><a href="28.36.html#iii"><span class="ltx_tag ltx_tag_subsection">§28.36(iii) </span>Mathieu and Modified Mathieu Functions</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.36(i) </span>Introduction</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.36.i" title="">http://dlmf.nist.gov/28.36.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.36.html#info" title="§28.36 Software ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.36</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">In this section we provide links to the research literature describing the
+implementation of algorithms in software for the evaluation of functions
+described in this chapter. Citations in bulleted lists refer to papers for
+which research software has been made available and can be downloaded via the
+Web. References to research software that is available in other ways is listed
+separately.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">A more complete list of available software for computing these functions is
+found in the <a class="ltx_ref" href="software/index.html" title=""><span class="ltx_text ltx_ref_title">Software Index</span></a>. For another listing of Web-accessible software for
+the functions in this chapter, see <a class="ltx_ref GAMS" href="https://gams.nist.gov/serve.cgi/Class/C17/" title="">GAMS (class C17)</a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.36(ii) </span>Characteristic Exponents and Eigenvalues</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="software/index.html#S1.t1.r102" title="Software Cross Index ‣ Software Index"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Software Cross Index</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.36.ii" title="">http://dlmf.nist.gov/28.36.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.36.html#info" title="§28.36 Software ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.36</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<ul class="ltx_itemize" id="I1">
+<li class="ltx_item" id="I1.i1" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I1.i1.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Alhargan (<a class="ltx_ref" href="bib/index.html#bib59" title="Algorithm 804: Subroutines for the computation of Mathieu functions of integer orders">2000</a>)</cite>. C<span class="ltx_text ltx_font_typewriter">++</span>.</p>
+</div>
+</li>
+<li class="ltx_item" id="I1.i2" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I1.i2.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Leeb (<a class="ltx_ref" href="bib/L.html#bib1398" title="Algorithm 537: Characteristic values of Mathieu’s differential equation">1979</a>)</cite>. Fortran.
+</p>
+</div>
+</li>
+<li class="ltx_item" id="I1.i3" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I1.i3.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Shirts (<a class="ltx_ref" href="bib/S.html#bib2069" title="Algorithm 721: MTIEU1 and MTIEU2: Two subroutines to compute eigenvalues and solutions to Mathieu’s differential equation for noninteger and integer order">1993b</a>)</cite>. Fortran.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">See also
+<cite class="ltx_cite ltx_citemacro_citet">Clemm (<a class="ltx_ref" href="bib/C.html#bib521" title="Algorithm 352: Characteristic values and associated solutions of Mathieu’s differential equation">1969</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Delft Numerical Analysis Group (<a class="ltx_ref" href="bib/D.html#bib645" title="On the computation of Mathieu functions">1973</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Rengarajan and Lewis (<a class="ltx_ref" href="bib/R.html#bib1944" title="Mathieu functions of integral orders and real arguments">1980</a>)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Schäfke and Schmidt (<a class="ltx_ref" href="bib/S.html#bib2007" title="Ein Verfahren zur Berechnung des charakteristischen Exponenten der Mathieuschen Differentialgleichung III">1966</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.36(iii) </span>Mathieu and Modified Mathieu Functions</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.0.7.I5.ix7.p1" title="In Other Changes ‣ Version 1.0.7 (March 21, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.7) for  References</span></a>,
+<a class="ltx_ref" href="software/index.html#S1.t1.r103" title="Software Cross Index ‣ Software Index"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Software Cross Index</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.36.iii" title="">http://dlmf.nist.gov/28.36.iii</a></dd>
+<dt>Addition (effective with 1.0.7):</dt>
+<dd>
+The references to <cite class="ltx_cite ltx_citemacro_citet">Erricolo (<a class="ltx_ref" href="bib/E.html#bib2827" title="Algorithm 861: Fortran 90 subroutines for computing the expansion coefficients of Mathieu functions using Blanch’s algorithm">2006</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Erricolo and Carluccio (<a class="ltx_ref" href="bib/E.html#bib2828" title="Algorithm 934: Fortran 90 subroutines to compute Mathieu functions for complex values of the parameter">2013</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Ziener<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/Z.html#bib2801" title="Mathieu functions for purely imaginary parameters">2012</a>)</cite>
+have been added in this subsection.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.36.html#info" title="§28.36 Software ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.36</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<ul class="ltx_itemize" id="I2">
+<li class="ltx_item" id="I2.i1" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i1.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Alhargan (<a class="ltx_ref" href="bib/index.html#bib59" title="Algorithm 804: Subroutines for the computation of Mathieu functions of integer orders">2000</a>)</cite>. C<span class="ltx_text ltx_font_typewriter">++</span>.
+</p>
+</div>
+</li>
+<li class="ltx_item" id="I2.i2" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i2.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Leeb (<a class="ltx_ref" href="bib/L.html#bib1398" title="Algorithm 537: Characteristic values of Mathieu’s differential equation">1979</a>)</cite>. Fortran.</p>
+</div>
+</li>
+<li class="ltx_item" id="I2.i3" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i3.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Erricolo (<a class="ltx_ref" href="bib/E.html#bib2827" title="Algorithm 861: Fortran 90 subroutines for computing the expansion coefficients of Mathieu functions using Blanch’s algorithm">2006</a>)</cite>. Fortran.</p>
+</div>
+</li>
+<li class="ltx_item" id="I2.i4" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i4.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Erricolo and Carluccio (<a class="ltx_ref" href="bib/E.html#bib2828" title="Algorithm 934: Fortran 90 subroutines to compute Mathieu functions for complex values of the parameter">2013</a>)</cite>. Fortran.</p>
+</div>
+</li>
+<li class="ltx_item" id="I2.i5" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i5.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Shirts (<a class="ltx_ref" href="bib/S.html#bib2069" title="Algorithm 721: MTIEU1 and MTIEU2: Two subroutines to compute eigenvalues and solutions to Mathieu’s differential equation for noninteger and integer order">1993b</a>)</cite>. Fortran.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">See also
+<cite class="ltx_cite ltx_citemacro_citet">Clemm (<a class="ltx_ref" href="bib/C.html#bib521" title="Algorithm 352: Characteristic values and associated solutions of Mathieu’s differential equation">1969</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Delft Numerical Analysis Group (<a class="ltx_ref" href="bib/D.html#bib645" title="On the computation of Mathieu functions">1973</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Rengarajan and Lewis (<a class="ltx_ref" href="bib/R.html#bib1944" title="Mathieu functions of integral orders and real arguments">1980</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Van Buren and Boisvert (<a class="ltx_ref" href="bib/V.html#bib2710" title="Accurate calculation of the modified Mathieu functions of integer order">2007</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Ziener<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/Z.html#bib2801" title="Mathieu functions for purely imaginary parameters">2012</a>)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="28.35.html" rel="prev" title="In Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.35 </span>Tables</span></a><a class="ltx_ref" href="29.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29 </span>Lamé Functions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

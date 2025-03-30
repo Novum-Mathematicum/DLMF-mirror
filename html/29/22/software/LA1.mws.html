@@ -1,0 +1,364 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 256 69 "          \+
+
+                             Eigenvalues for Lame functions" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 91 "                              A Ma
+
+ple worksheet written by Hans Volkmer, February 6, 2001 ." }}}{EXCHG 
+
+{PARA 0 "" 0 "" {TEXT -1 83 "                                         \+
+
+          send comments to volkmer@uwm.edu" }}}{EXCHG {PARA 0 "" 0 "" 
+
+{TEXT -1 85 "The following programs Lame_a and Lame_b compute the eige
+
+nvalues of the Lame equation" }}{PARA 0 "" 0 "" {XPPEDIT 18 0 "diff(w,
+
+`$`(z,2))+(h-nu*(nu+1)*k^2*sn(z,k^2)^2)*w = 0;" "6#/,&amp;-%%diffG6$%\"wG-
+
+%\"$G6$%\"zG\"\"#\"\"\"*&amp;,&amp;%\"hGF.**%#nuGF.,&amp;F3F.F.F.F.%\"kGF--%#snG6$
+
+F,*$F5F-F-!\"\"F.F(F.F.\"\"!" }{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 62 "by using d by d submatrices of \+
+
+ infinite tridiagonal matrices," }}{PARA 0 "" 0 "" {TEXT -1 105 "see S
+
+ection LA.6 and Erdelyi-Magnus-Oberhettinger Vol. III, p.65 . d has to
+
+ be chosen sufficiently large." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 26 
+
+"Notation: We write k2 for " }{XPPEDIT 18 0 "k^2;" "6#*$%\"kG\"\"#" }
+
+{TEXT -1 9 " where 0&lt;" }{XPPEDIT 18 0 "k;" "6#%\"kG" }{TEXT -1 53 "&lt;1 \+
+
+is the modulus of the Jacobian elliptic functions." }}}{EXCHG {PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 21 "restart;with(linalg):" }}}{EXCHG {PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 39 "Digits:=10; # select required precision" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 53 "matrix18:=proc(nu,k2,d) # Er
+
+delyi et al, page 65 (18)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local \+
+
+A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 51 "for r from 0 to d-1 do A[r+1,r+1]:=4*r^2*
+
+(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "if d&gt;1 then A[1,2]:=(
+
+nu-1)*(nu+2)*k2 fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 1
+
+ to d-2 do A[r+1,r+2]:=0.5*(nu-2*r-1)*(nu+2*r+2)*k2 od; " }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 65 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r+
+
+2)*(nu+2*r-1)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 24 "matrix19:=proc(nu,k2,d) " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=m
+
+atrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 51 "for r from 0 to d-
+
+1 do A[r+1,r+1]:=4*r^2*(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+36 "if d&gt;1 then A[1,2]:=nu*(nu+1)*k2 fi;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 66 "for r from 1 to d-2 do A[r+1,r+2]:=0.5*(nu-2*r)*(nu+2
+
+*r+1)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for r from 1 to d-
+
+1 do A[r+1,r]:=0.5*(nu-2*r+1)*(nu+2*r)*k2 od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "matrix20:=proc(nu,k2,d)  " }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+30 "A[1,1]:=2-k2+0.5*nu*(nu+1)*k2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+55 "for r from 1 to d-1 do A[r+1,r+1]:=(2*r+1)^2*(2-k2) od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do A[r+1,r+2]:=0.5*(n
+
+u-2*r-2)*(nu+2*r+3)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for \+
+
+r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r+1)*(nu+2*r)*k2 od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "en
+
+d;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "matrix21:=proc(nu,k2,
+
+d) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 30 "A[1,1]:=2-k2+0.5*nu*(nu+1)*k2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 55 "for r from 1 to d-1 do A[r+1,r+1]:=(2*r+1)^2*(2-k2) od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do A[r+1,r+2]:=
+
+0.5*(nu-2*r-1)*(nu+2*r+2)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+63 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r)*(nu+2*r+1)*k2 od;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "matrix22:=proc
+
+(nu,k2,d) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 55 "for r from 0 to d-1 do A[r+1,r+1]:=(2*r+2)^2*(2-k2) o
+
+d;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do A[r+1,
+
+r+2]:=0.5*(nu-2*r-3)*(nu+2*r+4)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 63 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r)*(nu+2*r+1)*k2 od
+
+;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "mat
+
+rix23:=proc(nu,k2,d) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 55 "for r from 0 to d-1 do A[r+1,r+1]:=(2*r+2)^2*
+
+(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 d
+
+o A[r+1,r+2]:=0.5*(nu-2*r-2)*(nu+2*r+3)*k2 od; " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 65 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r-1)*(nu+2
+
+*r+2)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+24 "matrix24:=proc(nu,k2,d) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "loc
+
+al A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 30 "A[1,1]:=2-k2-0.5*nu*(nu+1)*k2;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 55 "for r from 1 to d-1 do A[r+1,r+1]:=
+
+(2*r+1)^2*(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from \+
+
+0 to d-2 do A[r+1,r+2]:=0.5*(nu-2*r-2)*(nu+2*r+3)*k2 od; " }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 63 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r
+
++1)*(nu+2*r)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 24 "matrix25:=proc(nu,k2,d) " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=m
+
+atrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 30 "A[1,1]:=2-k2-0.5*n
+
+u*(nu+1)*k2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 55 "for r from 1 to d-1
+
+ do A[r+1,r+1]:=(2*r+1)^2*(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 68 "for r from 0 to d-2 do A[r+1,r+2]:=0.5*(nu-2*r-1)*(nu+2*r+2)*k2 \+
+
+od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for r from 1 to d-1 do A[r+
+
+1,r]:=0.5*(nu-2*r)*(nu+2*r+1)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 76 "a:=proc(m,nu,k2,d) # eigenvalue a_nu^m for L
+
+ame, choose d sufficiently large" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 
+
+"local l,L,A,q;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 93 "if type(m,even) \+
+
+then A:=matrix18(nu,k2,d);q:=m/2+1;else A:=matrix20(nu,k2,d);q:=(m-1)/
+
+2+1 fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 31 "L:=[eigenvalues(A)];L:=s
+
+ort(L);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "0.5*(L[q]+k2*nu*(nu+1));
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 75 "b:=proc(m,nu,k2,d) # eigenvalue b_nu^m for Lame cho
+
+ose d sufficiently large" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "local l
+
+,L,A,q;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "if type(m,even) then A:=
+
+matrix22(nu,k2,d);q:=m/2;else A:=matrix24(nu,k2,d);q:=(m-1)/2+1 fi;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 31 "L:=[eigenvalues(A)];L:=sort(L);" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "0.5*(L[q]+k2*nu*(nu+1));" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+
+109 "Example 1: Compare with the tables in Ince, The periodic Lame fun
+
+ctions, Proc. Royal Soc. Edinburgh A60, 1940" }}{PARA 0 "" 0 "" {TEXT 
+
+-1 12 "(note that  " }{XPPEDIT 18 0 "a[nu]^(2*m+1);" "6#)&amp;%\"aG6#%#nuG
+
+,&amp;*&amp;\"\"#\"\"\"%\"mGF+F+F+F+" }{TEXT -1 5 " and " }{XPPEDIT 18 0 "b[nu
+
+]^(2*m+1);" "6#)&amp;%\"bG6#%#nuG,&amp;*&amp;\"\"#\"\"\"%\"mGF+F+F+F+" }{TEXT -1 
+
+46 "  have to be interchanged). We find agreement." }}}{EXCHG {PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 8 "k2:=0.9;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 50 "for nu from 0 to 25 do print(nu,a(0,nu,k2,10)) od;" }
+
+}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 50 "for nu from 0 to 25 do pri
+
+nt(nu,b(2,nu,k2,10)) od;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 55 "Examp
+
+le 2: Plotting of eigenvalues a,b as functions of " }{XPPEDIT 18 0 "nu
+
+;" "6#%#nuG" }{TEXT -1 2 " ." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 12 "with(plots):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 15 "k:=0.
+
+7;k2:=k^2;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 54 "a0:=plot(nu-&gt;
+
+a(0,nu,k2,3),-0.5..8,-1..20,color=black):" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 52 "a1:=plot(nu-&gt;a(1,nu,k2,3),-0.5..8,-1..20,color=red)
+
+:" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 53 "a2:=plot(nu-&gt;a(2,nu,k2
+
+,4),-0.5..8,-1..20,color=blue):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 54 "a3:=plot(nu-&gt;a(3,nu,k2,4),-0.5..8,-1..20,color=brown):" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 54 "b1:=plot(nu-&gt;b(1,nu,k2,3),-0
+
+.5..8,-1..20,color=black):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+52 "b2:=plot(nu-&gt;b(2,nu,k2,3),-0.5..8,-1..20,color=red):" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 53 "b3:=plot(nu-&gt;b(3,nu,k2,4),-0.5..8,-
+
+1..20,color=blue):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 54 "b4:=p
+
+lot(nu-&gt;b(4,nu,k2,4),-0.5..8,-1..20,color=brown):" }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 29 "a00:=textplot([2.2,0.8,\"a\"]):" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 47 "a01:=textplot([2.35,1.2,\"0\"],font=[COURIER
+
+,8]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "a10:=textplot([4,6,\"a\"])
+
+:" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 47 "a11:=textplot([4.15,6.4,\"1\"]
+
+,font=[COURIER,8]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 28 "a20:=textplo
+
+t([5.5,14,\"a\"]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 48 "a21:=textplot
+
+([5.65,14.4,\"2\"],font=[COURIER,8]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 28 "a30:=textplot([4.5,16,\"a\"]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 48 "a31:=textplot([4.65,16.4,\"3\"],font=[COURIER,8]):" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 25 "b10:=textplot([3,3,\"b\"]):" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 47 "b11:=textplot([3.15,3.6,\"1\"],font=[COURIER,8])
+
+:" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 28 "b20:=textplot([5,10.5,\"b\"]):
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 48 "b21:=textplot([5.15,11.1,\"2\"]
+
+,font=[COURIER,8]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 26 "b30:=textplo
+
+t([6,19,\"b\"]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 48 "b31:=textplot([
+
+6.15,19.6,\"3\"],font=[COURIER,8]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+26 "b40:=textplot([3,16,\"b\"]):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 48 
+
+"b41:=textplot([3.15,16.6,\"4\"],font=[COURIER,8]):" }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 44 "l1:=textplot([7,-0.5,\"n\"],font=[SYMBOL,
+
+13]):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 27 "l2:=textplot([0.2,
+
+18,\"h\"]):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 136 "display(a0,
+
+a1,a2,a3,b1,b2,b3,b4,a00,a01,a10,a11,a20,a21,a30,a31,b10,b11,b20,b21,b
+
+30,b31,b40,b41,l1,l2,title=\"eigenvalues for k = 0.7\" );" }}}{EXCHG 
+
+{PARA 0 "" 0 "" {TEXT -1 59 "Example 3: Plot eigenvalues a,b for fixed
+
+ m as function of " }{XPPEDIT 18 0 "nu;" "6#%#nuG" }{TEXT -1 5 " and \+
+
+" }{XPPEDIT 18 0 "k;" "6#%\"kG" }{TEXT -1 1 "." }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 12 "k:='k';m:=0;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 47 "a0:=plot3d((nu,k)-&gt;a(m,nu,k^2,4),-0.5..4,0..1):" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 61 "l1:=textplot3d([0.6,0,3.2,\"
+
+n\"],font=[SYMBOL,13],color=black):" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 42 "l2:=textplot3d([4,0.5,0,\"k\"],color=black):" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 43 "l3:=textplot3d([-0.5,0,2,\"a
+
+\"],color=black):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 53 "displa
+
+y(a0,l1,l2,l3,axes=boxed,orientation=[300,45]);" }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 5 "m:=1;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 47 "b1:=plot3d((nu,k)-&gt;b(m,nu,k^2,4),-0.5..4,0..1):" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 57 "l1:=textplot3d([2,0,0,\"n\"],font=[
+
+SYMBOL,13],color=black):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 
+
+"l2:=textplot3d([4,0.5,0.1,\"k\"],color=black):" }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 43 "l3:=textplot3d([-0.5,0,2,\"b\"],color=black):
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 53 "display(b1,l1,l2,l3,axe
+
+s=boxed,orientation=[300,45]);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 0 "" }}}}{MARK "3 2 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+
+{PAGENUMBERS 0 1 2 33 1 1 }
+

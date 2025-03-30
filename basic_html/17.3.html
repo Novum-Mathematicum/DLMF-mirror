@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/17.3";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="17.html#PT2" rel="up" title="Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.html" rel="up up" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="17.2.html" rel="prev" title="§17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.4.html" rel="next" title="§17.4 Basic Hypergeometric Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.1.html" rel="section" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.2.html" rel="section" title="§17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.4.html" rel="section" title="§17.4 Basic Hypergeometric Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.5.html" rel="section" title="§17.5 ₀ϕ₀,₁ϕ₀,₁ϕ₁ Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.6.html" rel="section" title="§17.6 ₂ϕ₁ Function ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.7.html" rel="section" title="§17.7 Special Cases of Higher {_𝑟}ϕ_𝑠 Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.8.html" rel="section" title="§17.8 Special Cases of {_𝑟}𝜓_𝑟 Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.9.html" rel="section" title="§17.9 Further Transformations of {_{𝑟+1}}ϕ_𝑟 Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.10.html" rel="section" title="§17.10 Transformations of {_𝑟}𝜓_𝑟 Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.11.html" rel="section" title="§17.11 Transformations of 𝑞-Appell Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.12.html" rel="section" title="§17.12 Bailey Pairs ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.13.html" rel="section" title="§17.13 Integrals ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.14.html" rel="section" title="§17.14 Constant Term Identities ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.15.html" rel="section" title="§17.15 Generalizations ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.16.html" rel="section" title="§17.16 Mathematical Applications ‣ Applications ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.17.html" rel="section" title="§17.17 Physical Applications ‣ Applications ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.18.html" rel="section" title="§17.18 Methods of Computation ‣ Computation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="17.19.html" rel="section" title="§17.19 Software ‣ Computation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="-Bernoulli polynomials, -Euler numbers, -Stirling numbers, -cosine function, -elementary functions, -exponential function, -sine function" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="17.3.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="17.3.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="17.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17 </span><span class="ltx_text ltx_font_italic">q</span>-Hypergeometric and Related Functions</span></a><a class="ltx_ref" href="17.html#PT2" rel="up" title="In Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="17.2.html" rel="prev" title="In Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17.2 </span>Calculus</span></a><a class="ltx_ref" href="17.4.html" rel="next" title="In Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17.4 </span>Basic Hypergeometric Functions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§17.3 </span><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Elementary and <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Special Functions</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="17.3.html" title="">http://dlmf.nist.gov/17.3</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="17.3.html#i"><span class="ltx_tag ltx_tag_subsection">§17.3(i) </span>Elementary Functions</a></li>
+<li class="ltx_tocentry"><a href="17.3.html#ii"><span class="ltx_tag ltx_tag_subsection">§17.3(ii) </span>Gamma and Beta Functions</a></li>
+<li class="ltx_tocentry"><a href="17.3.html#iii"><span class="ltx_tag ltx_tag_subsection">§17.3(iii) </span>Bernoulli Polynomials; Euler and Stirling Numbers</a></li>
+<li class="ltx_tocentry"><a href="17.3.html#iv"><span class="ltx_tag ltx_tag_subsection">§17.3(iv) </span>Theta Functions</a></li>
+<li class="ltx_tocentry"><a href="17.3.html#v"><span class="ltx_tag ltx_tag_subsection">§17.3(v) </span>Orthogonal Polynomials</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§17.3(i) </span>Elementary Functions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-elementary%20functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-elementary functions</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.i" title="">http://dlmf.nist.gov/17.3.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">
+<math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Exponential Functions</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-exponential%20function"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="73px" altimg-valign="-28px" altimg-width="442px" alttext="e_{q}\left(x\right)=\sum_{n=0}^{\infty}\frac{(1-q)^{n}x^{n}}{\left(q;q\right)_%
+{n}}=\frac{1}{\left((1-q)x;q\right)_{\infty}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></mfrac></mrow><mo>=</mo><mfrac><mn>1</mn><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi mathvariant="normal">∞</mi></msub></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="e_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="17.5.html#Px4.p1" title="Euler’s First Sum ‣ §17.5 ₀ϕ₀,₁ϕ₀,₁ϕ₁ Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.5</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E1" title="">http://dlmf.nist.gov/17.3.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px1.info" title="𝑞-Exponential Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="111px" altimg-valign="-28px" altimg-width="442px" alttext="E_{q}\left(x\right)=\sum_{n=0}^{\infty}\frac{(1-q)^{n}q^{\genfrac{(}{)}{0.0pt}%
+{}{n}{2}}x^{n}}{\left(q;q\right)_{n}}=\left(-(1-q)x;q\right)_{\infty}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mn>2</mn></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></mfrac></mrow><mo>=</mo><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m4.png" altimg-height="26px" altimg-valign="-8px" altimg-width="60px" alttext="E_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m7.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="17.5.html#Px1.p1" title="Euler’s Second Sum ‣ §17.5 ₀ϕ₀,₁ϕ₀,₁ϕ₁ Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.5</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E2" title="">http://dlmf.nist.gov/17.3.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px1.info" title="𝑞-Exponential Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">
+<math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Sine Functions</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-sine%20function"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-sine function</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="156px" altimg-valign="-28px" altimg-width="468px" alttext="\operatorname{sin}_{q}\left(x\right)=\frac{1}{2i}(e_{q}\left(ix\right)-e_{q}%
+\left(-ix\right))=\sum_{n=0}^{\infty}\frac{(1-q)^{2n+1}(-1)^{n}x^{2n+1}}{\left%
+(q;q\right)_{2n+1}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E3" title="𝑞-sine function">sin</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m14.png" altimg-height="26px" altimg-valign="-8px" altimg-width="70px" alttext="\operatorname{sin}_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E3" title="𝑞-sine function">sin</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-sine function</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m10.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.3.html#E1" title="(17.3.1) ‣ 𝑞-Exponential Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="e_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E3" title="">http://dlmf.nist.gov/17.3.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px2.info" title="𝑞-Sine Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="156px" altimg-valign="-28px" altimg-width="550px" alttext="\operatorname{Sin}_{q}\left(x\right)=\frac{1}{2i}(E_{q}\left(ix\right)-E_{q}%
+\left(-ix\right))=\sum_{n=0}^{\infty}\frac{(1-q)^{2n+1}q^{n(2n+1)}(-1)^{n}x^{2%
+n+1}}{\left(q;q\right)_{2n+1}}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E4" title="𝑞-sine function">Sin</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m12.png" altimg-height="26px" altimg-valign="-8px" altimg-width="74px" alttext="\operatorname{Sin}_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E4" title="𝑞-sine function">Sin</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-sine function</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m10.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="17.3.html#E2" title="(17.3.2) ‣ 𝑞-Exponential Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m4.png" altimg-height="26px" altimg-valign="-8px" altimg-width="60px" alttext="E_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</a>,
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E4" title="">http://dlmf.nist.gov/17.3.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px2.info" title="𝑞-Sine Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">
+<math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Cosine Functions</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-cosine%20function"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-cosine function</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="156px" altimg-valign="-28px" altimg-width="428px" alttext="\operatorname{cos}_{q}\left(x\right)=\frac{1}{2}(e_{q}\left(ix\right)+e_{q}%
+\left(-ix\right))=\sum_{n=0}^{\infty}\frac{(1-q)^{2n}(-1)^{n}x^{2n}}{\left(q;q%
+\right)_{2n}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E5" title="𝑞-cosine function">cos</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msub></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m13.png" altimg-height="26px" altimg-valign="-8px" altimg-width="73px" alttext="\operatorname{cos}_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E5" title="𝑞-cosine function">cos</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-cosine function</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m10.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.3.html#E1" title="(17.3.1) ‣ 𝑞-Exponential Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="55px" alttext="e_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E1" title="𝑞-exponential function">e</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E5" title="">http://dlmf.nist.gov/17.3.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px3.info" title="𝑞-Cosine Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="156px" altimg-valign="-28px" altimg-width="513px" alttext="\operatorname{Cos}_{q}\left(x\right)=\frac{1}{2}(E_{q}\left(ix\right)+E_{q}%
+\left(-ix\right))=\sum_{n=0}^{\infty}\frac{(1-q)^{2n}q^{n(2n-1)}(-1)^{n}x^{2n}%
+}{\left(q;q\right)_{2n}}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E6" title="𝑞-cosine function">Cos</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msub></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m11.png" altimg-height="26px" altimg-valign="-8px" altimg-width="78px" alttext="\operatorname{Cos}_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E6" title="𝑞-cosine function">Cos</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-cosine function</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m10.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="17.3.html#E2" title="(17.3.2) ‣ 𝑞-Exponential Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m4.png" altimg-height="26px" altimg-valign="-8px" altimg-width="60px" alttext="E_{\NVar{q}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E2" title="𝑞-exponential function">E</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-exponential function</a>,
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E6" title="">http://dlmf.nist.gov/17.3.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px3.info" title="𝑞-Cosine Functions ‣ §17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#i.info" title="§17.3(i) Elementary Functions ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(i)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px3.p2">
+<p class="ltx_p">See also <cite class="ltx_cite ltx_citemacro_citet">Suslov (<a class="ltx_ref" href="bib/S.html#bib2184" title="An Introduction to Basic Fourier Series">2003</a>)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§17.3(ii) </span>Gamma and Beta Functions</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.ii" title="">http://dlmf.nist.gov/17.3.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">See §<a class="ltx_ref" href="5.18.html" title="§5.18 𝑞-Gamma and 𝑞-Beta Functions ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.18</span></a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§17.3(iii) </span>Bernoulli Polynomials; Euler and Stirling Numbers</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.iii" title="">http://dlmf.nist.gov/17.3.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">
+<math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Bernoulli Polynomials</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-Bernoulli%20polynomials"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Bernoulli polynomials</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#iii.info" title="§17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="73px" altimg-valign="-28px" altimg-width="542px" alttext="\beta_{n}\left(x,q\right)=(1-q)^{1-n}\sum_{r=0}^{n}(-1)^{r}\genfrac{(}{)}{0.0%
+pt}{}{n}{r}\frac{r+1}{(1-q^{r+1})}q^{rx}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E7" title="𝑞-Bernoulli polynomial">β</mi><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>,</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi><mo>=</mo><mn>0</mn></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi></msup><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi><mo>+</mo><mn>1</mn></mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mfrac><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi><mo>⁢</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></mrow></msup></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\beta_{\NVar{n}}\left(\NVar{x},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E7" title="𝑞-Bernoulli polynomial">β</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>,</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Bernoulli polynomial</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m7.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">r</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r3" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m24.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E7" title="">http://dlmf.nist.gov/17.3.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px4.info" title="𝑞-Bernoulli Polynomials ‣ §17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#iii.info" title="§17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px5">
+<h3 class="ltx_title ltx_title_paragraph">
+<math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Euler Numbers</h3>
+<div class="ltx_metadata ltx_info" id="Px5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-Euler%20numbers"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Euler numbers</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#iii.info" title="§17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px5.p1">
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="76px" altimg-valign="-31px" altimg-width="604px" alttext="A_{m,s}\left(q\right)=q^{\genfrac{(}{)}{0.0pt}{}{s-m}{2}+\genfrac{(}{)}{0.0pt}%
+{}{s}{2}}\sum_{j=0}^{s}(-1)^{j}q^{\genfrac{(}{)}{0.0pt}{}{j}{2}}\genfrac{[}{]}%
+{0.0pt}{}{m+1}{j}_{q}\frac{(1-q^{s-j})^{m}}{(1-q)^{m}}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E8" title="𝑞-Euler number">A</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo href="./17.3#E8" title="𝑞-Euler number">,</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mo>−</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></mrow><mn>2</mn></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>+</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mn>2</mn></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></msup><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi><mo>=</mo><mn>0</mn></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi><mn>2</mn></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></msup><mo>⁢</mo><msub><mrow><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">[</mo><mfrac linethickness="0.0pt"><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></mfrac><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">]</mo></mrow><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mo>−</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></msup><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></msup></mfrac></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m2.png" altimg-height="26px" altimg-valign="-8px" altimg-width="78px" alttext="A_{\NVar{m},\NVar{s}}\left(\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E8" title="𝑞-Euler number">A</mi><mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo href="./17.3#E8" title="𝑞-Euler number">,</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Euler number</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m7.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="17.2.html#E27" title="(17.2.27) ‣ §17.2(ii) Binomial Coefficients ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m8.png" altimg-height="33px" altimg-valign="-13px" altimg-width="45px" alttext="\genfrac{[}{]}{0.0pt}{}{\NVar{n}}{\NVar{m}}_{\NVar{q}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">[</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></mfrac><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">]</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-binomial coefficient (or Gaussian polynomial)</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m18.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E8" title="">http://dlmf.nist.gov/17.3.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px5.info" title="𝑞-Euler Numbers ‣ §17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#iii.info" title="§17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px6">
+<h3 class="ltx_title ltx_title_paragraph">
+<math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Stirling Numbers</h3>
+<div class="ltx_metadata ltx_info" id="Px6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=q-Stirling%20numbers"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Stirling numbers</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#iii.info" title="§17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px6.p1">
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">17.3.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="79px" altimg-valign="-31px" altimg-width="579px" alttext="a_{m,s}\left(q\right)=\frac{q^{-\genfrac{(}{)}{0.0pt}{}{s}{2}}(1-q)^{s}}{\left%
+(q;q\right)_{s}}\sum_{j=0}^{s}(-1)^{j}q^{\genfrac{(}{)}{0.0pt}{}{j}{2}}%
+\genfrac{[}{]}{0.0pt}{}{s}{j}_{q}\frac{(1-q^{s-j})^{m}}{(1-q)^{m}}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./17.3#E9" title="𝑞-Stirling number">a</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo href="./17.3#E9" title="𝑞-Stirling number">,</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mo>−</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mn>2</mn></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></msup></mrow><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></msub></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi><mo>=</mo><mn>0</mn></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></msup><mo>⁢</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi><mn>2</mn></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></msup><mo>⁢</mo><msub><mrow><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">[</mo><mfrac linethickness="0.0pt"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></mfrac><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">]</mo></mrow><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></msub><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mo>−</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></msup><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></msup></mfrac></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m15.png" altimg-height="26px" altimg-valign="-8px" altimg-width="73px" alttext="a_{\NVar{m},\NVar{s}}\left(\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E9" title="𝑞-Stirling number">a</mi><mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo href="./17.3#E9" title="𝑞-Stirling number">,</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Stirling number</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m7.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="17.2.html#i.p1" title="§17.2(i) 𝑞-Calculus ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m9.png" altimg-height="26px" altimg-valign="-8px" altimg-width="62px" alttext="\left(\NVar{a};\NVar{q}\right)_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">(</mo><mi class="ltx_nvar">a</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">;</mo><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi><mo href="./17.2#i.p1" title="𝑞-Pochhammer symbol (or 𝑞-shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-Pochhammer symbol (or <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-shifted factorial)</a>,
+<a class="ltx_ref" href="17.2.html#E27" title="(17.2.27) ‣ §17.2(ii) Binomial Coefficients ‣ §17.2 Calculus ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m8.png" altimg-height="33px" altimg-valign="-13px" altimg-width="45px" alttext="\genfrac{[}{]}{0.0pt}{}{\NVar{n}}{\NVar{m}}_{\NVar{q}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">[</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi><mi class="ltx_nvar" href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></mfrac><mo href="./17.2#E27" title="𝑞-binomial coefficient (or Gaussian polynomial)">]</mo></mrow><mi class="ltx_nvar" href="./17.1#p1.t1.r4" title="complex base">q</mi></msub></math>: <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>-binomial coefficient (or Gaussian polynomial)</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r4" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>:  complex base</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m18.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="17.1.html#p1.t1.r1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.E9" title="">http://dlmf.nist.gov/17.3.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/17.3.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/17.3.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/17.3.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#Px6.info" title="𝑞-Stirling Numbers ‣ §17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#iii.info" title="§17.3(iii) Bernoulli Polynomials; Euler and Stirling Numbers ‣ §17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3(iii)</span></a>,
+<a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px6.p2">
+<p class="ltx_p">These were introduced in <cite class="ltx_cite ltx_citemacro_citet">Carlitz (<a class="ltx_ref" href="bib/C.html#bib414" title="q -Bernoulli and Eulerian numbers">1954a</a>, <a class="ltx_ref" href="bib/C.html#bib416" title="Expansions of q -Bernoulli numbers">1958</a>)</cite>. The
+<math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\beta_{n}\left(x,q\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E7" title="𝑞-Bernoulli polynomial">β</mi><mi href="./17.1#p1.t1.r1" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r3" title="real variable">x</mi><mo>,</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow></math> are, in fact, rational functions of <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>, and not
+necessarily polynomials. The <math altimg="m3.png" altimg-height="26px" altimg-valign="-8px" altimg-width="78px" alttext="A_{m,s}\left(q\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E8" title="𝑞-Euler number">A</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo href="./17.3#E8" title="𝑞-Euler number">,</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow></math> are always polynomials in <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math>,
+and the <math altimg="m16.png" altimg-height="26px" altimg-valign="-8px" altimg-width="73px" alttext="a_{m,s}\left(q\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./17.3#E9" title="𝑞-Stirling number">a</mi><mrow><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi><mo href="./17.3#E9" title="𝑞-Stirling number">,</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./17.1#p1.t1.r4" title="complex base">q</mi><mo>)</mo></mrow></mrow></math> are polynomials in <math altimg="m21.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./17.1#p1.t1.r4" title="complex base">q</mi></math> for <math altimg="m1.png" altimg-height="20px" altimg-valign="-5px" altimg-width="98px" alttext="0\leq s\leq m" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">s</mi><mo>≤</mo><mi href="./17.1#p1.t1.r1" title="nonnegative integer">m</mi></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§17.3(iv) </span>Theta Functions</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.iv" title="">http://dlmf.nist.gov/17.3.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">See §§<a class="ltx_ref" href="17.8.html" title="§17.8 Special Cases of {_𝑟}𝜓_𝑟 Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">17.8</span></a> and <a class="ltx_ref" href="20.5.html" title="§20.5 Infinite Products and Related Results ‣ Properties ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.5</span></a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§17.3(v) </span>Orthogonal Polynomials</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/17.3.v" title="">http://dlmf.nist.gov/17.3.v</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="17.3.html#info" title="§17.3 𝑞-Elementary and 𝑞-Special Functions ‣ Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.3</span></a> and
+<a class="ltx_ref" href="17.html#info" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.17</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">See §§<a class="ltx_ref" href="18.27.html" title="§18.27 𝑞-Hahn Class ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.27</span></a>–<a class="ltx_ref" href="18.29.html" title="§18.29 Asymptotic Approximations for 𝑞-Hahn and Askey–Wilson Classes ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.29</span></a>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="17.2.html" rel="prev" title="In Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17.2 </span>Calculus</span></a><a class="ltx_ref" href="17.4.html" rel="next" title="In Properties ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">17.4 </span>Basic Hypergeometric Functions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

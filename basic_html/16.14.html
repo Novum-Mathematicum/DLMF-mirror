@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/16.14";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="16.html#PT3" rel="up" title="Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.html" rel="up up" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="index.html" rel="start" title=""/>
+<link href="16.13.html" rel="prev" title="§16.13 Appell Functions ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.15.html" rel="next" title="§16.15 Integral Representations and Integrals ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.1.html" rel="section" title="§16.1 Special Notation ‣ Notation ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.2.html" rel="section" title="§16.2 Definition and Analytic Properties ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.3.html" rel="section" title="§16.3 Derivatives and Contiguous Functions ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.4.html" rel="section" title="§16.4 Argument Unity ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.5.html" rel="section" title="§16.5 Integral Representations and Integrals ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.6.html" rel="section" title="§16.6 Transformations of Variable ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.7.html" rel="section" title="§16.7 Relations to Other Functions ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.8.html" rel="section" title="§16.8 Differential Equations ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.9.html" rel="section" title="§16.9 Zeros ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.10.html" rel="section" title="§16.10 Expansions in Series of {_𝑝}𝐹_𝑞 Functions ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.11.html" rel="section" title="§16.11 Asymptotic Expansions ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.12.html" rel="section" title="§16.12 Products ‣ Generalized Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.13.html" rel="section" title="§16.13 Appell Functions ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.15.html" rel="section" title="§16.15 Integral Representations and Integrals ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.16.html" rel="section" title="§16.16 Transformations of Variables ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.17.html" rel="section" title="§16.17 Definition ‣ Meijer 𝐺-Function ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.18.html" rel="section" title="§16.18 Special Cases ‣ Meijer 𝐺-Function ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.19.html" rel="section" title="§16.19 Identities ‣ Meijer 𝐺-Function ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.20.html" rel="section" title="§16.20 Integrals and Series ‣ Meijer 𝐺-Function ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.21.html" rel="section" title="§16.21 Differential Equation ‣ Meijer 𝐺-Function ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.22.html" rel="section" title="§16.22 Asymptotic Expansions ‣ Meijer 𝐺-Function ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.23.html" rel="section" title="§16.23 Mathematical Applications ‣ Applications ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.24.html" rel="section" title="§16.24 Physical Applications ‣ Applications ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.25.html" rel="section" title="§16.25 Methods of Computation ‣ Computation ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.26.html" rel="section" title="§16.26 Approximations ‣ Computation ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="16.27.html" rel="section" title="§16.27 Software ‣ Computation ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Appell functions, partial differential equations" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="16.14.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="16.14.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="16.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16 </span>Generalized Hypergeometric Functions &amp; Meijer <span class="ltx_text ltx_font_italic">G</span>-Function</span></a><a class="ltx_ref" href="16.html#PT3" rel="up" title="In Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_title">Two-Variable Hypergeometric Functions</span></a><a class="ltx_ref" href="16.13.html" rel="prev" title="In Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16.13 </span>Appell Functions</span></a><a class="ltx_ref" href="16.15.html" rel="next" title="In Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16.15 </span>Integral Representations and Integrals</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§16.14 </span>Partial Differential Equations</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="16.14.html" title="">http://dlmf.nist.gov/16.14</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="16.14.html#i"><span class="ltx_tag ltx_tag_subsection">§16.14(i) </span>Appell Functions</a></li>
+<li class="ltx_tocentry"><a href="16.14.html#ii"><span class="ltx_tag ltx_tag_subsection">§16.14(ii) </span>Other Functions</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§16.14(i) </span>Appell Functions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Appell%20functions">Appell functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=partial%20differential%20equations">partial differential equations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, §5.9)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.i" title="">http://dlmf.nist.gov/16.14.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">16.14.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="62px" altimg-valign="-20px" altimg-width="708px" alttext="\displaystyle x(1-x)\frac{{\partial}^{2}{F_{1}}}{{\partial x}^{2}}+y(1-x)\frac%
+{\,{\partial}^{2}{F_{1}}}{\,\partial x\,\partial y}+\left(\gamma-(\alpha+\beta%
++1)x\right)\frac{\partial{F_{1}}}{\partial x}-\beta y\frac{\partial{F_{1}}}{%
+\partial y}-\alpha\beta{F_{1}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mi>γ</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><mi>β</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi><mo>⁢</mo><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="64px" altimg-valign="-22px" altimg-width="723px" alttext="\displaystyle y(1-y)\frac{{\partial}^{2}{F_{1}}}{{\partial y}^{2}}+x(1-y)\frac%
+{\,{\partial}^{2}{F_{1}}}{\,\partial x\,\partial y}+\left(\gamma-(\alpha+\beta%
+^{\prime}+1)y\right)\frac{\partial{F_{1}}}{\partial y}-\beta^{\prime}x\frac{%
+\partial{F_{1}}}{\partial x}-\alpha\beta^{\prime}{F_{1}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mi>γ</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><msup><mi>β</mi><mo>′</mo></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><msup><mi>β</mi><mo>′</mo></msup><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><msup><mi>β</mi><mo>′</mo></msup><mo>⁢</mo><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="16.13.html#E1" title="(16.13.1) ‣ §16.13 Appell Functions ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="172px" alttext="{F_{1}}\left(\NVar{\alpha};\NVar{\beta},\NVar{\beta^{\prime}};\NVar{\gamma};%
+\NVar{x},\NVar{y}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./16.13#E1" title="first Appell function">F</mi><mn href="./16.13#E1" title="first Appell function">1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">α</mi><mo>;</mo><mi class="ltx_nvar">β</mi><mo>,</mo><msup><mi class="ltx_nvar">β</mi><mo class="ltx_nvar">′</mo></msup><mo>;</mo><mi class="ltx_nvar">γ</mi><mo>;</mo><mi class="ltx_nvar">x</mi><mo>,</mo><mi class="ltx_nvar">y</mi><mo>)</mo></mrow></mrow></math>: first Appell function</a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m18.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m20.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.E1" title="">http://dlmf.nist.gov/16.14.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/16.14.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E1a.png">png</a>, <a href="http://dlmf.nist.gov/16.14.E1b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#i.info" title="§16.14(i) Appell Functions ‣ §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14(i)</span></a>,
+<a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">16.14.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="62px" altimg-valign="-20px" altimg-width="656px" alttext="\displaystyle x(1-x)\frac{{\partial}^{2}{F_{2}}}{{\partial x}^{2}}-xy\frac{\,{%
+\partial}^{2}{F_{2}}}{\,\partial x\,\partial y}+\left(\gamma-(\alpha+\beta+1)x%
+\right)\frac{\partial{F_{2}}}{\partial x}-\beta y\frac{\partial{F_{2}}}{%
+\partial y}-\alpha\beta{F_{2}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mi>γ</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><mi>β</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi><mo>⁢</mo><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="64px" altimg-valign="-22px" altimg-width="677px" alttext="\displaystyle y(1-y)\frac{{\partial}^{2}{F_{2}}}{{\partial y}^{2}}-xy\frac{\,{%
+\partial}^{2}{F_{2}}}{\,\partial x\,\partial y}+\left(\gamma^{\prime}-(\alpha+%
+\beta^{\prime}+1)y\right)\frac{\partial{F_{2}}}{\partial y}-\beta^{\prime}x%
+\frac{\partial{F_{2}}}{\partial x}-\alpha\beta^{\prime}{F_{2}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><msup><mi>γ</mi><mo>′</mo></msup><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><msup><mi>β</mi><mo>′</mo></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><msup><mi>β</mi><mo>′</mo></msup><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><msup><mi>β</mi><mo>′</mo></msup><mo>⁢</mo><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="16.13.html#E2" title="(16.13.2) ‣ §16.13 Appell Functions ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="199px" alttext="{F_{2}}\left(\NVar{\alpha};\NVar{\beta},\NVar{\beta^{\prime}};\NVar{\gamma},%
+\NVar{\gamma^{\prime}};\NVar{x},\NVar{y}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./16.13#E2" title="second Appell function">F</mi><mn href="./16.13#E2" title="second Appell function">2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">α</mi><mo>;</mo><mi class="ltx_nvar">β</mi><mo>,</mo><msup><mi class="ltx_nvar">β</mi><mo class="ltx_nvar">′</mo></msup><mo>;</mo><mi class="ltx_nvar">γ</mi><mo>,</mo><msup><mi class="ltx_nvar">γ</mi><mo class="ltx_nvar">′</mo></msup><mo>;</mo><mi class="ltx_nvar">x</mi><mo>,</mo><mi class="ltx_nvar">y</mi><mo>)</mo></mrow></mrow></math>: second Appell function</a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m18.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m20.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.E2" title="">http://dlmf.nist.gov/16.14.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/16.14.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E2a.png">png</a>, <a href="http://dlmf.nist.gov/16.14.E2b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#i.info" title="§16.14(i) Appell Functions ‣ §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14(i)</span></a>,
+<a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">16.14.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="62px" altimg-valign="-20px" altimg-width="555px" alttext="\displaystyle x(1-x)\frac{{\partial}^{2}{F_{3}}}{{\partial x}^{2}}+y\frac{\,{%
+\partial}^{2}{F_{3}}}{\,\partial x\,\partial y}+\left(\gamma-(\alpha+\beta+1)x%
+\right)\frac{\partial{F_{3}}}{\partial x}-\alpha\beta{F_{3}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mi>γ</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi><mo>⁢</mo><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="64px" altimg-valign="-22px" altimg-width="576px" alttext="\displaystyle y(1-y)\frac{{\partial}^{2}{F_{3}}}{{\partial y}^{2}}+x\frac{\,{%
+\partial}^{2}{F_{3}}}{\,\partial x\,\partial y}+\left(\gamma-(\alpha^{\prime}+%
+\beta^{\prime}+1)y\right)\frac{\partial{F_{3}}}{\partial y}-\alpha^{\prime}%
+\beta^{\prime}{F_{3}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mi>γ</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>+</mo><msup><mi>β</mi><mo>′</mo></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>β</mi><mo>′</mo></msup><mo>⁢</mo><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="16.13.html#E3" title="(16.13.3) ‣ §16.13 Appell Functions ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="201px" alttext="{F_{3}}\left(\NVar{\alpha},\NVar{\alpha^{\prime}};\NVar{\beta},\NVar{\beta^{%
+\prime}};\NVar{\gamma};\NVar{x},\NVar{y}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./16.13#E3" title="third Appell function">F</mi><mn href="./16.13#E3" title="third Appell function">3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">α</mi><mo>,</mo><msup><mi class="ltx_nvar">α</mi><mo class="ltx_nvar">′</mo></msup><mo>;</mo><mi class="ltx_nvar">β</mi><mo>,</mo><msup><mi class="ltx_nvar">β</mi><mo class="ltx_nvar">′</mo></msup><mo>;</mo><mi class="ltx_nvar">γ</mi><mo>;</mo><mi class="ltx_nvar">x</mi><mo>,</mo><mi class="ltx_nvar">y</mi><mo>)</mo></mrow></mrow></math>: third Appell function</a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m18.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m20.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.E3" title="">http://dlmf.nist.gov/16.14.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/16.14.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E3a.png">png</a>, <a href="http://dlmf.nist.gov/16.14.E3b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#i.info" title="§16.14(i) Appell Functions ‣ §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14(i)</span></a>,
+<a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">16.14.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="64px" altimg-valign="-22px" altimg-width="851px" alttext="\displaystyle x(1-x)\frac{{\partial}^{2}{F_{4}}}{{\partial x}^{2}}-2xy\frac{\,%
+{\partial}^{2}{F_{4}}}{\,\partial x\,\partial y}-y^{2}\frac{{\partial}^{2}{F_{%
+4}}}{{\partial y}^{2}}+\left(\gamma-(\alpha+\beta+1)x\right)\frac{\partial{F_{%
+4}}}{\partial x}-(\alpha+\beta+1)y\frac{\partial{F_{4}}}{\partial y}-\alpha%
+\beta{F_{4}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mi>γ</mi><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi><mo>⁢</mo><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="64px" altimg-valign="-22px" altimg-width="856px" alttext="\displaystyle y(1-y)\frac{{\partial}^{2}{F_{4}}}{{\partial y}^{2}}-2xy\frac{\,%
+{\partial}^{2}{F_{4}}}{\,\partial x\,\partial y}-x^{2}\frac{{\partial}^{2}{F_{%
+4}}}{{\partial x}^{2}}+\left(\gamma^{\prime}-(\alpha+\beta+1)y\right)\frac{%
+\partial{F_{4}}}{\partial y}-(\alpha+\beta+1)x\frac{\partial{F_{4}}}{\partial x%
+}-\alpha\beta{F_{4}}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial differential of 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>x</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><msup><mi>γ</mi><mo>′</mo></msup><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi><mo>⁢</mo><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="19px" altimg-valign="-2px" altimg-width="45px" alttext="\displaystyle=0." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="16.13.html#E4" title="(16.13.4) ‣ §16.13 Appell Functions ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="171px" alttext="{F_{4}}\left(\NVar{\alpha},\NVar{\beta};\NVar{\gamma},\NVar{\gamma^{\prime}};%
+\NVar{x},\NVar{y}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./16.13#E4" title="fourth Appell function">F</mi><mn href="./16.13#E4" title="fourth Appell function">4</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">α</mi><mo>,</mo><mi class="ltx_nvar">β</mi><mo>;</mo><mi class="ltx_nvar">γ</mi><mo>,</mo><msup><mi class="ltx_nvar">γ</mi><mo class="ltx_nvar">′</mo></msup><mo>;</mo><mi class="ltx_nvar">x</mi><mo>,</mo><mi class="ltx_nvar">y</mi><mo>)</mo></mrow></mrow></math>: fourth Appell function</a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m18.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m20.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m22.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.E4" title="">http://dlmf.nist.gov/16.14.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/16.14.E4a.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E4b.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E4a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E4b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E4a.png">png</a>, <a href="http://dlmf.nist.gov/16.14.E4b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#i.info" title="§16.14(i) Appell Functions ‣ §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14(i)</span></a>,
+<a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§16.14(ii) </span>Other Functions</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.ii" title="">http://dlmf.nist.gov/16.14.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">In addition to the four Appell functions there are <math altimg="m16.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="24" class="ltx_Math" display="inline"><mn>24</mn></math> other sums of double
+series that cannot be expressed as a product of two <math altimg="m27.png" altimg-height="21px" altimg-valign="-5px" altimg-width="36px" alttext="{{}_{2}F_{1}}" class="ltx_Math" display="inline"><mmultiscripts><mi href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">F</mi><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">1</mn><mrow></mrow><mprescripts></mprescripts><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">2</mn><mrow></mrow></mmultiscripts></math>
+functions, and which satisfy pairs of linear partial differential equations of
+the second order. Two examples are provided by</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">16.14.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="28px" altimg-valign="-7px" altimg-width="181px" alttext="\displaystyle G_{2}(\alpha,\alpha^{\prime};\beta,\beta^{\prime};x,y)" class="ltx_Math" display="inline"><mrow><msub><mi>G</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><msup><mi>α</mi><mo>′</mo></msup><mo>;</mo><mi>β</mi><mo>,</mo><msup><mi>β</mi><mo>′</mo></msup><mo>;</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="70px" altimg-valign="-31px" altimg-width="597px" alttext="\displaystyle=\sum_{m,n=0}^{\infty}\frac{\Gamma\left(\alpha+m\right)\Gamma%
+\left(\alpha^{\prime}+n\right)\Gamma\left(\beta+n-m\right)\Gamma\left(\beta^{%
+\prime}+m-n\right)}{\Gamma\left(\alpha\right)\Gamma\left(\alpha^{\prime}\right%
+)\Gamma\left(\beta\right)\Gamma\left(\beta^{\prime}\right)}\frac{x^{m}y^{n}}{m%
+!n!}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>α</mi><mo>+</mo><mi>m</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>β</mi><mo>+</mo><mi>n</mi></mrow><mo>−</mo><mi>m</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><msup><mi>β</mi><mo>′</mo></msup><mo>+</mo><mi>m</mi></mrow><mo>−</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>α</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>α</mi><mo>′</mo></msup><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>β</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>β</mi><mo>′</mo></msup><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>x</mi><mi>m</mi></msup><mo>⁢</mo><msup><mi>y</mi><mi>n</mi></msup></mrow><mrow><mrow><mi>m</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="|x|&lt;1" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, <math altimg="m31.png" altimg-height="25px" altimg-valign="-7px" altimg-width="65px" alttext="|y|&lt;1" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a> and
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.E5" title="">http://dlmf.nist.gov/16.14.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/16.14.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#ii.info" title="§16.14(ii) Other Functions ‣ §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14(ii)</span></a>,
+<a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">16.14.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="28px" altimg-valign="-7px" altimg-width="131px" alttext="\displaystyle G_{3}(\alpha,\alpha^{\prime};x,y)" class="ltx_Math" display="inline"><mrow><msub><mi>G</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><msup><mi>α</mi><mo>′</mo></msup><mo>;</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="70px" altimg-valign="-31px" altimg-width="433px" alttext="\displaystyle=\sum_{m,n=0}^{\infty}\frac{\Gamma\left(\alpha+2n-m\right)\Gamma%
+\left(\alpha^{\prime}+2m-n\right)}{\Gamma\left(\alpha\right)\Gamma\left(\alpha%
+^{\prime}\right)}\frac{x^{m}y^{n}}{m!n!}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>α</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow><mo>−</mo><mi>m</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow><mo>−</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>α</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>α</mi><mo>′</mo></msup><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>x</mi><mi>m</mi></msup><mo>⁢</mo><msup><mi>y</mi><mi>n</mi></msup></mrow><mrow><mrow><mi>m</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m29.png" altimg-height="29px" altimg-valign="-9px" altimg-width="116px" alttext="|x|+|y|&lt;\frac{1}{4}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a> and
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/16.14.E6" title="">http://dlmf.nist.gov/16.14.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/16.14.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/16.14.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/16.14.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="16.14.html#ii.info" title="§16.14(ii) Other Functions ‣ §16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14(ii)</span></a>,
+<a class="ltx_ref" href="16.14.html#info" title="§16.14 Partial Differential Equations ‣ Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.14</span></a> and
+<a class="ltx_ref" href="16.html#info" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">Ch.16</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">(The region of convergence <math altimg="m29.png" altimg-height="29px" altimg-valign="-9px" altimg-width="116px" alttext="|x|+|y|&lt;\frac{1}{4}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math> is not quite maximal.) See
+<cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, §§5.7.1–5.7.2)</cite> for further information.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="16.13.html" rel="prev" title="In Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16.13 </span>Appell Functions</span></a><a class="ltx_ref" href="16.15.html" rel="next" title="In Two-Variable Hypergeometric Functions ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">16.15 </span>Integral Representations and Integrals</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

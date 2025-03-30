@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/3.2";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="3.html#PT1" rel="up" title="Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.html" rel="up up" title="Chapter 3 Numerical Methods"/>
+<link href="index.html" rel="start" title=""/>
+<link href="3.1.html" rel="prev" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.3.html" rel="next" title="§3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.1.html" rel="section" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.3.html" rel="section" title="§3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.4.html" rel="section" title="§3.4 Differentiation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.5.html" rel="section" title="§3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.6.html" rel="section" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.7.html" rel="section" title="§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.8.html" rel="section" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.9.html" rel="section" title="§3.9 Acceleration of Convergence ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.10.html" rel="section" title="§3.10 Continued Fractions ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.11.html" rel="section" title="§3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.12.html" rel="section" title="§3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content=", Euclidean, Gaussian elimination, Lanczos tridiagonalization of a symmetric matrix, Lanczos vectors, augmented, back substitution, characteristic, characteristic polynomial, computation, condition number, condition numbers, conditioning, conditioning of linear systems, eigenvalues, eigenvectors, error bounds, factorization, forward elimination, iterative refinement, left, linear algebra, matrix, multiplicity, multipliers, nondefective, normalized, norms, of arbitrary order, of matrices, of vectors, partial pivoting, pivot (or pivot element), polynomials, residual vector, right, symmetric, triangular decomposition, tridiagonal, tridiagonal systems, tridiagonalization, vector" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="3.2.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="3.2.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="3.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Numerical Methods</span></a><a class="ltx_ref" href="3.html#PT1" rel="up" title="In Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title">Areas</span></a><a class="ltx_ref" href="3.1.html" rel="prev" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Arithmetics and Error Measures</span></a><a class="ltx_ref" href="3.3.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Interpolation</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§3.2 </span>Linear Algebra</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=linear%20algebra">linear algebra</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="3.2.html" title="">http://dlmf.nist.gov/3.2</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="3.2.html#i"><span class="ltx_tag ltx_tag_subsection">§3.2(i) </span>Gaussian Elimination</a></li>
+<li class="ltx_tocentry"><a href="3.2.html#ii"><span class="ltx_tag ltx_tag_subsection">§3.2(ii) </span>Gaussian Elimination for a Tridiagonal Matrix</a></li>
+<li class="ltx_tocentry"><a href="3.2.html#iii"><span class="ltx_tag ltx_tag_subsection">§3.2(iii) </span>Condition of Linear Systems</a></li>
+<li class="ltx_tocentry"><a href="3.2.html#iv"><span class="ltx_tag ltx_tag_subsection">§3.2(iv) </span>Eigenvalues and Eigenvectors</a></li>
+<li class="ltx_tocentry"><a href="3.2.html#v"><span class="ltx_tag ltx_tag_subsection">§3.2(v) </span>Condition of Eigenvalues</a></li>
+<li class="ltx_tocentry"><a href="3.2.html#vi"><span class="ltx_tag ltx_tag_subsection">§3.2(vi) </span>Lanczos Tridiagonalization of a Symmetric Matrix</a></li>
+<li class="ltx_tocentry"><a href="3.2.html#vii"><span class="ltx_tag ltx_tag_subsection">§3.2(vii) </span>Computation of Eigenvalues</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(i) </span>Gaussian Elimination</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Gaussian%20elimination">Gaussian elimination</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=augmented">augmented</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=back%20substitution">back substitution</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=factorization">factorization</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=forward%20elimination">forward elimination</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=multipliers">multipliers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=triangular%20decomposition">triangular decomposition</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="1.2.html#Px13.p1" title="𝑛 Linear Equations in 𝑛 Unknowns ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.2(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.i" title="">http://dlmf.nist.gov/3.2.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">To solve the system</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="24px" altimg-valign="-6px" altimg-width="84px" alttext="\mathbf{A}\mathbf{x}=\mathbf{b}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi>𝐀</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mi>𝐛</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#iii.p3" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>,
+<a class="ltx_ref" href="3.2.html#iii.p4" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E1" title="">http://dlmf.nist.gov/3.2.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with Gaussian elimination, where <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is a nonsingular <math altimg="m98.png" altimg-height="18px" altimg-valign="-4px" altimg-width="55px" alttext="n\times n" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow></math>
+matrix and <math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbf{b}" class="ltx_Math" display="inline"><mi>𝐛</mi></math> is an <math altimg="m97.png" altimg-height="19px" altimg-valign="-4px" altimg-width="53px" alttext="n\times 1" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mn>1</mn></mrow></math> vector, we start with the
+<em class="ltx_emph ltx_font_italic">augmented matrix</em>
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="101px" altimg-valign="-41px" altimg-width="230px" alttext="\begin{bmatrix}a_{11}&amp;\cdots&amp;a_{1n}&amp;b_{1}\\
+\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+a_{n1}&amp;\cdots&amp;a_{nn}&amp;b_{n}\end{bmatrix}." class="ltx_Math" display="block"><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><msub><mi>b</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E2" title="">http://dlmf.nist.gov/3.2.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">By repeatedly subtracting multiples of each row from the subsequent rows we
+obtain a matrix of the form</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="126px" altimg-valign="-54px" altimg-width="281px" alttext="\begin{bmatrix}u_{11}&amp;u_{12}&amp;\cdots&amp;u_{1n}&amp;y_{1}\\
+0&amp;u_{22}&amp;\cdots&amp;u_{2n}&amp;y_{2}\\
+\vdots&amp;\ddots&amp;\ddots&amp;\vdots&amp;\vdots\\
+0&amp;\cdots&amp;0&amp;u_{nn}&amp;y_{n}\end{bmatrix}." class="ltx_Math" display="block"><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>u</mi><mn>11</mn></msub></mtd><mtd><msub><mi>u</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>u</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><msub><mi>u</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>u</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd><mtd><msub><mi>u</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><msub><mi>y</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.2.html#i.p3" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E3" title="">http://dlmf.nist.gov/3.2.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">During this reduction process we store the <em class="ltx_emph ltx_font_italic">multipliers</em> <math altimg="m32.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\ell_{jk}" class="ltx_Math" display="inline"><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math> that
+are used in each column to eliminate other elements in that column. This yields
+a <em class="ltx_emph ltx_font_italic">lower triangular matrix</em> of the form
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="141px" altimg-valign="-54px" altimg-width="267px" alttext="\mathbf{L}=\begin{bmatrix}1&amp;0&amp;\cdots&amp;0\\
+\ell_{21}&amp;1&amp;\cdots&amp;0\\
+\vdots&amp;\ddots&amp;\ddots&amp;\vdots\\
+\ell_{n1}&amp;\cdots&amp;\ell_{n,n-1}&amp;1\end{bmatrix}." class="ltx_Math" display="block"><mrow><mrow><mi>𝐋</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mn>21</mn></msub></mtd><mtd><mn>1</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mrow><mi>n</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mrow><mi>n</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.2.html#i.p3" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\ell_{jk}" class="ltx_Math" display="inline"><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>:  multipliers</a></dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="1.2.html#Px9.p3" title="Special Forms of Square Matrices ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.2(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E4" title="">http://dlmf.nist.gov/3.2.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">If we denote by <math altimg="m57.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="\mathbf{U}" class="ltx_Math" display="inline"><mi>𝐔</mi></math> the upper triangular matrix comprising the
+elements <math altimg="m107.png" altimg-height="19px" altimg-valign="-8px" altimg-width="34px" alttext="u_{jk}" class="ltx_Math" display="inline"><msub><mi>u</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math> in (<a class="ltx_ref" href="3.2.html#E3" title="(3.2.3) ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.3</span></a>), then we have the factorization, or
+<em class="ltx_emph ltx_font_italic">triangular decomposition</em>,
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="20px" altimg-valign="-2px" altimg-width="91px" alttext="\mathbf{A}=\mathbf{L}\mathbf{U}." class="ltx_Math" display="block"><mrow><mrow><mi>𝐀</mi><mo>=</mo><mrow><mi>𝐋</mi><mo>⁢</mo><mi>𝐔</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#Px2.p1" title="Iterative Refinement ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#ii.p1" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E5" title="">http://dlmf.nist.gov/3.2.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">With <math altimg="m75.png" altimg-height="27px" altimg-valign="-7px" altimg-width="185px" alttext="\mathbf{y}=[y_{1},y_{2},\dots,y_{n}]^{\rm T}" class="ltx_Math" display="inline"><mrow><mi>𝐲</mi><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">T</mi></msup></mrow></math> the process of solution can
+then be regarded as first solving the equation
+<math altimg="m54.png" altimg-height="22px" altimg-valign="-6px" altimg-width="73px" alttext="\mathbf{L}\mathbf{y}=\mathbf{b}" class="ltx_Math" display="inline"><mrow><mrow><mi>𝐋</mi><mo>⁢</mo><mi>𝐲</mi></mrow><mo>=</mo><mi>𝐛</mi></mrow></math> for <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mathbf{y}" class="ltx_Math" display="inline"><mi>𝐲</mi></math> (<em class="ltx_emph ltx_font_italic">forward
+elimination</em>), followed by the solution of <math altimg="m58.png" altimg-height="22px" altimg-valign="-6px" altimg-width="76px" alttext="\mathbf{U}\mathbf{x}=\mathbf{y}" class="ltx_Math" display="inline"><mrow><mrow><mi>𝐔</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mi>𝐲</mi></mrow></math>
+for <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\mathbf{x}" class="ltx_Math" display="inline"><mi>𝐱</mi></math> (<em class="ltx_emph ltx_font_italic">back substitution</em>).
+</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">For more details see <cite class="ltx_cite ltx_citemacro_citet">Golub and Van Loan (<a class="ltx_ref" href="bib/G.html#bib952" title="Matrix Computations">1996</a>, pp. 87–100)</cite>.</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Example</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Gaussian%20elimination">Gaussian elimination</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=multipliers">multipliers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=partial%20pivoting">partial pivoting</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=pivot%20%28or%20pivot%20element%29">pivot (or pivot element)</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="249px" altimg-valign="-34px" altimg-width="258px" alttext="\begin{bmatrix}1&amp;2&amp;3\\
+2&amp;3&amp;1\\
+3&amp;1&amp;2\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\
+2&amp;1&amp;0\\
+3&amp;5&amp;1\end{bmatrix}\begin{bmatrix}1&amp;2&amp;3\\
+0&amp;-1&amp;-5\\
+0&amp;0&amp;18\end{bmatrix}." class="ltx_Math" display="block"><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>18</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E6" title="">http://dlmf.nist.gov/3.2.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#Px1.info" title="Example ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">In solving <math altimg="m46.png" altimg-height="27px" altimg-valign="-7px" altimg-width="137px" alttext="\mathbf{A}\mathbf{x}=[1,1,1]^{\rm T}" class="ltx_Math" display="inline"><mrow><mrow><mi>𝐀</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">T</mi></msup></mrow></math>, we obtain by forward
+elimination <math altimg="m74.png" altimg-height="27px" altimg-valign="-7px" altimg-width="135px" alttext="\mathbf{y}=[1,-1,3]^{\rm T}" class="ltx_Math" display="inline"><mrow><mi>𝐲</mi><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>3</mn><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">T</mi></msup></mrow></math>, and by back substitution
+<math altimg="m70.png" altimg-height="29px" altimg-valign="-9px" altimg-width="127px" alttext="\mathbf{x}=[\frac{1}{6},\frac{1}{6},\frac{1}{6}]^{\rm T}" class="ltx_Math" display="inline"><mrow><mi>𝐱</mi><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">T</mi></msup></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px1.p2">
+<p class="ltx_p">In practice, if any of the multipliers <math altimg="m32.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\ell_{jk}" class="ltx_Math" display="inline"><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math> are unduly large in
+magnitude compared with unity, then Gaussian elimination is unstable. To avoid
+instability the rows are interchanged at each elimination step in such a way
+that the absolute value of the element that is used as a divisor, the
+<em class="ltx_emph ltx_font_italic">pivot element</em>, is not less than that of the other available elements in
+its column. Then <math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="\left|\ell_{jk}\right|\leq 1" class="ltx_Math" display="inline"><mrow><mrow><mo>|</mo><msub><mi href="./3.2#i.p3" mathvariant="normal" title="multipliers">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> in all cases. This modification is
+called <em class="ltx_emph ltx_font_italic">Gaussian elimination with partial pivoting</em>.
+</p>
+</div>
+<div class="ltx_para" id="Px1.p3">
+<p class="ltx_p">For more information on pivoting see <cite class="ltx_cite ltx_citemacro_citet">Golub and Van Loan (<a class="ltx_ref" href="bib/G.html#bib952" title="Matrix Computations">1996</a>, pp. 109–123)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Iterative Refinement</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Gaussian%20elimination">Gaussian elimination</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=iterative%20refinement">iterative refinement</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=residual%20vector">residual vector</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#i.info" title="§3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(i)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">When the factorization (<a class="ltx_ref" href="3.2.html#E5" title="(3.2.5) ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.5</span></a>) is available, the accuracy of the
+computed solution <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\mathbf{x}" class="ltx_Math" display="inline"><mi>𝐱</mi></math> can be improved with little extra computation.
+Because of rounding errors, the <em class="ltx_emph ltx_font_italic">residual vector</em>
+<math altimg="m60.png" altimg-height="20px" altimg-valign="-4px" altimg-width="111px" alttext="\mathbf{r}=\mathbf{b}-\mathbf{A}\mathbf{x}" class="ltx_Math" display="inline"><mrow><mi>𝐫</mi><mo>=</mo><mrow><mi>𝐛</mi><mo>−</mo><mrow><mi>𝐀</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mrow></mrow></math> is nonzero as a rule. We
+solve the system <math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="82px" alttext="\mathbf{A}\delta\mathbf{x}=\mathbf{r}" class="ltx_Math" display="inline"><mrow><mrow><mi>𝐀</mi><mo lspace="0.167em">⁢</mo><mrow><mo rspace="0.167em">𝛿</mo><mi>𝐱</mi></mrow></mrow><mo>=</mo><mi>𝐫</mi></mrow></math> for
+<math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="\delta\mathbf{x}" class="ltx_Math" display="inline"><mrow><mo rspace="0.167em">𝛿</mo><mi>𝐱</mi></mrow></math>, taking advantage of the existing triangular decomposition
+of <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> to obtain an improved solution
+<math altimg="m69.png" altimg-height="20px" altimg-valign="-4px" altimg-width="65px" alttext="\mathbf{x}+\delta\mathbf{x}" class="ltx_Math" display="inline"><mrow><mi>𝐱</mi><mo>+</mo><mrow><mo lspace="0em" rspace="0.167em">𝛿</mo><mi>𝐱</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(ii) </span>Gaussian Elimination for a Tridiagonal Matrix</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Gaussian%20elimination">Gaussian elimination</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tridiagonal">tridiagonal</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tridiagonal%20systems">tridiagonal systems</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.6.html#iv.p3" title="§3.6(iv) Inhomogeneous Equations ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.6(iv)</span></a>,
+<a class="ltx_ref" href="3.7.html#iii.p4" title="§3.7(iii) Taylor-Series Method: Boundary-Value Problems ‣ §3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.7(iii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.ii" title="">http://dlmf.nist.gov/3.2.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Tridiagonal matrices</em> are ones in which the only nonzero elements occur
+on the main diagonal and two adjacent diagonals. Thus</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="166px" altimg-valign="-66px" altimg-width="343px" alttext="\mathbf{A}=\begin{bmatrix}b_{1}&amp;c_{1}&amp;&amp;&amp;0\\
+a_{2}&amp;b_{2}&amp;c_{2}&amp;&amp;\\
+&amp;\ddots&amp;\ddots&amp;\ddots&amp;\\
+&amp;&amp;a_{n-1}&amp;b_{n-1}&amp;c_{n-1}\\
+0&amp;&amp;&amp;a_{n}&amp;b_{n}\end{bmatrix}." class="ltx_Math" display="block"><mrow><mrow><mi>𝐀</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>2</mn></msub></mtd><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>b</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>c</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd><mtd><msub><mi>a</mi><mi>n</mi></msub></mtd><mtd><msub><mi>b</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="1.2.html#Px9.p3" title="Special Forms of Square Matrices ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.2(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E7" title="">http://dlmf.nist.gov/3.2.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#ii.info" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Assume that <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> can be factored as in (<a class="ltx_ref" href="3.2.html#E5" title="(3.2.5) ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.5</span></a>), but
+without partial pivoting. Then</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="166px" altimg-valign="-66px" altimg-width="287px" alttext="\mathbf{L}=\begin{bmatrix}1&amp;0&amp;&amp;&amp;0\\
+\ell_{2}&amp;1&amp;0&amp;&amp;\\
+&amp;\ddots&amp;\ddots&amp;\ddots&amp;\\
+&amp;&amp;\ell_{n-1}&amp;1&amp;0\\
+0&amp;&amp;&amp;\ell_{n}&amp;1\end{bmatrix}," class="ltx_Math" display="block"><mrow><mrow><mi>𝐋</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mn>2</mn></msub></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd><mtd><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mi>n</mi></msub></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m32.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\ell_{jk}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>:  elements of <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbf{L}" class="ltx_Math" display="inline"><mi>𝐋</mi></math> (locally)</span></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E8" title="">http://dlmf.nist.gov/3.2.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#ii.info" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="166px" altimg-valign="-66px" altimg-width="329px" alttext="\mathbf{U}=\begin{bmatrix}d_{1}&amp;u_{1}&amp;&amp;&amp;0\\
+0&amp;d_{2}&amp;u_{2}&amp;&amp;\\
+&amp;\ddots&amp;\ddots&amp;\ddots&amp;\\
+&amp;&amp;0&amp;d_{n-1}&amp;u_{n-1}\\
+0&amp;&amp;&amp;0&amp;d_{n}\end{bmatrix}," class="ltx_Math" display="block"><mrow><mrow><mi>𝐔</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi href="./3.2#E10" title="coefficient">d</mi><mn>1</mn></msub></mtd><mtd><msub><mi href="./3.2#E9" title="elements">u</mi><mn>1</mn></msub></mtd><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><msub><mi href="./3.2#E10" title="coefficient">d</mi><mn>2</mn></msub></mtd><mtd><msub><mi href="./3.2#E9" title="elements">u</mi><mn>2</mn></msub></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd><mtd><msub><mi href="./3.2#E10" title="coefficient">d</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi href="./3.2#E9" title="elements">u</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd><mtd><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m109.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="u_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E9" title="elements">u</mi><mi>j</mi></msub></math>:  elements (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.2.html#E10" title="(3.2.10) ‣ §3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m87.png" altimg-height="24px" altimg-valign="-8px" altimg-width="24px" alttext="d_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>j</mi></msub></math>:  coefficient</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E9" title="">http://dlmf.nist.gov/3.2.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#ii.info" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m108.png" altimg-height="19px" altimg-valign="-8px" altimg-width="70px" alttext="u_{j}=c_{j}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E9" title="elements">u</mi><mi>j</mi></msub><mo>=</mo><msub><mi>c</mi><mi>j</mi></msub></mrow></math>, <math altimg="m90.png" altimg-height="22px" altimg-valign="-6px" altimg-width="166px" alttext="j=1,2,\dots,n-1" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math>, <math altimg="m86.png" altimg-height="21px" altimg-valign="-5px" altimg-width="70px" alttext="d_{1}=b_{1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E10" title="coefficient">d</mi><mn>1</mn></msub><mo>=</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></math>, and</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.2.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="24px" alttext="\displaystyle\ell_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mi>j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m13.png" altimg-height="28px" altimg-valign="-8px" altimg-width="105px" alttext="\displaystyle=a_{j}/d_{j-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>/</mo><msub><mi href="./3.2#E10" title="coefficient">d</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m25.png" altimg-height="26px" altimg-valign="-8px" altimg-width="26px" alttext="\displaystyle d_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m14.png" altimg-height="26px" altimg-valign="-8px" altimg-width="128px" alttext="\displaystyle=b_{j}-\ell_{j}c_{j-1}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>b</mi><mi>j</mi></msub><mo>−</mo><mrow><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>c</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m92.png" altimg-height="22px" altimg-valign="-6px" altimg-width="111px" alttext="j=2,\dots,n" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m87.png" altimg-height="24px" altimg-valign="-8px" altimg-width="24px" alttext="d_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>j</mi></msub></math>:  coefficient (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.2.html#E8" title="(3.2.8) ‣ §3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\ell_{jk}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>:  elements of <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbf{L}" class="ltx_Math" display="inline"><mi>𝐋</mi></math></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E10" title="">http://dlmf.nist.gov/3.2.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E10a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E10b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E10a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E10b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E10a.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E10b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#ii.info" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Forward elimination for solving <math altimg="m47.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="\mathbf{A}\mathbf{x}=\mathbf{f}" class="ltx_Math" display="inline"><mrow><mrow><mi>𝐀</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mi>𝐟</mi></mrow></math> then
+becomes <math altimg="m112.png" altimg-height="22px" altimg-valign="-6px" altimg-width="71px" alttext="y_{1}=f_{1}" class="ltx_Math" display="inline"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><msub><mi href="./3.2#ii.p1" title="element">f</mi><mn>1</mn></msub></mrow></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="26px" altimg-valign="-8px" altimg-width="161px" alttext="y_{j}=f_{j}-\ell_{j}y_{j-1}," class="ltx_Math" display="block"><mrow><mrow><msub><mi>y</mi><mi>j</mi></msub><mo>=</mo><mrow><msub><mi href="./3.2#ii.p1" title="element">f</mi><mi>j</mi></msub><mo>−</mo><mrow><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>y</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m92.png" altimg-height="22px" altimg-valign="-6px" altimg-width="111px" alttext="j=2,\dots,n" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#E8" title="(3.2.8) ‣ §3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\ell_{jk}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E8" mathvariant="normal" title="elements of 𝐋">ℓ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>:  elements of <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbf{L}" class="ltx_Math" display="inline"><mi>𝐋</mi></math></a> and
+<a class="ltx_ref" href="3.2.html#ii.p1" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m88.png" altimg-height="22px" altimg-valign="-6px" altimg-width="21px" alttext="f_{i}" class="ltx_Math" display="inline"><msub><mi href="./3.2#ii.p1" title="element">f</mi><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></msub></math>:  element</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E11" title="">http://dlmf.nist.gov/3.2.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#ii.info" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and back substitution is <math altimg="m111.png" altimg-height="25px" altimg-valign="-7px" altimg-width="109px" alttext="x_{n}=y_{n}/d_{n}" class="ltx_Math" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>/</mo><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>n</mi></msub></mrow></mrow></math>, followed by</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="28px" altimg-valign="-8px" altimg-width="213px" alttext="x_{j}=(y_{j}-u_{j}x_{j+1})/d_{j}," class="ltx_Math" display="block"><mrow><mrow><msub><mi>x</mi><mi>j</mi></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mi>j</mi></msub><mo>−</mo><mrow><msub><mi href="./3.2#E9" title="elements">u</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>x</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>j</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m93.png" altimg-height="22px" altimg-valign="-6px" altimg-width="146px" alttext="j=n-1,\dots,1" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>1</mn></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#E9" title="(3.2.9) ‣ §3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m109.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="u_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E9" title="elements">u</mi><mi>j</mi></msub></math>:  elements</a> and
+<a class="ltx_ref" href="3.2.html#E10" title="(3.2.10) ‣ §3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m87.png" altimg-height="24px" altimg-valign="-8px" altimg-width="24px" alttext="d_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E10" title="coefficient">d</mi><mi>j</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E12" title="">http://dlmf.nist.gov/3.2.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#ii.info" title="§3.2(ii) Gaussian Elimination for a Tridiagonal Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(ii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">For more information on solving tridiagonal systems see
+<cite class="ltx_cite ltx_citemacro_citet">Golub and Van Loan (<a class="ltx_ref" href="bib/G.html#bib952" title="Matrix Computations">1996</a>, pp. 152–160)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(iii) </span>Condition of Linear Systems</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euclidean">Euclidean</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=a%20posteriori"><em class="ltx_emph ltx_font_italic">a posteriori</em></a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=condition%20number">condition number</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=condition%20numbers">condition numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=conditioning%20of%20linear%20systems">conditioning of linear systems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20bounds">error bounds</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=linear%20algebra">linear algebra</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=norms">norms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=of%20arbitrary%20order">of arbitrary order</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=of%20matrices">of matrices</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=of%20vectors">of vectors</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=vector">vector</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="1.2.html#Px13.p1" title="𝑛 Linear Equations in 𝑛 Unknowns ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.2(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.iii" title="">http://dlmf.nist.gov/3.2.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic"><math altimg="m102.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math>-norm of a vector</em> <math altimg="m71.png" altimg-height="27px" altimg-valign="-7px" altimg-width="159px" alttext="\mathbf{x}=[x_{1},\dots,x_{n}]^{\rm T}" class="ltx_Math" display="inline"><mrow><mi>𝐱</mi><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">T</mi></msup></mrow></math> is given
+by
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.2.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m24.png" altimg-height="28px" altimg-valign="-8px" altimg-width="50px" alttext="\displaystyle\|\mathbf{x}\|_{p}" class="ltx_Math" display="inline"><msub><mrow><mo stretchy="false">‖</mo><mi>𝐱</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="93px" altimg-valign="-34px" altimg-width="175px" alttext="\displaystyle=\left(\sum_{j=1}^{n}{\left|x_{j}\right|}^{p}\right)^{1/p}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msup><mrow><mo>|</mo><msub><mi>x</mi><mi>j</mi></msub><mo>|</mo></mrow><mi>p</mi></msup></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mi>p</mi></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m99.png" altimg-height="21px" altimg-valign="-6px" altimg-width="106px" alttext="p=1,2,\dots" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m23.png" altimg-height="27px" altimg-valign="-7px" altimg-width="58px" alttext="\displaystyle\|\mathbf{x}\|_{\infty}" class="ltx_Math" display="inline"><msub><mrow><mo stretchy="false">‖</mo><mi>𝐱</mi><mo stretchy="false">‖</mo></mrow><mi mathvariant="normal">∞</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="54px" altimg-valign="-20px" altimg-width="131px" alttext="\displaystyle=\max_{1\leq j\leq n}\left|x_{j}\right|." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><mi>max</mi><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></munder><mo>⁡</mo><mrow><mo>|</mo><msub><mi>x</mi><mi>j</mi></msub><mo>|</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.2.html#iv.p1" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E13" title="">http://dlmf.nist.gov/3.2.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E13a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E13b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E13a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E13b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E13a.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E13b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iii.info" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Euclidean norm</em> is the case <math altimg="m101.png" altimg-height="21px" altimg-valign="-6px" altimg-width="53px" alttext="p=2" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>2</mn></mrow></math>.
+</p>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic"><math altimg="m102.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math>-norm of a matrix</em> <math altimg="m42.png" altimg-height="26px" altimg-valign="-8px" altimg-width="90px" alttext="\mathbf{A}=[a_{jk}]" class="ltx_Math" display="inline"><mrow><mi>𝐀</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">]</mo></mrow></mrow></math> is
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E14">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.14</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E14.png" altimg-height="56px" altimg-valign="-22px" altimg-width="200px" alttext="\|\mathbf{A}\|_{p}=\max_{\mathbf{x}\neq\boldsymbol{{0}}}\frac{\|\mathbf{A}%
+\mathbf{x}\|_{p}}{\|\mathbf{x}\|_{p}}\,." class="ltx_Math" display="block"><mrow><mrow><msub><mrow><mo stretchy="false">‖</mo><mi>𝐀</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub><mo>=</mo><mrow><munder><mi>max</mi><mrow><mi>𝐱</mi><mo>≠</mo><mn>𝟎</mn></mrow></munder><mo lspace="0.167em">⁡</mo><mfrac><msub><mrow><mo stretchy="false">‖</mo><mrow><mi>𝐀</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub><msub><mrow><mo stretchy="false">‖</mo><mi>𝐱</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub></mfrac></mrow></mrow><mo lspace="0.170em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E14.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.2.html#iii.p3" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E14" title="">http://dlmf.nist.gov/3.2.E14</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E14.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E14.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E14.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iii.info" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The cases <math altimg="m100.png" altimg-height="21px" altimg-valign="-6px" altimg-width="72px" alttext="p=1,2" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></math>, and <math altimg="m33.png" altimg-height="13px" altimg-valign="-2px" altimg-width="25px" alttext="\infty" class="ltx_Math" display="inline"><mi mathvariant="normal">∞</mi></math> are the most important:
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E15">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.2.15</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m20.png" altimg-height="27px" altimg-valign="-7px" altimg-width="55px" alttext="\displaystyle\|\mathbf{A}\|_{1}" class="ltx_Math" display="inline"><msub><mrow><mo stretchy="false">‖</mo><mi>𝐀</mi><mo stretchy="false">‖</mo></mrow><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m11.png" altimg-height="76px" altimg-valign="-31px" altimg-width="174px" alttext="\displaystyle=\max_{1\leq k\leq n}\sum_{j=1}^{n}\left|a_{jk}\right|," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><mi>max</mi><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mi>n</mi></mrow></munder><mo lspace="0.167em">⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>|</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="27px" altimg-valign="-7px" altimg-width="63px" alttext="\displaystyle\|\mathbf{A}\|_{\infty}" class="ltx_Math" display="inline"><msub><mrow><mo stretchy="false">‖</mo><mi>𝐀</mi><mo stretchy="false">‖</mo></mrow><mi mathvariant="normal">∞</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="74px" altimg-valign="-29px" altimg-width="173px" alttext="\displaystyle=\max_{1\leq j\leq n}\sum_{k=1}^{n}\left|a_{jk}\right|," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><mi>max</mi><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></munder><mo lspace="0.167em">⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>|</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m21.png" altimg-height="27px" altimg-valign="-7px" altimg-width="55px" alttext="\displaystyle\|\mathbf{A}\|_{2}" class="ltx_Math" display="inline"><msub><mrow><mo stretchy="false">‖</mo><mi>𝐀</mi><mo stretchy="false">‖</mo></mrow><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m12.png" altimg-height="45px" altimg-valign="-13px" altimg-width="131px" alttext="\displaystyle=\sqrt{\rho(\mathbf{A}\mathbf{A}^{\rm T})}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msqrt><mrow><mi>ρ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐀</mi><mo>⁢</mo><msup><mi>𝐀</mi><mi mathvariant="normal">T</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E15.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E15" title="">http://dlmf.nist.gov/3.2.E15</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E15a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E15b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E15c.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E15a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E15b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E15c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E15a.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E15b.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E15c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iii.info" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m79.png" altimg-height="27px" altimg-valign="-7px" altimg-width="80px" alttext="\rho(\mathbf{A}\mathbf{A}^{\rm T})" class="ltx_Math" display="inline"><mrow><mi>ρ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐀</mi><mo>⁢</mo><msup><mi>𝐀</mi><mi mathvariant="normal">T</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is the largest of the absolute
+values of the eigenvalues of the matrix <math altimg="m45.png" altimg-height="22px" altimg-valign="-2px" altimg-width="53px" alttext="\mathbf{A}\mathbf{A}^{\rm T}" class="ltx_Math" display="inline"><mrow><mi>𝐀</mi><mo>⁢</mo><msup><mi>𝐀</mi><mi mathvariant="normal">T</mi></msup></mrow></math>; see
+§<a class="ltx_ref" href="3.2.html#iv" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2(iv)</span></a>. (We are assuming that the matrix <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is real;
+if not <math altimg="m49.png" altimg-height="22px" altimg-valign="-2px" altimg-width="35px" alttext="\mathbf{A}^{\rm T}" class="ltx_Math" display="inline"><msup><mi>𝐀</mi><mi mathvariant="normal">T</mi></msup></math> is replaced by <math altimg="m48.png" altimg-height="22px" altimg-valign="-2px" altimg-width="36px" alttext="\mathbf{A}^{\rm H}" class="ltx_Math" display="inline"><msup><mi>𝐀</mi><mi mathvariant="normal">H</mi></msup></math>, the transpose
+of the complex conjugate of <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>.)</p>
+</div>
+<div class="ltx_para" id="iii.p3">
+<p class="ltx_p">The sensitivity of the solution vector <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\mathbf{x}" class="ltx_Math" display="inline"><mi>𝐱</mi></math> in (<a class="ltx_ref" href="3.2.html#E1" title="(3.2.1) ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.1</span></a>) to
+small perturbations in the matrix <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> and the vector <math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbf{b}" class="ltx_Math" display="inline"><mi>𝐛</mi></math> is
+measured by the <em class="ltx_emph ltx_font_italic">condition number</em>
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E16">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.16</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E16.png" altimg-height="30px" altimg-valign="-8px" altimg-width="211px" alttext="\kappa(\mathbf{A})=\|\mathbf{A}\|_{p}\;\|\mathbf{A}^{-1}\|_{p}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mrow><mo stretchy="false">‖</mo><mi>𝐀</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo stretchy="false">‖</mo><msup><mi>𝐀</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E16.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="\kappa(\mathbf{A})" class="ltx_Math" display="inline"><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  condition number (locally)</span></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E16" title="">http://dlmf.nist.gov/3.2.E16</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E16.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E16.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E16.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iii.info" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m81.png" altimg-height="26px" altimg-valign="-8px" altimg-width="57px" alttext="\|\,\cdot\,\|_{p}" class="ltx_Math" display="inline"><msub><mrow><mo rspace="0.170em" stretchy="false">‖</mo><mi mathvariant="normal">⋅</mi><mo lspace="0.170em" stretchy="false">‖</mo></mrow><mi>p</mi></msub></math> is one of the matrix norms. For any norm
+(<a class="ltx_ref" href="3.2.html#E14" title="(3.2.14) ‣ §3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.14</span></a>) we have <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="88px" alttext="\kappa(\mathbf{A})\geq 1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>1</mn></mrow></math>. The larger the
+value <math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="\kappa(\mathbf{A})" class="ltx_Math" display="inline"><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the more ill-conditioned the system.</p>
+</div>
+<div class="ltx_para" id="iii.p4">
+<p class="ltx_p">Let <math altimg="m73.png" altimg-height="18px" altimg-valign="-2px" altimg-width="26px" alttext="\mathbf{x}^{*}" class="ltx_Math" display="inline"><msup><mi>𝐱</mi><mo>∗</mo></msup></math> denote a computed solution of the system
+(<a class="ltx_ref" href="3.2.html#E1" title="(3.2.1) ‣ §3.2(i) Gaussian Elimination ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.1</span></a>), with
+<math altimg="m61.png" altimg-height="20px" altimg-valign="-4px" altimg-width="121px" alttext="\mathbf{r}=\mathbf{b}-\mathbf{A}\mathbf{x}^{*}" class="ltx_Math" display="inline"><mrow><mi>𝐫</mi><mo>=</mo><mrow><mi>𝐛</mi><mo>−</mo><mrow><mi>𝐀</mi><mo>⁢</mo><msup><mi>𝐱</mi><mo>∗</mo></msup></mrow></mrow></mrow></math> again denoting the
+residual. Then we have the <em class="ltx_emph ltx_font_italic">a posteriori</em> error bound
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E17">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.17</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E17.png" altimg-height="56px" altimg-valign="-22px" altimg-width="230px" alttext="\frac{\|\mathbf{x}^{*}-\mathbf{x}\|_{p}}{\|\mathbf{x}\|_{p}}\leq\kappa(\mathbf%
+{A})\frac{\|\mathbf{r}\|_{p}}{\|\mathbf{b}\|_{p}}." class="ltx_Math" display="block"><mrow><mrow><mfrac><msub><mrow><mo stretchy="false">‖</mo><mrow><msup><mi>𝐱</mi><mo>∗</mo></msup><mo>−</mo><mi>𝐱</mi></mrow><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub><msub><mrow><mo stretchy="false">‖</mo><mi>𝐱</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub></mfrac><mo>≤</mo><mrow><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mfrac><msub><mrow><mo stretchy="false">‖</mo><mi>𝐫</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub><msub><mrow><mo stretchy="false">‖</mo><mi>𝐛</mi><mo stretchy="false">‖</mo></mrow><mi>p</mi></msub></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E17.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.2.html#E16" title="(3.2.16) ‣ §3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="\kappa(\mathbf{A})" class="ltx_Math" display="inline"><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  condition number</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E17" title="">http://dlmf.nist.gov/3.2.E17</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E17.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E17.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E17.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iii.info" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iii.p5">
+<p class="ltx_p">For further information see <cite class="ltx_cite ltx_citemacro_citet">Brezinski (<a class="ltx_ref" href="bib/B.html#bib351" title="Error estimates for the solution of linear systems">1999</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Trefethen and Bau (<a class="ltx_ref" href="bib/T.html#bib2270" title="Numerical Linear Algebra">1997</a>, Chapter 3)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(iv) </span>Eigenvalues and Eigenvectors</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=characteristic">characteristic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=characteristic%20polynomial">characteristic polynomial</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvalues">eigenvalues</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvectors">eigenvectors</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=left">left</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=multiplicity">multiplicity</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=nondefective">nondefective</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=normalized">normalized</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=polynomials">polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=right">right</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Young and Gregory (<a class="ltx_ref" href="bib/Y.html#bib2475" title="A Survey of Numerical Mathematics. Vol. II">1988</a>, pp. 741–743)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#Px17.p1" title="Eigenvectors and Eigenvalues of Square Matrices ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.2(vi)</span></a>,
+<a class="ltx_ref" href="28.34.html#I2.ix4.p1" title="In §28.34(ii) Eigenvalues ‣ §28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">item (d)</span></a>,
+<a class="ltx_ref" href="3.2.html#iii.p2" title="§3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.iv" title="">http://dlmf.nist.gov/3.2.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">If <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is an <math altimg="m98.png" altimg-height="18px" altimg-valign="-4px" altimg-width="55px" alttext="n\times n" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow></math> matrix, then a real or complex number
+<math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math> is called an <em class="ltx_emph ltx_font_italic">eigenvalue</em> of <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>, and a nonzero vector
+<math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\mathbf{x}" class="ltx_Math" display="inline"><mi>𝐱</mi></math> a corresponding (<em class="ltx_emph ltx_font_italic">right</em>) <em class="ltx_emph ltx_font_italic">eigenvector</em>, if</p>
+<table class="ltx_equation ltx_eqn_table" id="E18">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.18</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E18.png" altimg-height="20px" altimg-valign="-2px" altimg-width="95px" alttext="\mathbf{A}\mathbf{x}=\lambda\mathbf{x}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi>𝐀</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E18.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.2.html#iv.p1" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math>:  eigenvalue</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E18" title="">http://dlmf.nist.gov/3.2.E18</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E18.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E18.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E18.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iv.info" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iv)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">A nonzero vector <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mathbf{y}" class="ltx_Math" display="inline"><mi>𝐲</mi></math> is called a <em class="ltx_emph ltx_font_italic">left eigenvector</em> of
+<math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> corresponding to the eigenvalue <math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math> if
+<math altimg="m78.png" altimg-height="26px" altimg-valign="-6px" altimg-width="114px" alttext="\mathbf{y}^{\rm T}\mathbf{A}=\lambda\mathbf{y}^{\rm T}" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>𝐲</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐀</mi></mrow><mo>=</mo><mrow><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo>⁢</mo><msup><mi>𝐲</mi><mi mathvariant="normal">T</mi></msup></mrow></mrow></math> or, equivalently,
+<math altimg="m50.png" altimg-height="26px" altimg-valign="-6px" altimg-width="101px" alttext="\mathbf{A}^{\rm T}\mathbf{y}=\lambda\mathbf{y}" class="ltx_Math" display="inline"><mrow><mrow><msup><mi>𝐀</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐲</mi></mrow><mo>=</mo><mrow><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo>⁢</mo><mi>𝐲</mi></mrow></mrow></math>.
+A <em class="ltx_emph ltx_font_italic">normalized</em> eigenvector has Euclidean norm 1; compare
+(<a class="ltx_ref" href="3.2.html#E13" title="(3.2.13) ‣ §3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.13</span></a>) with <math altimg="m101.png" altimg-height="21px" altimg-valign="-6px" altimg-width="53px" alttext="p=2" class="ltx_Math" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>2</mn></mrow></math>.
+</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">The polynomial</p>
+<table class="ltx_equation ltx_eqn_table" id="E19">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.19</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E19.png" altimg-height="27px" altimg-valign="-7px" altimg-width="189px" alttext="p_{n}(\lambda)=\det[\lambda\mathbf{I}-\mathbf{A}]" class="ltx_Math" display="block"><mrow><mrow><msub><mi>p</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><mo href="./1.2#Px11.p1" lspace="0.1389em" movablelimits="false" rspace="0em" title="determinant">det</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo>⁢</mo><mi>𝐈</mi></mrow><mo>−</mo><mi>𝐀</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E19.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#Px11.p1" title="The Determinant ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="33px" alttext="\det" class="ltx_Math" display="inline"><mo href="./1.2#E58" title="determinant">det</mo></math>: determinant</a> and
+<a class="ltx_ref" href="3.2.html#iv.p1" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math>:  eigenvalue</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E19" title="">http://dlmf.nist.gov/3.2.E19</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E19.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E19.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E19.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#iv.info" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(iv)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">is called the <em class="ltx_emph ltx_font_italic">characteristic polynomial</em> of <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> and its zeros
+are the eigenvalues of <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>. The <em class="ltx_emph ltx_font_italic">multiplicity</em> of an eigenvalue
+is its multiplicity as a zero of the characteristic polynomial
+(§<a class="ltx_ref" href="3.8.html#i" title="§3.8(i) Introduction ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8(i)</span></a>). To an eigenvalue of multiplicity <math altimg="m95.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./3.2#iv.p2" title="multiplicity">m</mi></math>, there
+correspond <math altimg="m95.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./3.2#iv.p2" title="multiplicity">m</mi></math> linearly independent eigenvectors provided that <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is
+<em class="ltx_emph ltx_font_italic">nondefective</em>, that is, <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> has a complete set of <math altimg="m96.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math> linearly
+independent eigenvectors.
+</p>
+</div>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(v) </span>Condition of Eigenvalues</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=condition%20numbers">condition numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=conditioning">conditioning</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvalues">eigenvalues</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=linear%20algebra">linear algebra</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Wilkinson (<a class="ltx_ref" href="bib/W.html#bib2413" title="The Algebraic Eigenvalue Problem">1988</a>, Chapter 2, §§8–10)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.v" title="">http://dlmf.nist.gov/3.2.v</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">If <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is nondefective and <math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math> is a simple zero of
+<math altimg="m106.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="p_{n}(\lambda)" class="ltx_Math" display="inline"><mrow><msub><mi>p</mi><mi>n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then the sensitivity of <math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math> to small perturbations in the
+matrix <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is measured by the <em class="ltx_emph ltx_font_italic">condition number</em>
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E20">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.20</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E20.png" altimg-height="53px" altimg-valign="-21px" altimg-width="135px" alttext="\kappa(\lambda)=\frac{1}{\left|\mathbf{y}^{\rm T}\mathbf{x}\right|}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mo>|</mo><mrow><msup><mi>𝐲</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>|</mo></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E20.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#E16" title="(3.2.16) ‣ §3.2(iii) Condition of Linear Systems ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="\kappa(\mathbf{A})" class="ltx_Math" display="inline"><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐀</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  condition number</a> and
+<a class="ltx_ref" href="3.2.html#iv.p1" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math>:  eigenvalue</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E20" title="">http://dlmf.nist.gov/3.2.E20</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E20.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E20.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E20.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#v.info" title="§3.2(v) Condition of Eigenvalues ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(v)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\mathbf{x}" class="ltx_Math" display="inline"><mi>𝐱</mi></math> and <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mathbf{y}" class="ltx_Math" display="inline"><mi>𝐲</mi></math> are the normalized right and left
+eigenvectors of <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> corresponding to the eigenvalue <math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math>. Because
+<math altimg="m41.png" altimg-height="29px" altimg-valign="-9px" altimg-width="137px" alttext="\left|\mathbf{y}^{\rm T}\mathbf{x}\right|=\left|\cos\theta\right|" class="ltx_Math" display="inline"><mrow><mrow><mo>|</mo><mrow><msup><mi>𝐲</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>|</mo></mrow><mo>=</mo><mrow><mo>|</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>|</mo></mrow></mrow></math>, where <math altimg="m80.png" altimg-height="18px" altimg-valign="-2px" altimg-width="15px" alttext="\theta" class="ltx_Math" display="inline"><mi>θ</mi></math> is
+the angle between <math altimg="m77.png" altimg-height="26px" altimg-valign="-6px" altimg-width="30px" alttext="\mathbf{y}^{\rm T}" class="ltx_Math" display="inline"><msup><mi>𝐲</mi><mi mathvariant="normal">T</mi></msup></math> and <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\mathbf{x}" class="ltx_Math" display="inline"><mi>𝐱</mi></math> we always have
+<math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\kappa(\lambda)\geq 1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>1</mn></mrow></math>. When <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is a symmetric matrix, the left and
+right eigenvectors coincide, yielding <math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\kappa(\lambda)=1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./3.2#E16" title="condition number">κ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, and the
+calculation of its eigenvalues is a well-conditioned problem.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="vi">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(vi) </span>Lanczos Tridiagonalization of a Symmetric Matrix</h2>
+<div class="ltx_metadata ltx_info" id="vi.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Lanczos%20tridiagonalization%20of%20a%20symmetric%20matrix">Lanczos tridiagonalization of a symmetric matrix</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Lanczos%20vectors">Lanczos vectors</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=symmetric">symmetric</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tridiagonalization">tridiagonalization</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Wilkinson (<a class="ltx_ref" href="bib/W.html#bib2413" title="The Algebraic Eigenvalue Problem">1988</a>, pp. 394–395 and 423)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="29.20.html#i.p3" title="§29.20(i) Lamé Functions ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(i)</span></a>,
+<a class="ltx_ref" href="29.20.html#ii.p1" title="§29.20(ii) Lamé Polynomials ‣ §29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.20(ii)</span></a>,
+<a class="ltx_ref" href="3.5.html#vi.info" title="§3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.5(vi)</span></a>,
+<a class="ltx_ref" href="3.5.html#vi.p2" title="§3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.5(vi)</span></a>,
+<a class="ltx_ref" href="3.7.html#iv.p2" title="§3.7(iv) Sturm–Liouville Eigenvalue Problems ‣ §3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.7(iv)</span></a>,
+<a class="ltx_ref" href="30.16.html#i.p2" title="§30.16(i) Eigenvalues ‣ §30.16 Methods of Computation ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.16(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.0.I2.ix4" title="In Other Changes ‣ Version 1.1.0 (December 15, 2020) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.0) for  Subsection <span class="ltx_text ltx_ref_tag">3.2(vi)</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.3.I2.ix2" title="In Other Changes ‣ Version 1.1.3 (September 15, 2021) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.3) for  Subsection <span class="ltx_text ltx_ref_tag">3.2(vi)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.vi" title="">http://dlmf.nist.gov/3.2.vi</a></dd>
+<dt>Addition (effective with 1.1.3):</dt>
+<dd>
+A paragraph was added just below (<a class="ltx_ref" href="3.2.html#E23" title="(3.2.23) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.23</span></a>) treating the case
+of <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbf{S}" class="ltx_Math" display="inline"><mi>𝐒</mi></math>-orthogonality.
+</dd>
+<dt>Clarification (effective with 1.1.0):</dt>
+<dd>
+The introductory material for this subsection has been improved to be more explicit, namely
+it is indicated that <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is an <math altimg="m98.png" altimg-height="18px" altimg-valign="-4px" altimg-width="55px" alttext="n\times n" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow></math> symmetric matrix,
+<math altimg="m26.png" altimg-height="27px" altimg-valign="-7px" altimg-width="120px" alttext="\alpha_{1}=\mathbf{v}_{1}^{\rm T}\mathbf{A}\mathbf{v}_{1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E24" title="matrix">α</mi><mn>1</mn></msub><mo>=</mo><mrow><msubsup><mi>𝐯</mi><mn>1</mn><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐀</mi><mo>⁢</mo><msub><mi>𝐯</mi><mn>1</mn></msub></mrow></mrow></math> and <math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="63px" alttext="\beta_{1}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E24" title="matrix">β</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>;
+(<a class="ltx_ref" href="3.2.html#E21" title="(3.2.21) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.21</span></a>) has been has been updated so that
+<math altimg="m68.png" altimg-height="30px" altimg-valign="-10px" altimg-width="112px" alttext="\mathbf{v}_{j}^{\rm T}\mathbf{v}_{k}=\delta_{j,k}" class="ltx_Math" display="inline"><mrow><mrow><msubsup><mi>𝐯</mi><mi>j</mi><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><msub><mi>𝐯</mi><mi>k</mi></msub></mrow><mo>=</mo><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi>j</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi>k</mi></mrow></msub></mrow></math>, <math altimg="m89.png" altimg-height="22px" altimg-valign="-6px" altimg-width="150px" alttext="j,k=1,2,\ldots,n" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>;
+and a paragraph has been added at the end of the subsection on how Lanczos’
+method is related to Gauss quadrature considered in §<a class="ltx_ref" href="3.5.html#v" title="§3.5(v) Gauss Quadrature ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(v)</span></a>.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vi.p1">
+<p class="ltx_p">Let <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> be an <math altimg="m98.png" altimg-height="18px" altimg-valign="-4px" altimg-width="55px" alttext="n\times n" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow></math> symmetric matrix.
+Define the <em class="ltx_emph ltx_font_italic">Lanczos vectors</em> <math altimg="m66.png" altimg-height="19px" altimg-valign="-8px" altimg-width="26px" alttext="\mathbf{v}_{j}" class="ltx_Math" display="inline"><msub><mi>𝐯</mi><mi>j</mi></msub></math> and coefficients <math altimg="m27.png" altimg-height="19px" altimg-valign="-8px" altimg-width="26px" alttext="\alpha_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub></math> and <math altimg="m29.png" altimg-height="24px" altimg-valign="-8px" altimg-width="25px" alttext="\beta_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub></math> by
+<math altimg="m63.png" altimg-height="20px" altimg-valign="-5px" altimg-width="66px" alttext="\mathbf{v}_{0}=\boldsymbol{{0}}" class="ltx_Math" display="inline"><mrow><msub><mi>𝐯</mi><mn>0</mn></msub><mo>=</mo><mn>𝟎</mn></mrow></math>, a normalized vector <math altimg="m64.png" altimg-height="16px" altimg-valign="-5px" altimg-width="26px" alttext="\mathbf{v}_{1}" class="ltx_Math" display="inline"><msub><mi>𝐯</mi><mn>1</mn></msub></math>
+(perhaps chosen randomly), <math altimg="m26.png" altimg-height="27px" altimg-valign="-7px" altimg-width="120px" alttext="\alpha_{1}=\mathbf{v}_{1}^{\rm T}\mathbf{A}\mathbf{v}_{1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E24" title="matrix">α</mi><mn>1</mn></msub><mo>=</mo><mrow><msubsup><mi>𝐯</mi><mn>1</mn><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐀</mi><mo>⁢</mo><msub><mi>𝐯</mi><mn>1</mn></msub></mrow></mrow></math>,
+<math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="63px" alttext="\beta_{1}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E24" title="matrix">β</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>, and for <math altimg="m91.png" altimg-height="22px" altimg-valign="-6px" altimg-width="166px" alttext="j=1,2,\ldots,n-1" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math> by the recursive scheme</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E21">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.2.21</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m18.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\mathbf{u}" class="ltx_Math" display="inline"><mi>𝐮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="26px" altimg-valign="-8px" altimg-width="231px" alttext="\displaystyle=\mathbf{A}\mathbf{v}_{j}-\alpha_{j}\mathbf{v}_{j}-\beta_{j}%
+\mathbf{v}_{j-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>𝐀</mi><mo>⁢</mo><msub><mi>𝐯</mi><mi>j</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>𝐯</mi><mi>j</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="26px" altimg-valign="-8px" altimg-width="48px" alttext="\displaystyle\beta_{j+1}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="42px" altimg-valign="-8px" altimg-width="87px" alttext="\displaystyle=\left\|\mathbf{u}\right\|_{2}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msub><mrow><mo>‖</mo><mi>𝐮</mi><mo>‖</mo></mrow><mn>2</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex10">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m19.png" altimg-height="21px" altimg-valign="-8px" altimg-width="49px" alttext="\displaystyle\mathbf{v}_{j+1}" class="ltx_Math" display="inline"><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="28px" altimg-valign="-8px" altimg-width="99px" alttext="\displaystyle=\mathbf{u}/\beta_{j+1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>𝐮</mi><mo>/</mo><msub><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex11">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="21px" altimg-valign="-8px" altimg-width="50px" alttext="\displaystyle\alpha_{j+1}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="33px" altimg-valign="-10px" altimg-width="137px" alttext="\displaystyle=\mathbf{v}_{j+1}^{\rm T}\mathbf{A}\mathbf{v}_{j+1}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐀</mi><mo>⁢</mo><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E21.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#E24" title="(3.2.24) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m27.png" altimg-height="19px" altimg-valign="-8px" altimg-width="26px" alttext="\alpha_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub></math>:  matrix</a> and
+<a class="ltx_ref" href="3.2.html#E24" title="(3.2.24) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m29.png" altimg-height="24px" altimg-valign="-8px" altimg-width="25px" alttext="\beta_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub></math>:  matrix</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#vi.info" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="3.2.html#vi.p4" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E21" title="">http://dlmf.nist.gov/3.2.E21</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E21a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E21b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E21c.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E21d.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E21a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E21b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E21c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E21d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E21a.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E21b.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E21c.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E21d.png">png</a>
+</dd>
+<dt>Modification (effective with 1.1.0):</dt>
+<dd>
+This equation has been modified to make the recursion scheme more clear to the user.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#vi.info" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then <math altimg="m68.png" altimg-height="30px" altimg-valign="-10px" altimg-width="112px" alttext="\mathbf{v}_{j}^{\rm T}\mathbf{v}_{k}=\delta_{j,k}" class="ltx_Math" display="inline"><mrow><mrow><msubsup><mi>𝐯</mi><mi>j</mi><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><msub><mi>𝐯</mi><mi>k</mi></msub></mrow><mo>=</mo><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi>j</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi>k</mi></mrow></msub></mrow></math>, <math altimg="m89.png" altimg-height="22px" altimg-valign="-6px" altimg-width="150px" alttext="j,k=1,2,\ldots,n" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>. The tridiagonal matrix</p>
+<table class="ltx_equation ltx_eqn_table" id="E22">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.22</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E22.png" altimg-height="166px" altimg-valign="-66px" altimg-width="323px" alttext="\mathbf{B}=\begin{bmatrix}\alpha_{1}&amp;\beta_{2}&amp;&amp;&amp;0\\
+\beta_{2}&amp;\alpha_{2}&amp;\beta_{3}&amp;&amp;\\
+&amp;\ddots&amp;\ddots&amp;\ddots&amp;\\
+&amp;&amp;\beta_{n-1}&amp;\alpha_{n-1}&amp;\beta_{n}\\
+0&amp;&amp;&amp;\beta_{n}&amp;\alpha_{n}\end{bmatrix}" class="ltx_Math" display="block"><mrow><mi>𝐁</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi href="./3.2#E24" title="matrix">α</mi><mn>1</mn></msub></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">β</mi><mn>2</mn></msub></mtd><mtd></mtd><mtd></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><msub><mi href="./3.2#E24" title="matrix">β</mi><mn>2</mn></msub></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">α</mi><mn>2</mn></msub></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">β</mi><mn>3</mn></msub></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">α</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>n</mi></msub></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd></mtd><mtd></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>n</mi></msub></mtd><mtd><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E22.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#E24" title="(3.2.24) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m27.png" altimg-height="19px" altimg-valign="-8px" altimg-width="26px" alttext="\alpha_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub></math>:  matrix</a> and
+<a class="ltx_ref" href="3.2.html#E24" title="(3.2.24) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m29.png" altimg-height="24px" altimg-valign="-8px" altimg-width="25px" alttext="\beta_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub></math>:  matrix</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.2.html#vi.p4" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E22" title="">http://dlmf.nist.gov/3.2.E22</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E22.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E22.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E22.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#vi.info" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">has the same eigenvalues as <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>. Its characteristic polynomial can be
+obtained from the recursion</p>
+<table class="ltx_equation ltx_eqn_table" id="E23">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.2.23</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E23.png" altimg-height="31px" altimg-valign="-9px" altimg-width="395px" alttext="p_{k+1}(\lambda)=(\lambda-\alpha_{k+1})p_{k}(\lambda)-\beta_{k+1}^{2}p_{k-1}(%
+\lambda)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./3.2#E23" title="characteristic polynomial">p</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo>−</mo><msub><mi href="./3.2#E24" title="matrix">α</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./3.2#E23" title="characteristic polynomial">p</mi><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>−</mo><mrow><msubsup><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></msubsup><mo>⁢</mo><mrow><msub><mi href="./3.2#E23" title="characteristic polynomial">p</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m94.png" altimg-height="22px" altimg-valign="-6px" altimg-width="168px" alttext="k=0,1,\dots,n-1" class="ltx_Math" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E23.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m105.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="p_{k}(\lambda)" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E23" title="characteristic polynomial">p</mi><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  characteristic polynomial (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#E24" title="(3.2.24) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m27.png" altimg-height="19px" altimg-valign="-8px" altimg-width="26px" alttext="\alpha_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub></math>:  matrix</a>,
+<a class="ltx_ref" href="3.2.html#E24" title="(3.2.24) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m29.png" altimg-height="24px" altimg-valign="-8px" altimg-width="25px" alttext="\beta_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub></math>:  matrix</a> and
+<a class="ltx_ref" href="3.2.html#iv.p1" title="§3.2(iv) Eigenvalues and Eigenvectors ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi></math>:  eigenvalue</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.2.html#vi.info" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="3.2.html#vi.p4" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.3.I2.ix2.p1" title="In Other Changes ‣ Version 1.1.3 (September 15, 2021) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.3) for  Subsection <span class="ltx_text ltx_ref_tag">3.2(vi)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E23" title="">http://dlmf.nist.gov/3.2.E23</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E23.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E23.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E23.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#vi.info" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with <math altimg="m103.png" altimg-height="25px" altimg-valign="-7px" altimg-width="103px" alttext="p_{-1}(\lambda)=0" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./3.2#E23" title="characteristic polynomial">p</mi><mrow><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, <math altimg="m104.png" altimg-height="25px" altimg-valign="-7px" altimg-width="90px" alttext="p_{0}(\lambda)=1" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./3.2#E23" title="characteristic polynomial">p</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./3.2#iv.p1" title="eigenvalue">λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="vi.p2">
+<p class="ltx_p">In the case that the orthogonality condition is replaced by <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbf{S}" class="ltx_Math" display="inline"><mi>𝐒</mi></math>-orthogonality, that is,
+<math altimg="m67.png" altimg-height="30px" altimg-valign="-10px" altimg-width="125px" alttext="\mathbf{v}_{j}^{\rm T}\mathbf{S}\mathbf{v}_{k}=\delta_{j,k}" class="ltx_Math" display="inline"><mrow><mrow><msubsup><mi>𝐯</mi><mi>j</mi><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐒</mi><mo>⁢</mo><msub><mi>𝐯</mi><mi>k</mi></msub></mrow><mo>=</mo><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi>j</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi>k</mi></mrow></msub></mrow></math>, <math altimg="m89.png" altimg-height="22px" altimg-valign="-6px" altimg-width="150px" alttext="j,k=1,2,\ldots,n" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>,
+for some positive definite matrix <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbf{S}" class="ltx_Math" display="inline"><mi>𝐒</mi></math> with Cholesky decomposition <math altimg="m55.png" altimg-height="22px" altimg-valign="-2px" altimg-width="87px" alttext="\mathbf{S}=\mathbf{L}^{\rm T}\mathbf{L}" class="ltx_Math" display="inline"><mrow><mi>𝐒</mi><mo>=</mo><mrow><msup><mi>𝐋</mi><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐋</mi></mrow></mrow></math>,
+then the details change as follows. Start with <math altimg="m63.png" altimg-height="20px" altimg-valign="-5px" altimg-width="66px" alttext="\mathbf{v}_{0}=\boldsymbol{{0}}" class="ltx_Math" display="inline"><mrow><msub><mi>𝐯</mi><mn>0</mn></msub><mo>=</mo><mn>𝟎</mn></mrow></math>, vector <math altimg="m64.png" altimg-height="16px" altimg-valign="-5px" altimg-width="26px" alttext="\mathbf{v}_{1}" class="ltx_Math" display="inline"><msub><mi>𝐯</mi><mn>1</mn></msub></math> such that
+<math altimg="m65.png" altimg-height="27px" altimg-valign="-7px" altimg-width="103px" alttext="\mathbf{v}_{1}^{\rm T}\mathbf{S}\mathbf{v}_{1}=1" class="ltx_Math" display="inline"><mrow><mrow><msubsup><mi>𝐯</mi><mn>1</mn><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐒</mi><mo>⁢</mo><msub><mi>𝐯</mi><mn>1</mn></msub></mrow><mo>=</mo><mn>1</mn></mrow></math>,
+<math altimg="m26.png" altimg-height="27px" altimg-valign="-7px" altimg-width="120px" alttext="\alpha_{1}=\mathbf{v}_{1}^{\rm T}\mathbf{A}\mathbf{v}_{1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E24" title="matrix">α</mi><mn>1</mn></msub><mo>=</mo><mrow><msubsup><mi>𝐯</mi><mn>1</mn><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐀</mi><mo>⁢</mo><msub><mi>𝐯</mi><mn>1</mn></msub></mrow></mrow></math>, <math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="63px" alttext="\beta_{1}=0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.2#E24" title="matrix">β</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>. Then for <math altimg="m90.png" altimg-height="22px" altimg-valign="-6px" altimg-width="166px" alttext="j=1,2,\dots,n-1" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E24">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex12">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.2.24</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m18.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\mathbf{u}" class="ltx_Math" display="inline"><mi>𝐮</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="41px" altimg-valign="-8px" altimg-width="261px" alttext="\displaystyle=\left(\mathbf{A}-\alpha_{j}\mathbf{S}\right)\mathbf{v}_{j}-\beta%
+_{j}\mathbf{S}\mathbf{v}_{j-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo>(</mo><mrow><mi>𝐀</mi><mo>−</mo><mrow><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub><mo>⁢</mo><mi>𝐒</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>𝐯</mi><mi>j</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub><mo>⁢</mo><mi>𝐒</mi><mo>⁢</mo><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex13">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="26px" altimg-valign="-8px" altimg-width="48px" alttext="\displaystyle\beta_{j+1}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="79px" altimg-valign="-17px" altimg-width="159px" alttext="\displaystyle=\left\|\left(\mathbf{L}^{-1}\right)^{\rm T}\mathbf{u}\right\|_{2}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msub><mrow><mo>‖</mo><mrow><msup><mrow><mo>(</mo><msup><mi>𝐋</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐮</mi></mrow><mo>‖</mo></mrow><mn>2</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex14">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m19.png" altimg-height="21px" altimg-valign="-8px" altimg-width="49px" alttext="\displaystyle\mathbf{v}_{j+1}" class="ltx_Math" display="inline"><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="44px" altimg-valign="-15px" altimg-width="226px" alttext="\displaystyle=\ifrac{\mathbf{L}^{-1}\left(\mathbf{L}^{-1}\right)^{\rm T}%
+\mathbf{u}}{\beta_{j+1}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msup><mi>𝐋</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><msup><mi>𝐋</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><mi mathvariant="normal">T</mi></msup><mo>⁢</mo><mi>𝐮</mi></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><msub><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex15">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="21px" altimg-valign="-8px" altimg-width="50px" alttext="\displaystyle\alpha_{j+1}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="33px" altimg-valign="-10px" altimg-width="137px" alttext="\displaystyle=\mathbf{v}_{j+1}^{\rm T}\mathbf{A}\mathbf{v}_{j+1}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><mi>𝐀</mi><mo>⁢</mo><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E24.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m27.png" altimg-height="19px" altimg-valign="-8px" altimg-width="26px" alttext="\alpha_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">α</mi><mi>j</mi></msub></math>:  matrix (locally)</span> and
+<span class="ltx_text"><math altimg="m29.png" altimg-height="24px" altimg-valign="-8px" altimg-width="25px" alttext="\beta_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.2#E24" title="matrix">β</mi><mi>j</mi></msub></math>:  matrix (locally)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.E24" title="">http://dlmf.nist.gov/3.2.E24</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.2.E24a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E24b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E24c.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E24d.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.2.E24a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E24b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E24c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E24d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.2.E24a.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E24b.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E24c.png">png</a>, <a href="http://dlmf.nist.gov/3.2.E24d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#vi.info" title="§3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2(vi)</span></a>,
+<a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">For more details see <cite class="ltx_cite ltx_citemacro_citet">Guan<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/G.html#bib2947" title="General approach to few-cycle intense laser interactions with complex atoms">2007</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="vi.p3">
+<p class="ltx_p">For numerical information see <cite class="ltx_cite ltx_citemacro_citet">Stewart (<a class="ltx_ref" href="bib/S.html#bib2172" title="Matrix Algorithms. Vol. 2: Eigensystems">2001</a>, pp. 347–368)</cite>.</p>
+</div>
+<div class="ltx_para" id="vi.p4">
+<p class="ltx_p">Lanczos’ method is related to Gauss quadrature considered in §<a class="ltx_ref" href="3.5.html#v" title="§3.5(v) Gauss Quadrature ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(v)</span></a>.
+When the matrix <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math> is replaced by a scalar <math altimg="m110.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math>, the recurrence relation in the first line
+of (<a class="ltx_ref" href="3.2.html#E21" title="(3.2.21) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.21</span></a>) with <math altimg="m62.png" altimg-height="24px" altimg-valign="-8px" altimg-width="129px" alttext="\mathbf{u}=\beta_{j+1}\mathbf{v}_{j+1}" class="ltx_Math" display="inline"><mrow><mi>𝐮</mi><mo>=</mo><mrow><msub><mi href="./3.2#E24" title="matrix">β</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐯</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></math> is similar to the one in
+(<a class="ltx_ref" href="3.5.html#E30_5" title="(3.5.30_5) ‣ §3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5.30_5</span></a>). Also, the recurrence relations in (<a class="ltx_ref" href="3.2.html#E23" title="(3.2.23) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.23</span></a>) and (<a class="ltx_ref" href="3.5.html#E30" title="(3.5.30) ‣ §3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5.30</span></a>) are
+similar, as well as the matrix <math altimg="m51.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="\mathbf{B}" class="ltx_Math" display="inline"><mi>𝐁</mi></math> in (<a class="ltx_ref" href="3.2.html#E22" title="(3.2.22) ‣ §3.2(vi) Lanczos Tridiagonalization of a Symmetric Matrix ‣ §3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.2.22</span></a>) and the Jacobi
+matrix <math altimg="m52.png" altimg-height="21px" altimg-valign="-5px" altimg-width="28px" alttext="\mathbf{J}_{n}" class="ltx_Math" display="inline"><msub><mi>𝐉</mi><mi>n</mi></msub></math> in (<a class="ltx_ref" href="3.5.html#E31" title="(3.5.31) ‣ §3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5.31</span></a>).</p>
+</div>
+</section>
+<section class="ltx_subsection" id="vii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.2(vii) </span>Computation of Eigenvalues</h2>
+<div class="ltx_metadata ltx_info" id="vii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvalues">eigenvalues</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=linear%20algebra">linear algebra</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=matrix">matrix</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#Px17.p1" title="Eigenvectors and Eigenvalues of Square Matrices ‣ §1.2(vi) Square Matrices ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.2(vi)</span></a>,
+<a class="ltx_ref" href="30.16.html#i.p2" title="§30.16(i) Eigenvalues ‣ §30.16 Methods of Computation ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.16(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.2.vii" title="">http://dlmf.nist.gov/3.2.vii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.2.html#info" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.2</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vii.p1">
+<p class="ltx_p">Many methods are available for computing eigenvalues; see
+<cite class="ltx_cite ltx_citemacro_citet">Golub and Van Loan (<a class="ltx_ref" href="bib/G.html#bib952" title="Matrix Computations">1996</a>, Chapters 7, 8)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Trefethen and Bau (<a class="ltx_ref" href="bib/T.html#bib2270" title="Numerical Linear Algebra">1997</a>, Chapter 5)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Wilkinson (<a class="ltx_ref" href="bib/W.html#bib2413" title="The Algebraic Eigenvalue Problem">1988</a>, Chapters 8, 9)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="3.1.html" rel="prev" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Arithmetics and Error Measures</span></a><a class="ltx_ref" href="3.3.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Interpolation</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

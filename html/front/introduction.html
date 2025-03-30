@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: Mathematical Introduction</title>
+<link href="../style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/front/introduction";
+	var ROOT=".././";
+      //--></script>
+<script src="../style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="../style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="../style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="../style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="../style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="../style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../index.html" rel="top" title="DLMF"/>
+<link href="../about/notices.html" rel="copyright" title="Copyright"/>
+<link href="../search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="../help/index.html" rel="help" title="Help"/>
+<link href="../index.html" rel="start" title=""/>
+<link href="preface.html" rel="prev" title="Preface"/>
+<link href="../1.html" rel="next" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="foreword.html" rel="document" title="Foreword"/>
+<link href="preface.html" rel="document" title="Preface"/>
+<link href="../1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="../2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="../3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="../4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="../5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="../6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="../7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="../8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="../9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="../10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="../11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="../12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="../13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="../14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="../15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="../16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="../17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="../18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="../19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="../20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="../21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="../22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="../23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="../24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="../25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="../26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="../27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="../28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="../29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="../30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="../31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="../32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="../33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="../34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="../35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="../36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="../bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="../idx/index.html" rel="index" title="Index"/>
+<link href="../not/index.html" rel="glossary" title="Notations"/>
+<link href="../lof/index.html" rel="document" title="List of Figures"/>
+<link href="../lot/index.html" rel="document" title="List of Tables"/>
+<link href="../software/index.html" rel="document" title="Software Index"/>
+<link href="../errata/index.html" rel="document" title="Errata"/>
+<link href="../help/index.html" rel="document" title="Need Help?"/>
+<link href="../search/index.html" rel="document" title="Advanced Search"/>
+<link href="../about/index.html" rel="document" title="About the Project"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="../index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="../search/search.html" method="get">
+<ul>
+<li><a href="../idx/index.html">Index</a></li>
+<li><a href="../not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="../help/index.html">Help?</a></li>
+<li><a href="../help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="../help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="introduction.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="introduction.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="../about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="preface.html" rel="prev" title=""><span class="ltx_text ltx_ref_title">Preface</span></a><a class="ltx_ref" href="../1.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Algebraic and Analytic Methods</span></a>
+</div>
+<div class="ltx_page_content">
+<article class="ltx_document ltx_leqno">
+<h1 class="ltx_title ltx_title_document">Mathematical Introduction</h1>
+<div class="ltx_toc_compact">
+♦ 
+<a href="introduction.html#organization">Organization and Objective</a> ♦ 
+<a href="introduction.html#method">Methodology</a> ♦ 
+<a href="introduction.html#notations">Notation for the Special Functions</a> ♦ 
+<a href="introduction.html#common">Common Notations and Definitions</a> ♦ 
+<a href="introduction.html#color">Graphics</a> ♦ 
+<a href="introduction.html#applications">Applications</a> ♦ 
+<a href="introduction.html#computations">Computation</a> ♦ 
+<a href="introduction.html#verification">Verification</a> ♦ 
+<a href="introduction.html#Sx9">Special Acknowledgment</a> ♦ </div>
+<section class="ltx_section" id="organization">
+<h2 class="ltx_title ltx_title_section">Organization and Objective</h2>
+<div class="ltx_para" id="organization.p1">
+<p class="ltx_p">The mathematical content of the <em class="ltx_emph ltx_font_italic">NIST Handbook of Mathematical Functions</em>
+has been produced over a ten-year period.
+This part of the
+project has been carried out by a team comprising the mathematics editor,
+authors, validators, and the NIST professional staff. Also, valuable initial advice
+on all aspects of the project was provided by ten external associate editors.</p>
+</div>
+<div class="ltx_para" id="organization.p2">
+<p class="ltx_p">The NIST Handbook has essentially the same objective as the <em class="ltx_emph ltx_font_italic">Handbook of Mathematical Functions</em>
+that was issued in 1964 by the National Bureau of Standards
+as Number 55 in the NBS Applied Mathematics Series (AMS).
+This objective is to provide a reference tool for
+researchers and other users in applied mathematics, the physical sciences,
+engineering, and elsewhere who encounter special functions in the course of their everyday
+work.</p>
+</div>
+<div class="ltx_para" id="organization.p3">
+<p class="ltx_p">The mathematical project team has endeavored to take into account the hundreds of research
+papers and numerous books on special functions that have appeared since 1964.
+As a consequence, in addition to providing more information about the
+special functions that were covered in AMS 55, the NIST Handbook includes several
+special functions that have appeared in the interim in applied mathematics, the
+physical sciences, and engineering, as well as in other areas. See, for
+example, Chapters <a class="ltx_ref" href="../16.html" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">16</span></a>, <a class="ltx_ref" href="../17.html" title="Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">17</span></a>, <a class="ltx_ref" href="../18.html" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18</span></a>, <a class="ltx_ref" href="../19.html" title="Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_tag">19</span></a>, <a class="ltx_ref" href="../21.html" title="Chapter 21 Multidimensional Theta Functions"><span class="ltx_text ltx_ref_tag">21</span></a>, <a class="ltx_ref" href="../27.html" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27</span></a>,
+<a class="ltx_ref" href="../29.html" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29</span></a>, <a class="ltx_ref" href="../31.html" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31</span></a>, <a class="ltx_ref" href="../32.html" title="Chapter 32 Painlevé Transcendents"><span class="ltx_text ltx_ref_tag">32</span></a>, <a class="ltx_ref" href="../34.html" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"><span class="ltx_text ltx_ref_tag">34</span></a>, <a class="ltx_ref" href="../35.html" title="Chapter 35 Functions of Matrix Argument"><span class="ltx_text ltx_ref_tag">35</span></a>, and <a class="ltx_ref" href="../36.html" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">36</span></a>.</p>
+</div>
+<div class="ltx_para" id="organization.p4">
+<p class="ltx_p">Two other ways in which this Handbook differs from AMS 55, and other handbooks, are
+as follows.</p>
+</div>
+<div class="ltx_para" id="organization.p5">
+<p class="ltx_p">First, the editors instituted a validation process for the whole technical
+content of each chapter. This process greatly extended normal editorial checking
+procedures. All chapters went through several drafts (nine in some cases)
+before the authors, validators, and editors were fully satisfied.</p>
+</div>
+<div class="ltx_para" id="organization.p6">
+<p class="ltx_p">Secondly, as described in the <span class="ltx_text ltx_font_bold">Preface</span>,
+a Web version (the NIST DLMF) is also available.</p>
+</div>
+</section>
+<section class="ltx_section" id="method">
+<h2 class="ltx_title ltx_title_section">Methodology</h2>
+<div class="ltx_para" id="method.p1">
+<p class="ltx_p">The first three chapters of the NIST Handbook and DLMF are methodology chapters
+that provide detailed coverage of, and references for, mathematical
+topics that are especially important in the theory, computation, and
+application of special functions. (These chapters can also serve as background
+material for university graduate courses in complex variables, classical
+analysis, and numerical analysis.)</p>
+</div>
+<div class="ltx_para" id="method.p2">
+<p class="ltx_p">Particular care is taken with topics that are not dealt with sufficiently
+thoroughly from the standpoint of this Handbook in the available literature. These
+include, for example, multivalued functions of complex variables, for which new
+definitions of branch points and principal values are supplied (§§<a class="ltx_ref" href="../1.10.html#vi" title="§1.10(vi) Multivalued Functions ‣ §1.10 Functions of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.10(vi)</span></a>, <a class="ltx_ref" href="../4.2.html#i" title="§4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.2(i)</span></a>); the Dirac delta (or delta function),
+which is introduced in a more readily comprehensible way for mathematicians
+(§<a class="ltx_ref" href="../1.17.html" title="§1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.17</span></a>); numerically satisfactory solutions of differential and
+difference equations (§§<a class="ltx_ref" href="../2.7.html#iv" title="§2.7(iv) Numerically Satisfactory Solutions ‣ §2.7 Differential Equations ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.7(iv)</span></a>, <a class="ltx_ref" href="../2.9.html#i" title="§2.9(i) Distinct Characteristic Values ‣ §2.9 Difference Equations ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.9(i)</span></a>); and
+numerical analysis for complex variables (Chapter <a class="ltx_ref" href="../3.html" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3</span></a>).</p>
+</div>
+<div class="ltx_para" id="method.p3">
+<p class="ltx_p">In addition, there is a comprehensive account of the great variety of
+analytical methods that are used for deriving and applying the extremely
+important asymptotic properties of the special functions, including double
+asymptotic properties (Chapter <a class="ltx_ref" href="../2.html" title="Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2</span></a> and §§<a class="ltx_ref" href="../10.41.html#iv" title="§10.41(iv) Double Asymptotic Properties ‣ §10.41 Asymptotic Expansions for Large Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.41(iv)</span></a>,
+<a class="ltx_ref" href="../10.41.html#v" title="§10.41(v) Double Asymptotic Properties (Continued) ‣ §10.41 Asymptotic Expansions for Large Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.41(v)</span></a>).</p>
+</div>
+</section>
+<section class="ltx_section" id="notations">
+<h2 class="ltx_title ltx_title_section">Notation for the Special Functions</h2>
+<div class="ltx_metadata ltx_info" id="notations.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="../1.1.html#p1" title="§1.1 Special Notation ‣ Notation ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.1</span></a>,
+<a class="ltx_ref" href="../10.1.html#p1" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.1</span></a>,
+<a class="ltx_ref" href="../11.1.html#p1" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.1</span></a>,
+<a class="ltx_ref" href="../12.1.html#p1" title="§12.1 Special Notation ‣ Notation ‣ Chapter 12 Parabolic Cylinder Functions"><span class="ltx_text ltx_ref_tag">§12.1</span></a>,
+<a class="ltx_ref" href="../13.1.html#p1" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.1</span></a>,
+<a class="ltx_ref" href="../14.1.html#p1" title="§14.1 Special Notation ‣ Notation ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.1</span></a>,
+<a class="ltx_ref" href="../15.1.html#p1" title="§15.1 Special Notation ‣ Notation ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">§15.1</span></a>,
+<a class="ltx_ref" href="../16.1.html#p1" title="§16.1 Special Notation ‣ Notation ‣ Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"><span class="ltx_text ltx_ref_tag">§16.1</span></a>,
+<a class="ltx_ref" href="../17.1.html#p1" title="§17.1 Special Notation ‣ Notation ‣ Chapter 17 𝑞-Hypergeometric and Related Functions"><span class="ltx_text ltx_ref_tag">§17.1</span></a>,
+<a class="ltx_ref" href="../18.1.html#i.p1" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.1(i)</span></a>,
+<a class="ltx_ref" href="../19.1.html#p1" title="§19.1 Special Notation ‣ Notation ‣ Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_tag">§19.1</span></a>,
+<a class="ltx_ref" href="../20.1.html#p1" title="§20.1 Special Notation ‣ Notation ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">§20.1</span></a>,
+<a class="ltx_ref" href="../21.1.html#p1" title="§21.1 Special Notation ‣ Notation ‣ Chapter 21 Multidimensional Theta Functions"><span class="ltx_text ltx_ref_tag">§21.1</span></a>,
+<a class="ltx_ref" href="../22.1.html#p1" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.1</span></a>,
+<a class="ltx_ref" href="../23.1.html#p1" title="§23.1 Special Notation ‣ Notation ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">§23.1</span></a>,
+<a class="ltx_ref" href="../24.1.html#p1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.1</span></a>,
+<a class="ltx_ref" href="../25.1.html#p1" title="§25.1 Special Notation ‣ Notation ‣ Chapter 25 Zeta and Related Functions"><span class="ltx_text ltx_ref_tag">§25.1</span></a>,
+<a class="ltx_ref" href="../26.1.html#p1" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.1</span></a>,
+<a class="ltx_ref" href="../27.1.html#p1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.1</span></a>,
+<a class="ltx_ref" href="../28.1.html#p1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.1</span></a>,
+<a class="ltx_ref" href="../29.1.html#p1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.1</span></a>,
+<a class="ltx_ref" href="../30.1.html#p1" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.1</span></a>,
+<a class="ltx_ref" href="../31.1.html#p1" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.1</span></a>,
+<a class="ltx_ref" href="../32.1.html#p1" title="§32.1 Special Notation ‣ Notation ‣ Chapter 32 Painlevé Transcendents"><span class="ltx_text ltx_ref_tag">§32.1</span></a>,
+<a class="ltx_ref" href="../33.1.html#p1" title="§33.1 Special Notation ‣ Notation ‣ Chapter 33 Coulomb Functions"><span class="ltx_text ltx_ref_tag">§33.1</span></a>,
+<a class="ltx_ref" href="../34.1.html#p1" title="§34.1 Special Notation ‣ Notation ‣ Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"><span class="ltx_text ltx_ref_tag">§34.1</span></a>,
+<a class="ltx_ref" href="../35.1.html#p1" title="§35.1 Special Notation ‣ Notation ‣ Chapter 35 Functions of Matrix Argument"><span class="ltx_text ltx_ref_tag">§35.1</span></a>,
+<a class="ltx_ref" href="../36.1.html#p1" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.1</span></a>,
+<a class="ltx_ref" href="../4.1.html#p1" title="§4.1 Special Notation ‣ Notation ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.1</span></a>,
+<a class="ltx_ref" href="../5.1.html#p1" title="§5.1 Special Notation ‣ Notation ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">§5.1</span></a>,
+<a class="ltx_ref" href="../6.1.html#p1" title="§6.1 Special Notation ‣ Notation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.1</span></a>,
+<a class="ltx_ref" href="../7.1.html#p1" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.1</span></a>,
+<a class="ltx_ref" href="../8.1.html#p1" title="§8.1 Special Notation ‣ Notation ‣ Chapter 8 Incomplete Gamma and Related Functions"><span class="ltx_text ltx_ref_tag">§8.1</span></a>,
+<a class="ltx_ref" href="../9.1.html#p1" title="§9.1 Special Notation ‣ Notation ‣ Chapter 9 Airy and Related Functions"><span class="ltx_text ltx_ref_tag">§9.1</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="notations.p1">
+<p class="ltx_p">The first section in each of the special function chapters (Chapters 5–36) lists notation
+that has been adopted for the functions in that chapter. This section may also include important
+alternative notations that have appeared in the literature. With a few exceptions the adopted
+notations are the same as those in standard applied mathematics and physics literature.</p>
+</div>
+<div class="ltx_para" id="notations.p2">
+<p class="ltx_p">The exceptions are ones for which the existing notations have drawbacks. For
+example, for the hypergeometric function we often use the notation
+<math altimg="m57.png" altimg-height="25px" altimg-valign="-7px" altimg-width="106px" alttext="\mathbf{F}\left(a,b;c;z\right)" class="ltx_Math" display="inline"><mrow><mi href=".././15.2#E2" title="=₂𝐅₁(𝑎,𝑏;𝑐;𝑧) Olver’s hypergeometric function">𝐅</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>;</mo><mi>c</mi><mo>;</mo><mi>z</mi><mo>)</mo></mrow></mrow></math> (§<a class="ltx_ref" href="../15.2.html#i" title="§15.2(i) Gauss Series ‣ §15.2 Definitions and Analytical Properties ‣ Properties ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">15.2(i)</span></a>) in place
+of the more conventional <math altimg="m105.png" altimg-height="25px" altimg-valign="-7px" altimg-width="123px" alttext="{{}_{2}F_{1}}\left(a,b;c;z\right)" class="ltx_Math" display="inline"><mrow><mmultiscripts><mi href=".././16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">F</mi><mn href=".././16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">1</mn><mrow></mrow><mprescripts></mprescripts><mn href=".././16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">2</mn><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>;</mo><mi>c</mi><mo>;</mo><mi>z</mi><mo>)</mo></mrow></mrow></math> or
+<math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="107px" alttext="F\left(a,b;c;z\right)" class="ltx_Math" display="inline"><mrow><mi href=".././15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>;</mo><mi>c</mi><mo>;</mo><mi>z</mi><mo>)</mo></mrow></mrow></math>. This is because <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbf{F}" class="ltx_Math" display="inline"><mi href=".././15.2#E2" title="=₂𝐅₁(𝑎,𝑏;𝑐;𝑧) Olver’s hypergeometric function">𝐅</mi></math> is akin to the
+notation used for Bessel functions (§<a class="ltx_ref" href="../10.2.html#ii" title="§10.2(ii) Standard Solutions ‣ §10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.2(ii)</span></a>), inasmuch as
+<math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbf{F}" class="ltx_Math" display="inline"><mi href=".././15.2#E2" title="=₂𝐅₁(𝑎,𝑏;𝑐;𝑧) Olver’s hypergeometric function">𝐅</mi></math> is an entire function of each of its parameters <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math>, <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math>, and
+<math altimg="m76.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi>c</mi></math>:​ this results in fewer restrictions and simpler equations. Similarly in the
+case of confluent hypergeometric functions (§<a class="ltx_ref" href="../13.2.html#i" title="§13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.2(i)</span></a>).</p>
+</div>
+<div class="ltx_para" id="notations.p3">
+<p class="ltx_p">Other examples are: (a) the notation for the Ferrers functions—also known
+as associated Legendre functions on the cut—for which existing notations can
+easily be confused with those for other associated Legendre functions
+(§<a class="ltx_ref" href="../14.1.html" title="§14.1 Special Notation ‣ Notation ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.1</span></a>); (b) the spherical Bessel functions for which existing notations
+are unsymmetric and inelegant (§§<a class="ltx_ref" href="../10.47.html#i" title="§10.47(i) Differential Equations ‣ §10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.47(i)</span></a> and <a class="ltx_ref" href="../10.47.html#ii" title="§10.47(ii) Standard Solutions ‣ §10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.47(ii)</span></a>); and
+(c) elliptic integrals for which both Legendre’s forms and the more recent
+symmetric forms are treated fully (Chapter <a class="ltx_ref" href="../19.html" title="Chapter 19 Elliptic Integrals"><span class="ltx_text ltx_ref_tag">19</span></a>).</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div class="ltx_para" id="notations.p4">
+<p class="ltx_p">The <a class="ltx_ref" href="../not/index.html" title="Notations"><span class="ltx_text ltx_ref_title">Notations</span></a> section
+includes all the notations for the special functions adopted in this Handbook. In
+the corresponding section for the DLMF some of the alternative notations that appear in the
+first section of the special function chapters are also included.</p>
+</div>
+</section>
+<section class="ltx_section" id="common">
+<h2 class="ltx_title ltx_title_section">Common Notations and Definitions</h2>
+<div class="ltx_metadata ltx_info" id="common.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text ltx_font_bold"><math altimg="m35.png" altimg-height="24px" altimg-valign="-8px" altimg-width="36px" alttext="\delta_{\NVar{j},\NVar{k}}" class="ltx_Math" display="inline"><msub><mi href="#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi class="ltx_nvar">j</mi><mo href="#common.t1.r4" title="Kronecker delta">,</mo><mi class="ltx_nvar">k</mi></mrow></msub></math>: Kronecker delta</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m45.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lceil\NVar{x}\right\rceil" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi class="ltx_nvar">x</mi><mo href="#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></math>: ceiling of <math altimg="m101.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="[\NVar{a},\NVar{b}]" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi class="ltx_nvar">a</mi><mo href="#common.t1.r30" title="closed interval">,</mo><mi class="ltx_nvar">b</mi><mo href="#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>: closed interval</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="[\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">[</mo><mi class="ltx_nvar">a</mi><mo href="#common.t2.r1" title="half-closed interval">,</mo><mi class="ltx_nvar">b</mi><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">)</mo></mrow></math>: half-closed interval</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="#common.t1.r1" title="complex plane">ℂ</mi></math>: complex plane</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="!!" class="ltx_Math" display="inline"><mo href="#common.t1.r16" title="double factorial">!!</mo></math>: double factorial</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m42.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="#common.t1.r10" title="element of">∈</mo></math>: element of</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="#common.t1.r9" title="equals by definition">≡</mo></math>: equals by definition</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m86.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor\NVar{x}\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r17" title="floor of 𝑥">⌊</mo><mi class="ltx_nvar">x</mi><mo href="#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math>: floor of <math altimg="m101.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\forall" class="ltx_Math" display="inline"><mo href="#common.t1.r12" title="for every">∀</mo></math>: for every</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="30px" alttext="\inf" class="ltx_Math" display="inline"><mo href="#common.t1.r25" title="greatest lower bound (infimum)">inf</mo></math>: greatest lower bound (infimum)</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbb{Z}" class="ltx_Math" display="inline"><mi href="#common.t2.r20" title="set of all integers">ℤ</mi></math>: set of all integers</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m33.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\cap" class="ltx_Math" display="inline"><mo href="#common.t1.r27" title="intersection">∩</mo></math>: intersection</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="62px" alttext="\liminf" class="ltx_Math" display="inline"><mo href="#common.t2.r4" title="least limit point">lim inf</mo></math>: least limit point</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="#common.t2.r10" title="modular equivalence">≡</mo></math>: modular equivalence</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="65px" alttext="\mod" class="ltx_Math" display="inline"><mo href="#common.t2.r10" title="modulo">mod</mo></math>: modulo</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m63.png" altimg-height="21px" altimg-valign="-3px" altimg-width="18px" alttext="\notin" class="ltx_Math" display="inline"><mo href="#common.t1.r11" title="not an element of">∉</mo></math>: not an element of</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{N}" class="ltx_Math" display="inline"><mi href="#common.t2.r11" title="set of all positive integers">ℕ</mi></math>: set of all positive integers</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m4.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="(\NVar{a},\NVar{b}]" class="ltx_Math" display="inline"><mrow><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">(</mo><mi class="ltx_nvar">a</mi><mo href="#common.t2.r1" title="half-closed interval">,</mo><mi class="ltx_nvar">b</mi><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">]</mo></mrow></math>: half-closed interval</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r29" stretchy="false" title="open interval">(</mo><mi class="ltx_nvar">a</mi><mo href="#common.t1.r29" title="open interval">,</mo><mi class="ltx_nvar">b</mi><mo href="#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>: open interval</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m51.png" altimg-height="22px" altimg-valign="-5px" altimg-width="20px" alttext="\mathbb{Q}" class="ltx_Math" display="inline"><mi href="#common.t2.r13" title="set of all rational numbers">ℚ</mi></math>: set of all rational numbers</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="#common.t2.r14" title="real line">ℝ</mi></math>: real line</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m68.png" altimg-height="25px" altimg-valign="-7px" altimg-width="15px" alttext="\setminus" class="ltx_Math" display="inline"><mo href="#common.t2.r19" title="set subtraction">∖</mo></math>: set subtraction</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m64.png" altimg-height="22px" altimg-valign="-6px" altimg-width="55px" alttext="\operatorname{sign}\NVar{x}" class="ltx_Math" display="inline"><mrow><mi href="#common.t2.r18" title="sign of">sign</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar">x</mi></mrow></math>: sign of</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m69.png" altimg-height="16px" altimg-valign="-3px" altimg-width="20px" alttext="\subset" class="ltx_Math" display="inline"><mo href="#common.t2.r2" title="is contained in">⊂</mo></math>: is contained in</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m70.png" altimg-height="20px" altimg-valign="-5px" altimg-width="20px" alttext="\subseteq" class="ltx_Math" display="inline"><mo href="#common.t2.r3" title="is, or is contained in">⊆</mo></math>: is, or is contained in</span>,
+<span class="ltx_text ltx_font_bold"><math altimg="m71.png" altimg-height="17px" altimg-valign="-6px" altimg-width="36px" alttext="\sup" class="ltx_Math" display="inline"><mo href="#common.t1.r26" title="least upper bound (supremum)">sup</mo></math>: least upper bound (supremum)</span> and
+<span class="ltx_text ltx_font_bold"><math altimg="m34.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\cup" class="ltx_Math" display="inline"><mo href="#common.t1.r28" title="union">∪</mo></math>: union</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="../errata/index.html#V1.0.1.I4.ix1.p1" title="In Other Changes ‣ Version 1.0.1 (June 27, 2011) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.1) for  Notation</span></a></dd>
+<dt>Amendment (effective with 1.0.1):</dt>
+<dd>
+The definition of the notation <math altimg="m16.png" altimg-height="27px" altimg-valign="-7px" altimg-width="100px" alttext="F(z_{0}e^{2k\pi i})" class="ltx_Math" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> was added.
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="common.p1">
+<table class="ltx_tabular ltx_align_left ltx_guessed_headers ltx_align_middle" id="common.t1">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="common.t1.r1">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="#common.t1.r1" title="complex plane">ℂ</mi></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">complex plane (excluding infinity).
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r2">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">D</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">decimal places.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r3">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m38.png" altimg-height="18px" altimg-valign="-2px" altimg-width="33px" alttext="\det" class="ltx_Math" display="inline"><mo href=".././1.2#Px11.p1" title="determinant">det</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">determinant.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r4">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">
+<math altimg="m36.png" altimg-height="24px" altimg-valign="-8px" altimg-width="35px" alttext="\delta_{j,k}" class="ltx_Math" display="inline"><msub><mi href="#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi>j</mi><mo href="#common.t1.r4" title="Kronecker delta">,</mo><mi>k</mi></mrow></msub></math> or <math altimg="m37.png" altimg-height="24px" altimg-valign="-8px" altimg-width="31px" alttext="\delta_{jk}" class="ltx_Math" display="inline"><msub><mi>δ</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>
+</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">Kronecker delta: 0 if <math altimg="m80.png" altimg-height="22px" altimg-valign="-6px" altimg-width="53px" alttext="j\neq k" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>≠</mo><mi>k</mi></mrow></math>; 1 if <math altimg="m79.png" altimg-height="22px" altimg-valign="-6px" altimg-width="53px" alttext="j=k" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mi>k</mi></mrow></math>.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r5">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">
+<math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\Delta" class="ltx_Math" display="inline"><mi href=".././3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi></math> (or <math altimg="m26.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="\Delta_{x}" class="ltx_Math" display="inline"><msub><mi href=".././3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mi>x</mi></msub></math>)</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">forward difference operator: <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="232px" alttext="\Delta f(x)=f(x+1)-f(x)" class="ltx_Math" display="inline"><mrow><mrow><mi href=".././3.6#i.p1" mathvariant="normal" title="forward difference operator">Δ</mi><mo>⁡</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r6">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">
+<math altimg="m61.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\nabla" class="ltx_Math" display="inline"><mo href=".././18.1#EGx2" title="backward difference">∇</mo></math> (or <math altimg="m62.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="\nabla_{x}" class="ltx_Math" display="inline"><msub><mo href=".././18.1#EGx2" title="backward difference">∇</mo><mi>x</mi></msub></math>)</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">backward difference operator: <math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="232px" alttext="\nabla f(x)=f(x)-f(x-1)" class="ltx_Math" display="inline"><mrow><mrow><mo href=".././18.1#EGx2" title="backward difference">∇</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+(See also del operator in the <span class="ltx_text ltx_font_bold">Notations</span> section.)</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r7">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">empty sums</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">zero.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r8">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">empty products</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">unity.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r9">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="#common.t1.r9" title="equals by definition">≡</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">equals by definition.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r10">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m42.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="#common.t1.r10" title="element of">∈</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">element of.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r11">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m63.png" altimg-height="21px" altimg-valign="-3px" altimg-width="18px" alttext="\notin" class="ltx_Math" display="inline"><mo href="#common.t1.r11" title="not an element of">∉</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">not an element of.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r12">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\forall" class="ltx_Math" display="inline"><mo href="#common.t1.r12" title="for every">∀</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">for every.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r13">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m29.png" altimg-height="11px" altimg-valign="-2px" altimg-width="38px" alttext="\Longrightarrow" class="ltx_Math" display="inline"><mo stretchy="false">⟹</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">implies.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r14">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m28.png" altimg-height="11px" altimg-valign="-2px" altimg-width="42px" alttext="\Longleftrightarrow" class="ltx_Math" display="inline"><mo stretchy="false">⟺</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">is equivalent to.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r15">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m86.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">factorial: <math altimg="m9.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="1\cdot 2\cdot 3\cdots n" class="ltx_Math" display="inline"><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>n</mi></mrow></math> if <math altimg="m90.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\ldots" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>; 1 if <math altimg="m88.png" altimg-height="17px" altimg-valign="-2px" altimg-width="55px" alttext="n=0" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r16">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m85.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="n!!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="#common.t1.r16" title="double factorial">!!</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">double factorial: <math altimg="m11.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="2\cdot 4\cdot 6\cdots n" class="ltx_Math" display="inline"><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>n</mi></mrow></math> if <math altimg="m92.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=2,4,6,\dotsc" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>;
+<math altimg="m10.png" altimg-height="17px" altimg-valign="-2px" altimg-width="109px" alttext="1\cdot 3\cdot 5\cdots n" class="ltx_Math" display="inline"><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>n</mi></mrow></math> if <math altimg="m91.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,3,5,\dotsc" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>5</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>; 1 if <math altimg="m87.png" altimg-height="21px" altimg-valign="-6px" altimg-width="91px" alttext="n=0,-1" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math>.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r17">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor x\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r17" title="floor of 𝑥">⌊</mo><mi>x</mi><mo href="#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">floor or integer part: the integer such that <math altimg="m96.png" altimg-height="25px" altimg-valign="-7px" altimg-width="149px" alttext="x-1&lt;\left\lfloor x\right\rfloor\leq x" class="ltx_Math" display="inline"><mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mrow><mo href="#common.t1.r17" title="floor of 𝑥">⌊</mo><mi>x</mi><mo href="#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow><mo>≤</mo><mi>x</mi></mrow></math>, with <math altimg="m101.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> real.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r18">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lceil x\right\rceil" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi>x</mi><mo href="#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">ceiling: the integer such that <math altimg="m102.png" altimg-height="25px" altimg-valign="-7px" altimg-width="149px" alttext="x\leq\left\lceil x\right\rceil&lt;x+1" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>≤</mo><mrow><mo href="#common.t1.r18" title="ceiling of 𝑥">⌈</mo><mi>x</mi><mo href="#common.t1.r18" title="ceiling of 𝑥">⌉</mo></mrow><mo>&lt;</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>, with <math altimg="m101.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> real.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r19">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m16.png" altimg-height="27px" altimg-valign="-7px" altimg-width="100px" alttext="F(z_{0}e^{2k\pi i})" class="ltx_Math" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">multivalued functions. More generally, <math altimg="m15.png" altimg-height="27px" altimg-valign="-7px" altimg-width="189px" alttext="F((z_{0}-a)e^{2k\pi i}+a)" class="ltx_Math" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></msup></mrow><mo>+</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. See §<a class="ltx_ref" href="../1.10.html#vi" title="§1.10(vi) Multivalued Functions ‣ §1.10 Functions of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.10(vi)</span></a>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r20">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m78.png" altimg-height="25px" altimg-valign="-7px" altimg-width="101px" alttext="f(z)|_{C}=0" class="ltx_Math" display="inline"><mrow><msub><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>C</mi></msub><mo>=</mo><mn>0</mn></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p"><math altimg="m77.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="f(z)" class="ltx_Math" display="inline"><mrow><mi>f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is continuous at all points of a simple closed contour <math altimg="m14.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi>C</mi></math> in <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="#common.t1.r1" title="complex plane">ℂ</mi></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r21">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m13.png" altimg-height="16px" altimg-valign="-3px" altimg-width="47px" alttext="&lt;\infty" class="ltx_Math" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">is finite, or converges.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r22">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m41.png" altimg-height="16px" altimg-valign="-3px" altimg-width="25px" alttext="\gg" class="ltx_Math" display="inline"><mo>≫</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">much greater than.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r23">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Im" class="ltx_Math" display="inline"><mrow><mi href=".././1.9#E2" mathvariant="normal" title="imaginary part">ℑ</mi><mo>⁡</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">imaginary part.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r24">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">iff</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">if and only if.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r25">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="30px" alttext="\inf" class="ltx_Math" display="inline"><mo href="#common.t1.r25" title="greatest lower bound (infimum)">inf</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">greatest lower bound (infimum).
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r26">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m71.png" altimg-height="17px" altimg-valign="-6px" altimg-width="36px" alttext="\sup" class="ltx_Math" display="inline"><mo href="#common.t1.r26" title="least upper bound (supremum)">sup</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">least upper bound (supremum).
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r27">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m33.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\cap" class="ltx_Math" display="inline"><mo href="#common.t1.r27" title="intersection">∩</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">intersection.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r28">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m34.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\cup" class="ltx_Math" display="inline"><mo href="#common.t1.r28" title="union">∪</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">union.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r29">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(a,b)" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>a</mi><mo href="#common.t1.r29" title="open interval">,</mo><mi>b</mi><mo href="#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">open interval in <math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="#common.t2.r14" title="real line">ℝ</mi></math>, or open straight-line segment
+joining <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math> in <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="#common.t1.r1" title="complex plane">ℂ</mi></math>.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t1.r30">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="[a,b]" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>a</mi><mo href="#common.t1.r30" title="closed interval">,</mo><mi>b</mi><mo href="#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">closed interval in <math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="#common.t2.r14" title="real line">ℝ</mi></math>, or closed straight-line segment
+joining <math altimg="m72.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi>a</mi></math> and <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi>b</mi></math> in <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="#common.t1.r1" title="complex plane">ℂ</mi></math>.
+</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="common.p2">
+<table class="ltx_tabular ltx_align_left ltx_guessed_headers ltx_align_middle" id="common.t2">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="common.t2.r1">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">
+<math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="(a,b]" class="ltx_Math" display="inline"><mrow><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">(</mo><mi>a</mi><mo href="#common.t2.r1" title="half-closed interval">,</mo><mi>b</mi><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">]</mo></mrow></math> or <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="[a,b)" class="ltx_Math" display="inline"><mrow><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">[</mo><mi>a</mi><mo href="#common.t2.r1" title="half-closed interval">,</mo><mi>b</mi><mo href="#common.t2.r1" stretchy="false" title="half-closed interval">)</mo></mrow></math>
+</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">half-closed intervals.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r2">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m69.png" altimg-height="16px" altimg-valign="-3px" altimg-width="20px" alttext="\subset" class="ltx_Math" display="inline"><mo href="#common.t2.r2" title="is contained in">⊂</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">is contained in.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r3">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m70.png" altimg-height="20px" altimg-valign="-5px" altimg-width="20px" alttext="\subseteq" class="ltx_Math" display="inline"><mo href="#common.t2.r3" title="is, or is contained in">⊆</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">is, or is contained in.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r4">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="62px" alttext="\liminf" class="ltx_Math" display="inline"><mo href="#common.t2.r4" title="least limit point">lim inf</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">least limit point.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r5">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">
+<math altimg="m22.png" altimg-height="26px" altimg-valign="-8px" altimg-width="49px" alttext="[a_{j,k}]" class="ltx_Math" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></msub><mo stretchy="false">]</mo></mrow></math> or <math altimg="m23.png" altimg-height="26px" altimg-valign="-8px" altimg-width="45px" alttext="[a_{jk}]" class="ltx_Math" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo stretchy="false">]</mo></mrow></math>
+</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">matrix with <math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(j,k)" class="ltx_Math" display="inline"><mrow><mo href="#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>j</mi><mo href="#common.t1.r29" title="open interval">,</mo><mi>k</mi><mo href="#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>th element <math altimg="m73.png" altimg-height="19px" altimg-valign="-8px" altimg-width="37px" alttext="a_{j,k}" class="ltx_Math" display="inline"><msub><mi>a</mi><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></msub></math> or <math altimg="m74.png" altimg-height="19px" altimg-valign="-8px" altimg-width="33px" alttext="a_{jk}" class="ltx_Math" display="inline"><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r6">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m104.png" altimg-height="21px" altimg-valign="-2px" altimg-width="45px" alttext="{\mathbf{A}}^{-1}" class="ltx_Math" display="inline"><msup><mi>𝐀</mi><mrow><mo href=".././1.2#Px12" title="matrix inverse">−</mo><mn href=".././1.2#Px12" title="matrix inverse">1</mn></mrow></msup></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">inverse of matrix <math altimg="m54.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r7">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m66.png" altimg-height="18px" altimg-valign="-2px" altimg-width="42px" alttext="\operatorname{tr}\mathbf{A}" class="ltx_Math" display="inline"><mrow><mi href=".././1.2#E62" title="trace of matrix">tr</mi><mo lspace="0.167em">⁡</mo><mi>𝐀</mi></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">trace of matrix <math altimg="m54.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r8">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m55.png" altimg-height="22px" altimg-valign="-2px" altimg-width="35px" alttext="\mathbf{A}^{\mathrm{T}}" class="ltx_Math" display="inline"><msup><mi>𝐀</mi><mi href=".././1.2#E28" mathvariant="normal" title="transpose of matrix">T</mi></msup></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">transpose of matrix <math altimg="m54.png" altimg-height="18px" altimg-valign="-2px" altimg-width="22px" alttext="\mathbf{A}" class="ltx_Math" display="inline"><mi>𝐀</mi></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r9">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="\mathbf{I}" class="ltx_Math" display="inline"><mi href=".././1.2#E53" title="identity matrix">𝐈</mi></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">unit matrix.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r10">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">
+<math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="65px" alttext="\mod" class="ltx_Math" display="inline"><mo href="#common.t2.r10" title="modulo">mod</mo></math> or modulo</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p"><math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="145px" alttext="m\equiv n\pmod{p}" class="ltx_Math" display="inline"><mrow><mi>m</mi><mo href="#common.t2.r10" title="modular equivalence">≡</mo><mrow><mi>n</mi><mspace width="0.949em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mo lspace="0em" rspace="0.167em">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> means <math altimg="m95.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math> divides <math altimg="m81.png" altimg-height="18px" altimg-valign="-4px" altimg-width="60px" alttext="m-n" class="ltx_Math" display="inline"><mrow><mi>m</mi><mo>−</mo><mi>n</mi></mrow></math>, where <math altimg="m83.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi>m</mi></math>, <math altimg="m93.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math>, and <math altimg="m95.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi>p</mi></math> are
+positive integers with <math altimg="m82.png" altimg-height="16px" altimg-valign="-3px" altimg-width="63px" alttext="m&gt;n" class="ltx_Math" display="inline"><mrow><mi>m</mi><mo>&gt;</mo><mi>n</mi></mrow></math>.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r11">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{N}" class="ltx_Math" display="inline"><mi href="#common.t2.r11" title="set of all positive integers">ℕ</mi></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">set of all positive integers.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r12">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m103.png" altimg-height="26px" altimg-valign="-8px" altimg-width="45px" alttext="{\left(\alpha\right)_{n}}" class="ltx_Math" display="inline"><msub><mrow><mo href=".././5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi>α</mi><mo href=".././5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi>n</mi></msub></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">Pochhammer’s symbol: <math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="282px" alttext="\alpha(\alpha+1)(\alpha+2)\cdots(\alpha+n-1)" class="ltx_Math" display="inline"><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>+</mo><mi>n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>
+if <math altimg="m89.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\dotsc" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>; 1 if <math altimg="m88.png" altimg-height="17px" altimg-valign="-2px" altimg-width="55px" alttext="n=0" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r13">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m51.png" altimg-height="22px" altimg-valign="-5px" altimg-width="20px" alttext="\mathbb{Q}" class="ltx_Math" display="inline"><mi href="#common.t2.r13" title="set of all rational numbers">ℚ</mi></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">set of all rational numbers.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r14">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="#common.t2.r14" title="real line">ℝ</mi></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">real line (excluding infinity).
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r15">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href=".././1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">real part.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r16">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m31.png" altimg-height="13px" altimg-valign="-2px" altimg-width="30px" alttext="\Residue" class="ltx_Math" display="inline"><mo href=".././1.10#iii.p5" title="residue">res</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">residue.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r17">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row">S</th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">significant figures.</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r18">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m65.png" altimg-height="22px" altimg-valign="-6px" altimg-width="55px" alttext="\operatorname{sign}x" class="ltx_Math" display="inline"><mrow><mi href="#common.t2.r18" title="sign of">sign</mi><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p"><math altimg="m8.png" altimg-height="19px" altimg-valign="-4px" altimg-width="31px" alttext="-1" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> if <math altimg="m97.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&lt;0" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>; 0 if <math altimg="m99.png" altimg-height="17px" altimg-valign="-2px" altimg-width="54px" alttext="x=0" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>; 1 if <math altimg="m100.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r19">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m68.png" altimg-height="25px" altimg-valign="-7px" altimg-width="15px" alttext="\setminus" class="ltx_Math" display="inline"><mo href="#common.t2.r19" title="set subtraction">∖</mo></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">set subtraction.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r20">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbb{Z}" class="ltx_Math" display="inline"><mi href="#common.t2.r20" title="set of all integers">ℤ</mi></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">set of all integers.
+</span>
+</span>
+</td>
+</tr>
+<tr class="ltx_tr" id="common.t2.r21">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row"><math altimg="m94.png" altimg-height="18px" altimg-valign="-2px" altimg-width="31px" alttext="n\mathbb{Z}" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi href="#common.t2.r20" title="set of all integers">ℤ</mi></mrow></math></th>
+<td class="ltx_td ltx_nopad_r ltx_align_justify">
+<span class="ltx_inline-block ltx_align_top">
+<span class="ltx_p">set of all integer multiples of <math altimg="m93.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi>n</mi></math>.</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_section" id="color">
+<h2 class="ltx_title ltx_title_section">Graphics</h2>
+<div class="ltx_para" id="color.p1">
+<p class="ltx_p">Special functions with one real variable are depicted graphically with
+conventional two-dimensional (2D) line graphs. See, for example, Figures
+<a class="ltx_ref" href="../10.3.html#F1" title="Figure 10.3.1 ‣ §10.3(i) Real Order and Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.1</span></a>–<a class="ltx_ref" href="../10.3.html#F4" title="Figure 10.3.4 ‣ §10.3(i) Real Order and Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.4</span></a>.</p>
+</div>
+<div class="ltx_para" id="color.p2">
+<p class="ltx_p">With two real variables, special functions are depicted as 3D surfaces, with
+vertical height corresponding to the value of the function, and coloring added
+to emphasize the 3D nature. See Figures <a class="ltx_ref" href="../10.3.html#F5" title="Figure 10.3.5 ‣ §10.3(i) Real Order and Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.5</span></a>–<a class="ltx_ref" href="../10.3.html#F8" title="Figure 10.3.8 ‣ §10.3(i) Real Order and Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.8</span></a> for examples.</p>
+</div>
+<div class="ltx_para" id="color.p3">
+<p class="ltx_p">Special functions with a complex variable are depicted as colored 3D surfaces
+in a similar way to functions of two real variables, but with the vertical
+height corresponding to the modulus (absolute value) of the function. See,
+for example, Figures <a class="ltx_ref" href="../5.3.html#F4" title="Figure 5.3.4 ‣ §5.3(ii) Complex Argument ‣ §5.3 Graphics ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.3.4</span></a>–<a class="ltx_ref" href="../5.3.html#F6" title="Figure 5.3.6 ‣ §5.3(ii) Complex Argument ‣ §5.3 Graphics ‣ Properties ‣ Chapter 5 Gamma Function"><span class="ltx_text ltx_ref_tag">5.3.6</span></a>. However, in
+many cases the coloring of the surface is chosen instead to indicate the quadrant of
+the plane to which the phase of the function belongs, thereby achieving a 4D
+effect. In these cases the phase colors that correspond to the 1st, 2nd, 3rd,
+and 4th quadrants are arranged in alphabetical order: blue, green, red, and
+yellow, respectively, and a “Quadrant Colors” icon appears alongside the
+figure. See, for example, Figures <a class="ltx_ref" href="../10.3.html#F9" title="Figure 10.3.9 ‣ §10.3(ii) Real Order, Complex Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.9</span></a>–<a class="ltx_ref" href="../10.3.html#F16" title="Figure 10.3.16 ‣ §10.3(ii) Real Order, Complex Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.16</span></a>.</p>
+</div>
+<div class="ltx_para" id="color.p4">
+<p class="ltx_p">Lastly, users may notice some lack of smoothness in the color boundaries of
+some of the 4D-type surfaces; see, for example, Figure <a class="ltx_ref" href="../10.3.html#F9" title="Figure 10.3.9 ‣ §10.3(ii) Real Order, Complex Variable ‣ §10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.3.9</span></a>. This
+nonsmoothness arises because the mesh that was used to generate the figure was optimized only
+for smoothness of the surface, and not for smoothness of the color boundaries.
+</p>
+</div>
+</section>
+<section class="ltx_section" id="applications">
+<h2 class="ltx_title ltx_title_section">Applications</h2>
+<div class="ltx_para" id="applications.p1">
+<p class="ltx_p">All of the special function chapters include sections devoted to mathematical,
+physical, and sometimes other applications of the main functions in the chapter. The purpose
+of these sections is simply to illustrate the importance of the functions in
+other disciplines; no attempt is made to provide exhaustive coverage.</p>
+</div>
+</section>
+<section class="ltx_section" id="computations">
+<h2 class="ltx_title ltx_title_section">Computation</h2>
+<div class="ltx_para" id="computations.p1">
+<p class="ltx_p">All of the special function chapters contain sections that describe available
+methods for computing the main functions in the chapter, and most also provide
+references to numerical tables of, and approximations for, these functions. In
+addition, the DLMF provides references to research papers in which software is
+developed, together with links to sites where the software can be obtained.</p>
+</div>
+<div class="ltx_para" id="computations.p2">
+<p class="ltx_p">In referring to the numerical tables and approximations we use notation typified by <math altimg="m98.png" altimg-height="25px" altimg-valign="-7px" altimg-width="107px" alttext="x=0(.05)1" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>0</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>.05</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mn>1</mn></mrow></mrow></math>,
+8D or 8S. This means that the variable <math altimg="m101.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> ranges from 0 to 1 in intervals of 0.05,
+and the corresponding function values are tabulated to 8 decimal places or 8 significant figures.</p>
+</div>
+<div class="ltx_para" id="computations.p3">
+<p class="ltx_p">Another numerical convention is that decimals followed by dots are unrounded;
+without the dots they are rounded. For example, to 4D <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi>π</mi></math> is <math altimg="m12.png" altimg-height="17px" altimg-valign="-2px" altimg-width="90px" alttext="3.1415\ldots" class="ltx_Math" display="inline"><mrow><mn>3.1415</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math> (unrounded)
+and 3.1416 (rounded).</p>
+</div>
+</section>
+<section class="ltx_section" id="verification">
+<h2 class="ltx_title ltx_title_section">Verification</h2>
+<div class="ltx_para" id="verification.p1">
+<p class="ltx_p">For all equations and other technical information this Handbook and the DLMF either provide
+references to the literature for proof or describe steps that can be followed
+to construct a proof.
+In the Handbook this information
+is grouped at the section level and appears under the heading <span class="ltx_text ltx_font_bold">Sources</span> in
+the <span class="ltx_text ltx_font_bold">References</span> section.
+In the DLMF this information is provided in pop-up windows at the
+subsection level.</p>
+</div>
+<div class="ltx_para" id="verification.p2">
+<p class="ltx_p">For equations or other technical information that appeared previously in AMS
+55, the DLMF usually includes the corresponding AMS 55 equation number, or
+other form of reference, together with corrections, if needed. However, none of
+these citations are to be regarded as supplying proofs.</p>
+</div>
+</section>
+<section class="ltx_section" id="Sx9">
+<h2 class="ltx_title ltx_title_section">Special Acknowledgment</h2>
+<div class="ltx_para" id="Sx9.p1">
+<p class="ltx_p">I pay tribute to my friend and predecessor Milton Abramowitz. His genius in
+the creation of the <em class="ltx_emph ltx_font_italic">National Bureau of Standards Handbook of Mathematical Functions</em>
+paid enormous dividends to the world’s scientific, mathematical, and engineering
+communities, and paved the way for the development of the <em class="ltx_emph ltx_font_italic">NIST Handbook of Mathematical Functions</em>
+and
+<em class="ltx_emph ltx_font_italic">NIST Digital Library of Mathematical Functions</em>.</p>
+</div>
+<div class="ltx_para" id="Sx9.p2">
+<p class="ltx_p ltx_align_right">Frank W. J. Olver, <em class="ltx_emph ltx_font_italic">Mathematics Editor</em></p>
+</div>
+</section>
+</article>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="preface.html" rel="prev" title=""><span class="ltx_text ltx_ref_title">Preface</span></a><a class="ltx_ref" href="../1.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Algebraic and Analytic Methods</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="../about/notices.html">© 2010–2025 NIST</a> / <a href="../about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="../style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/30.15";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="30.html#PT3" rel="up" title="Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.html" rel="up up" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="30.14.html" rel="prev" title="§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.16.html" rel="next" title="§30.16 Methods of Computation ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.1.html" rel="section" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.2.html" rel="section" title="§30.2 Differential Equations ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.3.html" rel="section" title="§30.3 Eigenvalues ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.4.html" rel="section" title="§30.4 Functions of the First Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.5.html" rel="section" title="§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.6.html" rel="section" title="§30.6 Functions of Complex Argument ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.7.html" rel="section" title="§30.7 Graphics ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.8.html" rel="section" title="§30.8 Expansions in Series of Ferrers Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.9.html" rel="section" title="§30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.10.html" rel="section" title="§30.10 Series and Integrals ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.11.html" rel="section" title="§30.11 Radial Spheroidal Wave Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.12.html" rel="section" title="§30.12 Generalized and Coulomb Spheroidal Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.13.html" rel="section" title="§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.14.html" rel="section" title="§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.16.html" rel="section" title="§30.16 Methods of Computation ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.17.html" rel="section" title="§30.17 Tables ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.18.html" rel="section" title="§30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Fourier transform, applications, bandlimited, bandlimited functions, extremal properties, integral equation, integral equations, orthogonality, scaled, scaled spheroidal wave functions, signal analysis, spheroidal wave functions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="30.15.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="30.15.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="30.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30 </span>Spheroidal Wave Functions</span></a><a class="ltx_ref" href="30.html#PT3" rel="up" title="In Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title">Applications</span></a><a class="ltx_ref" href="30.14.html" rel="prev" title="In Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30.14 </span>Wave Equation in Oblate Spheroidal Coordinates</span></a><a class="ltx_ref" href="30.16.html" rel="next" title="In Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30.16 </span>Methods of Computation</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§30.15 </span>Signal Analysis</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=scaled%20spheroidal%20wave%20functions">scaled spheroidal wave functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=signal%20analysis">signal analysis</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20wave%20functions">spheroidal wave functions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="30.15.html" title="">http://dlmf.nist.gov/30.15</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="30.15.html#i"><span class="ltx_tag ltx_tag_subsection">§30.15(i) </span>Scaled Spheroidal Wave Functions</a></li>
+<li class="ltx_tocentry"><a href="30.15.html#ii"><span class="ltx_tag ltx_tag_subsection">§30.15(ii) </span>Integral Equation</a></li>
+<li class="ltx_tocentry"><a href="30.15.html#iii"><span class="ltx_tag ltx_tag_subsection">§30.15(iii) </span>Fourier Transform</a></li>
+<li class="ltx_tocentry"><a href="30.15.html#iv"><span class="ltx_tag ltx_tag_subsection">§30.15(iv) </span>Orthogonality</a></li>
+<li class="ltx_tocentry"><a href="30.15.html#v"><span class="ltx_tag ltx_tag_subsection">§30.15(v) </span>Extremal Properties</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.15(i) </span>Scaled Spheroidal Wave Functions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=scaled">scaled</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20wave%20functions">spheroidal wave functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Frieden (<a class="ltx_ref" href="bib/F.html#bib841" title="Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions">1971</a>, p. 321)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Meixner<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/M.html#bib1599" title="Mathieu Functions and Spheroidal Functions and Their Mathematical Foundations: Further Studies">1980</a>, p. 114)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="30.18.html#I1.i6.p1" title="In §30.18(i) Introduction ‣ §30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">item</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.i" title="">http://dlmf.nist.gov/30.15.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Let <math altimg="m42.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./30.15#i.p1" title="parameter">τ</mi></math> <math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="(&gt;0)" class="ltx_Math" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>&gt;</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></math> and <math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./30.15#i.p1" title="parameter">σ</mi></math> <math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="(&gt;0)" class="ltx_Math" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>&gt;</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></math> be given. Set <math altimg="m25.png" altimg-height="17px" altimg-valign="-6px" altimg-width="68px" alttext="\gamma=\tau\sigma" class="ltx_Math" display="inline"><mrow><mi href="./30.2#i.p1" title="real parameter">γ</mi><mo>=</mo><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>⁢</mo><mi href="./30.15#i.p1" title="parameter">σ</mi></mrow></mrow></math> and define
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="88px" altimg-valign="-22px" altimg-width="335px" alttext="\phi_{n}(t)=\sqrt{\frac{2n+1}{2\tau}}\sqrt{\Lambda_{n}}\mathsf{Ps}^{0}_{n}%
+\left(\frac{t}{\tau},\gamma^{2}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msqrt><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow></mfrac></msqrt><mo>⁢</mo><msqrt><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub></msqrt><mo>⁢</mo><mrow><msubsup><mi href="./30.4#i" title="spheroidal wave function of the first kind">𝖯𝗌</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mn>0</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mfrac><mi>t</mi><mi href="./30.15#i.p1" title="parameter">τ</mi></mfrac><mo>,</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m45.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="30.4.html#i" title="§30.4(i) Definitions ‣ §30.4 Functions of the First Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m33.png" altimg-height="29px" altimg-valign="-9px" altimg-width="106px" alttext="\mathsf{Ps}^{\NVar{m}}_{\NVar{n}}\left(\NVar{x},\NVar{\gamma^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.4#i" title="spheroidal wave function of the first kind">𝖯𝗌</mi><mi class="ltx_nvar" href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi class="ltx_nvar" href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./30.1#p1.t1.r1" title="real variable">x</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./30.2#i.p1" title="real parameter">γ</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: spheroidal wave function of the first kind</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a> and
+<a class="ltx_ref" href="30.2.html#i.p1" title="§30.2(i) Spheroidal Differential Equation ‣ §30.2 Differential Equations ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m26.png" altimg-height="25px" altimg-valign="-6px" altimg-width="26px" alttext="\gamma^{2}" class="ltx_Math" display="inline"><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E1" title="">http://dlmf.nist.gov/30.15.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#i.info" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(i)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="71px" altimg-valign="-16px" altimg-width="247px" alttext="\Lambda_{n}=\frac{2\gamma}{\pi}\left(K_{n}^{0}(\gamma)A_{n}^{0}(\gamma^{2})%
+\right)^{2};" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./30.2#i.p1" title="real parameter">γ</mi></mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mrow><msubsup><mi href="./30.11#v.p1" title="connection coefficient">K</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mn>0</mn></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./30.2#i.p1" title="real parameter">γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./30.11#E4" title="𝐴_𝑛^𝑚(𝛾²)">A</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mn>0</mn></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math> (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a>,
+<a class="ltx_ref" href="30.11.html#E4" title="(30.11.4) ‣ §30.11(i) Definitions ‣ §30.11 Radial Spheroidal Wave Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-7px" altimg-width="73px" alttext="A_{n}^{m}(\gamma^{2})" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.11#E4" title="𝐴_𝑛^𝑚(𝛾²)">A</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math></a>,
+<a class="ltx_ref" href="30.11.html#v.p1" title="§30.11(v) Connection with the 𝑃𝑠 and 𝑄𝑠 Functions ‣ §30.11 Radial Spheroidal Wave Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="67px" alttext="K_{n}^{m}(\gamma)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.11#v.p1" title="connection coefficient">K</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./30.2#i.p1" title="real parameter">γ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  connection coefficient</a> and
+<a class="ltx_ref" href="30.2.html#i.p1" title="§30.2(i) Spheroidal Differential Equation ‣ §30.2 Differential Equations ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m26.png" altimg-height="25px" altimg-valign="-6px" altimg-width="26px" alttext="\gamma^{2}" class="ltx_Math" display="inline"><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E2" title="">http://dlmf.nist.gov/30.15.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#i.info" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(i)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">see §<a class="ltx_ref" href="30.11.html#v" title="§30.11(v) Connection with the 𝑃𝑠 and 𝑄𝑠 Functions ‣ §30.11 Radial Spheroidal Wave Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.11(v)</span></a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.15(ii) </span>Integral Equation</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20equation">integral equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20equations">integral equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=scaled%20spheroidal%20wave%20functions">scaled spheroidal wave functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20wave%20functions">spheroidal wave functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Frieden (<a class="ltx_ref" href="bib/F.html#bib841" title="Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions">1971</a>, p. 324)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Papoulis (<a class="ltx_ref" href="bib/P.html#bib1830" title="Signal Analysis">1977</a>, p. 205)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Slepian (<a class="ltx_ref" href="bib/S.html#bib2113" title="Some comments on Fourier analysis, uncertainty and modeling">1983</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.ii" title="">http://dlmf.nist.gov/30.15.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="57px" altimg-valign="-23px" altimg-width="331px" alttext="\int_{-\tau}^{\tau}\frac{\sin\sigma(t-s)}{\pi(t-s)}\phi_{n}(s)\,\mathrm{d}s=%
+\Lambda_{n}\phi_{n}(t)." class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow><mi href="./30.15#i.p1" title="parameter">τ</mi></msubsup><mrow><mfrac><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>−</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>s</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="\sigma&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#E1" title="(30.15.1) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a> and
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E3" title="">http://dlmf.nist.gov/30.15.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#ii.info" title="§30.15(ii) Integral Equation ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(ii)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.15(iii) </span>Fourier Transform</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fourier%20transform">Fourier transform</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=bandlimited">bandlimited</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=bandlimited%20functions">bandlimited functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=scaled%20spheroidal%20wave%20functions">scaled spheroidal wave functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20wave%20functions">spheroidal wave functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Frieden (<a class="ltx_ref" href="bib/F.html#bib841" title="Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions">1971</a>, pp. 321, 322)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Papoulis (<a class="ltx_ref" href="bib/P.html#bib1830" title="Signal Analysis">1977</a>, p. 208)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Slepian (<a class="ltx_ref" href="bib/S.html#bib2113" title="Some comments on Fourier analysis, uncertainty and modeling">1983</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.iii" title="">http://dlmf.nist.gov/30.15.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="113px" altimg-valign="-23px" altimg-width="455px" alttext="\int_{-\infty}^{\infty}e^{-\mathrm{i}t\omega}\phi_{n}(t)\,\mathrm{d}t=(-%
+\mathrm{i})^{n}\sqrt{\frac{2\pi\tau}{\sigma\Lambda_{n}}}\phi_{n}\left(\frac{%
+\tau}{\sigma}\omega\right)\chi_{\sigma}(\omega)," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msup><mo>⁢</mo><msqrt><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>⁢</mo><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub></mrow></mfrac></msqrt><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi href="./30.15#i.p1" title="parameter">τ</mi><mi href="./30.15#i.p1" title="parameter">σ</mi></mfrac><mo>⁢</mo><mi>ω</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi>χ</mi><mi href="./30.15#i.p1" title="parameter">σ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="\sigma&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#E1" title="(30.15.1) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a> and
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="30.15.html#iii.p1" title="§30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E4" title="">http://dlmf.nist.gov/30.15.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#iii.info" title="§30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iii)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="113px" altimg-valign="-23px" altimg-width="416px" alttext="\int_{-\tau}^{\tau}e^{-\mathrm{i}t\omega}\phi_{n}(t)\,\mathrm{d}t=(-\mathrm{i}%
+)^{n}\sqrt{\frac{2\pi\tau\Lambda_{n}}{\sigma}}\phi_{n}\left(\frac{\tau}{\sigma%
+}\omega\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow><mi href="./30.15#i.p1" title="parameter">τ</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msup><mo>⁢</mo><msqrt><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>⁢</mo><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub></mrow><mi href="./30.15#i.p1" title="parameter">σ</mi></mfrac></msqrt><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mi href="./30.15#i.p1" title="parameter">τ</mi><mi href="./30.15#i.p1" title="parameter">σ</mi></mfrac><mo>⁢</mo><mi>ω</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="\sigma&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#E1" title="(30.15.1) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a> and
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E5" title="">http://dlmf.nist.gov/30.15.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#iii.info" title="§30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iii)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="69px" altimg-valign="-28px" altimg-width="216px" alttext="\chi_{\sigma}(\omega)=\begin{cases}1,&amp;\mbox{$|\omega|\leq\sigma$},\\
+0,&amp;\mbox{$|\omega|&gt;\sigma$}.\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msub><mi>χ</mi><mi href="./30.15#i.p1" title="parameter">σ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>1</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>ω</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi href="./30.15#i.p1" title="parameter">σ</mi></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>ω</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mi href="./30.15#i.p1" title="parameter">σ</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="\sigma&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a></dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="30.15.html#iii.p1" title="§30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E6" title="">http://dlmf.nist.gov/30.15.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#iii.info" title="§30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iii)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Equations (<a class="ltx_ref" href="30.15.html#E4" title="(30.15.4) ‣ §30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.15.4</span></a>) and (<a class="ltx_ref" href="30.15.html#E6" title="(30.15.6) ‣ §30.15(iii) Fourier Transform ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.15.6</span></a>) show that the functions
+<math altimg="m36.png" altimg-height="22px" altimg-valign="-6px" altimg-width="28px" alttext="\phi_{n}" class="ltx_Math" display="inline"><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub></math> are <math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./30.15#i.p1" title="parameter">σ</mi></math>-<em class="ltx_emph ltx_font_italic">bandlimited</em>, that is, their Fourier transform
+vanishes outside the interval <math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="65px" alttext="[-\sigma,\sigma]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">σ</mi></mrow><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi href="./30.15#i.p1" title="parameter">σ</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>.
+</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.15(iv) </span>Orthogonality</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=orthogonality">orthogonality</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=scaled%20spheroidal%20wave%20functions">scaled spheroidal wave functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Frieden (<a class="ltx_ref" href="bib/F.html#bib841" title="Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions">1971</a>, p. 321, 324)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Papoulis (<a class="ltx_ref" href="bib/P.html#bib1830" title="Signal Analysis">1977</a>, p. 207)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Slepian (<a class="ltx_ref" href="bib/S.html#bib2113" title="Some comments on Fourier analysis, uncertainty and modeling">1983</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.iv" title="">http://dlmf.nist.gov/30.15.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="56px" altimg-valign="-23px" altimg-width="161px" alttext="\displaystyle\int_{-\tau}^{\tau}\phi_{k}(t)\phi_{n}(t)\,\mathrm{d}t" class="ltx_Math" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow><mi href="./30.15#i.p1" title="parameter">τ</mi></msubsup></mstyle><mrow><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="26px" altimg-valign="-8px" altimg-width="95px" alttext="\displaystyle=\Lambda_{n}\delta_{k,n}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁢</mo><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi>k</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r4" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m24.png" altimg-height="24px" altimg-valign="-8px" altimg-width="36px" alttext="\delta_{\NVar{j},\NVar{k}}" class="ltx_Math" display="inline"><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi class="ltx_nvar">j</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi class="ltx_nvar">k</mi></mrow></msub></math>: Kronecker delta</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#E1" title="(30.15.1) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a> and
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E7" title="">http://dlmf.nist.gov/30.15.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#iv.info" title="§30.15(iv) Orthogonality ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iv)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E8">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="56px" altimg-valign="-23px" altimg-width="168px" alttext="\displaystyle\int_{-\infty}^{\infty}\phi_{k}(t)\phi_{n}(t)\,\mathrm{d}t" class="ltx_Math" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="26px" altimg-valign="-8px" altimg-width="69px" alttext="\displaystyle=\delta_{k,n}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi>k</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></mrow></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r4" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m24.png" altimg-height="24px" altimg-valign="-8px" altimg-width="36px" alttext="\delta_{\NVar{j},\NVar{k}}" class="ltx_Math" display="inline"><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi class="ltx_nvar">j</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi class="ltx_nvar">k</mi></mrow></msub></math>: Kronecker delta</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="30.1.html#p1.t1.r4" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m46.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="n\geq m" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>≥</mo><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></mrow></math>:  integer degree</a> and
+<a class="ltx_ref" href="30.15.html#E1" title="(30.15.1) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E8" title="">http://dlmf.nist.gov/30.15.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#iv.info" title="§30.15(iv) Orthogonality ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(iv)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The sequence <math altimg="m36.png" altimg-height="22px" altimg-valign="-6px" altimg-width="28px" alttext="\phi_{n}" class="ltx_Math" display="inline"><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub></math>, <math altimg="m45.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> forms an orthonormal basis in the
+space of <math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./30.15#i.p1" title="parameter">σ</mi></math>-bandlimited functions, and, after normalization, an
+orthonormal basis in <math altimg="m20.png" altimg-height="26px" altimg-valign="-7px" altimg-width="91px" alttext="L^{2}(-\tau,\tau)" class="ltx_Math" display="inline"><mrow><msup><mi href="./30.15#iv.p1" title="space">L</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow><mo>,</mo><mi href="./30.15#i.p1" title="parameter">τ</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.15(v) </span>Extremal Properties</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=extremal%20properties">extremal properties</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=scaled%20spheroidal%20wave%20functions">scaled spheroidal wave functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=signal%20analysis">signal analysis</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20wave%20functions">spheroidal wave functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Frieden (<a class="ltx_ref" href="bib/F.html#bib841" title="Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions">1971</a>, §2.10)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Papoulis (<a class="ltx_ref" href="bib/P.html#bib1830" title="Signal Analysis">1977</a>, p. 210)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Slepian (<a class="ltx_ref" href="bib/S.html#bib2113" title="Some comments on Fourier analysis, uncertainty and modeling">1983</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.v" title="">http://dlmf.nist.gov/30.15.v</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">The maximum (or least upper bound) <math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathrm{B}" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" mathvariant="normal" title="maximum bound">B</mi></math> of all numbers
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="85px" altimg-valign="-23px" altimg-width="323px" alttext="\beta=\frac{1}{2\pi}\int_{-\sigma}^{\sigma}\left|\int_{-\infty}^{\infty}e^{-%
+\mathrm{i}t\omega}f(t)\,\mathrm{d}t\right|^{2}\,\mathrm{d}\omega" class="ltx_Math" display="block"><mrow><mi>β</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" rspace="0em" title="integral">∫</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">σ</mi></mrow><mi href="./30.15#i.p1" title="parameter">σ</mi></msubsup><mrow><msup><mrow><mo>|</mo><mrow><msubsup><mo href="./1.4#iv" lspace="0em" title="integral">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi href="./30.15#v.p1" title="function">f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow><mo>|</mo></mrow><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>ω</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="\sigma&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a> and
+<a class="ltx_ref" href="30.15.html#v.p1" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" title="function">f</mi></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E9" title="">http://dlmf.nist.gov/30.15.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#v.info" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(v)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">taken over all <math altimg="m44.png" altimg-height="26px" altimg-valign="-7px" altimg-width="149px" alttext="f\in L^{2}(-\infty,\infty)" class="ltx_Math" display="inline"><mrow><mi href="./30.15#v.p1" title="function">f</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><msup><mi href="./30.15#v.p1" title="space">L</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> subject to</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">30.15.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="56px" altimg-valign="-23px" altimg-width="132px" alttext="\displaystyle\int_{-\infty}^{\infty}|f(t)|^{2}\,\mathrm{d}t" class="ltx_Math" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi href="./30.15#v.p1" title="function">f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=1," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="56px" altimg-valign="-23px" altimg-width="124px" alttext="\displaystyle\int_{-\tau}^{\tau}|f(t)|^{2}\,\mathrm{d}t" class="ltx_Math" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mi href="./30.15#i.p1" title="parameter">τ</mi></mrow><mi href="./30.15#i.p1" title="parameter">τ</mi></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi href="./30.15#v.p1" title="function">f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="19px" altimg-valign="-6px" altimg-width="48px" alttext="\displaystyle=\alpha," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mi>α</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a> and
+<a class="ltx_ref" href="30.15.html#v.p1" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" title="function">f</mi></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E10" title="">http://dlmf.nist.gov/30.15.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E10a.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E10b.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E10a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E10b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E10a.png">png</a>, <a href="http://dlmf.nist.gov/30.15.E10b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#v.info" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(v)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for (fixed) <math altimg="m23.png" altimg-height="21px" altimg-valign="-5px" altimg-width="107px" alttext="\Lambda_{0}&lt;\alpha\leq 1" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub><mo>&lt;</mo><mi>α</mi><mo>≤</mo><mn>1</mn></mrow></math>, is given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="32px" altimg-valign="-7px" altimg-width="349px" alttext="\operatorname{arccos}\sqrt{\mathrm{B}}+\operatorname{arccos}\sqrt{\alpha}=%
+\operatorname{arccos}\sqrt{\Lambda_{0}}," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mi href="./4.23#ii.p1" title="arccosine function">arccos</mi><mo lspace="0.167em">⁡</mo><msqrt><mi href="./30.15#v.p1" mathvariant="normal" title="maximum bound">B</mi></msqrt></mrow><mo>+</mo><mrow><mi href="./4.23#ii.p1" title="arccosine function">arccos</mi><mo lspace="0.167em">⁡</mo><msqrt><mi>α</mi></msqrt></mrow></mrow><mo>=</mo><mrow><mi href="./4.23#ii.p1" title="arccosine function">arccos</mi><mo lspace="0.167em">⁡</mo><msqrt><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub></msqrt></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.23.html#ii.p1" title="§4.23(ii) Principal Values ‣ §4.23 Inverse Trigonometric Functions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="74px" alttext="\operatorname{arccos}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.23#ii.p1" title="arccosine function">arccos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: arccosine function</a>,
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a> and
+<a class="ltx_ref" href="30.15.html#v.p1" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathrm{B}" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" mathvariant="normal" title="maximum bound">B</mi></math>:  maximum bound</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E11" title="">http://dlmf.nist.gov/30.15.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#v.info" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(v)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">or equivalently,</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">30.15.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="68px" altimg-valign="-15px" altimg-width="318px" alttext="\mathrm{B}=\left(\sqrt{\Lambda_{0}\alpha}+\sqrt{1-\Lambda_{0}}\sqrt{1-\alpha}%
+\right)^{2}." class="ltx_Math" display="block"><mrow><mrow><mi href="./30.15#v.p1" mathvariant="normal" title="maximum bound">B</mi><mo>=</mo><msup><mrow><mo>(</mo><mrow><msqrt><mrow><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub><mo>⁢</mo><mi>α</mi></mrow></msqrt><mo>+</mo><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>−</mo><mi>α</mi></mrow></msqrt></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a> and
+<a class="ltx_ref" href="30.15.html#v.p1" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathrm{B}" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" mathvariant="normal" title="maximum bound">B</mi></math>:  maximum bound</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E12" title="">http://dlmf.nist.gov/30.15.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#v.info" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(v)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The corresponding function <math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" title="function">f</mi></math> is given by</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">30.15.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="27px" altimg-valign="-7px" altimg-width="43px" alttext="\displaystyle f(t)" class="ltx_Math" display="inline"><mrow><mi href="./30.15#v.p1" title="function">f</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="27px" altimg-valign="-7px" altimg-width="316px" alttext="\displaystyle=a\phi_{0}(t)\chi_{\tau}(t)+b\phi_{0}(t)(1-\chi_{\tau}(t))," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi>χ</mi><mi href="./30.15#i.p1" title="parameter">τ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mrow><msub><mi>χ</mi><mi href="./30.15#i.p1" title="parameter">τ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\displaystyle a" class="ltx_Math" display="inline"><mi>a</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="57px" altimg-valign="-22px" altimg-width="84px" alttext="\displaystyle=\sqrt{\frac{\alpha}{\Lambda_{0}}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msqrt><mstyle displaystyle="true"><mfrac><mi>α</mi><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub></mfrac></mstyle></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="20px" altimg-valign="-2px" altimg-width="16px" alttext="\displaystyle b" class="ltx_Math" display="inline"><mi>b</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="57px" altimg-valign="-20px" altimg-width="119px" alttext="\displaystyle=\sqrt{\frac{1-\alpha}{1-\Lambda_{0}}}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>−</mo><mi>α</mi></mrow><mrow><mn>1</mn><mo>−</mo><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub></mrow></mfrac></mstyle></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="30.15.html#i.p1" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m41.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="\tau&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./30.15#i.p1" title="parameter">τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="30.15.html#E1" title="(30.15.1) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>,
+<a class="ltx_ref" href="30.15.html#E2" title="(30.15.2) ‣ §30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Lambda" class="ltx_Math" display="inline"><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi></math></a> and
+<a class="ltx_ref" href="30.15.html#v.p1" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi href="./30.15#v.p1" title="function">f</mi></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.15.E13" title="">http://dlmf.nist.gov/30.15.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/30.15.E13a.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E13b.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E13c.tex">TeX</a>, <a href="http://dlmf.nist.gov/30.15.E13a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E13b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E13c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/30.15.E13a.png">png</a>, <a href="http://dlmf.nist.gov/30.15.E13b.png">png</a>, <a href="http://dlmf.nist.gov/30.15.E13c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.15.html#v.info" title="§30.15(v) Extremal Properties ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15(v)</span></a>,
+<a class="ltx_ref" href="30.15.html#info" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.15</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">If <math altimg="m16.png" altimg-height="21px" altimg-valign="-5px" altimg-width="107px" alttext="0&lt;\alpha\leq\Lambda_{0}" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>α</mi><mo>≤</mo><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mn>0</mn></msub></mrow></math>, then <math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="57px" alttext="\mathrm{B}=1" class="ltx_Math" display="inline"><mrow><mi href="./30.15#v.p1" mathvariant="normal" title="maximum bound">B</mi><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="v.p2">
+<p class="ltx_p">For further information see <cite class="ltx_cite ltx_citemacro_citet">Frieden (<a class="ltx_ref" href="bib/F.html#bib841" title="Evaluation, design and extrapolation methods for optical signals, based on use of the prolate functions">1971</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Lyman and Edmonson (<a class="ltx_ref" href="bib/L.html#bib1507" title="Linear prediction of bandlimited processes with flat spectral densities">2001</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Papoulis (<a class="ltx_ref" href="bib/P.html#bib1830" title="Signal Analysis">1977</a>, Chapter 6)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Slepian (<a class="ltx_ref" href="bib/S.html#bib2113" title="Some comments on Fourier analysis, uncertainty and modeling">1983</a>)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Slepian and Pollak (<a class="ltx_ref" href="bib/S.html#bib2114" title="Prolate spheroidal wave functions, Fourier analysis and uncertainty. I">1961</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="30.14.html" rel="prev" title="In Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30.14 </span>Wave Equation in Oblate Spheroidal Coordinates</span></a><a class="ltx_ref" href="30.16.html" rel="next" title="In Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30.16 </span>Methods of Computation</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

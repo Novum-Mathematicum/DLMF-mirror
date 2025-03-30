@@ -1,0 +1,116 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 32 "                          \+
+
+      " }{TEXT 256 37 "Power Series Expansion of Eigenvalues" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 79 "                        A Maple wo
+
+rksheet written by Hans Volkmer, May 2, 2001 " }}}{EXCHG {PARA 0 "" 0 
+
+"" {TEXT -1 69 "                                    send comments to v
+
+olkmer@uwm.edu " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 42 "This Maple pro
+
+gram finds the coefficients " }{XPPEDIT 18 0 "w[0];" "6#&amp;%\"wG6#\"\"!
+
+" }{TEXT -1 4 " to " }{XPPEDIT 18 0 "w[Q];" "6#&amp;%\"wG6#%\"QG" }{TEXT 
+
+-1 30 " of the power series expansion" }}{PARA 0 "" 0 "" {TEXT -1 6 " \+
+
+     " }{XPPEDIT 18 0 "lambda[n]^m = w[0]+w[1]*gamma^2+w[2]*gamma^4;" 
+
+"6#/)&amp;%'lambdaG6#%\"nG%\"mG,(&amp;%\"wG6#\"\"!\"\"\"*&amp;&amp;F,6#F/F/*$%&amp;gammaG
+
+\"\"#F/F/*&amp;&amp;F,6#F5F/*$F4\"\"%F/F/" }{TEXT -1 7 " + ...." }}{PARA 0 "" 
+
+0 "" {TEXT -1 19 "for the eigenvalue " }{XPPEDIT 18 0 "lambda[n]^m;" "
+
+6#)&amp;%'lambdaG6#%\"nG%\"mG" }{TEXT -1 41 " of the spheroidal differenti
+
+al equation." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 75 "Usage: Choose you
+
+r Q, m, n in the line below. Then hit enter several times." }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "Q:=10;m:=0;n:=1;" }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 10 "A:=proc(k)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 13 "-(k+1)*(k+2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "B:=proc(k)" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 23 "(m+k)*(m+k+1)-g-lambda;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "C:=
+
+proc(k)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "g;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 15 "w:=
+
+array(0..Q);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "makecoeff:=
+
+proc()" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 34 "global Q,w;local q,p,u,v,
+
+i,Lambda;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "w[0]:=n*(n+1);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "Lambda:=w[0];" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 20 "for q from 1 to Q do" }{TEXT -1 0 "" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 51 "p[0]:=1;p[1]:=subs(lambda=Lambda+u*g^q,B(n-m-2*q
+
+));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "for i from 2 to 2*q+1 do " }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 56 "p[i]:=subs(lambda=Lambda+u*g^q,B(n
+
+-m-2*q+2*i-2))*p[i-1]-" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 41 "A(n-m-2*q
+
++2*i-4)*C(n-m-2*q+2*i-2)*p[i-2];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 
+
+"p[i]:=rem(p[i],g^(q+1),g)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "od;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 "v:=coeff(p[2*q+1],g,q);" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 19 "w[q]:=solve(v=0,u);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 24 "Lambda:=Lambda+w[q]*g^q;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 23 "subs(g=gamma^2,Lambda);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 3 "od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 12 "makecoeff();" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+
+-1 275 "Example: These formulas for various values of  n and m=0 may b
+
+e compared with those in the paper J.C. Bouwkamp, On spheroidal wave f
+
+unctions of order zero, J. Math. Phys. 26, 79-92 (1947) . Quite a few \+
+
+errors are detected in the paper in the coefficients of higher powers \+
+
+of " }{XPPEDIT 18 0 "gamma;" "6#%&amp;gammaG" }{TEXT -1 74 ". The above fo
+
+rmula with n=1 agrees with the one given in the paper up to " }
+
+{XPPEDIT 18 0 "gamma^12;" "6#*$%&amp;gammaG\"#7" }{TEXT -1 26 ", the highe
+
+st power given." }}}}{MARK "4 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 
+
+1 }{PAGENUMBERS 0 1 2 33 1 1 }
+

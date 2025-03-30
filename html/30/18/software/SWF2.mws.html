@@ -1,0 +1,186 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 256 57 "          \+
+
+                     The Spheroidal Function Ps" }}}{EXCHG {PARA 0 "" 
+
+0 "" {TEXT -1 79 "                     A Maple worksheet written by Ha
+
+ns Volkmer, January 4, 2001" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 67 "  \+
+
+                                send comments to volkmer@uwm.edu " }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 69 "The Maple program Ps(m,n,q,d) comp
+
+utes the spheroidal wave functions " }{XPPEDIT 18 0 "Ps[n]^m;" "6#)&amp;%#
+
+PsG6#%\"nG%\"mG" }{TEXT -1 1 "(" }{XPPEDIT 18 0 "x;" "6#%\"xG" }{TEXT 
+
+-1 1 ";" }{XPPEDIT 18 0 "gamma^2;" "6#*$%&amp;gammaG\"\"#" }{TEXT -1 38 ")
+
+  by expansion in Legendre functions." }}{PARA 0 "" 0 "" {TEXT -1 14 "
+
+We abbreviate " }{XPPEDIT 18 0 "q = gamma^2;" "6#/%\"qG*$%&amp;gammaG\"\"#
+
+" }{TEXT -1 53 ".  The integer d has to be chosen sufficently large. \+
+
+" }}{PARA 0 "" 0 "" {TEXT -1 63 "The program acoeff(m,n,q,d) computes \+
+
+the expansion coefficents " }{XPPEDIT 18 0 "a[n,r]^m;" "6#)&amp;%\"aG6$%\"
+
+nG%\"rG%\"mG" }{TEXT -1 2 " ." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 32 "restart;with(linalg):Digits:=10;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "trideven:=proc(m,q,d)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 10 "local A,i;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d
+
+,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 115 "for i from 1 to d do      \+
+
+A[i,i]:=(m+2*i-2.0)*(m+2*i-1)-2*q*((m+2*i-2)*(m+2*i-1)-1+m^2)/(2*m+4*i
+
+-5)/(2*m+4*i-1) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "for i from 1
+
+ to d-1 do      A[i,i+1]:=-q*(2*m+2*i-1)*(2*m+2*i)/(2*m+4*i-1)/(2*m+4*
+
+i+1) od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 to d do \+
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "  A[i,i-1]:=-q*(2*i-3)*(2*i-2)/
+
+(2*m+4*i-7)/(2*m+4*i-5) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 20 "tridodd:=proc(m,q,d)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 10 "local A,i;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "A:=matrix(d,d,0
+
+.0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 111 "for i from 1 to d do      \+
+
+A[i,i]:=(m+2*i-1.0)*(m+2*i)-2*q*((m+2*i-1)*(m+2*i)-1+m^2)/(2*m+4*i-3)/
+
+(2*m+4*i+1) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "for i from 1 to \+
+
+d-1 do      A[i,i+1]:=-q*(2*m+2*i)*(2*m+2*i+1)/(2*m+4*i+1)/(2*m+4*i+3)
+
+ od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 to d do " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "  A[i,i-1]:=-q*(2*i-2)*(2*i-1)/(2*m
+
++4*i-5)/(2*m+4*i-3) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 86 "acoeff:=proc(m,n,q,d) # a-coefficients for expansion \+
+
+of Ps_n^m(x;q) from d by d matrix" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+24 "local R,r,c,cc,a,aa,A,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "R:=
+
+floor((n-m)/2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 69 "if type(n-m,even
+
+) then A:=trideven(m,q,d); else A:=tridodd(m,q,d) fi;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 37 "K:=sort(K,(a,b)-&gt;evalb(a[1] &lt; b[1]));" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 17 "aa:=K[R+1][3][1];" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 47 "for r from -R to -R+d-1 do a[r]:=aa[r+R+1] od; " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 84 "c:=sum((n+m+2*s)!/(n-m+2*s)!/(1+2*n
+
++4*s)*a[s]^2,s=-R..-R+d-1)/(n+m)!*(n-m)!*(2*n+1);" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 11 "c:=sqrt(c);" }{TEXT -1 0 "" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 74 "cc:=sum((-1)^s*(n+m+2*s)!/(n-m+2*s)!*a[s],s=-R..-R+d-
+
+1);# test A_n^(-m)&gt;0 " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "if cc&lt;0 th
+
+en c:=-c fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 43 "for r from -R to -R
+
++d-1 do a[r]:=a[r]/c od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "a;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 16 "with(orthopoly);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 31 "Ps:=proc(m,n,q,d) # Ps_n^m(x,q)" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 15 "local ps,r,R,a;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 
+
+"R:=floor((n-m)/2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "a:=acoeff(m,
+
+n,q,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 6 "ps:=0;" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 72 "if m=0 then for r from -R to -R+d-1 do ps:=ps+(-1)
+
+^r*a[r]*P(n+2*r,x) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 81 "else for \+
+
+r from -R to -R+d-1 do  ps:=ps+(-1)^r*a[r]*diff(P(n+2*r,x),x$m) od; fi
+
+; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "(1-x^2)^(m/2)*(-1)^m*ps;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "" 0 "" 
+
+{TEXT -1 169 "First example: We compare with table in Abramowitz and S
+
+tegun , page 766. Note that a different normalization is used there so
+
+ we have to renormalize. We find agreement." }}}{EXCHG {PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 23 "m:=1;n:=3;q:=25.0;d:=7;" }}}{EXCHG {PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 113 "u:=(-1)^((n-m)/2)*(n+m)!/2^n/((n-m)/2)!/((n+m)/2)
+
+!/subs(x=0,Ps(m,n,q,d)); # renormalization factor if n-m is even" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "f:=u*Ps(m,n,q,d);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 32 "for theta from 0 to 90 by 10
+
+ do " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 54 "print(theta,subs(x=evalf(co
+
+s(theta*Pi/180.0)),f)); od;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+23 "m:=2;n:=3;q:=16.0;d:=7;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+127 "u:=(-1)^((n-m-1)/2)*(n+m+1)!/2^n/((n-m-1)/2)!/((n+m+1)/2)!/subs(x
+
+=0,diff(Ps(m,n,q,d),x));# renormalization factor if n-m is odd" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "g:=u*Ps(m,n,q,d);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 32 "for theta from 0 to 90 by 10
+
+ do " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 54 "print(theta,subs(x=evalf(co
+
+s(theta*Pi/180.0)),g)); od;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 51 "Se
+
+cond example: Plotting spheroidal wave functions." }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 28 "plot(Ps(0,2,1.0,7),x=-1..1);" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 28 "plot(Ps(1,5,3.0,8),x=-1..1);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 0 "" 0 "" {TEXT 
+
+-1 0 "" }}}{MARK "7 1 0" 24 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+
+{PAGENUMBERS 0 1 2 33 1 1 }
+

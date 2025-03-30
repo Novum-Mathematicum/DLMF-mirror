@@ -1,0 +1,232 @@
+{VERSION 3 0 "IBM INTEL NT" "3.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 0 
+
+0 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 }
+
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 110 "This Maple worksheet  com
+
+putes the formal asymptotic expansion for the eigenvalues of the Lame \+
+
+equation       " }{XPPEDIT 18 0 "diff(y,`$`(u,2))+(lambda-kappa^2*sn(u
+
+,k)^2)*y = 0;" "6#/,&amp;-%%diffG6$%\"yG-%\"$G6$%\"uG\"\"#\"\"\"*&amp;,&amp;%'lamb
+
+daGF.*&amp;%&amp;kappaG\"\"#-%#snG6$F,%\"kG\"\"#!\"\"F.F(F.F.\"\"!" }{TEXT -1 
+
+0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 75 "Written by Hans Volkmer, A
+
+pril 27, 2001, send comments to volkmer@uwm.edu ." }}}{EXCHG {PARA 0 "
+
+" 0 "" {TEXT -1 167 "The computations are based on formulas by Mueller
+
+, Asymptotic Expansion of Ellipsoidal Wave Functions and their Charact
+
+eristic Numbers, Math. Nachr. 31 (1965), 89-101." }}}{EXCHG {PARA 0 "
+
+" 0 "" {TEXT -1 34 "The following notations are used: " }}}{EXCHG 
+
+{PARA 0 "" 0 "" {TEXT -1 70 "R : we want to determine the asymptotic e
+
+xpansion up to and including " }{XPPEDIT 18 0 "h^(-2*R+1);" "6#)%\"hG,
+
+&amp;*&amp;\"\"#\"\"\"%\"RGF(!\"\"\"\"\"F(" }{TEXT -1 36 " . We take R=3 but R
+
+ can be changed." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "f(q,qq) =( " 
+
+}{XPPEDIT 18 0 "q,qq;" "6$%\"qG%#qqG" }{TEXT -1 16 "), see page 96 ." 
+
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 9 "P[r,t] = " }{XPPEDIT 18 0 "P[r](
+
+t);" "6#-&amp;%\"PG6#%\"rG6#%\"tG" }{TEXT -1 34 ", these are functions of \+
+
+q, k and " }{XPPEDIT 18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 2 " ." }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "M[r] = " }{XPPEDIT 18 0 "M[r];" "6#
+
+&amp;%\"MG6#%\"rG" }{TEXT -1 35 " , these are functions of q, k and " }
+
+{XPPEDIT 18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 15 ", see page 98 ." }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "N[r,j] = coefficient of " }
+
+{XPPEDIT 18 0 "Delta^j;" "6#)%&amp;DeltaG%\"jG" }{TEXT -1 4 " in " }
+
+{XPPEDIT 18 0 "M[r];" "6#&amp;%\"MG6#%\"rG" }{TEXT -1 35 " , these are fun
+
+ctions of q  and k." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "g = 1/(2^6
+
+ " }{XPPEDIT 18 0 "kappa;" "6#%&amp;kappaG" }{TEXT -1 1 ")" }}}{EXCHG 
+
+{PARA 0 "" 0 "" {XPPEDIT 18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 24 " = L
+
+[0] + L[1]  g+ L[2] " }{XPPEDIT 18 0 "g^2;" "6#*$%\"gG\"\"#" }{TEXT 
+
+-1 29 "+... asymptotic expansion of " }{XPPEDIT 18 0 "Delta;" "6#%∇
+
+taG" }{TEXT -1 8 ", where " }{XPPEDIT 18 0 "lambda = q*kappa+Delta/8;
+
+" "6#/%'lambdaG,&amp;*&amp;%\"qG\"\"\"%&amp;kappaGF(F(*&amp;%&amp;DeltaGF(\"\")!\"\"F(" }
+
+{TEXT -1 52 " , see page 93. The L[r] are functions of q and k . " }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 101 "Usage:  press enter until you rea
+
+ch the end of the worksheet where the polynomials L[r] are listed . " 
+
+}}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 29 "restart;readlib(powmod):R
+
+:=3;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "f:=proc(q,qq)" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "local n;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 12 "n:=(qq-q)/4;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 33 "if
+
+ n=-1 then (q-1)*(q-3)*(1-k^2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "
+
+elif n=0 then 2*((q^2+1)*(1+k^2)+Delta);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 49 "elif n=1 then (q+1)*(q+3)*(1-k^2)-16*k^2/(1-k^2);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 50 "else (-1)^n*4*k*((1+k)^n/(1-k)^n-(1
+
+-k)^n/(1+k)^n);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 23 "P:=array(0..R,-R..2*R);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 54 "makeP:=proc() # find P[r,t] for r=0..R and t=-r..2*R-r" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 25 "global P,R;local r,s,t,u;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 10 "P[0,0]:=1;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+36 "for t from 1 to 2*R do P[0,t]:=0 od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 34 "for r from 1 to R do P[r,0]:=0 od;" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 60 "for r from 1 to R do for t from -r to 2*R-r do if \+
+
+t&lt;&gt;0 then " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "u:=0;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 58 "for s from -r+1 to t+1 do u:=u+f(q+4*s,q+4*t)*P[
+
+r-1,s] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 "P[r,t]:=simplify(u/t)
+
+ ;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 9 "fi;od;od;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "ma
+
+keP():" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "M:=array(0..2*R);
+
+ " }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "makeM:=proc()" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "global P,M,R;local r,t,s;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 24 "M[1]:=2*(q^2+1)*(1+k^2);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 20 "for r from 1 to R do" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 57 "for t from
+
+ 1 to r do s:=s+t*P[r,t]*subs(q=-q,P[r,-t]) od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 40 "M[2*r]:=(-1)^r*simplify(s-subs(q=-q,s));" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 3 "od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "for
+
+ r from 1 to R-1 do" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "s:=0;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 89 "for t from 1 to r do s:=s+t*P[r,t]*
+
+subs(q=-q,P[r+1,-t])-t*P[r,-t]*subs(q=-q,P[r+1,t]) od;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 43 "s:=s+(r+1)*P[r,r+1]*subs(q=-q,P[r+1,-r-1]);" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 33 "M[2*r+1]:=(-1)^(r+1)*simplify(s):
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 9 "make
+
+M(): " }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "N:=array(0..2*R,0.
+
+.2*R); " }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 50 "makeN:=proc() # N is the same as M but as an array" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "global M,N;local r,n;" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 74 "for r from 2 to 2*R do for n from 0 to r-2 d
+
+o N[r,n]:=coeff(M[r],Delta,n):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 6 "od
+
+ od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 8 "makeN():" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 18 "L:=array(0..2*R); " }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+14 "makeL:=proc() " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 35 "global N,L;lo
+
+cal delta,del,r,n,j,s;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "delta:=ar
+
+ray(0..2*R);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 26 "L[0]:=-1/2*M[1];del
+
+:=L[0];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 "for r from 2 to 2*R do \+
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for j from 0 to r-2 do delta[j]
+
+:=powmod(del,j,g^(r-j-1),g) od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "
+
+s:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 85 "for j from 2 to r do for n
+
+ from 0 to j-2 do s:=s+N[j,n]*coeff(delta[n],g,r-j); od;od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 23 "L[r-1]:=simplify(-s/2);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 24 "del:=del+L[r-1]*g^(r-1);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 3 "od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "makeL():" }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 66 "conv:=proc(p,n) # make conversion of polynom
+
+ials to form in paper " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "local j,w
+
+,pp;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 6 "pp:=p;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 103 "for j from 0 to (n+2)/2 do w[j]:=simplify(subs(k=0,p
+
+p));pp:=simplify((pp-w[j]*(1+k^2)^(n-2*j))/k^2);od;" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 53 "sum(w[jj]*(k^(2*jj))*(1+k^2)^(n-2*jj),jj=0..(n+2)/
+
+2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "" 0 
+
+"" {TEXT -1 50 "Example: Compare with results in paper, page 100. " }}
+
+}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "L[0]/8;" }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 16 "conv(-L[1]/8,2);" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 18 "conv(-L[2]/2^5,3);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 18 "conv(-L[3]/2^7,4);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 99 "conv(-L[4]/2^11,5); # we have agreement with paper ex
+
+cept for one term in L[4] (the one with 19944)" }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 19 "conv(-L[5]/2^13,6);" }}}{EXCHG {PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 0 "" }}}}{MARK "36" 0 }{VIEWOPTS 1 1 0 1 1 1803 }
+

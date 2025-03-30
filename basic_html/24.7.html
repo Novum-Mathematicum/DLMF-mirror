@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/24.7";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="24.html#PT2" rel="up" title="Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.html" rel="up up" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="index.html" rel="start" title=""/>
+<link href="24.6.html" rel="prev" title="§24.6 Explicit Formulas ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.8.html" rel="next" title="§24.8 Series Expansions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.1.html" rel="section" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.2.html" rel="section" title="§24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.3.html" rel="section" title="§24.3 Graphs ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.4.html" rel="section" title="§24.4 Basic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.5.html" rel="section" title="§24.5 Recurrence Relations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.6.html" rel="section" title="§24.6 Explicit Formulas ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.8.html" rel="section" title="§24.8 Series Expansions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.9.html" rel="section" title="§24.9 Inequalities ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.10.html" rel="section" title="§24.10 Arithmetic Properties ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.11.html" rel="section" title="§24.11 Asymptotic Approximations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.12.html" rel="section" title="§24.12 Zeros ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.13.html" rel="section" title="§24.13 Integrals ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.14.html" rel="section" title="§24.14 Sums ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.15.html" rel="section" title="§24.15 Related Sequences of Numbers ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.16.html" rel="section" title="§24.16 Generalizations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.17.html" rel="section" title="§24.17 Mathematical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.18.html" rel="section" title="§24.18 Physical Applications ‣ Applications ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.19.html" rel="section" title="§24.19 Methods of Computation ‣ Computation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.20.html" rel="section" title="§24.20 Tables ‣ Computation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="24.21.html" rel="section" title="§24.21 Software ‣ Computation ‣ Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Bernoulli numbers, Bernoulli polynomials, Euler numbers, Euler polynomials, integral representation, integral representations" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="24.7.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="24.7.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="24.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24 </span>Bernoulli and Euler Polynomials</span></a><a class="ltx_ref" href="24.html#PT2" rel="up" title="In Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="24.6.html" rel="prev" title="In Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.6 </span>Explicit Formulas</span></a><a class="ltx_ref" href="24.8.html" rel="next" title="In Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.8 </span>Series Expansions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§24.7 </span>Integral Representations</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="24.7.html" title="">http://dlmf.nist.gov/24.7</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="24.7.html#i"><span class="ltx_tag ltx_tag_subsection">§24.7(i) </span>Bernoulli and Euler Numbers</a></li>
+<li class="ltx_tocentry"><a href="24.7.html#ii"><span class="ltx_tag ltx_tag_subsection">§24.7(ii) </span>Bernoulli and Euler Polynomials</a></li>
+<li class="ltx_tocentry"><a href="24.7.html#iii"><span class="ltx_tag ltx_tag_subsection">§24.7(iii) </span>Compendia</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§24.7(i) </span>Bernoulli and Euler Numbers</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20numbers">Bernoulli numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%20numbers">Euler numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representation">integral representation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, pp. 38, 39, and 42)</cite>. For
+(<a class="ltx_ref" href="24.7.html#E5" title="(24.7.5) ‣ §24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.7.5</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Ramanujan (<a class="ltx_ref" href="bib/R.html#bib1923" title="Some properties of Bernoulli’s numbers (J. Indian Math. Soc. 3 (1911), 219–234.)">1927</a>, p. 7)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.i" title="">http://dlmf.nist.gov/24.7.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">The identities in this subsection hold for <math altimg="m37.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=1,2,\dotsc" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.
+(<a class="ltx_ref" href="24.7.html#E6" title="(24.7.6) ‣ §24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.7.6</span></a>) also holds for <math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="55px" alttext="n=0" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E1">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="23px" altimg-valign="-5px" altimg-width="42px" alttext="\displaystyle B_{2n}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="62px" altimg-valign="-21px" altimg-width="786px" alttext="\displaystyle=(-1)^{n+1}\frac{4n}{1-2^{1-2n}}\int_{0}^{\infty}\frac{t^{2n-1}}{%
+e^{2\pi t}+1}\,\mathrm{d}t=(-1)^{n+1}\frac{2n}{1-2^{1-2n}}\int_{0}^{\infty}t^{%
+2n-1}e^{-\pi t}\operatorname{sech}\left(\pi t\right)\,\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mtable align="baseline 1" columnalign="left" columnspacing="0.1em" displaystyle="true"><mtr><mtd class="ltx_align_left"><mi></mi></mtd><mtd class="ltx_align_left"><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mrow><mn>1</mn><mo>−</mo><msup><mn>2</mn><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"></mtd><mtd class="ltx_align_left"><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mrow><mn>1</mn><mo>−</mo><msup><mn>2</mn><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="4.28.html#E6" title="(4.28.6) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="56px" alttext="\operatorname{sech}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic secant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E1" title="">http://dlmf.nist.gov/24.7.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E2">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="23px" altimg-valign="-5px" altimg-width="42px" alttext="\displaystyle B_{2n}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="62px" altimg-valign="-21px" altimg-width="648px" alttext="\displaystyle=(-1)^{n+1}4n\int_{0}^{\infty}\frac{t^{2n-1}}{e^{2\pi t}-1}\,%
+\mathrm{d}t=(-1)^{n+1}2n\int_{0}^{\infty}t^{2n-1}e^{-\pi t}\operatorname{csch}%
+\left(\pi t\right)\,\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mn>4</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mstyle><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.28#E5" title="hyperbolic cosecant function">csch</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="4.28.html#E5" title="(4.28.5) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="56px" alttext="\operatorname{csch}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E5" title="hyperbolic cosecant function">csch</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosecant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E2" title="">http://dlmf.nist.gov/24.7.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E3">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="23px" altimg-valign="-5px" altimg-width="42px" alttext="\displaystyle B_{2n}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="61px" altimg-valign="-21px" altimg-width="392px" alttext="\displaystyle=(-1)^{n+1}\frac{\pi}{1-2^{1-2n}}\int_{0}^{\infty}t^{2n}{%
+\operatorname{sech}}^{2}\left(\pi t\right)\,\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mn>1</mn><mo>−</mo><msup><mn>2</mn><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E6" title="(4.28.6) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="56px" alttext="\operatorname{sech}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic secant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E3" title="">http://dlmf.nist.gov/24.7.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E4">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="23px" altimg-valign="-5px" altimg-width="42px" alttext="\displaystyle B_{2n}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="61px" altimg-valign="-21px" altimg-width="312px" alttext="\displaystyle=(-1)^{n+1}\pi\int_{0}^{\infty}t^{2n}{\operatorname{csch}}^{2}%
+\left(\pi t\right)\,\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.28#E5" title="hyperbolic cosecant function">csch</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E5" title="(4.28.5) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="56px" alttext="\operatorname{csch}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E5" title="hyperbolic cosecant function">csch</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosecant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E4" title="">http://dlmf.nist.gov/24.7.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="23px" altimg-valign="-5px" altimg-width="42px" alttext="\displaystyle B_{2n}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="61px" altimg-valign="-21px" altimg-width="447px" alttext="\displaystyle=(-1)^{n}\frac{2n(2n-1)}{\pi}\*\int_{0}^{\infty}t^{2n-2}\ln\left(%
+1-e^{-2\pi t}\right)\,\mathrm{d}t." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.1#t1.r1" title="integer">n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>2</mn></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="B_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#i" title="Bernoulli numbers">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Bernoulli numbers</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m26.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E5" title="">http://dlmf.nist.gov/24.7.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="23px" altimg-valign="-5px" altimg-width="42px" alttext="\displaystyle E_{2n}" class="ltx_Math" display="inline"><msub><mi href="./24.2#ii" title="Euler numbers">E</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="61px" altimg-valign="-21px" altimg-width="324px" alttext="\displaystyle=(-1)^{n}2^{2n+1}\int_{0}^{\infty}t^{2n}\operatorname{sech}\left(%
+\pi t\right)\,\mathrm{d}t." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.1#t1.r1" title="integer">n</mi></msup><mo>⁢</mo><msup><mn>2</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#ii" title="§24.2(ii) Euler Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m21.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="E_{\NVar{n}}" class="ltx_Math" display="inline"><msub><mi href="./24.2#ii" title="Euler numbers">E</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub></math>: Euler numbers</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E6" title="(4.28.6) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="56px" alttext="\operatorname{sech}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E6" title="hyperbolic secant function">sech</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic secant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="24.7.html#i.p1" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E6" title="">http://dlmf.nist.gov/24.7.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#i.info" title="§24.7(i) Bernoulli and Euler Numbers ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(i)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§24.7(ii) </span>Bernoulli and Euler Polynomials</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Bernoulli%20polynomials">Bernoulli polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Euler%20polynomials">Euler polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib751" title="Higher Transcendental Functions. Vol. I">1953a</a>, pp. 38 and 43)</cite>. For (<a class="ltx_ref" href="24.7.html#E11" title="(24.7.11) ‣ Mellin–Barnes Integral ‣ §24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">24.7.11</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Paris and Kaminski (<a class="ltx_ref" href="bib/P.html#bib1845" title="Asymptotics and Mellin-Barnes Integrals">2001</a>, p. 173)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.ii" title="">http://dlmf.nist.gov/24.7.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">The following four equations hold for <math altimg="m17.png" altimg-height="19px" altimg-valign="-3px" altimg-width="107px" alttext="0&lt;\Re x&lt;1" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx2">
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="40px" altimg-valign="-7px" altimg-width="90px" alttext="\displaystyle B_{2n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#i" title="Bernoulli polynomials">B</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="57px" altimg-valign="-21px" altimg-width="454px" alttext="\displaystyle=(-1)^{n+1}2n\*\int_{0}^{\infty}\frac{\cos\left(2\pi x\right)-e^{%
+-2\pi t}}{\cosh\left(2\pi t\right)-\cos\left(2\pi x\right)}t^{2n-1}\,\mathrm{d%
+}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></msup></mrow><mrow><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m36.png" altimg-height="21px" altimg-valign="-6px" altimg-width="108px" alttext="n=1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="B_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#i" title="Bernoulli polynomials">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: Bernoulli polynomials</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="4.28.html#E2" title="(4.28.2) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="58px" alttext="\cosh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E7" title="">http://dlmf.nist.gov/24.7.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E8">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="40px" altimg-valign="-7px" altimg-width="111px" alttext="\displaystyle B_{2n+1}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#i" title="Bernoulli polynomials">B</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="56px" altimg-valign="-21px" altimg-width="484px" alttext="\displaystyle=(-1)^{n+1}(2n+1)\*\int_{0}^{\infty}\frac{\sin\left(2\pi x\right)%
+}{\cosh\left(2\pi t\right)-\cos\left(2\pi x\right)}t^{2n}\,\mathrm{d}t." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="B_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#i" title="Bernoulli polynomials">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: Bernoulli polynomials</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E2" title="(4.28.2) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="58px" alttext="\cosh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E8" title="">http://dlmf.nist.gov/24.7.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E9">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="40px" altimg-valign="-7px" altimg-width="90px" alttext="\displaystyle E_{2n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#ii" title="Euler polynomials">E</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="56px" altimg-valign="-21px" altimg-width="395px" alttext="\displaystyle=(-1)^{n}4\int_{0}^{\infty}\frac{\sin\left(\pi x\right)\cosh\left%
+(\pi t\right)}{\cosh\left(2\pi t\right)-\cos\left(2\pi x\right)}t^{2n}\,%
+\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.1#t1.r1" title="integer">n</mi></msup><mo>⁢</mo><mn>4</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#ii" title="§24.2(ii) Euler Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="E_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#ii" title="Euler polynomials">E</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: Euler polynomials</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E2" title="(4.28.2) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="58px" alttext="\cosh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E9" title="">http://dlmf.nist.gov/24.7.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E10">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="40px" altimg-valign="-7px" altimg-width="111px" alttext="\displaystyle E_{2n+1}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#ii" title="Euler polynomials">E</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="56px" altimg-valign="-21px" altimg-width="441px" alttext="\displaystyle=(-1)^{n+1}4\*\int_{0}^{\infty}\frac{\cos\left(\pi x\right)\sinh%
+\left(\pi t\right)}{\cosh\left(2\pi t\right)-\cos\left(2\pi x\right)}t^{2n+1}%
+\,\mathrm{d}t." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./24.1#t1.r1" title="integer">n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mn>4</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.28#E1" title="hyperbolic sine function">sinh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi href="./24.1#t1.r2" title="real or complex">t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./24.1#t1.r1" title="integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#ii" title="§24.2(ii) Euler Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="E_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#ii" title="Euler polynomials">E</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: Euler polynomials</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E2" title="(4.28.2) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="58px" alttext="\cosh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosine function</a>,
+<a class="ltx_ref" href="4.28.html#E1" title="(4.28.1) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="18px" altimg-valign="-2px" altimg-width="55px" alttext="\sinh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E1" title="hyperbolic sine function">sinh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic sine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E10" title="">http://dlmf.nist.gov/24.7.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Mellin–Barnes Integral</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">24.7.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="102px" altimg-valign="-23px" altimg-width="419px" alttext="B_{n}\left(x\right)=\frac{1}{2\pi i}\int_{-c-i\infty}^{-c+i\infty}(x+t)^{n}%
+\left(\frac{\pi}{\sin\left(\pi t\right)}\right)^{2}\,\mathrm{d}t," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./24.2#i" title="Bernoulli polynomials">B</mi><mi href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" rspace="0em" title="integral">∫</mo><mrow><mrow><mo>−</mo><mi>c</mi></mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mrow><mrow><mo>−</mo><mi>c</mi></mrow><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">∞</mi></mrow></mrow></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./24.1#t1.r2" title="real or complex">x</mi><mo>+</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./24.1#t1.r1" title="integer">n</mi></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./24.1#t1.r2" title="real or complex">t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m18.png" altimg-height="18px" altimg-valign="-3px" altimg-width="89px" alttext="0&lt;c&lt;1" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>c</mi><mo>&lt;</mo><mn>1</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="24.2.html#i" title="§24.2(i) Bernoulli Numbers and Polynomials ‣ §24.2 Definitions and Generating Functions ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="B_{\NVar{n}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./24.2#i" title="Bernoulli polynomials">B</mi><mi class="ltx_nvar" href="./24.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./24.1#t1.r2" title="real or complex">x</mi><mo>)</mo></mrow></mrow></math>: Bernoulli polynomials</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="24.1.html#t1.r1" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./24.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">t</mi></math>:  real or complex</a> and
+<a class="ltx_ref" href="24.1.html#t1.r2" title="§24.1 Special Notation ‣ Notation ‣ Chapter 24 Bernoulli and Euler Polynomials"><math altimg="m40.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./24.1#t1.r2" title="real or complex">x</mi></math>:  real or complex</a>
+</dd>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a></dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.E11" title="">http://dlmf.nist.gov/24.7.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/24.7.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/24.7.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/24.7.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#Px1.info" title="Mellin–Barnes Integral ‣ §24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#ii.info" title="§24.7(ii) Bernoulli and Euler Polynomials ‣ §24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7(ii)</span></a>,
+<a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§24.7(iii) </span>Compendia</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/24.7.iii" title="">http://dlmf.nist.gov/24.7.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="24.7.html#info" title="§24.7 Integral Representations ‣ Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">§24.7</span></a> and
+<a class="ltx_ref" href="24.html#info" title="Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_tag">Ch.24</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">For further integral representations see
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1902" title="Integrals and Series: Elementary Functions, Vol. 1">1986a</a>, §§2.3–2.6)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Gradshteyn and Ryzhik (<a class="ltx_ref" href="bib/G.html#bib972" title="Table of integrals, series, and products">2015</a>, Chapters 3 and 4)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="24.6.html" rel="prev" title="In Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.6 </span>Explicit Formulas</span></a><a class="ltx_ref" href="24.8.html" rel="next" title="In Properties ‣ Chapter 24 Bernoulli and Euler Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">24.8 </span>Series Expansions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

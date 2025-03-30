@@ -1,0 +1,691 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT 256 68 "                         \+
+
+               The Lame functions Ec and Es" }}}{EXCHG {PARA 0 "" 0 "
+
+" {TEXT -1 113 "                        A Maple worksheet written by H
+
+ans Volkmer, February 9, 2001, updated February 10, 2002. ." }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 83 "                                  \+
+
+                 send comments to volkmer@uwm.edu" }}}{EXCHG {PARA 0 "
+
+" 0 "" {TEXT -1 75 "The Maple programs Ec and Es compute the simply-pe
+
+riodic Lame functions Ec(" }{XPPEDIT 18 0 "z,k^2;" "6$%\"zG*$%\"kG\"\"
+
+#" }{TEXT -1 9 ") and Es(" }{XPPEDIT 18 0 "z,k^2;" "6$%\"zG*$%\"kG\"\"
+
+#" }{TEXT -1 16 "). The output is" }}{PARA 0 "" 0 "" {TEXT -1 108 "a t
+
+rigonometric polynomial in am z which approximates Ec and  Es, respect
+
+ively. This output can then be used" }}{PARA 0 "" 0 "" {TEXT -1 117 "t
+
+o evaluate Ec and Es for specific z's or to plot. There are two approx
+
+imations in each case one with and one without" }}{PARA 0 "" 0 "" 
+
+{TEXT -1 108 "the factor dn, see Chapter LA.6. The approximation with \+
+
+the factor dn is given by the programs dEc and dEs. " }}}{EXCHG {PARA 
+
+0 "" 0 "" {TEXT -1 57 "The functions Ec and Es are normalized as in Ch
+
+apter LA.." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 128 "Note:  Jacobian el
+
+liptic functions are incorrectly implemented in Maple 6.00 so avoid th
+
+is version when running this worksheet. " }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "restart;with(linalg):" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 39 "Digits:=10; # select required precison " }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 53 "matrix18:=proc(nu,k2,d) # Erdelyi e
+
+t al, page 65 (18)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 51 "for r from 0 to d-1 do A[r+1,r+1]:=4*r^2*(2-k2) \+
+
+od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "if d&gt;1 then A[1,2]:=(nu-1)*(
+
+nu+2)*k2 fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 1 to d-2
+
+ do A[r+1,r+2]:=0.5*(nu-2*r-1)*(nu+2*r+2)*k2 od; " }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 65 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r+2)*(nu
+
++2*r-1)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+67 "eigen18:=proc(nu,k2,d,q) # q-th normalized eigenvector for matrix1
+
+8" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "local c,s,i,t,A,K;" }}{PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 21 "A:=matrix18(nu,k2,d);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 45 "K:=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; Re(b[1])));" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 73 "c:=K[q][3][1]; # we have c[1]=A_0, c[2]=A_2 etc \+
+
+but without normalization" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "s:=0.5
+
+*c[1]^2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "for i from 2 to d do s:
+
+=s+c[i]^2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "s:=1/sqrt(s); # no
+
+rmalization factor" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 12 "t:=0.5*c[1];
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 34 "for i from 2 to d do t:=t+c[i] \+
+
+od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 49 "if t&lt;0 then s:=-s fi; # corr
+
+ect sign if necessary" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "for i from
+
+ 1 to d do c[i]:=s*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "c;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 24 "matrix19:=proc(nu,k2,d) " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=m
+
+atrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 51 "for r from 0 to d-
+
+1 do A[r+1,r+1]:=4*r^2*(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+36 "if d&gt;1 then A[1,2]:=nu*(nu+1)*k2 fi;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 66 "for r from 1 to d-2 do A[r+1,r+2]:=0.5*(nu-2*r)*(nu+2
+
+*r+1)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for r from 1 to d-
+
+1 do A[r+1,r]:=0.5*(nu-2*r+1)*(nu+2*r)*k2 od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "eigen19:=proc(nu,k2,d,q) " }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "local c,s1,s2,s,i,t,A,K;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 21 "A:=matrix19(nu,k2,d);" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 45 "K:=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; Re(b[1])));" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "c:=K[q][3][1];" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 15 "s1:=0.5*c[1]^2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+38 "for i from 2 to d do s1:=s1+c[i]^2 od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 7 "s2:=0; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "for i fr
+
+om 1 to d-1 do s2:=s2+c[i]*c[i+1] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 40 "s:=(1-0.5*k2)*s1-0.5*k2*s2;s:=1/sqrt(s);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 12 "t:=0.5*c[1];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 34 "fo
+
+r i from 2 to d do t:=t+c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 
+
+"if t&lt;0 then s:=-s fi; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "for i fr
+
+om 1 to d do c[i]:=s*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "c;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 44 "matrix20:=proc(nu,k2,d) # EMO page 66 (20)  " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+30 "A[1,1]:=2-k2+0.5*nu*(nu+1)*k2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+55 "for r from 1 to d-1 do A[r+1,r+1]:=(2*r+1)^2*(2-k2) od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do A[r+1,r+2]:=0.5*(n
+
+u-2*r-2)*(nu+2*r+3)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for \+
+
+r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r+1)*(nu+2*r)*k2 od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "en
+
+d;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "eigen20:=proc(nu,k2,d
+
+,q) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "local c,s,i,t,A,K;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "A:=matrix20(nu,k2,d);" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 45 "K:=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; Re(b[1])));" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "c:=K[q][3][1];" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 7 "s:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "for i \+
+
+from 1 to d do s:=s+c[i]^2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "s
+
+:=1/sqrt(s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "t:=0.0;" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 34 "for i from 1 to d do t:=t+c[i] od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 22 "if t&lt;0 then s:=-s fi; " }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 37 "for i from 1 to d do c[i]:=s*c[i] od;" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 2 "c;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "matrix21:=proc(nu,k2,d)
+
+ # EMO page 66 (21)  " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 30 "A[1,1]:=2-k2+0.5*nu*(nu+1)*k2;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 55 "for r from 1 to d-1 do A[r+1,r+1]:=(2*r+1)^2*(
+
+2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do
+
+ A[r+1,r+2]:=0.5*(nu-2*r-1)*(nu+2*r+2)*k2 od; " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 63 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r)*(nu+2*r
+
++1)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "e
+
+igen21:=proc(nu,k2,d,q) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "local c
+
+,s1,s2,s,i,t,A,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "A:=matrix21(nu
+
+,k2,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "K:=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; \+
+
+Re(b[1])));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "c:=K[q][3][1];" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "s1:=0.0;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 38 "for i from 1 to d do s1:=s1+c[i]^2 od;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 16 "s2:=0.5*c[1]^2; " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 45 "for i from 1 to d-1 do s2:=s2+c[i]*c[i+1] od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "s:=(1-0.5*k2)*s1-0.5*k2*s2;s:=1/sqr
+
+t(s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "t:=0.0;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 34 "for i from 1 to d do t:=t+c[i] od;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 22 "if t&lt;0 then s:=-s fi; " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 37 "for i from 1 to d do c[i]:=s*c[i] od;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 2 "c;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }
+
+}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "matrix22:=proc(nu,k2,d) # \+
+
+EMO page 66 (22)  " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 55 "for r from 0 to d-1 do A[r+1,r+1]:=(2*r+2)^2*(2-
+
+k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do A
+
+[r+1,r+2]:=0.5*(nu-2*r-3)*(nu+2*r+4)*k2 od; " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 63 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r)*(nu+2*r
+
++1)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "e
+
+igen22:=proc(nu,k2,d,q) " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "local c
+
+,s,i,t,A,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "A:=matrix22(nu,k2,d)
+
+;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "K:=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; R
+
+e(b[1])));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "c:=K[q][3][1];" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "s:=0.0;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 36 "for i from 1 to d do s:=s+c[i]^2 od;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 13 "s:=1/sqrt(s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+7 "t:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 38 "for i from 1 to d do \+
+
+t:=t+2*i*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "if t&lt;0 then s:
+
+=-s fi; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "for i from 1 to d do c[
+
+i]:=s*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "c;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+44 "matrix23:=proc(nu,k2,d) # EMO page 66 (23)  " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=m
+
+atrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 55 "for r from 0 to d-
+
+1 do A[r+1,r+1]:=(2*r+2)^2*(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 68 "for r from 0 to d-2 do A[r+1,r+2]:=0.5*(nu-2*r-2)*(nu+2*r+3)*k2 \+
+
+od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 65 "for r from 1 to d-1 do A[r+
+
+1,r]:=0.5*(nu-2*r-1)*(nu+2*r+2)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 25 "eigen23:=proc(nu,k2,d,q) " }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 24 "local c,s1,s2,s,i,t,A,K;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "A:=matrix23(nu,k2,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "K:
+
+=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; Re(b[1])));" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 14 "c:=K[q][3][1];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "s
+
+1:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 38 "for i from 1 to d do s1:
+
+=s1+c[i]^2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 9 "s2:=0.0; " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "for i from 1 to d-1 do s2:=s2+c[i]*
+
+c[i+1] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "s:=(1-0.5*k2)*s1-0.5*
+
+k2*s2;s:=1/sqrt(s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "t:=0.0;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 38 "for i from 1 to d do t:=t+2*i*c[i] \+
+
+od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "if t&lt;0 then s:=-s fi; " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "for i from 1 to d do c[i]:=s*c[i] o
+
+d;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "c;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "mat
+
+rix24:=proc(nu,k2,d) # EMO page 66 (24)  " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=m
+
+atrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 30 "A[1,1]:=2-k2-0.5*n
+
+u*(nu+1)*k2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 55 "for r from 1 to d-1
+
+ do A[r+1,r+1]:=(2*r+1)^2*(2-k2) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 68 "for r from 0 to d-2 do A[r+1,r+2]:=0.5*(nu-2*r-2)*(nu+2*r+3)*k2 \+
+
+od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for r from 1 to d-1 do A[r+
+
+1,r]:=0.5*(nu-2*r+1)*(nu+2*r)*k2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 25 "eigen24:=proc(nu,k2,d,q) " }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 18 "local c,s,i,t,A,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 21 "A:=matrix24(nu,k2,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "K:
+
+=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "K:=sort(K,(a
+
+,b)-&gt;evalb(Re(a[1]) &lt; Re(b[1])));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+14 "c:=K[q][3][1];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "s:=0.0;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "for i from 1 to d do s:=s+c[i]^2 od
+
+;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "s:=1/sqrt(s);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 7 "t:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 42 "for
+
+ i from 1 to d do t:=t+(2*i-1)*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 22 "if t&lt;0 then s:=-s fi; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "f
+
+or i from 1 to d do c[i]:=s*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 2 "c;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 44 "matrix25:=proc(nu,k2,d) # EMO page 66 (25)  \+
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,r;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 30 "A[1,1]:=2-k2-0.5*nu*(nu+1)*k2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 55 "for r from 1 to d-1 do A[r+1,r+1]:=(2*r+1)^2*(2-k2) od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from 0 to d-2 do A[r+1,r+2]:=
+
+0.5*(nu-2*r-1)*(nu+2*r+2)*k2 od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+63 "for r from 1 to d-1 do A[r+1,r]:=0.5*(nu-2*r)*(nu+2*r+1)*k2 od;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "eigen25:=proc(
+
+nu,k2,d,q)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "local c,s1,s2,s,i,t,A
+
+,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "A:=matrix25(nu,k2,d);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 45 "K:=sort(K,(a,b)-&gt;evalb(Re(a[1]) &lt; Re(b[1])));
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "c:=K[q][3][1];" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 8 "s1:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 38 "fo
+
+r i from 1 to d do s1:=s1+c[i]^2 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 16 "s2:=0.5*c[1]^2; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 45 "for i fro
+
+m 1 to d-1 do s2:=s2-c[i]*c[i+1] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 40 "s:=(1-0.5*k2)*s1+0.5*k2*s2;s:=1/sqrt(s);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 7 "t:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 42 "for i fr
+
+om 1 to d do t:=t+(2*i-1)*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+22 "if t&lt;0 then s:=-s fi; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "for i
+
+ from 1 to d do c[i]:=s*c[i] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "
+
+c;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 64 "normintegralEc:=proc(m,nu,k2,d) # integral from \+
+
+0 to K over Ec^2" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "local s,u,v,q,j
+
+;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "if type(m,even) then " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 9 "q:=m/2+1;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 22 "u:=eigen18(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 22 "v:=eigen19(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "s
+
+:=0.5*u[1]*v[1];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 39 "for j from 2 to
+
+ d do s:=s+u[j]*v[j] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "else" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "q:=(m-1)/2+1;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 22 "u:=eigen20(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 22 "v:=eigen21(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "s:
+
+=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 39 "for j from 1 to d do s:=s+
+
+u[j]*v[j] od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 14 "evalf(Pi/4*s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 64 "normintegral
+
+Es:=proc(m,nu,k2,d) # integral from 0 to K over Es^2" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 16 "local s,u,v,q,j;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 21 "if type(m,even) then " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 7 "q:=
+
+m/2;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "u:=eigen22(nu,k2,d,q);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "v:=eigen23(nu,k2,d,q);" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 7 "s:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 39 
+
+"for j from 1 to d do s:=s+u[j]*v[j] od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "else" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "q:=(m-1)/2+
+
+1;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "u:=eigen24(nu,k2,d,q);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "v:=eigen25(nu,k2,d,q);" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 7 "s:=0.0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 39 
+
+"for j from 1 to d do s:=s+u[j]*v[j] od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "evalf(Pi/4*s
+
+);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 67 "Ec:=proc(m,nu,k2,d) # function Ec_nu^m(z,k^2) fr
+
+om d by d submatrix" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "local f,k,i,
+
+c,q;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 20 "if type(m,even) then" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 31 "q:=m/2+1;c:=eigen18(nu,k2,d,q);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "f:=0.5*c[1];k:=sqrt(k2);" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 70 "for i from 2 to d do f:=f+c[i]*cos((2*i-2
+
+)*(0.5*Pi-JacobiAM(z,k))) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "els
+
+e" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 35 "q:=(m-1)/2+1;c:=eigen20(nu,k2,
+
+d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=0.0;k:=sqrt(k2);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 70 "for i from 1 to d do f:=f+c[i]*cos(
+
+(2*i-1)*(0.5*Pi-JacobiAM(z,k))) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "f;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 76 "dEc
+
+:=proc(m,nu,k2,d) # function Ec_nu^m(z,k^2) from another d by d submat
+
+rix" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "local f,k,i,c,q;" }}{PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 20 "if type(m,even) then" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 31 "q:=m/2+1;c:=eigen19(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 24 "f:=0.5*c[1];k:=sqrt(k2);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 70 "for i from 2 to d do f:=f+c[i]*cos((2*i-2)*(0.5*Pi-Ja
+
+cobiAM(z,k))) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=JacobiDN(z,
+
+k)*f;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 35 "q:=(m-1)/2+1;c:=eigen21(nu,k2,d,q);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 19 "f:=0.0;k:=sqrt(k2);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 70 "for i from 1 to d do f:=f+c[i]*cos((2*i-1)*(0.5*Pi-Ja
+
+cobiAM(z,k))) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=JacobiDN(z,
+
+k)*f;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 2 "f;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 67 "Es:=proc(m,nu,k2,d) # functi
+
+on Es_nu^m(z,k^2) from d by d submatrix" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 16 "local f,k,i,c,q;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 20 "if type
+
+(m,even) then" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 29 "q:=m/2;c:=eigen22(
+
+nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=0.0;k:=sqrt(k2);
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 66 "for i from 1 to d do f:=f+c[i]*
+
+sin(2*i*(0.5*Pi-JacobiAM(z,k))) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+4 "else" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 35 "q:=(m-1)/2+1;c:=eigen24(
+
+nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=0.0;k:=sqrt(k2);
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 70 "for i from 1 to d do f:=f+c[i]*
+
+sin((2*i-1)*(0.5*Pi-JacobiAM(z,k))) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "f;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "d
+
+Es:=proc(m,nu,k2,d) # function Es_nu^m(z,k^2) from d by d submatrix" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "local f,k,i,c,q;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 20 "if type(m,even) then" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 29 "q:=m/2;c:=eigen23(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 19 "f:=0.0;k:=sqrt(k2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 66 "for i from 1 to d do f:=f+c[i]*sin(2*i*(0.5*Pi-JacobiAM(z,k))) o
+
+d;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=JacobiDN(z,k)*f;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 35 
+
+"q:=(m-1)/2+1;c:=eigen25(nu,k2,d,q);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 19 "f:=0.0;k:=sqrt(k2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 70 "for i \+
+
+from 1 to d do f:=f+c[i]*sin((2*i-1)*(0.5*Pi-JacobiAM(z,k))) od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "f:=JacobiDN(z,k)*f;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "f;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "" 0 "" 
+
+{TEXT -1 71 "Example 1: Compare Ec with dEc (they should be approximat
+
+ely the same)." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 26 "m:=2;nu:=
+
+2;k:=0.7;k2:=k^2;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "K:=Ell
+
+ipticK(k);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "u:=Ec(m,nu,k2
+
+,7);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "v:=dEc(m,nu,k2,7); \+
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "plot([u,v],z=0..K);" }}
+
+}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "evalf(subs(z=K,u));" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 32 "evalf(subs(z=K,v)); # looks \+
+
+good" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "int(u^2,z=0..K);" }
+
+}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 93 "normintegralEc(m,nu,k2,7);
+
+ # test normintegralEc, should agree with integral in previous line" }
+
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 70 "Example 2: Compare Es with dEs (
+
+they should be approximately the same)" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 26 "m:=1;nu:=2;k:=0.7;k2:=k^2;" }}}{EXCHG {PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 17 "u:=Es(m,nu,k2,7);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 19 "v:=dEs(m,nu,k2,7); " }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 19 "plot([u,v],z=0..K);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "evalf(subs(z=K/2,u));" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 34 "evalf(subs(z=K/2,v)); # looks good" }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 16 "int(u^2,z=0..K);" }}}{EXCHG {PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 26 "normintegralEs(m,nu,k2,7);" }}}{EXCHG {PARA 0 "
+
+" 0 "" {TEXT -1 32 "Example 3: Plot some Ec and Es. " }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 12 "with(plots):" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 23 "nu:=1.5;k:=0.7;k2:=k^2;" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 16 "K:=EllipticK(k);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 49 "Ec0:=plot(Ec(0,nu,k2,5),z=-2*K..2*K,color=black):" }}
+
+}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 47 "Ec1:=plot(Ec(1,nu,k2,5),z=-
+
+2*K..2*K,color=red):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 48 "Ec2
+
+:=plot(Ec(2,nu,k2,6),z=-2*K..2*K,color=blue):" }}}{EXCHG {PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 94 "display(Ec0,Ec1,Ec2,title=\"Ec for m = 0,1,2 (bl
+
+ack, red, blue), k = 0.7, nu = 1.5, -2K<z<2k\");" "="" 0="" {para="" }}}{exchg="">
+
+ " 0 "" {MPLTEXT 1 0 61 "Es1:=plot(Es(1,nu,k2,5),z=-2*K+0.001..2*K-0.0
+
+01,color=black):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 59 "Es2:=pl
+
+ot(Es(2,nu,k2,5),z=-2*K+0.001..2*K-0.001,color=red):" }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 60 "Es3:=plot(Es(3,nu,k2,6),z=-2*K+0.001..2*K
+
+-0.001,color=blue):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 86 "disp
+
+lay(Es1,Es2,Es3,title=\"Es for m = 1,2,3 (black,red, blue),k=0.7,nu=1.
+
+5,-2K<z<2k\");" "="" ""="" "."="" "6#*$%\"kg\"\"#="" "example="" "k^2;"="" -1="" 0="" 1="" 18="" 46="" 4:="" a="" and="" as="" ec,="" es="" function="" of="" plot="" z="" {para="" {text="" }{text="" }{xppedit="" }}}{exchg=""> " 0 "" {MPLTEXT 1 0 15 "nu:=1.5
+
+;k:='k';" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 35 "f:=(x,k)-&gt;subs(
+
+z=x,Ec(0,nu,k*k,2));" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 66 "plo
+
+t3d(f,-5..5,0..1,axes=boxed,orientation=[120,45],grid=[40,40]);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "24 10 0" 4 }
+
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
+
+</z<2k\");"></z<2k\");">

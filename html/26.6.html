@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/26.6";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="26.html#PT2" rel="up" title="Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.html" rel="up up" title="Chapter 26 Combinatorial Analysis"/>
+<link href="index.html" rel="start" title=""/>
+<link href="26.5.html" rel="prev" title="§26.5 Lattice Paths: Catalan Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.7.html" rel="next" title="§26.7 Set Partitions: Bell Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.1.html" rel="section" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.2.html" rel="section" title="§26.2 Basic Definitions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.3.html" rel="section" title="§26.3 Lattice Paths: Binomial Coefficients ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.4.html" rel="section" title="§26.4 Lattice Paths: Multinomial Coefficients and Set Partitions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.5.html" rel="section" title="§26.5 Lattice Paths: Catalan Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.7.html" rel="section" title="§26.7 Set Partitions: Bell Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.8.html" rel="section" title="§26.8 Set Partitions: Stirling Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.9.html" rel="section" title="§26.9 Integer Partitions: Restricted Number and Part Size ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.10.html" rel="section" title="§26.10 Integer Partitions: Other Restrictions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.11.html" rel="section" title="§26.11 Integer Partitions: Compositions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.12.html" rel="section" title="§26.12 Plane Partitions ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.13.html" rel="section" title="§26.13 Permutations: Cycle Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.14.html" rel="section" title="§26.14 Permutations: Order Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.15.html" rel="section" title="§26.15 Permutations: Matrix Notation ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.16.html" rel="section" title="§26.16 Multiset Permutations ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.17.html" rel="section" title="§26.17 The Twelvefold Way ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.18.html" rel="section" title="§26.18 Counting Techniques ‣ Properties ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.19.html" rel="section" title="§26.19 Mathematical Applications ‣ Applications ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.20.html" rel="section" title="§26.20 Physical Applications ‣ Applications ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.21.html" rel="section" title="§26.21 Tables ‣ Computation ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="26.22.html" rel="section" title="§26.22 Software ‣ Computation ‣ Chapter 26 Combinatorial Analysis"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Catalan numbers, Delannoy numbers, Motzkin numbers, Narayana numbers, Schröder numbers, definition, generating function, generating functions, identities, identity, lattice paths, recurrence relation, relation to lattice paths, table" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="26.6.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="26.6.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="26.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26 </span>Combinatorial Analysis</span></a><a class="ltx_ref" href="26.html#PT2" rel="up" title="In Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="26.5.html" rel="prev" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.5 </span>Lattice Paths: Catalan Numbers</span></a><a class="ltx_ref" href="26.7.html" rel="next" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.7 </span>Set Partitions: Bell Numbers</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§26.6 </span>Other Lattice Path Numbers</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.10.I2.ix4" title="In Other Changes ‣ Version 1.0.10 (August 7, 2015) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.10) for  Section <span class="ltx_text ltx_ref_tag">26.6</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="26.6.html" title="">http://dlmf.nist.gov/26.6</a></dd>
+<dt>Errata (effective with 1.0.10):</dt>
+<dd>
+The spelling of the name Delannoy was corrected in several places in
+this section. Previously it was mispelled as Dellanoy.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="26.6.html#i"><span class="ltx_tag ltx_tag_subsection">§26.6(i) </span>Definitions</a></li>
+<li class="ltx_tocentry"><a href="26.6.html#ii"><span class="ltx_tag ltx_tag_subsection">§26.6(ii) </span>Generating Functions</a></li>
+<li class="ltx_tocentry"><a href="26.6.html#iii"><span class="ltx_tag ltx_tag_subsection">§26.6(iii) </span>Recurrence Relations</a></li>
+<li class="ltx_tocentry"><a href="26.6.html#iv"><span class="ltx_tag ltx_tag_subsection">§26.6(iv) </span>Identities</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§26.6(i) </span>Definitions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Comtet (<a class="ltx_ref" href="bib/C.html#bib561" title="Advanced Combinatorics: The Art of Finite and Infinite Expansions">1974</a>, pp. 80–81)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Stanley (<a class="ltx_ref" href="bib/S.html#bib2158" title="Enumerative Combinatorics. Vol. 2">1999</a>, pp. 237–238, 241)</cite>. (<a class="ltx_ref" href="26.6.html#E4" title="(26.6.4) ‣ Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.4</span></a>) is
+a consequence of André’s reflection principle; see
+<cite class="ltx_cite ltx_citemacro_citet">Comtet (<a class="ltx_ref" href="bib/C.html#bib561" title="Advanced Combinatorics: The Art of Finite and Infinite Expansions">1974</a>, pp. 22–23)</cite>. Tables <a class="ltx_ref" href="26.6.html#T1" title="Table 26.6.1 ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.1</span></a>–<a class="ltx_ref" href="26.6.html#T4" title="Table 26.6.4 ‣ Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.4</span></a>
+were computed by the author.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.i" title="">http://dlmf.nist.gov/26.6.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Delannoy Number <math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Delannoy%20numbers">Delannoy numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definition">definition</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relation%20to%20lattice%20paths">relation to lattice paths</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of paths from <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> to <math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="(m,n)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> that are composed of
+directed line segments of the form <math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, <math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, or <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="68px" altimg-valign="-29px" altimg-width="488px" alttext="D(m,n)=\sum_{k=0}^{n}\genfrac{(}{)}{0.0pt}{}{n}{k}\genfrac{(}{)}{0.0pt}{}{m+n-%
+k}{n}=\sum_{k=0}^{n}2^{k}\genfrac{(}{)}{0.0pt}{}{m}{k}\genfrac{(}{)}{0.0pt}{}{%
+n}{k}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>+</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><msup><mn>2</mn><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Delannoy number (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m57.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E1" title="">http://dlmf.nist.gov/26.6.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px1.info" title="Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">See Table <a class="ltx_ref" href="26.6.html#T1" title="Table 26.6.1 ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.1</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T1">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 26.6.1: </span>Delannoy numbers <math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T1.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T1.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_r ltx_border_tt" rowspan="2"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" colspan="11"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">0</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">1</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">2</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">3</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">4</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">5</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">6</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">7</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">8</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">9</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">10</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T1.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">0</th>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">1</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">3</td>
+<td class="ltx_td ltx_align_right">5</td>
+<td class="ltx_td ltx_align_right">7</td>
+<td class="ltx_td ltx_align_right">9</td>
+<td class="ltx_td ltx_align_right">11</td>
+<td class="ltx_td ltx_align_right">13</td>
+<td class="ltx_td ltx_align_right">15</td>
+<td class="ltx_td ltx_align_right">17</td>
+<td class="ltx_td ltx_align_right">19</td>
+<td class="ltx_td ltx_align_right">21</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">2</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">5</td>
+<td class="ltx_td ltx_align_right">13</td>
+<td class="ltx_td ltx_align_right">25</td>
+<td class="ltx_td ltx_align_right">41</td>
+<td class="ltx_td ltx_align_right">61</td>
+<td class="ltx_td ltx_align_right">85</td>
+<td class="ltx_td ltx_align_right">113</td>
+<td class="ltx_td ltx_align_right">145</td>
+<td class="ltx_td ltx_align_right">181</td>
+<td class="ltx_td ltx_align_right">221</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r6">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">3</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">7</td>
+<td class="ltx_td ltx_align_right">25</td>
+<td class="ltx_td ltx_align_right">63</td>
+<td class="ltx_td ltx_align_right">129</td>
+<td class="ltx_td ltx_align_right">231</td>
+<td class="ltx_td ltx_align_right">377</td>
+<td class="ltx_td ltx_align_right">575</td>
+<td class="ltx_td ltx_align_right">833</td>
+<td class="ltx_td ltx_align_right">1159</td>
+<td class="ltx_td ltx_align_right">1561</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r7">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_T ltx_border_r">4</th>
+<td class="ltx_td ltx_align_right ltx_border_T">1</td>
+<td class="ltx_td ltx_align_right ltx_border_T">9</td>
+<td class="ltx_td ltx_align_right ltx_border_T">41</td>
+<td class="ltx_td ltx_align_right ltx_border_T">129</td>
+<td class="ltx_td ltx_align_right ltx_border_T">321</td>
+<td class="ltx_td ltx_align_right ltx_border_T">681</td>
+<td class="ltx_td ltx_align_right ltx_border_T">1289</td>
+<td class="ltx_td ltx_align_right ltx_border_T">2241</td>
+<td class="ltx_td ltx_align_right ltx_border_T">3649</td>
+<td class="ltx_td ltx_align_right ltx_border_T">5641</td>
+<td class="ltx_td ltx_align_right ltx_border_T">8361</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r8">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">5</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">11</td>
+<td class="ltx_td ltx_align_right">61</td>
+<td class="ltx_td ltx_align_right">231</td>
+<td class="ltx_td ltx_align_right">681</td>
+<td class="ltx_td ltx_align_right">1683</td>
+<td class="ltx_td ltx_align_right">3653</td>
+<td class="ltx_td ltx_align_right">7183</td>
+<td class="ltx_td ltx_align_right">13073</td>
+<td class="ltx_td ltx_align_right">22363</td>
+<td class="ltx_td ltx_align_right">36365</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r9">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">6</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">13</td>
+<td class="ltx_td ltx_align_right">85</td>
+<td class="ltx_td ltx_align_right">377</td>
+<td class="ltx_td ltx_align_right">1289</td>
+<td class="ltx_td ltx_align_right">3653</td>
+<td class="ltx_td ltx_align_right">8989</td>
+<td class="ltx_td ltx_align_right">19825</td>
+<td class="ltx_td ltx_align_right">40081</td>
+<td class="ltx_td ltx_align_right">75517</td>
+<td class="ltx_td ltx_align_right">1 34245</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r10">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_T ltx_border_r">7</th>
+<td class="ltx_td ltx_align_right ltx_border_T">1</td>
+<td class="ltx_td ltx_align_right ltx_border_T">15</td>
+<td class="ltx_td ltx_align_right ltx_border_T">113</td>
+<td class="ltx_td ltx_align_right ltx_border_T">575</td>
+<td class="ltx_td ltx_align_right ltx_border_T">2241</td>
+<td class="ltx_td ltx_align_right ltx_border_T">7183</td>
+<td class="ltx_td ltx_align_right ltx_border_T">19825</td>
+<td class="ltx_td ltx_align_right ltx_border_T">48639</td>
+<td class="ltx_td ltx_align_right ltx_border_T">1 08545</td>
+<td class="ltx_td ltx_align_right ltx_border_T">2 24143</td>
+<td class="ltx_td ltx_align_right ltx_border_T">4 33905</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r11">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">8</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">17</td>
+<td class="ltx_td ltx_align_right">145</td>
+<td class="ltx_td ltx_align_right">833</td>
+<td class="ltx_td ltx_align_right">3649</td>
+<td class="ltx_td ltx_align_right">13073</td>
+<td class="ltx_td ltx_align_right">40081</td>
+<td class="ltx_td ltx_align_right">1 08545</td>
+<td class="ltx_td ltx_align_right">2 65729</td>
+<td class="ltx_td ltx_align_right">5 98417</td>
+<td class="ltx_td ltx_align_right">12 56465</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r12">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">9</th>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">19</td>
+<td class="ltx_td ltx_align_right">181</td>
+<td class="ltx_td ltx_align_right">1159</td>
+<td class="ltx_td ltx_align_right">5641</td>
+<td class="ltx_td ltx_align_right">22363</td>
+<td class="ltx_td ltx_align_right">75517</td>
+<td class="ltx_td ltx_align_right">2 24143</td>
+<td class="ltx_td ltx_align_right">5 98417</td>
+<td class="ltx_td ltx_align_right">14 62563</td>
+<td class="ltx_td ltx_align_right">33 17445</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r13">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b ltx_border_r">10</th>
+<td class="ltx_td ltx_align_right ltx_border_b">1</td>
+<td class="ltx_td ltx_align_right ltx_border_b">21</td>
+<td class="ltx_td ltx_align_right ltx_border_b">221</td>
+<td class="ltx_td ltx_align_right ltx_border_b">1561</td>
+<td class="ltx_td ltx_align_right ltx_border_b">8361</td>
+<td class="ltx_td ltx_align_right ltx_border_b">36365</td>
+<td class="ltx_td ltx_align_right ltx_border_b">1 34245</td>
+<td class="ltx_td ltx_align_right ltx_border_b">4 33905</td>
+<td class="ltx_td ltx_align_right ltx_border_b">12 56465</td>
+<td class="ltx_td ltx_align_right ltx_border_b">33 17445</td>
+<td class="ltx_td ltx_align_right ltx_border_b">80 97453</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E1" title="(26.6.1) ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Delannoy number</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Delannoy%20numbers">Delannoy numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=table">table</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="26.6.html#Px1.p1" title="Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.T1" title="">http://dlmf.nist.gov/26.6.T1</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px1.info" title="Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Motzkin Number <math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Motzkin%20numbers">Motzkin numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definition">definition</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relation%20to%20lattice%20paths">relation to lattice paths</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of lattice paths from <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> to <math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="(n,n)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> that stay on or
+above the line <math altimg="m67.png" altimg-height="17px" altimg-valign="-6px" altimg-width="55px" alttext="y=x" class="ltx_Math" display="inline"><mrow><mi>y</mi><mo>=</mo><mi href="./26.1#t1.r1" title="real variable">x</mi></mrow></math> and are composed of directed line segments of the form
+<math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(2,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>2</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, <math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,2)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>2</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, or <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="68px" altimg-valign="-29px" altimg-width="394px" alttext="M(n)=\sum_{k=0}^{n}\frac{(-1)^{k}}{n+2-k}\genfrac{(}{)}{0.0pt}{}{n}{k}\genfrac%
+{(}{)}{0.0pt}{}{2n+2-2k}{n+1-k}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>+</mo><mn>2</mn></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></mfrac><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></mrow><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Motzkin number (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m57.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E2" title="">http://dlmf.nist.gov/26.6.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px2.info" title="Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">See Table <a class="ltx_ref" href="26.6.html#T2" title="Table 26.6.2 ‣ Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.2</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T2">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 26.6.2: </span>Motzkin numbers <math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T2.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T2.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_tt"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T2.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t">0</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">1</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t">4</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">9</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t">8</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">323</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t">12</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">15511</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t">16</th>
+<td class="ltx_td ltx_align_right ltx_border_t">8 53467</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">1</th>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">5</th>
+<td class="ltx_td ltx_align_right ltx_border_r">21</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">9</th>
+<td class="ltx_td ltx_align_right ltx_border_r">835</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">13</th>
+<td class="ltx_td ltx_align_right ltx_border_r">41835</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">17</th>
+<td class="ltx_td ltx_align_right">23 56779</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">2</th>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">6</th>
+<td class="ltx_td ltx_align_right ltx_border_r">51</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">10</th>
+<td class="ltx_td ltx_align_right ltx_border_r">2188</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">14</th>
+<td class="ltx_td ltx_align_right ltx_border_r">1 13634</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row">18</th>
+<td class="ltx_td ltx_align_right">65 36382</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b">3</th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r">4</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b">7</th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r">127</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b">11</th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r">5798</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b">15</th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r">3 10572</td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b">19</th>
+<td class="ltx_td ltx_align_right ltx_border_b">181 99284</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E2" title="(26.6.2) ‣ Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Motzkin number</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Motzkin%20numbers">Motzkin numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=table">table</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="26.6.html#Px2.p1" title="Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.T2" title="">http://dlmf.nist.gov/26.6.T2</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px2.info" title="Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Narayana Number <math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Narayana%20numbers">Narayana numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definition">definition</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relation%20to%20lattice%20paths">relation to lattice paths</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<p class="ltx_p"><math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of lattice paths from <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> to <math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="(n,n)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> that stay on or
+above the line <math altimg="m67.png" altimg-height="17px" altimg-valign="-6px" altimg-width="55px" alttext="y=x" class="ltx_Math" display="inline"><mrow><mi>y</mi><mo>=</mo><mi href="./26.1#t1.r1" title="real variable">x</mi></mrow></math>, are composed of directed line segments of the form
+<math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> or <math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, and for which there are exactly <math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math> occurrences at which a
+segment of the form <math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> is followed by a segment of the form <math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="56px" altimg-valign="-22px" altimg-width="246px" alttext="N(n,k)=\frac{1}{n}\genfrac{(}{)}{0.0pt}{}{n}{k}\genfrac{(}{)}{0.0pt}{}{n}{k-1}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mfrac><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Narayana number (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m57.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E3" title="">http://dlmf.nist.gov/26.6.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px3.info" title="Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">See Table <a class="ltx_ref" href="26.6.html#T3" title="Table 26.6.3 ‣ Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.3</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T3">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 26.6.3: </span>Narayana numbers <math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T3.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T3.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_r ltx_border_tt" rowspan="2"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" colspan="11"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math></th>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">0</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">1</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">2</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">3</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">4</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">5</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">6</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">7</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">8</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">9</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column">10</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T3.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">0</th>
+<td class="ltx_td ltx_align_right ltx_border_t">1</td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+<td class="ltx_td ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">1</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">2</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r6">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">3</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">3</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r7">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_T ltx_border_r">4</th>
+<td class="ltx_td ltx_align_right ltx_border_T">0</td>
+<td class="ltx_td ltx_align_right ltx_border_T">1</td>
+<td class="ltx_td ltx_align_right ltx_border_T">6</td>
+<td class="ltx_td ltx_align_right ltx_border_T">6</td>
+<td class="ltx_td ltx_align_right ltx_border_T">1</td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r8">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">5</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">10</td>
+<td class="ltx_td ltx_align_right">20</td>
+<td class="ltx_td ltx_align_right">10</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r9">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">6</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">15</td>
+<td class="ltx_td ltx_align_right">50</td>
+<td class="ltx_td ltx_align_right">50</td>
+<td class="ltx_td ltx_align_right">15</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r10">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_T ltx_border_r">7</th>
+<td class="ltx_td ltx_align_right ltx_border_T">0</td>
+<td class="ltx_td ltx_align_right ltx_border_T">1</td>
+<td class="ltx_td ltx_align_right ltx_border_T">21</td>
+<td class="ltx_td ltx_align_right ltx_border_T">105</td>
+<td class="ltx_td ltx_align_right ltx_border_T">175</td>
+<td class="ltx_td ltx_align_right ltx_border_T">105</td>
+<td class="ltx_td ltx_align_right ltx_border_T">21</td>
+<td class="ltx_td ltx_align_right ltx_border_T">1</td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+<td class="ltx_td ltx_border_T"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r11">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">8</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">28</td>
+<td class="ltx_td ltx_align_right">196</td>
+<td class="ltx_td ltx_align_right">490</td>
+<td class="ltx_td ltx_align_right">490</td>
+<td class="ltx_td ltx_align_right">196</td>
+<td class="ltx_td ltx_align_right">28</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r12">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_r">9</th>
+<td class="ltx_td ltx_align_right">0</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td ltx_align_right">36</td>
+<td class="ltx_td ltx_align_right">336</td>
+<td class="ltx_td ltx_align_right">1176</td>
+<td class="ltx_td ltx_align_right">1764</td>
+<td class="ltx_td ltx_align_right">1176</td>
+<td class="ltx_td ltx_align_right">336</td>
+<td class="ltx_td ltx_align_right">36</td>
+<td class="ltx_td ltx_align_right">1</td>
+<td class="ltx_td"></td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r13">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b ltx_border_r">10</th>
+<td class="ltx_td ltx_align_right ltx_border_b">0</td>
+<td class="ltx_td ltx_align_right ltx_border_b">1</td>
+<td class="ltx_td ltx_align_right ltx_border_b">45</td>
+<td class="ltx_td ltx_align_right ltx_border_b">540</td>
+<td class="ltx_td ltx_align_right ltx_border_b">2520</td>
+<td class="ltx_td ltx_align_right ltx_border_b">5292</td>
+<td class="ltx_td ltx_align_right ltx_border_b">5292</td>
+<td class="ltx_td ltx_align_right ltx_border_b">2520</td>
+<td class="ltx_td ltx_align_right ltx_border_b">540</td>
+<td class="ltx_td ltx_align_right ltx_border_b">45</td>
+<td class="ltx_td ltx_align_right ltx_border_b">1</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E3" title="(26.6.3) ‣ Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Narayana number</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Narayana%20numbers">Narayana numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=table">table</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="26.6.html#Px3.p1" title="Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.T3" title="">http://dlmf.nist.gov/26.6.T3</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px3.info" title="Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Schröder Number <math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Schr%C3%B6der%20numbers">Schröder numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definition">definition</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relation%20to%20lattice%20paths">relation to lattice paths</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<p class="ltx_p"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of paths from <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> to <math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="(n,n)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> that stay on or above the
+diagonal <math altimg="m67.png" altimg-height="17px" altimg-valign="-6px" altimg-width="55px" alttext="y=x" class="ltx_Math" display="inline"><mrow><mi>y</mi><mo>=</mo><mi href="./26.1#t1.r1" title="real variable">x</mi></mrow></math> and are composed of directed line segments of the form <math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,0)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>,
+<math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(0,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>, or <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(1,1)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>.</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="312px" alttext="r(n)=D(n,n)-D(n+1,n-1)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m62.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>≥</mo><mn>1</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Schröder number (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E1" title="(26.6.1) ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Delannoy number</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E4" title="">http://dlmf.nist.gov/26.6.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px4.info" title="Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">See Table <a class="ltx_ref" href="26.6.html#T4" title="Table 26.6.4 ‣ Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.4</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T4">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 26.6.4: </span>Schröder numbers <math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T4.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T4.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_tt"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_tt"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T4.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t"><math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t"><math altimg="m39.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="4" class="ltx_Math" display="inline"><mn>4</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t"><math altimg="m48.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="90" class="ltx_Math" display="inline"><mn>90</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t"><math altimg="m47.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="8" class="ltx_Math" display="inline"><mn>8</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t"><math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="56px" alttext="41586" class="ltx_Math" display="inline"><mn>41586</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t"><math altimg="m18.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="12" class="ltx_Math" display="inline"><mn>12</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t"><math altimg="m30.png" altimg-height="17px" altimg-valign="-2px" altimg-width="93px" alttext="272\;97738" class="ltx_Math" display="inline"><mn>272 97738</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t"><math altimg="m23.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="16" class="ltx_Math" display="inline"><mn>16</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_t"><math altimg="m32.png" altimg-height="17px" altimg-valign="-2px" altimg-width="130px" alttext="2\;09271\;56706" class="ltx_Math" display="inline"><mn>2 09271 56706</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m33.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="2" class="ltx_Math" display="inline"><mn>2</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m41.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="5" class="ltx_Math" display="inline"><mn>5</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m36.png" altimg-height="17px" altimg-valign="-2px" altimg-width="35px" alttext="394" class="ltx_Math" display="inline"><mn>394</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m49.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="9" class="ltx_Math" display="inline"><mn>9</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m31.png" altimg-height="17px" altimg-valign="-2px" altimg-width="72px" alttext="2\;06098" class="ltx_Math" display="inline"><mn>2 06098</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m19.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="13" class="ltx_Math" display="inline"><mn>13</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m20.png" altimg-height="17px" altimg-valign="-2px" altimg-width="103px" alttext="1420\;78746" class="ltx_Math" display="inline"><mn>1420 78746</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m24.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="17" class="ltx_Math" display="inline"><mn>17</mn></math></th>
+<td class="ltx_td ltx_align_right"><math altimg="m16.png" altimg-height="17px" altimg-valign="-2px" altimg-width="140px" alttext="11\;18180\;26018" class="ltx_Math" display="inline"><mn>11 18180 26018</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m33.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="2" class="ltx_Math" display="inline"><mn>2</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m43.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="6" class="ltx_Math" display="inline"><mn>6</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m43.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="6" class="ltx_Math" display="inline"><mn>6</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m25.png" altimg-height="17px" altimg-valign="-2px" altimg-width="46px" alttext="1806" class="ltx_Math" display="inline"><mn>1806</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m15.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="10" class="ltx_Math" display="inline"><mn>10</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m14.png" altimg-height="17px" altimg-valign="-2px" altimg-width="83px" alttext="10\;37718" class="ltx_Math" display="inline"><mn>10 37718</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m21.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="14" class="ltx_Math" display="inline"><mn>14</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math altimg="m44.png" altimg-height="17px" altimg-valign="-2px" altimg-width="103px" alttext="7453\;87038" class="ltx_Math" display="inline"><mn>7453 87038</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row"><math altimg="m26.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="18" class="ltx_Math" display="inline"><mn>18</mn></math></th>
+<td class="ltx_td ltx_align_right"><math altimg="m42.png" altimg-height="17px" altimg-valign="-2px" altimg-width="140px" alttext="60\;03188\;53926" class="ltx_Math" display="inline"><mn>60 03188 53926</mn></math></td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b"><math altimg="m37.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="3" class="ltx_Math" display="inline"><mn>3</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="22" class="ltx_Math" display="inline"><mn>22</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b"><math altimg="m45.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="7" class="ltx_Math" display="inline"><mn>7</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r"><math altimg="m46.png" altimg-height="17px" altimg-valign="-2px" altimg-width="46px" alttext="8558" class="ltx_Math" display="inline"><mn>8558</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b"><math altimg="m17.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="11" class="ltx_Math" display="inline"><mn>11</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r"><math altimg="m40.png" altimg-height="17px" altimg-valign="-2px" altimg-width="83px" alttext="52\;93446" class="ltx_Math" display="inline"><mn>52 93446</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b"><math altimg="m22.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="15" class="ltx_Math" display="inline"><mn>15</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r"><math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="114px" alttext="39376\;03038" class="ltx_Math" display="inline"><mn>39376 03038</mn></math></td>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b"><math altimg="m27.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="19" class="ltx_Math" display="inline"><mn>19</mn></math></th>
+<td class="ltx_td ltx_align_right ltx_border_b"><math altimg="m34.png" altimg-height="17px" altimg-valign="-2px" altimg-width="151px" alttext="323\;67243\;17174" class="ltx_Math" display="inline"><mn>323 67243 17174</mn></math></td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E4" title="(26.6.4) ‣ Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Schröder number</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Schr%C3%B6der%20numbers">Schröder numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=table">table</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="26.6.html#Px4.p1" title="Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.T4" title="">http://dlmf.nist.gov/26.6.T4</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#Px4.info" title="Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#i.info" title="§26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(i)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§26.6(ii) </span>Generating Functions</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Delannoy%20numbers">Delannoy numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Motzkin%20numbers">Motzkin numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Narayana%20numbers">Narayana numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Schr%C3%B6der%20numbers">Schröder numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=generating%20function">generating function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=generating%20functions">generating functions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Comtet (<a class="ltx_ref" href="bib/C.html#bib561" title="Advanced Combinatorics: The Art of Finite and Infinite Expansions">1974</a>, p. 81)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Stanley (<a class="ltx_ref" href="bib/S.html#bib2158" title="Enumerative Combinatorics. Vol. 2">1999</a>, pp. 238, 241)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.ii" title="">http://dlmf.nist.gov/26.6.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">For sufficiently small <math altimg="m69.png" altimg-height="25px" altimg-valign="-7px" altimg-width="28px" alttext="|x|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi href="./26.6#ii.p1" title="small">x</mi><mo stretchy="false">|</mo></mrow></math> and <math altimg="m70.png" altimg-height="25px" altimg-valign="-7px" altimg-width="27px" alttext="|y|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi href="./26.6#ii.p1" title="small">y</mi><mo stretchy="false">|</mo></mrow></math>,
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="70px" altimg-valign="-31px" altimg-width="360px" alttext="\sum_{m,n=0}^{\infty}D(m,n)x^{m}y^{n}=\frac{1}{1-x-y-xy}," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi></msup><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">y</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msup></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi href="./26.6#ii.p1" title="small">x</mi><mo>−</mo><mi href="./26.6#ii.p1" title="small">y</mi><mo>−</mo><mrow><mi href="./26.6#ii.p1" title="small">x</mi><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">y</mi></mrow></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.6.html#E1" title="(26.6.1) ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Delannoy number</a>,
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">x</mi></math>:  small</a> and
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m68.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">y</mi></math>:  small</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E5" title="">http://dlmf.nist.gov/26.6.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#ii.info" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(ii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="67px" altimg-valign="-28px" altimg-width="298px" alttext="\sum_{n=0}^{\infty}D(n,n)x^{n}=\frac{1}{\sqrt{1-6x+x^{2}}}," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msup></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mn>6</mn><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">x</mi></mrow></mrow><mo>+</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.6.html#E1" title="(26.6.1) ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Delannoy number</a> and
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">x</mi></math>:  small</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E6" title="">http://dlmf.nist.gov/26.6.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#ii.info" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(ii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p3">
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="67px" altimg-valign="-28px" altimg-width="364px" alttext="\sum_{n=0}^{\infty}M(n)x^{n}=\frac{1-x-\sqrt{1-2x-3x^{2}}}{2x^{2}}," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msup></mrow></mrow><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mi href="./26.6#ii.p1" title="small">x</mi><mo>−</mo><msqrt><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">x</mi></mrow><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mn>2</mn></msup></mrow></mrow></msqrt></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.6.html#E2" title="(26.6.2) ‣ Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Motzkin number</a> and
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">x</mi></math>:  small</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="26.6.html#iii.info" title="§26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E7" title="">http://dlmf.nist.gov/26.6.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#ii.info" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(ii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p4">
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="71px" altimg-valign="-32px" altimg-width="542px" alttext="\sum_{n,k=1}^{\infty}N(n,k)x^{n}y^{k}=\frac{1-x-xy-\sqrt{(1-x-xy)^{2}-4x^{2}y}%
+}{2x}," class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">y</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup></mrow></mrow><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mi href="./26.6#ii.p1" title="small">x</mi><mo>−</mo><mrow><mi href="./26.6#ii.p1" title="small">x</mi><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">y</mi></mrow><mo>−</mo><msqrt><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./26.6#ii.p1" title="small">x</mi><mo>−</mo><mrow><mi href="./26.6#ii.p1" title="small">x</mi><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mn>2</mn></msup><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">y</mi></mrow></mrow></msqrt></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">x</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.6.html#E3" title="(26.6.3) ‣ Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Narayana number</a>,
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">x</mi></math>:  small</a> and
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m68.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">y</mi></math>:  small</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E8" title="">http://dlmf.nist.gov/26.6.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#ii.info" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(ii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p5">
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="67px" altimg-valign="-28px" altimg-width="341px" alttext="\sum_{n=0}^{\infty}r(n)x^{n}=\frac{1-x-\sqrt{1-6x+x^{2}}}{2x}." class="ltx_Math" display="block"><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></msup></mrow></mrow><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><mi href="./26.6#ii.p1" title="small">x</mi><mo>−</mo><msqrt><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mn>6</mn><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">x</mi></mrow></mrow><mo>+</mo><msup><mi href="./26.6#ii.p1" title="small">x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.6#ii.p1" title="small">x</mi></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.6.html#E4" title="(26.6.4) ‣ Schröder Number 𝑟(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="43px" alttext="r(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E4" title="Schröder number">r</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Schröder number</a> and
+<a class="ltx_ref" href="26.6.html#ii.p1" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./26.6#ii.p1" title="small">x</mi></math>:  small</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E9" title="">http://dlmf.nist.gov/26.6.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#ii.info" title="§26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(ii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§26.6(iii) </span>Recurrence Relations</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Delannoy%20numbers">Delannoy numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Motzkin%20numbers">Motzkin numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=recurrence%20relation">recurrence relation</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="26.6.html#E10" title="(26.6.10) ‣ §26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.10</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Comtet (<a class="ltx_ref" href="bib/C.html#bib561" title="Advanced Combinatorics: The Art of Finite and Infinite Expansions">1974</a>, p. 81)</cite>.
+(<a class="ltx_ref" href="26.6.html#E11" title="(26.6.11) ‣ §26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.11</span></a>) is a consequence of (<a class="ltx_ref" href="26.6.html#E7" title="(26.6.7) ‣ §26.6(ii) Generating Functions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">26.6.7</span></a>).</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.iii" title="">http://dlmf.nist.gov/26.6.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E10">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m3.png" altimg-height="27px" altimg-valign="-7px" altimg-width="80px" alttext="\displaystyle D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="27px" altimg-valign="-7px" altimg-width="449px" alttext="\displaystyle=D(m,n-1)+D(m-1,n)+D(m-1,n-1)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m59.png" altimg-height="21px" altimg-valign="-6px" altimg-width="82px" alttext="m,n\geq 1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>≥</mo><mn>1</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E1" title="(26.6.1) ‣ Delannoy Number 𝐷(𝑚,𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="D(m,n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E1" title="Delannoy number">D</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">m</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Delannoy number</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="26.6.html#iii.info" title="§26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E10" title="">http://dlmf.nist.gov/26.6.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#iii.info" title="§26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E11">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="58px" alttext="\displaystyle M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="68px" altimg-valign="-29px" altimg-width="357px" alttext="\displaystyle=M(n-1)+\sum_{k=2}^{n}M(k-2)\,M(n-k)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>2</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover></mstyle><mrow><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0.170em">⁢</mo><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m63.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 2" class="ltx_Math" display="inline"><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>≥</mo><mn>2</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E2" title="(26.6.2) ‣ Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Motzkin number</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="26.6.html#iii.info" title="§26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E11" title="">http://dlmf.nist.gov/26.6.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#iii.info" title="§26.6(iii) Recurrence Relations ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iii)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§26.6(iv) </span>Identities</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Catalan%20numbers">Catalan numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Motzkin%20numbers">Motzkin numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Narayana%20numbers">Narayana numbers</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=identities">identities</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=identity">identity</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=lattice%20paths">lattice paths</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Stanley (<a class="ltx_ref" href="bib/S.html#bib2158" title="Enumerative Combinatorics. Vol. 2">1999</a>, pp. 237–238)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.iv" title="">http://dlmf.nist.gov/26.6.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="74px" altimg-valign="-29px" altimg-width="244px" alttext="C\left(n\right)=\sum_{k=1}^{n}N(n,k)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.5#E1" title="Catalan number">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>1</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.5.html#E1" title="(26.5.1) ‣ §26.5(i) Definitions ‣ §26.5 Lattice Paths: Catalan Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="C\left(\NVar{n}\right)" class="ltx_Math" display="inline"><mrow><mi href="./26.5#E1" title="Catalan number">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>)</mo></mrow></mrow></math>: Catalan number</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E3" title="(26.6.3) ‣ Narayana Number 𝑁(𝑛,𝑘) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="N(n,k)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E3" title="Narayana number">N</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>,</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Narayana number</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E12" title="">http://dlmf.nist.gov/26.6.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#iv.info" title="§26.6(iv) Identities ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iv)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iv.p2">
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="95px" altimg-valign="-29px" altimg-width="342px" alttext="M(n)=\sum_{k=0}^{n}(-1)^{k}\genfrac{(}{)}{0.0pt}{}{n}{k}C\left(n+1-k\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mi href="./26.5#E1" title="Catalan number">C</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.5.html#E1" title="(26.5.1) ‣ §26.5(i) Definitions ‣ §26.5 Lattice Paths: Catalan Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="C\left(\NVar{n}\right)" class="ltx_Math" display="inline"><mrow><mi href="./26.5#E1" title="Catalan number">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>)</mo></mrow></mrow></math>: Catalan number</a>,
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m57.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E2" title="(26.6.2) ‣ Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Motzkin number</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E13" title="">http://dlmf.nist.gov/26.6.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#iv.info" title="§26.6(iv) Identities ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iv)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iv.p3">
+<table class="ltx_equation ltx_eqn_table" id="E14">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">26.6.14</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E14.png" altimg-height="77px" altimg-valign="-29px" altimg-width="377px" alttext="C\left(n\right)=\sum_{k=0}^{2n}(-1)^{k}\genfrac{(}{)}{0.0pt}{}{2n}{k}M(2n-k)." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./26.5#E1" title="Catalan number">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></msup><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></mrow><mo>−</mo><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E14.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="26.5.html#E1" title="(26.5.1) ‣ §26.5(i) Definitions ‣ §26.5 Lattice Paths: Catalan Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="C\left(\NVar{n}\right)" class="ltx_Math" display="inline"><mrow><mi href="./26.5#E1" title="Catalan number">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo>)</mo></mrow></mrow></math>: Catalan number</a>,
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m57.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m58.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">k</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="26.1.html#t1.r2" title="§26.1 Special Notation ‣ Notation ‣ Chapter 26 Combinatorial Analysis"><math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="26.6.html#E2" title="(26.6.2) ‣ Motzkin Number 𝑀(𝑛) ‣ §26.6(i) Definitions ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="M(n)" class="ltx_Math" display="inline"><mrow><mi href="./26.6#E2" title="Motzkin number">M</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./26.1#t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  Motzkin number</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/26.6.E14" title="">http://dlmf.nist.gov/26.6.E14</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/26.6.E14.tex">TeX</a>, <a href="http://dlmf.nist.gov/26.6.E14.pmml">pMML</a>, <a href="http://dlmf.nist.gov/26.6.E14.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="26.6.html#iv.info" title="§26.6(iv) Identities ‣ §26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6(iv)</span></a>,
+<a class="ltx_ref" href="26.6.html#info" title="§26.6 Other Lattice Path Numbers ‣ Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">§26.6</span></a> and
+<a class="ltx_ref" href="26.html#info" title="Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_tag">Ch.26</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="26.5.html" rel="prev" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.5 </span>Lattice Paths: Catalan Numbers</span></a><a class="ltx_ref" href="26.7.html" rel="next" title="In Properties ‣ Chapter 26 Combinatorial Analysis"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">26.7 </span>Set Partitions: Bell Numbers</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

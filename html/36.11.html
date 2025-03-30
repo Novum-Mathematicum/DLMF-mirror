@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/36.11";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="36.html#PT2" rel="up" title="Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.html" rel="up up" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="index.html" rel="start" title=""/>
+<link href="36.10.html" rel="prev" title="§36.10 Differential Equations ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.12.html" rel="next" title="§36.12 Uniform Approximation of Integrals ‣ Applications ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.1.html" rel="section" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.2.html" rel="section" title="§36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.3.html" rel="section" title="§36.3 Visualizations of Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.4.html" rel="section" title="§36.4 Bifurcation Sets ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.5.html" rel="section" title="§36.5 Stokes Sets ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.6.html" rel="section" title="§36.6 Scaling Relations ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.7.html" rel="section" title="§36.7 Zeros ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.8.html" rel="section" title="§36.8 Convergent Series Expansions ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.9.html" rel="section" title="§36.9 Integral Identities ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.10.html" rel="section" title="§36.10 Differential Equations ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.12.html" rel="section" title="§36.12 Uniform Approximation of Integrals ‣ Applications ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.13.html" rel="section" title="§36.13 Kelvin’s Ship-Wave Pattern ‣ Applications ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.14.html" rel="section" title="§36.14 Other Physical Applications ‣ Applications ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="36.15.html" rel="section" title="§36.15 Methods of Computation ‣ Computation ‣ Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Pearcey integral, asymptotic approximations, canonical integrals, elliptic umbilic canonical integral, hyperbolic umbilic canonical integral, swallowtail canonical integral" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="36.11.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="36.11.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="36.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">36 </span>Integrals with Coalescing Saddles</span></a><a class="ltx_ref" href="36.html#PT2" rel="up" title="In Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="36.10.html" rel="prev" title="In Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">36.10 </span>Differential Equations</span></a><a class="ltx_ref" href="36.12.html" rel="next" title="In Applications ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">36.12 </span>Uniform Approximation of Integrals</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§36.11 </span>Leading-Order Asymptotics</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Pearcey%20integral">Pearcey integral</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20approximations">asymptotic approximations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=canonical%20integrals">canonical integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=elliptic%20umbilic%20canonical%20integral">elliptic umbilic canonical integral</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=hyperbolic%20umbilic%20canonical%20integral">hyperbolic umbilic canonical integral</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=swallowtail%20canonical%20integral">swallowtail canonical integral</a>
+</dd>
+<dt>Notes:</dt>
+<dd>The formulas in this section are derived by the method of stationary
+phase, applied to the real critical points of the integral
+representations in §<a class="ltx_ref" href="36.2.html" title="§36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">36.2</span></a>. See §<a class="ltx_ref" href="2.3.html#iv" title="§2.3(iv) Method of Stationary Phase ‣ §2.3 Integrals of a Real Variable ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.3(iv)</span></a> and also
+<cite class="ltx_cite ltx_citemacro_citet">Berry and Howls (<a class="ltx_ref" href="bib/B.html#bib258" title="Hyperasymptotics for integrals with saddles">1991</a>)</cite>. For (<a class="ltx_ref" href="36.11.html#E4" title="(36.11.4) ‣ Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">36.11.4</span></a>) the integral is
+exponentially small when <math altimg="m28.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and the dominant contribution is from a
+critical point off the real axis.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="36.15.html#ii.p1" title="§36.15(ii) Asymptotics ‣ §36.15 Methods of Computation ‣ Computation ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.15(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="36.11.html" title="">http://dlmf.nist.gov/36.11</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<p class="ltx_p">With real critical points (<a class="ltx_ref" href="36.4.html#E1" title="(36.4.1) ‣ Critical Points for Cuspoids ‣ §36.4(i) Formulas ‣ §36.4 Bifurcation Sets ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">36.4.1</span></a>) ordered so that</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="28px" altimg-valign="-8px" altimg-width="282px" alttext="t_{1}(\mathbf{x})&lt;t_{2}(\mathbf{x})&lt;\cdots&lt;t_{j_{\max}}(\mathbf{x})," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><msub><mi>j</mi><mi>max</mi></msub></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="36.4.html#Px1.p1" title="Critical Points for Cuspoids ‣ §36.4(i) Formulas ‣ §36.4 Bifurcation Sets ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m27.png" altimg-height="26px" altimg-valign="-8px" altimg-width="49px" alttext="t_{j}(\mathbf{x})" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><mi>j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  solutions</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E1" title="">http://dlmf.nist.gov/36.11.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and far from the bifurcation set, the cuspoid canonical integrals are
+approximated by</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\Psi_{K}\left(\mathbf{x}\right)=\sqrt{2\pi}\sum\limits_{j=1}^{j_{\max}(\mathbf%
+{x})}\exp\left(i\left(\Phi_{K}\left(t_{j}(\mathbf{x});\mathbf{x}\right)+\tfrac%
+{1}{4}\pi(-1)^{j+K+1}\right)\right)\left|\frac{{\partial}^{2}\Phi_{K}\left(t_{%
+j}(\mathbf{x});\mathbf{x}\right)}{{\partial t}^{2}}\right|^{-1/2}(1+o\left(1%
+\right))." class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mi href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>𝐱</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>j</mi><mi>max</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></munderover><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./36.2#E1" mathvariant="normal" title="cuspoid catastrophe of codimension 𝐾">Φ</mi><mi href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><mi>j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>;</mo><mi>𝐱</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>+</mo><mi href="./36.1#t1.r3" title="codimension">K</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>×</mo><msup><mrow><mo>|</mo><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><mrow><msub><mi href="./36.2#E1" mathvariant="normal" title="cuspoid catastrophe of codimension 𝐾">Φ</mi><mi href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><mi>j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>;</mo><mi>𝐱</mi><mo>)</mo></mrow></mrow></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi href="./36.1#t1.r2" title="variable">t</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac><mo>|</mo></mrow><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em">.</mo></mtd></mtr></mtable></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="36.2.html#E4" title="(36.2.4) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="69px" alttext="\Psi_{\NVar{K}}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mi class="ltx_nvar" href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: canonical integral function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="36.2.html#E1" title="(36.2.1) ‣ Normal Forms Associated with Canonical Integrals: Cuspoid Catastrophe with Codimension 𝐾 ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="84px" alttext="\Phi_{\NVar{K}}\left(\NVar{t};\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E1" mathvariant="normal" title="cuspoid catastrophe of codimension 𝐾">Φ</mi><mi class="ltx_nvar" href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./36.1#t1.r2" title="variable">t</mi><mo>;</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: cuspoid catastrophe of codimension <math altimg="m11.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="K" class="ltx_Math" display="inline"><mi href="./36.1#t1.r3" title="codimension">K</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m19.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m24.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="36.1.html#t1.r2" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m26.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./36.1#t1.r2" title="variable">t</mi></math>:  variable</a>,
+<a class="ltx_ref" href="36.1.html#t1.r3" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m11.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="K" class="ltx_Math" display="inline"><mi href="./36.1#t1.r3" title="codimension">K</mi></math>:  codimension</a> and
+<a class="ltx_ref" href="36.4.html#Px1.p1" title="Critical Points for Cuspoids ‣ §36.4(i) Formulas ‣ §36.4 Bifurcation Sets ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m27.png" altimg-height="26px" altimg-valign="-8px" altimg-width="49px" alttext="t_{j}(\mathbf{x})" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.4#Px1.p1" title="solutions">t</mi><mi>j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  solutions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E2" title="">http://dlmf.nist.gov/36.11.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h2 class="ltx_title ltx_title_paragraph">Asymptotics along Symmetry Lines</h2>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="75px" altimg-valign="-28px" altimg-width="777px" alttext="\Psi_{2}\left(0,y\right)=\begin{cases}\sqrt{\ifrac{\pi}{y}}\left(\exp\left(%
+\tfrac{1}{4}i\pi\right)+o\left(1\right)\right),&amp;y\to+\infty,\\
+\sqrt{\ifrac{\pi}{|y|}}\exp\left(-\tfrac{1}{4}i\pi\right)\left(1+i\sqrt{2}\exp%
+\left(-\frac{1}{4}iy^{2}\right)+o\left(1\right)\right),&amp;y\to-\infty.\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><msqrt><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0em" rspace="0em">/</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi></mrow></msqrt><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./36.1#t1.r4" title="real parameter">y</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><msqrt><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mrow><mo stretchy="false">|</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi><mo stretchy="false">|</mo></mrow></mrow></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./36.1#t1.r4" title="real parameter">y</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./36.1#t1.r4" title="real parameter">y</mi><mo stretchy="false">→</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="36.2.html#E4" title="(36.2.4) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="69px" alttext="\Psi_{\NVar{K}}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mi class="ltx_nvar" href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: canonical integral function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a> and
+<a class="ltx_ref" href="36.1.html#t1.r4" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./36.1#t1.r4" title="real parameter">y</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E3" title="">http://dlmf.nist.gov/36.11.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#Px1.info" title="Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a>,
+<a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E4">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="40px" altimg-valign="-7px" altimg-width="119px" alttext="\displaystyle\Psi_{3}\left(x,0,0\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="69px" altimg-valign="-28px" altimg-width="754px" alttext="\displaystyle=\frac{\sqrt{2\pi}}{(5|x|^{3})^{1/8}}\begin{cases}\exp\left(-2%
+\sqrt{2}(\ifrac{x}{5})^{5/4}\right)\left(\cos\left(2\sqrt{2}(\ifrac{x}{5})^{5/%
+4}-\tfrac{1}{8}\pi\right)+o\left(1\right)\right),&amp;x\to+\infty,\\
+\cos\left(4(\ifrac{|x|}{5})^{5/4}-\tfrac{1}{4}\pi\right)+o\left(1\right),&amp;x\to%
+-\infty.\end{cases}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mn>5</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo stretchy="false">|</mo></mrow><mn>3</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>8</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo lspace="0em" rspace="0em">/</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo lspace="0em" rspace="0em">/</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">|</mo><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo stretchy="false">|</mo></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./36.1#t1.r4" title="real parameter">x</mi><mo stretchy="false">→</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="36.2.html#E4" title="(36.2.4) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="69px" alttext="\Psi_{\NVar{K}}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mi class="ltx_nvar" href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: canonical integral function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a> and
+<a class="ltx_ref" href="36.1.html#t1.r4" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./36.1#t1.r4" title="real parameter">x</mi></math>:  real parameter</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E4" title="">http://dlmf.nist.gov/36.11.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#Px1.info" title="Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a>,
+<a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="40px" altimg-valign="-7px" altimg-width="118px" alttext="\displaystyle\Psi_{3}\left(0,y,0\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi><mo>,</mo><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="150px" altimg-valign="-15px" altimg-width="361px" alttext="\displaystyle=\overline{\Psi_{3}(0,-y,0)}=\exp\left(\tfrac{1}{4}i\pi\right)%
+\sqrt{\ifrac{\pi}{y}}\left(1-(i/\sqrt{3})\exp\left(\tfrac{3}{2}i(\ifrac{2y}{5}%
+)^{5/3}\right)+o\left(1\right)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mover accent="true"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>=</mo><mrow><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msqrt><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0em" rspace="0em">/</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi></mrow></msqrt><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>/</mo><msqrt><mn>3</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./36.1#t1.r4" title="real parameter">y</mi></mrow><mo lspace="0em" rspace="0em">/</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m31.png" altimg-height="20px" altimg-valign="-6px" altimg-width="84px" alttext="y\to+\infty" class="ltx_Math" display="inline"><mrow><mi href="./36.1#t1.r4" title="real parameter">y</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="36.2.html#E4" title="(36.2.4) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="69px" alttext="\Psi_{\NVar{K}}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mi class="ltx_nvar" href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: canonical integral function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.9.html#E11" title="(1.9.11) ‣ Complex Conjugate ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="\overline{\NVar{z}}" class="ltx_Math" display="inline"><mover accent="true"><mi class="ltx_nvar" href="./1.1#t1.r2" title="variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></math>: complex conjugate</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a> and
+<a class="ltx_ref" href="36.1.html#t1.r4" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./36.1#t1.r4" title="real parameter">y</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E5" title="">http://dlmf.nist.gov/36.11.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#Px1.info" title="Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a>,
+<a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="40px" altimg-valign="-7px" altimg-width="118px" alttext="\displaystyle\Psi_{3}\left(0,0,z\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi href="./36.1#t1.r4" title="real parameter">z</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="99px" altimg-valign="-43px" altimg-width="685px" alttext="\displaystyle=\frac{\Gamma\left(\tfrac{1}{3}\right)}{|z|^{1/3}\sqrt{3}}+\begin%
+{cases}o\left(1\right),&amp;z\to+\infty,\\
+\dfrac{2\sqrt{\pi}5^{1/4}}{(3|z|)^{3/4}}\left(\cos\left(\dfrac{2}{3}\left(%
+\dfrac{3|z|}{5}\right)^{5/2}-\dfrac{1}{4}\pi\right)+o\left(1\right)\right),&amp;z%
+\to-\infty.\end{cases}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>)</mo></mrow></mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">|</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mfrac></mstyle><mo>+</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><msup><mn>5</mn><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></msup></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">|</mo></mrow></mrow><mn>5</mn></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">→</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="36.2.html#E4" title="(36.2.4) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="69px" alttext="\Psi_{\NVar{K}}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./36.2#E4" mathvariant="normal" title="canonical integral function">Ψ</mi><mi class="ltx_nvar" href="./36.1#t1.r3" title="codimension">K</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: canonical integral function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a> and
+<a class="ltx_ref" href="36.1.html#t1.r4" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./36.1#t1.r4" title="real parameter">z</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E6" title="">http://dlmf.nist.gov/36.11.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#Px1.info" title="Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a>,
+<a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx2">
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="40px" altimg-valign="-7px" altimg-width="134px" alttext="\displaystyle\Psi^{(\mathrm{E})}\left(0,0,z\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./36.2#E5" mathvariant="normal" title="elliptic umbilic canonical integral function">Ψ</mi><mrow><mo href="./36.2#E5" stretchy="false" title="elliptic umbilic canonical integral function">(</mo><mi href="./36.2#E5" mathvariant="normal" title="elliptic umbilic canonical integral function">E</mi><mo href="./36.2#E5" stretchy="false" title="elliptic umbilic canonical integral function">)</mo></mrow></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi href="./36.1#t1.r4" title="real parameter">z</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="147px" altimg-valign="-22px" altimg-width="253px" alttext="\displaystyle=\frac{\pi}{z}\left(i+\sqrt{3}\exp\left(\frac{4}{27}iz^{3}\right)%
++o\left(1\right)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mi href="./36.1#t1.r4" title="real parameter">z</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>+</mo><mrow><msqrt><mn>3</mn></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>27</mn></mfrac></mstyle><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./36.1#t1.r4" title="real parameter">z</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m33.png" altimg-height="18px" altimg-valign="-4px" altimg-width="84px" alttext="z\to\pm\infty" class="ltx_Math" display="inline"><mrow><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="36.2.html#E5" title="(36.2.5) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m14.png" altimg-height="28px" altimg-valign="-7px" altimg-width="78px" alttext="\Psi^{(\mathrm{E})}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./36.2#E5" mathvariant="normal" title="elliptic umbilic canonical integral function">Ψ</mi><mrow><mo href="./36.2#E5" stretchy="false" title="elliptic umbilic canonical integral function">(</mo><mi href="./36.2#E5" mathvariant="normal" title="elliptic umbilic canonical integral function">E</mi><mo href="./36.2#E5" stretchy="false" title="elliptic umbilic canonical integral function">)</mo></mrow></msup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: elliptic umbilic canonical integral function</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a> and
+<a class="ltx_ref" href="36.1.html#t1.r4" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./36.1#t1.r4" title="real parameter">z</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E7" title="">http://dlmf.nist.gov/36.11.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#Px1.info" title="Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a>,
+<a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E8">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">36.11.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="40px" altimg-valign="-7px" altimg-width="135px" alttext="\displaystyle\Psi^{(\mathrm{H})}\left(0,0,z\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./36.2#E5" mathvariant="normal" title="hyperbolic umbilic canonical integral function">Ψ</mi><mrow><mo href="./36.2#E5" stretchy="false" title="hyperbolic umbilic canonical integral function">(</mo><mi href="./36.2#E5" mathvariant="normal" title="hyperbolic umbilic canonical integral function">H</mi><mo href="./36.2#E5" stretchy="false" title="hyperbolic umbilic canonical integral function">)</mo></mrow></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi href="./36.1#t1.r4" title="real parameter">z</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="147px" altimg-valign="-22px" altimg-width="271px" alttext="\displaystyle=\frac{2\pi}{z}\left(1-\frac{i}{\sqrt{3}}\exp\left(\frac{1}{27}iz%
+^{3}\right)+o\left(1\right)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mi href="./36.1#t1.r4" title="real parameter">z</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><msqrt><mn>3</mn></msqrt></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>27</mn></mfrac></mstyle><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./36.1#t1.r4" title="real parameter">z</mi><mn>3</mn></msup></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="5"><span class="ltx_constraint"><math altimg="m33.png" altimg-height="18px" altimg-valign="-4px" altimg-width="84px" alttext="z\to\pm\infty" class="ltx_Math" display="inline"><mrow><mi href="./36.1#t1.r4" title="real parameter">z</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m18.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="36.2.html#E5" title="(36.2.5) ‣ Canonical Integrals ‣ §36.2(i) Definitions ‣ §36.2 Catastrophes and Canonical Integrals ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m15.png" altimg-height="28px" altimg-valign="-7px" altimg-width="79px" alttext="\Psi^{(\mathrm{H})}\left(\NVar{\mathbf{x}}\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./36.2#E5" mathvariant="normal" title="hyperbolic umbilic canonical integral function">Ψ</mi><mrow><mo href="./36.2#E5" stretchy="false" title="hyperbolic umbilic canonical integral function">(</mo><mi href="./36.2#E5" mathvariant="normal" title="hyperbolic umbilic canonical integral function">H</mi><mo href="./36.2#E5" stretchy="false" title="hyperbolic umbilic canonical integral function">)</mo></mrow></msup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">𝐱</mi><mo>)</mo></mrow></mrow></math>: hyperbolic umbilic canonical integral function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="2.1.html#E2" title="(2.1.2) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="o\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E2" title="order less than">o</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order less than</a> and
+<a class="ltx_ref" href="36.1.html#t1.r4" title="§36.1 Special Notation ‣ Notation ‣ Chapter 36 Integrals with Coalescing Saddles"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./36.1#t1.r4" title="real parameter">z</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/36.11.E8" title="">http://dlmf.nist.gov/36.11.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/36.11.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/36.11.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/36.11.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="36.11.html#Px1.info" title="Asymptotics along Symmetry Lines ‣ §36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a>,
+<a class="ltx_ref" href="36.11.html#info" title="§36.11 Leading-Order Asymptotics ‣ Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">§36.11</span></a> and
+<a class="ltx_ref" href="36.html#info" title="Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_tag">Ch.36</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="36.10.html" rel="prev" title="In Properties ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">36.10 </span>Differential Equations</span></a><a class="ltx_ref" href="36.12.html" rel="next" title="In Applications ‣ Chapter 36 Integrals with Coalescing Saddles"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">36.12 </span>Uniform Approximation of Integrals</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

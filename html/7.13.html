@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/7.13";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="7.html#PT2" rel="up" title="Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.html" rel="up up" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="index.html" rel="start" title=""/>
+<link href="7.12.html" rel="prev" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.14.html" rel="next" title="§7.14 Integrals ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.1.html" rel="section" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.2.html" rel="section" title="§7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.3.html" rel="section" title="§7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.4.html" rel="section" title="§7.4 Symmetry ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.5.html" rel="section" title="§7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.6.html" rel="section" title="§7.6 Series Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.7.html" rel="section" title="§7.7 Integral Representations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.8.html" rel="section" title="§7.8 Inequalities ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.9.html" rel="section" title="§7.9 Continued Fractions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.10.html" rel="section" title="§7.10 Derivatives ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.11.html" rel="section" title="§7.11 Relations to Other Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.12.html" rel="section" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.14.html" rel="section" title="§7.14 Integrals ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.15.html" rel="section" title="§7.15 Sums ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.16.html" rel="section" title="§7.16 Generalized Error Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.17.html" rel="section" title="§7.17 Inverse Error Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.18.html" rel="section" title="§7.18 Repeated Integrals of the Complementary Error Function ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.19.html" rel="section" title="§7.19 Voigt Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.20.html" rel="section" title="§7.20 Mathematical Applications ‣ Applications ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.21.html" rel="section" title="§7.21 Physical Applications ‣ Applications ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.22.html" rel="section" title="§7.22 Methods of Computation ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.23.html" rel="section" title="§7.23 Tables ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.24.html" rel="section" title="§7.24 Approximations ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.25.html" rel="section" title="§7.25 Software ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.SB1.html" rel="sidebar" title="Sidebar 7.SB1: Diffraction from a Straightedge ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Fresnel integrals, asymptotic expansions, error functions, tables, zeros" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="7.13.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="7.13.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="7.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Error Functions, Dawson’s and Fresnel Integrals</span></a><a class="ltx_ref" href="7.html#PT2" rel="up" title="In Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="7.12.html" rel="prev" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.12 </span>Asymptotic Expansions</span></a><a class="ltx_ref" href="7.14.html" rel="next" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.14 </span>Integrals</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§7.13 </span>Zeros</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="7.13.html" title="">http://dlmf.nist.gov/7.13</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="7.13.html#i"><span class="ltx_tag ltx_tag_subsection">§7.13(i) </span>Zeros of <math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\operatorname{erf}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E1" title="error function">erf</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math></a></li>
+<li class="ltx_tocentry"><a href="7.13.html#ii"><span class="ltx_tag ltx_tag_subsection">§7.13(ii) </span>Zeros of <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math></a></li>
+<li class="ltx_tocentry"><a href="7.13.html#iii"><span class="ltx_tag ltx_tag_subsection">§7.13(iii) </span>Zeros of the Fresnel Integrals</a></li>
+<li class="ltx_tocentry"><a href="7.13.html#iv"><span class="ltx_tag ltx_tag_subsection">§7.13(iv) </span>Zeros of <math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="\mathcal{F}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" href="./7.2#E6" title="Fresnel integral">ℱ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math></a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.13(i) </span>Zeros of <math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\operatorname{erf}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E1" title="error function">erf</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions">asymptotic expansions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20functions">error functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Fettis<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/F.html#bib789" title="Complex zeros of the error function and of the complementary error function">1973</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="7.3.html#F5" title="In §7.3(ii) Complex Variable ‣ §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.5</span></a>,
+<a class="ltx_ref" href="7.3.F5.mag.html" title="In §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.5</span></a>,
+<a class="ltx_ref" href="7.3.F5.viz.html" title="In §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.5</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.i" title="">http://dlmf.nist.gov/7.13.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p"><math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\operatorname{erf}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E1" title="error function">erf</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math> has a simple zero at <math altimg="m67.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math>, and in the first quadrant of
+<math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math> there is an infinite set of zeros <math altimg="m69.png" altimg-height="22px" altimg-valign="-6px" altimg-width="130px" alttext="z_{n}=x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.13#i.p1" title="zero">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>=</mo><mrow><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></mrow></math>,
+<math altimg="m59.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, arranged in order of increasing absolute value. The other
+zeros of <math altimg="m52.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\operatorname{erf}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E1" title="error function">erf</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math> are <math altimg="m26.png" altimg-height="19px" altimg-valign="-5px" altimg-width="41px" alttext="-z_{n}" class="ltx_Math" display="inline"><mrow><mo>−</mo><msub><mi href="./7.13#i.p1" title="zero">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>, <math altimg="m53.png" altimg-height="20px" altimg-valign="-5px" altimg-width="26px" alttext="\overline{z}_{n}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>, <math altimg="m23.png" altimg-height="20px" altimg-valign="-5px" altimg-width="42px" alttext="-\overline{z}_{n}" class="ltx_Math" display="inline"><mrow><mo>−</mo><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">Table <a class="ltx_ref" href="7.13.html#T1" title="Table 7.13.1 ‣ §7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.13.1</span></a> gives 10D values of the first five <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> and <math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>.
+For graphical illustration see Figure <a class="ltx_ref" href="7.3.html#F5" title="Figure 7.3.5 ‣ §7.3(ii) Complex Variable ‣ §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.3.5</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T1">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 7.13.1: </span>Zeros <math altimg="m64.png" altimg-height="22px" altimg-valign="-6px" altimg-width="81px" alttext="x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></math> of <math altimg="m51.png" altimg-height="18px" altimg-valign="-2px" altimg-width="49px" alttext="\operatorname{erf}z." class="ltx_Math" display="inline"><mrow><mrow><mi href="./7.2#E1" title="error function">erf</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo lspace="0em">.</mo></mrow></math>
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T1.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T1.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T1.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m27.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">1.45061 61632</td>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">1.88094 30002</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="2" class="ltx_Math" display="inline"><mn>2</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.24465 92738</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.61657 51407</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="3" class="ltx_Math" display="inline"><mn>3</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.83974 10469</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.17562 80996</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m30.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="4" class="ltx_Math" display="inline"><mn>4</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.33546 07354</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.64617 43764</td>
+</tr>
+<tr class="ltx_tr" id="T1.t1.r6">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m31.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="5" class="ltx_Math" display="inline"><mn>5</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.76900 55670</td>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">4.06069 72339</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E1" title="(7.2.1) ‣ §7.2(i) Error Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\operatorname{erf}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E1" title="error function">erf</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math>: error function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="7.13.html#i.p1" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  realpart of zero</a> and
+<a class="ltx_ref" href="7.13.html#i.p1" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  imagpart of zero</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20functions">error functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tables">tables</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">Table 7.10</span> (in slightly different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.13.html#i.p2" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.T1" title="">http://dlmf.nist.gov/7.13.T1</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#i.info" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(i)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">As <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="18px" altimg-valign="-5px" altimg-width="30px" alttext="\displaystyle x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m14.png" altimg-height="31px" altimg-valign="-9px" altimg-width="391px" alttext="\displaystyle\sim\lambda-\tfrac{1}{4}\mu\lambda^{-1}+\tfrac{1}{16}(1-\mu+%
+\tfrac{1}{2}\mu^{2})\lambda^{-3}-\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mrow><mrow><mi href="./7.13#E2" title="𝜆">λ</mi><mo>−</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./7.13#E2" title="𝜇">μ</mi><mo>⁢</mo><msup><mi href="./7.13#E2" title="𝜆">λ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>16</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mi href="./7.13#E2" title="𝜇">μ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi href="./7.13#E2" title="𝜇">μ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./7.13#E2" title="𝜆">λ</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>−</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="19px" altimg-valign="-6px" altimg-width="28px" alttext="\displaystyle y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m13.png" altimg-height="31px" altimg-valign="-9px" altimg-width="391px" alttext="\displaystyle\sim\lambda+\tfrac{1}{4}\mu\lambda^{-1}+\tfrac{1}{16}(1-\mu+%
+\tfrac{1}{2}\mu^{2})\lambda^{-3}+\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mi href="./7.13#E2" title="𝜆">λ</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./7.13#E2" title="𝜇">μ</mi><mo>⁢</mo><msup><mi href="./7.13#E2" title="𝜆">λ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>16</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mi href="./7.13#E2" title="𝜇">μ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi href="./7.13#E2" title="𝜇">μ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./7.13#E2" title="𝜆">λ</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m55.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="7.13.html#i.p1" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  realpart of zero</a>,
+<a class="ltx_ref" href="7.13.html#i.p1" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#i.p1" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  imagpart of zero</a>,
+<a class="ltx_ref" href="7.13.html#E2" title="(7.13.2) ‣ §7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m46.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./7.13#E2" title="𝜇">μ</mi></math></a> and
+<a class="ltx_ref" href="7.13.html#E2" title="(7.13.2) ‣ §7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E2" title="𝜆">λ</mi></math></a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">Table 7.10</span> (has two-term approximation)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E1" title="">http://dlmf.nist.gov/7.13.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E1a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E1b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#i.info" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(i)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="20px" altimg-valign="-2px" altimg-width="19px" alttext="\displaystyle\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E2" title="𝜆">λ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="45px" altimg-valign="-14px" altimg-width="135px" alttext="\displaystyle=\sqrt{(n-\tfrac{1}{8})\pi}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="19px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\mu" class="ltx_Math" display="inline"><mi href="./7.13#E2" title="𝜇">μ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="49px" altimg-valign="-15px" altimg-width="141px" alttext="\displaystyle=\ln\left(\lambda\sqrt{2\pi}\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./7.13#E2" title="𝜆">λ</mi><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m46.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./7.13#E2" title="𝜇">μ</mi></math> (locally)</span> and
+<span class="ltx_text"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E2" title="𝜆">λ</mi></math> (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E2" title="">http://dlmf.nist.gov/7.13.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E2a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E2b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#i.info" title="§7.13(i) Zeros of erf𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(i)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.13(ii) </span>Zeros of <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20functions">error functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Fettis<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/F.html#bib789" title="Complex zeros of the error function and of the complementary error function">1973</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Elbert and Laforgia (<a class="ltx_ref" href="bib/E.html#bib2756" title="The zeros of the complementary error function">2008</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="12.11.html#ii.p2" title="§12.11(ii) Asymptotic Expansions of Large Zeros ‣ §12.11 Zeros ‣ Properties ‣ Chapter 12 Parabolic Cylinder Functions"><span class="ltx_text ltx_ref_tag">§12.11(ii)</span></a>,
+<a class="ltx_ref" href="7.13.html#iv.p1" title="§7.13(iv) Zeros of ℱ(𝑧) ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iv)</span></a>,
+<a class="ltx_ref" href="7.3.html#F6" title="In §7.3(ii) Complex Variable ‣ §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.6</span></a>,
+<a class="ltx_ref" href="7.3.F6.mag.html" title="In §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.6</span></a>,
+<a class="ltx_ref" href="7.3.F6.viz.html" title="In §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.6</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  References</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix6.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  Clarifications</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.ii" title="">http://dlmf.nist.gov/7.13.ii</a></dd>
+<dt>Addition (effective with 1.0.5):</dt>
+<dd>
+<cite class="ltx_cite ltx_citemacro_citet">Elbert and Laforgia (<a class="ltx_ref" href="bib/E.html#bib2756" title="The zeros of the complementary error function">2008</a>)</cite> has been added as a reference for this subsection.
+Also, the first sentence was stated more precisely by revising the leading clause.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">In the sector <math altimg="m56.png" altimg-height="29px" altimg-valign="-9px" altimg-width="148px" alttext="\tfrac{1}{2}\pi&lt;\operatorname{ph}z&lt;\tfrac{3}{4}\pi" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>&lt;</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo>&lt;</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>, <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math> has an infinite set of zeros
+<math altimg="m69.png" altimg-height="22px" altimg-valign="-6px" altimg-width="130px" alttext="z_{n}=x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.13#ii" title="zero">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>=</mo><mrow><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></mrow></math>, <math altimg="m59.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, arranged in order of increasing
+absolute value. The other zeros of <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math> are <math altimg="m53.png" altimg-height="20px" altimg-valign="-5px" altimg-width="26px" alttext="\overline{z}_{n}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>. The zeros
+of <math altimg="m62.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="w\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E3" title="Faddeeva (or Faddeyeva) function">w</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> are <math altimg="m58.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="iz_{n}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.13#ii" title="zero">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math> and <math altimg="m57.png" altimg-height="21px" altimg-valign="-5px" altimg-width="33px" alttext="i\overline{z}_{n}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">Table <a class="ltx_ref" href="7.13.html#T2" title="Table 7.13.2 ‣ §7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.13.2</span></a> gives 10D values of the first five <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> and <math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>.
+For graphical illustration see Figure <a class="ltx_ref" href="7.3.html#F6" title="Figure 7.3.6 ‣ §7.3(ii) Complex Variable ‣ §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.3.6</span></a>.</p>
+</div>
+<figure class="ltx_table" id="T2">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 7.13.2: </span>Zeros <math altimg="m64.png" altimg-height="22px" altimg-valign="-6px" altimg-width="81px" alttext="x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></math> of <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="57px" alttext="\operatorname{erfc}z." class="ltx_Math" display="inline"><mrow><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo lspace="0em">.</mo></mrow></math>
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T2.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T2.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T2.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m27.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">
+<math altimg="m18.png" altimg-height="19px" altimg-valign="-4px" altimg-width="88px" alttext="-1.35481" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>1.35481</mn></mrow></math> 01281</td>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">1.99146 68428</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="2" class="ltx_Math" display="inline"><mn>2</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">
+<math altimg="m19.png" altimg-height="19px" altimg-valign="-4px" altimg-width="88px" alttext="-2.17704" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>2.17704</mn></mrow></math> 49061</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.69114 90243</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="3" class="ltx_Math" display="inline"><mn>3</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">
+<math altimg="m20.png" altimg-height="19px" altimg-valign="-4px" altimg-width="88px" alttext="-2.78438" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>2.78438</mn></mrow></math> 76132</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.23533 08684</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m30.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="4" class="ltx_Math" display="inline"><mn>4</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">
+<math altimg="m21.png" altimg-height="19px" altimg-valign="-4px" altimg-width="88px" alttext="-3.28741" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>3.28741</mn></mrow></math> 07894</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.69730 97025</td>
+</tr>
+<tr class="ltx_tr" id="T2.t1.r6">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m31.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="5" class="ltx_Math" display="inline"><mn>5</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">
+<math altimg="m22.png" altimg-height="19px" altimg-valign="-4px" altimg-width="88px" alttext="-3.72594" class="ltx_Math" display="inline"><mrow><mo>−</mo><mn>3.72594</mn></mrow></math> 87194</td>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">4.10610 72847</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E2" title="(7.2.2) ‣ §7.2(i) Error Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m47.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math>: complementary error function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="7.13.html#ii" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  realpart of zero</a> and
+<a class="ltx_ref" href="7.13.html#ii" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  imagpart of zero</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20functions">error functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tables">tables</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.13.html#ii.p2" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.T2" title="">http://dlmf.nist.gov/7.13.T2</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#ii.info" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(ii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">As <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="18px" altimg-valign="-5px" altimg-width="30px" alttext="\displaystyle x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="31px" altimg-valign="-9px" altimg-width="407px" alttext="\displaystyle\sim-\lambda+\tfrac{1}{4}\mu\lambda^{-1}-\tfrac{1}{16}(1-\mu+%
+\tfrac{1}{2}\mu^{2})\lambda^{-3}+\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mrow><mrow><mrow><mo>−</mo><mi href="./7.13#E4" title="𝜆">λ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./7.13#E4" title="𝜇">μ</mi><mo>⁢</mo><msup><mi href="./7.13#E4" title="𝜆">λ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>16</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mi href="./7.13#E4" title="𝜇">μ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi href="./7.13#E4" title="𝜇">μ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./7.13#E4" title="𝜆">λ</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="19px" altimg-valign="-6px" altimg-width="28px" alttext="\displaystyle y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m13.png" altimg-height="31px" altimg-valign="-9px" altimg-width="391px" alttext="\displaystyle\sim\lambda+\tfrac{1}{4}\mu\lambda^{-1}+\tfrac{1}{16}(1-\mu+%
+\tfrac{1}{2}\mu^{2})\lambda^{-3}+\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mi href="./7.13#E4" title="𝜆">λ</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./7.13#E4" title="𝜇">μ</mi><mo>⁢</mo><msup><mi href="./7.13#E4" title="𝜆">λ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>16</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mi href="./7.13#E4" title="𝜇">μ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi href="./7.13#E4" title="𝜇">μ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./7.13#E4" title="𝜆">λ</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m55.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="7.13.html#E4" title="(7.13.4) ‣ §7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E4" title="𝜆">λ</mi></math></a>,
+<a class="ltx_ref" href="7.13.html#ii" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="realpart of zero">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  realpart of zero</a>,
+<a class="ltx_ref" href="7.13.html#ii" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.13#ii" title="imagpart of zero">y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>:  imagpart of zero</a> and
+<a class="ltx_ref" href="7.13.html#E4" title="(7.13.4) ‣ §7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m46.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./7.13#E4" title="𝜇">μ</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E3" title="">http://dlmf.nist.gov/7.13.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E3a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E3b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#ii.info" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(ii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="20px" altimg-valign="-2px" altimg-width="19px" alttext="\displaystyle\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E4" title="𝜆">λ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="45px" altimg-valign="-14px" altimg-width="135px" alttext="\displaystyle=\sqrt{(n-\tfrac{1}{8})\pi}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="19px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\mu" class="ltx_Math" display="inline"><mi href="./7.13#E4" title="𝜇">μ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="49px" altimg-valign="-15px" altimg-width="152px" alttext="\displaystyle=\ln\left(2\lambda\sqrt{2\pi}\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./7.13#E4" title="𝜆">λ</mi><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E4" title="𝜆">λ</mi></math> (locally)</span> and
+<span class="ltx_text"><math altimg="m46.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./7.13#E4" title="𝜇">μ</mi></math> (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E4" title="">http://dlmf.nist.gov/7.13.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E4a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E4b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E4a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E4b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E4a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E4b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#ii.info" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(ii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.13(iii) </span>Zeros of the Fresnel Integrals</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fresnel%20integrals">Fresnel integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions">asymptotic expansions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Kreyszig (<a class="ltx_ref" href="bib/K.html#bib1348" title="On the zeros of the Fresnel integrals">1957</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Fettis and Caslin (<a class="ltx_ref" href="bib/F.html#bib788" title="Table errata; Complex zeros of Fresnel integrals">1973</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.iii" title="">http://dlmf.nist.gov/7.13.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">At <math altimg="m67.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math>, <math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="C\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has a simple zero and <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has a
+triple zero. In the first quadrant of <math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math> <math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="C\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> has an
+infinite set of zeros <math altimg="m69.png" altimg-height="22px" altimg-valign="-6px" altimg-width="130px" alttext="z_{n}=x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>=</mo><mrow><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></mrow></math>, <math altimg="m59.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, arranged in order
+of increasing absolute value. Similarly for <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>. Let <math altimg="m70.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="z_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> be a
+zero of one of the Fresnel integrals. Then <math altimg="m26.png" altimg-height="19px" altimg-valign="-5px" altimg-width="41px" alttext="-z_{n}" class="ltx_Math" display="inline"><mrow><mo>−</mo><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>, <math altimg="m53.png" altimg-height="20px" altimg-valign="-5px" altimg-width="26px" alttext="\overline{z}_{n}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>,
+<math altimg="m23.png" altimg-height="20px" altimg-valign="-5px" altimg-width="42px" alttext="-\overline{z}_{n}" class="ltx_Math" display="inline"><mrow><mo>−</mo><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>, <math altimg="m58.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="iz_{n}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>, <math altimg="m25.png" altimg-height="21px" altimg-valign="-5px" altimg-width="49px" alttext="-iz_{n}" class="ltx_Math" display="inline"><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></math>, <math altimg="m57.png" altimg-height="21px" altimg-valign="-5px" altimg-width="33px" alttext="i\overline{z}_{n}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></math>, <math altimg="m24.png" altimg-height="21px" altimg-valign="-5px" altimg-width="49px" alttext="-i\overline{z}_{n}" class="ltx_Math" display="inline"><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mover accent="true"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></math>
+are also zeros of the same integral.</p>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">Tables <a class="ltx_ref" href="7.13.html#T3" title="Table 7.13.3 ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.13.3</span></a> and <a class="ltx_ref" href="7.13.html#T4" title="Table 7.13.4 ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.13.4</span></a> give 10D values of the first
+five <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> and <math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> of <math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="C\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>, respectively.</p>
+</div>
+<figure class="ltx_table" id="T3">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 7.13.3: </span>Complex zeros <math altimg="m64.png" altimg-height="22px" altimg-valign="-6px" altimg-width="81px" alttext="x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></math> of <math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="C\left(z\right)." class="ltx_Math" display="inline"><mrow><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math>
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T3.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T3.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T3.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m27.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">1.74366 74862</td>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.30573 50636</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="2" class="ltx_Math" display="inline"><mn>2</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.65145 95973</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.25290 39555</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="3" class="ltx_Math" display="inline"><mn>3</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.32035 93363</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.22395 34581</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m30.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="4" class="ltx_Math" display="inline"><mn>4</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.87573 44884</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.20474 74706</td>
+</tr>
+<tr class="ltx_tr" id="T3.t1.r6">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m31.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="5" class="ltx_Math" display="inline"><mn>5</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">4.36106 35170</td>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.19066 97324</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E7" title="(7.2.7) ‣ §7.2(iii) Fresnel Integrals ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m34.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="C\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Fresnel integral</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r1" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fresnel%20integrals">Fresnel integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tables">tables</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">Table 7.11</span> (modification of)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.13.html#iii.p2" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.T3" title="">http://dlmf.nist.gov/7.13.T3</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#iii.info" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="iii.p3">
+<p class="ltx_p">As <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> the <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> and <math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> corresponding to the zeros of
+<math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="C\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> satisfy
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="18px" altimg-valign="-5px" altimg-width="30px" alttext="\displaystyle x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m12.png" altimg-height="50px" altimg-valign="-16px" altimg-width="221px" alttext="\displaystyle\sim\lambda+\frac{\alpha(\alpha\pi-4)}{8\pi\lambda^{3}}+\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mi href="./7.13#E6" title="𝜆">λ</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi href="./7.13#E6" title="𝛼">α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./7.13#E6" title="𝛼">α</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>8</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.13#E6" title="𝜆">λ</mi><mn>3</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex10">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="19px" altimg-valign="-6px" altimg-width="28px" alttext="\displaystyle y_{n}" class="ltx_Math" display="inline"><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m11.png" altimg-height="44px" altimg-valign="-16px" altimg-width="106px" alttext="\displaystyle\sim\frac{\alpha}{2\lambda}+\cdots" class="ltx_Math" display="inline"><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./7.13#E6" title="𝛼">α</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./7.13#E6" title="𝜆">λ</mi></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m55.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r1" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="7.13.html#E6" title="(7.13.6) ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝛼">α</mi></math></a> and
+<a class="ltx_ref" href="7.13.html#E6" title="(7.13.6) ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝜆">λ</mi></math></a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.13.html#iii.p4" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E5" title="">http://dlmf.nist.gov/7.13.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E5a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E5b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#iii.info" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex11">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="20px" altimg-valign="-2px" altimg-width="19px" alttext="\displaystyle\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝜆">λ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="29px" altimg-valign="-6px" altimg-width="110px" alttext="\displaystyle=\sqrt{4n-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msqrt><mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex12">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\alpha" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝛼">α</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="40px" altimg-valign="-7px" altimg-width="158px" alttext="\displaystyle=(2/\pi)\ln\left(\pi\lambda\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>/</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.13#E6" title="𝜆">λ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝛼">α</mi></math> (locally)</span> and
+<span class="ltx_text"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝜆">λ</mi></math> (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r1" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r1" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">Table 7.11</span> (has slightly different form for <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math>; for this correction see
+<cite class="ltx_cite ltx_citemacro_citet">Fettis and Caslin (<a class="ltx_ref" href="bib/F.html#bib788" title="Table errata; Complex zeros of Fresnel integrals">1973</a>)</cite>)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E6" title="">http://dlmf.nist.gov/7.13.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E6a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E6b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#iii.info" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<figure class="ltx_table" id="T4">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 7.13.4: </span>Complex zeros <math altimg="m64.png" altimg-height="22px" altimg-valign="-6px" altimg-width="81px" alttext="x_{n}+iy_{n}" class="ltx_Math" display="inline"><mrow><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></math> of <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>.
+
+</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" id="T4.t1">
+<thead class="ltx_thead">
+<tr class="ltx_tr" id="T4.t1.r1">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_th_row ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_tt" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr" id="T4.t1.r2">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m27.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.00925 70118</td>
+<td class="ltx_td ltx_align_center ltx_border_t" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.28854 78973</td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r3">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m28.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="2" class="ltx_Math" display="inline"><mn>2</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">2.83347 72325</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.24428 52408</td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r4">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m29.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="3" class="ltx_Math" display="inline"><mn>3</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">3.46753 30835</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.21849 26805</td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r5">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m30.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="4" class="ltx_Math" display="inline"><mn>4</mn></math></th>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">4.00257 82433</td>
+<td class="ltx_td ltx_align_center" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.20085 10251</td>
+</tr>
+<tr class="ltx_tr" id="T4.t1.r6">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;"><math altimg="m31.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="5" class="ltx_Math" display="inline"><mn>5</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">4.47418 92952</td>
+<td class="ltx_td ltx_align_center ltx_border_b" style="padding-top:1.5pt;padding-bottom:1.5pt;">0.18768 85891</td>
+</tr>
+</tbody>
+</table>
+<div class="ltx_metadata ltx_info" id="T4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E8" title="(7.2.8) ‣ §7.2(iii) Fresnel Integrals ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Fresnel integral</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r1" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r1" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fresnel%20integrals">Fresnel integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tables">tables</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">Table 7.11</span> (modification of)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.13.html#iii.p2" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.T4" title="">http://dlmf.nist.gov/7.13.T4</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#iii.info" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="iii.p4">
+<p class="ltx_p">As <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> the <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r1" title="real variable">x</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> and <math altimg="m66.png" altimg-height="17px" altimg-valign="-6px" altimg-width="26px" alttext="y_{n}" class="ltx_Math" display="inline"><msub><mi>y</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> corresponding to the zeros of
+<math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> satisfy (<a class="ltx_ref" href="7.13.html#E5" title="(7.13.5) ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.13.5</span></a>) with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex13">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.13.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="20px" altimg-valign="-2px" altimg-width="19px" alttext="\displaystyle\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝜆">λ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="28px" altimg-valign="-6px" altimg-width="74px" alttext="\displaystyle=2\sqrt{n}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msqrt></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex14">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\alpha" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝛼">α</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="40px" altimg-valign="-7px" altimg-width="158px" alttext="\displaystyle=(2/\pi)\ln\left(\pi\lambda\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>/</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.13#E6" title="𝜆">λ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m60.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="7.13.html#E6" title="(7.13.6) ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝛼">α</mi></math></a> and
+<a class="ltx_ref" href="7.13.html#E6" title="(7.13.6) ‣ §7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi href="./7.13#E6" title="𝜆">λ</mi></math></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.E7" title="">http://dlmf.nist.gov/7.13.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.13.E7a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E7b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.13.E7a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E7b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.13.E7a.png">png</a>, <a href="http://dlmf.nist.gov/7.13.E7b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#iii.info" title="§7.13(iii) Zeros of the Fresnel Integrals ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13(iii)</span></a>,
+<a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.13(iv) </span>Zeros of <math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="\mathcal{F}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" href="./7.2#E6" title="Fresnel integral">ℱ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fresnel%20integrals">Fresnel integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions">asymptotic expansions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.13.iv" title="">http://dlmf.nist.gov/7.13.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.13.html#info" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.13</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">In consequence of (<a class="ltx_ref" href="7.5.html#E5" title="(7.5.5) ‣ §7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.5.5</span></a>) and (<a class="ltx_ref" href="7.5.html#E10" title="(7.5.10) ‣ §7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.5.10</span></a>), zeros of
+<math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="\mathcal{F}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" href="./7.2#E6" title="Fresnel integral">ℱ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> are related to zeros of <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math>. Thus if <math altimg="m70.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="z_{n}" class="ltx_Math" display="inline"><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math> is a zero
+of <math altimg="m49.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math> (§<a class="ltx_ref" href="7.13.html#ii" title="§7.13(ii) Zeros of erfc𝑧 ‣ §7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.13(ii)</span></a>), then <math altimg="m17.png" altimg-height="26px" altimg-valign="-7px" altimg-width="125px" alttext="(1+i)z_{n}/\sqrt{\pi}" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow><mo>/</mo><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt></mrow></math> is a zero of
+<math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="\mathcal{F}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" href="./7.2#E6" title="Fresnel integral">ℱ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">For an asymptotic expansion of the zeros of
+<math altimg="m40.png" altimg-height="29px" altimg-valign="-9px" altimg-width="161px" alttext="\int_{0}^{z}\exp\left(\tfrac{1}{2}\pi it^{2}\right)\,\mathrm{d}t" class="ltx_Math" display="inline"><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></msubsup><mrow><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></math>
+(<math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="146px" alttext="=\mathcal{F}\left(0\right)-\mathcal{F}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic" href="./7.2#E6" title="Fresnel integral">ℱ</mi><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mi class="ltx_font_mathcaligraphic" href="./7.2#E6" title="Fresnel integral">ℱ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow></math> <math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="149px" alttext="=C\left(z\right)+iS\left(z\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow></math>) see
+<cite class="ltx_cite ltx_citemacro_citet">Tuẑilin (<a class="ltx_ref" href="bib/T.html#bib2287" title="Theory of the Fresnel integral">1971</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="7.12.html" rel="prev" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.12 </span>Asymptotic Expansions</span></a><a class="ltx_ref" href="7.14.html" rel="next" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.14 </span>Integrals</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

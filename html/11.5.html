@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/11.5";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="11.html#PT2" rel="up" title="Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.html" rel="up up" title="Chapter 11 Struve and Related Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="11.4.html" rel="prev" title="§11.4 Basic Properties ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.6.html" rel="next" title="§11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.1.html" rel="section" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.2.html" rel="section" title="§11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.3.html" rel="section" title="§11.3 Graphics ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.4.html" rel="section" title="§11.4 Basic Properties ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.6.html" rel="section" title="§11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.7.html" rel="section" title="§11.7 Integrals and Sums ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.8.html" rel="section" title="§11.8 Analogs to Kelvin Functions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.9.html" rel="section" title="§11.9 Lommel Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.10.html" rel="section" title="§11.10 Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.11.html" rel="section" title="§11.11 Asymptotic Expansions of Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.12.html" rel="section" title="§11.12 Physical Applications ‣ Applications ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.13.html" rel="section" title="§11.13 Methods of Computation ‣ Computation ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.14.html" rel="section" title="§11.14 Tables ‣ Computation ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.15.html" rel="section" title="§11.15 Approximations ‣ Computation ‣ Chapter 11 Struve and Related Functions"/>
+<link href="11.16.html" rel="section" title="§11.16 Software ‣ Computation ‣ Chapter 11 Struve and Related Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Mellin–Barnes type, Struve functions and modified Struve functions, along real line, compendia, contour integrals, integral representations" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="11.5.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="11.5.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="11.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">11 </span>Struve and Related Functions</span></a><a class="ltx_ref" href="11.html#PT2" rel="up" title="In Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_title">Struve and Modified Struve Functions</span></a><a class="ltx_ref" href="11.4.html" rel="prev" title="In Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">11.4 </span>Basic Properties</span></a><a class="ltx_ref" href="11.6.html" rel="next" title="In Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">11.6 </span>Asymptotic Expansions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§11.5 </span>Integral Representations</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="11.13.html#iii.p1" title="§11.13(iii) Quadrature ‣ §11.13 Methods of Computation ‣ Computation ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="11.5.html" title="">http://dlmf.nist.gov/11.5</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="11.5.html#i"><span class="ltx_tag ltx_tag_subsection">§11.5(i) </span>Integrals Along the Real Line</a></li>
+<li class="ltx_tocentry"><a href="11.5.html#ii"><span class="ltx_tag ltx_tag_subsection">§11.5(ii) </span>Contour Integrals</a></li>
+<li class="ltx_tocentry"><a href="11.5.html#iii"><span class="ltx_tag ltx_tag_subsection">§11.5(iii) </span>Compendia</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§11.5(i) </span>Integrals Along the Real Line</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Struve%20functions%20and%20modified%20Struve%20functions">Struve functions and modified Struve functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=along%20real%20line">along real line</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="11.5.html#E1" title="(11.5.1) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.1</span></a>)–(<a class="ltx_ref" href="11.5.html#E3" title="(11.5.3) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.3</span></a>), (<a class="ltx_ref" href="11.5.html#E6" title="(11.5.6) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.6</span></a>), and
+(<a class="ltx_ref" href="11.5.html#E7" title="(11.5.7) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.7</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Watson (<a class="ltx_ref" href="bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp. 328,331,332)</cite>, together
+with (<a class="ltx_ref" href="11.2.html#E5" title="(11.2.5) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.2.5</span></a>) in the case of (<a class="ltx_ref" href="11.5.html#E2" title="(11.5.2) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.2</span></a>) and
+(<a class="ltx_ref" href="11.5.html#E3" title="(11.5.3) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.3</span></a>), and (<a class="ltx_ref" href="11.2.html#E2" title="(11.2.2) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.2.2</span></a>) in the case of
+(<a class="ltx_ref" href="11.5.html#E6" title="(11.5.6) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.6</span></a>).
+For (<a class="ltx_ref" href="11.5.html#E4" title="(11.5.4) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.4</span></a>) and (<a class="ltx_ref" href="11.5.html#E5" title="(11.5.5) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.5</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Babister (<a class="ltx_ref" href="bib/B.html#bib166" title="Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations">1967</a>, Eq. (3.102))</cite> and collapse the integration path
+onto the interval <math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="[0,1]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mn>0</mn><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="11.13.html#iii.p1" title="§11.13(iii) Quadrature ‣ §11.13 Methods of Computation ‣ Computation ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.i" title="">http://dlmf.nist.gov/11.5.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\mathbf{H}_{\nu}\left(z\right)=\frac{2(\tfrac{1}{2}z)^{\nu}}{\sqrt{\pi}\Gamma%
+\left(\nu+\tfrac{1}{2}\right)}\int_{0}^{1}(1-t^{2})^{\nu-\frac{1}{2}}\sin\left%
+(zt\right)\,\mathrm{d}t=\frac{2(\tfrac{1}{2}z)^{\nu}}{\sqrt{\pi}\Gamma\left(%
+\nu+\tfrac{1}{2}\right)}\int_{0}^{\pi/2}\sin\left(z\cos\theta\right)(\sin%
+\theta)^{2\nu}\,\mathrm{d}\theta," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" columnspacing="0.1em" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><msub><mi href="./11.2#E1" title="Struve function">𝐇</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mtd><mtd class="ltx_align_left"><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msup></mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" rspace="0em" title="integral">∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"></mtd><mtd class="ltx_align_left"><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msup></mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>/</mo><mn>2</mn></mrow></msubsup><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m8.png" altimg-height="29px" altimg-valign="-9px" altimg-width="88px" alttext="\Re\nu&gt;-\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="11.2.html#E1" title="(11.2.1) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="\mathbf{H}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E1" title="Struve function">𝐇</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Struve function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">12.1.6--12.1.7</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.10.html#vii.info" title="§11.10(vii) Special Values ‣ §11.10 Anger–Weber Functions ‣ Related Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.10(vii)</span></a>,
+<a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#ii.p1" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E1" title="">http://dlmf.nist.gov/11.5.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="68px" altimg-valign="-25px" altimg-width="495px" alttext="\mathbf{K}_{\nu}\left(z\right)=\frac{2(\tfrac{1}{2}z)^{\nu}}{\sqrt{\pi}\Gamma%
+\left(\nu+\tfrac{1}{2}\right)}\int_{0}^{\infty}e^{-zt}(1+t^{2})^{\nu-\frac{1}{%
+2}}\,\mathrm{d}t," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./11.2#E5" title="Struve function">𝐊</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msup></mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m4.png" altimg-height="19px" altimg-valign="-3px" altimg-width="68px" alttext="\Re z&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="11.2.html#E5" title="(11.2.5) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="\mathbf{K}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E5" title="Struve function">𝐊</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Struve function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">12.1.8</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.13.html#iii.p1" title="§11.13(iii) Quadrature ‣ §11.13 Methods of Computation ‣ Computation ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.13(iii)</span></a>,
+<a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#ii.p1" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.6.html#i.info" title="§11.6(i) Large |𝑧|, Fixed 𝜈 ‣ §11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.6(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E2" title="">http://dlmf.nist.gov/11.5.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="61px" altimg-valign="-21px" altimg-width="321px" alttext="\mathbf{K}_{0}\left(z\right)=\frac{2}{\pi}\int_{0}^{\infty}e^{-z\sinh t}\,%
+\mathrm{d}t," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./11.2#E5" title="Struve function">𝐊</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>2</mn><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.28#E1" title="hyperbolic sine function">sinh</mi><mo lspace="0.167em">⁡</mo><mi>t</mi></mrow></mrow></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m4.png" altimg-height="19px" altimg-valign="-3px" altimg-width="68px" alttext="\Re z&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="11.2.html#E5" title="(11.2.5) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="\mathbf{K}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E5" title="Struve function">𝐊</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Struve function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="4.28.html#E1" title="(4.28.1) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="55px" alttext="\sinh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E1" title="hyperbolic sine function">sinh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic sine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E3" title="">http://dlmf.nist.gov/11.5.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="68px" altimg-valign="-25px" altimg-width="511px" alttext="\mathbf{M}_{\nu}\left(z\right)=-\frac{2(\tfrac{1}{2}z)^{\nu}}{\sqrt{\pi}\Gamma%
+\left(\nu+\tfrac{1}{2}\right)}\int_{0}^{1}e^{-zt}(1-t^{2})^{\nu-\frac{1}{2}}\,%
+\mathrm{d}t," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./11.2#E6" title="modified Struve function">𝐌</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msup></mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m8.png" altimg-height="29px" altimg-valign="-9px" altimg-width="88px" alttext="\Re\nu&gt;-\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="11.2.html#E6" title="(11.2.6) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="67px" alttext="\mathbf{M}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E6" title="modified Struve function">𝐌</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Struve function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#ii.p1" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.6.html#i.info" title="§11.6(i) Large |𝑧|, Fixed 𝜈 ‣ §11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.6(i)</span></a>,
+<a class="ltx_ref" href="11.6.html#iii.info" title="§11.6(iii) Large |𝜈|, Fixed 𝑧/𝜈 ‣ §11.6 Asymptotic Expansions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.6(iii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E4" title="">http://dlmf.nist.gov/11.5.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="65px" altimg-valign="-21px" altimg-width="353px" alttext="\mathbf{M}_{0}\left(z\right)=-\frac{2}{\pi}\int_{0}^{\pi/2}e^{-z\cos\theta}\,%
+\mathrm{d}\theta," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./11.2#E6" title="modified Struve function">𝐌</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mn>2</mn><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>/</mo><mn>2</mn></mrow></msubsup><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>θ</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="11.2.html#E6" title="(11.2.6) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="67px" alttext="\mathbf{M}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E6" title="modified Struve function">𝐌</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Struve function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m17.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.13.html#iii.p1" title="§11.13(iii) Quadrature ‣ §11.13 Methods of Computation ‣ Computation ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.13(iii)</span></a>,
+<a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E5" title="">http://dlmf.nist.gov/11.5.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="103px" altimg-valign="-25px" altimg-width="486px" alttext="\mathbf{L}_{\nu}\left(z\right)=\frac{2(\tfrac{1}{2}z)^{\nu}}{\sqrt{\pi}\Gamma%
+\left(\nu+\tfrac{1}{2}\right)}\int_{0}^{\pi/2}\sinh\left(z\cos\theta\right)(%
+\sin\theta)^{2\nu}\,\mathrm{d}\theta," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./11.2#E2" title="modified Struve function">𝐋</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msup></mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>/</mo><mn>2</mn></mrow></msubsup><mrow><mrow><mi href="./4.28#E1" title="hyperbolic sine function">sinh</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>θ</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m8.png" altimg-height="29px" altimg-valign="-9px" altimg-width="88px" alttext="\Re\nu&gt;-\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E1" title="(4.28.1) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="55px" alttext="\sinh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E1" title="hyperbolic sine function">sinh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic sine function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="11.2.html#E2" title="(11.2.2) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathbf{L}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E2" title="modified Struve function">𝐋</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Struve function</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E6" title="">http://dlmf.nist.gov/11.5.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="131px" altimg-valign="-25px" altimg-width="546px" alttext="I_{-\nu}\left(x\right)-\mathbf{L}_{\nu}\left(x\right)=\frac{2(\tfrac{1}{2}x)^{%
+\nu}}{\sqrt{\pi}\Gamma\left(\nu+\tfrac{1}{2}\right)}\int_{0}^{\infty}(1+t^{2})%
+^{\nu-\frac{1}{2}}\sin\left(xt\right)\,\mathrm{d}t," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./10.25#E2" title="modified Bessel function of the first kind">I</mi><mrow><mo>−</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./11.2#E2" title="modified Struve function">𝐋</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./11.1#p1.t1.r1" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msup></mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" rspace="0em" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mo>⁢</mo><mi>t</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m25.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math altimg="m6.png" altimg-height="29px" altimg-valign="-9px" altimg-width="72px" alttext="\Re\nu&lt;\tfrac{1}{2}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>&lt;</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.25.html#E2" title="(10.25.2) ‣ §10.25(ii) Standard Solutions ‣ §10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m1.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="I_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.25#E2" title="modified Bessel function of the first kind">I</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Bessel function of the first kind</a>,
+<a class="ltx_ref" href="11.2.html#E2" title="(11.2.2) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathbf{L}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E2" title="modified Struve function">𝐋</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Struve function</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r1" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r1" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#ii.p1" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E7" title="">http://dlmf.nist.gov/11.5.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#i.info" title="§11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(i)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§11.5(ii) </span>Contour Integrals</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Struve%20functions%20and%20modified%20Struve%20functions">Struve functions and modified Struve functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=contour%20integrals">contour integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.ii" title="">http://dlmf.nist.gov/11.5.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">For loop-integral versions of (<a class="ltx_ref" href="11.5.html#E1" title="(11.5.1) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.1</span></a>), (<a class="ltx_ref" href="11.5.html#E2" title="(11.5.2) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.2</span></a>),
+(<a class="ltx_ref" href="11.5.html#E4" title="(11.5.4) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.4</span></a>), and (<a class="ltx_ref" href="11.5.html#E7" title="(11.5.7) ‣ §11.5(i) Integrals Along the Real Line ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.7</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Babister (<a class="ltx_ref" href="bib/B.html#bib166" title="Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations">1967</a>, §§3.3 and 3.14)</cite>.</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Mellin–Barnes Integrals</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%E2%80%93Barnes%20type">Mellin–Barnes type</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Struve%20functions%20and%20modified%20Struve%20functions">Struve functions and modified Struve functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="11.5.html#E8" title="(11.5.8) ‣ Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.8</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Babister (<a class="ltx_ref" href="bib/B.html#bib166" title="Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations">1967</a>, §3.7)</cite> with
+modified convergence conditions. For (<a class="ltx_ref" href="11.5.html#E9" title="(11.5.9) ‣ Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.9</span></a>) deform the
+integration path in (<a class="ltx_ref" href="11.5.html#E8" title="(11.5.8) ‣ Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.8</span></a>) into a loop and use
+(<a class="ltx_ref" href="11.2.html#E2" title="(11.2.2) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.2.2</span></a>).</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#ii.info" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="68px" altimg-valign="-25px" altimg-width="742px" alttext="(\tfrac{1}{2}x)^{-\nu-1}\mathbf{H}_{\nu}\left(x\right)=-\frac{1}{2\pi i}\int_{%
+-i\infty}^{i\infty}\frac{\pi\csc\left(\pi s\right)}{\Gamma\left(\tfrac{3}{2}+s%
+\right)\Gamma\left(\tfrac{3}{2}+\nu+s\right)}(\tfrac{1}{4}x^{2})^{s}\,\mathrm{%
+d}s," class="ltx_Math" display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./11.1#p1.t1.r1" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo>−</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./11.2#E1" title="Struve function">𝐇</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><mfrac><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi>s</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mi>s</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mi>s</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><msup><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>s</mi></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>s</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m25.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./11.1#p1.t1.r1" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math altimg="m7.png" altimg-height="20px" altimg-valign="-4px" altimg-width="85px" alttext="\Re\nu&gt;-1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>&gt;</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="11.2.html#E1" title="(11.2.1) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="\mathbf{H}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E1" title="Struve function">𝐇</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Struve function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E5" title="(4.14.5) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m10.png" altimg-height="13px" altimg-valign="-2px" altimg-width="45px" alttext="\csc\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosecant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.9.html#E2" title="(1.9.2) ‣ Real and Imaginary Parts ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m5.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\Re" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo>⁡</mo></mrow></math>: real part</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r1" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r1" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.5.html#Px1.info" title="Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#Px1.p1" title="Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E8" title="">http://dlmf.nist.gov/11.5.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#Px1.info" title="Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#ii.info" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">11.5.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="69px" altimg-valign="-25px" altimg-width="734px" alttext="(\tfrac{1}{2}z)^{-\nu-1}\mathbf{L}_{\nu}\left(z\right)=\frac{1}{2\pi i}\int_{%
+\infty}^{(0+)}\frac{\pi\csc\left(\pi s\right)}{\Gamma\left(\tfrac{3}{2}+s%
+\right)\Gamma\left(\tfrac{3}{2}+\nu+s\right)}(-\tfrac{1}{4}z^{2})^{s}\,\mathrm%
+{d}s." class="ltx_Math" display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo>−</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./11.2#E2" title="modified Struve function">𝐋</mi><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mi mathvariant="normal">∞</mi><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo rspace="0em">+</mo></mrow><mo stretchy="false">)</mo></mrow></msubsup><mrow><mfrac><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi>s</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mi>s</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>+</mo><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi><mo>+</mo><mi>s</mi></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><msup><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>s</mi></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>s</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E5" title="(4.14.5) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m10.png" altimg-height="13px" altimg-valign="-2px" altimg-width="45px" alttext="\csc\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosecant function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m16.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m11.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="11.2.html#E2" title="(11.2.2) ‣ §11.2(i) Power-Series Expansions ‣ §11.2 Definitions ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="\mathbf{L}_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./11.2#E2" title="modified Struve function">𝐋</mi><mi class="ltx_nvar" href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./11.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: modified Struve function</a>,
+<a class="ltx_ref" href="11.1.html#p1.t1.r2" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="11.1.html#p1.t1.r3" title="§11.1 Special Notation ‣ Notation ‣ Chapter 11 Struve and Related Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./11.1#p1.t1.r3" title="real or complex order">ν</mi></math>:  real or complex order</a>
+</dd>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mellin%20transform">Mellin transform</a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="11.5.html#Px1.info" title="Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#Px1.p1" title="Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.E9" title="">http://dlmf.nist.gov/11.5.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/11.5.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/11.5.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/11.5.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#Px1.info" title="Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#ii.info" title="§11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5(ii)</span></a>,
+<a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">In (<a class="ltx_ref" href="11.5.html#E8" title="(11.5.8) ‣ Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.8</span></a>) and (<a class="ltx_ref" href="11.5.html#E9" title="(11.5.9) ‣ Mellin–Barnes Integrals ‣ §11.5(ii) Contour Integrals ‣ §11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">11.5.9</span></a>) the path of integration
+separates the poles of the integrand at <math altimg="m24.png" altimg-height="21px" altimg-valign="-6px" altimg-width="125px" alttext="s=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> from those at
+<math altimg="m23.png" altimg-height="21px" altimg-valign="-6px" altimg-width="173px" alttext="s=-1,-2,-3,\dots" class="ltx_Math" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>3</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§11.5(iii) </span>Compendia</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Struve%20functions%20and%20modified%20Struve%20functions">Struve functions and modified Struve functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=compendia">compendia</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integral%20representations">integral representations</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/11.5.iii" title="">http://dlmf.nist.gov/11.5.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="11.5.html#info" title="§11.5 Integral Representations ‣ Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">§11.5</span></a> and
+<a class="ltx_ref" href="11.html#info" title="Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.11</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">For further integral representations see
+<cite class="ltx_cite ltx_citemacro_citet">Babister (<a class="ltx_ref" href="bib/B.html#bib166" title="Transcendental Functions Satisfying Nonhomogeneous Linear Differential Equations">1967</a>, §§3.3, 3.14)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib753" title="Tables of Integral Transforms. Vol. I">1954a</a>, §§5.17, 15.3)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Magnus<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/M.html#bib1534" title="Formulas and Theorems for the Special Functions of Mathematical Physics">1966</a>, p. 114)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Oberhettinger (<a class="ltx_ref" href="bib/O.html#bib1742" title="Tables of Bessel Transforms">1972</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Oberhettinger (<a class="ltx_ref" href="bib/O.html#bib1744" title="Tables of Mellin Transforms">1974</a>, §2.7)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Oberhettinger and Badii (<a class="ltx_ref" href="bib/O.html#bib1746" title="Tables of Laplace Transforms">1973</a>, §2.14)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Watson (<a class="ltx_ref" href="bib/W.html#bib2380" title="A Treatise on the Theory of Bessel Functions">1944</a>, pp. 330, 374, and 426)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="11.4.html" rel="prev" title="In Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">11.4 </span>Basic Properties</span></a><a class="ltx_ref" href="11.6.html" rel="next" title="In Struve and Modified Struve Functions ‣ Chapter 11 Struve and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">11.6 </span>Asymptotic Expansions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

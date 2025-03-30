@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/4.42";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="4.html#PT5" rel="up" title="Applications ‣ Chapter 4 Elementary Functions"/>
+<link href="4.html" rel="up up" title="Chapter 4 Elementary Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="4.41.html" rel="prev" title="§4.41 Sums ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.43.html" rel="next" title="§4.43 Cubic Equations ‣ Applications ‣ Chapter 4 Elementary Functions"/>
+<link href="4.1.html" rel="section" title="§4.1 Special Notation ‣ Notation ‣ Chapter 4 Elementary Functions"/>
+<link href="4.2.html" rel="section" title="§4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.3.html" rel="section" title="§4.3 Graphics ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.4.html" rel="section" title="§4.4 Special Values and Limits ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.5.html" rel="section" title="§4.5 Inequalities ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.6.html" rel="section" title="§4.6 Power Series ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.7.html" rel="section" title="§4.7 Derivatives and Differential Equations ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.8.html" rel="section" title="§4.8 Identities ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.9.html" rel="section" title="§4.9 Continued Fractions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.10.html" rel="section" title="§4.10 Integrals ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.11.html" rel="section" title="§4.11 Sums ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.12.html" rel="section" title="§4.12 Generalized Logarithms and Exponentials ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.13.html" rel="section" title="§4.13 Lambert 𝑊-Function ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"/>
+<link href="4.14.html" rel="section" title="§4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.15.html" rel="section" title="§4.15 Graphics ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.16.html" rel="section" title="§4.16 Elementary Properties ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.17.html" rel="section" title="§4.17 Special Values and Limits ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.18.html" rel="section" title="§4.18 Inequalities ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.19.html" rel="section" title="§4.19 Maclaurin Series and Laurent Series ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.20.html" rel="section" title="§4.20 Derivatives and Differential Equations ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.21.html" rel="section" title="§4.21 Identities ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.22.html" rel="section" title="§4.22 Infinite Products and Partial Fractions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.23.html" rel="section" title="§4.23 Inverse Trigonometric Functions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.24.html" rel="section" title="§4.24 Inverse Trigonometric Functions: Further Properties ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.25.html" rel="section" title="§4.25 Continued Fractions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.26.html" rel="section" title="§4.26 Integrals ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.27.html" rel="section" title="§4.27 Sums ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.28.html" rel="section" title="§4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.29.html" rel="section" title="§4.29 Graphics ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.30.html" rel="section" title="§4.30 Elementary Properties ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.31.html" rel="section" title="§4.31 Special Values and Limits ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.32.html" rel="section" title="§4.32 Inequalities ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.33.html" rel="section" title="§4.33 Maclaurin Series and Laurent Series ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.34.html" rel="section" title="§4.34 Derivatives and Differential Equations ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.35.html" rel="section" title="§4.35 Identities ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.36.html" rel="section" title="§4.36 Infinite Products and Partial Fractions ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.37.html" rel="section" title="§4.37 Inverse Hyperbolic Functions ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.38.html" rel="section" title="§4.38 Inverse Hyperbolic Functions: Further Properties ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.39.html" rel="section" title="§4.39 Continued Fractions ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.40.html" rel="section" title="§4.40 Integrals ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.41.html" rel="section" title="§4.41 Sums ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"/>
+<link href="4.43.html" rel="section" title="§4.43 Cubic Equations ‣ Applications ‣ Chapter 4 Elementary Functions"/>
+<link href="4.44.html" rel="section" title="§4.44 Other Applications ‣ Applications ‣ Chapter 4 Elementary Functions"/>
+<link href="4.45.html" rel="section" title="§4.45 Methods of Computation ‣ Computation ‣ Chapter 4 Elementary Functions"/>
+<link href="4.46.html" rel="section" title="§4.46 Tables ‣ Computation ‣ Chapter 4 Elementary Functions"/>
+<link href="4.47.html" rel="section" title="§4.47 Approximations ‣ Computation ‣ Chapter 4 Elementary Functions"/>
+<link href="4.48.html" rel="section" title="§4.48 Software ‣ Computation ‣ Chapter 4 Elementary Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<link href="4.42.F1.mag.html" rel="sidebar" title="Figure 4.42.1 ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"/>
+<link href="4.42.F2.mag.html" rel="sidebar" title="Figure 4.42.2 ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"/>
+<link href="4.42.F3.mag.html" rel="sidebar" title="Figure 4.42.3 ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"/>
+<meta content="applications, solution of, solution of triangles and spherical triangles, spherical triangles, triangles, trigonometric functions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="4.42.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="4.42.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="4.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Elementary Functions</span></a><a class="ltx_ref" href="4.html#PT5" rel="up" title="In Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_title">Applications</span></a><a class="ltx_ref" href="4.41.html" rel="prev" title="In Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.41 </span>Sums</span></a><a class="ltx_ref" href="4.43.html" rel="next" title="In Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.43 </span>Cubic Equations</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§4.42 </span>Solution of Triangles</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=solution%20of">solution of</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=solution%20of%20triangles%20and%20spherical%20triangles">solution of triangles and spherical triangles</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=triangles">triangles</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=trigonometric%20functions">trigonometric functions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="4.42.html" title="">http://dlmf.nist.gov/4.42</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="4.42.html#i"><span class="ltx_tag ltx_tag_subsection">§4.42(i) </span>Planar Right Triangles</a></li>
+<li class="ltx_tocentry"><a href="4.42.html#ii"><span class="ltx_tag ltx_tag_subsection">§4.42(ii) </span>Planar Triangles</a></li>
+<li class="ltx_tocentry"><a href="4.42.html#iii"><span class="ltx_tag ltx_tag_subsection">§4.42(iii) </span>Spherical Triangles</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§4.42(i) </span>Planar Right Triangles</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Hobson (<a class="ltx_ref" href="bib/H.html#bib1091" title="A Treatise on Plane and Advanced Trigonometry">1928</a>, p. 18)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.i" title="">http://dlmf.nist.gov/4.42.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<figure class="ltx_figure" id="F1"><a class="ltx_magnifiable" href="4.42.F1.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_square" height="252" id="F1.g1" src="4/42/F1.png" width="208"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 4.42.1: </span>Planar right triangle.
+
+
+<a class="ltx_magnifiable ltx_icon" href="4.42.F1.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="angle">A</mi></math>:  angle (locally)</span>,
+<span class="ltx_text"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="angle">B</mi></math>:  angle (locally)</span>,
+<span class="ltx_text"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="right angle">C</mi></math>:  right angle (locally)</span>,
+<span class="ltx_text"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="height">a</mi></math>:  height (locally)</span>,
+<span class="ltx_text"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="base">b</mi></math>:  base (locally)</span> and
+<span class="ltx_text"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="hypotenuse">c</mi></math>:  hypotenuse (locally)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.F1" title="">http://dlmf.nist.gov/4.42.F1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.F1.pdf">pdf</a>, <a href="http://dlmf.nist.gov/4.42.F1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#i.info" title="§4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(i)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="i.p1">
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="48px" altimg-valign="-16px" altimg-width="179px" alttext="\sin A=\frac{a}{c}=\frac{1}{\csc A}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F1" title="angle">A</mi></mrow><mo>=</mo><mfrac><mi href="./4.42#F1" title="height">a</mi><mi href="./4.42#F1" title="hypotenuse">c</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F1" title="angle">A</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E5" title="(4.14.5) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m7.png" altimg-height="13px" altimg-valign="-2px" altimg-width="45px" alttext="\csc\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosecant function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="height">a</mi></math>:  height</a> and
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="hypotenuse">c</mi></math>:  hypotenuse</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.147</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E1" title="">http://dlmf.nist.gov/4.42.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#i.info" title="§4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(i)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="49px" altimg-valign="-16px" altimg-width="179px" alttext="\cos A=\frac{b}{c}=\frac{1}{\sec A}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F1" title="angle">A</mi></mrow><mo>=</mo><mfrac><mi href="./4.42#F1" title="base">b</mi><mi href="./4.42#F1" title="hypotenuse">c</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mi href="./4.14#E6" title="secant function">sec</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F1" title="angle">A</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E6" title="(4.14.6) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m8.png" altimg-height="13px" altimg-valign="-2px" altimg-width="45px" alttext="\sec\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E6" title="secant function">sec</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: secant function</a>,
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="base">b</mi></math>:  base</a> and
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="hypotenuse">c</mi></math>:  hypotenuse</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.147</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E2" title="">http://dlmf.nist.gov/4.42.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#i.info" title="§4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(i)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="48px" altimg-valign="-16px" altimg-width="184px" alttext="\tan A=\frac{a}{b}=\frac{1}{\cot A}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F1" title="angle">A</mi></mrow><mo>=</mo><mfrac><mi href="./4.42#F1" title="height">a</mi><mi href="./4.42#F1" title="base">b</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F1" title="angle">A</mi></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E7" title="(4.14.7) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m6.png" altimg-height="17px" altimg-valign="-2px" altimg-width="46px" alttext="\cot\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cotangent function</a>,
+<a class="ltx_ref" href="4.14.html#E4" title="(4.14.4) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m10.png" altimg-height="17px" altimg-valign="-2px" altimg-width="48px" alttext="\tan\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E4" title="tangent function">tan</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: tangent function</a>,
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="height">a</mi></math>:  height</a> and
+<a class="ltx_ref" href="4.42.html#F1" title="Figure 4.42.1 ‣ §4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F1" title="base">b</mi></math>:  base</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.147</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E3" title="">http://dlmf.nist.gov/4.42.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#i.info" title="§4.42(i) Planar Right Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(i)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§4.42(ii) </span>Planar Triangles</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Hobson (<a class="ltx_ref" href="bib/H.html#bib1091" title="A Treatise on Plane and Advanced Trigonometry">1928</a>, Chapter 10)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.ii" title="">http://dlmf.nist.gov/4.42.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<figure class="ltx_figure" id="F2"><a class="ltx_magnifiable" href="4.42.F2.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="107" id="F2.g1" src="4/42/F2.png" width="346"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 4.42.2: </span>Planar triangle.
+
+
+<a class="ltx_magnifiable ltx_icon" href="4.42.F2.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">a</mi></math>:  length (locally)</span>,
+<span class="ltx_text"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="base">b</mi></math>:  base (locally)</span>,
+<span class="ltx_text"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">c</mi></math>:  length (locally)</span>,
+<span class="ltx_text"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">A</mi></math>:  angle (locally)</span>,
+<span class="ltx_text"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">B</mi></math>:  angle (locally)</span> and
+<span class="ltx_text"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">C</mi></math>:  angle (locally)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.F2" title="">http://dlmf.nist.gov/4.42.F2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.F2.pdf">pdf</a>, <a href="http://dlmf.nist.gov/4.42.F2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#ii.info" title="§4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(ii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="ii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="49px" altimg-valign="-16px" altimg-width="218px" alttext="\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}," class="ltx_Math" display="block"><mrow><mrow><mfrac><mi href="./4.42#F2" title="length">a</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">A</mi></mrow></mfrac><mo>=</mo><mfrac><mi href="./4.42#F2" title="base">b</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">B</mi></mrow></mfrac><mo>=</mo><mfrac><mi href="./4.42#F2" title="length">c</mi><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">C</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">a</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="base">b</mi></math>:  base</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">c</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">B</mi></math>:  angle</a> and
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">C</mi></math>:  angle</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.148</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E4" title="">http://dlmf.nist.gov/4.42.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#ii.info" title="§4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(ii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="28px" altimg-valign="-6px" altimg-width="228px" alttext="c^{2}=a^{2}+b^{2}-2ab\cos C," class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./4.42#F2" title="length">c</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><msup><mi href="./4.42#F2" title="length">a</mi><mn>2</mn></msup><mo>+</mo><msup><mi href="./4.42#F2" title="base">b</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./4.42#F2" title="length">a</mi><mo>⁢</mo><mi href="./4.42#F2" title="base">b</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">C</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">a</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="base">b</mi></math>:  base</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">c</mi></math>:  length</a> and
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">C</mi></math>:  angle</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.148</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E5" title="">http://dlmf.nist.gov/4.42.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#ii.info" title="§4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(ii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="22px" altimg-valign="-4px" altimg-width="191px" alttext="a=b\cos C+c\cos B" class="ltx_Math" display="block"><mrow><mi href="./4.42#F2" title="length">a</mi><mo>=</mo><mrow><mrow><mi href="./4.42#F2" title="base">b</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">C</mi></mrow></mrow><mo>+</mo><mrow><mi href="./4.42#F2" title="length">c</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">B</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">a</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="base">b</mi></math>:  base</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">c</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">B</mi></math>:  angle</a> and
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">C</mi></math>:  angle</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.148</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E6" title="">http://dlmf.nist.gov/4.42.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#ii.info" title="§4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(ii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="51px" altimg-valign="-9px" altimg-width="421px" alttext="\hbox{area}=\tfrac{1}{2}bc\sin A=\left(s(s-a)(s-b)(s-c)\right)^{1/2}," class="ltx_Math" display="block"><mrow><mrow><mtext>area</mtext><mo>=</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./4.42#F2" title="base">b</mi><mo>⁢</mo><mi href="./4.42#F2" title="length">c</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F2" title="angle">A</mi></mrow></mrow><mo>=</mo><msup><mrow><mo>(</mo><mrow><mi href="./4.42#ii.p1" title="semi-perimeter">s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.42#ii.p1" title="semi-perimeter">s</mi><mo>−</mo><mi href="./4.42#F2" title="length">a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.42#ii.p1" title="semi-perimeter">s</mi><mo>−</mo><mi href="./4.42#F2" title="base">b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.42#ii.p1" title="semi-perimeter">s</mi><mo>−</mo><mi href="./4.42#F2" title="length">c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">a</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="base">b</mi></math>:  base</a>,
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="length">c</mi></math>:  length</a>,
+<a class="ltx_ref" href="4.42.html#ii.p1" title="§4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m15.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./4.42#ii.p1" title="semi-perimeter">s</mi></math>:  semi-perimeter</a> and
+<a class="ltx_ref" href="4.42.html#F2" title="Figure 4.42.2 ‣ §4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F2" title="angle">A</mi></math>:  angle</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.148</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E7" title="">http://dlmf.nist.gov/4.42.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#ii.info" title="§4.42(ii) Planar Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(ii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m14.png" altimg-height="29px" altimg-valign="-9px" altimg-width="151px" alttext="s=\tfrac{1}{2}(a+b+c)" class="ltx_Math" display="inline"><mrow><mi href="./4.42#ii.p1" title="semi-perimeter">s</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.42#F2" title="length">a</mi><mo>+</mo><mi href="./4.42#F2" title="base">b</mi><mo>+</mo><mi href="./4.42#F2" title="length">c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (the semiperimeter).</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§4.42(iii) </span>Spherical Triangles</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=solution%20of">solution of</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20triangles">spherical triangles</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.iii" title="">http://dlmf.nist.gov/4.42.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<figure class="ltx_figure" id="F3"><a class="ltx_magnifiable" href="4.42.F3.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_square" height="218" id="F3.g1" src="4/42/F3.png" width="208"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 4.42.3: </span>Spherical triangle.
+
+
+<a class="ltx_magnifiable ltx_icon" href="4.42.F3.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">A</mi></math>:  angle (locally)</span>,
+<span class="ltx_text"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">B</mi></math>:  angle (locally)</span>,
+<span class="ltx_text"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">C</mi></math>:  angle (locally)</span>,
+<span class="ltx_text"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">a</mi></math>:  arc length (locally)</span>,
+<span class="ltx_text"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">b</mi></math>:  arc length (locally)</span> and
+<span class="ltx_text"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">c</mi></math>:  arc length (locally)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.F3" title="">http://dlmf.nist.gov/4.42.F3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.F3.pdf">pdf</a>, <a href="http://dlmf.nist.gov/4.42.F3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#iii.info" title="§4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(iii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="iii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="24px" altimg-valign="-6px" altimg-width="321px" alttext="\cos a=\cos b\cos c+\sin b\sin c\cos A," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">a</mi></mrow><mo>=</mo><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">b</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">c</mi></mrow></mrow><mo>+</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">b</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">c</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">A</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">a</mi></math>:  arc length</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">b</mi></math>:  arc length</a> and
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">c</mi></math>:  arc length</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.149</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E8" title="">http://dlmf.nist.gov/4.42.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#iii.info" title="§4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(iii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="49px" altimg-valign="-16px" altimg-width="218px" alttext="\frac{\sin A}{\sin a}=\frac{\sin B}{\sin b}=\frac{\sin C}{\sin c}," class="ltx_Math" display="block"><mrow><mrow><mfrac><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">A</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">a</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">B</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">b</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">C</mi></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">c</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">B</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">C</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">a</mi></math>:  arc length</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">b</mi></math>:  arc length</a> and
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">c</mi></math>:  arc length</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.149</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E9" title="">http://dlmf.nist.gov/4.42.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#iii.info" title="§4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(iii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="24px" altimg-valign="-6px" altimg-width="370px" alttext="\sin a\cos B=\cos b\sin c-\sin b\cos c\cos A," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">a</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">B</mi></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">b</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">c</mi></mrow></mrow><mo>−</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">b</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">c</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">A</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">B</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">a</mi></math>:  arc length</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">b</mi></math>:  arc length</a> and
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">c</mi></math>:  arc length</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E10" title="">http://dlmf.nist.gov/4.42.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#iii.info" title="§4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(iii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="24px" altimg-valign="-6px" altimg-width="339px" alttext="\cos a\cos C=\sin a\cot b-\sin C\cot B," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">a</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">C</mi></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">a</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">b</mi></mrow></mrow><mo>−</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">C</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">B</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E7" title="(4.14.7) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m6.png" altimg-height="17px" altimg-valign="-2px" altimg-width="46px" alttext="\cot\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E7" title="cotangent function">cot</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cotangent function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">B</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">C</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">a</mi></math>:  arc length</a> and
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m12.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="b" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">b</mi></math>:  arc length</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E11" title="">http://dlmf.nist.gov/4.42.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#iii.info" title="§4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(iii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">4.42.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="22px" altimg-valign="-4px" altimg-width="371px" alttext="\cos A=-\cos B\cos C+\sin B\sin C\cos a." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">A</mi></mrow><mo>=</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">B</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">C</mi></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">B</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="angle">C</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./4.42#F3" title="arc length">a</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m5.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m9.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="A" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">A</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m2.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="B" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">B</mi></math>:  angle</a>,
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m3.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="C" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="angle">C</mi></math>:  angle</a> and
+<a class="ltx_ref" href="4.42.html#F3" title="Figure 4.42.3 ‣ §4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><math altimg="m11.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./4.42#F3" title="arc length">a</mi></math>:  arc length</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">4.3.149</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/4.42.E12" title="">http://dlmf.nist.gov/4.42.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/4.42.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/4.42.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/4.42.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="4.42.html#iii.info" title="§4.42(iii) Spherical Triangles ‣ §4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42(iii)</span></a>,
+<a class="ltx_ref" href="4.42.html#info" title="§4.42 Solution of Triangles ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.42</span></a> and
+<a class="ltx_ref" href="4.html#info" title="Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">Ch.4</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">For these and other formulas see
+<cite class="ltx_cite ltx_citemacro_citet">Smart (<a class="ltx_ref" href="bib/S.html#bib2116" title="Text-book on Spherical Astronomy">1962</a>, Chapter 1)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="4.41.html" rel="prev" title="In Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.41 </span>Sums</span></a><a class="ltx_ref" href="4.43.html" rel="next" title="In Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.43 </span>Cubic Equations</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

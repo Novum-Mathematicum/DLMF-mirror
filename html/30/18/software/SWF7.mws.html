@@ -1,0 +1,244 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 22 "                      " }
+
+{TEXT 256 69 "Asymptotic Expansion of Eigenvalues for Prolate Spheroid
+
+al  Functions" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 83 "                \+
+
+           A Maple worksheet written by Hans Volkmer, April 2, 2001" }
+
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 74 "                                \+
+
+         send comments to volkmer@uwm.edu " }}}{EXCHG {PARA 0 "" 0 "" 
+
+{TEXT -1 136 "This Maple  program  computes the formal asymptotic expa
+
+nsion for the eigenvalues of the spheroidal equation  in the prolate c
+
+ase       " }{XPPEDIT 18 0 "diff((1-x^2)*diff(y,x),x)+(lambda+4*h^2*(1
+
+-x^2)-m^2/(1-x^2))*y = 0;" "6#/,&amp;-%%diffG6$*&amp;,&amp;\"\"\"F**$%\"xG\"\"#!\"
+
+\"F*-F&amp;6$%\"yGF,F*F,F**&amp;,(%'lambdaGF**(\"\"%F**$%\"hGF-F*,&amp;F*F**$F,F-F
+
+.F*F**&amp;%\"mGF-,&amp;F*F**$F,F-F.F.F.F*F1F*F*\"\"!" }{TEXT -1 0 "" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 183 "The computations are based on for
+
+mulas by Mueller, Asymptotic Expansion of Prolate Spheroidal Wave Func
+
+tions and their Characteristic Numbers, J. reine angew. Math. 212 (196
+
+3), 26-48." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 34 "The following notat
+
+ions are used: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 70 "R : we want to
+
+ determine the asymptotic expansion up to and including " }{XPPEDIT 
+
+18 0 "h^(-2*R+1);" "6#)%\"hG,&amp;*&amp;\"\"#\"\"\"%\"RGF(!\"\"F(F(" }{TEXT 
+
+-1 62 ", in the paper we have R=3 . We take R=4 but R can be changed.
+
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "f(q,qq) =( " }{XPPEDIT 18 0 "
+
+q,qq;" "6$%\"qG%#qqG" }{TEXT -1 16 "), see page 30 ." }}}{EXCHG {PARA 
+
+0 "" 0 "" {TEXT -1 9 "P[r,t] = " }{XPPEDIT 18 0 "P[r](t);" "6#-&amp;%\"PG6
+
+#%\"rG6#%\"tG" }{TEXT -1 36 ", these are polynomials in q, m and " }
+
+{XPPEDIT 18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 15 ", see page 32 ." }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "M[r] = " }{XPPEDIT 18 0 "M[r];" "6#
+
+&amp;%\"MG6#%\"rG" }{TEXT -1 37 " , these are polynomials in q, m and " }
+
+{XPPEDIT 18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 15 ", see page 32 ." }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "N[r,j] = coefficient of " }
+
+{XPPEDIT 18 0 "Delta^j;" "6#)%&amp;DeltaG%\"jG" }{TEXT -1 4 " in " }
+
+{XPPEDIT 18 0 "M[r];" "6#&amp;%\"MG6#%\"rG" }{TEXT -1 37 " , these are pol
+
+ynomials in q  and m." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 16 "g = 1/(2
+
+^7 h) , " }{XPPEDIT 18 0 "nu = m^2-1/4;" "6#/%#nuG,&amp;*$%\"mG\"\"#\"\"\"
+
+*&amp;F)F)\"\"%!\"\"F," }{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {XPPEDIT 
+
+18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 24 " = L[0] + L[1]  g+ L[2] " }
+
+{XPPEDIT 18 0 "g^2;" "6#*$%\"gG\"\"#" }{TEXT -1 29 "+... asymptotic ex
+
+pansion of " }{XPPEDIT 18 0 "Delta;" "6#%&amp;DeltaG" }{TEXT -1 8 ", where
+
+ " }{XPPEDIT 18 0 "lambda+2*h^2+1/4 = -2*h^2+2*h*q+Delta/8;" "6#/,(%'l
+
+ambdaG\"\"\"*&amp;\"\"#F&amp;*$%\"hGF(F&amp;F&amp;*&amp;F&amp;F&amp;\"\"%!\"\"F&amp;,(*&amp;F(F&amp;*$F*F(F&amp;F-
+
+*(F(F&amp;F*F&amp;%\"qGF&amp;F&amp;*&amp;%&amp;DeltaGF&amp;\"\")F-F&amp;" }{TEXT -1 78 " , see page 29
+
+.                         The L[r] are polynomials in q and m . " }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 101 "Usage:  press enter until you rea
+
+ch the end of the worksheet where the polynomials L[r] are listed . " 
+
+}}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "restart;R:=4;" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "f:=proc(q,qq)" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 8 "local n;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 12 "n:=(qq-
+
+q)/4;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "if n=-1 then (q-1)*(q-3);
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "elif n=0 then 2*(q^2+1+Delta)-1
+
+6*nu;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 32 "elif n=1 then (q+1)*(q+3)-
+
+64*nu;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "else -64*n*nu;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "e
+
+nd;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 "P:=array(0..R,-R..2*
+
+R);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 54 "makeP:=proc() # find
+
+ P[r,t] for r=0..R and t=-r..2*R-r" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+25 "global P,R;local r,s,t,u;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "P[
+
+0,0]:=1;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "for t from 1 to 2*R do \+
+
+P[0,t]:=0 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 34 "for r from 1 to R \+
+
+do P[r,0]:=0 od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 60 "for r from 1 to
+
+ R do for t from -r to 2*R-r do if t&lt;&gt;0 then " }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 5 "u:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "for s from
+
+ -r+1 to t+1 do u:=u+f(q+4*s,q+4*t)*P[r-1,s] od;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 23 "P[r,t]:=simplify(u/t) ;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 9 "fi;od;od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }
+
+}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "makeP():" }}}{EXCHG {PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 18 "M:=array(0..2*R); " }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 13 "makeM:=proc()" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 25 "global P,M,R;local r,t,s;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "
+
+M[1]:=2*(q^2+1)-16*nu;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 20 "for r fro
+
+m 1 to R do" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 57 "for t from 1 to r do s:=s+t*P[r,t]*subs(q=-q,P
+
+[r,-t]) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "M[2*r]:=(-1)^r*simpl
+
+ify(s-subs(q=-q,s));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "for r from 1 to R-1 do" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 89 "f
+
+or t from 1 to r do s:=s+t*P[r,t]*subs(q=-q,P[r+1,-t])-t*P[r,-t]*subs(
+
+q=-q,P[r+1,t]) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 43 "s:=s+(r+1)*P[
+
+r,r+1]*subs(q=-q,P[r+1,-r-1]);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 33 "M
+
+[2*r+1]:=(-1)^(r+1)*simplify(s):" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "
+
+od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 9 "makeM(): " }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 25 "N:=array(0..2*R,0..2*R); " }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 50 "makeN:=proc() # N is the sam
+
+e as M but as an array" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "global M,
+
+N;local r,n;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 74 "for r from 2 to 2*R
+
+ do for n from 0 to r-2 do N[r,n]:=coeff(M[r],Delta,n):" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 6 "od od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end
+
+;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "makeN():" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "L:=array(0..2*R); " }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "makeL:=proc() " }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 35 "global N,L;local delta,del,r,n,j,s;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 21 "delta:=array(0..2*R);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 15 "del:=-1/2*M[1];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 
+
+"for r from 2 to 2*R do " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 63 "for j f
+
+rom 0 to r-2 do delta[j]:=powmod(del,j,g^(r-j-1),g) od; " }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 85 "fo
+
+r j from 2 to r do for n from 0 to j-2 do s:=s+N[j,n]*coeff(delta[n],g
+
+,r-j); od;od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 "L[r-1]:=simplify(-
+
+s/2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "del:=del+L[r-1]*g^(r-1);" 
+
+}}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "makeL():" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 44 "Example: We compare with the paper
+
+, page 33." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "collect(subs(
+
+nu=m^2-1/4,-L[1]/8),m);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 43 "
+
+collect(subs(nu=m^2-1/4,-2^(-2)*L[2]/8),m);" }}}{EXCHG {PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 43 "collect(subs(nu=m^2-1/4,-2^(-4)*L[3]/8),m);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 43 "collect(subs(nu=m^2-1/4,-2^(
+
+-8)*L[4]/8),m);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "collect(
+
+subs(nu=m^2-1/4,-2^(-10)*L[5]/8),m);" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 110 "# we have agreement with the paper except for a typo
+
+ in the paper in the last term: it should be 32 not 1024/3" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "collect(subs(nu=m^2-1/4,-2^(-11)*L[
+
+6]/8),m);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "collect(subs(n
+
+u=m^2-1/4,-2^(-12)*L[7]/8),m);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 0 "" }}}}{MARK "0 0 0" 22 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+
+{PAGENUMBERS 0 1 2 33 1 1 }
+

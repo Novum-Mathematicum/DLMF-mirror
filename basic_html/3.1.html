@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/3.1";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="3.html#PT1" rel="up" title="Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.html" rel="up up" title="Chapter 3 Numerical Methods"/>
+<link href="index.html" rel="start" title=""/>
+<link href="3.html" rel="prev" title="Chapter 3 Numerical Methods"/>
+<link href="3.2.html" rel="next" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.2.html" rel="section" title="§3.2 Linear Algebra ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.3.html" rel="section" title="§3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.4.html" rel="section" title="§3.4 Differentiation ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.5.html" rel="section" title="§3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.6.html" rel="section" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.7.html" rel="section" title="§3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.8.html" rel="section" title="§3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.9.html" rel="section" title="§3.9 Acceleration of Convergence ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.10.html" rel="section" title="§3.10 Continued Fractions ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.11.html" rel="section" title="§3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="3.12.html" rel="section" title="§3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<link href="3.1.F1.mag.html" rel="sidebar" title="Figure 3.1.1 ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"/>
+<meta content="IEEE standard, absolute error, arithmetics, binary number system, bits, by chopping, complex, complex arithmetic, double precision, down, error measures, exact, exact rational, exact rational arithmetic, exponent, floating-point, floating-point arithmetic, format width, fractional part, generalized logarithms, generalized precision, hexadecimal number system, interval, interval arithmetic, level-index, level-index arithmetic, machine epsilon, machine number, machine precision, mollified error, overflow, rational arithmetics, relative error, relative precision, rounding, significand, significant, single precision, symmetric, to nearest machine number, underflow, validated computing" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="3.1.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="3.1.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="3.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Numerical Methods</span></a><a class="ltx_ref" href="3.html#PT1" rel="up" title="In Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title">Areas</span></a><a class="ltx_ref" href="3.html" rel="prev" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Numerical Methods</span></a><a class="ltx_ref" href="3.2.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Linear Algebra</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§3.1 </span>Arithmetics and Error Measures</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.25.I2.ix4" title="In Other Changes ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">3.1</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="3.1.html" title="">http://dlmf.nist.gov/3.1</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="3.1.html#i"><span class="ltx_tag ltx_tag_subsection">§3.1(i) </span>Floating-Point Arithmetic</a></li>
+<li class="ltx_tocentry"><a href="3.1.html#ii"><span class="ltx_tag ltx_tag_subsection">§3.1(ii) </span>Interval Arithmetic</a></li>
+<li class="ltx_tocentry"><a href="3.1.html#iii"><span class="ltx_tag ltx_tag_subsection">§3.1(iii) </span>Rational Arithmetics</a></li>
+<li class="ltx_tocentry"><a href="3.1.html#iv"><span class="ltx_tag ltx_tag_subsection">§3.1(iv) </span>Level-Index Arithmetic</a></li>
+<li class="ltx_tocentry"><a href="3.1.html#v"><span class="ltx_tag ltx_tag_subsection">§3.1(v) </span>Error Measures</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.1(i) </span>Floating-Point Arithmetic</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=arithmetics">arithmetics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=binary%20number%20system">binary number system</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=bits">bits</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exponent">exponent</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=floating-point">floating-point</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=floating-point%20arithmetic">floating-point arithmetic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=format%20width">format width</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=fractional%20part">fractional part</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=hexadecimal%20number%20system">hexadecimal number system</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=machine%20epsilon">machine epsilon</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=machine%20number">machine number</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=machine%20precision">machine precision</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=overflow">overflow</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=significand">significand</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=significant">significant</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=underflow">underflow</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="4.48.html#i.p1" title="§4.48(i) Introduction ‣ §4.48 Software ‣ Computation ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.48(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix1.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.25.I2.ix4.p1" title="In Other Changes ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">3.1</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.i" title="">http://dlmf.nist.gov/3.1.i</a></dd>
+<dt>Modification (effective with 1.0.25):</dt>
+<dd>
+In the first sentence of this subsection, the phrase “another frequently used
+system is the <em class="ltx_emph ltx_font_italic">hexadecimal</em> system with base 16” has been replaced with
+“another system that has been used is the <em class="ltx_emph ltx_font_italic">hexadecimal</em> system with base 16”.
+
+<p><span class="ltx_font_italic">Suggested 2019-02-22 by Nicola Torracca</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Computer arithmetic is described for the <em class="ltx_emph ltx_font_italic">binary</em> based system with base
+2; another system that has been used is the <em class="ltx_emph ltx_font_italic">hexadecimal</em> system with base
+16.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">A nonzero <em class="ltx_emph ltx_font_italic">normalized binary floating-point machine number</em> <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> is
+represented as
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="31px" altimg-valign="-8px" altimg-width="305px" alttext="x=(-1)^{s}\cdot(b_{0}.b_{1}b_{2}\dots b_{p-1})\cdot 2^{E}," class="ltx_Math" display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mi href="./3.1#i.p2" title="sign">s</mi></msup><mo rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>0</mn></msub><mo>⁢</mo><mi mathvariant="normal">.</mi><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><msup><mn>2</mn><mi href="./3.1#i.p2" title="exponent">E</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m61.png" altimg-height="21px" altimg-valign="-5px" altimg-width="61px" alttext="b_{0}=1" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m66.png" altimg-height="24px" altimg-valign="-8px" altimg-width="23px" alttext="b_{p}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi href="./3.1#i.p2" title="number of significant bits">p</mi></msub></math>:  bit</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m77.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="sign">s</mi></math>:  sign</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>:  number of significant bits</a> and
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math>:  exponent</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E1" title="">http://dlmf.nist.gov/3.1.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m77.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="sign">s</mi></math> is equal to <math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math> or <math altimg="m12.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math>, each <math altimg="m64.png" altimg-height="24px" altimg-valign="-8px" altimg-width="22px" alttext="b_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi>j</mi></msub></math>, <math altimg="m69.png" altimg-height="22px" altimg-valign="-6px" altimg-width="52px" alttext="j\geq 1" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>≥</mo><mn>1</mn></mrow></math>, is either <math altimg="m12.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math> or <math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math>,
+<math altimg="m63.png" altimg-height="21px" altimg-valign="-5px" altimg-width="23px" alttext="b_{1}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub></math> is the <em class="ltx_emph ltx_font_italic">most significant bit</em>, <math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math> (<math altimg="m53.png" altimg-height="19px" altimg-valign="-3px" altimg-width="39px" alttext="\in\mathbb{N}" class="ltx_Math" display="inline"><mrow><mi></mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r11" title="set of all positive integers">ℕ</mi></mrow></math>) is the number of
+significant bits <math altimg="m64.png" altimg-height="24px" altimg-valign="-8px" altimg-width="22px" alttext="b_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi>j</mi></msub></math>, <math altimg="m65.png" altimg-height="24px" altimg-valign="-8px" altimg-width="44px" alttext="b_{p-1}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub></math> is the <em class="ltx_emph ltx_font_italic">least significant bit</em>, <math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math> is
+an integer called the <em class="ltx_emph ltx_font_italic">exponent</em>, <math altimg="m60.png" altimg-height="24px" altimg-valign="-8px" altimg-width="136px" alttext="b_{0}.b_{1}b_{2}\dots b_{p-1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>0</mn></msub><mo lspace="0em" rspace="0.167em">.</mo><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></math> is the
+<em class="ltx_emph ltx_font_italic">significand</em>, and <math altimg="m67.png" altimg-height="24px" altimg-valign="-8px" altimg-width="157px" alttext="f=.b_{1}b_{2}\dots b_{p-1}" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p2" title="fractional part">f</mi><mo>=</mo><mrow><mi mathvariant="normal">.</mi><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></math> is the <em class="ltx_emph ltx_font_italic">fractional
+part</em>.
+</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">The set of <em class="ltx_emph ltx_font_italic">machine numbers</em> <math altimg="m57.png" altimg-height="21px" altimg-valign="-5px" altimg-width="30px" alttext="\mathbb{R}_{{\rm fl}}" class="ltx_Math" display="inline"><msub><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi><mi>fl</mi></msub></math> is the union of <math altimg="m12.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math> and
+the set</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="74px" altimg-valign="-31px" altimg-width="178px" alttext="(-1)^{s}2^{E}\sum_{j=0}^{p-1}b_{j}2^{-j}," class="ltx_Math" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./3.1#i.p2" title="sign">s</mi></msup><mo>⁢</mo><msup><mn>2</mn><mi href="./3.1#i.p2" title="exponent">E</mi></msup><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi>j</mi></msub><mo>⁢</mo><msup><mn>2</mn><mrow><mo>−</mo><mi>j</mi></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m66.png" altimg-height="24px" altimg-valign="-8px" altimg-width="23px" alttext="b_{p}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi href="./3.1#i.p2" title="number of significant bits">p</mi></msub></math>:  bit</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m77.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="sign">s</mi></math>:  sign</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>:  number of significant bits</a> and
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math>:  exponent</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E2" title="">http://dlmf.nist.gov/3.1.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with <math altimg="m61.png" altimg-height="21px" altimg-valign="-5px" altimg-width="61px" alttext="b_{0}=1" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow></math> and all allowable choices of <math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math>, <math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>, <math altimg="m77.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="sign">s</mi></math>, and <math altimg="m64.png" altimg-height="24px" altimg-valign="-8px" altimg-width="22px" alttext="b_{j}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi>j</mi></msub></math>.
+</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">Let <math altimg="m26.png" altimg-height="21px" altimg-valign="-5px" altimg-width="167px" alttext="E_{{\rm min}}\leq E\leq E_{{\rm max}}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub><mo>≤</mo><mi href="./3.1#i.p2" title="exponent">E</mi><mo>≤</mo><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub></mrow></math> with <math altimg="m21.png" altimg-height="21px" altimg-valign="-5px" altimg-width="86px" alttext="E_{{\rm min}}&lt;0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub><mo>&lt;</mo><mn>0</mn></mrow></math> and
+<math altimg="m19.png" altimg-height="21px" altimg-valign="-5px" altimg-width="89px" alttext="E_{{\rm max}}&gt;0" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub><mo>&gt;</mo><mn>0</mn></mrow></math>. For given values of <math altimg="m25.png" altimg-height="21px" altimg-valign="-5px" altimg-width="48px" alttext="E_{{\rm min}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub></math>, <math altimg="m20.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="E_{{\rm max}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub></math>, and
+<math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>, the <em class="ltx_emph ltx_font_italic">format width in bits</em> <math altimg="m34.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.1#i.p4" title="number of bits in floating point">N</mi></math> of a computer word is the total number
+of bits:
+the sign (one bit), the significant bits <math altimg="m62.png" altimg-height="24px" altimg-valign="-8px" altimg-width="136px" alttext="b_{1},b_{2},\dots,b_{p-1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><mo>,</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math> (<math altimg="m70.png" altimg-height="21px" altimg-valign="-6px" altimg-width="50px" alttext="p-1" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></math>
+bits), and the bits allocated to the exponent (the remaining <math altimg="m30.png" altimg-height="22px" altimg-valign="-6px" altimg-width="59px" alttext="N-p" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p4" title="number of bits in floating point">N</mi><mo>−</mo><mi href="./3.1#i.p2" title="number of significant bits">p</mi></mrow></math> bits). The
+integers <math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>, <math altimg="m25.png" altimg-height="21px" altimg-valign="-5px" altimg-width="48px" alttext="E_{{\rm min}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub></math>, and <math altimg="m20.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="E_{{\rm max}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub></math> are characteristics of the
+machine. The <em class="ltx_emph ltx_font_italic">machine epsilon</em> <math altimg="m42.png" altimg-height="16px" altimg-valign="-5px" altimg-width="31px" alttext="\epsilon_{M}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></math>, that is, the distance
+between <math altimg="m13.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math> and the next larger machine number with <math altimg="m14.png" altimg-height="18px" altimg-valign="-2px" altimg-width="59px" alttext="E=0" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p2" title="exponent">E</mi><mo>=</mo><mn>0</mn></mrow></math> is given by
+<math altimg="m41.png" altimg-height="24px" altimg-valign="-5px" altimg-width="113px" alttext="\epsilon_{M}=2^{-p+1}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub><mo>=</mo><msup><mn>2</mn><mrow><mrow><mo>−</mo><mi href="./3.1#i.p2" title="number of significant bits">p</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>. The <em class="ltx_emph ltx_font_italic">machine precision</em> is
+<math altimg="m51.png" altimg-height="29px" altimg-valign="-9px" altimg-width="105px" alttext="\frac{1}{2}\epsilon_{M}=2^{-p}" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></mrow><mo>=</mo><msup><mn>2</mn><mrow><mo>−</mo><mi href="./3.1#i.p2" title="number of significant bits">p</mi></mrow></msup></mrow></math>. The lower and upper bounds for the absolute
+values of the nonzero machine numbers are given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="57px" altimg-valign="-9px" altimg-width="451px" alttext="N_{{\rm min}}\equiv 2^{E_{{\rm min}}}\leq|x|\leq 2^{E_{{\rm max}}+1}\left(1-2^%
+{-p}\right)\equiv N_{{\rm max}}." class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./3.1#E3" title="underflow">N</mi><mi href="./3.1#E3" title="underflow">min</mi></msub><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><msup><mn>2</mn><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub></msup><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><msup><mn>2</mn><mrow><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><msup><mn>2</mn><mrow><mo>−</mo><mi href="./3.1#i.p2" title="number of significant bits">p</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><msub><mi href="./3.1#E3" title="overflow">N</mi><mi href="./3.1#E3" title="overflow">max</mi></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m36.png" altimg-height="21px" altimg-valign="-5px" altimg-width="50px" alttext="N_{{\rm min}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E3" title="underflow">N</mi><mi href="./3.1#E3" title="underflow">min</mi></msub></math>:  underflow (locally)</span> and
+<span class="ltx_text"><math altimg="m35.png" altimg-height="21px" altimg-valign="-5px" altimg-width="53px" alttext="N_{{\rm max}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E3" title="overflow">N</mi><mi href="./3.1#E3" title="overflow">max</mi></msub></math>:  overflow (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r9" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo></math>: equals by definition</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>:  number of significant bits</a>,
+<a class="ltx_ref" href="3.1.html#i.p4" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m25.png" altimg-height="21px" altimg-valign="-5px" altimg-width="48px" alttext="E_{{\rm min}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub></math>:  minimum exponent</a> and
+<a class="ltx_ref" href="3.1.html#i.p4" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m20.png" altimg-height="21px" altimg-valign="-5px" altimg-width="51px" alttext="E_{{\rm max}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub></math>:  maximum exponent</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E3" title="">http://dlmf.nist.gov/3.1.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Underflow (overflow)</em> after computing <math altimg="m80.png" altimg-height="22px" altimg-valign="-6px" altimg-width="54px" alttext="x\neq 0" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math> occurs when <math altimg="m86.png" altimg-height="25px" altimg-valign="-7px" altimg-width="28px" alttext="|x|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></math> is
+smaller (larger) than <math altimg="m36.png" altimg-height="21px" altimg-valign="-5px" altimg-width="50px" alttext="N_{{\rm min}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E3" title="underflow">N</mi><mi href="./3.1#E3" title="underflow">min</mi></msub></math> (<math altimg="m35.png" altimg-height="21px" altimg-valign="-5px" altimg-width="53px" alttext="N_{{\rm max}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E3" title="overflow">N</mi><mi href="./3.1#E3" title="overflow">max</mi></msub></math>).</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">IEEE Standard</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=IEEE%20standard">IEEE standard</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=double%20precision">double precision</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=floating-point%20arithmetic">floating-point arithmetic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=single%20precision">single precision</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.25.I2.ix4.p1" title="In Other Changes ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">3.1</span></span></a></dd>
+<dt>Modification (effective with 1.0.25):</dt>
+<dd>
+The material in this paragraph has been modified to reflect the most
+recent IEEE 754-2019 Floating-Point Arithmetic Standard
+<cite class="ltx_cite ltx_citemacro_citet">IEEE (<a class="ltx_ref" href="bib/I.html#bib2911" title="IEEE International Standard for Information Technology—Microprocessor Systems—Floating-Point arithmetic: IEEE Std 754-2019">2019</a>)</cite>. In the new standard, single, double and
+quad floating-point precisions are replaced with new standard names
+of <em class="ltx_emph ltx_font_italic">binary32</em>, <em class="ltx_emph ltx_font_italic">binary64</em> and <em class="ltx_emph ltx_font_italic">binary128</em>. Also, the
+terminology “memory positions” has been replaced with the more current
+“representation of data in the binary interchange formats”.
+
+<p><span class="ltx_font_italic">Suggested 2019-02-22 by Nicola Torracca</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">The current floating point arithmetic standard is IEEE 754-2019 <cite class="ltx_cite ltx_citemacro_citet">IEEE (<a class="ltx_ref" href="bib/I.html#bib2911" title="IEEE International Standard for Information Technology—Microprocessor Systems—Floating-Point arithmetic: IEEE Std 754-2019">2019</a>)</cite>,
+a minor technical revision of IEEE 754-2008 <cite class="ltx_cite ltx_citemacro_citet">IEEE (<a class="ltx_ref" href="bib/I.html#bib2906" title="IEEE Standard for Floating-Point Arithmetic">2008</a>)</cite>, which was adopted
+in 2011 by the International Standards Organization as ISO/IEC/IEEE 60559.
+In the case of the normalized binary interchange formats, the representation of data
+for <em class="ltx_emph ltx_font_italic">binary32</em> (previously <em class="ltx_emph ltx_font_italic">single precision</em>)
+(<math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="N=32" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p4" title="number of bits in floating point">N</mi><mo>=</mo><mn>32</mn></mrow></math>, <math altimg="m73.png" altimg-height="21px" altimg-valign="-6px" altimg-width="63px" alttext="p=24" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>=</mo><mn>24</mn></mrow></math>, <math altimg="m23.png" altimg-height="21px" altimg-valign="-5px" altimg-width="123px" alttext="E_{{\rm min}}=-126" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub><mo>=</mo><mrow><mo>−</mo><mn>126</mn></mrow></mrow></math>, <math altimg="m17.png" altimg-height="21px" altimg-valign="-5px" altimg-width="110px" alttext="E_{{\rm max}}=127" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub><mo>=</mo><mn>127</mn></mrow></math>),
+<em class="ltx_emph ltx_font_italic">binary64</em> (previously <em class="ltx_emph ltx_font_italic">double precision</em>)
+(<math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="N=64" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p4" title="number of bits in floating point">N</mi><mo>=</mo><mn>64</mn></mrow></math>, <math altimg="m74.png" altimg-height="21px" altimg-valign="-6px" altimg-width="63px" alttext="p=53" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>=</mo><mn>53</mn></mrow></math>, <math altimg="m22.png" altimg-height="21px" altimg-valign="-5px" altimg-width="133px" alttext="E_{{\rm min}}=-1022" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub><mo>=</mo><mrow><mo>−</mo><mn>1022</mn></mrow></mrow></math>,
+<math altimg="m16.png" altimg-height="21px" altimg-valign="-5px" altimg-width="120px" alttext="E_{{\rm max}}=1023" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub><mo>=</mo><mn>1023</mn></mrow></math>) and
+<em class="ltx_emph ltx_font_italic">binary128</em> (previously <em class="ltx_emph ltx_font_italic">quad precision</em>)
+(<math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="82px" alttext="N=128" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p4" title="number of bits in floating point">N</mi><mo>=</mo><mn>128</mn></mrow></math>, <math altimg="m72.png" altimg-height="21px" altimg-valign="-6px" altimg-width="74px" alttext="p=113" class="ltx_Math" display="inline"><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>=</mo><mn>113</mn></mrow></math>, <math altimg="m24.png" altimg-height="21px" altimg-valign="-5px" altimg-width="144px" alttext="E_{{\rm min}}=-16382" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="minimum exponent">E</mi><mi href="./3.1#i.p4" title="minimum exponent">min</mi></msub><mo>=</mo><mrow><mo>−</mo><mn>16382</mn></mrow></mrow></math>,
+<math altimg="m18.png" altimg-height="21px" altimg-valign="-5px" altimg-width="131px" alttext="E_{{\rm max}}=16383" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#i.p4" title="maximum exponent">E</mi><mi href="./3.1#i.p4" title="maximum exponent">max</mi></msub><mo>=</mo><mn>16383</mn></mrow></math>) are as in Figure <a class="ltx_ref" href="3.1.html#F1" title="Figure 3.1.1 ‣ IEEE Standard ‣ §3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.1.1</span></a>. The
+respective machine precisions are
+<math altimg="m49.png" altimg-height="29px" altimg-valign="-9px" altimg-width="188px" alttext="\frac{1}{2}\epsilon_{M}=0.596\times 10^{-7}" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></mrow><mo>=</mo><mrow><mn>0.596</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>7</mn></mrow></msup></mrow></mrow></math>,
+<math altimg="m48.png" altimg-height="29px" altimg-valign="-9px" altimg-width="196px" alttext="\frac{1}{2}\epsilon_{M}=0.111\times 10^{-15}" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></mrow><mo>=</mo><mrow><mn>0.111</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>15</mn></mrow></msup></mrow></mrow></math> and
+<math altimg="m50.png" altimg-height="29px" altimg-valign="-9px" altimg-width="196px" alttext="\frac{1}{2}\epsilon_{M}=0.963\times 10^{-34}" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></mrow><mo>=</mo><mrow><mn>0.963</mn><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>34</mn></mrow></msup></mrow></mrow></math>.</p>
+</div>
+<figure class="ltx_figure" id="F1"><a href="3.1.F1.mag.html"><img alt="\begin{picture}(152.0,38.0)(-1.0,-1.0)\put(0.0,31.0){\makebox(2.0,6.0)[]{%
+\small 1}}
+\put(0.0,26.0){\framebox(2.0,6.0)[]{$s$}}
+\put(3.0,31.0){\makebox(8.0,6.0)[]{\small 8}}
+\put(3.0,26.0){\framebox(8.0,6.0)[]{$E$}}
+\put(12.0,31.0){\makebox(23.0,6.0)[]{\small 23 bits}}
+\put(12.0,26.0){\framebox(23.0,6.0)[]{$f$}}
+\put(133.0,31.0){$N=32$,}
+\put(135.0,27.0){$p=24$}
+\put(0.0,18.0){\makebox(2.0,6.0)[]{\small 1}}
+\put(0.0,13.0){\framebox(2.0,6.0)[]{$s$}}
+\put(3.0,18.0){\makebox(11.0,6.0)[]{\small 11}}
+\put(3.0,13.0){\framebox(11.0,6.0)[]{$E$}}
+\put(15.0,18.0){\makebox(52.0,6.0)[]{\small 52 bits}}
+\put(15.0,13.0){\framebox(52.0,6.0)[]{$f$}}
+\put(133.0,17.0){$N=64$,}
+\put(135.0,13.0){$p=53$}
+\put(0.0,5.0){\makebox(2.0,6.0)[]{\small 1}}
+\put(0.0,0.0){\framebox(2.0,6.0)[]{$s$}}
+\put(3.0,5.0){\makebox(15.0,6.0)[]{\small 15}}
+\put(3.0,0.0){\framebox(15.0,6.0)[]{$E$}}
+\put(19.0,5.0){\makebox(112.0,6.0)[]{\small 112 bits}}
+\put(19.0,0.0){\framebox(112.0,6.0)[]{$f$}}
+\put(133.0,4.0){$N=128$,}
+\put(135.0,0.0){$p=113$}
+\end{picture}" class="ltx_picture ltx_centering" height="179" id="F1.pic1" src="3/1/F1.png" style="width:384.5pt;height:96.1pt;" width="705"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 3.1.1: </span>Floating-point arithmetic. Representation of data in the binary
+interchange formats for binary32, binary64 and binary128
+(previously single, double and quad precision).
+
+
+<a class="ltx_magnifiable ltx_icon" href="3.1.F1.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m77.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="sign">s</mi></math>:  sign</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>:  number of significant bits</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math>:  exponent</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m68.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="fractional part">f</mi></math>:  fractional part</a> and
+<a class="ltx_ref" href="3.1.html#i.p4" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m34.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./3.1#i.p4" title="number of bits in floating point">N</mi></math>:  number of bits in floating point</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.1.html#Px1.p1" title="IEEE Standard ‣ §3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.25.I2.ix4.p1" title="In Other Changes ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">3.1</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.F1" title="">http://dlmf.nist.gov/3.1.F1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.F1.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.F1.png">png</a>
+</dd>
+<dt>Modification (effective with 1.0.25):</dt>
+<dd>
+The figure has been expanded to include the binary128 floating-point
+representation of data in the binary interchange format described in
+the 2019 Floating-Point Arithmetic Standard IEEE
+754-2019 <cite class="ltx_cite ltx_citemacro_citet">IEEE (<a class="ltx_ref" href="bib/I.html#bib2911" title="IEEE International Standard for Information Technology—Microprocessor Systems—Floating-Point arithmetic: IEEE Std 754-2019">2019</a>)</cite>. The figure caption has been updated
+using the terminology of the 2019 Floating-Point Arithmetic Standard.
+
+<p><span class="ltx_font_italic">Suggested 2019-02-22 by Nicola Torracca</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#Px1.info" title="IEEE Standard ‣ §3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Rounding</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=by%20chopping">by chopping</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=down">down</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=floating-point%20arithmetic">floating-point arithmetic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=rounding">rounding</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=symmetric">symmetric</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=to%20nearest%20machine%20number">to nearest machine number</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">Let <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> be any positive number with</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="31px" altimg-valign="-8px" altimg-width="320px" alttext="x=(1.b_{1}b_{2}\dots b_{p-1}b_{p}b_{p+1}\dots)\cdot 2^{E}," class="ltx_math_unparsed" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo lspace="0em" rspace="0.167em">.</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mi mathvariant="normal">…</mi><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi href="./3.1#i.p2" title="number of significant bits">p</mi></msub><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>+</mo><mn>1</mn></mrow></msub><mi mathvariant="normal">…</mi><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><msup><mn>2</mn><mi href="./3.1#i.p2" title="exponent">E</mi></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m66.png" altimg-height="24px" altimg-valign="-8px" altimg-width="23px" alttext="b_{p}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi href="./3.1#i.p2" title="number of significant bits">p</mi></msub></math>:  bit</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>:  number of significant bits</a> and
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math>:  exponent</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E4" title="">http://dlmf.nist.gov/3.1.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#Px2.info" title="Rounding ‣ §3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p"><math altimg="m37.png" altimg-height="21px" altimg-valign="-5px" altimg-width="165px" alttext="N_{{\rm min}}\leq x\leq N_{{\rm max}}" class="ltx_Math" display="inline"><mrow><msub><mi href="./3.1#E3" title="underflow">N</mi><mi href="./3.1#E3" title="underflow">min</mi></msub><mo>≤</mo><mi>x</mi><mo>≤</mo><msub><mi href="./3.1#E3" title="overflow">N</mi><mi href="./3.1#E3" title="overflow">max</mi></msub></mrow></math>, and</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.1.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="20px" altimg-valign="-7px" altimg-width="32px" alttext="\displaystyle x_{-}" class="ltx_Math" display="inline"><msub><mi>x</mi><mo>−</mo></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="31px" altimg-valign="-8px" altimg-width="213px" alttext="\displaystyle=(1.b_{1}b_{2}\dots b_{p-1})\cdot 2^{E}," class="ltx_math_unparsed" display="inline"><mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo lspace="0em" rspace="0.167em">.</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mi mathvariant="normal">…</mi><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><msup><mn>2</mn><mi href="./3.1#i.p2" title="exponent">E</mi></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="20px" altimg-valign="-7px" altimg-width="32px" alttext="\displaystyle x_{+}" class="ltx_Math" display="inline"><msub><mi>x</mi><mo>+</mo></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="31px" altimg-valign="-8px" altimg-width="282px" alttext="\displaystyle=((1.b_{1}b_{2}\dots b_{p-1})+\epsilon_{M})\cdot 2^{E}." class="ltx_math_unparsed" display="inline"><mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo lspace="0em" rspace="0.167em">.</mo><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>1</mn></msub><msub><mi href="./3.1#i.p2" title="bit">b</mi><mn>2</mn></msub><mi mathvariant="normal">…</mi><msub><mi href="./3.1#i.p2" title="bit">b</mi><mrow><mi href="./3.1#i.p2" title="number of significant bits">p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><mo>+</mo><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><msup><mn>2</mn><mi href="./3.1#i.p2" title="exponent">E</mi></msup><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m66.png" altimg-height="24px" altimg-valign="-8px" altimg-width="23px" alttext="b_{p}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p2" title="bit">b</mi><mi href="./3.1#i.p2" title="number of significant bits">p</mi></msub></math>:  bit</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="number of significant bits">p</mi></math>:  number of significant bits</a>,
+<a class="ltx_ref" href="3.1.html#i.p2" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m15.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="E" class="ltx_Math" display="inline"><mi href="./3.1#i.p2" title="exponent">E</mi></math>:  exponent</a> and
+<a class="ltx_ref" href="3.1.html#i.p4" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m42.png" altimg-height="16px" altimg-valign="-5px" altimg-width="31px" alttext="\epsilon_{M}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></math>:  machine epsilon</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E5" title="">http://dlmf.nist.gov/3.1.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E5a.png">png</a>, <a href="http://dlmf.nist.gov/3.1.E5b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#Px2.info" title="Rounding ‣ §3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#i.info" title="§3.1(i) Floating-Point Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(i)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then <em class="ltx_emph ltx_font_italic">rounding by chopping</em> or <em class="ltx_emph ltx_font_italic">rounding down</em> of <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> gives <math altimg="m83.png" altimg-height="18px" altimg-valign="-7px" altimg-width="30px" alttext="x_{-}" class="ltx_Math" display="inline"><msub><mi>x</mi><mo>−</mo></msub></math>,
+with maximum relative error <math altimg="m42.png" altimg-height="16px" altimg-valign="-5px" altimg-width="31px" alttext="\epsilon_{M}" class="ltx_Math" display="inline"><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></math>. <em class="ltx_emph ltx_font_italic">Symmetric rounding</em> or
+<em class="ltx_emph ltx_font_italic">rounding to nearest</em> of <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> gives <math altimg="m83.png" altimg-height="18px" altimg-valign="-7px" altimg-width="30px" alttext="x_{-}" class="ltx_Math" display="inline"><msub><mi>x</mi><mo>−</mo></msub></math> or <math altimg="m82.png" altimg-height="18px" altimg-valign="-7px" altimg-width="30px" alttext="x_{+}" class="ltx_Math" display="inline"><msub><mi>x</mi><mo>+</mo></msub></math>, whichever is nearer
+to <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math>, with maximum relative error equal to the machine precision
+<math altimg="m51.png" altimg-height="29px" altimg-valign="-9px" altimg-width="105px" alttext="\frac{1}{2}\epsilon_{M}=2^{-p}" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./3.1#i.p4" title="machine epsilon">ϵ</mi><mi href="./3.1#i.p4" title="machine epsilon">M</mi></msub></mrow><mo>=</mo><msup><mn>2</mn><mrow><mo>−</mo><mi href="./3.1#i.p2" title="number of significant bits">p</mi></mrow></msup></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px2.p2">
+<p class="ltx_p">Negative numbers <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> are rounded in the same way as <math altimg="m11.png" altimg-height="18px" altimg-valign="-4px" altimg-width="32px" alttext="-x" class="ltx_Math" display="inline"><mrow><mo>−</mo><mi>x</mi></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px2.p3">
+<p class="ltx_p">For further information see <cite class="ltx_cite ltx_citemacro_citet">Goldberg (<a class="ltx_ref" href="bib/G.html#bib948" title="What every computer scientist should know about floating-point arithmetic">1991</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Overton (<a class="ltx_ref" href="bib/O.html#bib1822" title="Numerical Computing with IEEE Floating Point Arithmetic">2001</a>)</cite>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.1(ii) </span>Interval Arithmetic</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=arithmetics">arithmetics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=interval">interval</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=interval%20arithmetic">interval arithmetic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=validated%20computing">validated computing</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.25.I2.ix4.p1" title="In Other Changes ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">3.1</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.ii" title="">http://dlmf.nist.gov/3.1.ii</a></dd>
+<dt>Addition (effective with 1.0.25):</dt>
+<dd>
+A sentence at the end of this subsection has been added referring readers to
+the IEEE Standards for Interval Arithmetic <cite class="ltx_cite ltx_citemacro_citet">IEEE (<a class="ltx_ref" href="bib/I.html#bib2912" title="IEEE Standard for Interval Arithmetic: IEEE Std 1788-2015">2015</a>, <a class="ltx_ref" href="bib/I.html#bib2913" title="IEEE Standard for Interval Arithmetic: IEEE Std 1788.1-2017">2018</a>)</cite>.
+
+<p><span class="ltx_font_italic">Suggested 2019-02-22 by Nicola Torracca</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Interval arithmetic</em> is intended for bounding the total effect of
+rounding errors of calculations with machine numbers. With this arithmetic the
+computed result can be proved to lie in a certain interval, which leads to
+<em class="ltx_emph ltx_font_italic">validated computing</em> with guaranteed and rigorous inclusion regions for
+the results.</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">Let <math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="G" class="ltx_Math" display="inline"><mi href="./3.1#ii.p2" title="set of closed intervals">G</mi></math> be the set of closed intervals <math altimg="m58.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="\{[a,b]\}" class="ltx_Math" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow><mo stretchy="false">}</mo></mrow></math>. The elementary arithmetical
+operations on intervals are defined as follows:</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="27px" altimg-valign="-7px" altimg-width="267px" alttext="I*J=\{x*y\,|\,x\in I,y\in J\}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi>I</mi><mo lspace="0.222em" rspace="0.222em">∗</mo><mi>J</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">∗</mo><mi>y</mi></mrow><mo lspace="0.170em" rspace="0.170em">|</mo><mrow><mrow><mi>x</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi>I</mi></mrow><mo>,</mo><mrow><mi>y</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi>J</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m29.png" altimg-height="22px" altimg-valign="-6px" altimg-width="79px" alttext="I,J\in G" class="ltx_Math" display="inline"><mrow><mrow><mi>I</mi><mo>,</mo><mi>J</mi></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./3.1#ii.p2" title="set of closed intervals">G</mi></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m52.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a> and
+<a class="ltx_ref" href="3.1.html#ii.p2" title="§3.1(ii) Interval Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="G" class="ltx_Math" display="inline"><mi href="./3.1#ii.p2" title="set of closed intervals">G</mi></math>:  set of closed intervals</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E6" title="">http://dlmf.nist.gov/3.1.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#ii.info" title="§3.1(ii) Interval Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(ii)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="137px" alttext="*\in\{+,-,\cdot,/\}" class="ltx_Math" display="inline"><mrow><mi mathvariant="normal">∗</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">+</mi><mo>,</mo><mi mathvariant="normal">-</mi><mo>,</mo><mi mathvariant="normal">⋅</mi><mo>,</mo><mi mathvariant="normal">/</mi><mo stretchy="false">}</mo></mrow></mrow></math>, with appropriate roundings of the end points of
+<math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="48px" alttext="I*J" class="ltx_Math" display="inline"><mrow><mi>I</mi><mo lspace="0.222em" rspace="0.222em">∗</mo><mi>J</mi></mrow></math> when machine numbers are being used. Division is possible only if the
+divisor interval does not contain zero.</p>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">A basic text on interval arithmetic and analysis is <cite class="ltx_cite ltx_citemacro_citet">Alefeld and Herzberger (<a class="ltx_ref" href="bib/index.html#bib57" title="Introduction to Interval Computations">1983</a>)</cite>,
+and for applications and further information see <cite class="ltx_cite ltx_citemacro_citet">Moore (<a class="ltx_ref" href="bib/M.html#bib1649" title="Methods and Applications of Interval Analysis">1979</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Petković and Petković (<a class="ltx_ref" href="bib/P.html#bib1868" title="Complex Interval Arithmetic and its Applications">1998</a>)</cite>. The last reference includes analogs for arithmetic
+in the complex plane <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>.
+For interval arithmetic, one should refer to the IEEE Standards for
+Interval Arithmetic <cite class="ltx_cite ltx_citemacro_citet">IEEE (<a class="ltx_ref" href="bib/I.html#bib2912" title="IEEE Standard for Interval Arithmetic: IEEE Std 1788-2015">2015</a>, <a class="ltx_ref" href="bib/I.html#bib2913" title="IEEE Standard for Interval Arithmetic: IEEE Std 1788.1-2017">2018</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.1(iii) </span>Rational Arithmetics</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=arithmetics">arithmetics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exact">exact</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exact%20rational">exact rational</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exact%20rational%20arithmetic">exact rational arithmetic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=rational%20arithmetics">rational arithmetics</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.iii" title="">http://dlmf.nist.gov/3.1.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Computer algebra systems use <em class="ltx_emph ltx_font_italic">exact rational arithmetic</em> with rational
+numbers <math altimg="m71.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="p/q" class="ltx_Math" display="inline"><mrow><mi href="./3.1#iii.p1" title="multi-length integer">p</mi><mo>/</mo><mi href="./3.1#iii.p1" title="multi-length integer">q</mi></mrow></math>, where <math altimg="m75.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./3.1#iii.p1" title="multi-length integer">p</mi></math> and <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./3.1#iii.p1" title="multi-length integer">q</mi></math> are multi-length integers. During the
+calculations common divisors are removed from the rational numbers, and the
+final results can be converted to decimal representations of arbitrary length.
+For further information see <cite class="ltx_cite ltx_citemacro_citet">Matula and Kornerup (<a class="ltx_ref" href="bib/M.html#bib1567" title="Foundations of Finite Precision Rational Arithmetic">1980</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.1(iv) </span>Level-Index Arithmetic</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=arithmetics">arithmetics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=generalized%20logarithms">generalized logarithms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=generalized%20precision">generalized precision</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=level-index">level-index</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=level-index%20arithmetic">level-index arithmetic</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="4.44.html#p2" title="§4.44 Other Applications ‣ Applications ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">§4.44</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix1.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.iv" title="">http://dlmf.nist.gov/3.1.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">To eliminate overflow or underflow in finite-precision arithmetic numbers are
+represented by using <em class="ltx_emph ltx_font_italic">generalized logarithms</em> <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="58px" alttext="\ln_{\ell}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> given by
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">3.1.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="27px" altimg-valign="-7px" altimg-width="61px" alttext="\displaystyle\ln_{0}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="19px" altimg-valign="-6px" altimg-width="46px" alttext="\displaystyle=x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mi>x</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="27px" altimg-valign="-7px" altimg-width="60px" alttext="\displaystyle\ln_{\ell}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="155px" alttext="\displaystyle=\ln\left(\ln_{\ell-1}(x)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mrow><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m39.png" altimg-height="22px" altimg-valign="-6px" altimg-width="104px" alttext="\ell=1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m54.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a> and
+<a class="ltx_ref" href="3.1.html#iv.p1" title="§3.1(iv) Level-Index Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="\ell" class="ltx_Math" display="inline"><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi></math>:  base</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E7" title="">http://dlmf.nist.gov/3.1.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E7a.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E7b.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E7a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E7b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E7a.png">png</a>, <a href="http://dlmf.nist.gov/3.1.E7b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#iv.info" title="§3.1(iv) Level-Index Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(iv)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with <math altimg="m79.png" altimg-height="20px" altimg-valign="-5px" altimg-width="54px" alttext="x\geq 0" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math> and <math altimg="m40.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="\ell" class="ltx_Math" display="inline"><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi></math> the unique nonnegative integer such that
+<math altimg="m59.png" altimg-height="25px" altimg-valign="-7px" altimg-width="165px" alttext="a\equiv\ln_{\ell}(x)\in[0,1)" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><mrow><msub><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t2.r1" stretchy="false" title="half-closed interval">[</mo><mn>0</mn><mo href="./front/introduction#common.t2.r1" title="half-closed interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t2.r1" stretchy="false" title="half-closed interval">)</mo></mrow></mrow></math>. In <em class="ltx_emph ltx_font_italic">level-index arithmetic</em> <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math> is
+represented by <math altimg="m38.png" altimg-height="20px" altimg-valign="-4px" altimg-width="49px" alttext="\ell+a" class="ltx_Math" display="inline"><mrow><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi><mo>+</mo><mi>a</mi></mrow></math> (or <math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="-(\ell+a)" class="ltx_Math" display="inline"><mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./3.1#iv.p1" mathvariant="normal" title="base">ℓ</mi><mo>+</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> for negative numbers).
+Also in this arithmetic <em class="ltx_emph ltx_font_italic">generalized precision</em> can be defined, which includes
+absolute error and relative precision (§<a class="ltx_ref" href="3.1.html#v" title="§3.1(v) Error Measures ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.1(v)</span></a>) as special cases.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">For further information see <cite class="ltx_cite ltx_citemacro_citet">Clenshaw and Olver (<a class="ltx_ref" href="bib/C.html#bib529" title="Beyond floating point">1984</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Clenshaw<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/C.html#bib530" title="Level-Index Arithmetic: An Introductory Survey">1989</a>)</cite>. For applications see <cite class="ltx_cite ltx_citemacro_citet">Lozier (<a class="ltx_ref" href="bib/L.html#bib2731" title="An underflow-induced graphics failure solved by SLI arithmetic">1993</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="iv.p3">
+<p class="ltx_p">For further references on level-index arithmetic (and also other arithmetics)
+see <cite class="ltx_cite ltx_citemacro_citet">Anuta<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/index.html#bib109" title="The MasPar MP-1 as a computer arithmetic laboratory">1996</a>)</cite>. See also <cite class="ltx_cite ltx_citemacro_citet">Hayes (<a class="ltx_ref" href="bib/H.html#bib2730" title="The higher arithmetic">2009</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§3.1(v) </span>Error Measures</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=absolute%20error">absolute error</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=arithmetics">arithmetics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=complex">complex</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=complex%20arithmetic">complex arithmetic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20measures">error measures</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=mollified%20error">mollified error</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relative%20error">relative error</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=relative%20precision">relative precision</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="3.1.html#iv.p1" title="§3.1(iv) Level-Index Arithmetic ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.v" title="">http://dlmf.nist.gov/3.1.v</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">If <math altimg="m81.png" altimg-height="18px" altimg-valign="-2px" altimg-width="26px" alttext="x^{*}" class="ltx_Math" display="inline"><msup><mi>x</mi><mo>∗</mo></msup></math> is an approximation to a real or complex number <math altimg="m78.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math>, then the
+<em class="ltx_emph ltx_font_italic">absolute error</em> is
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="49px" altimg-valign="-7px" altimg-width="132px" alttext="\epsilon_{a}=\left|x^{*}-x\right|." class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./3.1#E8" title="absolute error">ϵ</mi><mi href="./3.1#E8" title="absolute error">a</mi></msub><mo>=</mo><mrow><mo>|</mo><mrow><msup><mi>x</mi><mo>∗</mo></msup><mo>−</mo><mi>x</mi></mrow><mo>|</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m44.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="\epsilon_{a}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E8" title="absolute error">ϵ</mi><mi href="./3.1#E8" title="absolute error">a</mi></msub></math>:  absolute error (locally)</span></dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">3.5.1</span> (in absolute value)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E8" title="">http://dlmf.nist.gov/3.1.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#v.info" title="§3.1(v) Error Measures ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(v)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">If <math altimg="m80.png" altimg-height="22px" altimg-valign="-6px" altimg-width="54px" alttext="x\neq 0" class="ltx_Math" display="inline"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math>, the <em class="ltx_emph ltx_font_italic">relative error</em> is
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="74px" altimg-valign="-22px" altimg-width="191px" alttext="\epsilon_{r}=\left|\frac{x^{*}-x}{x}\right|=\frac{\epsilon_{a}}{\left|x\right|}." class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./3.1#E9" title="relative error">ϵ</mi><mi href="./3.1#E9" title="relative error">r</mi></msub><mo>=</mo><mrow><mo>|</mo><mfrac><mrow><msup><mi>x</mi><mo>∗</mo></msup><mo>−</mo><mi>x</mi></mrow><mi>x</mi></mfrac><mo>|</mo></mrow><mo>=</mo><mfrac><msub><mi href="./3.1#E8" title="absolute error">ϵ</mi><mi href="./3.1#E8" title="absolute error">a</mi></msub><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m46.png" altimg-height="16px" altimg-valign="-5px" altimg-width="22px" alttext="\epsilon_{r}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E9" title="relative error">ϵ</mi><mi href="./3.1#E9" title="relative error">r</mi></msub></math>:  relative error (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="3.1.html#E8" title="(3.1.8) ‣ §3.1(v) Error Measures ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="\epsilon_{a}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E8" title="absolute error">ϵ</mi><mi href="./3.1#E8" title="absolute error">a</mi></msub></math>:  absolute error</a></dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">3.5.2</span> (in absolute value)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E9" title="">http://dlmf.nist.gov/3.1.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#v.info" title="§3.1(v) Error Measures ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(v)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">relative precision</em> is
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="79px" altimg-valign="-8px" altimg-width="167px" alttext="\epsilon_{\mathit{rp}}=\left|\ln\left(\ifrac{x^{*}}{x}\right)\right|," class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./3.1#E10" title="relative precision">ϵ</mi><mi href="./3.1#E10" title="relative precision">𝑟𝑝</mi></msub><mo>=</mo><mrow><mo>|</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>x</mi><mo>∗</mo></msup><mo lspace="0em" rspace="0em">/</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>|</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m43.png" altimg-height="19px" altimg-valign="-8px" altimg-width="31px" alttext="\epsilon_{\mathit{rp}}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E10" title="relative precision">ϵ</mi><mi href="./3.1#E10" title="relative precision">𝑟𝑝</mi></msub></math>:  relative precision (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="4.2.html#E2" title="(4.2.2) ‣ §4.2(i) The Logarithm ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m54.png" altimg-height="18px" altimg-valign="-2px" altimg-width="36px" alttext="\ln\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: principal branch of logarithm function</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E10" title="">http://dlmf.nist.gov/3.1.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#v.info" title="§3.1(v) Error Measures ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(v)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m84.png" altimg-height="19px" altimg-valign="-3px" altimg-width="76px" alttext="xx^{*}&gt;0" class="ltx_Math" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><msup><mi>x</mi><mo>∗</mo></msup></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> for real variables, and <math altimg="m85.png" altimg-height="22px" altimg-valign="-6px" altimg-width="76px" alttext="xx^{*}\neq 0" class="ltx_Math" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><msup><mi>x</mi><mo>∗</mo></msup></mrow><mo>≠</mo><mn>0</mn></mrow></math> for complex
+variables (with the principal value of the logarithm).</p>
+</div>
+<div class="ltx_para" id="v.p2">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">mollified error</em> is
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">3.1.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="56px" altimg-valign="-21px" altimg-width="170px" alttext="\epsilon_{m}=\frac{\left|x^{*}-x\right|}{\max(\left|x\right|,1)}." class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./3.1#E11" title="molified error">ϵ</mi><mi href="./3.1#E11" title="molified error">m</mi></msub><mo>=</mo><mfrac><mrow><mo>|</mo><mrow><msup><mi>x</mi><mo>∗</mo></msup><mo>−</mo><mi>x</mi></mrow><mo>|</mo></mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m45.png" altimg-height="16px" altimg-valign="-5px" altimg-width="28px" alttext="\epsilon_{m}" class="ltx_Math" display="inline"><msub><mi href="./3.1#E11" title="molified error">ϵ</mi><mi href="./3.1#E11" title="molified error">m</mi></msub></math>:  molified error (locally)</span></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/3.1.E11" title="">http://dlmf.nist.gov/3.1.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/3.1.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/3.1.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/3.1.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="3.1.html#v.info" title="§3.1(v) Error Measures ‣ §3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1(v)</span></a>,
+<a class="ltx_ref" href="3.1.html#info" title="§3.1 Arithmetics and Error Measures ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.1</span></a> and
+<a class="ltx_ref" href="3.html#info" title="Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">Ch.3</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="v.p3">
+<p class="ltx_p">For error measures for complex arithmetic see <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1803" title="Error Analysis of Complex Arithmetic">1983</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="3.html" rel="prev" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Numerical Methods</span></a><a class="ltx_ref" href="3.2.html" rel="next" title="In Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Linear Algebra</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

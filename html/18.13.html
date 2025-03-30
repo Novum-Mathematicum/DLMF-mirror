@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/18.13";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="18.html#PT3" rel="up" title="Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.html" rel="up up" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="index.html" rel="start" title=""/>
+<link href="18.12.html" rel="prev" title="§18.12 Generating Functions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.14.html" rel="next" title="§18.14 Inequalities ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.1.html" rel="section" title="§18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.2.html" rel="section" title="§18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.3.html" rel="section" title="§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.4.html" rel="section" title="§18.4 Graphics ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.5.html" rel="section" title="§18.5 Explicit Representations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.6.html" rel="section" title="§18.6 Symmetry, Special Values, and Limits to Monomials ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.7.html" rel="section" title="§18.7 Interrelations and Limit Relations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.8.html" rel="section" title="§18.8 Differential Equations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.9.html" rel="section" title="§18.9 Recurrence Relations and Derivatives ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.10.html" rel="section" title="§18.10 Integral Representations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.11.html" rel="section" title="§18.11 Relations to Other Functions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.12.html" rel="section" title="§18.12 Generating Functions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.14.html" rel="section" title="§18.14 Inequalities ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.15.html" rel="section" title="§18.15 Asymptotic Approximations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.16.html" rel="section" title="§18.16 Zeros ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.17.html" rel="section" title="§18.17 Integrals ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.18.html" rel="section" title="§18.18 Sums ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.19.html" rel="section" title="§18.19 Hahn Class: Definitions ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.20.html" rel="section" title="§18.20 Hahn Class: Explicit Representations ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.21.html" rel="section" title="§18.21 Hahn Class: Interrelations ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.22.html" rel="section" title="§18.22 Hahn Class: Recurrence Relations and Differences ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.23.html" rel="section" title="§18.23 Hahn Class: Generating Functions ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.24.html" rel="section" title="§18.24 Hahn Class: Asymptotic Approximations ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.25.html" rel="section" title="§18.25 Wilson Class: Definitions ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.26.html" rel="section" title="§18.26 Wilson Class: Continued ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.27.html" rel="section" title="§18.27 𝑞-Hahn Class ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.28.html" rel="section" title="§18.28 Askey–Wilson Class ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.29.html" rel="section" title="§18.29 Asymptotic Approximations for 𝑞-Hahn and Askey–Wilson Classes ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.30.html" rel="section" title="§18.30 Associated OP’s ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.31.html" rel="section" title="§18.31 Bernstein–Szegő Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.32.html" rel="section" title="§18.32 OP’s with Respect to Freud Weights ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.33.html" rel="section" title="§18.33 Polynomials Orthogonal on the Unit Circle ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.34.html" rel="section" title="§18.34 Bessel Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.35.html" rel="section" title="§18.35 Pollaczek Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.36.html" rel="section" title="§18.36 Miscellaneous Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.37.html" rel="section" title="§18.37 Classical OP’s in Two or More Variables ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.38.html" rel="section" title="§18.38 Mathematical Applications ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.39.html" rel="section" title="§18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.40.html" rel="section" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.41.html" rel="section" title="§18.41 Tables ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.42.html" rel="section" title="§18.42 Software ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Chebyshev polynomials, Hermite polynomials, Laguerre polynomials, Legendre polynomials, classical orthogonal polynomials, continued fraction, continued fractions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="18.13.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="18.13.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="18.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18 </span>Orthogonal Polynomials</span></a><a class="ltx_ref" href="18.html#PT3" rel="up" title="In Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title">Classical Orthogonal Polynomials</span></a><a class="ltx_ref" href="18.12.html" rel="prev" title="In Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.12 </span>Generating Functions</span></a><a class="ltx_ref" href="18.14.html" rel="next" title="In Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.14 </span>Inequalities</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§18.13 </span>Continued Fractions</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=classical%20orthogonal%20polynomials">classical orthogonal polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=continued%20fractions">continued fractions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Lorentzen and Waadeland (<a class="ltx_ref" href="bib/L.html#bib1468" title="Continued Fractions with Applications">1992</a>, pp. 446–448)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="18.13.html" title="">http://dlmf.nist.gov/18.13</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<p class="ltx_p">We use the terminology of §<a class="ltx_ref" href="1.12.html#ii" title="§1.12(ii) Convergents ‣ §1.12 Continued Fractions ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.12(ii)</span></a>.
+
+The following formulae are explicit cases of (<a class="ltx_ref" href="18.2.html#E34" title="(18.2.34) ‣ §18.2(x) Orthogonal Polynomials and Continued Fractions ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.2.34</span></a>)–(<a class="ltx_ref" href="18.2.html#E36" title="(18.2.36) ‣ §18.2(x) Orthogonal Polynomials and Continued Fractions ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.2.36</span></a>);
+this area is fully explored in §§<a class="ltx_ref" href="18.30.html#vi" title="§18.30(vi) Corecursive Orthogonal Polynomials ‣ §18.30 Associated OP’s ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.30(vi)</span></a> and <a class="ltx_ref" href="18.30.html#vii" title="§18.30(vii) Corecursive and Associated Monic Orthogonal Polynomials ‣ §18.30 Associated OP’s ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.30(vii)</span></a>.</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h2 class="ltx_title ltx_title_paragraph">Chebyshev</h2>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Chebyshev%20polynomials">Chebyshev polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=continued%20fractions">continued fractions</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p"><math altimg="m4.png" altimg-height="25px" altimg-valign="-7px" altimg-width="59px" alttext="T_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./18.3#T1.t1.r4" title="Chebyshev polynomial of the first kind">T</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> is the denominator of the <math altimg="m7.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>th approximant to:</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.13.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="55px" altimg-valign="-18px" altimg-width="193px" alttext="\cfrac{-1}{x+\cfrac{-1}{2x+\cfrac{-1}{2x+}}}\cdots," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.13.E1" title="">http://dlmf.nist.gov/18.13.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.13.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.13.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.13.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#Px1.info" title="Chebyshev ‣ §18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a>,
+<a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and <math altimg="m5.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="U_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./18.3#T1.t1.r5" title="Chebyshev polynomial of the second kind">U</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> is the denominator of the <math altimg="m7.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>th approximant to:</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.13.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="55px" altimg-valign="-18px" altimg-width="204px" alttext="\cfrac{-1}{2x+\cfrac{-1}{2x+\cfrac{-1}{2x+}}}\cdots." class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.13.E2" title="">http://dlmf.nist.gov/18.13.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.13.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.13.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.13.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#Px1.info" title="Chebyshev ‣ §18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a>,
+<a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h2 class="ltx_title ltx_title_paragraph">Legendre</h2>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Legendre%20polynomials">Legendre polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=continued%20fraction">continued fraction</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p"><math altimg="m3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="P_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./18.3#T1.t1.r10" title="Legendre polynomial">P</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> is the denominator of the <math altimg="m7.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>th approximant to:</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.13.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="62px" altimg-valign="-24px" altimg-width="260px" alttext="\cfrac{a_{1}}{x+\cfrac{-\frac{1}{2}}{\frac{3}{2}x+\cfrac{-\frac{2}{3}}{\frac{5%
+}{3}x+\cfrac{-\frac{3}{4}}{\frac{7}{4}x+}}}}\cdots," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><msub><mi>a</mi><mn>1</mn></msub><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mrow><mrow><mfrac><mn>5</mn><mn>3</mn></mfrac><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow><mrow><mrow><mfrac><mn>7</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.13.E3" title="">http://dlmf.nist.gov/18.13.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.13.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.13.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.13.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#Px2.info" title="Legendre ‣ §18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a>,
+<a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m6.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="a_{1}" class="ltx_Math" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> is an arbitrary nonzero constant.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h2 class="ltx_title ltx_title_paragraph">Laguerre</h2>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laguerre%20polynomials">Laguerre polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=continued%20fraction">continued fraction</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<p class="ltx_p"><math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="L_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./18.1#I1.ix7.p1" title="Laguerre polynomial">L</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> is the denominator of the <math altimg="m7.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>th approximant to:</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.13.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="62px" altimg-valign="-24px" altimg-width="452px" alttext="\cfrac{a_{1}}{1-x+\cfrac{-\frac{1}{2}}{\frac{1}{2}(3-x)+\cfrac{-\frac{2}{3}}{%
+\frac{1}{3}(5-x)+\cfrac{-\frac{3}{4}}{\frac{1}{4}(7-x)+}}}}\cdots," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><msub><mi>a</mi><mn>1</mn></msub><mrow><mrow><mn>1</mn><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>5</mn><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow><mrow><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>7</mn><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo></mrow></mfrac></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.13.E4" title="">http://dlmf.nist.gov/18.13.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.13.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.13.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.13.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#Px3.info" title="Laguerre ‣ §18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a>,
+<a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m6.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="a_{1}" class="ltx_Math" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> is again an arbitrary nonzero constant.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h2 class="ltx_title ltx_title_paragraph">Hermite</h2>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Hermite%20polynomials">Hermite polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=classical%20orthogonal%20polynomials">classical orthogonal polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=continued%20fractions">continued fractions</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<p class="ltx_p"><math altimg="m1.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="H_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./18.3#T1.t1.r13" title="Hermite polynomial">H</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> is the denominator of the <math altimg="m7.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>th approximant to:</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.13.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="55px" altimg-valign="-18px" altimg-width="262px" alttext="\cfrac{1}{2x+\cfrac{-2}{2x+\cfrac{-4}{2x+\cfrac{-6}{2x+}}}}\cdots." class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>2</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>4</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac><mfrac><mrow><mo>−</mo><mn>6</mn></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow><mo>+</mo></mrow></mfrac></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd><a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m9.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.13.E5" title="">http://dlmf.nist.gov/18.13.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.13.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.13.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.13.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.13.html#Px4.info" title="Hermite ‣ §18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a>,
+<a class="ltx_ref" href="18.13.html#info" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.13</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px4.p2">
+<p class="ltx_p">See also <cite class="ltx_cite ltx_citemacro_citet">Cuyt<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/C.html#bib608" title="Handbook of Continued Fractions for Special Functions">2008</a>, pp. 91–99)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="18.12.html" rel="prev" title="In Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.12 </span>Generating Functions</span></a><a class="ltx_ref" href="18.14.html" rel="next" title="In Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.14 </span>Inequalities</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

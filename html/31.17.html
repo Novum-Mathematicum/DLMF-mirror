@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/31.17";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="31.html#PT3" rel="up" title="Applications ‣ Chapter 31 Heun Functions"/>
+<link href="31.html" rel="up up" title="Chapter 31 Heun Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="31.16.html" rel="prev" title="§31.16 Mathematical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="31.18.html" rel="next" title="§31.18 Methods of Computation ‣ Computation ‣ Chapter 31 Heun Functions"/>
+<link href="31.1.html" rel="section" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"/>
+<link href="31.2.html" rel="section" title="§31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.3.html" rel="section" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.4.html" rel="section" title="§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.5.html" rel="section" title="§31.5 Solutions Analytic at Three Singularities: Heun Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.6.html" rel="section" title="§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.7.html" rel="section" title="§31.7 Relations to Other Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.8.html" rel="section" title="§31.8 Solutions via Quadratures ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.9.html" rel="section" title="§31.9 Orthogonality ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.10.html" rel="section" title="§31.10 Integral Equations and Representations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.11.html" rel="section" title="§31.11 Expansions in Series of Hypergeometric Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.12.html" rel="section" title="§31.12 Confluent Forms of Heun’s Equation ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.13.html" rel="section" title="§31.13 Asymptotic Approximations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.14.html" rel="section" title="§31.14 General Fuchsian Equation ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.15.html" rel="section" title="§31.15 Stieltjes Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.16.html" rel="section" title="§31.16 Mathematical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="31.18.html" rel="section" title="§31.18 Methods of Computation ‣ Computation ‣ Chapter 31 Heun Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Heun functions, Heun functions and Heun’s equation, Heun’s equation, Rossby waves, application to Rossby waves, applications, astrophysics, biconfluent Heun equation, biconfluent Heun functions, black holes, confluent Heun equation, coordinate systems, dislocation theory, elliptic, elliptic coordinates, physical, quantum mechanics, quantum spins, quantum systems, separation of variables, spectral problems, statistical mechanics" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="31.17.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="31.17.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="31.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31 </span>Heun Functions</span></a><a class="ltx_ref" href="31.html#PT3" rel="up" title="In Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title">Applications</span></a><a class="ltx_ref" href="31.16.html" rel="prev" title="In Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.16 </span>Mathematical Applications</span></a><a class="ltx_ref" href="31.18.html" rel="next" title="In Computation ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.18 </span>Methods of Computation</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§31.17 </span>Physical Applications</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20functions">Heun functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=physical">physical</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="31.17.html" title="">http://dlmf.nist.gov/31.17</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="31.17.html#i"><span class="ltx_tag ltx_tag_subsection">§31.17(i) </span>Addition of Three Quantum Spins</a></li>
+<li class="ltx_tocentry"><a href="31.17.html#ii"><span class="ltx_tag ltx_tag_subsection">§31.17(ii) </span>Other Applications</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§31.17(i) </span>Addition of Three Quantum Spins</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=coordinate%20systems">coordinate systems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=elliptic">elliptic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=elliptic%20coordinates">elliptic coordinates</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=quantum%20spins">quantum spins</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=separation%20of%20variables">separation of variables</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spectral%20problems">spectral problems</a>
+</dd>
+<dt>Notes:</dt>
+<dd>This subsection is based on the theory of the Gaudin magnet; see
+<cite class="ltx_cite ltx_citemacro_citet">Gaudin (<a class="ltx_ref" href="bib/G.html#bib867" title="La fonction d’onde de Bethe">1983</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Kuznetsov (<a class="ltx_ref" href="bib/K.html#bib1358" title="Equivalence of two graphical calculi">1992</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix1.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.i" title="">http://dlmf.nist.gov/31.17.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">The problem of adding three quantum spins <math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathbf{s}" class="ltx_Math" display="inline"><mi>𝐬</mi></math>, <math altimg="m38.png" altimg-height="17px" altimg-valign="-2px" altimg-width="14px" alttext="\mathbf{t}" class="ltx_Math" display="inline"><mi>𝐭</mi></math>, and
+<math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbf{u}" class="ltx_Math" display="inline"><mi>𝐮</mi></math> can be solved by the <em class="ltx_emph ltx_font_italic">method of separation of variables</em>, and
+the solution is given in terms of a product of two Heun functions. We use
+vector notation <math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="[\mathbf{s},\mathbf{t},\mathbf{u}]" class="ltx_Math" display="inline"><mrow><mo stretchy="false">[</mo><mi>𝐬</mi><mo>,</mo><mi>𝐭</mi><mo>,</mo><mi>𝐮</mi><mo stretchy="false">]</mo></mrow></math> (respective scalar
+<math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="(s,t,u)" class="ltx_Math" display="inline"><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>t</mi><mo>,</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></math>) for any one of the three spin operators (respective spin values).</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">Consider the following spectral problem on the sphere <math altimg="m26.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="S_{2}" class="ltx_Math" display="inline"><msub><mi href="./31.17#i.p2" title="sphere">S</mi><mn>2</mn></msub></math>:
+<math altimg="m40.png" altimg-height="26px" altimg-valign="-7px" altimg-width="223px" alttext="\mathbf{x}^{2}=x_{s}^{2}+x_{t}^{2}+x_{u}^{2}=R^{2}" class="ltx_Math" display="inline"><mrow><msup><mi>𝐱</mi><mn>2</mn></msup><mo>=</mo><mrow><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>s</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>t</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>u</mi><mn>2</mn></msubsup></mrow><mo>=</mo><msup><mi href="./31.17#i.p2" title="sphere">R</mi><mn>2</mn></msup></mrow></math>.</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">31.17.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m18.png" altimg-height="29px" altimg-valign="-7px" altimg-width="73px" alttext="\displaystyle\mathbf{J}^{2}\Psi(\mathbf{x})" class="ltx_Math" display="inline"><mrow><msup><mi>𝐉</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m16.png" altimg-height="29px" altimg-valign="-7px" altimg-width="331px" alttext="\displaystyle\equiv(\mathbf{s}+\mathbf{t}+\mathbf{u})^{2}\Psi(\mathbf{x})=j(j+%
+1)\Psi(\mathbf{x})," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>𝐬</mi><mo>+</mo><mi>𝐭</mi><mo>+</mo><mi>𝐮</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="27px" altimg-valign="-7px" altimg-width="78px" alttext="\displaystyle H_{s}\Psi(\mathbf{x})" class="ltx_Math" display="inline"><mrow><mrow><msub><mo href="./31.17#E1" title="operator">𝐻</mo><mi>s</mi></msub><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi></mrow><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m15.png" altimg-height="27px" altimg-valign="-7px" altimg-width="365px" alttext="\displaystyle\equiv(-2\mathbf{s}\cdot\mathbf{t}-(\ifrac{2}{a})\mathbf{s}\cdot%
+\mathbf{u})\Psi(\mathbf{x})=h_{s}\Psi(\mathbf{x})," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>−</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>𝐬</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝐭</mi></mrow></mrow><mo>−</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo lspace="0em" rspace="0em">/</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐬</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝐮</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>h</mi><mi>s</mi></msub><mo>⁢</mo><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m24.png" altimg-height="21px" altimg-valign="-5px" altimg-width="30px" alttext="H_{s}" class="ltx_Math" display="inline"><msub><mo href="./31.17#E1" title="operator">𝐻</mo><mi>s</mi></msub></math>:  operator (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r9" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo></math>: equals by definition</a>,
+<a class="ltx_ref" href="31.1.html#t1.r3" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a> and
+<a class="ltx_ref" href="31.17.html#i.p2" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="25px" altimg-valign="-7px" altimg-width="49px" alttext="\Psi(\mathbf{x})" class="ltx_Math" display="inline"><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  common eigenfunction</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="31.17.html#i.p2" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.E1" title="">http://dlmf.nist.gov/31.17.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.17.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E1a.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E1b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#i.info" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17(i)</span></a>,
+<a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for the common eigenfunction <math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="190px" alttext="\Psi(\mathbf{x})=\Psi(x_{s},x_{t},x_{u})" class="ltx_Math" display="inline"><mrow><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>s</mi></msub><mo>,</mo><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>t</mi></msub><mo>,</mo><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>u</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+where <math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math> is the coupling parameter of interacting spins.
+Introduce elliptic coordinates <math altimg="m51.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="z_{1}" class="ltx_Math" display="inline"><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub></math> and <math altimg="m52.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="z_{2}" class="ltx_Math" display="inline"><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub></math> on <math altimg="m26.png" altimg-height="21px" altimg-valign="-5px" altimg-width="26px" alttext="S_{2}" class="ltx_Math" display="inline"><msub><mi href="./31.17#i.p2" title="sphere">S</mi><mn>2</mn></msub></math>. Then
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.17.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="55px" altimg-valign="-19px" altimg-width="249px" alttext="\frac{x_{s}^{2}}{z_{k}}+\frac{x_{t}^{2}}{z_{k}-1}+\frac{x_{u}^{2}}{z_{k}-a}=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mfrac><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>s</mi><mn>2</mn></msubsup><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mi>k</mi></msub></mfrac><mo>+</mo><mfrac><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>t</mi><mn>2</mn></msubsup><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mi>k</mi></msub><mo>−</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mfrac><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>u</mi><mn>2</mn></msubsup><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mi>k</mi></msub><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="73px" alttext="k=1,2" class="ltx_Math" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m49.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a> and
+<a class="ltx_ref" href="31.17.html#E3" title="(31.17.3) ‣ §31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><math altimg="m46.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{s}" class="ltx_Math" display="inline"><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>s</mi></msub></math>, <math altimg="m47.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="x_{t}" class="ltx_Math" display="inline"><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>t</mi></msub></math>, <math altimg="m48.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{u}" class="ltx_Math" display="inline"><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>u</mi></msub></math>:  coordinates</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.E2" title="">http://dlmf.nist.gov/31.17.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.17.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#i.info" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17(i)</span></a>,
+<a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">31.17.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m20.png" altimg-height="29px" altimg-valign="-7px" altimg-width="28px" alttext="\displaystyle x_{s}^{2}" class="ltx_Math" display="inline"><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>s</mi><mn>2</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="44px" altimg-valign="-16px" altimg-width="102px" alttext="\displaystyle=R^{2}\frac{z_{1}z_{2}}{a}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi href="./31.17#i.p2" title="sphere">R</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub></mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac></mstyle></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m21.png" altimg-height="29px" altimg-valign="-7px" altimg-width="28px" alttext="\displaystyle x_{t}^{2}" class="ltx_Math" display="inline"><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>t</mi><mn>2</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="52px" altimg-valign="-18px" altimg-width="206px" alttext="\displaystyle=R^{2}\frac{(z_{1}-1)(z_{2}-1)}{1-a}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi href="./31.17#i.p2" title="sphere">R</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow></mfrac></mstyle></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="29px" altimg-valign="-7px" altimg-width="29px" alttext="\displaystyle x_{u}^{2}" class="ltx_Math" display="inline"><msubsup><mi href="./31.17#E3" title="coordinates">x</mi><mi>u</mi><mn>2</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="56px" altimg-valign="-21px" altimg-width="207px" alttext="\displaystyle=R^{2}\frac{(z_{1}-a)(z_{2}-a)}{a(a-1)}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi href="./31.17#i.p2" title="sphere">R</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m46.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="x_{s}" class="ltx_Math" display="inline"><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>s</mi></msub></math>, <math altimg="m47.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="x_{t}" class="ltx_Math" display="inline"><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>t</mi></msub></math>, <math altimg="m48.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{u}" class="ltx_Math" display="inline"><msub><mi href="./31.17#E3" title="coordinates">x</mi><mi>u</mi></msub></math>:  coordinates (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m49.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a> and
+<a class="ltx_ref" href="31.17.html#i.p2" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="21px" altimg-valign="-2px" altimg-width="30px" alttext="R^{2}" class="ltx_Math" display="inline"><msup><mi href="./31.17#i.p2" title="sphere">R</mi><mn>2</mn></msup></math>:  sphere</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.E3" title="">http://dlmf.nist.gov/31.17.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.17.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E3c.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E3c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E3a.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E3b.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E3c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#i.info" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17(i)</span></a>,
+<a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The operators <math altimg="m36.png" altimg-height="21px" altimg-valign="-2px" altimg-width="26px" alttext="\mathbf{J}^{2}" class="ltx_Math" display="inline"><msup><mi>𝐉</mi><mn>2</mn></msup></math> and <math altimg="m24.png" altimg-height="21px" altimg-valign="-5px" altimg-width="30px" alttext="H_{s}" class="ltx_Math" display="inline"><msub><mo href="./31.17#E1" title="operator">𝐻</mo><mi>s</mi></msub></math> admit separation of variables in
+<math altimg="m50.png" altimg-height="17px" altimg-valign="-6px" altimg-width="51px" alttext="z_{1},z_{2}" class="ltx_Math" display="inline"><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>,</mo><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub></mrow></math>, leading to the following factorization of the eigenfunction
+<math altimg="m29.png" altimg-height="25px" altimg-valign="-7px" altimg-width="49px" alttext="\Psi(\mathbf{x})" class="ltx_Math" display="inline"><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.17.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="32px" altimg-valign="-7px" altimg-width="701px" alttext="\Psi(\mathbf{x})=(z_{1}z_{2})^{-s-\frac{1}{4}}((z_{1}-1)(z_{2}-1))^{-t-\frac{1%
+}{4}}\*((z_{1}-a)(z_{2}-a))^{-u-\frac{1}{4}}w(z_{1})w(z_{2})," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo>−</mo><mi>s</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo>−</mo><mi>t</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo>−</mo><mi>u</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></msup><mo>⁢</mo><mrow><mi>w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi href="./31.1#t1.r2" title="complex variable">z</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m49.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a> and
+<a class="ltx_ref" href="31.17.html#i.p2" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="25px" altimg-valign="-7px" altimg-width="49px" alttext="\Psi(\mathbf{x})" class="ltx_Math" display="inline"><mrow><mi href="./31.17#i.p2" mathvariant="normal" title="common eigenfunction">Ψ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  common eigenfunction</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.E4" title="">http://dlmf.nist.gov/31.17.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.17.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#i.info" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17(i)</span></a>,
+<a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m45.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="w(z)" class="ltx_Math" display="inline"><mrow><mi>w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies Heun’s equation (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) with
+<math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math> as in (<a class="ltx_ref" href="31.17.html#E1" title="(31.17.1) ‣ §31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.17.1</span></a>) and the other parameters given by</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="6"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">31.17.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="24px" altimg-valign="-6px" altimg-width="201px" alttext="\displaystyle=-s-t-u-j-1," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mi>s</mi></mrow><mo>−</mo><mi>t</mi><mo>−</mo><mi>u</mi><mo>−</mo><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>−</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="24px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="24px" altimg-valign="-6px" altimg-width="149px" alttext="\displaystyle=j-s-t-u," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>−</mo><mi>s</mi><mo>−</mo><mi>t</mi><mo>−</mo><mi>u</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m17.png" altimg-height="19px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="23px" altimg-valign="-6px" altimg-width="71px" alttext="\displaystyle=-2s," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="20px" altimg-valign="-2px" altimg-width="17px" alttext="\displaystyle\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="23px" altimg-valign="-6px" altimg-width="68px" alttext="\displaystyle=-2t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex10">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="15px" altimg-valign="-2px" altimg-width="15px" alttext="\displaystyle\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="23px" altimg-valign="-6px" altimg-width="73px" alttext="\displaystyle=-2u;" class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>u</mi></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex11">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m19.png" altimg-height="19px" altimg-valign="-6px" altimg-width="17px" alttext="\displaystyle q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="27px" altimg-valign="-7px" altimg-width="183px" alttext="\displaystyle=ah_{s}+2s(at+u)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><msub><mi>h</mi><mi>s</mi></msub></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m35.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m32.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m33.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r3" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m42.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m44.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m31.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.E5" title="">http://dlmf.nist.gov/31.17.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.17.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E5c.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E5d.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E5e.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E5f.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.17.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E5c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E5d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E5e.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E5f.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.17.E5a.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E5b.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E5c.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E5d.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E5e.png">png</a>, <a href="http://dlmf.nist.gov/31.17.E5f.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#i.info" title="§31.17(i) Addition of Three Quantum Spins ‣ §31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17(i)</span></a>,
+<a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">For more details about the method of separation of variables and relation to
+special functions see <cite class="ltx_cite ltx_citemacro_citet">Olevskiĭ (<a class="ltx_ref" href="bib/O.html#bib1775" title="Triorthogonal systems in spaces of constant curvature in which the equation = + ⁢ Δ 2 u ⁢ λ u 0 allows a complete separation of variables">1950</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Kalnins<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/K.html#bib1214" title="The group ⁢ O ( 4 ) , separation of variables and the hydrogen atom">1976</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Miller (<a class="ltx_ref" href="bib/M.html#bib1624" title="Symmetry and Separation of Variables">1977</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Kalnins (<a class="ltx_ref" href="bib/K.html#bib1209" title="Separation of Variables for Riemannian Spaces of Constant Curvature">1986</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§31.17(ii) </span>Other Applications</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20functions">Heun functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20functions%20and%20Heun%20equation">Heun functions and Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Rossby%20waves">Rossby waves</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=application%20to%20Rossby%20waves">application to Rossby waves</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=astrophysics">astrophysics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=biconfluent%20Heun%20equation">biconfluent Heun equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=biconfluent%20Heun%20functions">biconfluent Heun functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=black%20holes">black holes</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=confluent%20Heun%20equation">confluent Heun equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=dislocation%20theory">dislocation theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=quantum%20mechanics">quantum mechanics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=quantum%20systems">quantum systems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=statistical%20mechanics">statistical mechanics</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  References</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.5.I2.ix6.p1" title="In Other Changes ‣ Version 1.0.5 (October 1, 2012) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.5) for  Clarifications</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.17.ii" title="">http://dlmf.nist.gov/31.17.ii</a></dd>
+<dt>Addition (effective with 1.0.5):</dt>
+<dd>
+The reference to <cite class="ltx_cite ltx_citemacro_citet">Hall<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/H.html#bib2751" title="Soft-core Coulomb potentials and Heun’s differential equation">2010</a>)</cite> was added, together with a clarification
+of the text, in the first paragraph of this subsection.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.17.html#info" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.17</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Heun functions appear in the theory of black holes (<cite class="ltx_cite ltx_citemacro_citet">Kerr (<a class="ltx_ref" href="bib/K.html#bib1259" title="Gravitational field of a spinning mass as an example of algebraically special metrics">1963</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Teukolsky (<a class="ltx_ref" href="bib/T.html#bib2240" title="Rotating black holes: Separable wave equations for gravitational and electromagnetic perturbations">1972</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Chandrasekhar (<a class="ltx_ref" href="bib/C.html#bib463" title="The Mathematical Theory of Black Holes">1984</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Suzuki<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/S.html#bib2185" title="Perturbations of Kerr-de Sitter black holes and Heun’s equations">1998</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Kalnins<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/K.html#bib1213" title="Special Functions and Perturbations of Black Holes">2000</a>)</cite>), lattice systems in
+statistical mechanics (<cite class="ltx_cite ltx_citemacro_citet">Joyce (<a class="ltx_ref" href="bib/J.html#bib1194" title="On the simple cubic lattice Green function">1973</a>, <a class="ltx_ref" href="bib/J.html#bib1195" title="On the cubic lattice Green functions">1994</a>)</cite>),
+dislocation theory (<cite class="ltx_cite ltx_citemacro_citet">Lay and Slavyanov (<a class="ltx_ref" href="bib/L.html#bib1389" title="Heun’s equation with nearby singularities">1999</a>)</cite>), and solution of the
+Schrödinger equation of quantum mechanics
+(<cite class="ltx_cite ltx_citemacro_citet">Bay<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/B.html#bib222" title="Avoided crossings of the quartic oscillator">1997</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Tolstikhin and Matsuzawa (<a class="ltx_ref" href="bib/T.html#bib2261" title="Hyperspherical elliptic harmonics and their relation to the Heun equation">2001</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Hall<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/H.html#bib2751" title="Soft-core Coulomb potentials and Heun’s differential equation">2010</a>)</cite>).</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">For applications of Heun’s equation and functions in astrophysics see
+<cite class="ltx_cite ltx_citemacro_citet">Debosscher (<a class="ltx_ref" href="bib/D.html#bib623" title="Unification of one-dimensional Fokker-Planck equations beyond hypergeometrics: Factorizer solution method and eigenvalue schemes">1998</a>)</cite> where different spectral problems for Heun’s
+equation are also considered. More applications—including those of
+generalized spheroidal wave functions and confluent Heun functions in
+mathematical physics, astrophysics, and the two-center problem in molecular
+quantum mechanics—can be found in <cite class="ltx_cite ltx_citemacro_citet">Leaver (<a class="ltx_ref" href="bib/L.html#bib1391" title="Solutions to a generalized spheroidal wave equation: Teukolsky’s equations in general relativity, and the two-center problem in molecular quantum mechanics">1986</a>)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Slavyanov and Lay (<a class="ltx_ref" href="bib/S.html#bib2105" title="Special Functions: A Unified Theory Based on Singularities">2000</a>, Chapter 4)</cite>. For application of biconfluent Heun
+functions in a model of an equatorially trapped Rossby wave in a shear flow in
+the ocean or atmosphere see <cite class="ltx_cite ltx_citemacro_citet">Boyd and Natarov (<a class="ltx_ref" href="bib/B.html#bib330" title="A Sturm-Liouville eigenproblem of the fourth kind: A critical latitude with equatorial trapping">1998</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="31.16.html" rel="prev" title="In Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.16 </span>Mathematical Applications</span></a><a class="ltx_ref" href="31.18.html" rel="next" title="In Computation ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.18 </span>Methods of Computation</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/28.5";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="28.html#PT2" rel="up" title="Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.html" rel="up up" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="index.html" rel="start" title=""/>
+<link href="28.4.html" rel="prev" title="§28.4 Fourier Series ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.6.html" rel="next" title="§28.6 Expansions for Small 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.1.html" rel="section" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.2.html" rel="section" title="§28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.3.html" rel="section" title="§28.3 Graphics ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.4.html" rel="section" title="§28.4 Fourier Series ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.6.html" rel="section" title="§28.6 Expansions for Small 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.7.html" rel="section" title="§28.7 Analytic Continuation of Eigenvalues ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.8.html" rel="section" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.9.html" rel="section" title="§28.9 Zeros ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.10.html" rel="section" title="§28.10 Integral Equations ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.11.html" rel="section" title="§28.11 Expansions in Series of Mathieu Functions ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.12.html" rel="section" title="§28.12 Definitions and Basic Properties ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.13.html" rel="section" title="§28.13 Graphics ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.14.html" rel="section" title="§28.14 Fourier Series ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.15.html" rel="section" title="§28.15 Expansions for Small 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.16.html" rel="section" title="§28.16 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.17.html" rel="section" title="§28.17 Stability as 𝑥→±∞ ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.18.html" rel="section" title="§28.18 Integrals and Integral Equations ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.19.html" rel="section" title="§28.19 Expansions in Series of me_{𝜈+2⁢𝑛} Functions ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.20.html" rel="section" title="§28.20 Definitions and Basic Properties ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.21.html" rel="section" title="§28.21 Graphics ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.22.html" rel="section" title="§28.22 Connection Formulas ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.23.html" rel="section" title="§28.23 Expansions in Series of Bessel Functions ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.24.html" rel="section" title="§28.24 Expansions in Series of Cross-Products of Bessel Functions or Modified Bessel Functions ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.25.html" rel="section" title="§28.25 Asymptotic Expansions for Large ℜ𝑧 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.26.html" rel="section" title="§28.26 Asymptotic Approximations for Large 𝑞 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.27.html" rel="section" title="§28.27 Addition Theorems ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.28.html" rel="section" title="§28.28 Integrals, Integral Representations, and Integral Equations ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.29.html" rel="section" title="§28.29 Definitions and Basic Properties ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.30.html" rel="section" title="§28.30 Expansions in Series of Eigenfunctions ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.31.html" rel="section" title="§28.31 Equations of Whittaker–Hill and Ince ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.32.html" rel="section" title="§28.32 Mathematical Applications ‣ Applications ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.33.html" rel="section" title="§28.33 Physical Applications ‣ Applications ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.34.html" rel="section" title="§28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.35.html" rel="section" title="§28.35 Tables ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.36.html" rel="section" title="§28.36 Software ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<link href="28.5.F1.mag.html" rel="sidebar" title="Figure 28.5.1 ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.F2.mag.html" rel="sidebar" title="Figure 28.5.2 ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.F3.mag.html" rel="sidebar" title="Figure 28.5.3 ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.F4.mag.html" rel="sidebar" title="Figure 28.5.4 ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.F5.mag.html" rel="sidebar" title="Figure 28.5.5 ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.F6.mag.html" rel="sidebar" title="Figure 28.5.6 ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<meta content="Fourier series, Mathieu functions, Mathieu’s equation, Theorem of Ince, Wronskians, antiperiodicity, definitions, expansions in Mathieu functions, graphics, normalization, periodicity, reflection properties in , second solutions, values at " lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="28.5.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="28.5.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="28.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28 </span>Mathieu Functions and Hill’s Equation</span></a><a class="ltx_ref" href="28.html#PT2" rel="up" title="In Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title">Mathieu Functions of Integer Order</span></a><a class="ltx_ref" href="28.4.html" rel="prev" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.4 </span>Fourier Series</span></a><a class="ltx_ref" href="28.6.html" rel="next" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.6 </span>Expansions for Small <math altimg="m70.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math></span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§28.5 </span>Second Solutions <math altimg="m43.png" altimg-height="21px" altimg-valign="-5px" altimg-width="31px" alttext="\operatorname{fe}_{n}" class="ltx_Math" display="inline"><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub></math>, <math altimg="m48.png" altimg-height="18px" altimg-valign="-7px" altimg-width="35px" alttext="\operatorname{ge}_{n}" class="ltx_Math" display="inline"><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub></math>
+</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="28.5.html" title="">http://dlmf.nist.gov/28.5</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="28.5.html#i"><span class="ltx_tag ltx_tag_subsection">§28.5(i) </span>Definitions</a></li>
+<li class="ltx_tocentry"><a href="28.5.html#ii"><span class="ltx_tag ltx_tag_subsection">§28.5(ii) </span>Graphics: Line Graphs of Second Solutions of Mathieu’s Equation</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.5(i) </span>Definitions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20equation">Mathieu’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Theorem%20of%20Ince">Theorem of Ince</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=periodicity">periodicity</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=second%20solutions">second solutions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">McLachlan (<a class="ltx_ref" href="bib/M.html#bib1585" title="Theory and Application of Mathieu Functions">1947</a>, pp. 141–155)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Meixner and Schäfke (<a class="ltx_ref" href="bib/M.html#bib1598" title="Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme">1954</a>, §2.72)</cite>. For a proof of the Theorem of
+Ince see <cite class="ltx_cite ltx_citemacro_citet">Arscott (<a class="ltx_ref" href="bib/index.html#bib142" title="Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions">1964b</a>, §2.4)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#iv.p2" title="§28.2(iv) Floquet Solutions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.2(iv)</span></a>,
+<a class="ltx_ref" href="28.22.html#i.p1" title="§28.22(i) Integer 𝜈 ‣ §28.22 Connection Formulas ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.22(i)</span></a>,
+<a class="ltx_ref" href="28.28.html#i.p5" title="§28.28(i) Equations with Elementary Kernels ‣ §28.28 Integrals, Integral Representations, and Integral Equations ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.28(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.i" title="">http://dlmf.nist.gov/28.5.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Theorem of Ince (1922)</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20equation">Mathieu’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=antiperiodicity">antiperiodicity</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definitions">definitions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=normalization">normalization</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=reflection%20properties%20in%20q">reflection properties in <math altimg="m70.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math></a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=second%20solutions">second solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=values%20at%20q%3D0">values at <math altimg="m68.png" altimg-height="21px" altimg-valign="-6px" altimg-width="52px" alttext="q=0" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><mn>0</mn></mrow></math></a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">If a nontrivial solution of Mathieu’s equation with <math altimg="m71.png" altimg-height="22px" altimg-valign="-6px" altimg-width="52px" alttext="q\neq 0" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>≠</mo><mn>0</mn></mrow></math> has period <math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>
+or <math altimg="m18.png" altimg-height="17px" altimg-valign="-2px" altimg-width="27px" alttext="2\pi" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></math>, then any linearly independent solution cannot have either period.</p>
+</div>
+<div class="ltx_para" id="Px1.p2">
+<p class="ltx_p">Second solutions of (<a class="ltx_ref" href="28.2.html#E1" title="(28.2.1) ‣ §28.2(i) Mathieu’s Equation ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2.1</span></a>) are given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="99px" altimg-valign="-7px" altimg-width="378px" alttext="\operatorname{fe}_{n}\left(z,q\right)=C_{n}(q)\left(z\operatorname{ce}_{n}%
+\left(z,q\right)+f_{n}(z,q)\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r3" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m75.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="28.5.html#E3" title="(28.5.3) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="72px" alttext="f_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  functions</a> and
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  factor</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.3.6</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#Px1.p5" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E1" title="">http://dlmf.nist.gov/28.5.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">when <math altimg="m58.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="a=a_{n}\left(q\right)" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">a</mi><mo>=</mo><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">a</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></mrow></math>, <math altimg="m64.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, and by</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="99px" altimg-valign="-7px" altimg-width="378px" alttext="\operatorname{ge}_{n}\left(z,q\right)=S_{n}(q)\left(z\operatorname{se}_{n}%
+\left(z,q\right)+g_{n}(z,q)\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo lspace="0.167em">⁢</mo><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="85px" alttext="\operatorname{ge}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r3" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m75.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="28.5.html#E4" title="(28.5.4) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="g_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  functions</a> and
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  factor</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.3.7</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#Px1.p5" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E2" title="">http://dlmf.nist.gov/28.5.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">when <math altimg="m59.png" altimg-height="25px" altimg-valign="-7px" altimg-width="93px" alttext="a=b_{n}\left(q\right)" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">a</mi><mo>=</mo><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">b</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></mrow></math>, <math altimg="m65.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.
+For <math altimg="m62.png" altimg-height="21px" altimg-valign="-6px" altimg-width="133px" alttext="m=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, we have</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="56px" altimg-valign="-22px" altimg-width="329px" alttext="\begin{array}[]{ll}f_{2m}(z,q)&amp;\mbox{$\pi$-periodic, odd},\\
+f_{2m+1}(z,q)&amp;\mbox{$\pi$-antiperiodic, odd},\end{array}" class="ltx_Math" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mtext>-periodic, odd</mtext></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mtext>-antiperiodic, odd</mtext></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="72px" alttext="f_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  functions (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r3" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m75.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E3" title="">http://dlmf.nist.gov/28.5.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="56px" altimg-valign="-22px" altimg-width="335px" alttext="\begin{array}[]{ll}g_{2m+1}(z,q)&amp;\mbox{$\pi$-antiperiodic, even},\\
+g_{2m+2}(z,q)&amp;\mbox{$\pi$-periodic, even};\end{array}" class="ltx_Math" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mtext>-antiperiodic, even</mtext></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mtext>-periodic, even</mtext></mrow><mo>;</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="g_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  functions (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r3" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m75.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E4" title="">http://dlmf.nist.gov/28.5.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">compare §<a class="ltx_ref" href="28.2.html#vi" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2(vi)</span></a>. The functions <math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="72px" alttext="f_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="g_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> are unique.
+</p>
+</div>
+<div class="ltx_para" id="Px1.p3">
+<p class="ltx_p">The factors <math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> in (<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.5.1</span></a>) and
+(<a class="ltx_ref" href="28.5.html#E2" title="(28.5.2) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.5.2</span></a>) are normalized so that
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="58px" altimg-valign="-21px" altimg-width="563px" alttext="(C_{n}(q))^{2}\int_{0}^{2\pi}(f_{n}(x,q))^{2}\,\mathrm{d}x=(S_{n}(q))^{2}\int_%
+{0}^{2\pi}(g_{n}(x,q))^{2}\,\mathrm{d}x=\pi." class="ltx_Math" display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" rspace="0em" title="integral">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" rspace="0em" title="integral">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m27.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="28.5.html#E3" title="(28.5.3) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="72px" alttext="f_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  functions</a>,
+<a class="ltx_ref" href="28.5.html#E4" title="(28.5.4) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="g_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  functions</a>,
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  factor</a> and
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  factor</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E5" title="">http://dlmf.nist.gov/28.5.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">As <math altimg="m72.png" altimg-height="21px" altimg-valign="-6px" altimg-width="57px" alttext="q\to 0" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></math> with <math altimg="m67.png" altimg-height="22px" altimg-valign="-6px" altimg-width="55px" alttext="n\neq 0" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>≠</mo><mn>0</mn></mrow></math>, <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="C_{n}(q)\to 0" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow></math>, <math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="97px" alttext="S_{n}(q)\to 0" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow></math>,
+<math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="208px" alttext="C_{n}(q)f_{n}(z,q)\to\sin nz" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">→</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow></mrow></mrow></math>, and <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="208px" alttext="S_{n}(q)g_{n}(z,q)\to\cos nz" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">→</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow></mrow></mrow></math>.
+This determines the signs of <math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+(Other normalizations for <math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be found in the literature,
+but most formulas—including connection formulas—are unaffected since
+<math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="147px" alttext="\operatorname{fe}_{n}\left(z,q\right)/C_{n}(q)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow><mo>/</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="149px" alttext="\operatorname{ge}_{n}\left(z,q\right)/S_{n}(q)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow><mo>/</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> are invariant.)</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">28.5.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="27px" altimg-valign="-7px" altimg-width="88px" alttext="\displaystyle C_{2m}(-q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./28.1#t1.r6" title="parameter">q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="27px" altimg-valign="-7px" altimg-width="99px" alttext="\displaystyle=C_{2m}(q)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="27px" altimg-valign="-7px" altimg-width="109px" alttext="\displaystyle C_{2m+1}(-q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./28.1#t1.r6" title="parameter">q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="27px" altimg-valign="-7px" altimg-width="118px" alttext="\displaystyle=S_{2m+1}(q)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="27px" altimg-valign="-7px" altimg-width="107px" alttext="\displaystyle S_{2m+2}(-q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./28.1#t1.r6" title="parameter">q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="118px" alttext="\displaystyle=S_{2m+2}(q)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a>,
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  factor</a> and
+<a class="ltx_ref" href="28.5.html#Px1.p3" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  factor</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E6" title="">http://dlmf.nist.gov/28.5.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E6c.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E6c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E6a.png">png</a>, <a href="http://dlmf.nist.gov/28.5.E6b.png">png</a>, <a href="http://dlmf.nist.gov/28.5.E6c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px1.p4">
+<p class="ltx_p">For <math altimg="m68.png" altimg-height="21px" altimg-valign="-6px" altimg-width="52px" alttext="q=0" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><mn>0</mn></mrow></math>,</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">28.5.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="40px" altimg-valign="-7px" altimg-width="98px" alttext="\displaystyle\operatorname{fe}_{0}\left(z,0\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mn>0</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="19px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=z," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="40px" altimg-valign="-7px" altimg-width="100px" alttext="\displaystyle\operatorname{fe}_{n}\left(z,0\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mn>0</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="24px" altimg-valign="-6px" altimg-width="86px" alttext="\displaystyle=\sin nz," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="40px" altimg-valign="-7px" altimg-width="104px" alttext="\displaystyle\operatorname{ge}_{n}\left(z,0\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mn>0</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m5.png" altimg-height="15px" altimg-valign="-2px" altimg-width="83px" alttext="\displaystyle=\cos nz" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>⁢</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow></mrow></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m65.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r1" title="integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>;</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="28.5.html#E2" title="(28.5.2) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="85px" alttext="\operatorname{ge}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m57.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r3" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m75.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E7" title="">http://dlmf.nist.gov/28.5.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E7a.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E7b.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E7c.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E7a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E7b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E7c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E7a.png">png</a>, <a href="http://dlmf.nist.gov/28.5.E7b.png">png</a>, <a href="http://dlmf.nist.gov/28.5.E7c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px1.info" title="Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">compare (<a class="ltx_ref" href="28.2.html#E29" title="(28.2.29) ‣ §28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2.29</span></a>).
+</p>
+</div>
+<div class="ltx_para" id="Px1.p5">
+<p class="ltx_p">As a consequence of the factor <math altimg="m75.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math> on the right-hand sides of
+(<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.5.1</span></a>), (<a class="ltx_ref" href="28.5.html#E2" title="(28.5.2) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.5.2</span></a>), all solutions of Mathieu’s equation
+that are linearly independent of the periodic solutions are unbounded as
+<math altimg="m76.png" altimg-height="18px" altimg-valign="-4px" altimg-width="84px" alttext="z\to\pm\infty" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> on <math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{R}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r14" title="real line">ℝ</mi></math>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Wronskians</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fourier%20series">Fourier series</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20functions">Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20equation">Mathieu’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Wronskians">Wronskians</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=expansions%20in%20Mathieu%20functions">expansions in Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=second%20solutions">second solutions</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E8">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="40px" altimg-valign="-7px" altimg-width="136px" alttext="\displaystyle\mathscr{W}\left\{\operatorname{ce}_{n},\operatorname{fe}_{n}\right\}" class="ltx_Math" display="inline"><mrow><mi class="ltx_font_mathscript" href="./1.13#Px2.p1" title="Wronskian">𝒲</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>,</mo><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="70px" altimg-valign="-7px" altimg-width="113px" alttext="\displaystyle=\operatorname{ce}_{n}\left(0,q\right)\operatorname{fe}_{n}'\left%
+(0,q\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><msubsup><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="1.13.html#Px2.p1" title="Wronskian ‣ §1.13(i) Existence of Solutions ‣ §1.13 Differential Equations ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="\mathscr{W}" class="ltx_Math" display="inline"><mi class="ltx_font_mathscript" href="./1.13#Px2.p1" title="Wronskian">𝒲</mi></math>: Wronskian</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E8" title="">http://dlmf.nist.gov/28.5.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px2.info" title="Wronskians ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E9">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.5.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="40px" altimg-valign="-7px" altimg-width="139px" alttext="\displaystyle\mathscr{W}\left\{\operatorname{se}_{n},\operatorname{ge}_{n}\right\}" class="ltx_Math" display="inline"><mrow><mi class="ltx_font_mathscript" href="./1.13#Px2.p1" title="Wronskian">𝒲</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>,</mo><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="70px" altimg-valign="-7px" altimg-width="132px" alttext="\displaystyle=-\operatorname{se}_{n}'\left(0,q\right)\operatorname{ge}_{n}%
+\left(0,q\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo rspace="0.167em">−</mo><mrow><mrow><msubsup><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi href="./28.1#t1.r1" title="integer">n</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.5.html#E2" title="(28.5.2) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="85px" alttext="\operatorname{ge}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="1.13.html#Px2.p1" title="Wronskian ‣ §1.13(i) Existence of Solutions ‣ §1.13 Differential Equations ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="\mathscr{W}" class="ltx_Math" display="inline"><mi class="ltx_font_mathscript" href="./1.13#Px2.p1" title="Wronskian">𝒲</mi></math>: Wronskian</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-6px" altimg-width="63px" alttext="q=h^{2}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>=</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></math>:  parameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">n</mi></math>:  integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.E9" title="">http://dlmf.nist.gov/28.5.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.5.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.5.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px2.info" title="Wronskians ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#i.info" title="§28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(i)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">See (<a class="ltx_ref" href="28.22.html#E12" title="(28.22.12) ‣ §28.22(i) Integer 𝜈 ‣ §28.22 Connection Formulas ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.22.12</span></a>) for <math altimg="m42.png" altimg-height="27px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{fe}_{n}'\left(0,q\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi href="./28.1#t1.r1" title="integer">n</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m49.png" altimg-height="25px" altimg-valign="-7px" altimg-width="84px" alttext="\operatorname{ge}_{n}\left(0,q\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px2.p2">
+<p class="ltx_p">For further information on <math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="C_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">C</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="S_{n}(q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#Px1.p3" title="factor">S</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and expansions of <math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="72px" alttext="f_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E3" title="functions">f</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+<math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="g_{n}(z,q)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E4" title="functions">g</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">)</mo></mrow></mrow></math> in Fourier series or in series of <math altimg="m36.png" altimg-height="16px" altimg-valign="-5px" altimg-width="34px" alttext="\operatorname{ce}_{n}" class="ltx_Math" display="inline"><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub></math>, <math altimg="m55.png" altimg-height="16px" altimg-valign="-5px" altimg-width="33px" alttext="\operatorname{se}_{n}" class="ltx_Math" display="inline"><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi href="./28.1#t1.r1" title="integer">n</mi></msub></math>
+functions, see <cite class="ltx_cite ltx_citemacro_citet">McLachlan (<a class="ltx_ref" href="bib/M.html#bib1585" title="Theory and Application of Mathieu Functions">1947</a>, Chapter VII)</cite> or
+<cite class="ltx_cite ltx_citemacro_citet">Meixner and Schäfke (<a class="ltx_ref" href="bib/M.html#bib1598" title="Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme">1954</a>, §2.72)</cite>.
+</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.5(ii) </span>Graphics: Line Graphs of Second Solutions of Mathieu’s Equation</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20equation">Mathieu’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=graphics">graphics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=second%20solutions">second solutions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>Figures <a class="ltx_ref" href="28.5.html#F1" title="Figure 28.5.1 ‣ Odd Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.5.1</span></a>–<a class="ltx_ref" href="28.5.html#F6" title="Figure 28.5.6 ‣ Even Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.5.6</span></a>
+were produced at NIST.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.ii" title="">http://dlmf.nist.gov/28.5.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Odd Second Solutions</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<figure class="ltx_figure" id="Px3.fig1">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_2">
+<figure class="ltx_figure ltx_figure_panel" id="F1"><a class="ltx_magnifiable" href="28.5.F1.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="244" id="F1.g1" src="28/5/F1.png" width="415"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 28.5.1: </span><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="\operatorname{fe}_{0}\left(x,0.5\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>0.5</mn><mo>)</mo></mrow></mrow></math> for <math altimg="m17.png" altimg-height="20px" altimg-valign="-5px" altimg-width="105px" alttext="0\leq x\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> and (for comparison) <math altimg="m31.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="\operatorname{ce}_{0}\left(x,0.5\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>0.5</mn><mo>)</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="28.5.F1.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.F1" title="">http://dlmf.nist.gov/28.5.F1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.F1.pdf">pdf</a>, <a href="http://dlmf.nist.gov/28.5.F1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px3.info" title="Odd Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</div>
+<div class="ltx_flex_cell ltx_flex_size_2">
+<figure class="ltx_figure ltx_figure_panel" id="F2"><a class="ltx_magnifiable" href="28.5.F2.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="244" id="F2.g1" src="28/5/F2.png" width="415"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 28.5.2: </span><math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{fe}_{0}\left(x,1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> for <math altimg="m17.png" altimg-height="20px" altimg-valign="-5px" altimg-width="105px" alttext="0\leq x\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> and (for comparison) <math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{0}\left(x,1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mn>0</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="28.5.F2.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.F2" title="">http://dlmf.nist.gov/28.5.F2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.F2.pdf">pdf</a>, <a href="http://dlmf.nist.gov/28.5.F2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px3.info" title="Odd Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</figure>
+<figure class="ltx_figure" id="Px3.fig2">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_2">
+<figure class="ltx_figure ltx_figure_panel" id="F3"><a class="ltx_magnifiable" href="28.5.F3.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="240" id="F3.g1" src="28/5/F3.png" width="416"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 28.5.3: </span><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="\operatorname{fe}_{1}\left(x,0.5\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>0.5</mn><mo>)</mo></mrow></mrow></math> for <math altimg="m17.png" altimg-height="20px" altimg-valign="-5px" altimg-width="105px" alttext="0\leq x\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> and (for comparison) <math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="\operatorname{ce}_{1}\left(x,0.5\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>0.5</mn><mo>)</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="28.5.F3.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.F3" title="">http://dlmf.nist.gov/28.5.F3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.F3.pdf">pdf</a>, <a href="http://dlmf.nist.gov/28.5.F3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px3.info" title="Odd Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</div>
+<div class="ltx_flex_cell ltx_flex_size_2">
+<figure class="ltx_figure ltx_figure_panel" id="F4"><a class="ltx_magnifiable" href="28.5.F4.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="239" id="F4.g1" src="28/5/F4.png" width="415"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 28.5.4: </span><math altimg="m40.png" altimg-height="25px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{fe}_{1}\left(x,1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> for <math altimg="m17.png" altimg-height="20px" altimg-valign="-5px" altimg-width="105px" alttext="0\leq x\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> and (for comparison) <math altimg="m34.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{1}\left(x,1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="28.5.F4.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.5.html#E1" title="(28.5.1) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="81px" alttext="\operatorname{fe}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E1" title="second solution, Mathieu’s equation">fe</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.F4" title="">http://dlmf.nist.gov/28.5.F4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.F4.pdf">pdf</a>, <a href="http://dlmf.nist.gov/28.5.F4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px3.info" title="Odd Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</figure>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Even Second Solutions</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<figure class="ltx_figure" id="Px4.fig1">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_2">
+<figure class="ltx_figure ltx_figure_panel" id="F5"><a class="ltx_magnifiable" href="28.5.F5.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="239" id="F5.g1" src="28/5/F5.png" width="415"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 28.5.5: </span><math altimg="m45.png" altimg-height="25px" altimg-valign="-7px" altimg-width="100px" alttext="\operatorname{ge}_{1}\left(x,0.5\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>0.5</mn><mo>)</mo></mrow></mrow></math> for <math altimg="m17.png" altimg-height="20px" altimg-valign="-5px" altimg-width="105px" alttext="0\leq x\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> and (for comparison) <math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="98px" alttext="\operatorname{se}_{1}\left(x,0.5\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>0.5</mn><mo>)</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="28.5.F5.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.5.html#E2" title="(28.5.2) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="85px" alttext="\operatorname{ge}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.F5" title="">http://dlmf.nist.gov/28.5.F5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.F5.pdf">pdf</a>, <a href="http://dlmf.nist.gov/28.5.F5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px4.info" title="Even Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</div>
+<div class="ltx_flex_cell ltx_flex_size_2">
+<figure class="ltx_figure ltx_figure_panel" id="F6"><a class="ltx_magnifiable" href="28.5.F6.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="239" id="F6.g1" src="28/5/F6.png" width="415"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 28.5.6: </span><math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="84px" alttext="\operatorname{ge}_{1}\left(x,1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math> for <math altimg="m17.png" altimg-height="20px" altimg-valign="-5px" altimg-width="105px" alttext="0\leq x\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> and (for comparison) <math altimg="m53.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{1}\left(x,1\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="28.5.F6.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.5.html#E2" title="(28.5.2) ‣ Theorem of Ince (1922) ‣ §28.5(i) Definitions ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="85px" alttext="\operatorname{ge}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.5#E2" title="second solution, Mathieu’s equation">ge</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: second solution, Mathieu’s equation</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m54.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m73.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.5.F6" title="">http://dlmf.nist.gov/28.5.F6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.5.F6.pdf">pdf</a>, <a href="http://dlmf.nist.gov/28.5.F6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.5.html#Px4.info" title="Even Second Solutions ‣ §28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#ii.info" title="§28.5(ii) Graphics: Line Graphs of Second Solutions of Mathieu’s Equation ‣ §28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5(ii)</span></a>,
+<a class="ltx_ref" href="28.5.html#info" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.5</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</figure>
+</section>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="28.4.html" rel="prev" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.4 </span>Fourier Series</span></a><a class="ltx_ref" href="28.6.html" rel="next" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.6 </span>Expansions for Small <math altimg="m70.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math></span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

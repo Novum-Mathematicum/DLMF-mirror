@@ -1,0 +1,258 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 256 57 "          \+
+
+                     The Spheroidal Function Qs" }}}{EXCHG {PARA 0 "" 
+
+0 "" {TEXT -1 82 "                     A Maple worksheet written by Ha
+
+ns Volkmer, September 25, 2002" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 67 
+
+"                                  send comments to volkmer@uwm.edu " 
+
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 69 "The Maple program Qs(m,n,q,d) c
+
+omputes the spheroidal wave functions " }{XPPEDIT 18 0 "Qs[n]^m;" "6#)
+
+&amp;%#QsG6#%\"nG%\"mG" }{TEXT -1 1 "(" }{XPPEDIT 18 0 "x;" "6#%\"xG" }
+
+{TEXT -1 1 ";" }{XPPEDIT 18 0 "gamma^2;" "6#*$%&amp;gammaG\"\"#" }{TEXT 
+
+-1 30 ")  by expansion in associated " }}{PARA 0 "" 0 "" {TEXT -1 19 "
+
+Legendre functions." }}{PARA 0 "" 0 "" {TEXT -1 14 "We abbreviate " }
+
+{XPPEDIT 18 0 "q = gamma^2;" "6#/%\"qG*$%&amp;gammaG\"\"#" }{TEXT -1 53 ".
+
+  The integer d has to be chosen sufficently large. " }}{PARA 0 "" 0 "
+
+" {TEXT -1 95 "The programs P(m,n) and Q(m,n) compute the needed assoc
+
+iated Legendre functions as expressions." }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "restart;with(linalg):" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 11 "Digits:=10;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 21 "trideven:=proc(m,q,d)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "loca
+
+l A,i;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=matrix(d,d,0);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 115 "for i from 1 to d do      A[i,i]:=
+
+(m+2*i-2.0)*(m+2*i-1)-2*q*((m+2*i-2)*(m+2*i-1)-1+m^2)/(2*m+4*i-5)/(2*m
+
++4*i-1) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "for i from 1 to d-1 \+
+
+do      A[i,i+1]:=-q*(2*m+2*i-1)*(2*m+2*i)/(2*m+4*i-1)/(2*m+4*i+1) od;
+
+ " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 to d do " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "  A[i,i-1]:=-q*(2*i-3)*(2*i-2)/(2*m
+
++4*i-7)/(2*m+4*i-5) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 20 "tridodd:=proc(m,q,d)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 10 "local A,i;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "A:=matrix(d,d,0
+
+.0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 111 "for i from 1 to d do      \+
+
+A[i,i]:=(m+2*i-1.0)*(m+2*i)-2*q*((m+2*i-1)*(m+2*i)-1+m^2)/(2*m+4*i-3)/
+
+(2*m+4*i+1) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "for i from 1 to \+
+
+d-1 do      A[i,i+1]:=-q*(2*m+2*i)*(2*m+2*i+1)/(2*m+4*i+1)/(2*m+4*i+3)
+
+ od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 to d do " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "  A[i,i-1]:=-q*(2*i-2)*(2*i-1)/(2*m
+
++4*i-5)/(2*m+4*i-3) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 84 "lambda:=proc(m,n,q,d) # Meixner-Schaefke lambda_m^n(q
+
+) , choose d sufficiently large" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 12 "
+
+local l,L,A;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 97 "if type(n-m,even) t
+
+hen A:=trideven(m,q,d);l:=(n-m)/2+1;else A:=tridodd(m,q,d);l:=(n-m-1)/
+
+2+1; fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 31 "L:=[eigenvalues(A)];L:=
+
+sort(L);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "L[l];" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 86 "
+
+acoeff:=proc(m,n,q,d) # a-coefficients for expansion of Ps_n^m(x;q) fr
+
+om d by d matrix" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "local R,r,c,cc,
+
+a,aa,A,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "R:=floor((n-m)/2);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 69 "if type(n-m,even) then A:=trideven(
+
+m,q,d); else A:=tridodd(m,q,d) fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+21 "K:=[eigenvectors(A)];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "K:=sor
+
+t(K,(a,b)-&gt;evalb(a[1] &lt; b[1]));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "
+
+aa:=K[R+1][3][1];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 47 "for r from -R \+
+
+to -R+d-1 do a[r]:=aa[r+R+1] od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+84 "c:=sum((n+m+2*s)!/(n-m+2*s)!/(1+2*n+4*s)*a[s]^2,s=-R..-R+d-1)/(n+m
+
+)!*(n-m)!*(2*n+1);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 11 "c:=sqrt(c);" 
+
+}{TEXT -1 0 "" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 74 "cc:=sum((-1)^s*(n+
+
+m+2*s)!/(n-m+2*s)!*a[s],s=-R..-R+d-1);# test A_n^(-m)&gt;0 " }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 22 "if cc&lt;0 then c:=-c fi;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 43 "for r from -R to -R+d-1 do a[r]:=a[r]/c od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 2 "a;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "en
+
+d;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "coeffA:=proc(m,n,k,q)
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 49 "-q*(n-m+2*k-1)*(n-m+2*k)/(2*n+4
+
+*k-3)/(2*n+4*k-1);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "coeffB:=proc(m,n,k,q)" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 72 "(n+2*k)*(n+2*k+1)-2*q*((n+2*k)*(n+2
+
+*k+1)-1+m^2)/(2*n+4*k-1)/(2*n+4*k+3);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "coeffC:=proc(m
+
+,n,k,q)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 51 "-q*(n+m+2*k+1)*(n+m+2*k+
+
+2)/(2*n+4*k+3)/(2*n+4*k+5);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 20 "coeffCC:=proc(m,n,q)" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 8 "local u;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 69 "if type(n-m,even) then u:=q/(4*m^2-1); else u:=-q/(2*
+
+m-1)/(2*m-3) fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "u;" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 36 "P:=proc(m,n) # associated Legendre P" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 11 "local u,nu;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "u[m
+
+-1]:=0;u[m]:=1;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 89 "for nu from m to
+
+ n-1 do u[nu+1]:=simplify(((2*nu+1)*x*u[nu]-(nu+m)*u[nu-1])/(nu-m+1)) \+
+
+od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "(-1)^m*(1-x^2)^(m/2)*(2*m)!/
+
+m!/2^m*u[n];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "Q:=proc(m,n) # associated Legendre \+
+
+Q" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "local nu,u,j;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 27 "u[0]:=1/2*log((1+x)/(1-x));" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 31 "u[1]:=1/2*x*log((1+x)/(1-x))-1;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 12 "if n&lt;0 then " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 57 "
+
+if m&gt;0 then u[0]:=diff(u[0],x$m);u[1]:=diff(u[1],x$m) fi;" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 29 "for nu from 0 to n+1 by -1 do" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 56 " u[nu-1]:=((2*nu+1)*x*u[nu]-(nu-m+1)*u[nu+1])/
+
+(nu+m) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 81 "for j from 1 to n-1 do u[j+1]:=simplify((2*j+1)/
+
+(j+1)*x*u[j]-j/(j+1)*u[j-1]) od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+36 "if m&gt;0 then u[n]:=diff(u[n],x$m) fi;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "simplify((-1
+
+)^m*(1-x^2)^(m/2)*u[n]);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}
+
+}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "Qs:=proc(m,n,q,d)" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 25 "local a,b,c,lam,R,N,k,qs;" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 21 "lam:=lambda(m,n,q,d);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 18 "R:=floor((n-m)/2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+18 "N:=floor((n+m)/2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "a:=acoeff
+
+(m,n,q,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 20 "b[-N-1]:=0;b[-N]:=1;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 106 "for k from -N to -R-1 do b[k+1
+
+]:=-(coeffA(m,n,k,q)*b[k-1]+(coeffB(m,n,k,q)-lam)*b[k])/coeffC(m,n,k,q
+
+);od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 15 "c:=a[-R]/b[-R];" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 41 "for k from -N to -R-1 do a[k]:=b[k]*c od;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "b[-N-d-1]:=0;b[-N-d]:=1;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 107 "for k from -N-d to -N-2 do b[k+1]:
+
+=-(coeffA(m,n,k,q)*b[k-1]+(coeffB(m,n,k,q)-lam)*b[k])/coeffC(m,n,k,q);
+
+od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 85 "b[-N]:=-(coeffA(m,n,-N-1,q)*
+
+b[-N-2]+(coeffB(m,n,-N-1,q)-lam)*b[-N-1])/coeffCC(m,n,q);" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 15 "c:=a[-N]/b[-N];" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 43 "for k from -N-d to -N-1 do a[k]:=c*b[k];od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 6 "qs:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+64 "for k from -N-d to -N-1 do qs:=qs+(-1)^k*a[k]*P(m,-1-n-2*k) od; " 
+
+}}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 60 "for k from -N to -R+d-1 do qs:=qs
+
++(-1)^k*a[k]*Q(m,n+2*k) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "simp
+
+lify(qs);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 
+
+0 "" 0 "" {TEXT -1 8 "Example:" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 22 "m:=1;n:=1;q:=4.0;d:=5;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 61 "f:=Qs(m,n,q,d); # approximation of Qs by elementary functions
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "plot(f,x=-1..1,-2..2);
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "0 0 1" 57 }
+
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
+

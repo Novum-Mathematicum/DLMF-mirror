@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/10.63";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="10.html#PT5" rel="up" title="Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.html" rel="up up" title="Chapter 10 Bessel Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="10.62.html" rel="prev" title="§10.62 Graphs ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.64.html" rel="next" title="§10.64 Integral Representations ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.1.html" rel="section" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.2.html" rel="section" title="§10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.3.html" rel="section" title="§10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.4.html" rel="section" title="§10.4 Connection Formulas ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.5.html" rel="section" title="§10.5 Wronskians and Cross-Products ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.6.html" rel="section" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.7.html" rel="section" title="§10.7 Limiting Forms ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.8.html" rel="section" title="§10.8 Power Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.9.html" rel="section" title="§10.9 Integral Representations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.10.html" rel="section" title="§10.10 Continued Fractions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.11.html" rel="section" title="§10.11 Analytic Continuation ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.12.html" rel="section" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.13.html" rel="section" title="§10.13 Other Differential Equations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.14.html" rel="section" title="§10.14 Inequalities; Monotonicity ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.15.html" rel="section" title="§10.15 Derivatives with Respect to Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.16.html" rel="section" title="§10.16 Relations to Other Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.17.html" rel="section" title="§10.17 Asymptotic Expansions for Large Argument ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.18.html" rel="section" title="§10.18 Modulus and Phase Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.19.html" rel="section" title="§10.19 Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.20.html" rel="section" title="§10.20 Uniform Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.21.html" rel="section" title="§10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.22.html" rel="section" title="§10.22 Integrals ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.23.html" rel="section" title="§10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.24.html" rel="section" title="§10.24 Functions of Imaginary Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.25.html" rel="section" title="§10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.26.html" rel="section" title="§10.26 Graphics ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.27.html" rel="section" title="§10.27 Connection Formulas ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.28.html" rel="section" title="§10.28 Wronskians and Cross-Products ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.29.html" rel="section" title="§10.29 Recurrence Relations and Derivatives ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.30.html" rel="section" title="§10.30 Limiting Forms ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.31.html" rel="section" title="§10.31 Power Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.32.html" rel="section" title="§10.32 Integral Representations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.33.html" rel="section" title="§10.33 Continued Fractions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.34.html" rel="section" title="§10.34 Analytic Continuation ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.35.html" rel="section" title="§10.35 Generating Function and Associated Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.36.html" rel="section" title="§10.36 Other Differential Equations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.37.html" rel="section" title="§10.37 Inequalities; Monotonicity ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.38.html" rel="section" title="§10.38 Derivatives with Respect to Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.39.html" rel="section" title="§10.39 Relations to Other Functions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.40.html" rel="section" title="§10.40 Asymptotic Expansions for Large Argument ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.41.html" rel="section" title="§10.41 Asymptotic Expansions for Large Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.42.html" rel="section" title="§10.42 Zeros ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.43.html" rel="section" title="§10.43 Integrals ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.44.html" rel="section" title="§10.44 Sums ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.45.html" rel="section" title="§10.45 Functions of Imaginary Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.46.html" rel="section" title="§10.46 Generalized and Incomplete Bessel Functions; Mittag-Leffler Function ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.47.html" rel="section" title="§10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.48.html" rel="section" title="§10.48 Graphs ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.49.html" rel="section" title="§10.49 Explicit Formulas ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.50.html" rel="section" title="§10.50 Wronskians and Cross-Products ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.51.html" rel="section" title="§10.51 Recurrence Relations and Derivatives ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.52.html" rel="section" title="§10.52 Limiting Forms ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.53.html" rel="section" title="§10.53 Power Series ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.54.html" rel="section" title="§10.54 Integral Representations ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.55.html" rel="section" title="§10.55 Continued Fractions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.56.html" rel="section" title="§10.56 Generating Functions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.57.html" rel="section" title="§10.57 Uniform Asymptotic Expansions for Large Order ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.58.html" rel="section" title="§10.58 Zeros ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.59.html" rel="section" title="§10.59 Integrals ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.60.html" rel="section" title="§10.60 Sums ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.61.html" rel="section" title="§10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.62.html" rel="section" title="§10.62 Graphs ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.64.html" rel="section" title="§10.64 Integral Representations ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.65.html" rel="section" title="§10.65 Power Series ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.66.html" rel="section" title="§10.66 Expansions in Series of Bessel Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.67.html" rel="section" title="§10.67 Asymptotic Expansions for Large Argument ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.68.html" rel="section" title="§10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.69.html" rel="section" title="§10.69 Uniform Asymptotic Expansions for Large Order ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.70.html" rel="section" title="§10.70 Zeros ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.71.html" rel="section" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.72.html" rel="section" title="§10.72 Mathematical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.73.html" rel="section" title="§10.73 Physical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.74.html" rel="section" title="§10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.75.html" rel="section" title="§10.75 Tables ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.76.html" rel="section" title="§10.76 Approximations ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.77.html" rel="section" title="§10.77 Software ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Kelvin functions, cross-products, derivatives, recurrence relations" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="10.63.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="10.63.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="10.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Bessel Functions</span></a><a class="ltx_ref" href="10.html#PT5" rel="up" title="In Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title">Kelvin Functions</span></a><a class="ltx_ref" href="10.62.html" rel="prev" title="In Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.62 </span>Graphs</span></a><a class="ltx_ref" href="10.64.html" rel="next" title="In Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.64 </span>Integral Representations</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§10.63 </span>Recurrence Relations and Derivatives</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="10.63.html" title="">http://dlmf.nist.gov/10.63</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="10.63.html#i"><span class="ltx_tag ltx_tag_subsection">§10.63(i) </span><math altimg="m40.png" altimg-height="21px" altimg-valign="-5px" altimg-width="59px" alttext="\operatorname{ber}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>, <math altimg="m37.png" altimg-height="21px" altimg-valign="-5px" altimg-width="57px" alttext="\operatorname{bei}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>,
+<math altimg="m46.png" altimg-height="21px" altimg-valign="-5px" altimg-width="58px" alttext="\operatorname{ker}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>, <math altimg="m43.png" altimg-height="21px" altimg-valign="-5px" altimg-width="55px" alttext="\operatorname{kei}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math></a></li>
+<li class="ltx_tocentry"><a href="10.63.html#ii"><span class="ltx_tag ltx_tag_subsection">§10.63(ii) </span>Cross-Products</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.63(i) </span><math altimg="m40.png" altimg-height="21px" altimg-valign="-5px" altimg-width="59px" alttext="\operatorname{ber}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>, <math altimg="m37.png" altimg-height="21px" altimg-valign="-5px" altimg-width="57px" alttext="\operatorname{bei}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>,
+<math altimg="m46.png" altimg-height="21px" altimg-valign="-5px" altimg-width="58px" alttext="\operatorname{ker}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>, <math altimg="m43.png" altimg-height="21px" altimg-valign="-5px" altimg-width="55px" alttext="\operatorname{kei}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=derivatives">derivatives</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=recurrence%20relations">recurrence relations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>Set <math altimg="m57.png" altimg-height="23px" altimg-valign="-2px" altimg-width="106px" alttext="z=xe^{3\pi i/4}" class="ltx_Math" display="inline"><mrow><mi href="./10.1#t1.r4" title="complex variable">z</mi><mo>=</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mn>3</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo>/</mo><mn>4</mn></mrow></msup></mrow></mrow></math> in (<a class="ltx_ref" href="10.6.html#E1" title="(10.6.1) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.1</span></a>) and
+(<a class="ltx_ref" href="10.6.html#E2" title="(10.6.2) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.2</span></a>).</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.68.html#ii.info" title="§10.68(ii) Basic Properties ‣ §10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.68(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.i" title="">http://dlmf.nist.gov/10.63.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Let <math altimg="m48.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="f_{\nu}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="g_{\nu}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote any one of the ordered pairs:
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.63.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1a.png" altimg-height="22px" altimg-valign="-6px" altimg-width="127px" alttext="\operatorname{ber}_{\nu}x,\operatorname{bei}_{\nu}x;" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>,</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1b.png" altimg-height="22px" altimg-valign="-6px" altimg-width="147px" alttext="\operatorname{bei}_{\nu}x,-\operatorname{ber}_{\nu}x;" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>,</mo><mrow><mo rspace="0.167em">−</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1c.png" altimg-height="22px" altimg-valign="-6px" altimg-width="124px" alttext="\operatorname{ker}_{\nu}x,\operatorname{kei}_{\nu}x;" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>,</mo><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1d.png" altimg-height="22px" altimg-valign="-6px" altimg-width="143px" alttext="\operatorname{kei}_{\nu}x,-\operatorname{ker}_{\nu}x." class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>,</mo><mrow><mo rspace="0.167em">−</mo><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="\operatorname{bei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{ber}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m42.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="\operatorname{kei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m45.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="\operatorname{ker}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.15</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.71.html#i.p1" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E1" title="">http://dlmf.nist.gov/10.63.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E1c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E1d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E1c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E1d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E1a.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E1b.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E1c.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E1d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#i.info" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(i)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.63.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m21.png" altimg-height="27px" altimg-valign="-7px" altimg-width="171px" alttext="\displaystyle f_{\nu-1}(x)+f_{\nu+1}(x)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="40px" altimg-valign="-7px" altimg-width="279px" alttext="\displaystyle=-(\nu\sqrt{2}/x)\left(f_{\nu}(x)-g_{\nu}(x)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow><mo>/</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell" colspan="2"><math altimg="m20.png" altimg-height="31px" altimg-valign="-7px" altimg-width="481px" alttext="\displaystyle f_{\nu+1}(x)+g_{\nu+1}(x)-f_{\nu-1}(x)-g_{\nu-1}(x)=2\sqrt{2}f_{%
+\nu}^{\prime}(x)," class="ltx_Math" display="inline"><mrow><mrow><mrow><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="28px" altimg-valign="-7px" altimg-width="55px" alttext="\displaystyle f_{\nu}^{\prime}(x)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="429px" alttext="\displaystyle=-(1/\sqrt{2})\left(f_{\nu-1}(x)+g_{\nu-1}(x)\right)-(\nu/x)f_{%
+\nu}(x)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>/</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="28px" altimg-valign="-7px" altimg-width="55px" alttext="\displaystyle f_{\nu}^{\prime}(x)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="40px" altimg-valign="-7px" altimg-width="412px" alttext="\displaystyle=(1/\sqrt{2})\left(f_{\nu+1}(x)+g_{\nu+1}(x)\right)+(\nu/x)f_{\nu%
+}(x)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>/</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m49.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m51.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.14</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E2" title="">http://dlmf.nist.gov/10.63.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E2c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E2d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E2c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E2d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E2a.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E2b.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E2c.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E2d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#i.info" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(i)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.63.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m17.png" altimg-height="28px" altimg-valign="-4px" altimg-width="88px" alttext="\displaystyle\sqrt{2}\operatorname{ber}'x" class="ltx_Math" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mrow><msup><mi href="./10.61#E1" title="Kelvin function">ber</mi><mo>′</mo></msup><mo>⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="24px" altimg-valign="-6px" altimg-width="165px" alttext="\displaystyle=\operatorname{ber}_{1}x+\operatorname{bei}_{1}x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mn>1</mn></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>+</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mn>1</mn></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex10">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="28px" altimg-valign="-4px" altimg-width="86px" alttext="\displaystyle\sqrt{2}\operatorname{bei}'x" class="ltx_Math" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mrow><msup><mi href="./10.61#E1" title="Kelvin function">bei</mi><mo>′</mo></msup><mo>⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="23px" altimg-valign="-5px" altimg-width="185px" alttext="\displaystyle=-\operatorname{ber}_{1}x+\operatorname{bei}_{1}x." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="\operatorname{bei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{ber}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a> and
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.16</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E3" title="">http://dlmf.nist.gov/10.63.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E3a.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E3b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#i.info" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(i)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex11">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.63.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m19.png" altimg-height="28px" altimg-valign="-4px" altimg-width="87px" alttext="\displaystyle\sqrt{2}\operatorname{ker}'x" class="ltx_Math" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mrow><msup><mi href="./10.61#E2" title="Kelvin function">ker</mi><mo>′</mo></msup><mo>⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m12.png" altimg-height="24px" altimg-valign="-6px" altimg-width="162px" alttext="\displaystyle=\operatorname{ker}_{1}x+\operatorname{kei}_{1}x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>+</mo><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex12">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m18.png" altimg-height="28px" altimg-valign="-4px" altimg-width="84px" alttext="\displaystyle\sqrt{2}\operatorname{kei}'x" class="ltx_Math" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mrow><msup><mi href="./10.61#E2" title="Kelvin function">kei</mi><mo>′</mo></msup><mo>⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="23px" altimg-valign="-5px" altimg-width="182px" alttext="\displaystyle=-\operatorname{ker}_{1}x+\operatorname{kei}_{1}x." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m42.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="\operatorname{kei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m45.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="\operatorname{ker}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a> and
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.17</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E4" title="">http://dlmf.nist.gov/10.63.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E4a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E4b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E4a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E4b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E4a.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E4b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#i.info" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(i)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.63(ii) </span>Cross-Products</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cross-products">cross-products</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=recurrence%20relations">recurrence relations</a>
+</dd>
+<dt>Notes:</dt>
+<dd>Set <math altimg="m47.png" altimg-height="23px" altimg-valign="-2px" altimg-width="107px" alttext="a=xe^{3\pi i/4}" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mn>3</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo>/</mo><mn>4</mn></mrow></msup></mrow></mrow></math>. Then from (<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.61.1</span></a>) and
+(<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.5</span></a>) <math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="161px" alttext="J_{\nu}\left(a\right)J_{\nu}\left(\overline{a}\right)=p_{\nu}" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mover accent="true"><mi>a</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>)</mo></mrow></mrow></mrow><mo>=</mo><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></math>,
+<math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="160px" alttext="J_{\nu}'\left(a\right)J_{\nu}'\left(\overline{a}\right)=s_{\nu}" class="ltx_Math" display="inline"><mrow><mrow><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mover accent="true"><mi>a</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>)</mo></mrow></mrow></mrow><mo>=</mo><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></math>,
+<math altimg="m32.png" altimg-height="28px" altimg-valign="-7px" altimg-width="280px" alttext="J_{\nu}\left(a\right)J_{\nu}'\left(\overline{a}\right)=e^{3\pi i/4}(r_{\nu}-iq%
+_{\nu})" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mover accent="true"><mi>a</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mn>3</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo>/</mo><mn>4</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math altimg="m31.png" altimg-height="28px" altimg-valign="-7px" altimg-width="293px" alttext="J_{\nu}\left(\overline{a}\right)J_{\nu}'\left(a\right)=e^{-3\pi i/4}(r_{\nu}+%
+iq_{\nu})" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mover accent="true"><mi>a</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./10.2#E2" title="Bessel function of the first kind">J</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow><mo>/</mo><mn>4</mn></mrow></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Combine these results with (<a class="ltx_ref" href="10.6.html#E2" title="(10.6.2) ‣ §10.6(i) Recurrence Relations ‣ §10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.6.2</span></a>) and eliminate the
+derivatives. See also <cite class="ltx_cite ltx_citemacro_citet">Petiau (<a class="ltx_ref" href="bib/P.html#bib1867" title="La Théorie des Fonctions de Bessel Exposée en vue de ses Applications à la Physique Mathématique">1955</a>, pp. 266–267)</cite> (but this
+reference contains errors). For the functions <math altimg="m46.png" altimg-height="21px" altimg-valign="-5px" altimg-width="58px" alttext="\operatorname{ker}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math> and
+<math altimg="m43.png" altimg-height="21px" altimg-valign="-5px" altimg-width="55px" alttext="\operatorname{kei}_{\nu}x" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></math> use the second of (<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.61.2</span></a>).</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.ii" title="">http://dlmf.nist.gov/10.63.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Let</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex13">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.63.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m24.png" altimg-height="19px" altimg-valign="-6px" altimg-width="27px" alttext="\displaystyle p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m15.png" altimg-height="29px" altimg-valign="-6px" altimg-width="179px" alttext="\displaystyle={\operatorname{ber}_{\nu}}^{2}x+{\operatorname{bei}_{\nu}}^{2}x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>+</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex14">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m26.png" altimg-height="19px" altimg-valign="-6px" altimg-width="26px" alttext="\displaystyle q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="28px" altimg-valign="-7px" altimg-width="282px" alttext="\displaystyle=\operatorname{ber}_{\nu}x\operatorname{bei}_{\nu}'x-%
+\operatorname{ber}_{\nu}'x\operatorname{bei}_{\nu}x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>−</mo><mrow><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex15">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m28.png" altimg-height="18px" altimg-valign="-5px" altimg-width="26px" alttext="\displaystyle r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m11.png" altimg-height="28px" altimg-valign="-7px" altimg-width="282px" alttext="\displaystyle=\operatorname{ber}_{\nu}x\operatorname{ber}_{\nu}'x+%
+\operatorname{bei}_{\nu}x\operatorname{bei}_{\nu}'x," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>+</mo><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex16">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m29.png" altimg-height="18px" altimg-valign="-5px" altimg-width="27px" alttext="\displaystyle s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="78px" altimg-valign="-9px" altimg-width="126px" alttext="\displaystyle=\left(\operatorname{ber}_{\nu}'x\right)^{2}+\left(\operatorname{%
+bei}_{\nu}'x\right)^{2}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo>(</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m52.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span>,
+<span class="ltx_text"><math altimg="m53.png" altimg-height="17px" altimg-valign="-6px" altimg-width="24px" alttext="q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span>,
+<span class="ltx_text"><math altimg="m54.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span> and
+<span class="ltx_text"><math altimg="m55.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="\operatorname{bei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{ber}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.18</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.63.html#ii.info" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a>,
+<a class="ltx_ref" href="10.63.html#ii.p2" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E5" title="">http://dlmf.nist.gov/10.63.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E5c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E5d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E5c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E5d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E5a.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E5b.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E5c.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E5d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#ii.info" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex17">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.63.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m23.png" altimg-height="20px" altimg-valign="-7px" altimg-width="48px" alttext="\displaystyle p_{\nu+1}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m14.png" altimg-height="27px" altimg-valign="-7px" altimg-width="182px" alttext="\displaystyle=p_{\nu-1}-(4\nu/x)r_{\nu}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./10.63#E5" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow><mo>/</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex18">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m25.png" altimg-height="20px" altimg-valign="-7px" altimg-width="47px" alttext="\displaystyle q_{\nu+1}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">q</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="306px" alttext="\displaystyle=-(\nu/x)p_{\nu}+r_{\nu}=-q_{\nu-1}+2r_{\nu}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>/</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo>+</mo><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>=</mo><mrow><mrow><mo>−</mo><msub><mi href="./10.63#E5" title="cross-product">q</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex19">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m27.png" altimg-height="20px" altimg-valign="-7px" altimg-width="47px" alttext="\displaystyle r_{\nu+1}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">r</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="27px" altimg-valign="-7px" altimg-width="239px" alttext="\displaystyle=-((\nu+1)/x)p_{\nu+1}+q_{\nu}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>+</mo><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex20">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m29.png" altimg-height="18px" altimg-valign="-5px" altimg-width="27px" alttext="\displaystyle s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m13.png" altimg-height="31px" altimg-valign="-9px" altimg-width="285px" alttext="\displaystyle=\tfrac{1}{2}p_{\nu+1}+\tfrac{1}{2}p_{\nu-1}-(\nu^{2}/x^{2})p_{%
+\nu}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">p</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msup><mo>/</mo><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m52.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m53.png" altimg-height="17px" altimg-valign="-6px" altimg-width="24px" alttext="q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m54.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a> and
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m55.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.19</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.63.html#ii.p2" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E6" title="">http://dlmf.nist.gov/10.63.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E6c.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E6d.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E6c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E6d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E6a.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E6b.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E6c.png">png</a>, <a href="http://dlmf.nist.gov/10.63.E6d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#ii.info" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.63.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="29px" altimg-valign="-7px" altimg-width="146px" alttext="p_{\nu}s_{\nu}=r_{\nu}^{2}+q_{\nu}^{2}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>=</mo><mrow><msubsup><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m52.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="p_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">p</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m53.png" altimg-height="17px" altimg-valign="-6px" altimg-width="24px" alttext="q_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">q</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>,
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m54.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="r_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">r</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a> and
+<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m55.png" altimg-height="16px" altimg-valign="-5px" altimg-width="24px" alttext="s_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#E5" title="cross-product">s</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math>:  cross-product</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.20</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.63.html#ii.p2" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.63.E7" title="">http://dlmf.nist.gov/10.63.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.63.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.63.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.63.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.63.html#ii.info" title="§10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63(ii)</span></a>,
+<a class="ltx_ref" href="10.63.html#info" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.63</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">Equations (<a class="ltx_ref" href="10.63.html#E6" title="(10.63.6) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.6</span></a>) and (<a class="ltx_ref" href="10.63.html#E7" title="(10.63.7) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.7</span></a>) also hold when
+the symbols <math altimg="m38.png" altimg-height="18px" altimg-valign="-2px" altimg-width="34px" alttext="\operatorname{ber}" class="ltx_Math" display="inline"><mi href="./10.61#E1" title="Kelvin function">ber</mi></math> and <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="31px" alttext="\operatorname{bei}" class="ltx_Math" display="inline"><mi href="./10.61#E1" title="Kelvin function">bei</mi></math> in (<a class="ltx_ref" href="10.63.html#E5" title="(10.63.5) ‣ §10.63(ii) Cross-Products ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.5</span></a>) are
+replaced throughout by <math altimg="m44.png" altimg-height="18px" altimg-valign="-2px" altimg-width="32px" alttext="\operatorname{ker}" class="ltx_Math" display="inline"><mi href="./10.61#E2" title="Kelvin function">ker</mi></math> and <math altimg="m41.png" altimg-height="18px" altimg-valign="-2px" altimg-width="30px" alttext="\operatorname{kei}" class="ltx_Math" display="inline"><mi href="./10.61#E2" title="Kelvin function">kei</mi></math>, respectively.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="10.62.html" rel="prev" title="In Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.62 </span>Graphs</span></a><a class="ltx_ref" href="10.64.html" rel="next" title="In Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.64 </span>Integral Representations</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

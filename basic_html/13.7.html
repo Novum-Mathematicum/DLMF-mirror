@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/13.7";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="13.html#PT2" rel="up" title="Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.html" rel="up up" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="13.6.html" rel="prev" title="§13.6 Relations to Other Functions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.8.html" rel="next" title="§13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.1.html" rel="section" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.2.html" rel="section" title="§13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.3.html" rel="section" title="§13.3 Recurrence Relations and Derivatives ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.4.html" rel="section" title="§13.4 Integral Representations ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.5.html" rel="section" title="§13.5 Continued Fractions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.6.html" rel="section" title="§13.6 Relations to Other Functions ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.8.html" rel="section" title="§13.8 Asymptotic Approximations for Large Parameters ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.9.html" rel="section" title="§13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.10.html" rel="section" title="§13.10 Integrals ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.11.html" rel="section" title="§13.11 Series ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.12.html" rel="section" title="§13.12 Products ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.13.html" rel="section" title="§13.13 Addition and Multiplication Theorems ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.14.html" rel="section" title="§13.14 Definitions and Basic Properties ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.15.html" rel="section" title="§13.15 Recurrence Relations and Derivatives ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.16.html" rel="section" title="§13.16 Integral Representations ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.17.html" rel="section" title="§13.17 Continued Fractions ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.18.html" rel="section" title="§13.18 Relations to Other Functions ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.19.html" rel="section" title="§13.19 Asymptotic Expansions for Large Argument ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.20.html" rel="section" title="§13.20 Uniform Asymptotic Approximations for Large 𝜇 ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.21.html" rel="section" title="§13.21 Uniform Asymptotic Approximations for Large 𝜅 ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.22.html" rel="section" title="§13.22 Zeros ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.23.html" rel="section" title="§13.23 Integrals ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.24.html" rel="section" title="§13.24 Series ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.25.html" rel="section" title="§13.25 Products ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.26.html" rel="section" title="§13.26 Addition and Multiplication Theorems ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.27.html" rel="section" title="§13.27 Mathematical Applications ‣ Applications ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.28.html" rel="section" title="§13.28 Physical Applications ‣ Applications ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.29.html" rel="section" title="§13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.30.html" rel="section" title="§13.30 Tables ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.31.html" rel="section" title="§13.31 Approximations ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="13.32.html" rel="section" title="§13.32 Software ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<link href="13.7.F1.mag.html" rel="sidebar" title="Figure 13.7.1 ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"/>
+<meta content="Kummer functions, asymptotic expansions for large argument, error bounds, exponentially-improved, hyperasymptotic" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="13.7.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="13.7.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="13.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13 </span>Confluent Hypergeometric Functions</span></a><a class="ltx_ref" href="13.html#PT2" rel="up" title="In Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title">Kummer Functions</span></a><a class="ltx_ref" href="13.6.html" rel="prev" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.6 </span>Relations to Other Functions</span></a><a class="ltx_ref" href="13.8.html" rel="next" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.8 </span>Asymptotic Approximations for Large Parameters</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§13.7 </span>Asymptotic Expansions for Large Argument</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kummer%20functions">Kummer functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions%20for%20large%20argument">asymptotic expansions for large argument</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.29.html#i.p1" title="§13.29(i) Series Expansions ‣ §13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.29(i)</span></a>,
+<a class="ltx_ref" href="13.29.html#ii.p3" title="§13.29(ii) Differential Equations ‣ §13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.29(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="13.7.html" title="">http://dlmf.nist.gov/13.7</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="13.7.html#i"><span class="ltx_tag ltx_tag_subsection">§13.7(i) </span>Poincaré-Type Expansions</a></li>
+<li class="ltx_tocentry"><a href="13.7.html#ii"><span class="ltx_tag ltx_tag_subsection">§13.7(ii) </span>Error Bounds</a></li>
+<li class="ltx_tocentry"><a href="13.7.html#iii"><span class="ltx_tag ltx_tag_subsection">§13.7(iii) </span>Exponentially-Improved Expansion</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.7(i) </span>Poincaré-Type Expansions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Temme (<a class="ltx_ref" href="bib/T.html#bib2230" title="Special Functions: An Introduction to the Classical Functions of Mathematical Physics">1996b</a>, §7.2)</cite> or <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, pp. 256–258)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.i" title="">http://dlmf.nist.gov/13.7.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">As <math altimg="m58.png" altimg-height="13px" altimg-valign="-2px" altimg-width="69px" alttext="x\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="73px" altimg-valign="-28px" altimg-width="516px" alttext="{\mathbf{M}}\left(a,b,x\right)\sim\frac{e^{x}x^{a-b}}{\Gamma\left(a\right)}%
+\sum_{s=0}^{\infty}\frac{{\left(1-a\right)_{s}}{\left(b-a\right)_{s}}}{s!}x^{-%
+s}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.2#E3" title="Olver’s confluent hypergeometric function">𝐌</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mfrac><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></msup></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mn>1</mn><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r3" title="real variable">x</mi><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.2.html#E3" title="(13.2.3) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="{\mathbf{M}}\left(\NVar{a},\NVar{b},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E3" title="Olver’s confluent hypergeometric function">𝐌</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">b</mi><mo>,</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Olver’s confluent hypergeometric function</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m46.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r3" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m57.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r3" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E1" title="">http://dlmf.nist.gov/13.7.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#i.info" title="§13.7(i) Poincaré-Type Expansions ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(i)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">provided that <math altimg="m50.png" altimg-height="22px" altimg-valign="-6px" altimg-width="123px" alttext="a\neq 0,-1,\dots" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">As <math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="68px" alttext="z\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+</div>
+<div class="ltx_para" id="i.p3">
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="73px" altimg-valign="-28px" altimg-width="870px" alttext="{\mathbf{M}}\left(a,b,z\right)\sim\frac{e^{z}z^{a-b}}{\Gamma\left(a\right)}%
+\sum_{s=0}^{\infty}\frac{{\left(1-a\right)_{s}}{\left(b-a\right)_{s}}}{s!}z^{-%
+s}+\frac{e^{\pm\pi\mathrm{i}a}z^{-a}}{\Gamma\left(b-a\right)}\sum_{s=0}^{%
+\infty}\frac{{\left(a\right)_{s}}{\left(a-b+1\right)_{s}}}{s!}(-z)^{-s}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.2#E3" title="Olver’s confluent hypergeometric function">𝐌</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mrow><mfrac><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></msup></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mn>1</mn><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>±</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi>a</mi></mrow></msup></mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo>)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi>a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m14.png" altimg-height="29px" altimg-valign="-9px" altimg-width="255px" alttext="-\frac{1}{2}\pi+\delta\leq\pm\operatorname{ph}z\leq\frac{3}{2}\pi-\delta" class="ltx_Math" display="inline"><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>+</mo><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></mrow><mo>≤</mo><mrow><mo rspace="0.167em">±</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow></mrow><mo>≤</mo><mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="13.2.html#E3" title="(13.2.3) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="{\mathbf{M}}\left(\NVar{a},\NVar{b},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E3" title="Olver’s confluent hypergeometric function">𝐌</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">b</mi><mo>,</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Olver’s confluent hypergeometric function</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m46.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m43.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.9.html#E7" title="(1.9.7) ‣ Modulus and Phase ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="27px" alttext="\operatorname{ph}" class="ltx_Math" display="inline"><mi href="./1.9#E7" title="phase">ph</mi></math>: phase</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r5" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></math>:  small positive constant</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">13.5.1</span> (with corrected region of validity)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.2.html#iv.info" title="§13.2(iv) Limiting Forms as 𝑧→∞ ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.2(iv)</span></a>,
+<a class="ltx_ref" href="13.7.html#ii.p3" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.9.html#i.info" title="§13.9(i) Zeros of 𝑀(𝑎,𝑏,𝑧) ‣ §13.9 Zeros ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.9(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E2" title="">http://dlmf.nist.gov/13.7.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#i.info" title="§13.7(i) Poincaré-Type Expansions ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(i)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">unless <math altimg="m49.png" altimg-height="21px" altimg-valign="-6px" altimg-width="123px" alttext="a=0,-1,\dots" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> and <math altimg="m51.png" altimg-height="22px" altimg-valign="-6px" altimg-width="157px" alttext="b-a=0,-1,\dots" class="ltx_Math" display="inline"><mrow><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.
+Here <math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></math> denotes an arbitrary small positive constant. Also,</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="73px" altimg-valign="-28px" altimg-width="498px" alttext="U\left(a,b,z\right)\sim z^{-a}\sum_{s=0}^{\infty}\frac{{\left(a\right)_{s}}{%
+\left(a-b+1\right)_{s}}}{s!}(-z)^{-s}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi>a</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi>a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m68.png" altimg-height="29px" altimg-valign="-9px" altimg-width="145px" alttext="|\operatorname{ph}z|\leq\tfrac{3}{2}\pi-\delta" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="13.2.html#E6" title="(13.2.6) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(\NVar{a},\NVar{b},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">b</mi><mo>,</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Kummer confluent hypergeometric function</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m46.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m43.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="1.9.html#E7" title="(1.9.7) ‣ Modulus and Phase ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="27px" alttext="\operatorname{ph}" class="ltx_Math" display="inline"><mi href="./1.9#E7" title="phase">ph</mi></math>: phase</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r5" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></math>:  small positive constant</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">13.5.2</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="12.9.html#i.info" title="§12.9(i) Poincaré-Type Expansions ‣ §12.9 Asymptotic Expansions for Large Variable ‣ Properties ‣ Chapter 12 Parabolic Cylinder Functions"><span class="ltx_text ltx_ref_tag">§12.9(i)</span></a>,
+<a class="ltx_ref" href="13.12.html#info" title="§13.12 Products ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.12</span></a>,
+<a class="ltx_ref" href="13.2.html#i.info" title="§13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.2(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E3" title="">http://dlmf.nist.gov/13.7.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#i.info" title="§13.7(i) Poincaré-Type Expansions ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(i)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.7(ii) </span>Error Bounds</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kummer%20functions">Kummer functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions%20for%20large%20argument">asymptotic expansions for large argument</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20bounds">error bounds</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1788" title="On the asymptotic solution of second-order differential equations having an irregular singularity of rank one, with an application to Whittaker functions">1965</a>)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="12.9.html#ii.p1" title="§12.9(ii) Bounds and Re-Expansions for the Remainder Terms ‣ §12.9 Asymptotic Expansions for Large Variable ‣ Properties ‣ Chapter 12 Parabolic Cylinder Functions"><span class="ltx_text ltx_ref_tag">§12.9(ii)</span></a>,
+<a class="ltx_ref" href="13.19.html#p3" title="§13.19 Asymptotic Expansions for Large Argument ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.19</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.ii" title="">http://dlmf.nist.gov/13.7.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<figure class="ltx_figure" id="F1"><a class="ltx_magnifiable" href="13.7.F1.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_square" height="369" id="F1.g1" src="13/7/F1.png" width="416"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 13.7.1: </span>Regions <math altimg="m65.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="{\textbf{R}}_{1}" class="ltx_Math" display="inline"><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>1</mn></msub></math>, <math altimg="m66.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="{\textbf{R}}_{2}" class="ltx_Math" display="inline"><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>2</mn></msub></math>,
+<math altimg="m41.png" altimg-height="26px" altimg-valign="-5px" altimg-width="32px" alttext="\overline{\textbf{R}}_{2}" class="ltx_Math" display="inline"><msub><mover accent="true"><mtext class="ltx_mathvariant_bold">R</mtext><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mn>2</mn></msub></math>, <math altimg="m67.png" altimg-height="21px" altimg-valign="-5px" altimg-width="32px" alttext="{\textbf{R}}_{3}" class="ltx_Math" display="inline"><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>3</mn></msub></math>, and
+<math altimg="m42.png" altimg-height="26px" altimg-valign="-5px" altimg-width="32px" alttext="\overline{\textbf{R}}_{3}" class="ltx_Math" display="inline"><msub><mover accent="true"><mtext class="ltx_mathvariant_bold">R</mtext><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mn>3</mn></msub></math> are the closures of the indicated unshaded regions
+bounded by the straight lines and circular arcs centered at the origin, with
+<math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="109px" alttext="r=|b-2a|" class="ltx_Math" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mi>b</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></math>.
+
+
+<a class="ltx_magnifiable ltx_icon" href="13.7.F1.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="13.2.html#E6" title="(13.2.6) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(\NVar{a},\NVar{b},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">b</mi><mo>,</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Kummer confluent hypergeometric function</a> and
+<a class="ltx_ref" href="1.9.html#E11" title="(1.9.11) ‣ Complex Conjugate ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m40.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="\overline{\NVar{z}}" class="ltx_Math" display="inline"><mover accent="true"><mi class="ltx_nvar" href="./1.1#t1.r2" title="variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></math>: complex conjugate</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.7.html#ii.p1" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.F1" title="">http://dlmf.nist.gov/13.7.F1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.F1.pdf">pdf</a>, <a href="http://dlmf.nist.gov/13.7.F1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="ii.p1">
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="76px" altimg-valign="-28px" altimg-width="572px" alttext="U\left(a,b,z\right)=z^{-a}\sum_{s=0}^{n-1}\frac{{\left(a\right)_{s}}{\left(a-b%
++1\right)_{s}}}{s!}(-z)^{-s}+\varepsilon_{n}(z)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi>a</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi>a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi href="./13.7#E5" title="function">ε</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="13.2.html#E6" title="(13.2.6) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(\NVar{a},\NVar{b},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">b</mi><mo>,</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Kummer confluent hypergeometric function</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="13.7.html#E5" title="(13.7.5) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\varepsilon_{n}(z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E5" title="function">ε</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.2.html#i.info" title="§13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.2(i)</span></a>,
+<a class="ltx_ref" href="13.7.html#ii.p3" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E4" title="">http://dlmf.nist.gov/13.7.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="182px" altimg-valign="-22px" altimg-width="430px" alttext="\left|\varepsilon_{n}(z)\right|,~{}\beta^{-1}\left|\varepsilon_{n}^{\prime}(z)%
+\right|\leq 2\alpha C_{n}\left|\frac{{\left(a\right)_{n}}{\left(a-b+1\right)_{%
+n}}}{n!z^{a+n}}\right|\exp\left(\frac{2\alpha\rho C_{1}}{|z|}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mo>|</mo><mrow><msub><mi href="./13.7#E5" title="function">ε</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo rspace="0.497em">,</mo><mrow><msup><mi href="./13.7#E9" title="𝛽">β</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>|</mo><mrow><msubsup><mi href="./13.7#E5" title="function">ε</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./13.7#E9" title="𝛼">α</mi><mo>⁢</mo><msub><mi href="./13.7#E6" title="coefficient">C</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁢</mo><mrow><mo>|</mo><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi>a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub></mrow><mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mi>a</mi><mo>+</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></msup></mrow></mfrac><mo>|</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi href="./13.7#E9" title="𝛼">α</mi><mo>⁢</mo><mi href="./13.7#E9" title="𝜌">ρ</mi><mo>⁢</mo><msub><mi href="./13.7#E6" title="coefficient">C</mi><mn>1</mn></msub></mrow><mrow><mo stretchy="false">|</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\varepsilon_{n}(z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E5" title="function">ε</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="4.2.html#E19" title="(4.2.19) ‣ §4.2(iii) The Exponential Function ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="17px" altimg-valign="-6px" altimg-width="50px" alttext="\exp\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.2#E19" title="exponential function">exp</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: exponential function</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="13.7.html#E6" title="(13.7.6) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m15.png" altimg-height="21px" altimg-valign="-5px" altimg-width="30px" alttext="C_{n}" class="ltx_Math" display="inline"><msub><mi href="./13.7#E6" title="coefficient">C</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="13.7.html#E9" title="(13.7.9) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝛼">α</mi></math></a>,
+<a class="ltx_ref" href="13.7.html#E9" title="(13.7.9) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m24.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝛽">β</mi></math></a> and
+<a class="ltx_ref" href="13.7.html#E9" title="(13.7.9) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m44.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="\rho" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝜌">ρ</mi></math></a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.2.html#i.info" title="§13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.2(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E5" title="">http://dlmf.nist.gov/13.7.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and with the notation of Figure <a class="ltx_ref" href="13.7.html#F1" title="Figure 13.7.1 ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.7.1</span></a></p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="57px" altimg-valign="-9px" altimg-width="336px" alttext="C_{n}=1,\quad\chi(n),\quad\left(\chi(n)+\sigma\nu^{2}n\right)\nu^{n}," class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./13.7#E6" title="coefficient">C</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>=</mo><mrow><mn>1</mn><mo rspace="1.167em">,</mo><mrow><mi href="./13.7#E8" title="function">χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mo>(</mo><mrow><mrow><mi href="./13.7#E8" title="function">χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./13.7#E8" title="𝜎">σ</mi><mo>⁢</mo><msup><mi href="./13.7#E8" title="𝜈">ν</mi><mn>2</mn></msup><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi href="./13.7#E8" title="𝜈">ν</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m15.png" altimg-height="21px" altimg-valign="-5px" altimg-width="30px" alttext="C_{n}" class="ltx_Math" display="inline"><msub><mi href="./13.7#E6" title="coefficient">C</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub></math>:  coefficient (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.7.html#E8" title="(13.7.8) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m45.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜎">σ</mi></math></a>,
+<a class="ltx_ref" href="13.7.html#E8" title="(13.7.8) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m35.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜈">ν</mi></math></a> and
+<a class="ltx_ref" href="13.7.html#E8" title="(13.7.8) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="\chi(n)" class="ltx_Math" display="inline"><mrow><mi href="./13.7#E8" title="function">χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E6" title="">http://dlmf.nist.gov/13.7.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">according as</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="28px" altimg-valign="-6px" altimg-width="362px" alttext="z\in\textbf{R}_{1},\quad z\in\textbf{R}_{2}\cup\overline{\textbf{R}}_{2},\quad
+z%
+\in\textbf{R}_{3}\cup\overline{\textbf{R}}_{3}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>1</mn></msub></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>2</mn></msub><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><msub><mover accent="true"><mtext class="ltx_mathvariant_bold">R</mtext><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mn>2</mn></msub></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>3</mn></msub><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><msub><mover accent="true"><mtext class="ltx_mathvariant_bold">R</mtext><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mn>3</mn></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E11" title="(1.9.11) ‣ Complex Conjugate ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m40.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="\overline{\NVar{z}}" class="ltx_Math" display="inline"><mover accent="true"><mi class="ltx_nvar" href="./1.1#t1.r2" title="variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></math>: complex conjugate</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m29.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r28" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m26.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\cup" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r28" title="union">∪</mo></math>: union</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E7" title="">http://dlmf.nist.gov/13.7.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">respectively, with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">13.7.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="15px" altimg-valign="-2px" altimg-width="19px" alttext="\displaystyle\sigma" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜎">σ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m4.png" altimg-height="40px" altimg-valign="-7px" altimg-width="144px" alttext="\displaystyle=\left|\ifrac{(b-2a)}{z}\right|" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em" rspace="0em" stretchy="true" symmetric="true">/</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>|</mo></mrow></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\displaystyle\nu" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜈">ν</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m3.png" altimg-height="56px" altimg-valign="-15px" altimg-width="239px" alttext="\displaystyle=\left(\tfrac{1}{2}+\tfrac{1}{2}\sqrt{1-4\sigma^{2}}\right)^{-%
+\ifrac{1}{2}}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi href="./13.7#E8" title="𝜎">σ</mi><mn>2</mn></msup></mrow></mrow></msqrt></mrow></mrow><mo>)</mo></mrow><mrow><mo>−</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow></mrow></msup></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="27px" altimg-valign="-7px" altimg-width="48px" alttext="\displaystyle\chi(n)" class="ltx_Math" display="inline"><mrow><mi href="./13.7#E8" title="function">χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m5.png" altimg-height="74px" altimg-valign="-9px" altimg-width="161px" alttext="\displaystyle=\sqrt{\pi}\Gamma\left(\tfrac{1}{2}n+1\right)/\Gamma\left(\tfrac{%
+1}{2}n+\tfrac{1}{2}\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><mo>/</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math>.</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m45.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜎">σ</mi></math> (locally)</span>,
+<span class="ltx_text"><math altimg="m35.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜈">ν</mi></math> (locally)</span> and
+<span class="ltx_text"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="\chi(n)" class="ltx_Math" display="inline"><mrow><mi href="./13.7#E8" title="function">χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m43.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E8" title="">http://dlmf.nist.gov/13.7.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E8a.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E8b.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E8c.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E8a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E8b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E8c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E8a.png">png</a>, <a href="http://dlmf.nist.gov/13.7.E8b.png">png</a>, <a href="http://dlmf.nist.gov/13.7.E8c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Also, when <math altimg="m60.png" altimg-height="26px" altimg-valign="-5px" altimg-width="168px" alttext="z\in\textbf{R}_{1}\cup\textbf{R}_{2}\cup\overline{\textbf{R}}_{2}" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>1</mn></msub><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>2</mn></msub><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><msub><mover accent="true"><mtext class="ltx_mathvariant_bold">R</mtext><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mn>2</mn></msub></mrow></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">13.7.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\alpha" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝛼">α</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m2.png" altimg-height="50px" altimg-valign="-18px" altimg-width="82px" alttext="\displaystyle=\frac{1}{1-\sigma}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi href="./13.7#E8" title="𝜎">σ</mi></mrow></mfrac></mstyle></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="24px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\beta" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝛽">β</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m1.png" altimg-height="57px" altimg-valign="-21px" altimg-width="174px" alttext="\displaystyle=\frac{1-\sigma^{2}+\sigma|z|^{-1}}{2(1-\sigma)}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>1</mn><mo>−</mo><msup><mi href="./13.7#E8" title="𝜎">σ</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi href="./13.7#E8" title="𝜎">σ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./13.7#E8" title="𝜎">σ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="19px" altimg-valign="-6px" altimg-width="17px" alttext="\displaystyle\rho" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝜌">ρ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m6.png" altimg-height="65px" altimg-valign="-21px" altimg-width="306px" alttext="\displaystyle=\tfrac{1}{2}\left|2a^{2}-2ab+b\right|+\frac{\sigma(1+\frac{1}{4}%
+\sigma)}{(1-\sigma)^{2}}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>|</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>+</mo><mi>b</mi></mrow><mo>|</mo></mrow></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi href="./13.7#E8" title="𝜎">σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./13.7#E8" title="𝜎">σ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./13.7#E8" title="𝜎">σ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mstyle></mrow></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝛼">α</mi></math> (locally)</span>,
+<span class="ltx_text"><math altimg="m24.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝛽">β</mi></math> (locally)</span> and
+<span class="ltx_text"><math altimg="m44.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="\rho" class="ltx_Math" display="inline"><mi href="./13.7#E9" title="𝜌">ρ</mi></math> (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="13.7.html#E8" title="(13.7.8) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m45.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜎">σ</mi></math></a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="13.7.html#ii.p1" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#ii.p3" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E9" title="">http://dlmf.nist.gov/13.7.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E9a.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E9b.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E9c.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E9a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E9b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E9c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E9a.png">png</a>, <a href="http://dlmf.nist.gov/13.7.E9b.png">png</a>, <a href="http://dlmf.nist.gov/13.7.E9c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#ii.info" title="§13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(ii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and when <math altimg="m61.png" altimg-height="26px" altimg-valign="-5px" altimg-width="118px" alttext="z\in\textbf{R}_{3}\cup\overline{\textbf{R}}_{3}" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><msub><mtext class="ltx_mathvariant_bold">R</mtext><mn>3</mn></msub><mo href="./front/introduction#common.t1.r28" title="union">∪</mo><msub><mover accent="true"><mtext class="ltx_mathvariant_bold">R</mtext><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mn>3</mn></msub></mrow></mrow></math>
+<math altimg="m45.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\sigma" class="ltx_Math" display="inline"><mi href="./13.7#E8" title="𝜎">σ</mi></math> is replaced by <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="28px" alttext="\nu\sigma" class="ltx_Math" display="inline"><mrow><mi href="./13.7#E8" title="𝜈">ν</mi><mo>⁢</mo><mi href="./13.7#E8" title="𝜎">σ</mi></mrow></math> and <math altimg="m69.png" altimg-height="26px" altimg-valign="-7px" altimg-width="49px" alttext="|z|^{-1}" class="ltx_Math" display="inline"><msup><mrow><mo stretchy="false">|</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> is replaced by <math altimg="m37.png" altimg-height="26px" altimg-valign="-7px" altimg-width="60px" alttext="\nu|z|^{-1}" class="ltx_Math" display="inline"><mrow><mi href="./13.7#E8" title="𝜈">ν</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></math> everywhere in
+(<a class="ltx_ref" href="13.7.html#E9" title="(13.7.9) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.7.9</span></a>).</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">For numerical values of <math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="\chi(n)" class="ltx_Math" display="inline"><mrow><mi href="./13.7#E8" title="function">χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> see Table <a class="ltx_ref" href="9.7.html#T1" title="Table 9.7.1 ‣ §9.7(i) Notation ‣ §9.7 Asymptotic Expansions ‣ Airy Functions ‣ Chapter 9 Airy and Related Functions"><span class="ltx_text ltx_ref_tag">9.7.1</span></a>.</p>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">Corresponding error bounds for (<a class="ltx_ref" href="13.7.html#E2" title="(13.7.2) ‣ §13.7(i) Poincaré-Type Expansions ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.7.2</span></a>) can be constructed by combining
+(<a class="ltx_ref" href="13.2.html#E41" title="(13.2.41) ‣ Kummer’s Transformations ‣ §13.2(vii) Connection Formulas ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.2.41</span></a>) with (<a class="ltx_ref" href="13.7.html#E4" title="(13.7.4) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.7.4</span></a>)–(<a class="ltx_ref" href="13.7.html#E9" title="(13.7.9) ‣ §13.7(ii) Error Bounds ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">13.7.9</span></a>).</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§13.7(iii) </span>Exponentially-Improved Expansion</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kummer%20functions">Kummer functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions%20for%20large%20argument">asymptotic expansions for large argument</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exponentially-improved">exponentially-improved</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=hyperasymptotic">hyperasymptotic</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="12.9.html#ii.p1" title="§12.9(ii) Bounds and Re-Expansions for the Remainder Terms ‣ §12.9 Asymptotic Expansions for Large Variable ‣ Properties ‣ Chapter 12 Parabolic Cylinder Functions"><span class="ltx_text ltx_ref_tag">§12.9(ii)</span></a>,
+<a class="ltx_ref" href="13.19.html#p3" title="§13.19 Asymptotic Expansions for Large Argument ‣ Whittaker Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.19</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.10.I2.ix6.p1" title="In Other Changes ‣ Version 1.0.10 (August 7, 2015) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.10) for  References</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.iii" title="">http://dlmf.nist.gov/13.7.iii</a></dd>
+<dt>Addition (effective with 1.0.10):</dt>
+<dd>
+A sentence and reference to <cite class="ltx_cite ltx_citemacro_citet">Paris (<a class="ltx_ref" href="bib/P.html#bib1832" title="Exponentially small expansions of the confluent hypergeometric functions">2013</a>)</cite> were added at the end
+of this subsection.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Let</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="76px" altimg-valign="-28px" altimg-width="617px" alttext="U\left(a,b,z\right)=z^{-a}\sum_{s=0}^{n-1}\frac{{\left(a\right)_{s}}{\left(a-b%
++1\right)_{s}}}{s!}(-z)^{-s}+R_{n}(a,b,z)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi>a</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi>a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="13.2.html#E6" title="(13.2.6) ‣ Standard Solutions ‣ §13.2(i) Differential Equation ‣ §13.2 Definitions and Basic Properties ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="U\left(\NVar{a},\NVar{b},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./13.2#E6" title="Kummer confluent hypergeometric function">U</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">b</mi><mo>,</mo><mi class="ltx_nvar" href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Kummer confluent hypergeometric function</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="13.7.html#E11" title="(13.7.11) ‣ §13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="R_{n}(a,b,z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.29.html#i.p1" title="§13.29(i) Series Expansions ‣ §13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.29(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E10" title="">http://dlmf.nist.gov/13.7.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#iii.info" title="§13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(iii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="R_{n}(a,b,z)=\frac{(-1)^{n}2\pi z^{a-b}}{\Gamma\left(a\right)\Gamma\left(a-b+1%
+\right)}\left(\sum_{s=0}^{m-1}\frac{{\left(1-a\right)_{s}}{\left(b-a\right)_{s%
+}}}{s!}(-z)^{-s}G_{n+2a-b-s}(z)+{\left(1-a\right)_{m}}{\left(b-a\right)_{m}}R_%
+{m,n}(a,b,z)\right)," class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msup><mo>⁢</mo><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow></msup></mrow><mrow><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo maxsize="3.66em" minsize="3.66em">(</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><munderover><mo lspace="0em" movablelimits="false">∑</mo><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./13.1#p1.t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mfrac><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mn>1</mn><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></msub></mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./13.7#E12" title="expansion">G</mi><mrow><mrow><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mo>−</mo><mi>b</mi><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mrow><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mn>1</mn><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r1" title="integer">m</mi></msub><mo>⁢</mo><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi href="./13.1#p1.t1.r1" title="integer">m</mi></msub><mo>⁢</mo><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mrow><mi href="./13.1#p1.t1.r1" title="integer">m</mi><mo>,</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="3.66em" minsize="3.66em">)</mo><mo>,</mo></mtd></mtr></mtable></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="R_{n}(a,b,z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m63.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m43.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m13.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r1" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m56.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="s" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">s</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="13.7.html#E12" title="(13.7.12) ‣ §13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m16.png" altimg-height="26px" altimg-valign="-8px" altimg-width="57px" alttext="G_{p}(z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E12" title="expansion">G</mi><mi>p</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  expansion</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="13.29.html#i.p1" title="§13.29(i) Series Expansions ‣ §13.29 Methods of Computation ‣ Computation ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.29(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E11" title="">http://dlmf.nist.gov/13.7.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#iii.info" title="§13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(iii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r1" title="integer">m</mi></math> is an arbitrary nonnegative integer, and</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="103px" altimg-valign="-16px" altimg-width="176px" alttext="G_{p}(z)=\frac{e^{z}}{2\pi}\Gamma\left(p\right)\Gamma\left(1-p,z\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./13.7#E12" title="expansion">G</mi><mi>p</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></msup><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mfrac><mo>⁢</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi>p</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi href="./8.2#E2" mathvariant="normal" title="incomplete gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>p</mi></mrow><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m16.png" altimg-height="26px" altimg-valign="-8px" altimg-width="57px" alttext="G_{p}(z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E12" title="expansion">G</mi><mi>p</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  expansion (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#E1" title="(5.2.1) ‣ Euler’s Integral ‣ §5.2(i) Gamma and Psi Functions ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\Gamma\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./5.1#t1.r4" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: gamma function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m43.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="8.2.html#E2" title="(8.2.2) ‣ §8.2(i) Definitions ‣ §8.2 Definitions and Basic Properties ‣ Incomplete Gamma Functions ‣ Chapter 8 Incomplete Gamma and Related Functions"><math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="\Gamma\left(\NVar{a},\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./8.2#E2" mathvariant="normal" title="incomplete gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./8.1#p1.t1.r3" title="parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./8.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: incomplete gamma function</a> and
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E12" title="">http://dlmf.nist.gov/13.7.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#iii.info" title="§13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(iii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">(For the notation see §<a class="ltx_ref" href="8.2.html#i" title="§8.2(i) Definitions ‣ §8.2 Definitions and Basic Properties ‣ Incomplete Gamma Functions ‣ Chapter 8 Incomplete Gamma and Related Functions"><span class="ltx_text ltx_ref_tag">8.2(i)</span></a>.) Then as <math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="68px" alttext="z\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> with
+<math altimg="m31.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\left|\left|z\right|-n\right|" class="ltx_Math" display="inline"><mrow><mo>|</mo><mrow><mrow><mo>|</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo>|</mo></mrow><mo>−</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow><mo>|</mo></mrow></math> bounded and <math altimg="m48.png" altimg-height="22px" altimg-valign="-6px" altimg-width="61px" alttext="a,b,m" class="ltx_Math" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r1" title="integer">m</mi></mrow></math> fixed</p>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">13.7.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="69px" altimg-valign="-28px" altimg-width="501px" alttext="R_{m,n}(a,b,z)=\begin{cases}O\left(e^{-|z|}z^{-m}\right),&amp;|\operatorname{ph}z|%
+\leq\pi,\\
+O\left(e^{z}z^{-m}\right),&amp;\pi\leq|\operatorname{ph}z|\leq\tfrac{5}{2}\pi-%
+\delta.\\
+\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mrow><mi href="./13.1#p1.t1.r1" title="integer">m</mi><mo>,</mo><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi href="./13.1#p1.t1.r1" title="integer">m</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></msup><mo>⁢</mo><msup><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mrow><mo>−</mo><mi href="./13.1#p1.t1.r1" title="integer">m</mi></mrow></msup></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mn>5</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m43.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.9.html#E7" title="(1.9.7) ‣ Modulus and Phase ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m38.png" altimg-height="22px" altimg-valign="-6px" altimg-width="27px" alttext="\operatorname{ph}" class="ltx_Math" display="inline"><mi href="./1.9#E7" title="phase">ph</mi></math>: phase</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r1" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r2" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r4" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m59.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="13.1.html#p1.t1.r5" title="§13.1 Special Notation ‣ Notation ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./13.1#p1.t1.r5" title="small positive constant">δ</mi></math>:  small positive constant</a> and
+<a class="ltx_ref" href="13.7.html#E11" title="(13.7.11) ‣ §13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="96px" alttext="R_{n}(a,b,z)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.7#E11" title="remainder">R</mi><mi href="./13.1#p1.t1.r2" title="nonnegative integer">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/13.7.E13" title="">http://dlmf.nist.gov/13.7.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/13.7.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/13.7.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/13.7.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="13.7.html#iii.info" title="§13.7(iii) Exponentially-Improved Expansion ‣ §13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7(iii)</span></a>,
+<a class="ltx_ref" href="13.7.html#info" title="§13.7 Asymptotic Expansions for Large Argument ‣ Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">§13.7</span></a> and
+<a class="ltx_ref" href="13.html#info" title="Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_tag">Ch.13</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">For proofs see <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1804" title="Uniform, exponentially improved, asymptotic expansions for the confluent hypergeometric function and other integral transforms">1991b</a>, <a class="ltx_ref" href="bib/O.html#bib2559" title="Exponentially-improved asymptotic solutions of ordinary differential equations I: The confluent hypergeometric function">1993a</a>)</cite>. For the special case <math altimg="m39.png" altimg-height="22px" altimg-valign="-6px" altimg-width="98px" alttext="\operatorname{ph}z=\pm\pi" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./13.1#p1.t1.r4" title="complex variable">z</mi></mrow><mo>=</mo><mrow><mo>±</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> see <cite class="ltx_cite ltx_citemacro_citet">Paris (<a class="ltx_ref" href="bib/P.html#bib1832" title="Exponentially small expansions of the confluent hypergeometric functions">2013</a>)</cite>.
+For extensions to hyperasymptotic expansions see <cite class="ltx_cite ltx_citemacro_citet">Olde Daalhuis and Olver (<a class="ltx_ref" href="bib/O.html#bib1762" title="Hyperasymptotic solutions of second-order linear differential equations. I">1995a</a>)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="13.6.html" rel="prev" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.6 </span>Relations to Other Functions</span></a><a class="ltx_ref" href="13.8.html" rel="next" title="In Kummer Functions ‣ Chapter 13 Confluent Hypergeometric Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">13.8 </span>Asymptotic Approximations for Large Parameters</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,332 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT 256 79 "          \+
+
+                 Prolate Spheroidal Wave Functions in Signal Analysis
+
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 82 "                     A Maple \+
+
+worksheet written by Hans Volkmer, November 11, 2001 " }}}{EXCHG 
+
+{PARA 0 "" 0 "" {TEXT -1 83 "                                         \+
+
+          send comments to volkmer@uwm.edu" }}}{EXCHG {PARA 0 "" 0 "" 
+
+{TEXT -1 68 "This Maple worksheet computes the prolate spheroidal wave
+
+ functions " }{XPPEDIT 18 0 "phi[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }
+
+{TEXT -1 36 " known from signal analysis together" }}{PARA 0 "" 0 "" 
+
+{TEXT -1 35 "with the corresponding eigenvalues " }{XPPEDIT 18 0 "mu[n
+
+];" "6#&amp;%#muG6#%\"nG" }{TEXT -1 50 " of the differential equation and \+
+
+the eigenvalues " }{XPPEDIT 18 0 "lambda[n];" "6#&amp;%'lambdaG6#%\"nG" }
+
+{TEXT -1 26 " of the integral equation." }}{PARA 0 "" 0 "" {TEXT -1 4 
+
+"The " }{XPPEDIT 18 0 "phi[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT 
+
+-1 26 " are normalized such that " }{XPPEDIT 18 0 "int(phi[n](t)^2,t =
+
+ -infinity .. infinity) = 1;" "6#/-%$intG6$*$-&amp;%$phiG6#%\"nG6#%\"tG\"
+
+\"#/F.;,$%)infinityG!\"\"F3\"\"\"" }{TEXT -1 6 "  and " }{XPPEDIT 18 
+
+0 "0 &lt; phi[n](1);" "6#2\"\"!-&amp;%$phiG6#%\"nG6#\"\"\"" }{TEXT -1 2 " ." 
+
+}}{PARA 0 "" 0 "" {TEXT -1 32 " The eigenvalues depend only on " }
+
+{XPPEDIT 18 0 "q = sigma^2*tau^2;" "6#/%\"qG*&amp;%&amp;sigmaG\"\"#%$tauGF'" }
+
+{TEXT -1 67 " . The computations of eigenvalues and eigenfunctions are
+
+ based on " }}{PARA 0 "" 0 "" {TEXT -1 120 "approximations by d by d m
+
+atrices. The number d must be chosen larger than n. The larger d the b
+
+etter the approximation." }}{PARA 0 "" 0 "" {TEXT -1 101 " If q is sma
+
+ll, d may be chosen a little larger than n, but if q is large d has to
+
+ be increased more." }}{PARA 0 "" 0 "" {TEXT -1 13 "The function " }
+
+{XPPEDIT 18 0 "phi[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT -1 41 " i
+
+s approximated by a polynomial between " }{XPPEDIT 18 0 "t = -tau;" "6
+
+#/%\"tG,$%$tauG!\"\"" }{TEXT -1 5 " and " }{XPPEDIT 18 0 "t = tau;" "6
+
+#/%\"tG%$tauG" }{TEXT -1 32 ". This polynomial is computed by" }}
+
+{PARA 0 "" 0 "" {TEXT -1 42 "the procedure phi1. Outside this interval
+
+ " }{XPPEDIT 18 0 "phi[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT -1 
+
+66 " is approximated by a finite series of spherical Bessel functions.
+
+" }}{PARA 0 "" 0 "" {TEXT -1 99 "This approximation is computed by the
+
+ procedure phi2. The latter approximation is also good between" }}
+
+{PARA 0 "" 0 "" {XPPEDIT 18 0 "t = -tau;" "6#/%\"tG,$%$tauG!\"\"" }
+
+{TEXT -1 5 " and " }{XPPEDIT 18 0 "t = tau;" "6#/%\"tG%$tauG" }{TEXT 
+
+-1 69 " except for a small neighborhood of zero. The procedure phi com
+
+putes " }{XPPEDIT 18 0 "phi[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT 
+
+-1 25 " as a piecewise function " }}{PARA 0 "" 0 "" {TEXT -1 27 "using
+
+ both approximations. " }}{PARA 0 "" 0 "" {TEXT -1 99 "It would be bet
+
+ter to determine d automatically using error estimates but I have not \+
+
+done that yet." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "restart;w
+
+ith(linalg):with(orthopoly):" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 47 "Digits:=10; # you can change the precision here" }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 55 "trideven:=proc(q,d) # yields d by d
+
+ matrix if n is even" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,i;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "A:=Matrix(d,d,0);" }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 95 "for i from 1 to d do      A[i,i]:=(2*i-2.0)*(
+
+2*i-1)-2*q*((2*i-2)*(2*i-1)-1)/(4*i-5)/(4*i-1) od;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 68 "for i from 1 to d-1 do A[i,i+1]:=-q*(2*i-1)*2*i/(4*
+
+i-1)/(4*i+1) od; " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 t
+
+o d do " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 50 "  A[i,i-1]:=-q*(2*i-3)*(
+
+2*i-2)/(4*i-7)/(4*i-5) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 50 "tridodd:=proc(q,d) # the d by d matrix if n is odd" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,i;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 17 "A:=Matrix(d,d,0);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+87 "for i from 1 to d do      A[i,i]:=(2*i-1.0)*2*i-2*q*((2*i-1)*2*i-1
+
+)/(4*i-3)/(4*i+1) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for i from
+
+ 1 to d-1 do A[i,i+1]:=-q*2*i*(2*i+1)/(4*i+1)/(4*i+3) od; " }}{PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 69 "for i from 2 to d do A[i,i-1]:=-q*(2*i-2)*(
+
+2*i-1)/(4*i-5)/(4*i-3) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 69 "mu:=proc(n,q,d) # this is the eigenvalue of the diffe
+
+rential equation" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 12 "local l,L,A;" }
+
+}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 85 "if type(n,even) then A:=trideven(q
+
+,d);l:=n/2+1;else A:=tridodd(q,d);l:=(n-1)/2+1; fi;" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 31 "L:=[eigenvalues(A)];L:=sort(L);" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 7 "L[l]+q;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" 
+
+}}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 134 "acoeff:=proc(n,q,d) # th
+
+e coefficients for expansion of Meixner-Schaefke function Ps_n(x;q) in
+
+ Legendre polynomials from d by d matrix" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 21 "local i,c,cc,e,j,A,K;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 83 "if type(n,even) then A:=trideven(q,d);j:=n/2+1;else A:=tridodd
+
+(q,d);j:=(n+1)/2; fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "K:=[eigenv
+
+ectors(A)];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "K:=sort(K,(a,b)-&gt;eva
+
+lb(a[1] &lt; b[1]));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 15 "e:=K[j][3][1];
+
+ " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 48 "c:=sum(e[r+j]^2/(1+2*n+4*r),r=
+
+1-j..d-j)*(2*n+1);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 11 "c:=sqrt(c);" 
+
+}}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 47 "cc:=sum((-1)^r*e[r+j],r=1-j..d-j)
+
+;# test A_n&gt;0 " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "if cc&lt;0 then c:=-
+
+c fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "for i from 1 to d do e[i]:
+
+=e[i]/c od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "e;" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 69 "
+
+lambda:=proc(n,q,d) # this is the eigenvalue of the integral equation
+
+" }{TEXT -1 0 "" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 14 "local j,s,e,k;" 
+
+}}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 17 "e:=acoeff(n,q,d);" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 20 "if type(n,even) then" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 9 "k:=n/2+1;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "s:=0;" 
+
+}}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 60 "for j from 1 to d do s:=s+(-1)^(j
+
+-k)*e[j]*P(n+2*(j-k),0) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 31 "eval
+
+f(2*sqrt(q)/Pi*e[1]^2/s^2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "else \+
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 11 "k:=(n+1)/2;" }}{PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 70 "for j fr
+
+om 1 to d do s:=s+(-1)^(j-k)*e[j]*coeff(P(n+2*(j-k),x),x); od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 27 "evalf(2/3*q/Pi*e[1]^2/s^2);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 76 "phi1:=proc(n,s
+
+igma,tau,d) # this is the approximation of phi by a polynomial" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 23 "local ps,j,e,k,s,h,F,q;" }}{PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 17 "q:=sigma^2*tau^2;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 17 "e:=acoeff(n,q,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+20 "if type(n,even) then" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 9 "k:=n/2+1
+
+;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 60 "for j from 1 to d do s:=s+(-1)^(j-k)*e[j]*P(n+2*(j-k)
+
+,0) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 40 "F:=evalf(sqrt((2*n+1)*si
+
+gma/Pi)*e[1]/s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "else " }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 11 "k:=(n+1)/2;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 5 "s:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 71 "for j from
+
+ 1 to d do s:=s+(-1)^(j-k)*e[j]*coeff(P(n+2*(j-k),x),x,1) od;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 52 "F:=evalf(sigma*tau/3*sqrt((2*n+1)*s
+
+igma/Pi)*e[1]/s);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 3 "fi;" }}{PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 5 "h:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 60 "
+
+for j from 1 to d do h:=h+(-1)^(j-k)*e[j]*P(n+2*(j-k),x) od;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 23 "abs(F)*subs(x=t/tau,h);" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+91 "phi2:=proc(n,sigma,tau,d)  # this is the approximation of phi by s
+
+pherical Bessel functions" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "local \+
+
+h,hh,i,e,k,p;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 13 "p:=sigma*tau;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "k:=floor(n/2+1);" }}{PARA 0 "&gt; " 0 
+
+"" {MPLTEXT 1 0 19 "e:=acoeff(n,p^2,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 11 "h:=0;hh:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 103 "for i from \+
+
+1 to d do h:=h+e[i]*BesselJ(n+2*(i-k)+1/2,x);hh:=hh+evalf(e[i]*BesselJ
+
+(n+2*(i-k)+1/2,p)) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "h:=sqrt((
+
+n+0.5)/t)*subs(x=sigma*t,h);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 22 "if \+
+
+hh&lt;0 then h:=-h fi;" }{TEXT -1 0 "" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+2 "h;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 75 "phi:=proc(n,sigma,tau,d) # this is an approxim
+
+ation of phi valid everywhere" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 112 "p
+
+iecewise(abs(t)&lt;=tau,phi1(n,sigma,tau,d))+signum(t)^n*piecewise(abs(t)
+
+&gt;tau,subs(t=abs(t),phi2(n,sigma,tau,d)));" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 26 "Example 1
+
+: Computation of " }{XPPEDIT 18 0 "mu[n];" "6#&amp;%#muG6#%\"nG" }{TEXT 
+
+-1 2 " ." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 38 "n:=0;sigma:=2;t
+
+au:=1;q:=sigma^2*tau^2;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 36 "
+
+for d from n+1 to 5 do mu(n,q,d) od;" }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 42 "# d=4 is sufficient for 10 digit precision" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 26 "Example 2: Computation of " }
+
+{XPPEDIT 18 0 "lambda[n];" "6#&amp;%'lambdaG6#%\"nG" }{TEXT -1 2 " ." }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 41 "for d from n+1 to 10 do lamb
+
+da(n,q,d) od;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 44 "# d=6 is s
+
+ufficient for 10 digit precision  " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+
+-1 29 "Example 3: Approximation of  " }{XPPEDIT 18 0 "phi[n](t);" "6#-
+
+&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT -1 17 " by a polynomial." }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "f:=phi1(n,sigma,tau,n+5);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 20 "plot(f,t=-tau..tau);" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 28 "Example 4: Approximation of " }
+
+{XPPEDIT 18 0 "phi[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT -1 42 " b
+
+y a series of spherical Bessel function." }}}{EXCHG {PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 25 "g:=phi2(n,sigma,tau,n+5);" }}}{EXCHG {PARA 0 "&gt; " 0 "
+
+" {MPLTEXT 1 0 22 "plot(g,t=tau..10*tau);" }}}{EXCHG {PARA 0 "" 0 "" 
+
+{TEXT -1 37 "Example 5: Combined approximation of " }{XPPEDIT 18 0 "ph
+
+i[n](t);" "6#-&amp;%$phiG6#%\"nG6#%\"tG" }{TEXT -1 3 " .." }}}{EXCHG 
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 24 "h:=phi(n,sigma,tau,n+4);" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 26 "plot(h,t=-10*tau..10*tau);" 
+
+}}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "13 1 0" 18 }{VIEWOPTS 1 1 0 1 1 
+
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
+

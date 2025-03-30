@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/31.3";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="31.html#PT2" rel="up" title="Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.html" rel="up up" title="Chapter 31 Heun Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="31.2.html" rel="prev" title="§31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.4.html" rel="next" title="§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.1.html" rel="section" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"/>
+<link href="31.2.html" rel="section" title="§31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.4.html" rel="section" title="§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.5.html" rel="section" title="§31.5 Solutions Analytic at Three Singularities: Heun Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.6.html" rel="section" title="§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.7.html" rel="section" title="§31.7 Relations to Other Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.8.html" rel="section" title="§31.8 Solutions via Quadratures ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.9.html" rel="section" title="§31.9 Orthogonality ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.10.html" rel="section" title="§31.10 Integral Equations and Representations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.11.html" rel="section" title="§31.11 Expansions in Series of Hypergeometric Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.12.html" rel="section" title="§31.12 Confluent Forms of Heun’s Equation ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.13.html" rel="section" title="§31.13 Asymptotic Approximations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.14.html" rel="section" title="§31.14 General Fuchsian Equation ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.15.html" rel="section" title="§31.15 Stieltjes Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.16.html" rel="section" title="§31.16 Mathematical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="31.17.html" rel="section" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="31.18.html" rel="section" title="§31.18 Methods of Computation ‣ Computation ‣ Chapter 31 Heun Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Fuchs–Frobenius, Heun’s equation, automorphisms, basic solutions, equivalent expressions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="31.3.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="31.3.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="31.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31 </span>Heun Functions</span></a><a class="ltx_ref" href="31.html#PT2" rel="up" title="In Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="31.2.html" rel="prev" title="In Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.2 </span>Differential Equations</span></a><a class="ltx_ref" href="31.4.html" rel="next" title="In Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.4 </span>Solutions Analytic at Two Singularities: Heun Functions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§31.3 </span>Basic Solutions</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="31.18.html#p1" title="§31.18 Methods of Computation ‣ Computation ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.18</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="31.3.html" title="">http://dlmf.nist.gov/31.3</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="31.3.html#i"><span class="ltx_tag ltx_tag_subsection">§31.3(i) </span>Fuchs–Frobenius Solutions at <math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math></a></li>
+<li class="ltx_tocentry"><a href="31.3.html#ii"><span class="ltx_tag ltx_tag_subsection">§31.3(ii) </span>Fuchs–Frobenius Solutions at Other Singularities</a></li>
+<li class="ltx_tocentry"><a href="31.3.html#iii"><span class="ltx_tag ltx_tag_subsection">§31.3(iii) </span>Equivalent Expressions</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§31.3(i) </span>Fuchs–Frobenius Solutions at <math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fuchs%E2%80%93Frobenius">Fuchs–Frobenius</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=basic%20solutions">basic solutions</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#ii.p1" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.4.html#p2" title="§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.4</span></a>,
+<a class="ltx_ref" href="31.5.html#p1" title="§31.5 Solutions Analytic at Three Singularities: Heun Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.5</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.i" title="">http://dlmf.nist.gov/31.3.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(a,q;\alpha,\beta,\gamma,\delta;z\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> denotes the solution of
+(<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) that corresponds to the exponent <math altimg="m7.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math> at <math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math> and assumes
+the value <math altimg="m12.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math> there. If the other exponent is not a positive integer, that is,
+if <math altimg="m22.png" altimg-height="22px" altimg-valign="-6px" altimg-width="159px" alttext="\gamma\neq 0,-1,-2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>≠</mo><mrow><mn>0</mn><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, then from §<a class="ltx_ref" href="2.7.html#i" title="§2.7(i) Regular Singularities: Fuchs–Frobenius Theory ‣ §2.7 Differential Equations ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.7(i)</span></a> it follows that
+<math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(a,q;\alpha,\beta,\gamma,\delta;z\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> exists, is analytic in
+the disk <math altimg="m40.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="|z|&lt;1" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, and has the Maclaurin expansion</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="76px" altimg-valign="-31px" altimg-width="474px" alttext="\mathit{H\!\ell}\left(a,q;\alpha,\beta,\gamma,\delta;z\right)=\sum_{j=0}^{%
+\infty}c_{j}z^{j}," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub><mo>⁢</mo><msup><mi href="./31.1#t1.r2" title="complex variable">z</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m40.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="|z|&lt;1" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r3" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.3.html#i.p1" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m31.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="c_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficients</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#iii.p1" title="§31.3(iii) Equivalent Expressions ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(iii)</span></a>,
+<a class="ltx_ref" href="31.7.html#ii.p1" title="§31.7(ii) Relations to Lamé Functions ‣ §31.7 Relations to Other Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.7(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E1" title="">http://dlmf.nist.gov/31.3.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#i.info" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(i)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m30.png" altimg-height="20px" altimg-valign="-5px" altimg-width="61px" alttext="c_{0}=1" class="ltx_Math" display="inline"><mrow><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow></math>,
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="23px" altimg-valign="-6px" altimg-width="145px" alttext="a\gamma c_{1}-qc_{0}=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>⁢</mo><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>⁢</mo><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.3.html#i.p1" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m31.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="c_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficients</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E2" title="">http://dlmf.nist.gov/31.3.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#i.info" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(i)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="28px" altimg-valign="-8px" altimg-width="320px" alttext="R_{j}c_{j+1}-(Q_{j}+q)c_{j}+P_{j}c_{j-1}=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mrow><msub><mi href="./31.3#E4" title="coefficient">R</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub><mo>⁢</mo><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./31.3#E4" title="coefficient">Q</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></mrow></mrow><mo>+</mo><mrow><msub><mi href="./31.3#E4" title="coefficient">P</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub><mo>⁢</mo><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m33.png" altimg-height="22px" altimg-valign="-6px" altimg-width="52px" alttext="j\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>≥</mo><mn>1</mn></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r3" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.3.html#i.p1" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m31.png" altimg-height="19px" altimg-valign="-8px" altimg-width="22px" alttext="c_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#i.p1" title="coefficients">c</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficients</a>,
+<a class="ltx_ref" href="31.3.html#E4" title="(31.3.4) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m13.png" altimg-height="24px" altimg-valign="-8px" altimg-width="26px" alttext="P_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">P</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficient</a>,
+<a class="ltx_ref" href="31.3.html#E4" title="(31.3.4) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m14.png" altimg-height="24px" altimg-valign="-8px" altimg-width="29px" alttext="Q_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">Q</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="31.3.html#E4" title="(31.3.4) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m15.png" altimg-height="24px" altimg-valign="-8px" altimg-width="29px" alttext="R_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">R</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E3" title="">http://dlmf.nist.gov/31.3.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#i.info" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(i)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">31.3.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="26px" altimg-valign="-8px" altimg-width="29px" alttext="\displaystyle P_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">P</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="27px" altimg-valign="-7px" altimg-width="234px" alttext="\displaystyle=(j-1+\alpha)(j-1+\beta)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>−</mo><mn>1</mn></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>−</mo><mn>1</mn></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="26px" altimg-valign="-8px" altimg-width="32px" alttext="\displaystyle Q_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">Q</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="315px" alttext="\displaystyle=j\left((j-1+\gamma)(1+a)+a\delta+\epsilon\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>−</mo><mn>1</mn></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="26px" altimg-valign="-8px" altimg-width="31px" alttext="\displaystyle R_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">R</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="27px" altimg-valign="-7px" altimg-width="170px" alttext="\displaystyle=a(j+1)(j+\gamma)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m13.png" altimg-height="24px" altimg-valign="-8px" altimg-width="26px" alttext="P_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">P</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficient (locally)</span>,
+<span class="ltx_text"><math altimg="m14.png" altimg-height="24px" altimg-valign="-8px" altimg-width="29px" alttext="Q_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">Q</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficient (locally)</span> and
+<span class="ltx_text"><math altimg="m15.png" altimg-height="24px" altimg-valign="-8px" altimg-width="29px" alttext="R_{j}" class="ltx_Math" display="inline"><msub><mi href="./31.3#E4" title="coefficient">R</mi><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></msub></math>:  coefficient (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r3" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="j" class="ltx_Math" display="inline"><mi href="./31.1#t1.r3" title="nonnegative integer">j</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E4" title="">http://dlmf.nist.gov/31.3.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E4a.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E4b.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E4c.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E4a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E4b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E4c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E4a.png">png</a>, <a href="http://dlmf.nist.gov/31.3.E4b.png">png</a>, <a href="http://dlmf.nist.gov/31.3.E4c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#i.info" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(i)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">Similarly, if <math altimg="m23.png" altimg-height="22px" altimg-valign="-6px" altimg-width="127px" alttext="\gamma\neq 1,2,3,\dots" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>≠</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, then the solution of (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) that
+corresponds to the exponent <math altimg="m10.png" altimg-height="21px" altimg-valign="-6px" altimg-width="52px" alttext="1-\gamma" class="ltx_Math" display="inline"><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow></math> at <math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math> is</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="40px" altimg-valign="-7px" altimg-width="595px" alttext="z^{1-\gamma}\mathit{H\!\ell}\left(a,(a\delta+\epsilon)(1-\gamma)+q;\alpha+1-%
+\gamma,\beta+1-\gamma,2-\gamma,\delta;z\right)." class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./31.1#t1.r2" title="complex variable">z</mi><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow></msup><mo>⁢</mo><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></mrow><mo>;</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo>,</mo><mrow><mn>2</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#iii.p1" title="§31.3(iii) Equivalent Expressions ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(iii)</span></a>,
+<a class="ltx_ref" href="31.7.html#ii.p1" title="§31.7(ii) Relations to Lamé Functions ‣ §31.7 Relations to Other Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.7(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E5" title="">http://dlmf.nist.gov/31.3.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#i.info" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(i)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">When <math altimg="m21.png" altimg-height="22px" altimg-valign="-6px" altimg-width="55px" alttext="\gamma\in\mathbb{Z}" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow></math>, linearly independent solutions can be constructed
+as in §<a class="ltx_ref" href="2.7.html#i" title="§2.7(i) Regular Singularities: Fuchs–Frobenius Theory ‣ §2.7 Differential Equations ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.7(i)</span></a>. In general, one of them has a logarithmic singularity at
+<math altimg="m35.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§31.3(ii) </span>Fuchs–Frobenius Solutions at Other Singularities</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fuchs%E2%80%93Frobenius">Fuchs–Frobenius</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=basic%20solutions">basic solutions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Ronveaux (<a class="ltx_ref" href="bib/R.html#bib1965" title="Heun’s Differential Equations">1995</a>, Part A, pp. 36–41)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="31.7.html#ii.p1" title="§31.7(ii) Relations to Lamé Functions ‣ §31.7 Relations to Other Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.7(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.ii" title="">http://dlmf.nist.gov/31.3.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">With similar restrictions to those given in §<a class="ltx_ref" href="31.3.html#i" title="§31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.3(i)</span></a>, the following
+results apply. Solutions of (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) corresponding to the exponents
+<math altimg="m7.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math> and <math altimg="m8.png" altimg-height="20px" altimg-valign="-4px" altimg-width="50px" alttext="1-\delta" class="ltx_Math" display="inline"><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow></math> at <math altimg="m36.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=1" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mn>1</mn></mrow></math> are respectively,</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="40px" altimg-valign="-7px" altimg-width="333px" alttext="\mathit{H\!\ell}\left(1-a,\alpha\beta-q;\alpha,\beta,\delta,\gamma;1-z\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></mrow><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>;</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E6" title="">http://dlmf.nist.gov/31.3.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#ii.info" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="40px" altimg-valign="-7px" altimg-width="817px" alttext="(1-z)^{1-\delta}\*\mathit{H\!\ell}\left(1-a,((1-a)\gamma+\epsilon)(1-\delta)+%
+\alpha\beta-q;\alpha+1-\delta,\beta+1-\delta,2-\delta,\gamma;1-z\right)." class="ltx_Math" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow></msup><mo>⁢</mo><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>,</mo><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></mrow></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></mrow><mo>;</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>,</mo><mrow><mn>2</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>;</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E7" title="">http://dlmf.nist.gov/31.3.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#ii.info" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">Solutions of (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) corresponding to the exponents <math altimg="m7.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="0" class="ltx_Math" display="inline"><mn>0</mn></math> and
+<math altimg="m9.png" altimg-height="19px" altimg-valign="-4px" altimg-width="48px" alttext="1-\epsilon" class="ltx_Math" display="inline"><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow></math> at <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="54px" alttext="z=a" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow></math> are respectively,</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="62px" altimg-valign="-22px" altimg-width="372px" alttext="\mathit{H\!\ell}\left(\frac{a}{a-1},\frac{\alpha\beta a-q}{a-1};\alpha,\beta,%
+\epsilon,\delta;\frac{a-z}{a-1}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mfrac><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>,</mo><mfrac><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>⁢</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mfrac><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E8" title="">http://dlmf.nist.gov/31.3.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#ii.info" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="123px" altimg-valign="-22px" altimg-width="768px" alttext="\left(\frac{a-z}{a-1}\right)^{1-\epsilon}\mathit{H\!\ell}\left(\frac{a}{a-1},%
+\frac{(a(\delta+\gamma)-\gamma)(1-\epsilon)}{a-1}+\frac{\alpha\beta a-q}{a-1};%
+\alpha+1-\epsilon,\beta+1-\epsilon,2-\epsilon,\delta;\frac{a-z}{a-1}\right)." class="ltx_Math" display="block"><mrow><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow></msup><mo>⁢</mo><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mfrac><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>,</mo><mrow><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>⁢</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo>;</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo>,</mo><mrow><mn>2</mn><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mfrac><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E9" title="">http://dlmf.nist.gov/31.3.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#ii.info" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">Solutions of (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) corresponding to the exponents <math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math> and
+<math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math> at <math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="63px" alttext="z=\infty" class="ltx_Math" display="inline"><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> are respectively,</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="147px" altimg-valign="-22px" altimg-width="421px" alttext="z^{-\alpha}\mathit{H\!\ell}\left(\frac{1}{a},\frac{q}{a}-\alpha\left(\beta-%
+\epsilon\right)-\frac{\alpha}{a}\left(\beta-\delta\right);\alpha,\alpha-\gamma%
++1,\alpha-\beta+1,\delta;\frac{1}{z}\right)," class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./31.1#t1.r2" title="complex variable">z</mi><mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></mrow></msup><mo>⁢</mo><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac><mo>,</mo><mrow><mfrac><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac><mo>−</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mfrac><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mfrac><mn>1</mn><mi href="./31.1#t1.r2" title="complex variable">z</mi></mfrac><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="31.11.html#iii.info" title="§31.11(iii) Type I ‣ §31.11 Expansions in Series of Hypergeometric Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.11(iii)</span></a>,
+<a class="ltx_ref" href="31.11.html#iii.p2" title="§31.11(iii) Type I ‣ §31.11 Expansions in Series of Hypergeometric Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.11(iii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.7.I1.ix4" title="In Errata ‣ Version 1.1.7 (October 15, 2022) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.7) for  Equations (<span class="ltx_text ltx_ref_tag">31.3.10</span>), (<span class="ltx_text ltx_ref_tag">31.3.11</span>)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.7.I2.ix5.p1" title="In Other Changes ‣ Version 1.1.7 (October 15, 2022) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.7) for  Subsection <span class="ltx_text ltx_ref_tag">31.11(iii)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E10" title="">http://dlmf.nist.gov/31.3.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E10.png">png</a>
+</dd>
+<dt>Correction (effective with 1.1.7):</dt>
+<dd>
+The second entry in the <math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\mathit{H\!\ell}" class="ltx_Math" display="inline"><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow></math> has been corrected with an extra minus sign.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#ii.info" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="147px" altimg-valign="-22px" altimg-width="420px" alttext="z^{-\beta}\mathit{H\!\ell}\left(\frac{1}{a},\frac{q}{a}-\beta\left(\alpha-%
+\epsilon\right)-\frac{\beta}{a}\left(\alpha-\delta\right);\beta,\beta-\gamma+1%
+,\beta-\alpha+1,\delta;\frac{1}{z}\right)." class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./31.1#t1.r2" title="complex variable">z</mi><mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></mrow></msup><mo>⁢</mo><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac><mo>,</mo><mrow><mfrac><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac><mo>−</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></mrow><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mfrac><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mfrac><mn>1</mn><mi href="./31.1#t1.r2" title="complex variable">z</mi></mfrac><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="\epsilon" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">ϵ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#iii.p1" title="§31.3(iii) Equivalent Expressions ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(iii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.7.I1.ix4" title="In Errata ‣ Version 1.1.7 (October 15, 2022) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.7) for  Equations (<span class="ltx_text ltx_ref_tag">31.3.10</span>), (<span class="ltx_text ltx_ref_tag">31.3.11</span>)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E11" title="">http://dlmf.nist.gov/31.3.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E11.png">png</a>
+</dd>
+<dt>Correction (effective with 1.1.7):</dt>
+<dd>
+The second entry in the <math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\mathit{H\!\ell}" class="ltx_Math" display="inline"><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow></math> has been corrected with an extra minus sign.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#ii.info" title="§31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(ii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§31.3(iii) </span>Equivalent Expressions</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=automorphisms">automorphisms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=basic%20solutions">basic solutions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=equivalent%20expressions">equivalent expressions</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Snow (<a class="ltx_ref" href="bib/S.html#bib2131" title="Hypergeometric and Legendre Functions with Applications to Integral Equations of Potential Theory">1952</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.iii" title="">http://dlmf.nist.gov/31.3.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Solutions (<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.3.1</span></a>) and (<a class="ltx_ref" href="31.3.html#E5" title="(31.3.5) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.3.5</span></a>)–(<a class="ltx_ref" href="31.3.html#E11" title="(31.3.11) ‣ §31.3(ii) Fuchs–Frobenius Solutions at Other Singularities ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.3.11</span></a>)
+comprise a set of 8 local solutions of
+(<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>): 2 per singular point. Each is related to the solution
+(<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.3.1</span></a>) by one of the automorphisms of §<a class="ltx_ref" href="31.2.html#v" title="§31.2(v) Heun’s Equation Automorphisms ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2(v)</span></a>. There
+are 192 automorphisms in all, so there are <math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="105px" alttext="192/8=24" class="ltx_Math" display="inline"><mrow><mrow><mn>192</mn><mo>/</mo><mn>8</mn></mrow><mo>=</mo><mn>24</mn></mrow></math> equivalent expressions
+for each of the 8. For example,
+<math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(a,q;\alpha,\beta,\gamma,\delta;z\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> is equal to</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="40px" altimg-valign="-7px" altimg-width="424px" alttext="\mathit{H\!\ell}\left(1/a,q/a;\alpha,\beta,\gamma,\alpha+\beta+1-\gamma-\delta%
+;z/a\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>/</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>,</mo><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>/</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>+</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>;</mo><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>/</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E12" title="">http://dlmf.nist.gov/31.3.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#iii.info" title="§31.3(iii) Equivalent Expressions ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(iii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">which arises from the homography <math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="\tilde{z}=z/a" class="ltx_Math" display="inline"><mrow><mover accent="true"><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>~</mo></mover><mo>=</mo><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>/</mo><mi href="./31.1#t1.r4" title="complex parameter">a</mi></mrow></mrow></math>, and to</p>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">31.3.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="62px" altimg-valign="-22px" altimg-width="628px" alttext="(1-z)^{-\alpha}\*\mathit{H\!\ell}\left(\frac{a}{a-1},-\frac{q-a\alpha\gamma}{a%
+-1};\alpha,\alpha+1-\delta,\gamma,\alpha+1-\beta;\frac{z}{z-1}\right)," class="ltx_Math" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi href="./31.1#t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></mrow></msup><mo>⁢</mo><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mfrac><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>,</mo><mrow><mo>−</mo><mfrac><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>−</mo><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>⁢</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></mrow></mrow><mrow><mi href="./31.1#t1.r4" title="complex parameter">a</mi><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><mo>;</mo><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></mrow><mo>,</mo><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mrow><mrow><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></mrow><mo>;</mo><mfrac><mi href="./31.1#t1.r2" title="complex variable">z</mi><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="31.3.html#E1" title="(31.3.1) ‣ §31.3(i) Fuchs–Frobenius Solutions at 𝑧=0 ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="183px" alttext="\mathit{H\!\ell}\left(\NVar{a},\NVar{q};\NVar{\alpha},\NVar{\beta},\NVar{%
+\gamma},\NVar{\delta};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mrow><mpadded width="0.742em"><mi href="./31.3#E1" title="Heun functions">H</mi></mpadded><mo href="./31.3#E1" title="Heun functions">⁢</mo><mi href="./31.3#E1" mathvariant="normal" title="Heun functions">ℓ</mi></mrow><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./31.1#t1.r4" title="complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">q</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">α</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">β</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">γ</mi><mo>,</mo><mi class="ltx_nvar" href="./31.1#t1.r5" title="real or complex parameter">δ</mi><mo>;</mo><mi class="ltx_nvar" href="./31.1#t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: Heun functions</a>,
+<a class="ltx_ref" href="31.1.html#t1.r2" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m20.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">γ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">δ</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r4" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./31.1#t1.r4" title="complex parameter">a</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m34.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">q</mi></math>:  real or complex parameter</a>,
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m16.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">α</mi></math>:  real or complex parameter</a> and
+<a class="ltx_ref" href="31.1.html#t1.r5" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"><math altimg="m17.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./31.1#t1.r5" title="real or complex parameter">β</mi></math>:  real or complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/31.3.E13" title="">http://dlmf.nist.gov/31.3.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/31.3.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/31.3.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/31.3.E13.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.3.html#iii.info" title="§31.3(iii) Equivalent Expressions ‣ §31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3(iii)</span></a>,
+<a class="ltx_ref" href="31.3.html#info" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">§31.3</span></a> and
+<a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">which arises from <math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="126px" alttext="\tilde{z}=z/(z-1)" class="ltx_Math" display="inline"><mrow><mover accent="true"><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>~</mo></mover><mo>=</mo><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./31.1#t1.r2" title="complex variable">z</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and also to 21 further expressions.
+The full set of 192 local solutions of (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>), equivalent in 8
+sets of 24, resembles Kummer’s set of 24 local solutions of the hypergeometric
+equation, which are equivalent in 4 sets of 6 solutions (§<a class="ltx_ref" href="15.10.html#ii" title="§15.10(ii) Kummer’s 24 Solutions and Connection Formulas ‣ §15.10 Hypergeometric Differential Equation ‣ Properties ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">15.10(ii)</span></a>);
+see <cite class="ltx_cite ltx_citemacro_citet">Maier (<a class="ltx_ref" href="bib/M.html#bib1538" title="The 192 solutions of the Heun equation">2007</a>)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="31.2.html" rel="prev" title="In Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.2 </span>Differential Equations</span></a><a class="ltx_ref" href="31.4.html" rel="next" title="In Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.4 </span>Solutions Analytic at Two Singularities: Heun Functions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

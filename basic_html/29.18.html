@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/29.18";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="29.html#PT4" rel="up" title="Applications ‣ Chapter 29 Lamé Functions"/>
+<link href="29.html" rel="up up" title="Chapter 29 Lamé Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="29.17.html" rel="prev" title="§29.17 Other Solutions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.19.html" rel="next" title="§29.19 Physical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"/>
+<link href="29.1.html" rel="section" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"/>
+<link href="29.2.html" rel="section" title="§29.2 Differential Equations ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.3.html" rel="section" title="§29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.4.html" rel="section" title="§29.4 Graphics ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.5.html" rel="section" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.6.html" rel="section" title="§29.6 Fourier Series ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.7.html" rel="section" title="§29.7 Asymptotic Expansions ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.8.html" rel="section" title="§29.8 Integral Equations ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.9.html" rel="section" title="§29.9 Stability ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.10.html" rel="section" title="§29.10 Lamé Functions with Imaginary Periods ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.11.html" rel="section" title="§29.11 Lamé Wave Equation ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.12.html" rel="section" title="§29.12 Definitions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.13.html" rel="section" title="§29.13 Graphics ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.14.html" rel="section" title="§29.14 Orthogonality ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.15.html" rel="section" title="§29.15 Fourier Series and Chebyshev Series ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.16.html" rel="section" title="§29.16 Asymptotic Expansions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.17.html" rel="section" title="§29.17 Other Solutions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.19.html" rel="section" title="§29.19 Physical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"/>
+<link href="29.20.html" rel="section" title="§29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"/>
+<link href="29.21.html" rel="section" title="§29.21 Tables ‣ Computation ‣ Chapter 29 Lamé Functions"/>
+<link href="29.22.html" rel="section" title="§29.22 Software ‣ Computation ‣ Chapter 29 Lamé Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Lamé functions, Lamé polynomials, applications, conformal mapping, coordinate systems, ellipsoidal, ellipsoidal coordinates, ellipsoidal harmonics, rotation group, separation constants, spherical harmonics, sphero-conal, sphero-conal coordinates, wave equation" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="29.18.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="29.18.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="29.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29 </span>Lamé Functions</span></a><a class="ltx_ref" href="29.html#PT4" rel="up" title="In Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title">Applications</span></a><a class="ltx_ref" href="29.17.html" rel="prev" title="In Lamé Polynomials ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.17 </span>Other Solutions</span></a><a class="ltx_ref" href="29.19.html" rel="next" title="In Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.19 </span>Physical Applications</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§29.18 </span>Mathematical Applications</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="1.5.html#Px6.p2" title="Spherical Coordinates ‣ §1.5(ii) Coordinate Systems ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.5(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="29.18.html" title="">http://dlmf.nist.gov/29.18</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="29.18.html#i"><span class="ltx_tag ltx_tag_subsection">§29.18(i) </span>Sphero-Conal Coordinates</a></li>
+<li class="ltx_tocentry"><a href="29.18.html#ii"><span class="ltx_tag ltx_tag_subsection">§29.18(ii) </span>Ellipsoidal Coordinates</a></li>
+<li class="ltx_tocentry"><a href="29.18.html#iii"><span class="ltx_tag ltx_tag_subsection">§29.18(iii) </span>Spherical and Ellipsoidal Harmonics</a></li>
+<li class="ltx_tocentry"><a href="29.18.html#iv"><span class="ltx_tag ltx_tag_subsection">§29.18(iv) </span>Other Applications</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§29.18(i) </span>Sphero-Conal Coordinates</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Lam%C3%A9%20functions">Lamé functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=coordinate%20systems">coordinate systems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=separation%20constants">separation constants</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sphero-conal">sphero-conal</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sphero-conal%20coordinates">sphero-conal coordinates</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=wave%20equation">wave equation</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib755" title="Higher Transcendental Functions. Vol. III">1955</a>, §15.1.2)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Jansen (<a class="ltx_ref" href="bib/J.html#bib1162" title="Simple-periodic and Non-periodic Lamé Functions">1977</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.i" title="">http://dlmf.nist.gov/29.18.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">The wave equation
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.18.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="28px" altimg-valign="-6px" altimg-width="149px" alttext="\nabla^{2}u+\omega^{2}u=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mi href="./29.18#i.p1" title="solution">u</mi></mrow><mo>+</mo><mrow><msup><mi href="./29.18#i.p1" title="parameter">ω</mi><mn>2</mn></msup><mo>⁢</mo><mi href="./29.18#i.p1" title="solution">u</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m42.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="u" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="solution">u</mi></math>:  solution</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m33.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\omega" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="parameter">ω</mi></math>:  parameter</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E1" title="">http://dlmf.nist.gov/29.18.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">when transformed to <em class="ltx_emph ltx_font_italic">sphero-conal coordinates</em> <math altimg="m40.png" altimg-height="22px" altimg-valign="-6px" altimg-width="56px" alttext="r,\beta,\gamma" class="ltx_Math" display="inline"><mrow><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mo>,</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>,</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi></mrow></math>:
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">29.18.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m20.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\displaystyle x" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">x</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m10.png" altimg-height="70px" altimg-valign="-7px" altimg-width="132px" alttext="\displaystyle=kr\operatorname{sn}\left(\beta,k\right)\operatorname{sn}\left(%
+\gamma,k\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>⁢</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m21.png" altimg-height="19px" altimg-valign="-6px" altimg-width="18px" alttext="\displaystyle y" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">y</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="82px" altimg-valign="-16px" altimg-width="150px" alttext="\displaystyle=\mathrm{i}\frac{k}{k^{\prime}}r\operatorname{cn}\left(\beta,k%
+\right)\operatorname{cn}\left(\gamma,k\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi href="./29.1#t1.r4" title="real parameter">k</mi><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>′</mo></msup></mfrac></mstyle><mo>⁢</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="15px" altimg-valign="-2px" altimg-width="17px" alttext="\displaystyle z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="81px" altimg-valign="-16px" altimg-width="146px" alttext="\displaystyle=\frac{1}{k^{\prime}}r\operatorname{dn}\left(\beta,k\right)%
+\operatorname{dn}\left(\gamma,k\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>′</mo></msup></mfrac></mstyle><mo>⁢</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E5" title="(22.2.5) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m34.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{cn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="22.2.html#E6" title="(22.2.6) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\operatorname{dn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="29.1.html#t1.r2" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r2" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m48.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">y</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m49.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></math>:  sphero-conal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi></math>:  sphero-conal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi></math>:  sphero-conal coordinate</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E2" title="">http://dlmf.nist.gov/29.18.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E2c.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E2c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E2a.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E2b.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E2c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">29.18.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m19.png" altimg-height="15px" altimg-valign="-2px" altimg-width="17px" alttext="\displaystyle r" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m16.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle\geq 0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>≥</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="24px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\beta" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-6px" altimg-width="103px" alttext="\displaystyle=K+\mathrm{i}\beta^{\prime}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>′</mo></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m1.png" altimg-height="19px" altimg-valign="-2px" altimg-width="17px" alttext="\displaystyle 0" class="ltx_Math" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m17.png" altimg-height="27px" altimg-valign="-6px" altimg-width="116px" alttext="\displaystyle\leq\beta^{\prime}\leq 2{K^{\prime}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>≤</mo><msup><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>′</mo></msup><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m1.png" altimg-height="19px" altimg-valign="-2px" altimg-width="17px" alttext="\displaystyle 0" class="ltx_Math" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m18.png" altimg-height="24px" altimg-valign="-6px" altimg-width="102px" alttext="\displaystyle\leq\gamma\leq 4K," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>≤</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo>≤</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="19.2.html#E8_1" title="(19.2.8_1) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="{K^{\prime}}\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complementary complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></math>:  sphero-conal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi></math>:  sphero-conal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi></math>:  sphero-conal coordinate</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E3" title="">http://dlmf.nist.gov/29.18.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E3c.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E3d.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E3c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E3d.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E3a.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E3b.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E3c.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E3d.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">admits solutions</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.18.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="27px" altimg-valign="-7px" altimg-width="267px" alttext="u(r,\beta,\gamma)=u_{1}(r)u_{2}(\beta)u_{3}(\gamma)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./29.18#i.p1" title="solution">u</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mo>,</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>,</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m42.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="u" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="solution">u</mi></math>:  solution</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></math>:  sphero-conal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi></math>:  sphero-conal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi></math>:  sphero-conal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m46.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="u_{j}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mi>j</mi></msub></math>:  solutions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E4" title="">http://dlmf.nist.gov/29.18.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m43.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="u_{1}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>1</mn></msub></math>, <math altimg="m44.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="u_{2}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>2</mn></msub></math>, <math altimg="m45.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="u_{3}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>3</mn></msub></math> satisfy the differential equations
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.18.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="62px" altimg-valign="-22px" altimg-width="346px" alttext="\displaystyle\frac{\mathrm{d}}{\mathrm{d}r}\left(r^{2}\frac{\mathrm{d}u_{1}}{%
+\mathrm{d}r}\right)+(\omega^{2}r^{2}-\nu(\nu+1))u_{1}" class="ltx_Math" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mo href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></mrow></mfrac></mstyle><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>1</mn></msub></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi href="./29.18#i.p1" title="parameter">ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>1</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m29.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m37.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m33.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\omega" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="parameter">ω</mi></math>:  parameter</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m41.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="r" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">r</mi></math>:  sphero-conal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m46.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="u_{j}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mi>j</mi></msub></math>:  solutions</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E5" title="">http://dlmf.nist.gov/29.18.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.18.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="64px" altimg-valign="-22px" altimg-width="348px" alttext="\displaystyle\frac{{\mathrm{d}}^{2}u_{2}}{{\mathrm{d}\beta}^{2}}+(h-\nu(\nu+1)%
+k^{2}{\operatorname{sn}}^{2}\left(\beta,k\right))u_{2}" class="ltx_Math" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">d</mo><mn>2</mn></msup><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>2</mn></msub></mrow><msup><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi></mrow><mn href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">h</mi><mo>−</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>2</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m29.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m37.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">h</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">β</mi></math>:  sphero-conal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m46.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="u_{j}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mi>j</mi></msub></math>:  solutions</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E6" title="">http://dlmf.nist.gov/29.18.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.18.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="64px" altimg-valign="-22px" altimg-width="347px" alttext="\displaystyle\frac{{\mathrm{d}}^{2}u_{3}}{{\mathrm{d}\gamma}^{2}}+(h-\nu(\nu+1%
+)k^{2}{\operatorname{sn}}^{2}\left(\gamma,k\right))u_{3}" class="ltx_Math" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">d</mo><mn>2</mn></msup><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>3</mn></msub></mrow><msup><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi></mrow><mn href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mstyle><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">h</mi><mo>−</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mn>3</mn></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="23px" altimg-valign="-6px" altimg-width="45px" alttext="\displaystyle=0," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m29.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m37.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m38.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">h</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#i.p1" title="sphero-conal coordinate">γ</mi></math>:  sphero-conal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m46.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="u_{j}" class="ltx_Math" display="inline"><msub><mi href="./29.18#i.p1" title="solutions">u</mi><mi>j</mi></msub></math>:  solutions</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="29.18.html#i.p1" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E7" title="">http://dlmf.nist.gov/29.18.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#i.info" title="§29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(i)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with <em class="ltx_emph ltx_font_italic">separation constants</em> <math altimg="m38.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">h</mi></math> and <math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>. (<a class="ltx_ref" href="29.18.html#E5" title="(29.18.5) ‣ §29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29.18.5</span></a>) is the
+differential equation of spherical Bessel functions (§<a class="ltx_ref" href="10.47.html#i" title="§10.47(i) Differential Equations ‣ §10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.47(i)</span></a>),
+and (<a class="ltx_ref" href="29.18.html#E6" title="(29.18.6) ‣ §29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29.18.6</span></a>), (<a class="ltx_ref" href="29.18.html#E7" title="(29.18.7) ‣ §29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29.18.7</span></a>) agree with the Lamé equation
+(<a class="ltx_ref" href="29.2.html#E1" title="(29.2.1) ‣ §29.2(i) Lamé’s Equation ‣ §29.2 Differential Equations ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29.2.1</span></a>).</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§29.18(ii) </span>Ellipsoidal Coordinates</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=coordinate%20systems">coordinate systems</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=ellipsoidal">ellipsoidal</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=ellipsoidal%20coordinates">ellipsoidal coordinates</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=wave%20equation">wave equation</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib755" title="Higher Transcendental Functions. Vol. III">1955</a>, §15.1.3)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="23.21.html#iii.p3" title="§23.21(iii) Ellipsoidal Coordinates ‣ §23.21 Physical Applications ‣ Applications ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">§23.21(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.ii" title="">http://dlmf.nist.gov/29.18.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">The wave equation (<a class="ltx_ref" href="29.18.html#E1" title="(29.18.1) ‣ §29.18(i) Sphero-Conal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29.18.1</span></a>), when transformed to <em class="ltx_emph ltx_font_italic">ellipsoidal
+coordinates</em> <math altimg="m26.png" altimg-height="22px" altimg-valign="-6px" altimg-width="61px" alttext="\alpha,\beta,\gamma" class="ltx_Math" display="inline"><mrow><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>,</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>,</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi></mrow></math>:
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">29.18.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m20.png" altimg-height="15px" altimg-valign="-2px" altimg-width="18px" alttext="\displaystyle x" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">x</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m9.png" altimg-height="99px" altimg-valign="-7px" altimg-width="123px" alttext="\displaystyle=k\operatorname{sn}\left(\alpha,k\right)\operatorname{sn}\left(%
+\beta,k\right)\operatorname{sn}\left(\gamma,k\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex9">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m21.png" altimg-height="19px" altimg-valign="-6px" altimg-width="18px" alttext="\displaystyle y" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">y</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="111px" altimg-valign="-16px" altimg-width="151px" alttext="\displaystyle=-\frac{k}{k^{\prime}}\operatorname{cn}\left(\alpha,k\right)%
+\operatorname{cn}\left(\beta,k\right)\operatorname{cn}\left(\gamma,k\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./29.1#t1.r4" title="real parameter">k</mi><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>′</mo></msup></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex10">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="15px" altimg-valign="-2px" altimg-width="17px" alttext="\displaystyle z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="111px" altimg-valign="-16px" altimg-width="148px" alttext="\displaystyle=\frac{\mathrm{i}}{kk^{\prime}}\operatorname{dn}\left(\alpha,k%
+\right)\operatorname{dn}\left(\beta,k\right)\operatorname{dn}\left(\gamma,k%
+\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>⁢</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi><mo>,</mo><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E5" title="(22.2.5) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m34.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{cn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="22.2.html#E6" title="(22.2.6) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\operatorname{dn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="29.1.html#t1.r2" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m47.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r2" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m48.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="y" class="ltx_Math" display="inline"><mi href="./29.1#t1.r2" title="real variable">y</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m49.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi></math>:  ellipsoidal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi></math>:  ellipsoidal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi></math>:  ellipsoidal coordinate</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E8" title="">http://dlmf.nist.gov/29.18.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E8a.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E8b.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E8c.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E8a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E8b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E8c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E8a.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E8b.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E8c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#ii.info" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(ii)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">with</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex11">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">29.18.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="15px" altimg-valign="-2px" altimg-width="20px" alttext="\displaystyle\alpha" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="27px" altimg-valign="-6px" altimg-width="154px" alttext="\displaystyle=K+\mathrm{i}{K^{\prime}}-\alpha^{\prime}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo></mrow></mrow></mrow><mo>−</mo><msup><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>′</mo></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m23.png" altimg-height="23px" altimg-valign="-5px" altimg-width="108px" alttext="0\leq\alpha^{\prime}&lt;K" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><msup><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>′</mo></msup><mo>&lt;</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></mrow></math>,</span></td></tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex12">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="24px" altimg-valign="-6px" altimg-width="19px" alttext="\displaystyle\beta" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="27px" altimg-valign="-6px" altimg-width="103px" alttext="\displaystyle=K+\mathrm{i}\beta^{\prime}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>′</mo></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m24.png" altimg-height="24px" altimg-valign="-6px" altimg-width="240px" alttext="0\leq\beta^{\prime}\leq 2{K^{\prime}},0\leq\gamma\leq 4K" class="ltx_Math" display="inline"><mrow><mrow><mn>0</mn><mo>≤</mo><msup><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>′</mo></msup><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo></mrow></mrow></mrow><mo>,</mo><mrow><mn>0</mn><mo>≤</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi><mo>≤</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></mrow></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="19.2.html#E8_1" title="(19.2.8_1) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m50.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="{K^{\prime}}\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complementary complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi></math>:  ellipsoidal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi></math>:  ellipsoidal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi></math>:  ellipsoidal coordinate</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E9" title="">http://dlmf.nist.gov/29.18.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E9a.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E9b.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E9a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E9b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E9a.png">png</a>, <a href="http://dlmf.nist.gov/29.18.E9b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#ii.info" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(ii)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">admits solutions</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.18.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="27px" altimg-valign="-7px" altimg-width="275px" alttext="u(\alpha,\beta,\gamma)=u_{1}(\alpha)u_{2}(\beta)u_{3}(\gamma)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo>,</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo>,</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><msub><mi>u</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="18px" alttext="\alpha" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">α</mi></math>:  ellipsoidal coordinate</a>,
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m28.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\beta" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">β</mi></math>:  ellipsoidal coordinate</a> and
+<a class="ltx_ref" href="29.18.html#ii.p1" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="17px" altimg-valign="-6px" altimg-width="16px" alttext="\gamma" class="ltx_Math" display="inline"><mi href="./29.18#ii.p1" title="ellipsoidal coordinate">γ</mi></math>:  ellipsoidal coordinate</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.E10" title="">http://dlmf.nist.gov/29.18.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.18.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.18.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.18.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#ii.info" title="§29.18(ii) Ellipsoidal Coordinates ‣ §29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18(ii)</span></a>,
+<a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m43.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="u_{1}" class="ltx_Math" display="inline"><msub><mi>u</mi><mn>1</mn></msub></math>, <math altimg="m44.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="u_{2}" class="ltx_Math" display="inline"><msub><mi>u</mi><mn>2</mn></msub></math>, <math altimg="m45.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="u_{3}" class="ltx_Math" display="inline"><msub><mi>u</mi><mn>3</mn></msub></math> each satisfy the Lamé wave equation
+
+(<a class="ltx_ref" href="29.11.html#E1" title="(29.11.1) ‣ §29.11 Lamé Wave Equation ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">29.11.1</span></a>).</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§29.18(iii) </span>Spherical and Ellipsoidal Harmonics</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Lam%C3%A9%20polynomials">Lamé polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=ellipsoidal%20harmonics">ellipsoidal harmonics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Arscott (<a class="ltx_ref" href="bib/index.html#bib142" title="Periodic Differential Equations. An Introduction to Mathieu, Lamé, and Allied Functions">1964b</a>, §9.8.1)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib755" title="Higher Transcendental Functions. Vol. III">1955</a>, §15.7)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Hobson (<a class="ltx_ref" href="bib/H.html#bib1092" title="The Theory of Spherical and Ellipsoidal Harmonics">1931</a>, Chapter XI)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.iii" title="">http://dlmf.nist.gov/29.18.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib755" title="Higher Transcendental Functions. Vol. III">1955</a>, §15.7)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§29.18(iv) </span>Other Applications</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Lam%C3%A9%20functions">Lamé functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=conformal%20mapping">conformal mapping</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=rotation%20group">rotation group</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.18.iv" title="">http://dlmf.nist.gov/29.18.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.18.html#info" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.18</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Triebel (<a class="ltx_ref" href="bib/T.html#bib2279" title="Über die Lamésche Differentialgleichung">1965</a>)</cite> gives applications of Lamé functions to the theory
+of conformal mappings. <cite class="ltx_cite ltx_citemacro_citet">Patera and Winternitz (<a class="ltx_ref" href="bib/P.html#bib1854" title="A new basis for the representation of the rotation group. Lamé and Heun polynomials">1973</a>)</cite> finds bases for the rotation
+group.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="29.17.html" rel="prev" title="In Lamé Polynomials ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.17 </span>Other Solutions</span></a><a class="ltx_ref" href="29.19.html" rel="next" title="In Applications ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.19 </span>Physical Applications</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

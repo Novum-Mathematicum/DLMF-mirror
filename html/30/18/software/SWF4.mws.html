@@ -1,0 +1,178 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+
+{CSTYLE "" -1 256 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+
+" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 
+
+1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 33 "                          \+
+
+       " }{TEXT 256 40 "    The Radial Spheroidal Wave Functions" }}}
+
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 81 "                      A Maple work
+
+sheet written by Hans Volkmer, January 15, 2001" }}}{EXCHG {PARA 0 "" 
+
+0 "" {TEXT -1 78 "                                             send co
+
+mments to volkmer@uwm.edu " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 22 "The
+
+ Maple programs S1(" }{XPPEDIT 18 0 "m;" "6#%\"mG" }{TEXT -1 1 "," }
+
+{XPPEDIT 18 0 "n;" "6#%\"nG" }{TEXT -1 1 "," }{XPPEDIT 18 0 "gamma;" "
+
+6#%&amp;gammaG" }{TEXT -1 1 "," }{XPPEDIT 18 0 "d;" "6#%\"dG" }{TEXT -1 6 
+
+"), S2(" }{XPPEDIT 18 0 "m;" "6#%\"mG" }{TEXT -1 1 "," }{XPPEDIT 18 0 
+
+"n;" "6#%\"nG" }{TEXT -1 1 "," }{XPPEDIT 18 0 "gamma;" "6#%&amp;gammaG" }
+
+{TEXT -1 1 "," }{XPPEDIT 18 0 "d;" "6#%\"dG" }{TEXT -1 42 ")  compute \+
+
+the radial spheroidal function " }{XPPEDIT 18 0 "S[n]^m;" "6#)&amp;%\"SG6#
+
+%\"nG%\"mG" }{TEXT -1 8 "  with  " }{XPPEDIT 18 0 "j = 1;" "6#/%\"jG\"
+
+\"\"" }{TEXT -1 5 " and " }{XPPEDIT 18 0 "j = 2;" "6#/%\"jG\"\"#" }
+
+{TEXT -1 4 " .  " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 7 "Again, " }
+
+{XPPEDIT 18 0 "d;" "6#%\"dG" }{TEXT -1 36 " has to be chosen sufficent
+
+ly large." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 32 "restart;with(l
+
+inalg):Digits:=10;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "tride
+
+ven:=proc(m,q,d)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A,i;" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "A:=matrix(d,d,0.0);" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 117 "for i from 1 to d do      A[i,i]:=(m+2*i-2.0)
+
+*(m+2*i-1.0)-2*q*((m+2*i-2)*(m+2*i-1)-1+m^2)/(2*m+4*i-5)/(2*m+4*i-1) o
+
+d;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "for i from 1 to d-1 do      A
+
+[i,i+1]:=-q*(2*m+2*i-1)*(2*m+2*i)/(2*m+4*i-1)/(2*m+4*i+1) od; " }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 to d do " }}{PARA 0 "&gt;
+
+ " 0 "" {MPLTEXT 1 0 58 "  A[i,i-1]:=-q*(2*i-3)*(2*i-2)/(2*m+4*i-7)/(2
+
+*m+4*i-5) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "&gt; " 
+
+0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+20 "tridodd:=proc(m,q,d)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 10 "local A
+
+,i;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 19 "A:=matrix(d,d,0.0);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 113 "for i from 1 to d do      A[i,i]:=
+
+(m+2*i-1.0)*(m+2*i)-2*q*((m+2*i-1.0)*(m+2*i)-1+m^2)/(2*m+4*i-3)/(2*m+4
+
+*i+1) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 91 "for i from 1 to d-1 do
+
+      A[i,i+1]:=-q*(2*m+2*i)*(2*m+2*i+1)/(2*m+4*i+1)/(2*m+4*i+3) od; \+
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "for i from 2 to d do " }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 58 "  A[i,i-1]:=-q*(2*i-2)*(2*i-1)/(2*m+4*i-5
+
+)/(2*m+4*i-3) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "A;" }}{PARA 0 "
+
+&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 125 "acoeff2:=proc(m,n,q,d) # normalized a-coefficients for expansio
+
+n of radial functions with -m in place of m from d by d matrix" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "local c,a,aa,A,K,r,R,u,v;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 18 "R:=floor((n-m)/2);" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 69 "if type(n-m,even) then A:=trideven(m,q,d);else A:=tri
+
+dodd(m,q,d); fi;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 21 "K:=[eigenvector
+
+s(A)];" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 37 "K:=sort(K,(u,v)-&gt;evalb(u[
+
+1] &lt; v[1]));" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "aa:=K[R+1][3][1]; \+
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "for r from -R to -R+d-1 do a[r]
+
+:=aa[r+R+1]*(n+m+2*r)!/(n-m+2*r)! od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 
+
+0 52 "c:=0;for r from -R to -R+d-1 do c:=c+(-1)^r*a[r] od;" }}{PARA 0 
+
+"&gt; " 0 "" {MPLTEXT 1 0 43 "for r from -R to -R+d-1 do a[r]:=a[r]/c od;
+
+" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 2 "a;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "S1:
+
+=proc(m,n,gama,d) # radial spheroidal function S_n^m(1)" }}{PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 16 "local S,r,a,R,z;" }}{PARA 0 "&gt; " 0 "" 
+
+{MPLTEXT 1 0 18 "R:=floor((n-m)/2);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+25 "a:=acoeff2(m,n,gama^2,d);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "S:=
+
+0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 27 "for r from -R to -R+d-1 do " 
+
+}}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 68 "S:=S+a[r]*subs(z=gama*x,sqrt(Pi/2
+
+)/sqrt(z)*BesselJ(n+2*r+1/2,z)) od;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+18 "(1-1/x^2)^(m/2)*S;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}
+
+{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 58 "S2:=proc(m,n,gama,d) # radia
+
+l spheroidal function S_n^m(2)" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 16 "l
+
+ocal S,r,a,R,z;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "R:=floor((n-m)/2
+
+);" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "a:=acoeff2(m,n,gama^2,d);" }}
+
+{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 5 "S:=0;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 
+
+1 0 27 "for r from -R to -R+d-1 do " }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+68 "S:=S+a[r]*subs(z=gama*x,sqrt(Pi/2)/sqrt(z)*BesselY(n+2*r+1/2,z)) o
+
+d;" }}{PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 18 "(1-1/x^2)^(m/2)*S;" }}{PARA 
+
+0 "&gt; " 0 "" {MPLTEXT 1 0 4 "end;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+
+92 "First example: We compare with table in Abramowitz and Stegun,  pa
+
+ge 768. We find agreement." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 
+
+16 "m:=0;n:=2;d:=10;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 57 "for
+
+ i from 1 to 5 do evalf(subs(x=1.044,S1(m,n,i,d))) od;" }}}{EXCHG 
+
+{PARA 0 "" 0 "" {TEXT -1 56 "Second example: Plotting of radial sphero
+
+idal functions." }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 25 "m:=0;n:=
+
+0;gama:=2.0;d:=6;" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 29 "plot(S
+
+1(m,n,gama,d),x=1..10);" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "&gt; \+
+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "
+
+" }}}{EXCHG {PARA 0 "&gt; " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "22" 0 }
+
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
+

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/29.5";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="29.html#PT2" rel="up" title="Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.html" rel="up up" title="Chapter 29 Lamé Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="29.4.html" rel="prev" title="§29.4 Graphics ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.6.html" rel="next" title="§29.6 Fourier Series ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.1.html" rel="section" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"/>
+<link href="29.2.html" rel="section" title="§29.2 Differential Equations ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.3.html" rel="section" title="§29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.4.html" rel="section" title="§29.4 Graphics ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.6.html" rel="section" title="§29.6 Fourier Series ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.7.html" rel="section" title="§29.7 Asymptotic Expansions ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.8.html" rel="section" title="§29.8 Integral Equations ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.9.html" rel="section" title="§29.9 Stability ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.10.html" rel="section" title="§29.10 Lamé Functions with Imaginary Periods ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.11.html" rel="section" title="§29.11 Lamé Wave Equation ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"/>
+<link href="29.12.html" rel="section" title="§29.12 Definitions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.13.html" rel="section" title="§29.13 Graphics ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.14.html" rel="section" title="§29.14 Orthogonality ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.15.html" rel="section" title="§29.15 Fourier Series and Chebyshev Series ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.16.html" rel="section" title="§29.16 Asymptotic Expansions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.17.html" rel="section" title="§29.17 Other Solutions ‣ Lamé Polynomials ‣ Chapter 29 Lamé Functions"/>
+<link href="29.18.html" rel="section" title="§29.18 Mathematical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"/>
+<link href="29.19.html" rel="section" title="§29.19 Physical Applications ‣ Applications ‣ Chapter 29 Lamé Functions"/>
+<link href="29.20.html" rel="section" title="§29.20 Methods of Computation ‣ Computation ‣ Chapter 29 Lamé Functions"/>
+<link href="29.21.html" rel="section" title="§29.21 Tables ‣ Computation ‣ Chapter 29 Lamé Functions"/>
+<link href="29.22.html" rel="section" title="§29.22 Software ‣ Computation ‣ Chapter 29 Lamé Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Lamé functions, eigenvalues, limiting forms, special cases" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="29.5.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="29.5.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="29.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29 </span>Lamé Functions</span></a><a class="ltx_ref" href="29.html#PT2" rel="up" title="In Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title">Lamé Functions</span></a><a class="ltx_ref" href="29.4.html" rel="prev" title="In Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.4 </span>Graphics</span></a><a class="ltx_ref" href="29.6.html" rel="next" title="In Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.6 </span>Fourier Series</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§29.5 </span>Special Cases and Limiting Forms</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Lam%C3%A9%20functions">Lamé functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvalues">eigenvalues</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=limiting%20forms">limiting forms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=special%20cases">special cases</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Erdélyi<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/E.html#bib755" title="Higher Transcendental Functions. Vol. III">1955</a>, §15.5.4)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Volkmer (<a class="ltx_ref" href="bib/V.html#bib2344" title="Four remarks on eigenvalues of Lamé’s equation">2004b</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="29.5.html" title="">http://dlmf.nist.gov/29.5</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.5.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="70px" altimg-valign="-7px" altimg-width="207px" alttext="a^{m}_{\nu}\left(0\right)=b^{m}_{\nu}\left(0\right)=m^{2}," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">a</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">b</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow></mrow><mo>=</mo><msup><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.3.html#i.p1" title="§29.3(i) Eigenvalues ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="29px" altimg-valign="-9px" altimg-width="70px" alttext="a^{\NVar{n}}_{\NVar{\nu}}\left(\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">a</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">n</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: eigenvalues of Lamé’s equation</a>,
+<a class="ltx_ref" href="29.3.html#i.p1" title="§29.3(i) Eigenvalues ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m31.png" altimg-height="29px" altimg-valign="-9px" altimg-width="68px" alttext="b^{\NVar{n}}_{\NVar{\nu}}\left(\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">b</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">n</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: eigenvalues of Lamé’s equation</a>,
+<a class="ltx_ref" href="29.1.html#t1.r1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E1" title="">http://dlmf.nist.gov/29.5.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.5.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="40px" altimg-valign="-7px" altimg-width="252px" alttext="\mathit{Ec}^{0}_{\nu}\left(z,0\right)=2^{-\frac{1}{2}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mn>0</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mn>0</mn><mo>)</mo></mrow></mrow><mo>=</mo><msup><mn>2</mn><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="108px" alttext="\mathit{Ec}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E2" title="">http://dlmf.nist.gov/29.5.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">29.5.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="40px" altimg-valign="-7px" altimg-width="114px" alttext="\displaystyle\mathit{Ec}^{m}_{\nu}\left(z,0\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mn>0</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="43px" altimg-valign="-9px" altimg-width="190px" alttext="\displaystyle=\cos\left(m(\tfrac{1}{2}\pi-z)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m37.png" altimg-height="20px" altimg-valign="-5px" altimg-width="61px" alttext="m\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>≥</mo><mn>1</mn></mrow></math>,</span></td></tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="40px" altimg-valign="-7px" altimg-width="113px" alttext="\displaystyle\mathit{Es}^{m}_{\nu}\left(z,0\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mn>0</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="43px" altimg-valign="-9px" altimg-width="188px" alttext="\displaystyle=\sin\left(m(\tfrac{1}{2}\pi-z)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m37.png" altimg-height="20px" altimg-valign="-5px" altimg-width="61px" alttext="m\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>≥</mo><mn>1</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="108px" alttext="\mathit{Ec}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m17.png" altimg-height="29px" altimg-valign="-9px" altimg-width="107px" alttext="\mathit{Es}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m13.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m27.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="29.1.html#t1.r1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E3" title="">http://dlmf.nist.gov/29.5.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E3a.png">png</a>, <a href="http://dlmf.nist.gov/29.5.E3b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Let <math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="177px" alttext="\mu=\max{(\nu-m,0)}" class="ltx_Math" display="inline"><mrow><mi href="./29.5#p1" title="parameter">μ</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>−</mo><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.5.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="94px" altimg-valign="-19px" altimg-width="454px" alttext="\lim_{k\to 1-}a^{m}_{\nu}\left(k^{2}\right)=\lim_{k\to 1-}b^{m+1}_{\nu}\left(k%
+^{2}\right)=\nu(\nu+1)-\mu^{2}," class="ltx_Math" display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow></munder><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">a</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow></munder><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">b</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><msup><mi href="./29.5#p1" title="parameter">μ</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.3.html#i.p1" title="§29.3(i) Eigenvalues ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m30.png" altimg-height="29px" altimg-valign="-9px" altimg-width="70px" alttext="a^{\NVar{n}}_{\NVar{\nu}}\left(\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">a</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">n</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: eigenvalues of Lamé’s equation</a>,
+<a class="ltx_ref" href="29.3.html#i.p1" title="§29.3(i) Eigenvalues ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m31.png" altimg-height="29px" altimg-valign="-9px" altimg-width="68px" alttext="b^{\NVar{n}}_{\NVar{\nu}}\left(\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#i.p1" title="eigenvalues of Lamé’s equation">b</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">n</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: eigenvalues of Lamé’s equation</a>,
+<a class="ltx_ref" href="29.1.html#t1.r1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a> and
+<a class="ltx_ref" href="29.5.html#p1" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m19.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./29.5#p1" title="parameter">μ</mi></math>:  parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E4" title="">http://dlmf.nist.gov/29.5.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.5.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="130px" altimg-valign="-28px" altimg-width="833px" alttext="{\lim_{k\to 1-}\frac{\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)}{\mathit{Ec}^{m%
+}_{\nu}\left(0,k^{2}\right)}=\lim_{k\to 1-}\frac{\mathit{Es}^{m+1}_{\nu}\left(%
+z,k^{2}\right)}{\mathit{Es}^{m+1}_{\nu}\left(0,k^{2}\right)}}=\frac{1}{(\cosh z%
+)^{\mu}}F\left({\tfrac{1}{2}\mu-\tfrac{1}{2}\nu,\tfrac{1}{2}\mu+\tfrac{1}{2}%
+\nu+\tfrac{1}{2}\atop\tfrac{1}{2}};{\tanh}^{2}z\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow></munder><mfrac><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mfrac></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow></munder><mfrac><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./29.5#p1" title="parameter">μ</mi></msup></mfrac><mo>⁢</mo><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.5#p1" title="parameter">μ</mi></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.1#t1.r4" title="real parameter">ν</mi></mrow></mrow><mo>,</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.5#p1" title="parameter">μ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.1#t1.r4" title="real parameter">ν</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mfrac><mo>;</mo><mrow><msup><mi href="./4.28#E4" title="hyperbolic tangent function">tanh</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math> even,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="15.2.html#E1" title="(15.2.1) ‣ §15.2(i) Gauss Series ‣ §15.2 Definitions and Analytical Properties ‣ Properties ‣ Chapter 15 Hypergeometric Function"><math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="107px" alttext="F\left(\NVar{a},\NVar{b};\NVar{c};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">b</mi><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">c</mi><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> or <math altimg="m12.png" altimg-height="42px" altimg-valign="-15px" altimg-width="95px" alttext="F\left({\NVar{a},\NVar{b}\atop\NVar{c}};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">b</mi></mrow><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">c</mi></mfrac><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="145px" alttext="={{}_{2}F_{1}}\left(\NVar{a},\NVar{b};\NVar{c};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mmultiscripts><mi href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">F</mi><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">1</mn><mrow></mrow><mprescripts></mprescripts><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">2</mn><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">b</mi></mrow><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">c</mi><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math>
+Gauss’ hypergeometric function</a>,
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="108px" alttext="\mathit{Ec}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m17.png" altimg-height="29px" altimg-valign="-9px" altimg-width="107px" alttext="\mathit{Es}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="4.28.html#E2" title="(4.28.2) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m14.png" altimg-height="18px" altimg-valign="-2px" altimg-width="58px" alttext="\cosh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosine function</a>,
+<a class="ltx_ref" href="4.28.html#E4" title="(4.28.4) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="60px" alttext="\tanh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E4" title="hyperbolic tangent function">tanh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic tangent function</a>,
+<a class="ltx_ref" href="29.1.html#t1.r1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a> and
+<a class="ltx_ref" href="29.5.html#p1" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m19.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./29.5#p1" title="parameter">μ</mi></math>:  parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E5" title="">http://dlmf.nist.gov/29.5.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">29.5.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\lim_{k\to 1-}\frac{\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)}{\left.\ifrac{%
+\mathrm{d}\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)}{\mathrm{d}z}\right|_{z=0}%
+}=\lim_{k\to 1-}\frac{\mathit{Es}^{m+1}_{\nu}\left(z,k^{2}\right)}{\left.%
+\ifrac{\mathrm{d}\mathit{Es}^{m+1}_{\nu}\left(z,k^{2}\right)}{\mathrm{d}z}%
+\right|_{z=0}}=\frac{\tanh z}{(\cosh z)^{\mu}}F\left({\tfrac{1}{2}\mu-\tfrac{1%
+}{2}\nu+\tfrac{1}{2},\tfrac{1}{2}\mu+\tfrac{1}{2}\nu+1\atop\tfrac{3}{2}};{%
+\tanh}^{2}z\right)," class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow></munder><mfrac><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><msub><mrow><mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mo href="./1.4#E4" lspace="0em" rspace="0em" stretchy="true" symmetric="true" title="derivative of 𝑓 with respect to 𝑥">/</mo><mrow><mo href="./1.4#E4" lspace="0em" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow></mrow><mo>|</mo></mrow><mrow><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></msub></mfrac></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>1</mn><mo>−</mo></mrow></mrow></munder><mfrac><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><msub><mrow><mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mrow><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mo href="./1.4#E4" lspace="0em" rspace="0em" stretchy="true" symmetric="true" title="derivative of 𝑓 with respect to 𝑥">/</mo><mrow><mo href="./1.4#E4" lspace="0em" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow></mrow><mo>|</mo></mrow><mrow><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>=</mo><mn>0</mn></mrow></msub></mfrac></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><mi href="./4.28#E4" title="hyperbolic tangent function">tanh</mi><mo lspace="0.167em">⁡</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo stretchy="false">)</mo></mrow><mi href="./29.5#p1" title="parameter">μ</mi></msup></mfrac><mo>⁢</mo><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.5#p1" title="parameter">μ</mi></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.1#t1.r4" title="real parameter">ν</mi></mrow></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>,</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.5#p1" title="parameter">μ</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./29.1#t1.r4" title="real parameter">ν</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow><mfrac><mn>3</mn><mn>2</mn></mfrac></mfrac><mo>;</mo><mrow><msup><mi href="./4.28#E4" title="hyperbolic tangent function">tanh</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math> odd,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="15.2.html#E1" title="(15.2.1) ‣ §15.2(i) Gauss Series ‣ §15.2 Definitions and Analytical Properties ‣ Properties ‣ Chapter 15 Hypergeometric Function"><math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="107px" alttext="F\left(\NVar{a},\NVar{b};\NVar{c};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">b</mi><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">c</mi><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> or <math altimg="m12.png" altimg-height="42px" altimg-valign="-15px" altimg-width="95px" alttext="F\left({\NVar{a},\NVar{b}\atop\NVar{c}};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">b</mi></mrow><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">c</mi></mfrac><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="145px" alttext="={{}_{2}F_{1}}\left(\NVar{a},\NVar{b};\NVar{c};\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mmultiscripts><mi href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">F</mi><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">1</mn><mrow></mrow><mprescripts></mprescripts><mn href="./16.2" title="=𝐹(𝑎,𝑏;𝑐;𝑧) notation for Gauss’ hypergeometric function">2</mn><mrow></mrow></mmultiscripts><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">a</mi><mo>,</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">b</mi></mrow><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r3" title="real or complex parameter">c</mi><mo>;</mo><mi class="ltx_nvar" href="./15.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></mrow></math>
+Gauss’ hypergeometric function</a>,
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="108px" alttext="\mathit{Ec}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m17.png" altimg-height="29px" altimg-valign="-9px" altimg-width="107px" alttext="\mathit{Es}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m15.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.28.html#E2" title="(4.28.2) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m14.png" altimg-height="18px" altimg-valign="-2px" altimg-width="58px" alttext="\cosh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E2" title="hyperbolic cosine function">cosh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic cosine function</a>,
+<a class="ltx_ref" href="4.28.html#E4" title="(4.28.4) ‣ §4.28 Definitions and Periodicity ‣ Hyperbolic Functions ‣ Chapter 4 Elementary Functions"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="60px" alttext="\tanh\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.28#E4" title="hyperbolic tangent function">tanh</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: hyperbolic tangent function</a>,
+<a class="ltx_ref" href="29.1.html#t1.r1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a> and
+<a class="ltx_ref" href="29.5.html#p1" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m19.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi href="./29.5#p1" title="parameter">μ</mi></math>:  parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E6" title="">http://dlmf.nist.gov/29.5.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m10.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="F" class="ltx_Math" display="inline"><mi href="./15.2#E1" title="=₂𝐹₁(𝑎,𝑏;𝑐;𝑧) Gauss’ hypergeometric function">F</mi></math> is the hypergeometric function; see §<a class="ltx_ref" href="15.2.html#i" title="§15.2(i) Gauss Series ‣ §15.2 Definitions and Analytical Properties ‣ Properties ‣ Chapter 15 Hypergeometric Function"><span class="ltx_text ltx_ref_tag">15.2(i)</span></a>.</p>
+</div>
+<div class="ltx_para" id="p2">
+<p class="ltx_p">If <math altimg="m34.png" altimg-height="20px" altimg-valign="-4px" altimg-width="75px" alttext="k\to 0+" class="ltx_Math" display="inline"><mrow><mi href="./29.1#t1.r4" title="real parameter">k</mi><mo stretchy="false">→</mo><mrow><mn>0</mn><mo>+</mo></mrow></mrow></math> and <math altimg="m21.png" altimg-height="13px" altimg-valign="-2px" altimg-width="69px" alttext="\nu\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> in such a way that <math altimg="m35.png" altimg-height="26px" altimg-valign="-7px" altimg-width="148px" alttext="k^{2}\nu(\nu+1)=4\theta" class="ltx_Math" display="inline"><mrow><mrow><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>⁢</mo><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mi href="./29.5#p2" title="positive constant">θ</mi></mrow></mrow></math>
+(a positive constant), then</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">29.5.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="43px" altimg-valign="-9px" altimg-width="159px" alttext="\displaystyle\lim\mathit{Ec}^{m}_{\nu}\left(z,k^{2}\right)" class="ltx_Math" display="inline"><mrow><mo movablelimits="false" rspace="0.167em">lim</mo><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="43px" altimg-valign="-9px" altimg-width="182px" alttext="\displaystyle=\operatorname{ce}_{m}\left(\tfrac{1}{2}\pi-z,\theta\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo>,</mo><mi href="./29.5#p2" title="positive constant">θ</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="43px" altimg-valign="-9px" altimg-width="159px" alttext="\displaystyle\lim\mathit{Es}^{m}_{\nu}\left(z,k^{2}\right)" class="ltx_Math" display="inline"><mrow><mo movablelimits="false" rspace="0.167em">lim</mo><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi href="./29.1#t1.r4" title="real parameter">ν</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi href="./29.1#t1.r4" title="real parameter">k</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="43px" altimg-valign="-9px" altimg-width="180px" alttext="\displaystyle=\operatorname{se}_{m}\left(\tfrac{1}{2}\pi-z,\theta\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi></mrow><mo>,</mo><mi href="./29.5#p2" title="positive constant">θ</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="108px" alttext="\mathit{Ec}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑐</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="29.3.html#iv.p1" title="§29.3(iv) Lamé Functions ‣ §29.3 Definitions and Basic Properties ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m17.png" altimg-height="29px" altimg-valign="-9px" altimg-width="107px" alttext="\mathit{Es}^{\NVar{m}}_{\NVar{\nu}}\left(\NVar{z},\NVar{k^{2}}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./29.3#iv.p1" title="Lamé function">𝐸𝑠</mi><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">ν</mi><mi class="ltx_nvar" href="./29.1#t1.r1" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><msup><mi class="ltx_nvar" href="./29.1#t1.r4" title="real parameter">k</mi><mn class="ltx_nvar">2</mn></msup><mo>)</mo></mrow></mrow></math>: Lamé function</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m26.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r1" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></math>:  nonnegative integer</a>,
+<a class="ltx_ref" href="29.1.html#t1.r3" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m39.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./29.1#t1.r3" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">k</mi></math>:  real parameter</a>,
+<a class="ltx_ref" href="29.1.html#t1.r4" title="§29.1 Special Notation ‣ Notation ‣ Chapter 29 Lamé Functions"><math altimg="m20.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./29.1#t1.r4" title="real parameter">ν</mi></math>:  real parameter</a> and
+<a class="ltx_ref" href="29.5.html#p2" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><math altimg="m29.png" altimg-height="18px" altimg-valign="-2px" altimg-width="15px" alttext="\theta" class="ltx_Math" display="inline"><mi href="./29.5#p2" title="positive constant">θ</mi></math>:  positive constant</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/29.5.E7" title="">http://dlmf.nist.gov/29.5.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/29.5.E7a.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E7b.tex">TeX</a>, <a href="http://dlmf.nist.gov/29.5.E7a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E7b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/29.5.E7a.png">png</a>, <a href="http://dlmf.nist.gov/29.5.E7b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="29.5.html#info" title="§29.5 Special Cases and Limiting Forms ‣ Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">§29.5</span></a> and
+<a class="ltx_ref" href="29.html#info" title="Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_tag">Ch.29</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="88px" alttext="\operatorname{ce}_{m}\left(z,\theta\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./29.5#p2" title="positive constant">θ</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="87px" alttext="\operatorname{se}_{m}\left(z,\theta\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi href="./29.1#t1.r1" title="nonnegative integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./29.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./29.5#p2" title="positive constant">θ</mi><mo>)</mo></mrow></mrow></math> are Mathieu
+functions; see §<a class="ltx_ref" href="28.2.html#vi" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2(vi)</span></a>.</p>
+</div>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="29.4.html" rel="prev" title="In Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.4 </span>Graphics</span></a><a class="ltx_ref" href="29.6.html" rel="next" title="In Lamé Functions ‣ Chapter 29 Lamé Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">29.6 </span>Fourier Series</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

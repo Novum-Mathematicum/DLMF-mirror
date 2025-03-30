@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/28.8";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="28.html#PT2" rel="up" title="Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.html" rel="up up" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="index.html" rel="start" title=""/>
+<link href="28.7.html" rel="prev" title="§28.7 Analytic Continuation of Eigenvalues ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.9.html" rel="next" title="§28.9 Zeros ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.1.html" rel="section" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.2.html" rel="section" title="§28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.3.html" rel="section" title="§28.3 Graphics ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.4.html" rel="section" title="§28.4 Fourier Series ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.5.html" rel="section" title="§28.5 Second Solutions fe_𝑛, ge_𝑛 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.6.html" rel="section" title="§28.6 Expansions for Small 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.7.html" rel="section" title="§28.7 Analytic Continuation of Eigenvalues ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.9.html" rel="section" title="§28.9 Zeros ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.10.html" rel="section" title="§28.10 Integral Equations ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.11.html" rel="section" title="§28.11 Expansions in Series of Mathieu Functions ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.12.html" rel="section" title="§28.12 Definitions and Basic Properties ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.13.html" rel="section" title="§28.13 Graphics ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.14.html" rel="section" title="§28.14 Fourier Series ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.15.html" rel="section" title="§28.15 Expansions for Small 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.16.html" rel="section" title="§28.16 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.17.html" rel="section" title="§28.17 Stability as 𝑥→±∞ ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.18.html" rel="section" title="§28.18 Integrals and Integral Equations ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.19.html" rel="section" title="§28.19 Expansions in Series of me_{𝜈+2⁢𝑛} Functions ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.20.html" rel="section" title="§28.20 Definitions and Basic Properties ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.21.html" rel="section" title="§28.21 Graphics ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.22.html" rel="section" title="§28.22 Connection Formulas ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.23.html" rel="section" title="§28.23 Expansions in Series of Bessel Functions ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.24.html" rel="section" title="§28.24 Expansions in Series of Cross-Products of Bessel Functions or Modified Bessel Functions ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.25.html" rel="section" title="§28.25 Asymptotic Expansions for Large ℜ𝑧 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.26.html" rel="section" title="§28.26 Asymptotic Approximations for Large 𝑞 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.27.html" rel="section" title="§28.27 Addition Theorems ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.28.html" rel="section" title="§28.28 Integrals, Integral Representations, and Integral Equations ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.29.html" rel="section" title="§28.29 Definitions and Basic Properties ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.30.html" rel="section" title="§28.30 Expansions in Series of Eigenfunctions ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.31.html" rel="section" title="§28.31 Equations of Whittaker–Hill and Ince ‣ Hill’s Equation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.32.html" rel="section" title="§28.32 Mathematical Applications ‣ Applications ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.33.html" rel="section" title="§28.33 Physical Applications ‣ Applications ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.34.html" rel="section" title="§28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.35.html" rel="section" title="§28.35 Tables ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="28.36.html" rel="section" title="§28.36 Software ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Barrett’s, Dunster’s, Goldstein’s, Mathieu functions, Mathieu’s equation, Sips’, asymptotic expansions for large , asymptotic expansions for large , eigenvalues (or characteristic values), modified Mathieu functions, uniform asymptotic approximations for large parameters" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="28.8.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="28.8.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="28.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28 </span>Mathieu Functions and Hill’s Equation</span></a><a class="ltx_ref" href="28.html#PT2" rel="up" title="In Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title">Mathieu Functions of Integer Order</span></a><a class="ltx_ref" href="28.7.html" rel="prev" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.7 </span>Analytic Continuation of Eigenvalues</span></a><a class="ltx_ref" href="28.9.html" rel="next" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.9 </span>Zeros</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§28.8 </span>Asymptotic Expansions for Large <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math>
+</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20functions">Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20equation">Mathieu’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions%20for%20large%20q">asymptotic expansions for large <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math></a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=eigenvalues%20%28or%20characteristic%20values%29">eigenvalues (or characteristic values)</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="28.8.html" title="">http://dlmf.nist.gov/28.8</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="28.8.html#i"><span class="ltx_tag ltx_tag_subsection">§28.8(i) </span>Eigenvalues</a></li>
+<li class="ltx_tocentry"><a href="28.8.html#ii"><span class="ltx_tag ltx_tag_subsection">§28.8(ii) </span>Sips’ Expansions</a></li>
+<li class="ltx_tocentry"><a href="28.8.html#iii"><span class="ltx_tag ltx_tag_subsection">§28.8(iii) </span>Goldstein’s Expansions</a></li>
+<li class="ltx_tocentry"><a href="28.8.html#iv"><span class="ltx_tag ltx_tag_subsection">§28.8(iv) </span>Uniform Approximations</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.8(i) </span>Eigenvalues</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Meixner and Schäfke (<a class="ltx_ref" href="bib/M.html#bib1598" title="Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme">1954</a>, pp. 134–139 and 210)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.34.html#I2.ix2.p1" title="In §28.34(ii) Eigenvalues ‣ §28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">item (b)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.10.I2.ix2" title="In Other Changes ‣ Version 1.1.10 (June 15, 2023) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.10) for  Sections <span class="ltx_text ltx_ref_tag">28.6(i)</span>, <span class="ltx_text ltx_ref_tag">28.6(ii)</span>, <span class="ltx_text ltx_ref_tag">28.8(i)</span>, <span class="ltx_text ltx_ref_tag">28.8(ii)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.i" title="">http://dlmf.nist.gov/28.8.i</a></dd>
+<dt>Clarification (effective with 1.1.10):</dt>
+<dd>
+Just below (<a class="ltx_ref" href="28.8.html#E1" title="(28.8.1) ‣ §28.8(i) Eigenvalues ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.8.1</span></a>), a sentence was added referring the reader to <cite class="ltx_cite ltx_citemacro_citet">Frenkel and Portugal (<a class="ltx_ref" href="bib/F.html#bib2967" title="Algebraic methods to compute Mathieu functions">2001</a>, §3)</cite>.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Denote <math altimg="m70.png" altimg-height="25px" altimg-valign="-9px" altimg-width="71px" alttext="h=\sqrt{q}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">h</mi><mo>=</mo><msqrt><mi href="./28.1#t1.r6" title="parameter">q</mi></msqrt></mrow></math> and <math altimg="m78.png" altimg-height="19px" altimg-valign="-4px" altimg-width="106px" alttext="s=2m+1" class="ltx_Math" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>. Then as <math altimg="m72.png" altimg-height="20px" altimg-valign="-4px" altimg-width="85px" alttext="h\to+\infty" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">h</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> with <math altimg="m73.png" altimg-height="21px" altimg-valign="-6px" altimg-width="133px" alttext="m=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\rselection{a_{m}\left(h^{2}\right)\\
+b_{m+1}\left(h^{2}\right)}\sim-2h^{2}+2sh-\frac{1}{8}(s^{2}+1)-\frac{1}{2^{7}h%
+}(s^{3}+3s)-\frac{1}{2^{12}h^{2}}(5s^{4}+34s^{2}+9)-\frac{1}{2^{17}h^{3}}(33s^%
+{5}+410s^{3}+405s)-\frac{1}{2^{20}h^{4}}(63s^{6}+1260s^{4}+2943s^{2}+486)-%
+\frac{1}{2^{25}h^{5}}(527s^{7}+15617s^{5}+69001s^{3}+41607s)+\cdots." class="ltx_Math" display="block"><mrow><mrow><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">a</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">b</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>7</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>s</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>12</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>5</mn><mo>⁢</mo><msup><mi>s</mi><mn>4</mn></msup></mrow><mo>+</mo><mrow><mn>34</mn><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>17</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>3</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>33</mn><mo>⁢</mo><msup><mi>s</mi><mn>5</mn></msup></mrow><mo>+</mo><mrow><mn>410</mn><mo>⁢</mo><msup><mi>s</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>405</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>20</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>4</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>63</mn><mo>⁢</mo><msup><mi>s</mi><mn>6</mn></msup></mrow><mo>+</mo><mrow><mn>1260</mn><mo>⁢</mo><msup><mi>s</mi><mn>4</mn></msup></mrow><mo>+</mo><mrow><mn>2943</mn><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>486</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>−</mo><mrow><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>25</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>5</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>527</mn><mo>⁢</mo><msup><mi>s</mi><mn>7</mn></msup></mrow><mo>+</mo><mrow><mn>15617</mn><mo>⁢</mo><msup><mi>s</mi><mn>5</mn></msup></mrow><mo>+</mo><mrow><mn>69001</mn><mo>⁢</mo><msup><mi>s</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>41607</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mi mathvariant="normal">⋯</mi><mo lspace="0em">.</mo></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#v.p1" title="§28.2(v) Eigenvalues 𝑎_𝑛, 𝑏_𝑛 ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m68.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="a_{\NVar{n}}\left(\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">a</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: eigenvalues of Mathieu equation</a>,
+<a class="ltx_ref" href="28.2.html#v.p1" title="§28.2(v) Eigenvalues 𝑎_𝑛, 𝑏_𝑛 ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="b_{\NVar{n}}\left(\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">b</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: eigenvalues of Mathieu equation</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.2.30</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.8.html#i.info" title="§28.8(i) Eigenvalues ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.10.I2.ix2.p1" title="In Other Changes ‣ Version 1.1.10 (June 15, 2023) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.10) for  Sections <span class="ltx_text ltx_ref_tag">28.6(i)</span>, <span class="ltx_text ltx_ref_tag">28.6(ii)</span>, <span class="ltx_text ltx_ref_tag">28.8(i)</span>, <span class="ltx_text ltx_ref_tag">28.8(ii)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E1" title="">http://dlmf.nist.gov/28.8.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#i.info" title="§28.8(i) Eigenvalues ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(i)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">For recurrence relations for the coefficients in these expansions see
+<cite class="ltx_cite ltx_citemacro_citet">Frenkel and Portugal (<a class="ltx_ref" href="bib/F.html#bib2967" title="Algebraic methods to compute Mathieu functions">2001</a>, §3)</cite>.
+For error estimates see <cite class="ltx_cite ltx_citemacro_citet">Kurz (<a class="ltx_ref" href="bib/K.html#bib1357" title="Fehlerabschätzungen zu asymptotischen Entwicklungen der Eigenwerte und Eigenlösungen der Mathieuschen Differentialgleichung">1979</a>)</cite>, and for graphical interpretation
+see Figure <a class="ltx_ref" href="28.2.html#F1" title="Figure 28.2.1 ‣ §28.2(v) Eigenvalues 𝑎_𝑛, 𝑏_𝑛 ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2.1</span></a>. Also,</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="136px" altimg-valign="-22px" altimg-width="805px" alttext="b_{m+1}\left(h^{2}\right)-a_{m}\left(h^{2}\right)=\frac{2^{4m+5}}{m!}\left(%
+\frac{2}{\pi}\right)^{\ifrac{1}{2}}h^{m+(\ifrac{3}{2})}e^{-4h}\*{\left(1-\frac%
+{6m^{2}+14m+7}{32h}+O\left(\frac{1}{h^{2}}\right)\right)}." class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">b</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">a</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mn>2</mn><mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>5</mn></mrow></msup><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mn>2</mn><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mfrac><mrow><mrow><mn>6</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>7</mn></mrow><mrow><mn>32</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mfrac><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#E3" title="(2.1.3) ‣ §2.1(i) Asymptotic and Order Symbols ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="O\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: order not exceeding</a>,
+<a class="ltx_ref" href="28.2.html#v.p1" title="§28.2(v) Eigenvalues 𝑎_𝑛, 𝑏_𝑛 ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m68.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="a_{\NVar{n}}\left(\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">a</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: eigenvalues of Mathieu equation</a>,
+<a class="ltx_ref" href="28.2.html#v.p1" title="§28.2(v) Eigenvalues 𝑎_𝑛, 𝑏_𝑛 ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m69.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="b_{\NVar{n}}\left(\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#v.p1" title="eigenvalues of Mathieu equation">b</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: eigenvalues of Mathieu equation</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m58.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.2.31</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E2" title="">http://dlmf.nist.gov/28.8.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#i.info" title="§28.8(i) Eigenvalues ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(i)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.8(ii) </span>Sips’ Expansions</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20functions">Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Sips%E2%80%99">Sips’</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions%20for%20large%20q">asymptotic expansions for large <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math></a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.34.html#I3.ix2.p1" title="In §28.34(iii) Floquet Solutions ‣ §28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">item (b)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.10.I2.ix2" title="In Other Changes ‣ Version 1.1.10 (June 15, 2023) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.10) for  Sections <span class="ltx_text ltx_ref_tag">28.6(i)</span>, <span class="ltx_text ltx_ref_tag">28.6(ii)</span>, <span class="ltx_text ltx_ref_tag">28.8(i)</span>, <span class="ltx_text ltx_ref_tag">28.8(ii)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.ii" title="">http://dlmf.nist.gov/28.8.ii</a></dd>
+<dt>Clarification (effective with 1.1.10):</dt>
+<dd>
+Just below (<a class="ltx_ref" href="28.8.html#E7" title="(28.8.7) ‣ §28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.8.7</span></a>), a sentence was added referring the reader to <cite class="ltx_cite ltx_citemacro_citet">Frenkel and Portugal (<a class="ltx_ref" href="bib/F.html#bib2967" title="Algebraic methods to compute Mathieu functions">2001</a>, §4 and §5)</cite>.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Let <math altimg="m79.png" altimg-height="30px" altimg-valign="-9px" altimg-width="163px" alttext="x=\tfrac{1}{2}\pi+\lambda h^{-\ifrac{1}{4}}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mrow><mo>−</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>4</mn></mrow></mrow></msup></mrow></mrow></mrow></math>, where <math altimg="m47.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\lambda" class="ltx_Math" display="inline"><mi>λ</mi></math> is a real
+constant such that <math altimg="m85.png" altimg-height="28px" altimg-valign="-7px" altimg-width="97px" alttext="|\lambda|&lt;2^{\ifrac{1}{4}}" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>λ</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><msup><mn>2</mn><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>4</mn></mrow></msup></mrow></math>. Also let
+<math altimg="m65.png" altimg-height="28px" altimg-valign="-6px" altimg-width="128px" alttext="\xi=2\sqrt{h}\cos x" class="ltx_Math" display="inline"><mrow><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mi href="./28.1#t1.r6" title="parameter">h</mi></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mrow></math> and
+<math altimg="m33.png" altimg-height="32px" altimg-valign="-7px" altimg-width="230px" alttext="D_{m}\left(\xi\right)=e^{-\ifrac{\xi^{2}}{4}}\mathit{He}_{m}\left(\xi\right)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><msup><mi href="./28.8#ii.p1" title="variable">ξ</mi><mn>2</mn></msup><mo lspace="0em" rspace="0em">/</mo><mn>4</mn></mrow></mrow></msup><mo>⁢</mo><mrow><msub><mi href="./18.3#T1.t1.r14" title="Hermite polynomial">𝐻𝑒</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mrow></math>
+(§<a class="ltx_ref" href="18.3.html" title="§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.3</span></a>). Then as <math altimg="m72.png" altimg-height="20px" altimg-valign="-4px" altimg-width="85px" alttext="h\to+\infty" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">h</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>
+</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">28.8.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="43px" altimg-valign="-9px" altimg-width="122px" alttext="\displaystyle\operatorname{ce}_{m}\left(x,h^{2}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="40px" altimg-valign="-7px" altimg-width="229px" alttext="\displaystyle=\widehat{C}_{m}\left(U_{m}(\xi)+V_{m}(\xi)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mover accent="true"><mi href="./28.8#E6" title="coefficient">C</mi><mo href="./28.8#E6" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./28.8#E4" title="function">U</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./28.8#E5" title="function">V</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="54px" altimg-valign="-16px" altimg-width="131px" alttext="\displaystyle\frac{\operatorname{se}_{m+1}\left(x,h^{2}\right)}{\sin x}" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mfrac><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="40px" altimg-valign="-7px" altimg-width="227px" alttext="\displaystyle=\widehat{S}_{m}\left(U_{m}(\xi)-V_{m}(\xi)\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mover accent="true"><mi href="./28.8#E7" title="coefficient">S</mi><mo href="./28.8#E7" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./28.8#E4" title="function">U</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./28.8#E5" title="function">V</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m57.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m61.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m81.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="28.8.html#ii.p1" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="\xi" class="ltx_Math" display="inline"><mi href="./28.8#ii.p1" title="variable">ξ</mi></math>:  variable</a>,
+<a class="ltx_ref" href="28.8.html#E4" title="(28.8.4) ‣ §28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="U_{m}(\xi)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E4" title="function">U</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>,
+<a class="ltx_ref" href="28.8.html#E5" title="(28.8.5) ‣ §28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="58px" alttext="V_{m}(\xi)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E5" title="function">V</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function</a>,
+<a class="ltx_ref" href="28.8.html#E6" title="(28.8.6) ‣ §28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m63.png" altimg-height="28px" altimg-valign="-5px" altimg-width="35px" alttext="\widehat{C}_{m}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./28.8#E6" title="coefficient">C</mi><mo href="./28.8#E6" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math>:  coefficient</a> and
+<a class="ltx_ref" href="28.8.html#E7" title="(28.8.7) ‣ §28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m64.png" altimg-height="28px" altimg-valign="-5px" altimg-width="33px" alttext="\widehat{S}_{m}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./28.8#E7" title="coefficient">S</mi><mo href="./28.8#E7" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math>:  coefficient</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.15</span> (in slightly different form)</span> <span class="ltx_origref"><span class="ltx_tag">20.9.16</span> (in slightly different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E3" title="">http://dlmf.nist.gov/28.8.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E3a.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E3b.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E3a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E3b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E3a.png">png</a>, <a href="http://dlmf.nist.gov/28.8.E3b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#ii.info" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(ii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E4">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="27px" altimg-valign="-7px" altimg-width="63px" alttext="\displaystyle U_{m}(\xi)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E4" title="function">U</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m17.png" altimg-height="383px" altimg-valign="-22px" altimg-width="280px" alttext="\displaystyle\sim D_{m}\left(\xi\right)-\frac{1}{2^{6}h}\left(D_{m+4}\left(\xi%
+\right)-4!\dbinom{m}{4}D_{m-4}\left(\xi\right)\right)+\frac{1}{2^{13}h^{2}}%
+\left(D_{m+8}\left(\xi\right)-2^{5}(m+2)D_{m+4}\left(\xi\right)+4!\,2^{5}(m-1)%
+\dbinom{m}{4}D_{m-4}\left(\xi\right)+8!\genfrac{(}{)}{0.0pt}{}{m}{8}D_{m-8}%
+\left(\xi\right)\right)+\cdots," class="ltx_Math" display="inline"><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>6</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>4</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><mrow><mn>4</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi href="./28.1#t1.r1" title="integer">m</mi><mn>4</mn></mfrac></mstyle><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>4</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>13</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="2.94em" minsize="2.94em">(</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>8</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow><mo>−</mo><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>4</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mrow><mrow><mn>4</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><msup><mn> 2</mn><mn>5</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi href="./28.1#t1.r1" title="integer">m</mi><mn>4</mn></mfrac></mstyle><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>4</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mrow><mrow><mn>8</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mstyle displaystyle="true"><mfrac linethickness="0.0pt"><mi href="./28.1#t1.r1" title="integer">m</mi><mn>8</mn></mfrac></mstyle><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>8</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow><mo maxsize="2.94em" minsize="2.94em">)</mo></mtd></mtr></mtable></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>,</mo></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="U_{m}(\xi)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E4" title="function">U</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="12.1.html#p3" title="§12.1 Special Notation ‣ Notation ‣ Chapter 12 Parabolic Cylinder Functions"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="D_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mi class="ltx_nvar" href="./12.1#p1.t1.r4" title="real or complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./12.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: parabolic cylinder function</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m46.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a> and
+<a class="ltx_ref" href="28.8.html#ii.p1" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="\xi" class="ltx_Math" display="inline"><mi href="./28.8#ii.p1" title="variable">ξ</mi></math>:  variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.17</span> (in different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E4" title="">http://dlmf.nist.gov/28.8.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#ii.info" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(ii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="27px" altimg-valign="-7px" altimg-width="61px" alttext="\displaystyle V_{m}(\xi)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E5" title="function">V</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m19.png" altimg-height="284px" altimg-valign="-22px" altimg-width="364px" alttext="\displaystyle\sim\frac{1}{2^{4}h}\bigg{(}-D_{m+2}\left(\xi\right)-m(m-1)D_{m-2%
+}\left(\xi\right)\bigg{)}+\frac{1}{2^{10}h^{2}}\left(D_{m+6}\left(\xi\right)+(%
+m^{2}-25m-36)D_{m+2}\left(\xi\right)-m(m-1)(m^{2}+27m-10)D_{m-2}\left(\xi%
+\right)-6!\genfrac{(}{)}{0.0pt}{}{m}{6}D_{m-6}\left(\xi\right)\right)+\cdots," class="ltx_Math" display="inline"><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="2.100em" minsize="2.100em">(</mo><mrow><mrow><mo>−</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo maxsize="2.100em" minsize="2.100em">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>10</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="2.94em" minsize="2.94em">(</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>6</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>25</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>−</mo><mn>36</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>−</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>27</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow></mrow><mo>−</mo><mn>10</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>−</mo><mrow><mrow><mn>6</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mstyle displaystyle="true"><mfrac linethickness="0.0pt"><mi href="./28.1#t1.r1" title="integer">m</mi><mn>6</mn></mfrac></mstyle><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow><mo>⁢</mo><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mn>6</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo>)</mo></mrow></mrow></mrow><mo maxsize="2.94em" minsize="2.94em">)</mo></mtd></mtr></mtable></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>,</mo></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="58px" alttext="V_{m}(\xi)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E5" title="function">V</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.8#ii.p1" title="variable">ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  function (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="12.1.html#p3" title="§12.1 Special Notation ‣ Notation ‣ Chapter 12 Parabolic Cylinder Functions"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="D_{\NVar{\nu}}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./12.1#p3" title="parabolic cylinder function">D</mi><mi class="ltx_nvar" href="./12.1#p1.t1.r4" title="real or complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./12.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: parabolic cylinder function</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="1.2.html#i" title="§1.2(i) Binomial Coefficients ‣ §1.2 Elementary Algebra ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m46.png" altimg-height="29px" altimg-valign="-9px" altimg-width="38px" alttext="\genfrac{(}{)}{0.0pt}{}{\NVar{m}}{\NVar{n}}" class="ltx_Math" display="inline"><mrow><mo href="./1.2#i" title="binomial coefficient">(</mo><mfrac linethickness="0.0pt"><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">m</mi><mi class="ltx_nvar" href="./1.1#t1.r5" title="nonnegative integer">n</mi></mfrac><mo href="./1.2#i" title="binomial coefficient">)</mo></mrow></math>: binomial coefficient</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a> and
+<a class="ltx_ref" href="28.8.html#ii.p1" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m66.png" altimg-height="22px" altimg-valign="-6px" altimg-width="14px" alttext="\xi" class="ltx_Math" display="inline"><mi href="./28.8#ii.p1" title="variable">ξ</mi></math>:  variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.18</span> (in slightly different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.16.I2.ix1" title="In Errata ‣ Version 1.0.16 (September 18, 2017) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.16) for  Equation (<span class="ltx_text ltx_ref_tag">28.8.5</span>)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E5" title="">http://dlmf.nist.gov/28.8.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E5.png">png</a>
+</dd>
+<dt>Error (effective with 1.0.16):</dt>
+<dd>
+Originally the <math altimg="m28.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="-" class="ltx_Math" display="inline"><mo>−</mo></math> in front of the <math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="20px" alttext="6!" class="ltx_Math" display="inline"><mrow><mn>6</mn><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math> was given incorrectly as <math altimg="m26.png" altimg-height="18px" altimg-valign="-4px" altimg-width="20px" alttext="+" class="ltx_Math" display="inline"><mo>+</mo></math>.
+
+<p><span class="ltx_font_italic">Suggested 2017-02-02 by Daniel Karlsson</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#ii.info" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(ii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx2">
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m23.png" altimg-height="29px" altimg-valign="-5px" altimg-width="37px" alttext="\displaystyle\widehat{C}_{m}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./28.8#E6" title="coefficient">C</mi><mo href="./28.8#E6" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m20.png" altimg-height="131px" altimg-valign="-22px" altimg-width="584px" alttext="\displaystyle\sim\left(\frac{\pi h}{2(m!)^{2}}\right)^{\ifrac{1}{4}}\left(1+%
+\frac{2m+1}{8h}+\dfrac{m^{4}+2m^{3}+263m^{2}+262m+108}{2048h^{2}}+\cdots\right%
+)^{-\ifrac{1}{2}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>4</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><mn>8</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>263</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>262</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>108</mn></mrow><mrow><mn>2048</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>)</mo></mrow><mrow><mo>−</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m63.png" altimg-height="28px" altimg-valign="-5px" altimg-width="35px" alttext="\widehat{C}_{m}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./28.8#E6" title="coefficient">C</mi><mo href="./28.8#E6" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math>:  coefficient (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m58.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.19</span> (in slightly different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E6" title="">http://dlmf.nist.gov/28.8.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#ii.info" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(ii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m24.png" altimg-height="29px" altimg-valign="-5px" altimg-width="35px" alttext="\displaystyle\widehat{S}_{m}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./28.8#E7" title="coefficient">S</mi><mo href="./28.8#E7" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m21.png" altimg-height="131px" altimg-valign="-22px" altimg-width="573px" alttext="\displaystyle\sim\left(\frac{\pi h}{2(m!)^{2}}\right)^{\ifrac{1}{4}}\left(1-%
+\frac{2m+1}{8h}+\dfrac{m^{4}+2m^{3}-121m^{2}-122m-84}{2048h^{2}}+\cdots\right)%
+^{-\ifrac{1}{2}}." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>4</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mrow><mn>1</mn><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><mn>8</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>3</mn></msup></mrow></mrow><mo>−</mo><mrow><mn>121</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r1" title="integer">m</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mn>122</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>−</mo><mn>84</mn></mrow><mrow><mn>2048</mn><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>)</mo></mrow><mrow><mo>−</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m64.png" altimg-height="28px" altimg-valign="-5px" altimg-width="33px" alttext="\widehat{S}_{m}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./28.8#E7" title="coefficient">S</mi><mo href="./28.8#E7" title="coefficient">^</mo></mover><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math>:  coefficient (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m58.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m75.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.20</span> (in slightly different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="28.8.html#ii.info" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.10.I2.ix2.p1" title="In Other Changes ‣ Version 1.1.10 (June 15, 2023) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.10) for  Sections <span class="ltx_text ltx_ref_tag">28.6(i)</span>, <span class="ltx_text ltx_ref_tag">28.6(ii)</span>, <span class="ltx_text ltx_ref_tag">28.8(i)</span>, <span class="ltx_text ltx_ref_tag">28.8(ii)</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E7" title="">http://dlmf.nist.gov/28.8.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#ii.info" title="§28.8(ii) Sips’ Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(ii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">These results are derived formally in
+<cite class="ltx_cite ltx_citemacro_citet">Sips (<a class="ltx_ref" href="bib/S.html#bib2089" title="Représentation asymptotique des fonctions de Mathieu et des fonctions d’onde sphéroidales">1949</a>, <a class="ltx_ref" href="bib/S.html#bib2090" title="Représentation asymptotique des fonctions de Mathieu et des fonctions sphéroidales. II">1959</a>, <a class="ltx_ref" href="bib/S.html#bib2091" title="Représentation asymptotique de la solution générale de l’équation de Mathieu-Hill">1965</a>)</cite>. See also
+<cite class="ltx_cite ltx_citemacro_citet">Meixner and Schäfke (<a class="ltx_ref" href="bib/M.html#bib1598" title="Mathieusche Funktionen und Sphäroidfunktionen mit Anwendungen auf physikalische und technische Probleme">1954</a>, §2.84)</cite>.
+For recurrence relations for the coefficients in these expansions
+see <cite class="ltx_cite ltx_citemacro_citet">Frenkel and Portugal (<a class="ltx_ref" href="bib/F.html#bib2967" title="Algebraic methods to compute Mathieu functions">2001</a>, §4 and §5)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.8(iii) </span>Goldstein’s Expansions</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Goldstein%E2%80%99s">Goldstein’s</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20functions">Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions%20for%20large%20q">asymptotic expansions for large <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math></a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Goldstein (<a class="ltx_ref" href="bib/G.html#bib950" title="Mathieu functions">1927</a>)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.iii" title="">http://dlmf.nist.gov/28.8.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Let <math altimg="m80.png" altimg-height="30px" altimg-valign="-9px" altimg-width="163px" alttext="x=\tfrac{1}{2}\pi-\mu h^{-\ifrac{1}{4}}" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mrow><mi>μ</mi><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mrow><mo>−</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>4</mn></mrow></mrow></msup></mrow></mrow></mrow></math>, where <math altimg="m50.png" altimg-height="17px" altimg-valign="-6px" altimg-width="17px" alttext="\mu" class="ltx_Math" display="inline"><mi>μ</mi></math> is a constant
+such that <math altimg="m51.png" altimg-height="21px" altimg-valign="-6px" altimg-width="55px" alttext="\mu\geq 1" class="ltx_Math" display="inline"><mrow><mi>μ</mi><mo>≥</mo><mn>1</mn></mrow></math>, and <math altimg="m78.png" altimg-height="19px" altimg-valign="-4px" altimg-width="106px" alttext="s=2m+1" class="ltx_Math" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>. Then as <math altimg="m72.png" altimg-height="20px" altimg-valign="-4px" altimg-width="85px" alttext="h\to+\infty" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">h</mi><mo stretchy="false">→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">28.8.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="59px" altimg-valign="-21px" altimg-width="111px" alttext="\displaystyle\dfrac{\operatorname{ce}_{m}\left(x,h^{2}\right)}{\operatorname{%
+ce}_{m}\left(0,h^{2}\right)}" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mfrac><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="62px" altimg-valign="-19px" altimg-width="625px" alttext="\displaystyle=\dfrac{2^{m-(\ifrac{1}{2})}}{\sigma_{m}}\left(W_{m}^{+}(x)(P_{m}%
+(x)-Q_{m}(x))+W_{m}^{-}(x)(P_{m}(x)+Q_{m}(x))\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mn>2</mn><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><msub><mi href="./28.8#E10" title="𝜎_𝑚">σ</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="61px" altimg-valign="-24px" altimg-width="131px" alttext="\displaystyle\dfrac{\operatorname{se}_{m+1}\left(x,h^{2}\right)}{\operatorname%
+{se}_{m+1}'\left(0,h^{2}\right)}" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mfrac><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo>,</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow><mrow><msubsup><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow><mo>′</mo></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="64px" altimg-valign="-21px" altimg-width="625px" alttext="\displaystyle=\dfrac{2^{m-(\ifrac{1}{2})}}{\tau_{m+1}}\left(W_{m}^{+}(x)(P_{m}%
+(x)-Q_{m}(x))-W_{m}^{-}(x)(P_{m}(x)+Q_{m}(x))\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mn>2</mn><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><msub><mi href="./28.8#E10" title="𝜏_{𝑚+1}">τ</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mrow><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>−</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m52.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="\operatorname{ce}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">ce</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.2.html#vi.p1" title="§28.2(vi) Eigenfunctions ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m57.png" altimg-height="25px" altimg-valign="-7px" altimg-width="82px" alttext="\operatorname{se}_{\NVar{n}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.2#vi.p1" title="Mathieu function">se</mi><mi class="ltx_nvar" href="./28.1#t1.r1" title="integer">n</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi class="ltx_nvar" href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math>: Mathieu function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>,
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m81.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="28.8.html#E12" title="(28.8.12) ‣ §28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="Q_{m}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></a>,
+<a class="ltx_ref" href="28.8.html#E9" title="(28.8.9) ‣ §28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m41.png" altimg-height="26px" altimg-valign="-7px" altimg-width="41px" alttext="W_{m}^{\pm}" class="ltx_Math" display="inline"><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>±</mo></msubsup></math>:  function</a>,
+<a class="ltx_ref" href="28.8.html#E10" title="(28.8.10) ‣ §28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m59.png" altimg-height="16px" altimg-valign="-5px" altimg-width="32px" alttext="\sigma_{m}" class="ltx_Math" display="inline"><msub><mi href="./28.8#E10" title="𝜎_𝑚">σ</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math></a>,
+<a class="ltx_ref" href="28.8.html#E10" title="(28.8.10) ‣ §28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m62.png" altimg-height="18px" altimg-valign="-7px" altimg-width="50px" alttext="\tau_{m+1}" class="ltx_Math" display="inline"><msub><mi href="./28.8#E10" title="𝜏_{𝑚+1}">τ</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub></math></a> and
+<a class="ltx_ref" href="28.8.html#E11" title="(28.8.11) ‣ §28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="P_{m}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.11</span> (in slightly different form)</span> <span class="ltx_origref"><span class="ltx_tag">20.9.12</span> (in slightly different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E8" title="">http://dlmf.nist.gov/28.8.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E8a.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E8b.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E8a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E8b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E8a.png">png</a>, <a href="http://dlmf.nist.gov/28.8.E8b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iii.info" title="§28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="69px" altimg-valign="-28px" altimg-width="443px" alttext="W_{m}^{\pm}(x)=\frac{e^{\pm 2h\sin x}}{(\cos x)^{m+1}}\begin{cases}\left(\cos%
+\left(\frac{1}{2}x+\frac{1}{4}\pi\right)\right)^{2m+1},\\
+\left(\sin\left(\frac{1}{2}x+\frac{1}{4}\pi\right)\right)^{2m+1},\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>±</mo></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>±</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mrow></msup><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac><mo>⁢</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msup><mrow><mo>(</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msup><mrow><mo>(</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r1" title="integer">m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>,</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m41.png" altimg-height="26px" altimg-valign="-7px" altimg-width="41px" alttext="W_{m}^{\pm}" class="ltx_Math" display="inline"><msubsup><mi href="./28.8#E9" title="function">W</mi><mi href="./28.1#t1.r1" title="integer">m</mi><mo>±</mo></msubsup></math>:  function (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m58.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m48.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m61.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m81.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.13</span> (in slightly different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E9" title="">http://dlmf.nist.gov/28.8.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iii.info" title="§28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">28.8.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="18px" altimg-valign="-5px" altimg-width="34px" alttext="\displaystyle\sigma_{m}" class="ltx_Math" display="inline"><msub><mi href="./28.8#E10" title="𝜎_𝑚">σ</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m15.png" altimg-height="52px" altimg-valign="-16px" altimg-width="381px" alttext="\displaystyle\sim 1+\dfrac{s}{2^{3}h}+\dfrac{4s^{2}+3}{2^{7}h^{2}}+\dfrac{19s^%
+{3}+59s}{2^{11}h^{3}}+\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mi>s</mi><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow><mrow><msup><mn>2</mn><mn>7</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>19</mn><mo>⁢</mo><msup><mi>s</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>59</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mrow><msup><mn>2</mn><mn>11</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>3</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m22.png" altimg-height="20px" altimg-valign="-7px" altimg-width="52px" alttext="\displaystyle\tau_{m+1}" class="ltx_Math" display="inline"><msub><mi href="./28.8#E10" title="𝜏_{𝑚+1}">τ</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m16.png" altimg-height="52px" altimg-valign="-16px" altimg-width="371px" alttext="\displaystyle\sim 2h-\dfrac{1}{4}s-\dfrac{2s^{2}+3}{2^{6}h}-\frac{7s^{3}+47s}{%
+2^{10}h^{2}}-\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi>s</mi></mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow><mrow><msup><mn>2</mn><mn>6</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>7</mn><mo>⁢</mo><msup><mi>s</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>47</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mrow><msup><mn>2</mn><mn>10</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text"><math altimg="m59.png" altimg-height="16px" altimg-valign="-5px" altimg-width="32px" alttext="\sigma_{m}" class="ltx_Math" display="inline"><msub><mi href="./28.8#E10" title="𝜎_𝑚">σ</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub></math> (locally)</span> and
+<span class="ltx_text"><math altimg="m62.png" altimg-height="18px" altimg-valign="-7px" altimg-width="50px" alttext="\tau_{m+1}" class="ltx_Math" display="inline"><msub><mi href="./28.8#E10" title="𝜏_{𝑚+1}">τ</mi><mrow><mi href="./28.1#t1.r1" title="integer">m</mi><mo>+</mo><mn>1</mn></mrow></msub></math> (locally)</span>
+</dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.14</span> (in different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E10" title="">http://dlmf.nist.gov/28.8.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E10a.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E10b.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E10a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E10b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E10a.png">png</a>, <a href="http://dlmf.nist.gov/28.8.E10b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iii.info" title="§28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx3">
+<tbody id="E11">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="27px" altimg-valign="-7px" altimg-width="64px" alttext="\displaystyle P_{m}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m14.png" altimg-height="63px" altimg-valign="-22px" altimg-width="606px" alttext="\displaystyle\sim 1+\dfrac{s}{2^{3}h{\cos}^{2}x}+\dfrac{1}{h^{2}}\left(\dfrac{%
+s^{4}+86s^{2}+105}{2^{11}{\cos}^{4}x}-\dfrac{s^{4}+22s^{2}+57}{2^{11}{\cos}^{2%
+}x}\right)+\cdots," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mi>s</mi><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.14#E2" title="cosine function">cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi>s</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>86</mn><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>105</mn></mrow><mrow><msup><mn>2</mn><mn>11</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.14#E2" title="cosine function">cos</mi><mn>4</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>s</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>22</mn><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>57</mn></mrow><mrow><msup><mn>2</mn><mn>11</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.14#E2" title="cosine function">cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="61px" alttext="P_{m}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E11" title="𝑃_𝑚(𝑥)">P</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m81.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.14</span> (in different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E11" title="">http://dlmf.nist.gov/28.8.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iii.info" title="§28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E12">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">28.8.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="27px" altimg-valign="-7px" altimg-width="67px" alttext="\displaystyle Q_{m}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m18.png" altimg-height="92px" altimg-valign="-22px" altimg-width="574px" alttext="\displaystyle\sim\dfrac{\sin x}{{\cos}^{2}x}\left(\dfrac{1}{2^{5}h}(s^{2}+3)+%
+\dfrac{1}{2^{9}h^{2}}\left(s^{3}+3s+\dfrac{4s^{3}+44s}{{\cos}^{2}x}\right)%
+\right)+\cdots." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow><mrow><msup><mi href="./4.14#E2" title="cosine function">cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">h</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mn>9</mn></msup><mo>⁢</mo><msup><mi href="./28.1#t1.r6" title="parameter">h</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>s</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>s</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>44</mn><mo>⁢</mo><mi>s</mi></mrow></mrow><mrow><msup><mi href="./4.14#E2" title="cosine function">cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r2" title="real variable">x</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="64px" alttext="Q_{m}(x)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.8#E12" title="𝑄_𝑚(𝑥)">Q</mi><mi href="./28.1#t1.r1" title="integer">m</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./28.1#t1.r2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m60.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m61.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="28.1.html#t1.r1" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m74.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./28.1#t1.r1" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="28.1.html#t1.r6" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="h" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">h</mi></math>:  parameter</a> and
+<a class="ltx_ref" href="28.1.html#t1.r2" title="§28.1 Special Notation ‣ Notation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><math altimg="m81.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./28.1#t1.r2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">20.9.14</span> (in different form)</span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.E12" title="">http://dlmf.nist.gov/28.8.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/28.8.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/28.8.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/28.8.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iii.info" title="§28.8(iii) Goldstein’s Expansions ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iii)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§28.8(iv) </span>Uniform Approximations</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="2.8.html#vi.p7" title="§2.8(vi) Coalescing Transition Points ‣ §2.8 Differential Equations with a Parameter ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">§2.8(vi)</span></a>,
+<a class="ltx_ref" href="28.16.html#p2" title="§28.16 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.16</span></a>,
+<a class="ltx_ref" href="28.26.html#ii.p1" title="§28.26(ii) Uniform Approximations ‣ §28.26 Asymptotic Approximations for Large 𝑞 ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.26(ii)</span></a>,
+<a class="ltx_ref" href="28.34.html#I3.ix2.p1" title="In §28.34(iii) Floquet Solutions ‣ §28.34 Methods of Computation ‣ Computation ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">item (b)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/28.8.iv" title="">http://dlmf.nist.gov/28.8.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Barrett’s Expansions</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Barrett%E2%80%99s">Barrett’s</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20functions">Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=modified%20Mathieu%20functions">modified Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=uniform%20asymptotic%20approximations%20for%20large%20parameters">uniform asymptotic approximations for large parameters</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iv.info" title="§28.8(iv) Uniform Approximations ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iv)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Barrett (<a class="ltx_ref" href="bib/B.html#bib204" title="Mathieu functions of general order: Connection formulae, base functions and asymptotic formulae. I–V">1981</a>)</cite> supplies asymptotic approximations for numerically
+satisfactory pairs of solutions of both Mathieu’s equation (<a class="ltx_ref" href="28.2.html#E1" title="(28.2.1) ‣ §28.2(i) Mathieu’s Equation ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2.1</span></a>)
+and the modified Mathieu equation (<a class="ltx_ref" href="28.20.html#E1" title="(28.20.1) ‣ §28.20(i) Modified Mathieu’s Equation ‣ §28.20 Definitions and Basic Properties ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.20.1</span></a>). The approximations apply
+when the parameters <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">a</mi></math> and <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math> are real and large, and are uniform with
+respect to various regions in the <math altimg="m83.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>-plane. The approximants are elementary
+functions, Airy functions, Bessel functions, and parabolic cylinder functions;
+compare §<a class="ltx_ref" href="2.8.html" title="§2.8 Differential Equations with a Parameter ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.8</span></a>. It is stated that corresponding uniform
+approximations can be obtained for other solutions, including the
+eigensolutions, of the differential equations by application of the results,
+but these approximations are not included.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Dunster’s Approximations</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Dunster%E2%80%99s">Dunster’s</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Mathieu%20functions">Mathieu functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=uniform%20asymptotic%20approximations%20for%20large%20parameters">uniform asymptotic approximations for large parameters</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="28.8.html#iv.info" title="§28.8(iv) Uniform Approximations ‣ §28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8(iv)</span></a>,
+<a class="ltx_ref" href="28.8.html#info" title="§28.8 Asymptotic Expansions for Large 𝑞 ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">§28.8</span></a> and
+<a class="ltx_ref" href="28.html#info" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">Ch.28</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Dunster (<a class="ltx_ref" href="bib/D.html#bib701" title="Uniform asymptotic approximation of Mathieu functions">1994a</a>)</cite> supplies uniform asymptotic approximations for
+numerically satisfactory pairs of solutions of Mathieu’s equation
+(<a class="ltx_ref" href="28.2.html#E1" title="(28.2.1) ‣ §28.2(i) Mathieu’s Equation ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2.1</span></a>). These approximations apply when <math altimg="m76.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">q</mi></math> and <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">a</mi></math> are real and
+<math altimg="m77.png" altimg-height="17px" altimg-valign="-6px" altimg-width="67px" alttext="q\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./28.1#t1.r6" title="parameter">q</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>. They are uniform with respect to <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="a" class="ltx_Math" display="inline"><mi href="./28.1#t1.r6" title="parameter">a</mi></math> when
+<math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="179px" alttext="-2q\leq a\leq(2-\delta)q" class="ltx_Math" display="inline"><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">q</mi></mrow></mrow><mo>≤</mo><mi href="./28.1#t1.r6" title="parameter">a</mi><mo>≤</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>−</mo><mi href="./28.1#t1.r5" title="arbitrary small positive constant">δ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi href="./28.1#t1.r6" title="parameter">q</mi></mrow></mrow></math>, where <math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="14px" alttext="\delta" class="ltx_Math" display="inline"><mi href="./28.1#t1.r5" title="arbitrary small positive constant">δ</mi></math> is an arbitrary constant such that
+<math altimg="m29.png" altimg-height="19px" altimg-valign="-3px" altimg-width="90px" alttext="0&lt;\delta&lt;4" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi href="./28.1#t1.r5" title="arbitrary small positive constant">δ</mi><mo>&lt;</mo><mn>4</mn></mrow></math>, and also with respect to <math altimg="m83.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math> in the semi-infinite strip given
+by <math altimg="m30.png" altimg-height="21px" altimg-valign="-5px" altimg-width="108px" alttext="0\leq\Re z\leq\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="real part">ℜ</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow><mo>≤</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></math> and <math altimg="m42.png" altimg-height="21px" altimg-valign="-5px" altimg-width="68px" alttext="\Im z\geq 0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="imaginary part">ℑ</mi><mo lspace="0.167em">⁡</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px2.p2">
+<p class="ltx_p">The approximations are expressed in terms of Whittaker functions
+<math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="W_{\kappa,\mu}\left(z\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E3" title="Whittaker confluent hypergeometric function">W</mi><mrow><mi>κ</mi><mo href="./13.14#E3" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m34.png" altimg-height="26px" altimg-valign="-8px" altimg-width="80px" alttext="M_{\kappa,\mu}\left(z\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./13.14#E2" title="Whittaker confluent hypergeometric function">M</mi><mrow><mi>κ</mi><mo href="./13.14#E2" title="Whittaker confluent hypergeometric function">,</mo><mi>μ</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> with
+<math altimg="m49.png" altimg-height="29px" altimg-valign="-9px" altimg-width="58px" alttext="\mu=\tfrac{1}{4}" class="ltx_Math" display="inline"><mrow><mi>μ</mi><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow></math>; compare §<a class="ltx_ref" href="2.8.html#vi" title="§2.8(vi) Coalescing Transition Points ‣ §2.8 Differential Equations with a Parameter ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.8(vi)</span></a>. They are derived by
+rigorous analysis and accompanied by strict and realistic error bounds.
+With additional restrictions on <math altimg="m83.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./28.1#t1.r3" title="complex variable">z</mi></math>, uniform asymptotic approximations for
+solutions of (<a class="ltx_ref" href="28.2.html#E1" title="(28.2.1) ‣ §28.2(i) Mathieu’s Equation ‣ §28.2 Definitions and Basic Properties ‣ Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.2.1</span></a>) and (<a class="ltx_ref" href="28.20.html#E1" title="(28.20.1) ‣ §28.20(i) Modified Mathieu’s Equation ‣ §28.20 Definitions and Basic Properties ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.20.1</span></a>) are also obtained in terms
+of elementary functions by re-expansions of the Whittaker functions; compare
+§<a class="ltx_ref" href="2.8.html#ii" title="§2.8(ii) Case I: No Transition Points ‣ §2.8 Differential Equations with a Parameter ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.8(ii)</span></a>.</p>
+</div>
+<div class="ltx_para" id="Px2.p3">
+<p class="ltx_p">Subsequently the asymptotic solutions involving either elementary or Whittaker
+functions are identified in terms of the Floquet solutions
+<math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="91px" alttext="\operatorname{me}_{\nu}\left(z,q\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./28.12#ii.p2" title="Mathieu function">me</mi><mi href="./28.1#t1.r4" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">q</mi><mo>)</mo></mrow></mrow></math> (§<a class="ltx_ref" href="28.12.html#ii" title="§28.12(ii) Eigenfunctions me_𝜈(𝑧,𝑞) ‣ §28.12 Definitions and Basic Properties ‣ Mathieu Functions of Noninteger Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.12(ii)</span></a>) and modified
+Mathieu functions <math altimg="m84.png" altimg-height="31px" altimg-valign="-7px" altimg-width="96px" alttext="{\operatorname{M}^{(j)}_{\nu}}\left(z,h\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./28.20#iii.p1" mathvariant="normal" title="modified Mathieu function">M</mi><mi href="./28.1#t1.r4" title="complex parameter">ν</mi><mrow><mo href="./28.20#iii.p1" stretchy="false" title="modified Mathieu function">(</mo><mi href="./28.1#t1.r1" title="integer">j</mi><mo href="./28.20#iii.p1" stretchy="false" title="modified Mathieu function">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./28.1#t1.r3" title="complex variable">z</mi><mo>,</mo><mi href="./28.1#t1.r6" title="parameter">h</mi><mo>)</mo></mrow></mrow></math> (§<a class="ltx_ref" href="28.20.html#iii" title="§28.20(iii) Solutions M^(𝑗)_𝜈 ‣ §28.20 Definitions and Basic Properties ‣ Modified Mathieu Functions ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28.20(iii)</span></a>).</p>
+</div>
+<div class="ltx_para" id="Px2.p4">
+<p class="ltx_p">For related results see <cite class="ltx_cite ltx_citemacro_citet">Langer (<a class="ltx_ref" href="bib/L.html#bib1379" title="The solutions of the Mathieu equation with a complex variable and at least one parameter large">1934</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Sharples (<a class="ltx_ref" href="bib/S.html#bib2058" title="Uniform asymptotic forms of modified Mathieu functions">1967</a>, <a class="ltx_ref" href="bib/S.html#bib2059" title="Uniform asymptotic expansions of modified Mathieu functions">1971</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="28.7.html" rel="prev" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.7 </span>Analytic Continuation of Eigenvalues</span></a><a class="ltx_ref" href="28.9.html" rel="next" title="In Mathieu Functions of Integer Order ‣ Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">28.9 </span>Zeros</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/30.18";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="30.html#PT4" rel="up" title="Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.html" rel="up up" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="30.17.html" rel="prev" title="§30.17 Tables ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="next" title="Chapter 31 Heun Functions"/>
+<link href="30.1.html" rel="section" title="§30.1 Special Notation ‣ Notation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.2.html" rel="section" title="§30.2 Differential Equations ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.3.html" rel="section" title="§30.3 Eigenvalues ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.4.html" rel="section" title="§30.4 Functions of the First Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.5.html" rel="section" title="§30.5 Functions of the Second Kind ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.6.html" rel="section" title="§30.6 Functions of Complex Argument ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.7.html" rel="section" title="§30.7 Graphics ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.8.html" rel="section" title="§30.8 Expansions in Series of Ferrers Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.9.html" rel="section" title="§30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.10.html" rel="section" title="§30.10 Series and Integrals ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.11.html" rel="section" title="§30.11 Radial Spheroidal Wave Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.12.html" rel="section" title="§30.12 Generalized and Coulomb Spheroidal Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.13.html" rel="section" title="§30.13 Wave Equation in Prolate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.14.html" rel="section" title="§30.14 Wave Equation in Oblate Spheroidal Coordinates ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.15.html" rel="section" title="§30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.16.html" rel="section" title="§30.16 Methods of Computation ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="30.17.html" rel="section" title="§30.17 Tables ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="30.18.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="30.18.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="30.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30 </span>Spheroidal Wave Functions</span></a><a class="ltx_ref" href="30.html#PT4" rel="up" title="In Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="30.17.html" rel="prev" title="In Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30.17 </span>Tables</span></a><a class="ltx_ref" href="31.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31 </span>Heun Functions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§30.18 </span>Software</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="30.18.html" title="">http://dlmf.nist.gov/30.18</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="30.18.html#i"><span class="ltx_tag ltx_tag_subsection">§30.18(i) </span>Introduction</a></li>
+<li class="ltx_tocentry"><a href="30.18.html#ii"><span class="ltx_tag ltx_tag_subsection">§30.18(ii) </span>Eigenvalues <math altimg="m6.png" altimg-height="29px" altimg-valign="-9px" altimg-width="76px" alttext="\lambda^{m}_{n}\left(\gamma^{2}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.3#i.p1" title="eigenvalues of the spheroidal differential equation">λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></math></a></li>
+<li class="ltx_tocentry"><a href="30.18.html#iii"><span class="ltx_tag ltx_tag_subsection">§30.18(iii) </span>Spheroidal Wave Functions</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.18(i) </span>Introduction</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="30.3.html#iv.p3" title="§30.3(iv) Power-Series Expansion ‣ §30.3 Eigenvalues ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.3(iv)</span></a>,
+<a class="ltx_ref" href="30.9.html#i.p2" title="§30.9(i) Prolate Spheroidal Wave Functions ‣ §30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.9(i)</span></a>,
+<a class="ltx_ref" href="30.9.html#ii.p2" title="§30.9(ii) Oblate Spheroidal Wave Functions ‣ §30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.9(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.18.i" title="">http://dlmf.nist.gov/30.18.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.18.html#info" title="§30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.18</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">In §§<a class="ltx_ref" href="30.18.html#ii" title="§30.18(ii) Eigenvalues 𝜆^𝑚_𝑛(𝛾²) ‣ §30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.18(ii)</span></a> and <a class="ltx_ref" href="30.18.html#iii" title="§30.18(iii) Spheroidal Wave Functions ‣ §30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.18(iii)</span></a> we provide links to the
+research literature describing the implementation of algorithms in software for
+the evaluation of functions described in this chapter. Citations in bulleted
+lists refer to papers for which research software has been made available and
+can be downloaded via the Web. References to research software that is
+available in other ways is listed separately.</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">A more complete list of available software for computing these functions is
+found in the <a class="ltx_ref" href="software/index.html" title=""><span class="ltx_text ltx_ref_title">Software Index</span></a>. Also, the following Maple programs were
+provided by the author.</p>
+<dl class="ltx_description" id="I1">
+<dt class="ltx_item" id="I1.i1"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i1.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF1.mws" title="">SWF1</a>: <math altimg="m6.png" altimg-height="29px" altimg-valign="-9px" altimg-width="76px" alttext="\lambda^{m}_{n}\left(\gamma^{2}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.3#i.p1" title="eigenvalues of the spheroidal differential equation">λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i2"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i2.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF2.mws" title="">SWF2</a>: <math altimg="m7.png" altimg-height="29px" altimg-valign="-9px" altimg-width="106px" alttext="\mathsf{Ps}^{m}_{n}\left(x,\gamma^{2}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.4#i" title="spheroidal wave function of the first kind">𝖯𝗌</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./30.1#p1.t1.r1" title="real variable">x</mi><mo>,</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i3"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i3.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF3.mws" title="">SWF3</a>: <math altimg="m8.png" altimg-height="29px" altimg-valign="-9px" altimg-width="108px" alttext="\mathsf{Qs}^{m}_{n}\left(x,\gamma^{2}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.5" title="spheroidal wave function of the second kind">𝖰𝗌</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./30.1#p1.t1.r1" title="real variable">x</mi><mo>,</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i4"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i4.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF4.mws" title="">SWF4</a>: <math altimg="m2.png" altimg-height="31px" altimg-valign="-7px" altimg-width="106px" alttext="S^{m(j)}_{n}\left(z,\gamma\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.11#E3" title="radial spheroidal wave function">S</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mrow><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi><mo href="./30.11#E3" title="radial spheroidal wave function">⁢</mo><mrow><mo href="./30.11#E3" stretchy="false" title="radial spheroidal wave function">(</mo><mi>j</mi><mo href="./30.11#E3" stretchy="false" title="radial spheroidal wave function">)</mo></mrow></mrow></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./30.1#p1" title="complex variable">z</mi><mo>,</mo><mi href="./30.2#i.p1" title="real parameter">γ</mi><mo>)</mo></mrow></mrow></math>, <math altimg="m11.png" altimg-height="22px" altimg-valign="-6px" altimg-width="72px" alttext="j=1,2" class="ltx_Math" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></math>.</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i5"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i5.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF5.mws" title="">SWF5</a>:
+<math altimg="m1.png" altimg-height="25px" altimg-valign="-7px" altimg-width="67px" alttext="K_{n}^{m}(\gamma)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.11#v.p1" title="connection coefficient">K</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./30.2#i.p1" title="real parameter">γ</mi><mo stretchy="false">)</mo></mrow></mrow></math> in §<a class="ltx_ref" href="30.11.html#v" title="§30.11(v) Connection with the 𝑃𝑠 and 𝑄𝑠 Functions ‣ §30.11 Radial Spheroidal Wave Functions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.11(v)</span></a>.</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i6"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i6.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF6.mws" title="">SWF6</a>:
+<math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="\phi_{n}(t)" class="ltx_Math" display="inline"><mrow><msub><mi href="./30.15#E1" title="function">ϕ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math altimg="m3.png" altimg-height="21px" altimg-valign="-5px" altimg-width="30px" alttext="\Lambda_{n}" class="ltx_Math" display="inline"><msub><mi href="./30.15#E2" mathvariant="normal" title="Λ">Λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi></msub></math> in §<a class="ltx_ref" href="30.15.html#i" title="§30.15(i) Scaled Spheroidal Wave Functions ‣ §30.15 Signal Analysis ‣ Applications ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.15(i)</span></a>.</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i7"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i7.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF7.mws" title="">SWF7</a>:
+Coefficients <math altimg="m4.png" altimg-height="24px" altimg-valign="-8px" altimg-width="26px" alttext="\beta_{p}" class="ltx_Math" display="inline"><msub><mi href="./30.3#E6" title="coefficent">β</mi><mi>p</mi></msub></math> in (<a class="ltx_ref" href="30.9.html#E1" title="(30.9.1) ‣ §30.9(i) Prolate Spheroidal Wave Functions ‣ §30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.9.1</span></a>).</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i8"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i8.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF8.mws" title="">SWF8</a>:
+Coefficients <math altimg="m10.png" altimg-height="19px" altimg-valign="-8px" altimg-width="23px" alttext="c_{p}" class="ltx_Math" display="inline"><msub><mi href="./30.9#ii.p1" title="coeffients">c</mi><mi>p</mi></msub></math> in (<a class="ltx_ref" href="30.9.html#E4" title="(30.9.4) ‣ §30.9(ii) Oblate Spheroidal Wave Functions ‣ §30.9 Asymptotic Approximations and Expansions ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.9.4</span></a>).</p>
+</div>
+</dd>
+<dt class="ltx_item" id="I1.i9"></dt>
+<dd class="ltx_item">
+<div class="ltx_para" id="I1.i9.p1">
+<p class="ltx_p"><a class="ltx_ref" href="30/18/software/SWF9.mws" title="">SWF9</a>:
+Coefficients <math altimg="m5.png" altimg-height="24px" altimg-valign="-8px" altimg-width="23px" alttext="\ell_{p}" class="ltx_Math" display="inline"><msub><mi href="./30.3#iv" mathvariant="normal" title="coefficients">ℓ</mi><mi>p</mi></msub></math> in (<a class="ltx_ref" href="30.3.html#E8" title="(30.3.8) ‣ §30.3(iv) Power-Series Expansion ‣ §30.3 Eigenvalues ‣ Properties ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30.3.8</span></a>).</p>
+</div>
+</dd>
+</dl>
+<p class="ltx_p">Precision in SWF1-6 is adjustable. Programs SWF7-9 use symbolic algebra.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.18(ii) </span>Eigenvalues <math altimg="m6.png" altimg-height="29px" altimg-valign="-9px" altimg-width="76px" alttext="\lambda^{m}_{n}\left(\gamma^{2}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./30.3#i.p1" title="eigenvalues of the spheroidal differential equation">λ</mi><mi href="./30.1#p1.t1.r4" title="integer degree">n</mi><mi href="./30.1#p1.t1.r3" title="nonnegative integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./30.2#i.p1" title="real parameter">γ</mi><mn>2</mn></msup><mo>)</mo></mrow></mrow></math>
+</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="30.18.html#i.p1" title="§30.18(i) Introduction ‣ §30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.18(i)</span></a>,
+<a class="ltx_ref" href="software/index.html#S1.t1.r105" title="Software Cross Index ‣ Software Index"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Software Cross Index</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.18.ii" title="">http://dlmf.nist.gov/30.18.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.18.html#info" title="§30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.18</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<ul class="ltx_itemize" id="I2">
+<li class="ltx_item" id="I2.i1" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i1.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Falloon (<a class="ltx_ref" href="bib/F.html#bib773" title="Theory and Computation of Spheroidal Harmonics with General Arguments">2001</a>)</cite>. Mathematica.</p>
+</div>
+</li>
+<li class="ltx_item" id="I2.i2" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I2.i2.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Li<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/L.html#bib1433" title="Computations of spheroidal harmonics with complex arguments: A review with an algorithm">1998a</a>)</cite>. Mathematica.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§30.18(iii) </span>Spheroidal Wave Functions</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="30.18.html#i.p1" title="§30.18(i) Introduction ‣ §30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.18(i)</span></a>,
+<a class="ltx_ref" href="software/index.html#S1.t1.r106" title="Software Cross Index ‣ Software Index"><span class="ltx_text ltx_ref_tag">§</span> ‣ <span class="ltx_text ltx_ref_title">Software Cross Index</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/30.18.iii" title="">http://dlmf.nist.gov/30.18.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="30.18.html#info" title="§30.18 Software ‣ Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">§30.18</span></a> and
+<a class="ltx_ref" href="30.html#info" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">Ch.30</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<ul class="ltx_itemize" id="I3">
+<li class="ltx_item" id="I3.i1" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I3.i1.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Beu and Câmpeanu (<a class="ltx_ref" href="bib/B.html#bib271" title="Prolate angular spheroidal wave functions">1983a</a>, <a class="ltx_ref" href="bib/B.html#bib272" title="Prolate radial spheroidal wave functions">b</a>)</cite>. Fortran.</p>
+</div>
+</li>
+<li class="ltx_item" id="I3.i2" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I3.i2.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Falloon (<a class="ltx_ref" href="bib/F.html#bib773" title="Theory and Computation of Spheroidal Harmonics with General Arguments">2001</a>)</cite>. Mathematica.</p>
+</div>
+</li>
+<li class="ltx_item" id="I3.i3" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span>
+<div class="ltx_para" id="I3.i3.p1">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Li<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/L.html#bib1433" title="Computations of spheroidal harmonics with complex arguments: A review with an algorithm">1998a</a>)</cite>. Mathematica.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">See also
+<cite class="ltx_cite ltx_citemacro_citet">King<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/K.html#bib1271" title="A Fortran computer program for calculating the prolate spheroidal radial functions of the first and second kind and their first derivatives">1970</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">King and Van Buren (<a class="ltx_ref" href="bib/K.html#bib1272" title="A Fortran computer program for calculating the prolate and oblate angle functions of the first kind and their first and second derivatives">1970</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Van Buren<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/V.html#bib2304" title="A Fortran computer program for calculating the oblate spheroidal radial functions of the first and second kind and their first derivatives">1970</a>)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Van Buren<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/V.html#bib2305" title="Calculation of spheroidal wave functions">1972</a>)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="30.17.html" rel="prev" title="In Computation ‣ Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">30.17 </span>Tables</span></a><a class="ltx_ref" href="31.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31 </span>Heun Functions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

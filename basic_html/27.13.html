@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/27.13";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="27.html#PT3" rel="up" title="Additive Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.html" rel="up up" title="Chapter 27 Functions of Number Theory"/>
+<link href="index.html" rel="start" title=""/>
+<link href="27.12.html" rel="prev" title="§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.14.html" rel="next" title="§27.14 Unrestricted Partitions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.1.html" rel="section" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.2.html" rel="section" title="§27.2 Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.3.html" rel="section" title="§27.3 Multiplicative Properties ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.4.html" rel="section" title="§27.4 Euler Products and Dirichlet Series ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.5.html" rel="section" title="§27.5 Inversion Formulas ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.6.html" rel="section" title="§27.6 Divisor Sums ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.7.html" rel="section" title="§27.7 Lambert Series as Generating Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.8.html" rel="section" title="§27.8 Dirichlet Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.9.html" rel="section" title="§27.9 Quadratic Characters ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.10.html" rel="section" title="§27.10 Periodic Number-Theoretic Functions ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.11.html" rel="section" title="§27.11 Asymptotic Formulas: Partial Sums ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.12.html" rel="section" title="§27.12 Asymptotic Formulas: Primes ‣ Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.14.html" rel="section" title="§27.14 Unrestricted Partitions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.15.html" rel="section" title="§27.15 Chinese Remainder Theorem ‣ Applications ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.16.html" rel="section" title="§27.16 Cryptography ‣ Applications ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.17.html" rel="section" title="§27.17 Other Applications ‣ Applications ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.18.html" rel="section" title="§27.18 Methods of Computation: Primes ‣ Computation ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.19.html" rel="section" title="§27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.20.html" rel="section" title="§27.20 Methods of Computation: Other Number-Theoretic Functions ‣ Computation ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.21.html" rel="section" title="§27.21 Tables ‣ Computation ‣ Chapter 27 Functions of Number Theory"/>
+<link href="27.22.html" rel="section" title="§27.22 Software ‣ Computation ‣ Chapter 27 Functions of Number Theory"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Goldbach conjecture, Jacobi’s identities, Waring’s problem, additive number theory, number theory, partition function, representation by squares" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="27.13.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="27.13.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="27.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">27 </span>Functions of Number Theory</span></a><a class="ltx_ref" href="27.html#PT3" rel="up" title="In Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_title">Additive Number Theory</span></a><a class="ltx_ref" href="27.12.html" rel="prev" title="In Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">27.12 </span>Asymptotic Formulas: Primes</span></a><a class="ltx_ref" href="27.14.html" rel="next" title="In Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">27.14 </span>Unrestricted Partitions</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§27.13 </span>Functions</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="27.13.html" title="">http://dlmf.nist.gov/27.13</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="27.13.html#i"><span class="ltx_tag ltx_tag_subsection">§27.13(i) </span>Introduction</a></li>
+<li class="ltx_tocentry"><a href="27.13.html#ii"><span class="ltx_tag ltx_tag_subsection">§27.13(ii) </span>Goldbach Conjecture</a></li>
+<li class="ltx_tocentry"><a href="27.13.html#iii"><span class="ltx_tag ltx_tag_subsection">§27.13(iii) </span>Waring’s Problem</a></li>
+<li class="ltx_tocentry"><a href="27.13.html#iv"><span class="ltx_tag ltx_tag_subsection">§27.13(iv) </span>Representation by Squares</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§27.13(i) </span>Introduction</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=additive%20number%20theory">additive number theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=partition%20function">partition function</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.i" title="">http://dlmf.nist.gov/27.13.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Whereas multiplicative number theory is concerned with functions arising from
+prime factorization, additive number theory treats functions related to
+addition of integers. The basic problem is that of expressing a given positive
+integer <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math> as a sum of integers from some prescribed set <math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="S" class="ltx_Math" display="inline"><mi href="./27.13#i.p1" title="set">S</mi></math> whose members are
+primes, squares, cubes, or other special integers. Each representation of <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>
+as a sum of elements of <math altimg="m25.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="S" class="ltx_Math" display="inline"><mi href="./27.13#i.p1" title="set">S</mi></math> is called a <em class="ltx_emph ltx_font_italic">partition</em> of <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>, and the number
+<math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="S(n)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#i.p1" title="set">S</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> of such partitions is often of great interest. The subsections that
+follow describe problems from additive number theory. See also
+<cite class="ltx_cite ltx_citemacro_citet">Apostol (<a class="ltx_ref" href="bib/index.html#bib115" title="Introduction to Analytic Number Theory">1976</a>, Chapter 14)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Apostol and Niven (<a class="ltx_ref" href="bib/index.html#bib120" title="Number Theory">1994</a>, pp. 33–34)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§27.13(ii) </span>Goldbach Conjecture</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Goldbach%20conjecture">Goldbach conjecture</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=additive%20number%20theory">additive number theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=number%20theory">number theory</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.ii" title="">http://dlmf.nist.gov/27.13.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Every even integer <math altimg="m54.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="n&gt;4" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>&gt;</mo><mn>4</mn></mrow></math> is the sum of two odd primes.</em> In this case,
+<math altimg="m23.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="S(n)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#ii.p1" title="number of solutions">S</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of solutions of the equation <math altimg="m53.png" altimg-height="20px" altimg-valign="-6px" altimg-width="90px" alttext="n=p+q" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>=</mo><mrow><mi href="./27.13#ii.p1" title="odd prime">p</mi><mo>+</mo><mi href="./27.13#ii.p1" title="odd prime">q</mi></mrow></mrow></math>, where <math altimg="m57.png" altimg-height="17px" altimg-valign="-6px" altimg-width="15px" alttext="p" class="ltx_Math" display="inline"><mi href="./27.13#ii.p1" title="odd prime">p</mi></math> and <math altimg="m59.png" altimg-height="17px" altimg-valign="-6px" altimg-width="14px" alttext="q" class="ltx_Math" display="inline"><mi href="./27.13#ii.p1" title="odd prime">q</mi></math>
+are odd primes. Goldbach’s assertion is that <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="85px" alttext="S(n)\geq 1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#ii.p1" title="number of solutions">S</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>1</mn></mrow></math> for all even
+<math altimg="m54.png" altimg-height="18px" altimg-valign="-3px" altimg-width="55px" alttext="n&gt;4" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>&gt;</mo><mn>4</mn></mrow></math>. This conjecture dates back to 1742 and was undecided in 2009,
+although it has been confirmed numerically up to very
+large numbers. <cite class="ltx_cite ltx_citemacro_citet">Vinogradov (<a class="ltx_ref" href="bib/V.html#bib2335" title="Representation of an odd number as a sum of three primes (Russian)">1937</a>)</cite> proves that every sufficiently large
+odd integer is the sum of three odd primes, and <cite class="ltx_cite ltx_citemacro_citet">Chen (<a class="ltx_ref" href="bib/C.html#bib479" title="On the representation of a large even integer as the sum of a prime and the product of at most two primes">1966</a>)</cite> shows
+that every sufficiently large even integer is the sum of a prime and a number
+with no more than two prime factors.</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">The <a class="ltx_ref external" href="http://en.wikipedia.org/w/index.php?title=Goldbach%27s_conjecture&amp;oldid=60319325" title="">current status</a> of Goldbach’s conjecture is described in the
+<a class="ltx_ref external" href="http://en.wikipedia.org/wiki/Main_Page" title="">Wikipedia</a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§27.13(iii) </span>Waring’s Problem</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd>
+<span class="ltx_text ltx_font_bold"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="G\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math>: Waring’s function</span> and
+<span class="ltx_text ltx_font_bold"><math altimg="m42.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math>: Waring’s function</span>
+</dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Waring%20problem">Waring’s problem</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=additive%20number%20theory">additive number theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=number%20theory">number theory</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Apostol (<a class="ltx_ref" href="bib/index.html#bib115" title="Introduction to Analytic Number Theory">1976</a>, p. 306)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Ellison (<a class="ltx_ref" href="bib/E.html#bib741" title="Waring’s problem">1971</a>, p. 23)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.iii" title="">http://dlmf.nist.gov/27.13.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">This problem is named after Edward Waring who, in 1770, stated without proof
+and with limited numerical evidence, that every positive integer <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math> is the
+sum of four squares, of nine cubes, of nineteen fourth powers, and so on. Waring’s
+problem is to find, for each positive integer <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>, whether there is an integer
+<math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">m</mi></math> (depending only on <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>) such that the equation</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="30px" altimg-valign="-7px" altimg-width="219px" alttext="n=x_{1}^{k}+x_{2}^{k}+\dots+x_{m}^{k}" class="ltx_Math" display="block"><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>=</mo><mrow><msubsup><mi href="./27.1#t1.r9" title="real number">x</mi><mn>1</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msubsup><mo>+</mo><msubsup><mi href="./27.1#t1.r9" title="real number">x</mi><mn>2</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msubsup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msubsup><mi href="./27.1#t1.r9" title="real number">x</mi><mi href="./27.1#t1.r1" title="positive integer">m</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">m</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="27.1.html#t1.r9" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./27.1#t1.r9" title="real number">x</mi></math>:  real number</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="27.13.html#iii.p1" title="§27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E1" title="">http://dlmf.nist.gov/27.13.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iii.info" title="§27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iii)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">has nonnegative integer solutions for all <math altimg="m56.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>≥</mo><mn>1</mn></mrow></math>. The smallest <math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">m</mi></math> that
+exists for a given <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math> is denoted by <math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math>. Similarly, <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="G\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math>
+denotes the smallest <math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">m</mi></math> for which (<a class="ltx_ref" href="27.13.html#E1" title="(27.13.1) ‣ §27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27.13.1</span></a>) has nonnegative
+integer solutions for all sufficiently large <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>.</p>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Lagrange (<a class="ltx_ref" href="bib/L.html#bib1368" title="Démonstration d’un Théoréme d’Arithmétique">1770</a>)</cite> proves that <math altimg="m35.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="g\left(2\right)=4" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow></math>, and during the next
+139 years the existence of <math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math> was shown for <math altimg="m44.png" altimg-height="22px" altimg-valign="-6px" altimg-width="182px" alttext="k=3,4,5,6,7,8,10" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>=</mo><mrow><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>10</mn></mrow></mrow></math>.
+<cite class="ltx_cite ltx_citemacro_citet">Hilbert (<a class="ltx_ref" href="bib/H.html#bib1076" title="Beweis für die Darstellbarkeit der ganzen Zahlen durch eine feste Anzahl n ter Potenzen (Waringsches Problem)">1909</a>)</cite> proves the existence of <math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math> for every <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>
+but does not determine its corresponding numerical value. The exact value of
+<math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math> is now known for every <math altimg="m50.png" altimg-height="22px" altimg-valign="-6px" altimg-width="115px" alttext="k\leq 200,000" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>≤</mo><mrow><mn>200</mn><mo>,</mo><mn>000</mn></mrow></mrow></math>. For example,
+<math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="83px" alttext="g\left(3\right)=9" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>9</mn></mrow></math>, <math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="93px" alttext="g\left(4\right)=19" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>19</mn></mrow></math>, <math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="93px" alttext="g\left(5\right)=37" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>5</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>37</mn></mrow></math>,
+<math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="93px" alttext="g\left(6\right)=73" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>6</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>73</mn></mrow></math>, <math altimg="m40.png" altimg-height="25px" altimg-valign="-7px" altimg-width="104px" alttext="g\left(7\right)=143" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>7</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>143</mn></mrow></math>, and <math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="104px" alttext="g\left(8\right)=279" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>279</mn></mrow></math>. A general
+formula states that</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="98px" altimg-valign="-22px" altimg-width="213px" alttext="g\left(k\right)\geq 2^{k}+\left\lfloor\frac{3^{k}}{2^{k}}\right\rfloor-2," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><msup><mn>2</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup><mo>+</mo><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mfrac><msup><mn>3</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup><msup><mn>2</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup></mfrac><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></mrow><mo>−</mo><mn>2</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="27.13.html#iii.p1" title="§27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m42.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math>: Waring’s function</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r17" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m29.png" altimg-height="25px" altimg-valign="-7px" altimg-width="35px" alttext="\left\lfloor\NVar{x}\right\rfloor" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌊</mo><mi class="ltx_nvar">x</mi><mo href="./front/introduction#common.t1.r17" title="floor of 𝑥">⌋</mo></mrow></math>: floor of <math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>:  positive integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="27.13.html#iii.p2" title="§27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E2" title="">http://dlmf.nist.gov/27.13.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iii.info" title="§27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iii)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for all <math altimg="m49.png" altimg-height="21px" altimg-valign="-5px" altimg-width="54px" alttext="k\geq 2" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>≥</mo><mn>2</mn></mrow></math>, with equality if <math altimg="m6.png" altimg-height="22px" altimg-valign="-6px" altimg-width="153px" alttext="4\leq k\leq 200,000" class="ltx_Math" display="inline"><mrow><mrow><mn>4</mn><mo>≤</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>≤</mo><mn>200</mn></mrow><mo>,</mo><mn>000</mn></mrow></math>. If
+<math altimg="m5.png" altimg-height="26px" altimg-valign="-6px" altimg-width="118px" alttext="3^{k}=q2^{k}+r" class="ltx_Math" display="inline"><mrow><msup><mn>3</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup><mo>=</mo><mrow><mrow><mi>q</mi><mo>⁢</mo><msup><mn>2</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup></mrow><mo>+</mo><mi>r</mi></mrow></mrow></math> with <math altimg="m1.png" altimg-height="23px" altimg-valign="-3px" altimg-width="101px" alttext="0&lt;r&lt;2^{k}" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>r</mi><mo>&lt;</mo><msup><mn>2</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup></mrow></math>, then equality holds in
+(<a class="ltx_ref" href="27.13.html#E2" title="(27.13.2) ‣ §27.13(iii) Waring’s Problem ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27.13.2</span></a>) provided <math altimg="m60.png" altimg-height="26px" altimg-valign="-6px" altimg-width="98px" alttext="r+q\leq 2^{k}" class="ltx_Math" display="inline"><mrow><mrow><mi>r</mi><mo>+</mo><mi>q</mi></mrow><mo>≤</mo><msup><mn>2</mn><mi href="./27.1#t1.r1" title="positive integer">k</mi></msup></mrow></math>, a condition that is satisfied
+with at most a finite number of exceptions.</p>
+</div>
+<div class="ltx_para" id="iii.p3">
+<p class="ltx_p">The existence of <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="52px" alttext="G\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math> follows from that of <math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math> because
+<math altimg="m22.png" altimg-height="25px" altimg-valign="-7px" altimg-width="121px" alttext="G\left(k\right)\leq g\left(k\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></mrow></math>, but only the values <math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="G\left(2\right)=4" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow></math> and
+<math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="G\left(4\right)=16" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>16</mn></mrow></math> are known exactly. Some upper bounds smaller than
+<math altimg="m43.png" altimg-height="25px" altimg-valign="-7px" altimg-width="46px" alttext="g\left(k\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#iii.p1" title="Waring’s function">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow></math> are known. For example, <math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="89px" alttext="G\left(3\right)\leq 7" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow><mo>≤</mo><mn>7</mn></mrow></math>,
+<math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="G\left(5\right)\leq 23" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>5</mn><mo>)</mo></mrow></mrow><mo>≤</mo><mn>23</mn></mrow></math>, <math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="G\left(6\right)\leq 36" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>6</mn><mo>)</mo></mrow></mrow><mo>≤</mo><mn>36</mn></mrow></math>, <math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="G\left(7\right)\leq 53" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>7</mn><mo>)</mo></mrow></mrow><mo>≤</mo><mn>53</mn></mrow></math>, and
+<math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="G\left(8\right)\leq 73" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mn>8</mn><mo>)</mo></mrow></mrow><mo>≤</mo><mn>73</mn></mrow></math>. <cite class="ltx_cite ltx_citemacro_citet">Hardy and Littlewood (<a class="ltx_ref" href="bib/H.html#bib1044" title="Some problems of “Partitio Numerorum” (VI): Further researches in Waring’s Problem">1925</a>)</cite> conjectures that
+<math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="137px" alttext="G\left(k\right)&lt;2k+1" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> when <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math> is not a power of 2, and that
+<math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="101px" alttext="G\left(k\right)\leq 4k" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><mn>4</mn><mo>⁢</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi></mrow></mrow></math> when <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math> is a power of 2, but the most that is known (in
+2009) is <math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="135px" alttext="G\left(k\right)&lt;ck\ln k" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#iii.p1" title="Waring’s function">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi>c</mi><mo>⁢</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.2#E2" title="principal branch of logarithm function">ln</mi><mo lspace="0.167em">⁡</mo><mi href="./27.1#t1.r1" title="positive integer">k</mi></mrow></mrow></mrow></math> for some constant <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="13px" alttext="c" class="ltx_Math" display="inline"><mi>c</mi></math>. A survey is
+given in <cite class="ltx_cite ltx_citemacro_citet">Ellison (<a class="ltx_ref" href="bib/E.html#bib741" title="Waring’s problem">1971</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§27.13(iv) </span>Representation by Squares</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{\NVar{k}}\left(\NVar{n}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math>: number of squares</span></dd>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobi%20identities">Jacobi’s identities</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=additive%20number%20theory">additive number theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=number%20theory">number theory</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=representation%20by%20squares">representation by squares</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Grosswald (<a class="ltx_ref" href="bib/G.html#bib999" title="Representations of Integers as Sums of Squares">1985</a>, pp. 8, 32)</cite>. For solutions of
+(<a class="ltx_ref" href="27.13.html#E3" title="(27.13.3) ‣ §27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27.13.3</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Apostol (<a class="ltx_ref" href="bib/index.html#bib115" title="Introduction to Analytic Number Theory">1976</a>, p. 305)</cite>.
+For (<a class="ltx_ref" href="27.13.html#E4" title="(27.13.4) ‣ §27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27.13.4</span></a>) see (<a class="ltx_ref" href="20.2.html#E3" title="(20.2.3) ‣ §20.2(i) Fourier Series ‣ §20.2 Definitions and Periodic Properties ‣ Properties ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.2.3</span></a>).</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="20.12.html#i.p1" title="§20.12(i) Number Theory ‣ §20.12 Mathematical Applications ‣ Applications ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">§20.12(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.iv" title="">http://dlmf.nist.gov/27.13.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">For a given integer <math altimg="m49.png" altimg-height="21px" altimg-valign="-5px" altimg-width="54px" alttext="k\geq 2" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>≥</mo><mn>2</mn></mrow></math> the function <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{k}\left(n\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math> is defined as
+the number of solutions of the equation
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="29px" altimg-valign="-7px" altimg-width="217px" alttext="n=x_{1}^{2}+x_{2}^{2}+\dots+x_{k}^{2}," class="ltx_Math" display="block"><mrow><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>=</mo><mrow><msubsup><mi href="./27.1#t1.r9" title="real number">x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi href="./27.1#t1.r9" title="real number">x</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msubsup><mi href="./27.1#t1.r9" title="real number">x</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi><mn>2</mn></msubsup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="27.1.html#t1.r9" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./27.1#t1.r9" title="real number">x</mi></math>:  real number</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E3" title="">http://dlmf.nist.gov/27.13.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where the <math altimg="m70.png" altimg-height="19px" altimg-valign="-8px" altimg-width="25px" alttext="x_{j}" class="ltx_Math" display="inline"><msub><mi href="./27.1#t1.r9" title="real number">x</mi><mi>j</mi></msub></math> are integers, positive, negative, or zero, and the order of
+the summands is taken into account.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_citet">Jacobi (<a class="ltx_ref" href="bib/J.html#bib1153" title="Fundamenta Nova Theoriae Functionum Ellipticarum">1829</a>)</cite> notes that <math altimg="m62.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="r_{2}\left(n\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math> is the coefficient of
+<math altimg="m68.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="x^{n}" class="ltx_Math" display="inline"><msup><mi href="./27.1#t1.r9" title="real number">x</mi><mi href="./27.1#t1.r1" title="positive integer">n</mi></msup></math> in the square of the theta function <math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="\vartheta\left(x\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></math>:</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="73px" altimg-valign="-28px" altimg-width="258px" alttext="\vartheta\left(x\right)=1+2\sum_{m=1}^{\infty}x^{m^{2}}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./27.1#t1.r1" title="positive integer">m</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mi href="./27.1#t1.r9" title="real number">x</mi><msup><mi href="./27.1#t1.r1" title="positive integer">m</mi><mn>2</mn></msup></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m72.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="|x|&lt;1" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="146px" alttext="\vartheta\left(\NVar{x}\right)=\theta_{3}\left(0,x\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></mrow></math>: alternative notation</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="20.2.html#i" title="§20.2(i) Fourier Series ‣ §20.2 Definitions and Periodic Properties ‣ Properties ‣ Chapter 20 Theta Functions"><math altimg="m31.png" altimg-height="26px" altimg-valign="-8px" altimg-width="72px" alttext="\theta_{\NVar{j}}\left(\NVar{z},\NVar{q}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./20.2#i" title="theta function">θ</mi><mi class="ltx_nvar">j</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./20.1#t1.r3" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./20.1#t1.r4" title="nome">q</mi><mo>)</mo></mrow></mrow></math>: theta function</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">m</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="27.1.html#t1.r9" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./27.1#t1.r9" title="real number">x</mi></math>:  real number</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">16.27.3</span> (with <math altimg="m71.png" altimg-height="17px" altimg-valign="-2px" altimg-width="53px" alttext="z=0" class="ltx_Math" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>, <math altimg="m58.png" altimg-height="17px" altimg-valign="-6px" altimg-width="54px" alttext="q=x" class="ltx_Math" display="inline"><mrow><mi>q</mi><mo>=</mo><mi href="./27.1#t1.r9" title="real number">x</mi></mrow></math>)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E4" title="">http://dlmf.nist.gov/27.13.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">(In §<a class="ltx_ref" href="20.2.html#i" title="§20.2(i) Fourier Series ‣ §20.2 Definitions and Periodic Properties ‣ Properties ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.2(i)</span></a>, <math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="\vartheta\left(x\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></math> is denoted by
+<math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="\theta_{3}\left(0,x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></math>.) Thus,</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="107px" altimg-valign="-28px" altimg-width="257px" alttext="(\vartheta\left(x\right))^{2}=1+\sum_{n=1}^{\infty}r_{2}\left(n\right)x^{n}." class="ltx_Math" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mn>1</mn><mo rspace="0.055em">+</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><msup><mi href="./27.1#t1.r9" title="real number">x</mi><mi href="./27.1#t1.r1" title="positive integer">n</mi></msup></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="27.13.html#E4" title="(27.13.4) ‣ §27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="146px" alttext="\vartheta\left(\NVar{x}\right)=\theta_{3}\left(0,x\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></mrow></math>: alternative notation</a>,
+<a class="ltx_ref" href="27.13.html#iv.p1" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{\NVar{k}}\left(\NVar{n}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math>: number of squares</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="27.1.html#t1.r9" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./27.1#t1.r9" title="real number">x</mi></math>:  real number</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="27.13.html#iv.p3" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E5" title="">http://dlmf.nist.gov/27.13.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="iv.p3">
+<p class="ltx_p">One of Jacobi’s identities implies that</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="107px" altimg-valign="-28px" altimg-width="356px" alttext="(\vartheta\left(x\right))^{2}=1+4\sum_{n=1}^{\infty}\left(\delta_{1}(n)-\delta%
+_{3}(n)\right)x^{n}," class="ltx_Math" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mo>(</mo><mrow><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi href="./27.1#t1.r9" title="real number">x</mi><mi href="./27.1#t1.r1" title="positive integer">n</mi></msup></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="27.13.html#E4" title="(27.13.4) ‣ §27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m32.png" altimg-height="25px" altimg-valign="-7px" altimg-width="146px" alttext="\vartheta\left(\NVar{x}\right)=\theta_{3}\left(0,x\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></mrow></math>: alternative notation</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="27.1.html#t1.r9" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m67.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./27.1#t1.r9" title="real number">x</mi></math>:  real number</a> and
+<a class="ltx_ref" href="27.13.html#iv.p3" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m28.png" altimg-height="26px" altimg-valign="-8px" altimg-width="51px" alttext="\delta_{j}(n)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mi>j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of divisors</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="27.13.html#iv.p3" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E6" title="">http://dlmf.nist.gov/27.13.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="\delta_{1}(n)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="\delta_{3}(n)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math> are the number of divisors of <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>
+congruent respectively to 1 and 3 (mod 4), and by equating coefficients
+in (<a class="ltx_ref" href="27.13.html#E5" title="(27.13.5) ‣ §27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27.13.5</span></a>) and (<a class="ltx_ref" href="27.13.html#E6" title="(27.13.6) ‣ §27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">27.13.6</span></a>) Jacobi deduced that</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">27.13.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="70px" altimg-valign="-7px" altimg-width="244px" alttext="r_{2}\left(n\right)=4\left(\delta_{1}(n)-\delta_{3}(n)\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mn>3</mn></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="27.13.html#iv.p1" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{\NVar{k}}\left(\NVar{n}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math>: number of squares</a>,
+<a class="ltx_ref" href="27.1.html#t1.r1" title="§27.1 Special Notation ‣ Notation ‣ Chapter 27 Functions of Number Theory"><math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="27.13.html#iv.p3" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><math altimg="m28.png" altimg-height="26px" altimg-valign="-8px" altimg-width="51px" alttext="\delta_{j}(n)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p3" title="number of divisors">δ</mi><mi>j</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  number of divisors</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/27.13.E7" title="">http://dlmf.nist.gov/27.13.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/27.13.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/27.13.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/27.13.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="27.13.html#iv.info" title="§27.13(iv) Representation by Squares ‣ §27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13(iv)</span></a>,
+<a class="ltx_ref" href="27.13.html#info" title="§27.13 Functions ‣ Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">§27.13</span></a> and
+<a class="ltx_ref" href="27.html#info" title="Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_tag">Ch.27</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Hence <math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="91px" alttext="r_{2}\left(5\right)=8" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mn>5</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>8</mn></mrow></math> because both divisors, <math altimg="m3.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="1" class="ltx_Math" display="inline"><mn>1</mn></math> and <math altimg="m8.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="5" class="ltx_Math" display="inline"><mn>5</mn></math>, are
+congruent to <math altimg="m4.png" altimg-height="25px" altimg-valign="-7px" altimg-width="97px" alttext="1\pmod{4}" class="ltx_Math" display="inline"><mrow><mn>1</mn><mspace width="0.949em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mo lspace="0em" rspace="0.167em">mod</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. In fact, there are four representations, given by
+<math altimg="m7.png" altimg-height="26px" altimg-valign="-7px" altimg-width="513px" alttext="5=2^{2}+1^{2}=2^{2}+(-1)^{2}=(-2)^{2}+1^{2}=(-2)^{2}+(-1)^{2}" class="ltx_Math" display="inline"><mrow><mn>5</mn><mo>=</mo><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><msup><mn>1</mn><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mn>1</mn><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math>, and four more
+with the order of summands reversed.</p>
+</div>
+<div class="ltx_para" id="iv.p4">
+<p class="ltx_p">By similar methods Jacobi proved that
+<math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="146px" alttext="r_{4}\left(n\right)=8\sigma_{1}\left(n\right)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mn>4</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mn>8</mn><mo>⁢</mo><mrow><msub><mi href="./27.2#E10" title="sum of powers of divisors of a number">σ</mi><mn>1</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></mrow></mrow></math> if <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math> is odd, whereas, if <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>
+is even, <math altimg="m63.png" altimg-height="25px" altimg-valign="-7px" altimg-width="103px" alttext="r_{4}\left(n\right)=24" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mn>4</mn></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mn>24</mn></mrow></math> times the sum of the odd divisors of <math altimg="m55.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">n</mi></math>.
+<cite class="ltx_cite ltx_citemacro_citet">Mordell (<a class="ltx_ref" href="bib/M.html#bib1653" title="On the representation of numbers as a sum of ⁢ 2 r squares">1917</a>)</cite> notes that <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{k}\left(n\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math> is the coefficient of
+<math altimg="m68.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="x^{n}" class="ltx_Math" display="inline"><msup><mi href="./27.1#t1.r9" title="real number">x</mi><mi href="./27.1#t1.r1" title="positive integer">n</mi></msup></math> in the power-series expansion of the <math altimg="m48.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./27.1#t1.r1" title="positive integer">k</mi></math>th power of the series for
+<math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="\vartheta\left(x\right)" class="ltx_Math" display="inline"><mrow><mi href="./27.13#E4" title="alternative notation">ϑ</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r9" title="real number">x</mi><mo>)</mo></mrow></mrow></math>. Explicit formulas for <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{k}\left(n\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math> have been
+obtained by similar methods for <math altimg="m46.png" altimg-height="22px" altimg-valign="-6px" altimg-width="103px" alttext="k=6,8,10" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>=</mo><mrow><mn>6</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>10</mn></mrow></mrow></math>, and <math altimg="m2.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="12" class="ltx_Math" display="inline"><mn>12</mn></math>, but they are more
+complicated. Exact formulas for <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{k}\left(n\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math> have also been found for
+<math altimg="m45.png" altimg-height="22px" altimg-valign="-6px" altimg-width="73px" alttext="k=3,5" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>=</mo><mrow><mn>3</mn><mo>,</mo><mn>5</mn></mrow></mrow></math>, and <math altimg="m9.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="7" class="ltx_Math" display="inline"><mn>7</mn></math>, and for all even <math altimg="m51.png" altimg-height="21px" altimg-valign="-5px" altimg-width="64px" alttext="k\leq 24" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>≤</mo><mn>24</mn></mrow></math>. For values of <math altimg="m47.png" altimg-height="19px" altimg-valign="-3px" altimg-width="64px" alttext="k&gt;24" class="ltx_Math" display="inline"><mrow><mi href="./27.1#t1.r1" title="positive integer">k</mi><mo>&gt;</mo><mn>24</mn></mrow></math> the
+analysis of <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="56px" alttext="r_{k}\left(n\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./27.13#iv.p1" title="number of squares">r</mi><mi href="./27.1#t1.r1" title="positive integer">k</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./27.1#t1.r1" title="positive integer">n</mi><mo>)</mo></mrow></mrow></math> is considerably more complicated (see
+<cite class="ltx_cite ltx_citemacro_citet">Hardy (<a class="ltx_ref" href="bib/H.html#bib1040" title="Ramanujan. Twelve Lectures on Subjects Suggested by His Life and Work">1940</a>)</cite>). Also, <cite class="ltx_cite ltx_citemacro_citet">Milne (<a class="ltx_ref" href="bib/M.html#bib1633" title="New infinite families of exact sums of squares formulas, Jacobi elliptic functions, and Ramanujan’s tau function">1996</a>, <a class="ltx_ref" href="bib/M.html#bib1635" title="Infinite families of exact sums of squares formulas, Jacobi elliptic functions, continued fractions, and Schur functions">2002</a>)</cite> announce
+new infinite families of explicit formulas extending Jacobi’s identities. For
+more than 8 squares, Milne’s identities are not the same as those obtained
+earlier by Mordell and others.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="27.12.html" rel="prev" title="In Multiplicative Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">27.12 </span>Asymptotic Formulas: Primes</span></a><a class="ltx_ref" href="27.14.html" rel="next" title="In Additive Number Theory ‣ Chapter 27 Functions of Number Theory"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">27.14 </span>Unrestricted Partitions</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

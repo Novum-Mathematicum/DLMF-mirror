@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/18.40";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="18.html#PT7" rel="up" title="Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.html" rel="up up" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="index.html" rel="start" title=""/>
+<link href="18.39.html" rel="prev" title="§18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.41.html" rel="next" title="§18.41 Tables ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.1.html" rel="section" title="§18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.2.html" rel="section" title="§18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.3.html" rel="section" title="§18.3 Definitions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.4.html" rel="section" title="§18.4 Graphics ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.5.html" rel="section" title="§18.5 Explicit Representations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.6.html" rel="section" title="§18.6 Symmetry, Special Values, and Limits to Monomials ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.7.html" rel="section" title="§18.7 Interrelations and Limit Relations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.8.html" rel="section" title="§18.8 Differential Equations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.9.html" rel="section" title="§18.9 Recurrence Relations and Derivatives ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.10.html" rel="section" title="§18.10 Integral Representations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.11.html" rel="section" title="§18.11 Relations to Other Functions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.12.html" rel="section" title="§18.12 Generating Functions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.13.html" rel="section" title="§18.13 Continued Fractions ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.14.html" rel="section" title="§18.14 Inequalities ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.15.html" rel="section" title="§18.15 Asymptotic Approximations ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.16.html" rel="section" title="§18.16 Zeros ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.17.html" rel="section" title="§18.17 Integrals ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.18.html" rel="section" title="§18.18 Sums ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.19.html" rel="section" title="§18.19 Hahn Class: Definitions ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.20.html" rel="section" title="§18.20 Hahn Class: Explicit Representations ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.21.html" rel="section" title="§18.21 Hahn Class: Interrelations ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.22.html" rel="section" title="§18.22 Hahn Class: Recurrence Relations and Differences ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.23.html" rel="section" title="§18.23 Hahn Class: Generating Functions ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.24.html" rel="section" title="§18.24 Hahn Class: Asymptotic Approximations ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.25.html" rel="section" title="§18.25 Wilson Class: Definitions ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.26.html" rel="section" title="§18.26 Wilson Class: Continued ‣ Askey Scheme ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.27.html" rel="section" title="§18.27 𝑞-Hahn Class ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.28.html" rel="section" title="§18.28 Askey–Wilson Class ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.29.html" rel="section" title="§18.29 Asymptotic Approximations for 𝑞-Hahn and Askey–Wilson Classes ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.30.html" rel="section" title="§18.30 Associated OP’s ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.31.html" rel="section" title="§18.31 Bernstein–Szegő Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.32.html" rel="section" title="§18.32 OP’s with Respect to Freud Weights ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.33.html" rel="section" title="§18.33 Polynomials Orthogonal on the Unit Circle ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.34.html" rel="section" title="§18.34 Bessel Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.35.html" rel="section" title="§18.35 Pollaczek Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.36.html" rel="section" title="§18.36 Miscellaneous Polynomials ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.37.html" rel="section" title="§18.37 Classical OP’s in Two or More Variables ‣ Other Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.38.html" rel="section" title="§18.38 Mathematical Applications ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.39.html" rel="section" title="§18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.41.html" rel="section" title="§18.41 Tables ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.42.html" rel="section" title="§18.42 Software ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<link href="18.40.F1.mag.html" rel="sidebar" title="Figure 18.40.1 ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<link href="18.40.F2.mag.html" rel="sidebar" title="Figure 18.40.2 ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"/>
+<meta content="Clenshaw’s algorithm, Stieltjes–Perron inversion, analytic continuation, classical orthogonal polynomials, derivative rule, differential equations, graphic, histogram construction, in series of Chebyshev polynomials, solutions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="18.40.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="18.40.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="18.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18 </span>Orthogonal Polynomials</span></a><a class="ltx_ref" href="18.html#PT7" rel="up" title="In Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="18.39.html" rel="prev" title="In Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.39 </span>Applications in the Physical Sciences</span></a><a class="ltx_ref" href="18.41.html" rel="next" title="In Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.41 </span>Tables</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§18.40 </span>Methods of Computation</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.p2" title="Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_title">Version 1.2.0 (March 27, 2024)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="18.40.html" title="">http://dlmf.nist.gov/18.40</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="18.40.html#i"><span class="ltx_tag ltx_tag_subsection">§18.40(i) </span>Computation of Polynomials</a></li>
+<li class="ltx_tocentry"><a href="18.40.html#ii"><span class="ltx_tag ltx_tag_subsection">§18.40(ii) </span>The Classical Moment Problem</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§18.40(i) </span>Computation of Polynomials</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Clenshaw%20algorithm">Clenshaw’s algorithm</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=classical%20orthogonal%20polynomials">classical orthogonal polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=differential%20equations">differential equations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=in%20series%20of%20Chebyshev%20polynomials">in series of Chebyshev polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=solutions">solutions</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26.p1" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.p2" title="Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_title">Version 1.2.0 (March 27, 2024)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.i" title="">http://dlmf.nist.gov/18.40.i</a></dd>
+<dt>Addition (effective with 1.2.0):</dt>
+<dd>
+This subsection was added.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">Orthogonal polynomials can be computed from their explicit polynomial form by
+Horner’s scheme (§<a class="ltx_ref" href="1.11.html#i" title="§1.11(i) Division Algorithm ‣ §1.11 Zeros of Polynomials ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.11(i)</span></a>). Usually, however, other methods are more
+efficient, especially the numerical solution of difference equations
+(§<a class="ltx_ref" href="3.6.html" title="§3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6</span></a>) and the application of uniform asymptotic expansions (when
+available) for OP’s of large degree. For applications in which the OP’s appear only as terms in series
+expansions (compare §<a class="ltx_ref" href="18.18.html#i" title="§18.18(i) Series Expansions of Arbitrary Functions ‣ §18.18 Sums ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.18(i)</span></a>) the need to compute them can be
+avoided altogether by use instead of Clenshaw’s algorithm (§<a class="ltx_ref" href="3.11.html#ii" title="§3.11(ii) Chebyshev-Series Expansions ‣ §3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.11(ii)</span></a>)
+and its straightforward generalization to OP’s other than Chebyshev. For
+further information see <cite class="ltx_cite ltx_citemacro_citet">Clenshaw (<a class="ltx_ref" href="bib/C.html#bib523" title="A note on the summation of Chebyshev series">1955</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib899" title="Orthogonal Polynomials: Computation and Approximation">2004</a>, §§2.1, 8.1)</cite>, and
+<cite class="ltx_cite ltx_citemacro_citet">Mason and Handscomb (<a class="ltx_ref" href="bib/M.html#bib1560" title="Chebyshev Polynomials">2003</a>, §2.4)</cite>.
+</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§18.40(ii) </span>The Classical Moment Problem</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd><a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Stieltjes%E2%80%93Perron%20inversion">Stieltjes–Perron inversion</a></dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="18.2.html#ix.p1" title="§18.2(ix) Moments ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.2(ix)</span></a>,
+<a class="ltx_ref" href="18.2.html#x.p5" title="§18.2(x) Orthogonal Polynomials and Continued Fractions ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.2(x)</span></a>,
+<a class="ltx_ref" href="18.39.html#F2" title="In The Coulomb–Pollaczek Polynomials ‣ §18.39(iv) Coulomb–Pollaczek Polynomials and J-Matrix Methods ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Figure 18.39.2</span></a>,
+<a class="ltx_ref" href="18.39.F2.mag.html" title="In §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Figure 18.39.2</span></a>,
+<a class="ltx_ref" href="18.39.html#Px13.p1" title="Discretized and Continuum Expansions of Scattering Eigenfunctions in terms of Pollaczek Polynomials: J-matrix Theory ‣ §18.39(iv) Coulomb–Pollaczek Polynomials and J-Matrix Methods ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.39(iv)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26.p1" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.p2" title="Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_title">Version 1.2.0 (March 27, 2024)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.ii" title="">http://dlmf.nist.gov/18.40.ii</a></dd>
+<dt>Addition (effective with 1.2.0):</dt>
+<dd>
+This subsection was added.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">The problem of moments is simply stated and the early work of Stieltjes, Markov, and Chebyshev on this problem was the origin of the understanding of the importance of both
+continued fractions and OP’s in many areas of analysis. Given the power moments, <math altimg="m47.png" altimg-height="33px" altimg-valign="-9px" altimg-width="160px" alttext="\mu_{n}=\int_{a}^{b}x^{n}\,\mathrm{d}\mu(x)" class="ltx_Math" display="inline"><mrow><msub><mi>μ</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo rspace="0.111em">=</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mi>a</mi><mi>b</mi></msubsup><mrow><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow></math>, <math altimg="m65.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, can these be used to find a unique
+<math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\mu(x)" class="ltx_Math" display="inline"><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, a non-decreasing, real, function of <math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>, in the case that the moment problem is <em class="ltx_emph ltx_font_italic">determined</em>? Should a unique solution not exist the moment problem is then
+<em class="ltx_emph ltx_font_italic">indeterminant</em>. The theory behind these remarks is in <cite class="ltx_cite ltx_citemacro_citet">Shohat and Tamarkin (<a class="ltx_ref" href="bib/S.html#bib2973" title="The Problem of Moments">1970</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Akhiezer (<a class="ltx_ref" href="bib/index.html#bib49" title="The classical moment problem and some related questions in analysis">2021</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Chihara (<a class="ltx_ref" href="bib/C.html#bib490" title="An Introduction to Orthogonal Polynomials">1978</a>)</cite>.</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">A numerical approach to the recursion coefficients and quadrature abscissas and weights</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">In what follows we consider only the simple, illustrative, case that <math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\mu(x)" class="ltx_Math" display="inline"><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is continuously differentiable so that <math altimg="m44.png" altimg-height="25px" altimg-valign="-7px" altimg-width="154px" alttext="\,\mathrm{d}\mu(x)=w(x)\,\mathrm{d}x" class="ltx_Math" display="inline"><mrow><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mrow></mrow></math>, with <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> real, positive, and continuous
+on a real interval <math altimg="m29.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="[a,b]." class="ltx_Math" display="inline"><mrow><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow><mo lspace="0em">.</mo></mrow></math> The strategy will be to: 1) use the moments to determine the recursion coefficients <math altimg="m31.png" altimg-height="22px" altimg-valign="-6px" altimg-width="61px" alttext="\alpha_{n},\beta_{n}" class="ltx_Math" display="inline"><mrow><msub><mi>α</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>,</mo><msub><mi>β</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></mrow></math> of equations (<a class="ltx_ref" href="18.2.html#E11_5" title="(18.2.11_5) ‣ Monic and Orthonormal Forms ‣ §18.2(iv) Recurrence Relations ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.2.11_5</span></a>) and (<a class="ltx_ref" href="18.2.html#E11_8" title="(18.2.11_8) ‣ Monic and Orthonormal Forms ‣ §18.2(iv) Recurrence Relations ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.2.11_8</span></a>);
+then, 2) to construct the quadrature abscissas <math altimg="m89.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="x_{i}" class="ltx_Math" display="inline"><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi>i</mi></msub></math> and weights (or Christoffel numbers) <math altimg="m76.png" altimg-height="16px" altimg-valign="-5px" altimg-width="26px" alttext="w_{i}" class="ltx_Math" display="inline"><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi>i</mi></msub></math> from the J-matrix of §<a class="ltx_ref" href="3.5.html#vi" title="§3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(vi)</span></a>, equations (<a class="ltx_ref" href="3.5.html#E31" title="(3.5.31) ‣ §3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5.31</span></a>) and(<a class="ltx_ref" href="3.5.html#E32" title="(3.5.32) ‣ §3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5.32</span></a>).
+These quadrature weights and abscissas will then allow construction of a convergent sequence of approximations to <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, as will be considered in the following paragraphs.</p>
+</div>
+<div class="ltx_para" id="Px1.p2">
+<p class="ltx_p">There are many ways to implement these first two steps, noting that the expressions for <math altimg="m32.png" altimg-height="16px" altimg-valign="-5px" altimg-width="29px" alttext="\alpha_{n}" class="ltx_Math" display="inline"><msub><mi>α</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></math> and <math altimg="m33.png" altimg-height="22px" altimg-valign="-6px" altimg-width="27px" alttext="\beta_{n}" class="ltx_Math" display="inline"><msub><mi>β</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></math> of equation (<a class="ltx_ref" href="18.2.html#E30" title="(18.2.30) ‣ §18.2(ix) Moments ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.2.30</span></a>) are of little practical numerical value, see
+<cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib899" title="Orthogonal Polynomials: Computation and Approximation">2004</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Golub and Meurant (<a class="ltx_ref" href="bib/G.html#bib951" title="Matrices, moments and quadrature with applications">2010</a>)</cite>. A simple set of choices is spelled out in <cite class="ltx_cite ltx_citemacro_citet">Gordon (<a class="ltx_ref" href="bib/G.html#bib3023" title="Error bounds in equilibrium statistical mechanics">1968</a>)</cite> which gives a numerically stable algorithm for direct
+computation of the recursion coefficients in terms of the moments, followed by construction of the J-matrix and quadrature weights and abscissas, and we will follow this approach:
+Let <math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math> be a positive integer and define</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="6"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">18.40.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m4.png" altimg-height="26px" altimg-valign="-8px" altimg-width="42px" alttext="\displaystyle P_{1,1}" class="ltx_Math" display="inline"><msub><mi>P</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="26px" altimg-valign="-8px" altimg-width="141px" alttext="\displaystyle=1,~P_{m,1}=0," class="ltx_Math" display="inline"><mrow><mrow><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow><mo rspace="0.497em">,</mo><mrow><msub><mi>P</mi><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>,</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m62.png" altimg-height="22px" altimg-valign="-6px" altimg-width="172px" alttext="m=2,\dots,2N+4" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow><mo>+</mo><mn>4</mn></mrow></mrow></mrow></math>,</span></td></tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m5.png" altimg-height="26px" altimg-valign="-8px" altimg-width="49px" alttext="\displaystyle P_{m,2}" class="ltx_Math" display="inline"><msub><mi>P</mi><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>,</mo><mn>2</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="29px" altimg-valign="-7px" altimg-width="163px" alttext="\displaystyle=(-1)^{m-1}\mu_{m-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>μ</mi><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m61.png" altimg-height="22px" altimg-valign="-6px" altimg-width="172px" alttext="m=1,\dots,2N+3" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></mrow></math>,</span></td></tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m6.png" altimg-height="26px" altimg-valign="-8px" altimg-width="51px" alttext="\displaystyle P_{m,n}" class="ltx_Math" display="inline"><msub><mi>P</mi><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>,</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="26px" altimg-valign="-8px" altimg-width="351px" alttext="\displaystyle=P_{1,n-1}P_{m+1,n-2}-P_{1,n-2}P_{m+1,n-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>P</mi><mrow><mn>1</mn><mo>,</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>⁢</mo><msub><mi>P</mi><mrow><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>−</mo><mn>2</mn></mrow></mrow></msub></mrow><mo>−</mo><mrow><msub><mi>P</mi><mrow><mn>1</mn><mo>,</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>−</mo><mn>2</mn></mrow></mrow></msub><mo>⁢</mo><msub><mi>P</mi><mrow><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m69.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 3" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>≥</mo><mn>3</mn></mrow></math>, <math altimg="m64.png" altimg-height="20px" altimg-valign="-5px" altimg-width="61px" alttext="m\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>≥</mo><mn>1</mn></mrow></math>, <math altimg="m60.png" altimg-height="21px" altimg-valign="-5px" altimg-width="153px" alttext="m+n\leq 2N+5" class="ltx_Math" display="inline"><mrow><mrow><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi><mo>+</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow><mo>≤</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow><mo>+</mo><mn>5</mn></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r5" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m63.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r5" title="nonnegative integer">m</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="18.1.html#i.t1.r6" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26.p1" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E1" title="">http://dlmf.nist.gov/18.40.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E1c.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E1c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E1a.png">png</a>, <a href="http://dlmf.nist.gov/18.40.E1b.png">png</a>, <a href="http://dlmf.nist.gov/18.40.E1c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px1.info" title="A numerical approach to the recursion coefficients and quadrature abscissas and weights ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">use the first row of this <math altimg="m23.png" altimg-height="18px" altimg-valign="-2px" altimg-width="21px" alttext="P" class="ltx_Math" display="inline"><mi>P</mi></math>-matrix for</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="55px" altimg-valign="-22px" altimg-width="250px" alttext="a_{1}=\mu_{0},~{}a_{n}=\frac{P_{1,n+1}}{P_{1,n}P_{1,n-1}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><mo rspace="0.497em">,</mo><mrow><msub><mi>a</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>=</mo><mfrac><msub><mi>P</mi><mrow><mn>1</mn><mo>,</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><mrow><msub><mi>P</mi><mrow><mn>1</mn><mo>,</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow></msub><mo>⁢</mo><msub><mi>P</mi><mrow><mn>1</mn><mo>,</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m67.png" altimg-height="22px" altimg-valign="-6px" altimg-width="166px" alttext="n=2,\dots,2N+3" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="18.1.html#i.t1.r6" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E2" title="">http://dlmf.nist.gov/18.40.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px1.info" title="A numerical approach to the recursion coefficients and quadrature abscissas and weights ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and these can be used for the recursion coefficients</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="25px" altimg-valign="-7px" altimg-width="429px" alttext="\alpha_{0}=a_{2},~{}\alpha_{n}=a_{2n+1}+a_{2n+2},~{}\beta_{n}=a_{2n}a_{2n+1}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi>α</mi><mn>0</mn></msub><mo>=</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo rspace="0.497em">,</mo><mrow><mrow><msub><mi>α</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>=</mo><mrow><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>2</mn></mrow></msub></mrow></mrow><mo rspace="0.497em">,</mo><mrow><msub><mi>β</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>=</mo><mrow><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow></msub><mo>⁢</mo><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m66.png" altimg-height="22px" altimg-valign="-6px" altimg-width="120px" alttext="n=1,\dots,N" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="18.1.html#i.t1.r6" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E3" title="">http://dlmf.nist.gov/18.40.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px1.info" title="A numerical approach to the recursion coefficients and quadrature abscissas and weights ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The quadrature abscissas <math altimg="m90.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></math> and weights <math altimg="m77.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{n}" class="ltx_Math" display="inline"><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></math> then follow from the discussion of §<a class="ltx_ref" href="3.5.html#vi" title="§3.5(vi) Eigenvalue/Eigenvector Characterization of Gauss Quadrature Formulas ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(vi)</span></a>.
+See <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib889" title="How and how not to check Gaussian quadrature formulae">1983</a>)</cite> for examples of numerically stable and unstable use of the above recursion relations, and how one can then usefully differentiate between numerical results of low and high precision, as produced thereby.</p>
+</div>
+<div class="ltx_para" id="Px1.p3">
+<p class="ltx_p">Having now directly connected computation of the quadrature abscissas and weights to the moments, what follows uses these for a Stieltjes–Perron <em class="ltx_emph ltx_font_italic">inversion</em> to regain <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Stieltjes Inversion via (approximate) Analytic Continuation</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Stieltjes%E2%80%93Perron%20inversion">Stieltjes–Perron inversion</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=analytic%20continuation">analytic continuation</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">We have from (<a class="ltx_ref" href="18.2.html#E38" title="(18.2.38) ‣ §18.2(x) Orthogonal Polynomials and Continued Fractions ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.2.38</span></a>) that</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="59px" altimg-valign="-21px" altimg-width="361px" alttext="\lim_{N\to\infty}F_{N}(z)=F(z)\equiv\frac{1}{\mu_{0}}\int_{a}^{b}\frac{w(x)\,%
+\mathrm{d}x}{z-x}," class="ltx_Math" display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mrow><msub><mi>F</mi><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo><mrow><mfrac><mn>1</mn><msub><mi>μ</mi><mn>0</mn></msub></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mi>a</mi><mi>b</mi></msubsup><mfrac><mrow><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mrow><mrow><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mfrac></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m92.png" altimg-height="25px" altimg-valign="-7px" altimg-width="106px" alttext="z\in\mathbb{C}\backslash[a,b]" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi><mo lspace="0.222em" rspace="0.222em">\</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi>a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r30" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="[\NVar{a},\NVar{b}]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>: closed interval</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r1" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="19px" alttext="\mathbb{C}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t1.r1" title="complex plane">ℂ</mi></math>: complex plane</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m38.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r9" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="20px" alttext="\equiv" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r9" title="equals by definition">≡</mo></math>: equals by definition</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m39.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r12" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  weight function</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r2" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m91.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Proved:</dt>
+<dd>
+<cite class="ltx_cite ltx_citemacro_citet">Ismail (<a class="ltx_ref" href="bib/I.html#bib2902" title="Classical and Quantum Orthogonal Polynomials in One Variable">2009</a>, p. 36)</cite>(proved)</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E4" title="">http://dlmf.nist.gov/18.40.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px2.info" title="Stieltjes Inversion via (approximate) Analytic Continuation ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">in which</p>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="71px" altimg-valign="-28px" altimg-width="225px" alttext="F_{N}(z)=\frac{1}{\mu_{0}}\sum_{n=1}^{N}\frac{w_{n}}{z-x_{n}}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi>F</mi><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msub><mi>μ</mi><mn>0</mn></msub></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>=</mo><mn>1</mn></mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></munderover><mfrac><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mrow><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo>−</mo><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></mrow></mfrac></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r13" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m78.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{x}" class="ltx_Math" display="inline"><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi href="./18.2#Px1.p2" title="real variable">x</mi></msub></math>:  weights</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r2" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m91.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r6" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E5" title="">http://dlmf.nist.gov/18.40.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px2.info" title="Stieltjes Inversion via (approximate) Analytic Continuation ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Let <math altimg="m86.png" altimg-height="25px" altimg-valign="-7px" altimg-width="93px" alttext="x^{\prime}\in(a,b)" class="ltx_Math" display="inline"><mrow><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>′</mo></msup><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>a</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math>. It is now necessary to take the limit <math altimg="m55.png" altimg-height="19px" altimg-valign="-4px" altimg-width="73px" alttext="\varepsilon\to 0{+}" class="ltx_Math" display="inline"><mrow><mi>ε</mi><mo stretchy="false">→</mo><mrow><mn>0</mn><mo>+</mo></mrow></mrow></math> of <math altimg="m12.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="F(x^{\prime}+\mathrm{i}\varepsilon)" class="ltx_Math" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>′</mo></msup><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>ε</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and the imaginary part is the required Stieltjes–Perron inversion:</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="59px" altimg-valign="-21px" altimg-width="453px" alttext="\lim_{\varepsilon\to 0{+}}\int_{a}^{b}\frac{w(x)\,\mathrm{d}x}{x^{\prime}+%
+\mathrm{i}\varepsilon-x}\,\mathrm{d}x=\pvint_{a}^{b}\frac{w(x)\,\mathrm{d}x}{x%
+^{\prime}-x}-\mathrm{i}\pi w(x^{\prime})," class="ltx_Math" display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ε</mi><mo stretchy="false">→</mo><mrow><mn>0</mn><mo>+</mo></mrow></mrow></munder><mrow><msubsup><mo href="./1.4#iv" lspace="0.167em" title="integral">∫</mo><mi>a</mi><mi>b</mi></msubsup><mrow><mfrac><mrow><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mrow><mrow><mrow><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>′</mo></msup><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>ε</mi></mrow></mrow><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mfrac><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><mrow><msubsup><mo href="./1.4#E24" title="Cauchy principal value">⨍</mo><mi>a</mi><mi>b</mi></msubsup><mfrac><mrow><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mrow><mrow><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>′</mo></msup><mo>−</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi></mrow></mfrac></mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m43.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m39.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="1.4.html#E24" title="(1.4.24) ‣ Cauchy Principal Values ‣ §1.4(v) Definite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m48.png" altimg-height="33px" altimg-valign="-9px" altimg-width="24px" alttext="\pvint_{\NVar{a}}^{\NVar{b}}" class="ltx_Math" display="inline"><msubsup><mo href="./1.4#E24" title="Cauchy principal value">⨍</mo><mi class="ltx_nvar">a</mi><mi class="ltx_nvar">b</mi></msubsup></math>: Cauchy principal value</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r12" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  weight function</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E6" title="">http://dlmf.nist.gov/18.40.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px2.info" title="Stieltjes Inversion via (approximate) Analytic Continuation ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The question is then: how is this possible given only <math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="F_{N}(z)" class="ltx_Math" display="inline"><mrow><msub><mi>F</mi><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>, rather than <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="F(z)" class="ltx_Math" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math> itself?
+<math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="F_{N}(z)" class="ltx_Math" display="inline"><mrow><msub><mi>F</mi><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math> often converges to smooth results for <math altimg="m91.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r2" title="complex variable">z</mi></math> off the real axis for <math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="30px" alttext="\Im{z}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E2" mathvariant="normal" title="imaginary part">ℑ</mi><mo lspace="0.167em">⁡</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi></mrow></math> at a distance greater than the pole spacing of the <math altimg="m90.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="x_{n}" class="ltx_Math" display="inline"><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></math>, this may then be followed
+by <em class="ltx_emph ltx_font_italic">approximate</em> numerical analytic continuation via fitting to lower order continued fractions (either Padé, see §<a class="ltx_ref" href="3.11.html#iv" title="§3.11(iv) Padé Approximations ‣ §3.11 Approximation Techniques ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.11(iv)</span></a>, or pointwise continued fraction approximants, see
+<cite class="ltx_cite ltx_citemacro_citet">Schlessinger (<a class="ltx_ref" href="bib/S.html#bib3075" title="Use of analyticity in the calculation of nonrelativistic scattering amplitudes">1968</a>, Appendix)</cite>), to <math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="F_{N}(z)" class="ltx_Math" display="inline"><mrow><msub><mi>F</mi><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.1#i.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math> and evaluating these on the real axis in regions of higher pole density that those of the approximating function.
+Results of low (<math altimg="m93.png" altimg-height="17px" altimg-valign="-2px" altimg-width="22px" alttext="~{}2" class="ltx_Math" display="inline"><mn>2</mn></math> to <math altimg="m11.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="3" class="ltx_Math" display="inline"><mn>3</mn></math> decimal digits) precision for <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> are easily obtained for <math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="N\sim 10" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>∼</mo><mn>10</mn></mrow></math> to <math altimg="m10.png" altimg-height="17px" altimg-valign="-2px" altimg-width="25px" alttext="20" class="ltx_Math" display="inline"><mn>20</mn></math>. <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib899" title="Orthogonal Polynomials: Computation and Approximation">2004</a>, p. 119–120)</cite> has explored the
+<math altimg="m54.png" altimg-height="21px" altimg-valign="-2px" altimg-width="70px" alttext="\varepsilon\to 0^{+}" class="ltx_Math" display="inline"><mrow><mi>ε</mi><mo stretchy="false">→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></math> limit via the Wynn <math altimg="m53.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\varepsilon" class="ltx_Math" display="inline"><mi>ε</mi></math>-algorithm, (<a class="ltx_ref" href="3.9.html#E11" title="(3.9.11) ‣ §3.9(iv) Shanks’ Transformation ‣ §3.9 Acceleration of Convergence ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.9.11</span></a>) to accelerate convergence, finding four to eight digits of precision in <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+depending smoothly on <math altimg="m85.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="x^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>′</mo></msup></math>, for <math altimg="m20.png" altimg-height="18px" altimg-valign="-2px" altimg-width="92px" alttext="N\approx 4000" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>≈</mo><mn>4000</mn></mrow></math>, for an example involving <em class="ltx_emph ltx_font_italic">first numerator</em> Legendre OP’s.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Histogram Approach</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Stieltjes%E2%80%93Perron%20inversion">Stieltjes–Perron inversion</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=graphic">graphic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=histogram%20construction">histogram construction</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<p class="ltx_p">The quadrature points and weights can be put to a more direct and efficient use. Define</p>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="98px" altimg-valign="-28px" altimg-width="260px" alttext="\mu_{N}(x)=\sum_{n=1}^{N}w_{n}H\left(x-x_{n}\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi>μ</mi><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi><mo>=</mo><mn>1</mn></mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></munderover><mrow><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>⁢</mo><mrow><mi href="./1.16#E13" title="Heaviside function">H</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>−</mo><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m83.png" altimg-height="25px" altimg-valign="-7px" altimg-width="87px" alttext="x\in(a,b)" class="ltx_Math" display="inline"><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>a</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi>b</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.16.html#E13" title="(1.16.13) ‣ §1.16(iv) Heaviside Function ‣ §1.16 Distributions ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="H\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><mi href="./1.16#E13" title="Heaviside function">H</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">x</mi><mo>)</mo></mrow></mrow></math>: Heaviside function</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m38.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r29" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>: open interval</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r13" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m78.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{x}" class="ltx_Math" display="inline"><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi href="./18.2#Px1.p2" title="real variable">x</mi></msub></math>:  weights</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r6" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m68.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Source:</dt>
+<dd><cite class="ltx_cite ltx_citemacro_citet">Shohat and Tamarkin (<a class="ltx_ref" href="bib/S.html#bib2973" title="The Problem of Moments">1970</a>, pp. 42-43)</cite></dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="18.40.html#Px3.p2" title="Histogram Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E7" title="">http://dlmf.nist.gov/18.40.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px3.info" title="Histogram Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p"><math altimg="m16.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="H\left(x\right)" class="ltx_Math" display="inline"><mrow><mi href="./1.16#E13" title="Heaviside function">H</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> being the Heaviside step-function, see (<a class="ltx_ref" href="1.16.html#E13" title="(1.16.13) ‣ §1.16(iv) Heaviside Function ‣ §1.16 Distributions ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.16.13</span></a>).</p>
+</div>
+<div class="ltx_para" id="Px3.p2">
+<p class="ltx_p">Equation (<a class="ltx_ref" href="18.40.html#E7" title="(18.40.7) ‣ Histogram Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.40.7</span></a>) provides step-histogram approximations to <math altimg="m41.png" altimg-height="29px" altimg-valign="-9px" altimg-width="88px" alttext="\int_{a}^{x}\,\mathrm{d}\mu(x)" class="ltx_Math" display="inline"><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mi>a</mi><mi href="./18.2#Px1.p2" title="real variable">x</mi></msubsup><mrow><mo href="./1.4#iv" lspace="0.167em" rspace="0em" title="differential of 𝑥">d</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, as shown in Figure <a class="ltx_ref" href="18.40.html#F1" title="Figure 18.40.1 ‣ Histogram Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.40.1</span></a> for <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="N=12" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>=</mo><mn>12</mn></mrow></math> and <math altimg="m9.png" altimg-height="17px" altimg-valign="-2px" altimg-width="35px" alttext="120" class="ltx_Math" display="inline"><mn>120</mn></math>,
+shown here for the repulsive Coulomb–Pollaczek OP’s of Figure <a class="ltx_ref" href="18.39.html#F2" title="Figure 18.39.2 ‣ The Coulomb–Pollaczek Polynomials ‣ §18.39(iv) Coulomb–Pollaczek Polynomials and J-Matrix Methods ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.39.2</span></a>, with the parameters as listed therein.</p>
+</div>
+<figure class="ltx_figure" id="F1"><a class="ltx_magnifiable" href="18.40.F1.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="192" id="F1.g1" src="18/40/F1.png" width="350"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 18.40.1: </span>Histogram approximations to the Repulsive Coulomb–Pollaczek, RCP,
+weight function integrated over <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="[-1,x)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t2.r1" stretchy="false" title="half-closed interval">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo href="./front/introduction#common.t2.r1" title="half-closed interval">,</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo href="./front/introduction#common.t2.r1" stretchy="false" title="half-closed interval">)</mo></mrow></math>, see Figure <a class="ltx_ref" href="18.39.html#F2" title="Figure 18.39.2 ‣ The Coulomb–Pollaczek Polynomials ‣ §18.39(iv) Coulomb–Pollaczek Polynomials and J-Matrix Methods ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.39.2</span></a> for an exact result,
+for <math altimg="m24.png" altimg-height="20px" altimg-valign="-4px" altimg-width="74px" alttext="Z=+1" class="ltx_Math" display="inline"><mrow><mi>Z</mi><mo>=</mo><mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, shown for <math altimg="m18.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="N=12" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>=</mo><mn>12</mn></mrow></math> and <math altimg="m17.png" altimg-height="18px" altimg-valign="-2px" altimg-width="82px" alttext="N=120" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>=</mo><mn>120</mn></mrow></math>.
+
+<a class="ltx_magnifiable ltx_icon" href="18.40.F1.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t2.r1" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="[\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t2.r1" stretchy="false" title="half-closed interval">[</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t2.r1" title="half-closed interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t2.r1" stretchy="false" title="half-closed interval">)</mo></mrow></math>: half-closed interval</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="18.40.html#Px3.p2" title="Histogram Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26.p1" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.p2" title="Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_title">Version 1.2.0 (March 27, 2024)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.F1" title="">http://dlmf.nist.gov/18.40.F1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.F1.pdf">pdf</a>, <a href="http://dlmf.nist.gov/18.40.F1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px3.info" title="Histogram Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="Px3.p3">
+<p class="ltx_p">The bottom and top of the steps at the <math altimg="m89.png" altimg-height="16px" altimg-valign="-5px" altimg-width="23px" alttext="x_{i}" class="ltx_Math" display="inline"><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi>i</mi></msub></math> are lower and upper bounds to <math altimg="m40.png" altimg-height="29px" altimg-valign="-9px" altimg-width="94px" alttext="\int_{a}^{x_{i}}\,\mathrm{d}\mu(x)" class="ltx_Math" display="inline"><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mi>a</mi><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mi>i</mi></msub></msubsup><mrow><mo href="./1.4#iv" lspace="0.167em" rspace="0em" title="differential of 𝑥">d</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> as made explicit via the <em class="ltx_emph ltx_font_italic">Chebyshev inequalities</em> discussed by
+<cite class="ltx_cite ltx_citemacro_citet">Shohat and Tamarkin (<a class="ltx_ref" href="bib/S.html#bib2973" title="The Problem of Moments">1970</a>, pp. 42–43)</cite>. Interpolation of the midpoints of the jumps followed by differentiation with respect to <math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math> yields a Stieltjes–Perron inversion to obtain <math altimg="m75.png" altimg-height="27px" altimg-valign="-7px" altimg-width="83px" alttext="w^{\mathrm{RCP}}(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mi>RCP</mi></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+to a precision of <math altimg="m51.png" altimg-height="17px" altimg-valign="-2px" altimg-width="37px" alttext="\sim 4" class="ltx_Math" display="inline"><mrow><mi></mi><mo>∼</mo><mn>4</mn></mrow></math> decimal digits for <math altimg="m17.png" altimg-height="18px" altimg-valign="-2px" altimg-width="82px" alttext="N=120" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>=</mo><mn>120</mn></mrow></math>. Convergence is <math altimg="m52.png" altimg-height="29px" altimg-valign="-9px" altimg-width="106px" alttext="\sim O\left(N^{-2}\right)" class="ltx_Math" display="inline"><mrow><mi></mi><mo>∼</mo><mrow><mi href="./2.1#E3" title="order not exceeding">O</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mrow><mo>−</mo><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow></mrow></math>.
+Results similar to these appear in <cite class="ltx_cite ltx_citemacro_citet">Langhoff<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/L.html#bib3042" title="Moment-theory investigations of photoabsorption and dispersion profiles in atoms and ions">1976</a>)</cite>
+in methods developed for physics applications, and which includes treatments of systems
+with discontinuities in <math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\mu(x)" class="ltx_Math" display="inline"><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+using what is referred to as the <em class="ltx_emph ltx_font_italic">Stieltjes derivative</em> which may be traced back to Stieltjes,
+as discussed by <cite class="ltx_cite ltx_citemacro_citet">Deltour (<a class="ltx_ref" href="bib/D.html#bib3123" title="The computation of lattice frequency distribution functions by means of continued fractions">1968</a>, Eq. 12)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Derivative Rule Approach</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Stieltjes%E2%80%93Perron%20inversion">Stieltjes–Perron inversion</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=derivative%20rule">derivative rule</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=graphic">graphic</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=histogram%20construction">histogram construction</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<p class="ltx_p">An alternate, and highly efficient, approach follows from the <em class="ltx_emph ltx_font_italic">derivative rule conjecture</em>, see <cite class="ltx_cite ltx_citemacro_citet">Yamani and Reinhardt (<a class="ltx_ref" href="bib/Y.html#bib3090" title="L -squared discretizations of the continuum: Radial kinetic energy and the Coulomb Hamiltonian">1975</a>)</cite>, and references therein, namely that</p>
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="68px" altimg-valign="-41px" altimg-width="215px" alttext="w(x_{i,N})\approx\frac{w_{i,N}}{\left.\frac{\mathrm{d}x(j,N)}{\mathrm{d}j}%
+\right|_{j=i}}." class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mfrac><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><msub><mrow><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>⁢</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>j</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi>j</mi></mrow></mfrac><mo>|</mo></mrow><mrow><mi>j</mi><mo>=</mo><mi>i</mi></mrow></msub></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m37.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m57.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r29" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>: open interval</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r12" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  weight function</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r13" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m78.png" altimg-height="16px" altimg-valign="-5px" altimg-width="30px" alttext="w_{x}" class="ltx_Math" display="inline"><msub><mi href="./18.1#i.t1.r13" title="weights">w</mi><mi href="./18.2#Px1.p2" title="real variable">x</mi></msub></math>:  weights</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="18.40.html#F2" title="In Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Figure 18.40.2</span></a>,
+<a class="ltx_ref" href="18.40.F2.mag.html" title="In §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Figure 18.40.2</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E8" title="">http://dlmf.nist.gov/18.40.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E8.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px4.info" title="Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">This allows Stieltjes–Perron inversion for the <math altimg="m74.png" altimg-height="26px" altimg-valign="-8px" altimg-width="74px" alttext="w(x_{i,N})" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math>, given the quadrature weights and points.
+Here <math altimg="m80.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="x(t,N)" class="ltx_Math" display="inline"><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>⁢</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math> is an interpolation of the abscissas <math altimg="m87.png" altimg-height="24px" altimg-valign="-8px" altimg-width="182px" alttext="x_{i,N},i=1,2,\dots,N" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><mo>,</mo><mi>i</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></mrow></math>, that is, <math altimg="m79.png" altimg-height="26px" altimg-valign="-8px" altimg-width="134px" alttext="x(i,N)=x_{i,N}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>⁢</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi>i</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow><mo>=</mo><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub></mrow></math>, allowing differentiation by <math altimg="m59.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="i" class="ltx_Math" display="inline"><mi>i</mi></math>.
+In what follows this is accomplished in two ways: i) via the Lagrange interpolation of §<a class="ltx_ref" href="3.3.html#i" title="§3.3(i) Lagrange Interpolation ‣ §3.3 Interpolation ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.3(i)</span></a> ; and ii)
+by constructing a pointwise continued fraction, or PWCF, as follows:</p>
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E9.png" altimg-height="55px" altimg-valign="-18px" altimg-width="540px" alttext="x(t,N)=\cfrac{x_{1,N}}{1+\cfrac{a_{1}(t-1)}{1+\cfrac{a_{2}(t-2)}{1+\cdots}}}%
+\frac{a_{N-1}(t-(N-1))}{1}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>⁢</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mn>1</mn><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><mrow><mn>1</mn><mo>+</mo></mrow></mfrac><mfrac><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo>+</mo></mrow></mfrac><mfrac><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo>+</mo></mrow></mfrac><mi mathvariant="normal">⋯</mi></mrow><mo>⁢</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>1</mn></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m72.png" altimg-height="25px" altimg-valign="-7px" altimg-width="94px" alttext="t\in(0,\infty)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi mathvariant="normal">∞</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m38.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r29" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m8.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="(\NVar{a},\NVar{b})" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi class="ltx_nvar">a</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi class="ltx_nvar">b</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math>: open interval</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r1" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m71.png" altimg-height="17px" altimg-valign="-2px" altimg-width="12px" alttext="t" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r1" title="real variable">t</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Source:</dt>
+<dd><cite class="ltx_cite ltx_citemacro_citet">Schlessinger (<a class="ltx_ref" href="bib/S.html#bib3075" title="Use of analyticity in the calculation of nonrelativistic scattering amplitudes">1968</a>)</cite></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E9" title="">http://dlmf.nist.gov/18.40.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E9.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px4.info" title="Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where the coefficients are defined recursively via <math altimg="m56.png" altimg-height="32px" altimg-valign="-13px" altimg-width="128px" alttext="a_{1}=\frac{x_{1,N}}{x_{2,N}}-1" class="ltx_Math" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mrow><mfrac><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mn>1</mn><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mn>2</mn><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub></mfrac><mo>−</mo><mn>1</mn></mrow></mrow></math>, and</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">18.40.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="65px" altimg-valign="-28px" altimg-width="362px" alttext="a_{\ell}=-1-\cfrac{2a_{\ell-1}}{1+\cfrac{3a_{\ell-2}}{1+\cdots}}\frac{\ell a_{%
+1}}{1-\frac{x_{1,N}}{x_{\ell+1,N}}}," class="ltx_Math" display="block"><mrow><mrow><msub><mi>a</mi><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi></msub><mo>=</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>−</mo><mrow><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mrow><mn>1</mn><mo>+</mo></mrow></mfrac><mfrac><mrow><mn>3</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi><mo>−</mo><mn>2</mn></mrow></msub></mrow><mrow><mn>1</mn><mo>+</mo></mrow></mfrac><mi mathvariant="normal">⋯</mi></mrow><mo>⁢</mo><mfrac><mrow><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mrow><mn>1</mn><mo>−</mo><mfrac><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mn>1</mn><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mrow><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub></mfrac></mrow></mfrac></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m34.png" altimg-height="22px" altimg-valign="-6px" altimg-width="152px" alttext="\ell=2,\dots,N-1" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>−</mo><mn>1</mn></mrow></mrow></mrow></math>.</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r4" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="13px" alttext="\ell" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r4" mathvariant="normal" title="nonnegative integer">ℓ</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26.p1" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.E10" title="">http://dlmf.nist.gov/18.40.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/18.40.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/18.40.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px4.info" title="Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">The PWCF <math altimg="m80.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="x(t,N)" class="ltx_Math" display="inline"><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>⁢</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mi href="./18.1#i.t1.r1" title="real variable">t</mi><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math> is a minimally oscillatory algebraic interpolation of the abscissas <math altimg="m87.png" altimg-height="24px" altimg-valign="-8px" altimg-width="182px" alttext="x_{i,N},i=1,2,\dots,N" class="ltx_Math" display="inline"><mrow><mrow><mrow><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub><mo>,</mo><mi>i</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px4.p2">
+<p class="ltx_p">Comparisons of the precisions of Lagrange and PWCF interpolations to obtain the derivatives,
+are shown in Figure <a class="ltx_ref" href="18.40.html#F2" title="Figure 18.40.2 ‣ Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.40.2</span></a>. The example chosen is inversion
+from the <math altimg="m31.png" altimg-height="22px" altimg-valign="-6px" altimg-width="61px" alttext="\alpha_{n},\beta_{n}" class="ltx_Math" display="inline"><mrow><msub><mi>α</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub><mo>,</mo><msub><mi>β</mi><mi href="./18.1#i.t1.r6" title="nonnegative integer">n</mi></msub></mrow></math> for the weight function for the repulsive Coulomb–Pollaczek,
+RCP, polynomials of (<a class="ltx_ref" href="18.39.html#E50" title="(18.39.50) ‣ The Coulomb–Pollaczek Polynomials ‣ §18.39(iv) Coulomb–Pollaczek Polynomials and J-Matrix Methods ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.39.50</span></a>).
+This is a challenging case as the desired <math altimg="m75.png" altimg-height="27px" altimg-valign="-7px" altimg-width="83px" alttext="w^{\mathrm{RCP}}(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mi>RCP</mi></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> on <math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="62px" alttext="[-1,1]" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></math>
+has an essential singularity at <math altimg="m81.png" altimg-height="19px" altimg-valign="-4px" altimg-width="70px" alttext="x=-1" class="ltx_Math" display="inline"><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<figure class="ltx_figure" id="F2"><a class="ltx_magnifiable" href="18.40.F2.mag.html" title="Magnify Figure"><img alt="See accompanying text" class="ltx_graphics ltx_centering ltx_img_landscape" height="206" id="F2.g1" src="18/40/F2.png" width="384"/></a>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 18.40.2: </span>Derivative Rule inversions for <math altimg="m75.png" altimg-height="27px" altimg-valign="-7px" altimg-width="83px" alttext="w^{\mathrm{RCP}}(x)" class="ltx_Math" display="inline"><mrow><msup><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mi>RCP</mi></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> carried out via Lagrange
+and PWCF interpolations. Shown are the absolute errors of approximation (<a class="ltx_ref" href="18.40.html#E8" title="(18.40.8) ‣ Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.40.8</span></a>) at the points
+<math altimg="m88.png" altimg-height="19px" altimg-valign="-8px" altimg-width="43px" alttext="x_{i,N}" class="ltx_Math" display="inline"><msub><mi href="./18.2#Px1.p2" title="real variable">x</mi><mrow><mi>i</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></msub></math>, <math altimg="m58.png" altimg-height="22px" altimg-valign="-6px" altimg-width="134px" alttext="i=1,2,\dots,N" class="ltx_Math" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></mrow></mrow></math> for <math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="N=40" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r7" title="positive integer">N</mi><mo>=</mo><mn>40</mn></mrow></math>. For the derivative rule
+Lagrange interpolation (red points) gives
+<math altimg="m49.png" altimg-height="17px" altimg-valign="-2px" altimg-width="47px" alttext="\sim 15" class="ltx_Math" display="inline"><mrow><mi></mi><mo>∼</mo><mn>15</mn></mrow></math> digits in the central region, while PWCF interpolation (blue points) gives <math altimg="m50.png" altimg-height="17px" altimg-valign="-2px" altimg-width="47px" alttext="\sim 25" class="ltx_Math" display="inline"><mrow><mi></mi><mo>∼</mo><mn>25</mn></mrow></math>.
+
+<a class="ltx_magnifiable ltx_icon" href="18.40.F2.mag.html" title="Magnify Figure"><span>Magnify</span></a>
+</figcaption>
+<div class="ltx_metadata ltx_info" id="F2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="18.1.html#i.t1.r7" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>:  positive integer</a>,
+<a class="ltx_ref" href="18.1.html#i.t1.r12" title="§18.1(i) Special Notation ‣ §18.1 Notation ‣ Notation ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  weight function</a> and
+<a class="ltx_ref" href="18.2.html#Px1.p2" title="Orthogonality on Intervals ‣ §18.2(i) Definition ‣ §18.2 General Orthogonal Polynomials ‣ General Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./18.2#Px1.p2" title="real variable">x</mi></math>:  real variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="18.40.html#Px4.p2" title="Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#Px4.p3" title="Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.I2.ix4.I2.ix26.p1" title="In Erratum (V1.2.0) for Chapter 18 Additions ‣ Other Changes ‣ Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.2.0) Section <span class="ltx_text ltx_ref_tag">18.40</span></span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.2.0.p2" title="Version 1.2.0 (March 27, 2024) ‣ Errata"><span class="ltx_text ltx_ref_title">Version 1.2.0 (March 27, 2024)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/18.40.F2" title="">http://dlmf.nist.gov/18.40.F2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/18.40.F2.pdf">pdf</a>, <a href="http://dlmf.nist.gov/18.40.F2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="18.40.html#Px4.info" title="Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#ii.info" title="§18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40(ii)</span></a>,
+<a class="ltx_ref" href="18.40.html#info" title="§18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.40</span></a> and
+<a class="ltx_ref" href="18.html#info" title="Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">Ch.18</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</figure>
+<div class="ltx_para" id="Px4.p3">
+<p class="ltx_p">Further, <em class="ltx_emph ltx_font_italic">exponential</em> convergence in <math altimg="m21.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi href="./18.1#i.t1.r7" title="positive integer">N</mi></math>, via the Derivative Rule,
+rather than the power-law convergence of the histogram methods,
+is found for the inversion of Gegenbauer, Attractive, as well as Repulsive,
+Coulomb–Pollaczek, and Hermite weights and zeros to approximate <math altimg="m73.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="w(x)" class="ltx_Math" display="inline"><mrow><mi href="./18.1#i.t1.r12" title="weight function">w</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> for these OP systems
+on <math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="99px" alttext="x\in[-1,1]" class="ltx_Math" display="inline"><mrow><mi href="./18.2#Px1.p2" title="real variable">x</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo href="./front/introduction#common.t1.r30" title="closed interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r30" stretchy="false" title="closed interval">]</mo></mrow></mrow></math> and <math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="87px" alttext="(-\infty,\infty)" class="ltx_Math" display="inline"><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mi mathvariant="normal">∞</mi><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></math> respectively, <cite class="ltx_cite ltx_citemacro_citet">Reinhardt (<a class="ltx_ref" href="bib/R.html#bib3067" title="Universality properties of Gaussian quadrature, the derivative rule, and a novel approach to Stieltjes inversion">2018</a>)</cite>,
+and <cite class="ltx_cite ltx_citemacro_citet">Reinhardt (<a class="ltx_ref" href="bib/R.html#bib3068" title="Relationships between the zeros, weights, and weight functions of orthogonal polynomials: Derivative rule approach to Stieltjes and spectral imaging">2021b</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Reinhardt (<a class="ltx_ref" href="bib/R.html#bib3069" title="Erratum to:Relationships between the zeros, weights, and weight functions of orthogonal polynomials: Derivative rule approach to Stieltjes and spectral imaging">2021a</a>)</cite>.
+Achieving precisions at this level shown above
+requires higher than normal computational precision, see <cite class="ltx_cite ltx_citemacro_citet">Gautschi (<a class="ltx_ref" href="bib/G.html#bib3017" title="Variable-precision recurrence coefficients for nonstandard orthogonal polynomials">2009</a>)</cite>.
+In Figure <a class="ltx_ref" href="18.40.html#F2" title="Figure 18.40.2 ‣ Derivative Rule Approach ‣ §18.40(ii) The Classical Moment Problem ‣ §18.40 Methods of Computation ‣ Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.40.2</span></a> the approximations were carried out with a precision of 50 decimal digits.</p>
+</div>
+</section>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="18.39.html" rel="prev" title="In Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.39 </span>Applications in the Physical Sciences</span></a><a class="ltx_ref" href="18.41.html" rel="next" title="In Computation ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">18.41 </span>Tables</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

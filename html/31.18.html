@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §31.18 Methods of Computation ‣ Computation ‣ Chapter 31 Heun Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/31.18";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="31.html#PT4" rel="up" title="Computation ‣ Chapter 31 Heun Functions"/>
+<link href="31.html" rel="up up" title="Chapter 31 Heun Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="31.17.html" rel="prev" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="32.html" rel="next" title="Chapter 32 Painlevé Transcendents"/>
+<link href="31.1.html" rel="section" title="§31.1 Special Notation ‣ Notation ‣ Chapter 31 Heun Functions"/>
+<link href="31.2.html" rel="section" title="§31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.3.html" rel="section" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.4.html" rel="section" title="§31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.5.html" rel="section" title="§31.5 Solutions Analytic at Three Singularities: Heun Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.6.html" rel="section" title="§31.6 Path-Multiplicative Solutions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.7.html" rel="section" title="§31.7 Relations to Other Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.8.html" rel="section" title="§31.8 Solutions via Quadratures ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.9.html" rel="section" title="§31.9 Orthogonality ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.10.html" rel="section" title="§31.10 Integral Equations and Representations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.11.html" rel="section" title="§31.11 Expansions in Series of Hypergeometric Functions ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.12.html" rel="section" title="§31.12 Confluent Forms of Heun’s Equation ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.13.html" rel="section" title="§31.13 Asymptotic Approximations ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.14.html" rel="section" title="§31.14 General Fuchsian Equation ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.15.html" rel="section" title="§31.15 Stieltjes Polynomials ‣ Properties ‣ Chapter 31 Heun Functions"/>
+<link href="31.16.html" rel="section" title="§31.16 Mathematical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="31.17.html" rel="section" title="§31.17 Physical Applications ‣ Applications ‣ Chapter 31 Heun Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Heun functions, Heun’s equation, computation, computation of solutions" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="31.18.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="31.18.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="31.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31 </span>Heun Functions</span></a><a class="ltx_ref" href="31.html#PT4" rel="up" title="In Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="31.17.html" rel="prev" title="In Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.17 </span>Physical Applications</span></a><a class="ltx_ref" href="32.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">32 </span>Painlevé Transcendents</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§31.18 </span>Methods of Computation</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20functions">Heun functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Heun%20equation">Heun’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation%20of%20solutions">computation of solutions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="31.18.html" title="">http://dlmf.nist.gov/31.18</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="31.html#info" title="Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">Ch.31</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="p1">
+<p class="ltx_p">Independent solutions of (<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>) can be computed in the
+neighborhoods of singularities from their Fuchs–Frobenius expansions
+(§<a class="ltx_ref" href="31.3.html" title="§31.3 Basic Solutions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.3</span></a>), and elsewhere by numerical integration of
+(<a class="ltx_ref" href="31.2.html#E1" title="(31.2.1) ‣ §31.2(i) Heun’s Equation ‣ §31.2 Differential Equations ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.2.1</span></a>). Subsequently, the coefficients in the necessary
+connection formulas can be calculated numerically by matching the values of
+solutions and their derivatives at suitably chosen values of <math altimg="m1.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./31.1#t1.r2" title="complex variable">z</mi></math>; see
+<cite class="ltx_cite ltx_citemacro_citet">Laĭ (<a class="ltx_ref" href="bib/L.html#bib1386" title="The two-point connection problem for differential equations of the Heun class">1994</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Lay<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/L.html#bib1387" title="Asymptotic and numeric study of eigenvalues of the double confluent Heun equation">1998</a>)</cite>. Care needs to be taken to choose
+integration paths in such a way that the wanted solution is growing in
+magnitude along the path at least as rapidly as all other solutions
+(§<a class="ltx_ref" href="3.7.html#ii" title="§3.7(ii) Taylor-Series Method: Initial-Value Problems ‣ §3.7 Ordinary Differential Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.7(ii)</span></a>). The computation of the accessory parameter for
+the Heun functions is carried out via the continued-fraction equations
+(<a class="ltx_ref" href="31.4.html#E2" title="(31.4.2) ‣ §31.4 Solutions Analytic at Two Singularities: Heun Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.4.2</span></a>) and (<a class="ltx_ref" href="31.11.html#E13" title="(31.11.13) ‣ §31.11(iii) Type I ‣ §31.11 Expansions in Series of Hypergeometric Functions ‣ Properties ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_tag">31.11.13</span></a>) in the same way as for the
+Mathieu, Lamé, and spheroidal wave functions in
+Chapters <a class="ltx_ref" href="28.html" title="Chapter 28 Mathieu Functions and Hill’s Equation"><span class="ltx_text ltx_ref_tag">28</span></a>–<a class="ltx_ref" href="30.html" title="Chapter 30 Spheroidal Wave Functions"><span class="ltx_text ltx_ref_tag">30</span></a>.</p>
+</div>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="31.17.html" rel="prev" title="In Applications ‣ Chapter 31 Heun Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">31.17 </span>Physical Applications</span></a><a class="ltx_ref" href="32.html" rel="next" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">32 </span>Painlevé Transcendents</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

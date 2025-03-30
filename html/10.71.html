@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/10.71";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="10.html#PT5" rel="up" title="Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.html" rel="up up" title="Chapter 10 Bessel Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="10.70.html" rel="prev" title="§10.70 Zeros ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.72.html" rel="next" title="§10.72 Mathematical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.1.html" rel="section" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.2.html" rel="section" title="§10.2 Definitions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.3.html" rel="section" title="§10.3 Graphics ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.4.html" rel="section" title="§10.4 Connection Formulas ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.5.html" rel="section" title="§10.5 Wronskians and Cross-Products ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.6.html" rel="section" title="§10.6 Recurrence Relations and Derivatives ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.7.html" rel="section" title="§10.7 Limiting Forms ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.8.html" rel="section" title="§10.8 Power Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.9.html" rel="section" title="§10.9 Integral Representations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.10.html" rel="section" title="§10.10 Continued Fractions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.11.html" rel="section" title="§10.11 Analytic Continuation ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.12.html" rel="section" title="§10.12 Generating Function and Associated Series ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.13.html" rel="section" title="§10.13 Other Differential Equations ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.14.html" rel="section" title="§10.14 Inequalities; Monotonicity ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.15.html" rel="section" title="§10.15 Derivatives with Respect to Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.16.html" rel="section" title="§10.16 Relations to Other Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.17.html" rel="section" title="§10.17 Asymptotic Expansions for Large Argument ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.18.html" rel="section" title="§10.18 Modulus and Phase Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.19.html" rel="section" title="§10.19 Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.20.html" rel="section" title="§10.20 Uniform Asymptotic Expansions for Large Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.21.html" rel="section" title="§10.21 Zeros ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.22.html" rel="section" title="§10.22 Integrals ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.23.html" rel="section" title="§10.23 Sums ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.24.html" rel="section" title="§10.24 Functions of Imaginary Order ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.25.html" rel="section" title="§10.25 Definitions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.26.html" rel="section" title="§10.26 Graphics ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.27.html" rel="section" title="§10.27 Connection Formulas ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.28.html" rel="section" title="§10.28 Wronskians and Cross-Products ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.29.html" rel="section" title="§10.29 Recurrence Relations and Derivatives ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.30.html" rel="section" title="§10.30 Limiting Forms ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.31.html" rel="section" title="§10.31 Power Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.32.html" rel="section" title="§10.32 Integral Representations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.33.html" rel="section" title="§10.33 Continued Fractions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.34.html" rel="section" title="§10.34 Analytic Continuation ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.35.html" rel="section" title="§10.35 Generating Function and Associated Series ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.36.html" rel="section" title="§10.36 Other Differential Equations ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.37.html" rel="section" title="§10.37 Inequalities; Monotonicity ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.38.html" rel="section" title="§10.38 Derivatives with Respect to Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.39.html" rel="section" title="§10.39 Relations to Other Functions ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.40.html" rel="section" title="§10.40 Asymptotic Expansions for Large Argument ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.41.html" rel="section" title="§10.41 Asymptotic Expansions for Large Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.42.html" rel="section" title="§10.42 Zeros ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.43.html" rel="section" title="§10.43 Integrals ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.44.html" rel="section" title="§10.44 Sums ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.45.html" rel="section" title="§10.45 Functions of Imaginary Order ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.46.html" rel="section" title="§10.46 Generalized and Incomplete Bessel Functions; Mittag-Leffler Function ‣ Modified Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.47.html" rel="section" title="§10.47 Definitions and Basic Properties ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.48.html" rel="section" title="§10.48 Graphs ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.49.html" rel="section" title="§10.49 Explicit Formulas ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.50.html" rel="section" title="§10.50 Wronskians and Cross-Products ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.51.html" rel="section" title="§10.51 Recurrence Relations and Derivatives ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.52.html" rel="section" title="§10.52 Limiting Forms ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.53.html" rel="section" title="§10.53 Power Series ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.54.html" rel="section" title="§10.54 Integral Representations ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.55.html" rel="section" title="§10.55 Continued Fractions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.56.html" rel="section" title="§10.56 Generating Functions ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.57.html" rel="section" title="§10.57 Uniform Asymptotic Expansions for Large Order ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.58.html" rel="section" title="§10.58 Zeros ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.59.html" rel="section" title="§10.59 Integrals ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.60.html" rel="section" title="§10.60 Sums ‣ Spherical Bessel Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.61.html" rel="section" title="§10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.62.html" rel="section" title="§10.62 Graphs ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.63.html" rel="section" title="§10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.64.html" rel="section" title="§10.64 Integral Representations ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.65.html" rel="section" title="§10.65 Power Series ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.66.html" rel="section" title="§10.66 Expansions in Series of Bessel Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.67.html" rel="section" title="§10.67 Asymptotic Expansions for Large Argument ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.68.html" rel="section" title="§10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.69.html" rel="section" title="§10.69 Uniform Asymptotic Expansions for Large Order ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.70.html" rel="section" title="§10.70 Zeros ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"/>
+<link href="10.72.html" rel="section" title="§10.72 Mathematical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.73.html" rel="section" title="§10.73 Physical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"/>
+<link href="10.74.html" rel="section" title="§10.74 Methods of Computation ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.75.html" rel="section" title="§10.75 Tables ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.76.html" rel="section" title="§10.76 Approximations ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="10.77.html" rel="section" title="§10.77 Software ‣ Computation ‣ Chapter 10 Bessel Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Kelvin functions, Laplace transforms, compendia, definite, indefinite, integrals" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="10.71.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="10.71.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="10.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Bessel Functions</span></a><a class="ltx_ref" href="10.html#PT5" rel="up" title="In Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title">Kelvin Functions</span></a><a class="ltx_ref" href="10.70.html" rel="prev" title="In Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.70 </span>Zeros</span></a><a class="ltx_ref" href="10.72.html" rel="next" title="In Applications ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.72 </span>Mathematical Applications</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§10.71 </span>Integrals</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="10.1.html#t1.r1" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.1</span></a>,
+<a class="ltx_ref" href="10.61.html#i.p1" title="§10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.61(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="10.71.html" title="">http://dlmf.nist.gov/10.71</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="10.71.html#i"><span class="ltx_tag ltx_tag_subsection">§10.71(i) </span>Indefinite Integrals</a></li>
+<li class="ltx_tocentry"><a href="10.71.html#ii"><span class="ltx_tag ltx_tag_subsection">§10.71(ii) </span>Definite Integrals</a></li>
+<li class="ltx_tocentry"><a href="10.71.html#iii"><span class="ltx_tag ltx_tag_subsection">§10.71(iii) </span>Compendia</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.71(i) </span>Indefinite Integrals</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=indefinite">indefinite</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Notes:</dt>
+<dd>Differentiate and use (<a class="ltx_ref" href="10.63.html#E2" title="(10.63.2) ‣ §10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.2</span></a>) and (<a class="ltx_ref" href="10.68.html#E5" title="(10.68.5) ‣ §10.68(ii) Basic Properties ‣ §10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.68.5</span></a>).
+See also <cite class="ltx_cite ltx_citemacro_citet">Young and Kirk (<a class="ltx_ref" href="bib/Y.html#bib2474" title="Bessel Functions. Part IV: Kelvin Functions">1964</a>, pp. xvi–xvii)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.i" title="">http://dlmf.nist.gov/10.71.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">In the following equations <math altimg="m31.png" altimg-height="22px" altimg-valign="-6px" altimg-width="54px" alttext="f_{\nu},g_{\nu}" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>,</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></math> is any one of the four ordered pairs
+given in (<a class="ltx_ref" href="10.63.html#E1" title="(10.63.1) ‣ §10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.1</span></a>), and <math altimg="m28.png" altimg-height="29px" altimg-valign="-6px" altimg-width="54px" alttext="\widehat{f}_{\nu},\widehat{g}_{\nu}" class="ltx_Math" display="inline"><mrow><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>,</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></math> is either the
+same ordered pair or any other ordered pair in (<a class="ltx_ref" href="10.63.html#E1" title="(10.63.1) ‣ §10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.63.1</span></a>).</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx1">
+<tbody id="E1">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="53px" altimg-valign="-20px" altimg-width="121px" alttext="\displaystyle\int x^{1+\nu}f_{\nu}\,\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>+</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="63px" altimg-valign="-21px" altimg-width="430px" alttext="\displaystyle=-\frac{x^{1+\nu}}{\sqrt{2}}(f_{\nu+1}-g_{\nu+1})=-x^{1+\nu}\left%
+(\frac{\nu}{x}g_{\nu}-g_{\nu}^{\prime}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>+</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><msqrt><mn>2</mn></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>+</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mi href="./10.1#t1.r3" title="real variable">x</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.21</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E1" title="">http://dlmf.nist.gov/10.71.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E2">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="53px" altimg-valign="-20px" altimg-width="122px" alttext="\displaystyle\int x^{1-\nu}f_{\nu}\,\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>−</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="63px" altimg-valign="-21px" altimg-width="399px" alttext="\displaystyle=\frac{x^{1-\nu}}{\sqrt{2}}(f_{\nu-1}-g_{\nu-1})=x^{1-\nu}\left(%
+\frac{\nu}{x}g_{\nu}+g_{\nu}^{\prime}\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>−</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><msqrt><mn>2</mn></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>1</mn><mo>−</mo><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mi href="./10.1#t1.r3" title="real variable">x</mi></mfrac></mstyle><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>+</mo><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.22</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E2" title="">http://dlmf.nist.gov/10.71.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx2">
+<tbody id="E3">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="53px" altimg-valign="-20px" altimg-width="192px" alttext="\displaystyle\int x(f_{\nu}\widehat{g}_{\nu}-g_{\nu}\widehat{f}_{\nu})\,%
+\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="88px" altimg-valign="-21px" altimg-width="760px" alttext="\displaystyle=\frac{x}{2\sqrt{2}}\left(\widehat{f}_{\nu}(f_{\nu+1}+g_{\nu+1})-%
+\widehat{g}_{\nu}(f_{\nu+1}-g_{\nu+1})-f_{\nu}(\widehat{f}_{\nu+1}+\widehat{g}%
+_{\nu+1})+g_{\nu}(\widehat{f}_{\nu+1}-\widehat{g}_{\nu+1})\right)=\tfrac{1}{2}%
+x(f_{\nu}^{\prime}\widehat{f}_{\nu}-f_{\nu}\widehat{f}_{\nu}^{\prime}+g_{\nu}^%
+{\prime}\widehat{g}_{\nu}-g_{\nu}\widehat{g}^{\prime}_{\nu})," class="ltx_Math" display="inline"><mrow><mtable align="baseline 1" columnalign="left" columnspacing="0.1em" displaystyle="true"><mtr><mtd class="ltx_align_left"><mi></mi></mtd><mtd class="ltx_align_left"><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./10.1#t1.r3" title="real variable">x</mi><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"></mtd><mtd class="ltx_align_left"><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msubsup><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup></mrow></mrow><mo>+</mo><mrow><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msubsup><mover accent="true"><mi>g</mi><mo>^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>,
+<a class="ltx_ref" href="10.71.html#i.p1" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m29.png" altimg-height="29px" altimg-valign="-6px" altimg-width="25px" alttext="\widehat{f}_{\nu}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.71.html#i.p1" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m30.png" altimg-height="23px" altimg-valign="-6px" altimg-width="25px" alttext="\widehat{g}_{\nu}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.23</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E3" title="">http://dlmf.nist.gov/10.71.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E4">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="53px" altimg-valign="-20px" altimg-width="192px" alttext="\displaystyle\int x(f_{\nu}\widehat{g}_{\nu}+g_{\nu}\widehat{f}_{\nu})\,%
+\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="34px" altimg-valign="-9px" altimg-width="646px" alttext="\displaystyle=\tfrac{1}{4}x^{2}(2f_{\nu}\widehat{g}_{\nu}-f_{\nu-1}\widehat{g}%
+_{\nu+1}-f_{\nu+1}\widehat{g}_{\nu-1}+2g_{\nu}\widehat{f}_{\nu}-g_{\nu-1}%
+\widehat{f}_{\nu+1}-g_{\nu+1}\widehat{f}_{\nu-1})." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>,
+<a class="ltx_ref" href="10.71.html#i.p1" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m29.png" altimg-height="29px" altimg-valign="-6px" altimg-width="25px" alttext="\widehat{f}_{\nu}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">f</mi><mo href="./10.71#i.p1" title="𝑓̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.71.html#i.p1" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m30.png" altimg-height="23px" altimg-valign="-6px" altimg-width="25px" alttext="\widehat{g}_{\nu}" class="ltx_Math" display="inline"><msub><mover accent="true"><mi href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">g</mi><mo href="./10.71#i.p1" title="𝑔̂_𝜈 a Kelvin function">^</mo></mover><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.24</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E4" title="">http://dlmf.nist.gov/10.71.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="54px" altimg-valign="-21px" altimg-width="737px" alttext="\int x(f_{\nu}^{2}+g_{\nu}^{2})\,\mathrm{d}x=x(f_{\nu}g_{\nu}^{\prime}-f_{\nu}%
+^{\prime}g_{\nu})=-\frac{x}{\sqrt{2}}(f_{\nu}f_{\nu+1}+g_{\nu}g_{\nu+1}-f_{\nu%
+}g_{\nu+1}+f_{\nu+1}g_{\nu})," class="ltx_Math" display="block"><mrow><mrow><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup></mrow><mo>−</mo><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mi href="./10.1#t1.r3" title="real variable">x</mi><msqrt><mn>2</mn></msqrt></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.25</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E5" title="">http://dlmf.nist.gov/10.71.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equationgroup ltx_eqn_table" id="EGx3">
+<tbody id="E6">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="53px" altimg-valign="-20px" altimg-width="110px" alttext="\displaystyle\int xf_{\nu}g_{\nu}\,\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="42px" altimg-valign="-9px" altimg-width="365px" alttext="\displaystyle=\tfrac{1}{4}x^{2}\left(2f_{\nu}g_{\nu}-f_{\nu-1}g_{\nu+1}-f_{\nu%
++1}g_{\nu-1}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.26</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E6" title="">http://dlmf.nist.gov/10.71.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+<tbody id="E7">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">10.71.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="53px" altimg-valign="-20px" altimg-width="153px" alttext="\displaystyle\int x(f_{\nu}^{2}-g_{\nu}^{2})\,\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo>−</mo><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="43px" altimg-valign="-9px" altimg-width="384px" alttext="\displaystyle=\tfrac{1}{2}x^{2}\left(f_{\nu}^{2}-f_{\nu-1}f_{\nu+1}-g_{\nu}^{2%
+}+g_{\nu-1}g_{\nu+1}\right)." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi href="./10.1#t1.r3" title="real variable">x</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msubsup><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo>−</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>−</mo><msubsup><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mrow><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a>,
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>,
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m32.png" altimg-height="22px" altimg-valign="-6px" altimg-width="25px" alttext="f_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑓_𝜈 a Kelvin function">f</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a> and
+<a class="ltx_ref" href="10.63.html#i.p1" title="§10.63(i) ber_𝜈𝑥, bei_𝜈𝑥, ker_𝜈𝑥, kei_𝜈𝑥 ‣ §10.63 Recurrence Relations and Derivatives ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m33.png" altimg-height="17px" altimg-valign="-6px" altimg-width="25px" alttext="g_{\nu}" class="ltx_Math" display="inline"><msub><mi href="./10.63#i.p1" title="𝑔_𝜈 a Kelvin function">g</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub></math> a Kelvin function</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">9.9.27</span></span>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E7" title="">http://dlmf.nist.gov/10.71.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Examples</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equationgroup ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">10.71.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="59px" altimg-valign="-20px" altimg-width="161px" alttext="\displaystyle\int x{M_{\nu}}^{2}\left(x\right)\,\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><msubsup><mi href="./10.18#E1" title="modulus of Bessel functions">M</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="28px" altimg-valign="-7px" altimg-width="310px" alttext="\displaystyle=x(\operatorname{ber}_{\nu}x\operatorname{bei}_{\nu}'x-%
+\operatorname{ber}_{\nu}'x\operatorname{bei}_{\nu}x)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>−</mo><mrow><mrow><msubsup><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="59px" altimg-valign="-20px" altimg-width="157px" alttext="\displaystyle\int x{N_{\nu}}^{2}\left(x\right)\,\mathrm{d}x" class="ltx_Math" display="inline"><mstyle displaystyle="true"><mrow><mo href="./1.4#iv" title="integral">∫</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><msubsup><mi href="./10.18#E2" title="modulus of derivatives of Bessel functions">N</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="28px" altimg-valign="-7px" altimg-width="303px" alttext="\displaystyle=x(\operatorname{ker}_{\nu}x\operatorname{kei}_{\nu}'x-%
+\operatorname{ker}_{\nu}'x\operatorname{kei}_{\nu}x)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msubsup><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow><mo>−</mo><mrow><mrow><msubsup><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi><mo>′</mo></msubsup><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo lspace="0.167em">⁡</mo><mi href="./10.1#t1.r3" title="real variable">x</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="73px" alttext="\operatorname{bei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">bei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E1" title="(10.61.1) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{ber}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E1" title="Kelvin function">ber</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="71px" alttext="\operatorname{kei}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">kei</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="10.61.html#E2" title="(10.61.2) ‣ §10.61(i) Definitions ‣ §10.61 Definitions and Basic Properties ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="74px" alttext="\operatorname{ker}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.61#E2" title="Kelvin function">ker</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: Kelvin function</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="10.18.html#E1" title="(10.18.1) ‣ §10.18(i) Definitions ‣ §10.18 Modulus and Phase Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="M_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.18#E1" title="modulus of Bessel functions">M</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: modulus of Bessel functions</a>,
+<a class="ltx_ref" href="10.18.html#E2" title="(10.18.2) ‣ §10.18(i) Definitions ‣ §10.18 Modulus and Phase Functions ‣ Bessel and Hankel Functions ‣ Chapter 10 Bessel Functions"><math altimg="m19.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="N_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.18#E2" title="modulus of derivatives of Bessel functions">N</mi><mi class="ltx_nvar" href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>: modulus of derivatives of Bessel functions</a>,
+<a class="ltx_ref" href="10.1.html#t1.r3" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./10.1#t1.r3" title="real variable">x</mi></math>:  real variable</a> and
+<a class="ltx_ref" href="10.1.html#t1.r5" title="§10.1 Special Notation ‣ Notation ‣ Chapter 10 Bessel Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\nu" class="ltx_Math" display="inline"><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></math>:  complex parameter</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.E8" title="">http://dlmf.nist.gov/10.71.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/10.71.E8a.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E8b.tex">TeX</a>, <a href="http://dlmf.nist.gov/10.71.E8a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E8b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/10.71.E8a.png">png</a>, <a href="http://dlmf.nist.gov/10.71.E8b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#Px1.info" title="Examples ‣ §10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#i.info" title="§10.71(i) Indefinite Integrals ‣ §10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71(i)</span></a>,
+<a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m18.png" altimg-height="25px" altimg-valign="-7px" altimg-width="66px" alttext="M_{\nu}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.18#E1" title="modulus of Bessel functions">M</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="N_{\nu}\left(x\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./10.18#E2" title="modulus of derivatives of Bessel functions">N</mi><mi href="./10.1#t1.r5" title="complex parameter">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi href="./10.1#t1.r3" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> are the modulus
+functions introduced in §<a class="ltx_ref" href="10.68.html#i" title="§10.68(i) Definitions ‣ §10.68 Modulus and Phase Functions ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">10.68(i)</span></a>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.71(ii) </span>Definite Integrals</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definite">definite</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.ii" title="">http://dlmf.nist.gov/10.71.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">See <cite class="ltx_cite ltx_citemacro_citet">Kerr (<a class="ltx_ref" href="bib/K.html#bib1258" title="An indirect method for evaluating certain infinite integrals">1978</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Glasser (<a class="ltx_ref" href="bib/G.html#bib944" title="A method for evaluating certain Bessel integrals">1979</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§10.71(iii) </span>Compendia</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Kelvin%20functions">Kelvin functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20transforms">Laplace transforms</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=compendia">compendia</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definite">definite</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=integrals">integrals</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/10.71.iii" title="">http://dlmf.nist.gov/10.71.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="10.71.html#info" title="§10.71 Integrals ‣ Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.71</span></a> and
+<a class="ltx_ref" href="10.html#info" title="Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">Ch.10</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">For infinite double integrals involving Kelvin functions see
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1903" title="Integrals and Series: Special Functions, Vol. 2">1986b</a>, pp. 630–631)</cite>.</p>
+</div>
+<div class="ltx_para" id="iii.p2">
+<p class="ltx_p">For direct and inverse Laplace transforms of Kelvin functions see
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1906" title="Integrals and Series: Direct Laplace Transforms, Vol. 4">1992a</a>, §3.19)</cite> and
+<cite class="ltx_cite ltx_citemacro_citet">Prudnikov<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/P.html#bib1907" title="Integrals and Series: Inverse Laplace Transforms, Vol. 5">1992b</a>, §3.19)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="10.70.html" rel="prev" title="In Kelvin Functions ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.70 </span>Zeros</span></a><a class="ltx_ref" href="10.72.html" rel="next" title="In Applications ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.72 </span>Mathematical Applications</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/7.12";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="7.html#PT2" rel="up" title="Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.html" rel="up up" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="index.html" rel="start" title=""/>
+<link href="7.11.html" rel="prev" title="§7.11 Relations to Other Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.13.html" rel="next" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.1.html" rel="section" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.2.html" rel="section" title="§7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.3.html" rel="section" title="§7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.4.html" rel="section" title="§7.4 Symmetry ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.5.html" rel="section" title="§7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.6.html" rel="section" title="§7.6 Series Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.7.html" rel="section" title="§7.7 Integral Representations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.8.html" rel="section" title="§7.8 Inequalities ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.9.html" rel="section" title="§7.9 Continued Fractions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.10.html" rel="section" title="§7.10 Derivatives ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.11.html" rel="section" title="§7.11 Relations to Other Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.13.html" rel="section" title="§7.13 Zeros ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.14.html" rel="section" title="§7.14 Integrals ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.15.html" rel="section" title="§7.15 Sums ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.16.html" rel="section" title="§7.16 Generalized Error Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.17.html" rel="section" title="§7.17 Inverse Error Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.18.html" rel="section" title="§7.18 Repeated Integrals of the Complementary Error Function ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.19.html" rel="section" title="§7.19 Voigt Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.20.html" rel="section" title="§7.20 Mathematical Applications ‣ Applications ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.21.html" rel="section" title="§7.21 Physical Applications ‣ Applications ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.22.html" rel="section" title="§7.22 Methods of Computation ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.23.html" rel="section" title="§7.23 Tables ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.24.html" rel="section" title="§7.24 Approximations ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.25.html" rel="section" title="§7.25 Software ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="7.SB1.html" rel="sidebar" title="Sidebar 7.SB1: Diffraction from a Straightedge ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Fresnel integrals, Goodwin–Staton integral, Stokes phenomenon, asymptotic expansion, asymptotic expansions, auxiliary functions for Fresnel integrals, complementary error function, error functions, exponentially-improved" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="7.12.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="7.12.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="7.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Error Functions, Dawson’s and Fresnel Integrals</span></a><a class="ltx_ref" href="7.html#PT2" rel="up" title="In Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title">Properties</span></a><a class="ltx_ref" href="7.11.html" rel="prev" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.11 </span>Relations to Other Functions</span></a><a class="ltx_ref" href="7.13.html" rel="next" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.13 </span>Zeros</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§7.12 </span>Asymptotic Expansions</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="7.12.html" title="">http://dlmf.nist.gov/7.12</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="7.12.html#i"><span class="ltx_tag ltx_tag_subsection">§7.12(i) </span>Complementary Error Function</a></li>
+<li class="ltx_tocentry"><a href="7.12.html#ii"><span class="ltx_tag ltx_tag_subsection">§7.12(ii) </span>Fresnel Integrals</a></li>
+<li class="ltx_tocentry"><a href="7.12.html#iii"><span class="ltx_tag ltx_tag_subsection">§7.12(iii) </span>Goodwin–Staton Integral</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.12(i) </span>Complementary Error Function</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Stokes%20phenomenon">Stokes phenomenon</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions">asymptotic expansions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=complementary%20error%20function">complementary error function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=error%20functions">error functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exponentially-improved">exponentially-improved</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="2.11.html#iv.p2" title="§2.11(iv) Stokes Phenomenon ‣ §2.11 Remainder Terms; Stokes Phenomenon ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">§2.11(iv)</span></a>,
+<a class="ltx_ref" href="7.12.html#ii.p6" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.3.html#F6" title="In §7.3(ii) Complex Variable ‣ §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.6</span></a>,
+<a class="ltx_ref" href="7.3.F6.mag.html" title="In §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.6</span></a>,
+<a class="ltx_ref" href="7.3.F6.viz.html" title="In §7.3 Graphics ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Figure 7.3.6</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.i" title="">http://dlmf.nist.gov/7.12.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">As <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="68px" alttext="z\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">7.12.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m2.png" altimg-height="20px" altimg-valign="-2px" altimg-width="54px" alttext="\displaystyle\operatorname{erfc}z" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="67px" altimg-valign="-28px" altimg-width="238px" alttext="\displaystyle\sim\frac{e^{-z^{2}}}{\sqrt{\pi}}\sum_{m=0}^{\infty}(-1)^{m}\frac%
+{{\left(\tfrac{1}{2}\right)_{m}}}{z^{2m+1}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow></msup><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi>m</mi></msub><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mstyle></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m1.png" altimg-height="40px" altimg-valign="-7px" altimg-width="102px" alttext="\displaystyle\operatorname{erfc}\left(-z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>−</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="67px" altimg-valign="-28px" altimg-width="274px" alttext="\displaystyle\sim 2-\frac{e^{-z^{2}}}{\sqrt{\pi}}\sum_{m=0}^{\infty}(-1)^{m}%
+\frac{{\left(\tfrac{1}{2}\right)_{m}}}{z^{2m+1}}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mn>2</mn><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow></msup><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo movablelimits="false">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi>m</mi></msub><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mstyle></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m31.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="7.2.html#E2" title="(7.2.2) ‣ §7.2(i) Error Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m28.png" altimg-height="18px" altimg-valign="-2px" altimg-width="51px" alttext="\operatorname{erfc}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E2" title="complementary error function">erfc</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></math>: complementary error function</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m25.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.1.23</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.5.html#Px9.p1" title="Example ‣ §3.5(ix) Other Contour Integrals ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.5(ix)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.9.I3.ix1.p1" title="In Other Changes ‣ Version 1.0.9 (August 29, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.9) for  Chapters <span class="ltx_text ltx_ref_tag">7</span>, <span class="ltx_text ltx_ref_tag">25</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E1" title="">http://dlmf.nist.gov/7.12.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E1a.png">png</a>, <a href="http://dlmf.nist.gov/7.12.E1b.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.9):</dt>
+<dd>
+Previously the RHS of these equations were written as
+<math altimg="m22.png" altimg-height="41px" altimg-valign="-13px" altimg-width="277px" alttext="\frac{e^{-z^{2}}}{\sqrt{\pi}z}\sum_{m=0}^{\infty}(-1)^{m}\frac{1\cdot 3\cdot 5%
+\cdots(2m-1)}{(2z^{2})^{m}}" class="ltx_Math" display="inline"><mrow><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow></msup><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup></mfrac></mrow></mrow></mrow></math>
+and
+<math altimg="m7.png" altimg-height="41px" altimg-valign="-13px" altimg-width="313px" alttext="2-\frac{e^{-z^{2}}}{\sqrt{\pi}z}\sum_{m=0}^{\infty}(-1)^{m}\frac{1\cdot 3\cdot
+5%
+\cdots(2m-1)}{(2z^{2})^{m}}" class="ltx_Math" display="inline"><mrow><mn>2</mn><mo>−</mo><mrow><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow></msup><mrow><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup></mfrac></mrow></mrow></mrow></mrow></math>.
+We have rewritten these sums more concisely using Pochhammer’s symbol.
+
+<p><span class="ltx_font_italic">Suggested 2014-03-13 by Giorgos Karagounis</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#i.info" title="§7.12(i) Complementary Error Function ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(i)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">both expansions being valid when <math altimg="m46.png" altimg-height="29px" altimg-valign="-9px" altimg-width="145px" alttext="|\operatorname{ph}z|\leq\frac{3}{4}\pi-\delta" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi>δ</mi></mrow></mrow></math>
+(<math altimg="m8.png" altimg-height="29px" altimg-valign="-9px" altimg-width="52px" alttext="&lt;\frac{3}{4}\pi" class="ltx_Math" display="inline"><mrow><mi></mi><mo>&lt;</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>).</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">When <math altimg="m44.png" altimg-height="29px" altimg-valign="-9px" altimg-width="110px" alttext="|\operatorname{ph}z|\leq\frac{1}{4}\pi" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math> the remainder terms are bounded in
+magnitude by the first neglected terms, and have the same sign as these terms
+when <math altimg="m29.png" altimg-height="22px" altimg-valign="-6px" altimg-width="79px" alttext="\operatorname{ph}z=0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. When <math altimg="m16.png" altimg-height="29px" altimg-valign="-9px" altimg-width="163px" alttext="\frac{1}{4}\pi\leq|\operatorname{ph}z|&lt;\frac{1}{2}\pi" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>
+the remainder terms are bounded in magnitude by <math altimg="m15.png" altimg-height="25px" altimg-valign="-7px" altimg-width="113px" alttext="\csc\left(2|\operatorname{ph}z|\right)" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>)</mo></mrow></mrow></math> times the
+first neglected terms. For these and other error bounds see
+<cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, pp. 109–112)</cite>, with <math altimg="m14.png" altimg-height="29px" altimg-valign="-9px" altimg-width="59px" alttext="\alpha=\frac{1}{2}" class="ltx_Math" display="inline"><mrow><mi>α</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math> and <math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>
+replaced by <math altimg="m39.png" altimg-height="21px" altimg-valign="-2px" altimg-width="24px" alttext="z^{2}" class="ltx_Math" display="inline"><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></math>; compare (<a class="ltx_ref" href="7.11.html#E2" title="(7.11.2) ‣ Incomplete Gamma Functions and Generalized Exponential Integral ‣ §7.11 Relations to Other Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.11.2</span></a>).</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">For re-expansions of the remainder terms leading to larger sectors of validity,
+exponential improvement, and a smooth interpretation of the Stokes phenomenon,
+see §§<a class="ltx_ref" href="2.11.html#ii" title="§2.11(ii) Connection Formulas ‣ §2.11 Remainder Terms; Stokes Phenomenon ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.11(ii)</span></a>–<a class="ltx_ref" href="2.11.html#iv" title="§2.11(iv) Stokes Phenomenon ‣ §2.11 Remainder Terms; Stokes Phenomenon ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.11(iv)</span></a> and use
+(<a class="ltx_ref" href="7.11.html#E3" title="(7.11.3) ‣ Incomplete Gamma Functions and Generalized Exponential Integral ‣ §7.11 Relations to Other Functions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.11.3</span></a>). (Note that some of these re-expansions themselves involve
+the complementary error function.)</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.12(ii) </span>Fresnel Integrals</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Fresnel%20integrals">Fresnel integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansions">asymptotic expansions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=auxiliary%20functions%20for%20Fresnel%20integrals">auxiliary functions for Fresnel integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exponentially-improved">exponentially-improved</a>
+</dd>
+<dt>Notes:</dt>
+<dd>(<a class="ltx_ref" href="7.12.html#E2" title="(7.12.2) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.2</span></a>) and (<a class="ltx_ref" href="7.12.html#E3" title="(7.12.3) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.3</span></a>) follow from
+(<a class="ltx_ref" href="7.7.html#E10" title="(7.7.10) ‣ §7.7(ii) Auxiliary Functions ‣ §7.7 Integral Representations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.7.10</span></a>) and (<a class="ltx_ref" href="7.7.html#E11" title="(7.7.11) ‣ §7.7(ii) Auxiliary Functions ‣ §7.7 Integral Representations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.7.11</span></a>) by applying Watson’s lemma
+in its extended form (§<a class="ltx_ref" href="2.4.html#i" title="§2.4(i) Watson’s Lemma ‣ §2.4 Contour Integrals ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><span class="ltx_text ltx_ref_tag">2.4(i)</span></a>).
+(<a class="ltx_ref" href="7.12.html#E4" title="(7.12.4) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.4</span></a>)–(<a class="ltx_ref" href="7.12.html#E7" title="(7.12.7) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.7</span></a>) follow
+from (<a class="ltx_ref" href="7.7.html#E10" title="(7.7.10) ‣ §7.7(ii) Auxiliary Functions ‣ §7.7 Integral Representations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.7.10</span></a>), (<a class="ltx_ref" href="7.7.html#E11" title="(7.7.11) ‣ §7.7(ii) Auxiliary Functions ‣ §7.7 Integral Representations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.7.11</span></a>), and the identity
+<math altimg="m5.png" altimg-height="30px" altimg-valign="-8px" altimg-width="469px" alttext="(t^{2}+1)^{-1}=\sum_{m=0}^{n-1}(-1)^{m}t^{2m}+(-1)^{n}t^{2n}(t^{2}+1)^{-1}" class="ltx_Math" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo rspace="0.111em">=</mo><mrow><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mrow></mrow><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></math>.
+The error bounds are obtained by setting <math altimg="m35.png" altimg-height="26px" altimg-valign="-7px" altimg-width="68px" alttext="t=\sqrt{\tau}" class="ltx_Math" display="inline"><mrow><mi>t</mi><mo>=</mo><msqrt><mi>τ</mi></msqrt></mrow></math> in
+(<a class="ltx_ref" href="7.12.html#E6" title="(7.12.6) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.6</span></a>) and (<a class="ltx_ref" href="7.12.html#E7" title="(7.12.7) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.7</span></a>), rotating the integration
+path in the <math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi>τ</mi></math>-plane through an angle <math altimg="m6.png" altimg-height="22px" altimg-valign="-6px" altimg-width="71px" alttext="-4\operatorname{ph}z" class="ltx_Math" display="inline"><mrow><mo>−</mo><mrow><mn>4</mn><mo lspace="0.167em">⁢</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mrow></mrow></math>, and then
+replacing <math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="|\tau+1|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>τ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">|</mo></mrow></math> by its minimum value on the path.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.ii" title="">http://dlmf.nist.gov/7.12.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">The asymptotic expansions of <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="C\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E7" title="Fresnel integral">C</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="48px" alttext="S\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E8" title="Fresnel integral">S</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> are given
+by (<a class="ltx_ref" href="7.5.html#E3" title="(7.5.3) ‣ §7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.5.3</span></a>), (<a class="ltx_ref" href="7.5.html#E4" title="(7.5.4) ‣ §7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.5.4</span></a>), and</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">7.12.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="73px" altimg-valign="-28px" altimg-width="346px" alttext="\mathrm{f}\left(z\right)\sim\frac{1}{\pi z}\sum_{m=0}^{\infty}(-1)^{m}\frac{{%
+\left(\tfrac{1}{2}\right)_{2m}}}{(\pi z^{2}/2)^{2m}}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./7.2#E10" mathvariant="normal" title="auxiliary function for Fresnel integrals">f</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mfrac></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E10" title="(7.2.10) ‣ §7.2(iv) Auxiliary Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="42px" alttext="\mathrm{f}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E10" mathvariant="normal" title="auxiliary function for Fresnel integrals">f</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: auxiliary function for Fresnel integrals</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m31.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.3.27</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#ii.p5" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.9.I3.ix1.p1" title="In Other Changes ‣ Version 1.0.9 (August 29, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.9) for  Chapters <span class="ltx_text ltx_ref_tag">7</span>, <span class="ltx_text ltx_ref_tag">25</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E2" title="">http://dlmf.nist.gov/7.12.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E2.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.9):</dt>
+<dd>
+Previously the RHS of this equation was written as
+<math altimg="m18.png" altimg-height="36px" altimg-valign="-13px" altimg-width="260px" alttext="\frac{1}{\pi z}\sum_{m=0}^{\infty}(-1)^{m}\frac{1\cdot 3\cdot 5\cdots(4m-1)}{(%
+\pi z^{2})^{2m}}" class="ltx_Math" display="inline"><mrow><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mfrac></mrow></mrow></mrow></math>.
+We have rewritten the sum more concisely using Pochhammer’s symbol.
+
+<p><span class="ltx_font_italic">Suggested 2014-03-13 by Giorgos Karagounis</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p2">
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">7.12.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="75px" altimg-valign="-28px" altimg-width="373px" alttext="\mathrm{g}\left(z\right)\sim\frac{1}{\pi z}\sum_{m=0}^{\infty}(-1)^{m}\frac{{%
+\left(\tfrac{1}{2}\right)_{2m+1}}}{(\pi z^{2}/2)^{2m+1}}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./7.2#E11" mathvariant="normal" title="auxiliary function for Fresnel integrals">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo><mrow><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E11" title="(7.2.11) ‣ §7.2(iv) Auxiliary Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\mathrm{g}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E11" mathvariant="normal" title="auxiliary function for Fresnel integrals">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: auxiliary function for Fresnel integrals</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="2.1.html#iii.p1" title="§2.1(iii) Asymptotic Expansions ‣ §2.1 Definitions and Elementary Properties ‣ Areas ‣ Chapter 2 Asymptotic Approximations"><math altimg="m31.png" altimg-height="11px" altimg-valign="-2px" altimg-width="20px" alttext="\sim" class="ltx_Math" display="inline"><mo href="./2.1#iii.p1" title="Poincaré asymptotic expansion">∼</mo></math>: Poincaré asymptotic expansion</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.3.28</span></span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#ii.p5" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.9.I3.ix1.p1" title="In Other Changes ‣ Version 1.0.9 (August 29, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.9) for  Chapters <span class="ltx_text ltx_ref_tag">7</span>, <span class="ltx_text ltx_ref_tag">25</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E3" title="">http://dlmf.nist.gov/7.12.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E3.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.9):</dt>
+<dd>
+Previously the RHS of this equation was written as
+<math altimg="m20.png" altimg-height="36px" altimg-valign="-13px" altimg-width="276px" alttext="\frac{1}{\pi^{2}z^{3}}\sum_{m=0}^{\infty}(-1)^{m}\frac{1\cdot 3\cdot 5\cdots(4%
+m+1)}{(\pi z^{2})^{2m}}" class="ltx_Math" display="inline"><mrow><mfrac><mn>1</mn><mrow><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>3</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mfrac></mrow></mrow></mrow></math>
+We have rewritten the sum more concisely using Pochhammer’s symbol.
+
+<p><span class="ltx_font_italic">Suggested 2014-03-13 by Giorgos Karagounis</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">as <math altimg="m38.png" altimg-height="13px" altimg-valign="-2px" altimg-width="68px" alttext="z\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> in <math altimg="m43.png" altimg-height="29px" altimg-valign="-9px" altimg-width="209px" alttext="|\operatorname{ph}z|\leq\frac{1}{2}\pi-\delta(&lt;\frac{1}{2}\pi)" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>−</mo><mi>δ</mi></mrow><mspace width="0.3888888888888889em"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>&lt;</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+The remainder terms are given by</p>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">7.12.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="76px" altimg-valign="-28px" altimg-width="434px" alttext="\mathrm{f}\left(z\right)=\frac{1}{\pi z}\sum_{m=0}^{n-1}(-1)^{m}\frac{{\left(%
+\tfrac{1}{2}\right)_{2m}}}{(\pi z^{2}/2)^{2m}}+R_{n}^{(\mathrm{f})}(z)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./7.2#E10" mathvariant="normal" title="auxiliary function for Fresnel integrals">f</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mfrac></mrow></mrow></mrow><mo>+</mo><mrow><msubsup><mi href="./7.12#E6" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E6" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E6" mathvariant="normal" title="remainder term">f</mi><mo href="./7.12#E6" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E10" title="(7.2.10) ‣ §7.2(iv) Auxiliary Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="42px" alttext="\mathrm{f}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E10" mathvariant="normal" title="auxiliary function for Fresnel integrals">f</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: auxiliary function for Fresnel integrals</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="7.12.html#E6" title="(7.12.6) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m11.png" altimg-height="31px" altimg-valign="-7px" altimg-width="67px" alttext="R_{n}^{(\mathrm{f})}(z)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./7.12#E6" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E6" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E6" mathvariant="normal" title="remainder term">f</mi><mo href="./7.12#E6" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder term</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.3.27</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.9.I3.ix1.p1" title="In Other Changes ‣ Version 1.0.9 (August 29, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.9) for  Chapters <span class="ltx_text ltx_ref_tag">7</span>, <span class="ltx_text ltx_ref_tag">25</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E4" title="">http://dlmf.nist.gov/7.12.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E4.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.9):</dt>
+<dd>
+Previously the RHS of this equation was written as
+<math altimg="m19.png" altimg-height="37px" altimg-valign="-13px" altimg-width="335px" alttext="\frac{1}{\pi z}\sum_{m=0}^{n-1}(-1)^{m}\frac{1\cdot 3\cdots(4m-1)}{(\pi z^{2})%
+^{2m}}+R_{n}^{(\mathrm{f})}(z)" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mfrac></mrow></mrow></mrow><mo>+</mo><mrow><msubsup><mi href="./7.12#E6" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E6" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E6" mathvariant="normal" title="remainder term">f</mi><mo href="./7.12#E6" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+We have rewritten the sum more concisely using Pochhammer’s symbol.
+
+<p><span class="ltx_font_italic">Suggested 2014-03-13 by Giorgos Karagounis</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p4">
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">7.12.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="76px" altimg-valign="-28px" altimg-width="463px" alttext="\mathrm{g}\left(z\right)=\frac{1}{\pi z}\sum_{m=0}^{n-1}(-1)^{m}\frac{{\left(%
+\tfrac{1}{2}\right)_{2m+1}}}{(\pi z^{2}/2)^{2m+1}},+R_{n}^{(\mathrm{g})}(z)," class="ltx_Math" display="block"><mrow><mrow><mrow><mi href="./7.2#E11" mathvariant="normal" title="auxiliary function for Fresnel integrals">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mrow></mrow></mrow><mo>,</mo><mrow><mo>+</mo><mrow><msubsup><mi href="./7.12#E7" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E7" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E7" mathvariant="normal" title="remainder term">g</mi><mo href="./7.12#E7" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="7.2.html#E11" title="(7.2.11) ‣ §7.2(iv) Auxiliary Functions ‣ §7.2 Definitions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\mathrm{g}\left(\NVar{z}\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E11" mathvariant="normal" title="auxiliary function for Fresnel integrals">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>: auxiliary function for Fresnel integrals</a>,
+<a class="ltx_ref" href="5.2.html#iii" title="§5.2(iii) Pochhammer’s Symbol ‣ §5.2 Definitions ‣ Properties ‣ Chapter 5 Gamma Function"><math altimg="m40.png" altimg-height="26px" altimg-valign="-8px" altimg-width="43px" alttext="{\left(\NVar{a}\right)_{\NVar{n}}}" class="ltx_Math" display="inline"><msub><mrow><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">(</mo><mi class="ltx_nvar" href="./5.1#t1.r5" title="real or complex variable">a</mi><mo href="./5.2#iii" title="Pochhammer’s symbol (or shifted factorial)">)</mo></mrow><mi class="ltx_nvar" href="./5.1#t1.r1" title="nonnegative integer">n</mi></msub></math>: Pochhammer’s symbol (or shifted factorial)</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="7.12.html#E7" title="(7.12.7) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m12.png" altimg-height="31px" altimg-valign="-7px" altimg-width="69px" alttext="R_{n}^{(\mathrm{g})}(z)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./7.12#E7" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E7" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E7" mathvariant="normal" title="remainder term">g</mi><mo href="./7.12#E7" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder term</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.3.28</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="errata/index.html#V1.0.9.I3.ix1.p1" title="In Other Changes ‣ Version 1.0.9 (August 29, 2014) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.9) for  Chapters <span class="ltx_text ltx_ref_tag">7</span>, <span class="ltx_text ltx_ref_tag">25</span></span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E5" title="">http://dlmf.nist.gov/7.12.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E5.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.9):</dt>
+<dd>
+Previously the RHS of this equation was written as
+<math altimg="m21.png" altimg-height="37px" altimg-valign="-13px" altimg-width="353px" alttext="\frac{1}{\pi^{2}z^{3}}\sum_{m=0}^{n-1}(-1)^{m}\frac{1\cdot 3\cdots(4m+1)}{(\pi
+z%
+^{2})^{2m}}+R_{n}^{(\mathrm{g})}(z)" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mrow><msup><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>3</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mfrac></mrow></mrow></mrow><mo>+</mo><mrow><msubsup><mi href="./7.12#E7" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E7" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E7" mathvariant="normal" title="remainder term">g</mi><mo href="./7.12#E7" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+We have rewritten the sum more concisely using Pochhammer’s symbol.
+
+<p><span class="ltx_font_italic">Suggested 2014-03-13 by Giorgos Karagounis</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="ii.p5">
+<p class="ltx_p">where, for <math altimg="m33.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> and <math altimg="m42.png" altimg-height="29px" altimg-valign="-9px" altimg-width="110px" alttext="|\operatorname{ph}z|&lt;\tfrac{1}{4}\pi" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>,</p>
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">7.12.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="60px" altimg-valign="-21px" altimg-width="386px" alttext="R_{n}^{(\mathrm{f})}(z)=\frac{(-1)^{n}}{\pi\sqrt{2}}\int_{0}^{\infty}\frac{e^{%
+-\pi z^{2}t/2}t^{2n-(1/2)}}{t^{2}+1}\,\mathrm{d}t," class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mi href="./7.12#E6" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E6" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E6" mathvariant="normal" title="remainder term">f</mi><mo href="./7.12#E6" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mfrac><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m11.png" altimg-height="31px" altimg-valign="-7px" altimg-width="67px" alttext="R_{n}^{(\mathrm{f})}(z)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./7.12#E6" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E6" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E6" mathvariant="normal" title="remainder term">f</mi><mo href="./7.12#E6" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder term (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m25.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m23.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.3.29</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E6" title="">http://dlmf.nist.gov/7.12.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E6.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">7.12.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="60px" altimg-valign="-21px" altimg-width="388px" alttext="R_{n}^{(\mathrm{g})}(z)=\frac{(-1)^{n}}{\pi\sqrt{2}}\int_{0}^{\infty}\frac{e^{%
+-\pi z^{2}t/2}t^{2n+(1/2)}}{t^{2}+1}\,\mathrm{d}t." class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mi href="./7.12#E7" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E7" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E7" mathvariant="normal" title="remainder term">g</mi><mo href="./7.12#E7" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mfrac><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><msup><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m12.png" altimg-height="31px" altimg-valign="-7px" altimg-width="69px" alttext="R_{n}^{(\mathrm{g})}(z)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./7.12#E7" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E7" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E7" mathvariant="normal" title="remainder term">g</mi><mo href="./7.12#E7" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  remainder term (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m30.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m24.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m25.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m23.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="7.1.html#p1.t1.r2" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="7.1.html#p1.t1.r3" title="§7.1 Special Notation ‣ Notation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>A&amp;S Ref:</dt>
+<dd> <span class="ltx_origref"><span class="ltx_tag">7.3.30</span> (in different form)</span>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.E7" title="">http://dlmf.nist.gov/7.12.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/7.12.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/7.12.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/7.12.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#ii.info" title="§7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12(ii)</span></a>,
+<a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">When <math altimg="m45.png" altimg-height="29px" altimg-valign="-9px" altimg-width="110px" alttext="|\operatorname{ph}z|\leq\frac{1}{8}\pi" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>, <math altimg="m11.png" altimg-height="31px" altimg-valign="-7px" altimg-width="67px" alttext="R_{n}^{(\mathrm{f})}(z)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./7.12#E6" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E6" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E6" mathvariant="normal" title="remainder term">f</mi><mo href="./7.12#E6" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math> and
+<math altimg="m12.png" altimg-height="31px" altimg-valign="-7px" altimg-width="69px" alttext="R_{n}^{(\mathrm{g})}(z)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./7.12#E7" title="remainder term">R</mi><mi href="./7.1#p1.t1.r3" title="nonnegative integer">n</mi><mrow><mo href="./7.12#E7" stretchy="false" title="remainder term">(</mo><mi href="./7.12#E7" mathvariant="normal" title="remainder term">g</mi><mo href="./7.12#E7" stretchy="false" title="remainder term">)</mo></mrow></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">)</mo></mrow></mrow></math> are bounded in magnitude by the first neglected terms in
+(<a class="ltx_ref" href="7.12.html#E2" title="(7.12.2) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.2</span></a>) and (<a class="ltx_ref" href="7.12.html#E3" title="(7.12.3) ‣ §7.12(ii) Fresnel Integrals ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12.3</span></a>), respectively, and have the same
+signs as these terms when <math altimg="m29.png" altimg-height="22px" altimg-valign="-6px" altimg-width="79px" alttext="\operatorname{ph}z=0" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. They are bounded by
+<math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="120px" alttext="|\csc\left(4\operatorname{ph}z\right)|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi href="./4.14#E5" title="cosecant function">csc</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mn>4</mn><mo lspace="0.167em">⁢</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math> times the first neglected terms when
+<math altimg="m17.png" altimg-height="29px" altimg-valign="-9px" altimg-width="163px" alttext="\frac{1}{8}\pi\leq|\operatorname{ph}z|&lt;\frac{1}{4}\pi" class="ltx_Math" display="inline"><mrow><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="ii.p6">
+<p class="ltx_p">For other phase ranges use (<a class="ltx_ref" href="7.4.html#E7" title="(7.4.7) ‣ §7.4 Symmetry ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.4.7</span></a>) and (<a class="ltx_ref" href="7.4.html#E8" title="(7.4.8) ‣ §7.4 Symmetry ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.4.8</span></a>). For
+exponentially-improved expansions use (<a class="ltx_ref" href="7.5.html#E7" title="(7.5.7) ‣ §7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.5.7</span></a>), (<a class="ltx_ref" href="7.5.html#E10" title="(7.5.10) ‣ §7.5 Interrelations ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.5.10</span></a>),
+and §<a class="ltx_ref" href="7.12.html#i" title="§7.12(i) Complementary Error Function ‣ §7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">7.12(i)</span></a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§7.12(iii) </span>Goodwin–Staton Integral</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Goodwin%E2%80%93Staton%20integral">Goodwin–Staton integral</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=asymptotic%20expansion">asymptotic expansion</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/7.12.iii" title="">http://dlmf.nist.gov/7.12.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="7.12.html#info" title="§7.12 Asymptotic Expansions ‣ Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.12</span></a> and
+<a class="ltx_ref" href="7.html#info" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">Ch.7</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">See <cite class="ltx_cite ltx_citemacro_citet">Olver (<a class="ltx_ref" href="bib/O.html#bib1809" title="Asymptotics and Special Functions">1997b</a>, p. 115)</cite> for an expansion of <math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="51px" alttext="G\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./7.2#E12" title="Goodwin–Staton integral">G</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> with
+bounds for the remainder for real and complex values of <math altimg="m37.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./7.1#p1.t1.r2" title="complex variable">z</mi></math>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="7.11.html" rel="prev" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.11 </span>Relations to Other Functions</span></a><a class="ltx_ref" href="7.13.html" rel="next" title="In Properties ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.13 </span>Zeros</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

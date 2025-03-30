@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/22.20";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="22.html#PT4" rel="up" title="Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.html" rel="up up" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="22.19.html" rel="prev" title="§22.19 Physical Applications ‣ Applications ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.21.html" rel="next" title="§22.21 Tables ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.1.html" rel="section" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.2.html" rel="section" title="§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.3.html" rel="section" title="§22.3 Graphics ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.4.html" rel="section" title="§22.4 Periods, Poles, and Zeros ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.5.html" rel="section" title="§22.5 Special Values ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.6.html" rel="section" title="§22.6 Elementary Identities ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.7.html" rel="section" title="§22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.8.html" rel="section" title="§22.8 Addition Theorems ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.9.html" rel="section" title="§22.9 Cyclic Identities ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.10.html" rel="section" title="§22.10 Maclaurin Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.11.html" rel="section" title="§22.11 Fourier and Hyperbolic Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.12.html" rel="section" title="§22.12 Expansions in Other Trigonometric Series and Doubly-Infinite Partial Fractions: Eisenstein Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.13.html" rel="section" title="§22.13 Derivatives and Differential Equations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.14.html" rel="section" title="§22.14 Integrals ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.15.html" rel="section" title="§22.15 Inverse Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.16.html" rel="section" title="§22.16 Related Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.17.html" rel="section" title="§22.17 Moduli Outside the Interval [0,1] ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.18.html" rel="section" title="§22.18 Mathematical Applications ‣ Applications ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.19.html" rel="section" title="§22.19 Physical Applications ‣ Applications ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.21.html" rel="section" title="§22.21 Tables ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.22.html" rel="section" title="§22.22 Software ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="22.SB1.html" rel="sidebar" title="Sidebar 22.SB1: Decay of a Soliton in a Bose–Einstein Condensate ‣ Chapter 22 Jacobian Elliptic Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Jacobian elliptic functions, Jacobi’s epsilon function, Jacobi’s zeta function, Landen transformations, amplitude (, arithmetic-geometric mean, ascending, computation, descending, inverse Jacobian elliptic functions, lattice" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="22.20.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="22.20.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="22.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22 </span>Jacobian Elliptic Functions</span></a><a class="ltx_ref" href="22.html#PT4" rel="up" title="In Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="22.19.html" rel="prev" title="In Applications ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.19 </span>Physical Applications</span></a><a class="ltx_ref" href="22.21.html" rel="next" title="In Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.21 </span>Tables</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§22.20 </span>Methods of Computation</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobian%20elliptic%20functions">Jacobian elliptic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="22.20.html" title="">http://dlmf.nist.gov/22.20</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="22.20.html#i"><span class="ltx_tag ltx_tag_subsection">§22.20(i) </span>Via Theta Functions</a></li>
+<li class="ltx_tocentry"><a href="22.20.html#ii"><span class="ltx_tag ltx_tag_subsection">§22.20(ii) </span>Arithmetic-Geometric Mean</a></li>
+<li class="ltx_tocentry"><a href="22.20.html#iii"><span class="ltx_tag ltx_tag_subsection">§22.20(iii) </span>Landen Transformations</a></li>
+<li class="ltx_tocentry"><a href="22.20.html#iv"><span class="ltx_tag ltx_tag_subsection">§22.20(iv) </span>Lattice Calculations</a></li>
+<li class="ltx_tocentry"><a href="22.20.html#v"><span class="ltx_tag ltx_tag_subsection">§22.20(v) </span>Inverse Functions</a></li>
+<li class="ltx_tocentry"><a href="22.20.html#vi"><span class="ltx_tag ltx_tag_subsection">§22.20(vi) </span>Related Functions</a></li>
+<li class="ltx_tocentry"><a href="22.20.html#vii"><span class="ltx_tag ltx_tag_subsection">§22.20(vii) </span>Further References</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(i) </span>Via Theta Functions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.i" title="">http://dlmf.nist.gov/22.20.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">A powerful way of computing the twelve Jacobian elliptic functions for real or
+complex values of both the argument <math altimg="m89.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./22.1#t1.r2" title="complex">z</mi></math> and the modulus <math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math> is to use the
+definitions in terms of theta functions given in §<a class="ltx_ref" href="22.2.html" title="§22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.2</span></a>, obtaining
+the theta functions via methods described in §<a class="ltx_ref" href="20.14.html" title="§20.14 Methods of Computation ‣ Computation ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.14</span></a>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(ii) </span>Arithmetic-Geometric Mean</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobian%20elliptic%20functions">Jacobian elliptic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=arithmetic-geometric%20mean">arithmetic-geometric mean</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Walker (<a class="ltx_ref" href="bib/W.html#bib2359" title="Elliptic Functions. A Constructive Approach">1996</a>, pp. 141–143)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="23.22.html#I1.i1.p4" title="In Starting from Invariants ‣ §23.22(ii) Lattice Calculations ‣ §23.22 Methods of Computation ‣ Computation ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">item 1</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.ii" title="">http://dlmf.nist.gov/22.20.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Given real or complex numbers <math altimg="m57.png" altimg-height="22px" altimg-valign="-6px" altimg-width="52px" alttext="a_{0},b_{0}" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mn>0</mn></msub><mo>,</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mn>0</mn></msub></mrow></math>, with <math altimg="m60.png" altimg-height="25px" altimg-valign="-7px" altimg-width="53px" alttext="b_{0}/a_{0}" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mn>0</mn></msub><mo>/</mo><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mn>0</mn></msub></mrow></math> not real and negative,
+define</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">22.20.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m14.png" altimg-height="18px" altimg-valign="-5px" altimg-width="29px" alttext="\displaystyle a_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m7.png" altimg-height="42px" altimg-valign="-9px" altimg-width="187px" alttext="\displaystyle=\tfrac{1}{2}\left(a_{n-1}+b_{n-1}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m15.png" altimg-height="23px" altimg-valign="-5px" altimg-width="27px" alttext="\displaystyle b_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="40px" altimg-valign="-7px" altimg-width="169px" alttext="\displaystyle=\left(a_{n-1}b_{n-1}\right)^{1/2}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><msup><mrow><mo>(</mo><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m16.png" altimg-height="18px" altimg-valign="-5px" altimg-width="27px" alttext="\displaystyle c_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m8.png" altimg-height="42px" altimg-valign="-9px" altimg-width="187px" alttext="\displaystyle=\tfrac{1}{2}\left(a_{n-1}-b_{n-1}\right)," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m59.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m62.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m66.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a> and
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m80.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./22.20#ii.p1" title="positive">n</mi></math>:  positive</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="22.20.html#Px1.p2" title="Example ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#Px3.p1" title="Example 1 ‣ §22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iv)</span></a>,
+<a class="ltx_ref" href="22.20.html#Px4.p1" title="Example 2 ‣ §22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iv)</span></a>,
+<a class="ltx_ref" href="22.20.html#ii.p2" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.E1" title="">http://dlmf.nist.gov/22.20.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.20.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E1c.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E1c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E1a.png">png</a>, <a href="http://dlmf.nist.gov/22.20.E1b.png">png</a>, <a href="http://dlmf.nist.gov/22.20.E1c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#ii.info" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">for <math altimg="m81.png" altimg-height="20px" altimg-valign="-5px" altimg-width="55px" alttext="n\geq 1" class="ltx_Math" display="inline"><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>≥</mo><mn>1</mn></mrow></math>, where the square root is chosen
+so that <math altimg="m44.png" altimg-height="29px" altimg-valign="-9px" altimg-width="271px" alttext="\operatorname{ph}b_{n}=\tfrac{1}{2}(\operatorname{ph}a_{n-1}+\operatorname{ph}%
+b_{n-1})" class="ltx_Math" display="inline"><mrow><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+where <math altimg="m42.png" altimg-height="23px" altimg-valign="-7px" altimg-width="74px" alttext="\operatorname{ph}a_{n-1}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math> and <math altimg="m43.png" altimg-height="23px" altimg-valign="-7px" altimg-width="72px" alttext="\operatorname{ph}b_{n-1}" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math> are chosen so that
+their difference is numerically less than <math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>.
+Then as
+<math altimg="m82.png" altimg-height="13px" altimg-valign="-2px" altimg-width="70px" alttext="n\to\infty" class="ltx_Math" display="inline"><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math> sequences <math altimg="m55.png" altimg-height="25px" altimg-valign="-7px" altimg-width="47px" alttext="\{a_{n}\}" class="ltx_Math" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><mo stretchy="false">}</mo></mrow></math>, <math altimg="m56.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\{b_{n}\}" class="ltx_Math" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><mo stretchy="false">}</mo></mrow></math> converge to a common limit
+<math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="144px" alttext="M=M\left(a_{0},b_{0}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi><mo>=</mo><mrow><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi><mo>⁡</mo><mrow><mo>(</mo><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mn>0</mn></msub><mo>,</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mn>0</mn></msub><mo>)</mo></mrow></mrow></mrow></math>, the <em class="ltx_emph ltx_font_italic">arithmetic-geometric mean</em> of <math altimg="m57.png" altimg-height="22px" altimg-valign="-6px" altimg-width="52px" alttext="a_{0},b_{0}" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mn>0</mn></msub><mo>,</mo><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mn>0</mn></msub></mrow></math>. And since</p>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.20.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="128px" altimg-valign="-7px" altimg-width="247px" alttext="\max\left(\left|a_{n}-M\right|,\left|b_{n}-M\right|,\left|c_{n}\right|\right)%
+\leq\text{(const.)}\times 2^{-2^{n}}," class="ltx_Math" display="block"><mrow><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>|</mo><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><mo>−</mo><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi></mrow><mo>|</mo></mrow><mo>,</mo><mrow><mo>|</mo><mrow><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><mo>−</mo><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi></mrow><mo>|</mo></mrow><mo>,</mo><mrow><mo>|</mo><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><mo>|</mo></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><mtext>(const.)</mtext><mo lspace="0.222em" rspace="0.222em">×</mo><msup><mn>2</mn><mrow><mo>−</mo><msup><mn>2</mn><mi href="./22.20#ii.p1" title="positive">n</mi></msup></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="19.8.html#i.p1" title="§19.8(i) Gauss’s Arithmetic-Geometric Mean (AGM) ‣ §19.8 Quadratic Transformations ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="M\left(\NVar{a},\NVar{g}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">g</mi><mo>)</mo></mrow></mrow></math>: arithmetic-geometric mean</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m59.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m62.png" altimg-height="21px" altimg-valign="-5px" altimg-width="25px" alttext="b_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m66.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a> and
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m80.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./22.20#ii.p1" title="positive">n</mi></math>:  positive</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.E2" title="">http://dlmf.nist.gov/22.20.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.20.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#ii.info" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">convergence is very rapid.</p>
+</div>
+<div class="ltx_para" id="ii.p2">
+<p class="ltx_p">For <math altimg="m88.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./22.1#t1.r1" title="real">x</mi></math> real and <math altimg="m72.png" altimg-height="25px" altimg-valign="-7px" altimg-width="87px" alttext="k\in(0,1)" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r3" title="modulus">k</mi><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math>, use (<a class="ltx_ref" href="22.20.html#E1" title="(22.20.1) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.1</span></a>) with <math altimg="m58.png" altimg-height="20px" altimg-valign="-5px" altimg-width="63px" alttext="a_{0}=1" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow></math>,
+<math altimg="m61.png" altimg-height="25px" altimg-valign="-7px" altimg-width="139px" alttext="b_{0}=k^{\prime}\in(0,1)" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">b</mi><mn>0</mn></msub><mo>=</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mrow><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">(</mo><mn>0</mn><mo href="./front/introduction#common.t1.r29" title="open interval">,</mo><mn>1</mn><mo href="./front/introduction#common.t1.r29" stretchy="false" title="open interval">)</mo></mrow></mrow></math>, <math altimg="m63.png" altimg-height="21px" altimg-valign="-5px" altimg-width="62px" alttext="c_{0}=k" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mn>0</mn></msub><mo>=</mo><mi href="./22.1#t1.r3" title="modulus">k</mi></mrow></math>, and continue until <math altimg="m65.png" altimg-height="16px" altimg-valign="-5px" altimg-width="29px" alttext="c_{N}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi>N</mi></msub></math> is zero to the
+required accuracy. Next, compute <math altimg="m50.png" altimg-height="23px" altimg-valign="-7px" altimg-width="159px" alttext="\phi_{N},\phi_{N-1},\dots,\phi_{0}" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi>N</mi></msub><mo>,</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>0</mn></msub></mrow></math>, where
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.20.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E3.png" altimg-height="29px" altimg-valign="-6px" altimg-width="133px" alttext="\phi_{N}=2^{N}a_{N}x," class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi>N</mi></msub><mo>=</mo><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>⁢</mo><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi>N</mi></msub><mo>⁢</mo><mi href="./22.1#t1.r1" title="real">x</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.1.html#t1.r1" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m88.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./22.1#t1.r1" title="real">x</mi></math>:  real</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m59.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a> and
+<a class="ltx_ref" href="22.20.html#ii.p2" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m51.png" altimg-height="22px" altimg-valign="-6px" altimg-width="32px" alttext="\phi_{N}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi>N</mi></msub></math>:  approximations</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="22.20.html#Px1.p2" title="Example ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.E3" title="">http://dlmf.nist.gov/22.20.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.20.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#ii.info" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">22.20.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="105px" altimg-valign="-22px" altimg-width="357px" alttext="\phi_{n-1}=\frac{1}{2}\left(\phi_{n}+\operatorname{arcsin}\left(\frac{c_{n}}{a%
+_{n}}\sin\phi_{n}\right)\right)," class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mrow><mi href="./22.20#ii.p1" title="positive">n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><mo>+</mo><mrow><mi href="./4.23#ii.p1" title="arcsine function">arcsin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></mfrac><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="4.23.html#ii.p1" title="§4.23(ii) Principal Values ‣ §4.23 Inverse Trigonometric Functions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m31.png" altimg-height="18px" altimg-valign="-2px" altimg-width="72px" alttext="\operatorname{arcsin}\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.23#ii.p1" title="arcsine function">arcsin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: arcsine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m59.png" altimg-height="16px" altimg-valign="-5px" altimg-width="27px" alttext="a_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">a</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m66.png" altimg-height="16px" altimg-valign="-5px" altimg-width="25px" alttext="c_{n}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mi href="./22.20#ii.p1" title="positive">n</mi></msub></math>:  numbers</a>,
+<a class="ltx_ref" href="22.20.html#ii.p1" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m80.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./22.20#ii.p1" title="positive">n</mi></math>:  positive</a> and
+<a class="ltx_ref" href="22.20.html#ii.p2" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m51.png" altimg-height="22px" altimg-valign="-6px" altimg-width="32px" alttext="\phi_{N}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi>N</mi></msub></math>:  approximations</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="22.20.html#Px1.p2" title="Example ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.E4" title="">http://dlmf.nist.gov/22.20.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.20.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E4.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#ii.info" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and the inverse sine has its principal value (§<a class="ltx_ref" href="4.23.html#ii" title="§4.23(ii) Principal Values ‣ §4.23 Inverse Trigonometric Functions ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><span class="ltx_text ltx_ref_tag">4.23(ii)</span></a>). Then</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">22.20.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m13.png" altimg-height="40px" altimg-valign="-7px" altimg-width="95px" alttext="\displaystyle\operatorname{sn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="24px" altimg-valign="-6px" altimg-width="85px" alttext="\displaystyle=\sin\phi_{0}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="40px" altimg-valign="-7px" altimg-width="96px" alttext="\displaystyle\operatorname{cn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="24px" altimg-valign="-6px" altimg-width="87px" alttext="\displaystyle=\cos\phi_{0}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="40px" altimg-valign="-7px" altimg-width="98px" alttext="\displaystyle\operatorname{dn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m2.png" altimg-height="54px" altimg-valign="-21px" altimg-width="155px" alttext="\displaystyle=\frac{\cos\phi_{0}}{\cos\left(\phi_{1}-\phi_{0}\right)}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>0</mn></msub></mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>1</mn></msub><mo>−</mo><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="22.2.html#E5" title="(22.2.5) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m34.png" altimg-height="25px" altimg-valign="-7px" altimg-width="76px" alttext="\operatorname{cn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="22.2.html#E6" title="(22.2.6) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m39.png" altimg-height="25px" altimg-valign="-7px" altimg-width="78px" alttext="\operatorname{dn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="22.2.html#E4" title="(22.2.4) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m47.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="\operatorname{sn}\left(\NVar{z},\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./22.1#t1.r2" title="complex">z</mi><mo>,</mo><mi class="ltx_nvar" href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>: Jacobian elliptic function</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m27.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="22.1.html#t1.r1" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m88.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./22.1#t1.r1" title="real">x</mi></math>:  real</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.20.html#ii.p2" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m51.png" altimg-height="22px" altimg-valign="-6px" altimg-width="32px" alttext="\phi_{N}" class="ltx_Math" display="inline"><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mi>N</mi></msub></math>:  approximations</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="22.20.html#E5.info" title="In §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">(22.20.5)</span></a>,
+<a class="ltx_ref" href="22.20.html#Px1.p2" title="Example ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.10.I2.ix3" title="In Other Changes ‣ Version 1.0.10 (August 7, 2015) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.10) for  Equation (<span class="ltx_text ltx_ref_tag">22.20.5</span>)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.10.I2.ix3.p1" title="In Other Changes ‣ Version 1.0.10 (August 7, 2015) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.10) for  Equation (<span class="ltx_text ltx_ref_tag">22.20.5</span>)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.E5" title="">http://dlmf.nist.gov/22.20.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.20.E5a.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E5b.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E5c.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E5a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E5b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E5c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E5a.png">png</a>, <a href="http://dlmf.nist.gov/22.20.E5b.png">png</a>, <a href="http://dlmf.nist.gov/22.20.E5c.png">png</a>
+</dd>
+<dt>Note (effective with 1.0.10):</dt>
+<dd>
+A note was added after (<a class="ltx_ref" href="22.20.html#E5" title="(22.20.5) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.5</span></a>) to deal with cases when computation
+of <math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{dn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math> with (<a class="ltx_ref" href="22.20.html#E5" title="(22.20.5) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.5</span></a>) becomes numerically unstable
+near <math altimg="m87.png" altimg-height="18px" altimg-valign="-2px" altimg-width="63px" alttext="x=K" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r1" title="real">x</mi><mo>=</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></mrow></math>.
+
+<p><span class="ltx_font_italic">Suggested 2014-10-20 by Hartmut Henkel</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#ii.info" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and the subsidiary functions can be found using (<a class="ltx_ref" href="22.2.html#E10" title="(22.2.10) ‣ Glaisher’s Notation ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.2.10</span></a>).
+This formula for <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="\operatorname{dn}" class="ltx_Math" display="inline"><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi></math> becomes unstable near <math altimg="m87.png" altimg-height="18px" altimg-valign="-2px" altimg-width="63px" alttext="x=K" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r1" title="real">x</mi><mo>=</mo><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi></mrow></math>.
+If only the value of <math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{dn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math> at <math altimg="m87.png" altimg-height="18px" altimg-valign="-2px" altimg-width="63px" alttext="x=K" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r1" title="real">x</mi><mo>=</mo><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi></mrow></math> is required then the
+exact value is in the table <a class="ltx_ref" href="22.5.html#T1" title="Table 22.5.1 ‣ §22.5(i) Special Values of 𝑧 ‣ §22.5 Special Values ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.5.1</span></a>.
+If both <math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math> and <math altimg="m88.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./22.1#t1.r1" title="real">x</mi></math> are real then <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="\operatorname{dn}" class="ltx_Math" display="inline"><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi></math> is strictly positive and
+<math altimg="m40.png" altimg-height="30px" altimg-valign="-8px" altimg-width="266px" alttext="\operatorname{dn}\left(x,k\right)=\sqrt{1-k^{2}{\operatorname{sn}}^{2}\left(x,%
+k\right)}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><mn>1</mn><mo>−</mo><mrow><msup><mi href="./22.1#t1.r3" title="modulus">k</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></mrow></msqrt></mrow></math> which follows from
+(<a class="ltx_ref" href="22.6.html#E1" title="(22.6.1) ‣ §22.6(i) Sums of Squares ‣ §22.6 Elementary Identities ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.6.1</span></a>). If either <math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math> or <math altimg="m88.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./22.1#t1.r1" title="real">x</mi></math> is complex then (<a class="ltx_ref" href="22.2.html#E6" title="(22.2.6) ‣ §22.2 Definitions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.2.6</span></a>)
+gives the definition of <math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{dn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math> as a quotient of theta functions.</p>
+</div>
+<div class="ltx_para" id="ii.p3">
+<p class="ltx_p">See also <cite class="ltx_cite ltx_citemacro_citet">Wachspress (<a class="ltx_ref" href="bib/W.html#bib2713" title="Evaluating elliptic functions and their inverses">2000</a>)</cite>.</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Example</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#ii.info" title="§22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(ii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<p class="ltx_p">To compute <math altimg="m45.png" altimg-height="13px" altimg-valign="-2px" altimg-width="24px" alttext="\operatorname{sn}" class="ltx_Math" display="inline"><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi></math>, <math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="25px" alttext="\operatorname{cn}" class="ltx_Math" display="inline"><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi></math>, <math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="27px" alttext="\operatorname{dn}" class="ltx_Math" display="inline"><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi></math> to 10D when <math altimg="m86.png" altimg-height="17px" altimg-valign="-2px" altimg-width="70px" alttext="x=0.8" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r1" title="real">x</mi><mo>=</mo><mn>0.8</mn></mrow></math>,
+<math altimg="m68.png" altimg-height="18px" altimg-valign="-2px" altimg-width="80px" alttext="k=0.65" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>=</mo><mn>0.65</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px1.p2">
+<p class="ltx_p">Four iterations of (<a class="ltx_ref" href="22.20.html#E1" title="(22.20.1) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.1</span></a>) lead to <math altimg="m64.png" altimg-height="24px" altimg-valign="-5px" altimg-width="153px" alttext="c_{4}=\Sci{6.5}{-12}" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p1" title="numbers">c</mi><mn>4</mn></msub><mo>=</mo><mn>6.5×10⁻¹²</mn></mrow></math>. From
+(<a class="ltx_ref" href="22.20.html#E3" title="(22.20.3) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.3</span></a>) and (<a class="ltx_ref" href="22.20.html#E4" title="(22.20.4) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.4</span></a>) we obtain <math altimg="m49.png" altimg-height="22px" altimg-valign="-6px" altimg-width="179px" alttext="\phi_{1}=1.40213\;91827" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>1</mn></msub><mo>=</mo><mn>1.40213 91827</mn></mrow></math>
+and <math altimg="m48.png" altimg-height="22px" altimg-valign="-6px" altimg-width="179px" alttext="\phi_{0}=0.76850\;92170" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.20#ii.p2" title="approximations">ϕ</mi><mn>0</mn></msub><mo>=</mo><mn>0.76850 92170</mn></mrow></math>. Then from (<a class="ltx_ref" href="22.20.html#E5" title="(22.20.5) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.5</span></a>),
+<math altimg="m46.png" altimg-height="25px" altimg-valign="-7px" altimg-width="270px" alttext="\operatorname{sn}\left(0.8,0.65\right)=0.69506\;42165" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi><mo>⁡</mo><mrow><mo>(</mo><mn>0.8</mn><mo>,</mo><mn>0.65</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>0.69506 42165</mn></mrow></math>,
+<math altimg="m33.png" altimg-height="25px" altimg-valign="-7px" altimg-width="271px" alttext="\operatorname{cn}\left(0.8,0.65\right)=0.71894\;76580" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi><mo>⁡</mo><mrow><mo>(</mo><mn>0.8</mn><mo>,</mo><mn>0.65</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>0.71894 76580</mn></mrow></math>,
+<math altimg="m38.png" altimg-height="25px" altimg-valign="-7px" altimg-width="273px" alttext="\operatorname{dn}\left(0.8,0.65\right)=0.89212\;34349" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mn>0.8</mn><mo>,</mo><mn>0.65</mn><mo>)</mo></mrow></mrow><mo>=</mo><mn>0.89212 34349</mn></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(iii) </span>Landen Transformations</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobian%20elliptic%20functions">Jacobian elliptic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Landen%20transformations">Landen transformations</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=ascending">ascending</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=descending">descending</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.iii" title="">http://dlmf.nist.gov/22.20.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">By application of the transformations given in §§<a class="ltx_ref" href="22.7.html#i" title="§22.7(i) Descending Landen Transformation ‣ §22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.7(i)</span></a> and
+<a class="ltx_ref" href="22.7.html#ii" title="§22.7(ii) Ascending Landen Transformation ‣ §22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.7(ii)</span></a>, <math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math> or <math altimg="m78.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="k^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></math> can always be made sufficently small to enable
+the approximations given in §<a class="ltx_ref" href="22.10.html#ii" title="§22.10(ii) Maclaurin Series in 𝑘 and 𝑘' ‣ §22.10 Maclaurin Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.10(ii)</span></a> to be applied. The rate of
+convergence is similar to that for the arithmetic-geometric mean.</p>
+</div>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Example</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#iii.info" title="§22.20(iii) Landen Transformations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iii)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<p class="ltx_p">To compute <math altimg="m41.png" altimg-height="25px" altimg-valign="-7px" altimg-width="80px" alttext="\operatorname{dn}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math> to 6D for <math altimg="m85.png" altimg-height="17px" altimg-valign="-2px" altimg-width="70px" alttext="x=0.2" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r1" title="real">x</mi><mo>=</mo><mn>0.2</mn></mrow></math>, <math altimg="m74.png" altimg-height="21px" altimg-valign="-2px" altimg-width="90px" alttext="k^{2}=0.19" class="ltx_Math" display="inline"><mrow><msup><mi href="./22.1#t1.r3" title="modulus">k</mi><mn>2</mn></msup><mo>=</mo><mn>0.19</mn></mrow></math>, <math altimg="m75.png" altimg-height="20px" altimg-valign="-2px" altimg-width="76px" alttext="k^{\prime}=0.9" class="ltx_Math" display="inline"><mrow><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo>=</mo><mn>0.9</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px2.p2">
+<p class="ltx_p">From (<a class="ltx_ref" href="22.7.html#E1" title="(22.7.1) ‣ §22.7(i) Descending Landen Transformation ‣ §22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.7.1</span></a>), <math altimg="m79.png" altimg-height="29px" altimg-valign="-9px" altimg-width="74px" alttext="k_{1}=\tfrac{1}{19}" class="ltx_Math" display="inline"><mrow><msub><mi href="./22.1#t1.r3" title="modulus">k</mi><mn>1</mn></msub><mo>=</mo><mfrac><mn>1</mn><mn>19</mn></mfrac></mrow></math> and <math altimg="m84.png" altimg-height="25px" altimg-valign="-7px" altimg-width="163px" alttext="x/(1+k_{1})=0.19" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.1#t1.r1" title="real">x</mi><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msub><mi href="./22.1#t1.r3" title="modulus">k</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0.19</mn></mrow></math>. From
+the first two terms in (<a class="ltx_ref" href="22.10.html#E6" title="(22.10.6) ‣ §22.10(ii) Maclaurin Series in 𝑘 and 𝑘' ‣ §22.10 Maclaurin Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.10.6</span></a>) we find
+<math altimg="m36.png" altimg-height="29px" altimg-valign="-9px" altimg-width="224px" alttext="\operatorname{dn}\left(0.19,\tfrac{1}{19}\right)=0.999951" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mn>0.19</mn><mo>,</mo><mfrac><mn>1</mn><mn>19</mn></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mn>0.999951</mn></mrow></math>. Then by using
+(<a class="ltx_ref" href="22.7.html#E4" title="(22.7.4) ‣ §22.7(i) Descending Landen Transformation ‣ §22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.7.4</span></a>) we have <math altimg="m37.png" altimg-height="30px" altimg-valign="-9px" altimg-width="246px" alttext="\operatorname{dn}\left(0.2,\sqrt{0.19}\right)=0.996253" class="ltx_Math" display="inline"><mrow><mrow><mi href="./22.2#E6" title="Jacobian elliptic function">dn</mi><mo>⁡</mo><mrow><mo>(</mo><mn>0.2</mn><mo>,</mo><msqrt><mn>0.19</mn></msqrt><mo>)</mo></mrow></mrow><mo>=</mo><mn>0.996253</mn></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="Px2.p3">
+<p class="ltx_p">If needed, the corresponding values of <math altimg="m45.png" altimg-height="13px" altimg-valign="-2px" altimg-width="24px" alttext="\operatorname{sn}" class="ltx_Math" display="inline"><mi href="./22.2#E4" title="Jacobian elliptic function">sn</mi></math> and <math altimg="m32.png" altimg-height="13px" altimg-valign="-2px" altimg-width="25px" alttext="\operatorname{cn}" class="ltx_Math" display="inline"><mi href="./22.2#E5" title="Jacobian elliptic function">cn</mi></math> can be found
+subsequently by applying (<a class="ltx_ref" href="22.10.html#E4" title="(22.10.4) ‣ §22.10(ii) Maclaurin Series in 𝑘 and 𝑘' ‣ §22.10 Maclaurin Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.10.4</span></a>) and (<a class="ltx_ref" href="22.7.html#E2" title="(22.7.2) ‣ §22.7(i) Descending Landen Transformation ‣ §22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.7.2</span></a>), followed by
+(<a class="ltx_ref" href="22.10.html#E5" title="(22.10.5) ‣ §22.10(ii) Maclaurin Series in 𝑘 and 𝑘' ‣ §22.10 Maclaurin Series ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.10.5</span></a>) and (<a class="ltx_ref" href="22.7.html#E3" title="(22.7.3) ‣ §22.7(i) Descending Landen Transformation ‣ §22.7 Landen Transformations ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.7.3</span></a>).</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(iv) </span>Lattice Calculations</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobian%20elliptic%20functions">Jacobian elliptic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=lattice">lattice</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.iv" title="">http://dlmf.nist.gov/22.20.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">If either <math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="\tau" class="ltx_Math" display="inline"><mi href="./22.1#t1.r7" title="ratio">τ</mi></math> or <math altimg="m83.png" altimg-height="25px" altimg-valign="-6px" altimg-width="78px" alttext="q=e^{i\pi\tau}" class="ltx_Math" display="inline"><mrow><mi href="./22.2#E1" title="nome">q</mi><mo>=</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi></mrow></msup></mrow></math> is given, then we use
+<math altimg="m70.png" altimg-height="28px" altimg-valign="-7px" altimg-width="212px" alttext="k={\theta_{2}}^{2}\left(0,q\right)/{\theta_{3}}^{2}\left(0,q\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>=</mo><mrow><mrow><msubsup><mi href="./20.2#i" title="theta function">θ</mi><mn>2</mn><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./22.2#E1" title="nome">q</mi><mo>)</mo></mrow></mrow><mo>/</mo><mrow><msubsup><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./22.2#E1" title="nome">q</mi><mo>)</mo></mrow></mrow></mrow></mrow></math>,
+<math altimg="m77.png" altimg-height="28px" altimg-valign="-7px" altimg-width="218px" alttext="k^{\prime}={\theta_{4}}^{2}\left(0,q\right)/{\theta_{3}}^{2}\left(0,q\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo>=</mo><mrow><mrow><msubsup><mi href="./20.2#i" title="theta function">θ</mi><mn>4</mn><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./22.2#E1" title="nome">q</mi><mo>)</mo></mrow></mrow><mo>/</mo><mrow><msubsup><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./22.2#E1" title="nome">q</mi><mo>)</mo></mrow></mrow></mrow></mrow></math>,
+<math altimg="m19.png" altimg-height="30px" altimg-valign="-9px" altimg-width="154px" alttext="K=\frac{1}{2}\pi{\theta_{3}}^{2}\left(0,q\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><msubsup><mi href="./20.2#i" title="theta function">θ</mi><mn>3</mn><mn>2</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi href="./22.2#E1" title="nome">q</mi><mo>)</mo></mrow></mrow></mrow></mrow></math>, and <math altimg="m22.png" altimg-height="22px" altimg-valign="-4px" altimg-width="111px" alttext="K^{\prime}=-i\tau K" class="ltx_Math" display="inline"><mrow><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./22.1#t1.r7" title="ratio">τ</mi><mo>⁢</mo><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></mrow></mrow></mrow></math>, obtaining
+the values of the theta functions as in §<a class="ltx_ref" href="20.14.html" title="§20.14 Methods of Computation ‣ Computation ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.14</span></a>.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">If <math altimg="m67.png" altimg-height="24px" altimg-valign="-6px" altimg-width="42px" alttext="k,k^{\prime}" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>,</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></mrow></math> are given with <math altimg="m73.png" altimg-height="26px" altimg-valign="-4px" altimg-width="115px" alttext="k^{2}+{k^{\prime}}^{2}=1" class="ltx_Math" display="inline"><mrow><mrow><msup><mi href="./22.1#t1.r3" title="modulus">k</mi><mn>2</mn></msup><mo>+</mo><mmultiscripts><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mrow></mrow><mo href="./22.1#t1.r4" title="complementary modulus">′</mo><mrow></mrow><mn>2</mn></mmultiscripts></mrow><mo>=</mo><mn>1</mn></mrow></math> and
+<math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="111px" alttext="\Im k^{\prime}/\Im k&lt;0" class="ltx_Math" display="inline"><mrow><mrow><mrow><mi href="./1.9#E2" mathvariant="normal" title="imaginary part">ℑ</mi><mo lspace="0.167em">⁡</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></mrow><mo>/</mo><mrow><mi href="./1.9#E2" mathvariant="normal" title="imaginary part">ℑ</mi><mo lspace="0.167em">⁡</mo><mi href="./22.1#t1.r3" title="modulus">k</mi></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, then <math altimg="m17.png" altimg-height="24px" altimg-valign="-6px" altimg-width="56px" alttext="K,K^{\prime}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>,</mo><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo></mrow></mrow></math> can be
+found from</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex7">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="2"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">22.20.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="20px" altimg-valign="-2px" altimg-width="26px" alttext="\displaystyle K" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="49px" altimg-valign="-21px" altimg-width="129px" alttext="\displaystyle=\frac{\pi}{2M\left(1,k^{\prime}\right)}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>,</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex8">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="23px" altimg-valign="-2px" altimg-width="32px" alttext="\displaystyle K^{\prime}" class="ltx_Math" display="inline"><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="49px" altimg-valign="-21px" altimg-width="123px" alttext="\displaystyle=\frac{\pi}{2M\left(1,k\right)}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mrow><mn>2</mn><mo>⁢</mo><mrow><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="19.8.html#i.p1" title="§19.8(i) Gauss’s Arithmetic-Geometric Mean (AGM) ‣ §19.8 Quadratic Transformations ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="77px" alttext="M\left(\NVar{a},\NVar{g}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.8#i.p1" title="arithmetic-geometric mean">M</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">a</mi><mo>,</mo><mi class="ltx_nvar">g</mi><mo>)</mo></mrow></mrow></math>: arithmetic-geometric mean</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m52.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="19.2.html#E8_1" title="(19.2.8_1) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m90.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="{K^{\prime}}\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><msup><mi href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">K</mi><mo href="./19.2#E8_1" title="Legendre’s complementary complete elliptic integral of the first kind">′</mo></msup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complementary complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="19.2.html#E8" title="(19.2.8) ‣ §19.2(ii) Legendre’s Integrals ‣ §19.2 Definitions ‣ Legendre’s Integrals ‣ Chapter 19 Elliptic Integrals"><math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="K\left(\NVar{k}\right)" class="ltx_Math" display="inline"><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./19.1#p1.t1.r3" title="real or complex modulus">k</mi><mo>)</mo></mrow></mrow></math>: Legendre’s complete elliptic integral of the first kind</a>,
+<a class="ltx_ref" href="22.1.html#t1.r3" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m71.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="k" class="ltx_Math" display="inline"><mi href="./22.1#t1.r3" title="modulus">k</mi></math>:  modulus</a> and
+<a class="ltx_ref" href="22.1.html#t1.r4" title="§22.1 Special Notation ‣ Notation ‣ Chapter 22 Jacobian Elliptic Functions"><math altimg="m78.png" altimg-height="20px" altimg-valign="-2px" altimg-width="22px" alttext="k^{\prime}" class="ltx_Math" display="inline"><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup></math>:  complementary modulus</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="22.20.html#Px3.p1" title="Example 1 ‣ §22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iv)</span></a>,
+<a class="ltx_ref" href="23.22.html#E1.info" title="In item 1 ‣ Starting from Invariants ‣ §23.22(ii) Lattice Calculations ‣ §23.22 Methods of Computation ‣ Computation ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">(23.22.1)</span></a>,
+<a class="ltx_ref" href="23.22.html#ii.info" title="§23.22(ii) Lattice Calculations ‣ §23.22 Methods of Computation ‣ Computation ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">§23.22(ii)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.E6" title="">http://dlmf.nist.gov/22.20.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/22.20.E6a.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E6b.tex">TeX</a>, <a href="http://dlmf.nist.gov/22.20.E6a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E6b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/22.20.E6a.png">png</a>, <a href="http://dlmf.nist.gov/22.20.E6b.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#iv.info" title="§22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iv)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">using the arithmetic-geometric mean.</p>
+</div>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Example 1</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#iv.info" title="§22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iv)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<p class="ltx_p">If <math altimg="m69.png" altimg-height="28px" altimg-valign="-7px" altimg-width="137px" alttext="k=k^{\prime}=1/\sqrt{2}" class="ltx_Math" display="inline"><mrow><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>=</mo><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo>=</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></math>, then three iterations of (<a class="ltx_ref" href="22.20.html#E1" title="(22.20.1) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.1</span></a>) give
+<math altimg="m23.png" altimg-height="18px" altimg-valign="-2px" altimg-width="180px" alttext="M=0.84721\;30848" class="ltx_Math" display="inline"><mrow><mi>M</mi><mo>=</mo><mn>0.84721 30848</mn></mrow></math>, and from (<a class="ltx_ref" href="22.20.html#E6" title="(22.20.6) ‣ §22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.6</span></a>) <math altimg="m20.png" altimg-height="25px" altimg-valign="-7px" altimg-width="276px" alttext="K=\pi/(2M)=1.85407\;46773" class="ltx_Math" display="inline"><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>=</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>M</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1.85407 46773</mn></mrow></math>
+— in agreement with the value of
+<math altimg="m28.png" altimg-height="33px" altimg-valign="-9px" altimg-width="155px" alttext="\left(\Gamma\left(\tfrac{1}{4}\right)\right)^{2}/\left(4\sqrt{\pi}\right)" class="ltx_Math" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><mi href="./5.2#E1" mathvariant="normal" title="gamma function">Γ</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>/</mo><mrow><mo>(</mo><mrow><mn>4</mn><mo>⁢</mo><msqrt><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msqrt></mrow><mo>)</mo></mrow></mrow></math>;
+compare (<a class="ltx_ref" href="23.17.html#E3" title="(23.17.3) ‣ §23.17(i) Special Values ‣ §23.17 Elementary Properties ‣ Modular Functions ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">23.17.3</span></a>) and (<a class="ltx_ref" href="23.22.html#E2" title="(23.22.2) ‣ item 2 ‣ Starting from Invariants ‣ §23.22(ii) Lattice Calculations ‣ §23.22 Methods of Computation ‣ Computation ‣ Chapter 23 Weierstrass Elliptic and Modular Functions"><span class="ltx_text ltx_ref_tag">23.22.2</span></a>).</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Example 2</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#iv.info" title="§22.20(iv) Lattice Calculations ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20(iv)</span></a>,
+<a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<p class="ltx_p">If <math altimg="m76.png" altimg-height="22px" altimg-valign="-4px" altimg-width="92px" alttext="k^{\prime}=1-i" class="ltx_Math" display="inline"><mrow><msup><mi href="./22.1#t1.r4" title="complementary modulus">k</mi><mo href="./22.1#t1.r4" title="complementary modulus">′</mo></msup><mo>=</mo><mrow><mn>1</mn><mo>−</mo><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></mrow></mrow></math>, then four iterations of (<a class="ltx_ref" href="22.20.html#E1" title="(22.20.1) ‣ §22.20(ii) Arithmetic-Geometric Mean ‣ §22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.20.1</span></a>) give
+<math altimg="m18.png" altimg-height="20px" altimg-valign="-4px" altimg-width="335px" alttext="K=1.23969\;74481+i0.56499\;30988" class="ltx_Math" display="inline"><mrow><mrow><mi href="./19.2#E8" title="Legendre’s complete elliptic integral of the first kind">K</mi><mo>⁡</mo></mrow><mo>=</mo><mrow><mn>1.23969 74481</mn><mo>+</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mn>0.56499 30988</mn></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="v">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(v) </span>Inverse Functions</h2>
+<div class="ltx_metadata ltx_info" id="v.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=inverse%20Jacobian%20elliptic%20functions">inverse Jacobian elliptic functions</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.v" title="">http://dlmf.nist.gov/22.20.v</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="v.p1">
+<p class="ltx_p">See <cite class="ltx_cite ltx_citemacro_citet">Wachspress (<a class="ltx_ref" href="bib/W.html#bib2713" title="Evaluating elliptic functions and their inverses">2000</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="vi">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(vi) </span>Related Functions</h2>
+<div class="ltx_metadata ltx_info" id="vi.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobi%20epsilon%20function">Jacobi’s epsilon function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobi%20zeta%20function">Jacobi’s zeta function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=amplitude%20%28am%29%20function">amplitude (<math altimg="m29.png" altimg-height="13px" altimg-valign="-2px" altimg-width="32px" alttext="\operatorname{am}" class="ltx_Math" display="inline"><mi href="./22.16#E1" title="Jacobi’s amplitude function">am</mi></math>) function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.vi" title="">http://dlmf.nist.gov/22.20.vi</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vi.p1">
+<p class="ltx_p"><math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="84px" alttext="\operatorname{am}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.16#E1" title="Jacobi’s amplitude function">am</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math> can be computed from its definition (<a class="ltx_ref" href="22.16.html#E1" title="(22.16.1) ‣ Definition ‣ §22.16(i) Jacobi’s Amplitude (am) Function ‣ §22.16 Related Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.16.1</span></a>) or
+from its Fourier series (<a class="ltx_ref" href="22.16.html#E9" title="(22.16.9) ‣ Fourier Series ‣ §22.16(i) Jacobi’s Amplitude (am) Function ‣ §22.16 Related Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.16.9</span></a>). Alternatively,
+<cite class="ltx_cite ltx_citemacro_citet">Sala (<a class="ltx_ref" href="bib/S.html#bib1994" title="Transformations of the Jacobian amplitude function and its calculation via the arithmetic-geometric mean">1989</a>)</cite> shows how to apply the arithmetic-geometric mean to
+compute <math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="84px" alttext="\operatorname{am}\left(x,k\right)" class="ltx_Math" display="inline"><mrow><mi href="./22.16#E1" title="Jacobi’s amplitude function">am</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./22.1#t1.r1" title="real">x</mi><mo>,</mo><mi href="./22.1#t1.r3" title="modulus">k</mi><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_para" id="vi.p2">
+<p class="ltx_p">Jacobi’s epsilon function can be computed from its representation
+(<a class="ltx_ref" href="22.16.html#E30" title="(22.16.30) ‣ Relation to Theta Functions ‣ §22.16(ii) Jacobi’s Epsilon Function ‣ §22.16 Related Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.16.30</span></a>) in terms of theta functions and complete elliptic integrals;
+compare §<a class="ltx_ref" href="20.14.html" title="§20.14 Methods of Computation ‣ Computation ‣ Chapter 20 Theta Functions"><span class="ltx_text ltx_ref_tag">20.14</span></a>. Jacobi’s zeta function can then be found by use of
+(<a class="ltx_ref" href="22.16.html#E32" title="(22.16.32) ‣ Definition ‣ §22.16(iii) Jacobi’s Zeta Function ‣ §22.16 Related Functions ‣ Properties ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">22.16.32</span></a>).
+</p>
+</div>
+</section>
+<section class="ltx_subsection" id="vii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§22.20(vii) </span>Further References</h2>
+<div class="ltx_metadata ltx_info" id="vii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Jacobian%20elliptic%20functions">Jacobian elliptic functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/22.20.vii" title="">http://dlmf.nist.gov/22.20.vii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="22.20.html#info" title="§22.20 Methods of Computation ‣ Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">§22.20</span></a> and
+<a class="ltx_ref" href="22.html#info" title="Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_tag">Ch.22</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="vii.p1">
+<p class="ltx_p">For additional information on methods of computation for the Jacobi and related
+functions, see the introductory sections in the following books:
+<cite class="ltx_cite ltx_citemacro_citet">Lawden (<a class="ltx_ref" href="bib/L.html#bib1385" title="Elliptic Functions and Applications">1989</a>)</cite>, <cite class="ltx_cite ltx_citemacro_citet">Curtis (<a class="ltx_ref" href="bib/C.html#bib606" title="Tables of Jacobian Elliptic Functions Whose Arguments are Rational Fractions of the Quarter Period">1964b</a>)</cite>,
+<cite class="ltx_cite ltx_citemacro_citet">Milne-Thomson (<a class="ltx_ref" href="bib/M.html#bib1637" title="Jacobian Elliptic Function Tables">1950</a>)</cite>, and <cite class="ltx_cite ltx_citemacro_citet">Spenceley and Spenceley (<a class="ltx_ref" href="bib/S.html#bib2139" title="Smithsonian Elliptic Functions Tables">1947</a>)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="22.19.html" rel="prev" title="In Applications ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.19 </span>Physical Applications</span></a><a class="ltx_ref" href="22.21.html" rel="next" title="In Computation ‣ Chapter 22 Jacobian Elliptic Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">22.21 </span>Tables</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* These bits needed to override the properties from ltx_figure! */
+/* The WebGL pages are a figure inside a figure, with the controls along side the inner figure*/
+
+/*#content { margin:5px; }
+
+.ltx_figure #content > * {
+    margin:0; 
+    text-align:left;
+}
+#content {
+    width:880px; }
+
+*/
+/* This line keeps the controls on the SIDE, instead of wrapping below on narrow screens*/
+
+/* Now, no #content !!! */
+/*
+.ltx_document { width:880px; }
+.ltx_figure { float:left;  margin:0px!important}
+.ltx_caption { width:520px; }
+.ltx_figure #content + .ltx_caption {
+    clear:both; }
+
+*/
+
+/* The "outer" figure; ie the whole page*/
+/*
+.ltx_figure { 
+    width:880px; }
+*/
+/* the "inner" figure (looks like a figure)*/
+.ltx_figure .ltx_figure.ltx_webglfigure {
+    width:600px!important;      /*not default 50/50*/
+    margin:5px;
+    float:left;
+    margin:10px!important; }
+
+X3D { border:0!important; }
+
+#mainScene {
+    height:600px;
+    width:600px;
+/*    float:left;*/
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 5px #888;
+    padding:5px; 
+    background:#FFFFFF;
+}
+#mainScene,
+#mainScene x3d,
+#mainScene x3d scene,
+.x3dom-canvas { cursor: url(rotate-cursor.png), move; }
+/* interesting but static based on display, not browser!
+@media only screen and (max-width: 640px){
+    #mainScene { height:300px; width:300px; }}
+@media only screen and (max-width: 1024px){
+    #mainScene { height:600px; width:60px; }}
+@media only screen and (max-width: 1600px){
+    #mainScene { height:900px; width:900px; }}
+*/
+#colorLegend {
+    position:relative;
+    left:5px;
+    top:505px;
+    width:0px;
+    height:0px;
+    overflow:visible;
+    z-index:100;
+    margin:0;
+}
+
+/* the controls */
+.box {
+    white-space:nowrap;
+    min-width:230px;            /*So room for cutting canvas*/
+    display:block;
+    padding: 5px;
+    border: 1px solid #9595A5;
+/*    border-radius: 10px;*/
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #888;
+/*    margin-top: 5px!important;*/
+    margin-bottom: 5px!important;
+    background:#FFFFFF;
+   }
+
+/* some patchup for WebGL figures (to fix flex) */
+.ltx_figure.ltx_webglfigure_outer {
+    display:block; }
+#colorLegend { align-self:flex-start; }
+
+/* initially */
+.cutDisplay {
+    display:none; }
+#cutCurve {
+    height:200px;
+    width:220px;
+    margin:5px 0;
+    font-family: STIXGeneral,Cambria,serif; 
+}
+.buttons {
+    margin:auto; }
+.buttons input,
+.buttons span {
+    margin:0; }
+#controlsWrapper {
+    display:inline-block;
+    margin-top:10px; }
+
+#controlsWrapper .ltx_title,
+#controlsWrapper .buttons {
+    text-align:center; }
+#controlsWrapper .ui-widget {
+    padding: 0.2em 0.3em; }
+#controlsWrapper .slider {
+    margin:auto;
+    padding:0; }
+.slider  {
+    height: 15px; width:180px; }
+.slidertext {
+    border:0; 
+    color:#4675a3; font-weight:bold;
+    width:80px; }
+/*    color:#f6931f; font-weight:bold;*/
+/*    color:#003eff; font-weight:bold;*/
+/*    color:#bcc4cc; font-weight:bold;*/
+.sliderControl {
+    text-align:left; }
+.sliderLabel {
+    margin-left:0;
+    font-weight:bold; }
+
+.ui-state-active {
+    background:#4675a3; }
+
+#controlsWrapper .slider .ui-slider-handle {
+  width:15px; height:15px; 
+  top:-1px; margin-left:-7px; }
+
+/* Too much space! */
+/*.ui-button-text-only .ui-button-text { padding: 0.1em 0.3em; }*/
+.ui-button-text-only .ui-button-text { padding: 0.2em 0.4em; }
+.ui-button .ui-button-text,
+.ui-widget  {
+    font-size:1.0em; 
+/*    line-height:1.2!important; */
+}
+#viewpoint .ui-button-text-only .ui-button-text { font-size:1.3em; }
+#cutTapeButtons .ui-button-text-only .ui-button-text { font-weight:normal; font-size:1.0em; }

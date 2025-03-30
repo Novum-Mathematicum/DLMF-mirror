@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/14.30";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="14.html#PT4" rel="up" title="Applications ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.html" rel="up up" title="Chapter 14 Legendre and Related Functions"/>
+<link href="index.html" rel="start" title=""/>
+<link href="14.29.html" rel="prev" title="§14.29 Generalizations ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.31.html" rel="next" title="§14.31 Other Applications ‣ Applications ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.1.html" rel="section" title="§14.1 Special Notation ‣ Notation ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.2.html" rel="section" title="§14.2 Differential Equations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.3.html" rel="section" title="§14.3 Definitions and Hypergeometric Representations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.4.html" rel="section" title="§14.4 Graphics ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.5.html" rel="section" title="§14.5 Special Values ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.6.html" rel="section" title="§14.6 Integer Order ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.7.html" rel="section" title="§14.7 Integer Degree and Order ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.8.html" rel="section" title="§14.8 Behavior at Singularities ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.9.html" rel="section" title="§14.9 Connection Formulas ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.10.html" rel="section" title="§14.10 Recurrence Relations and Derivatives ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.11.html" rel="section" title="§14.11 Derivatives with Respect to Degree or Order ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.12.html" rel="section" title="§14.12 Integral Representations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.13.html" rel="section" title="§14.13 Trigonometric Expansions ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.14.html" rel="section" title="§14.14 Continued Fractions ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.15.html" rel="section" title="§14.15 Uniform Asymptotic Approximations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.16.html" rel="section" title="§14.16 Zeros ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.17.html" rel="section" title="§14.17 Integrals ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.18.html" rel="section" title="§14.18 Sums ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.19.html" rel="section" title="§14.19 Toroidal (or Ring) Functions ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.20.html" rel="section" title="§14.20 Conical (or Mehler) Functions ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.21.html" rel="section" title="§14.21 Definitions and Basic Properties ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.22.html" rel="section" title="§14.22 Graphics ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.23.html" rel="section" title="§14.23 Values on the Cut ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.24.html" rel="section" title="§14.24 Analytic Continuation ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.25.html" rel="section" title="§14.25 Integral Representations ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.26.html" rel="section" title="§14.26 Uniform Asymptotic Expansions ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.27.html" rel="section" title="§14.27 Zeros ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.28.html" rel="section" title="§14.28 Sums ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.29.html" rel="section" title="§14.29 Generalizations ‣ Complex Arguments ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.31.html" rel="section" title="§14.31 Other Applications ‣ Applications ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.32.html" rel="section" title="§14.32 Methods of Computation ‣ Computation ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.33.html" rel="section" title="§14.33 Tables ‣ Computation ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="14.34.html" rel="section" title="§14.34 Software ‣ Computation ‣ Chapter 14 Legendre and Related Functions"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="Ferrers functions, Herglotz generating function, Laplace’s equation, addition theorem, angular momentum operator, applications, basic properties, definitions, distributional completeness, geophysics, homogeneous harmonic polynomials, oblate, prolate, reduced Planck’s constant, sectorial harmonics, spherical coordinates, spherical harmonics, spheroidal harmonics, sums, surface harmonics of the first kind, tesseral harmonics" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="14.30.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="14.30.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="14.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14 </span>Legendre and Related Functions</span></a><a class="ltx_ref" href="14.html#PT4" rel="up" title="In Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_title">Applications</span></a><a class="ltx_ref" href="14.29.html" rel="prev" title="In Complex Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14.29 </span>Generalizations</span></a><a class="ltx_ref" href="14.31.html" rel="next" title="In Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14.31 </span>Other Applications</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§14.30 </span>Spherical and Spheroidal Harmonics</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Ferrers%20functions">Ferrers functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20harmonics">spheroidal harmonics</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="1.17.html#Px8" title="Spherical Harmonics (§14.30) ‣ §1.17(iii) Series Representations ‣ §1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.17(iii)</span></a>,
+<a class="ltx_ref" href="18.38.html#Px7.p1" title="Zonal Spherical Harmonics ‣ §18.38(ii) Classical OP’s: Mathematical Developments and Applications ‣ §18.38 Mathematical Applications ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.38(ii)</span></a>,
+<a class="ltx_ref" href="34.3.html#vii.p1" title="§34.3(vii) Relations to Legendre Polynomials and Spherical Harmonics ‣ §34.3 Basic Properties: 3⁢𝑗 Symbol ‣ Properties ‣ Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"><span class="ltx_text ltx_ref_tag">§34.3(vii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.25.I1.ix1" title="In Errata ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">14.30</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="14.30.html" title="">http://dlmf.nist.gov/14.30</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="14.30.html#i"><span class="ltx_tag ltx_tag_subsection">§14.30(i) </span>Definitions</a></li>
+<li class="ltx_tocentry"><a href="14.30.html#ii"><span class="ltx_tag ltx_tag_subsection">§14.30(ii) </span>Basic Properties</a></li>
+<li class="ltx_tocentry"><a href="14.30.html#iii"><span class="ltx_tag ltx_tag_subsection">§14.30(iii) </span>Sums</a></li>
+<li class="ltx_tocentry"><a href="14.30.html#iv"><span class="ltx_tag ltx_tag_subsection">§14.30(iv) </span>Applications</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§14.30(i) </span>Definitions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=definitions">definitions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=oblate">oblate</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=prolate">prolate</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sectorial%20harmonics">sectorial harmonics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spheroidal%20harmonics">spheroidal harmonics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=surface%20harmonics%20of%20the%20first%20kind">surface harmonics of the first kind</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=tesseral%20harmonics">tesseral harmonics</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Edmonds (<a class="ltx_ref" href="bib/E.html#bib727" title="Angular Momentum in Quantum Mechanics">1974</a>, p. 24)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="10.73.html#ii.p1" title="§10.73(ii) Spherical Bessel Functions ‣ §10.73 Physical Applications ‣ Applications ‣ Chapter 10 Bessel Functions"><span class="ltx_text ltx_ref_tag">§10.73(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.i" title="">http://dlmf.nist.gov/14.30.i</a></dd>
+<dt>Correction (effective with 1.0.25):</dt>
+<dd>
+The domain of the integer <math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math> originally written as <math altimg="m3.png" altimg-height="21px" altimg-valign="-5px" altimg-width="95px" alttext="0\leq m\leq l" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi href="./14.30#i" title="integer">m</mi><mo>≤</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>
+has been replaced with <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|\leq l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>. Because of this change, in the sentence
+just below (<a class="ltx_ref" href="14.30.html#E2" title="(14.30.2) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.2</span></a>), “<em class="ltx_emph ltx_font_italic">tesseral</em> for
+<math altimg="m51.png" altimg-height="19px" altimg-valign="-3px" altimg-width="57px" alttext="m&lt;l" class="ltx_Math" display="inline"><mrow><mi href="./14.30#i" title="integer">m</mi><mo>&lt;</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math> and <em class="ltx_emph ltx_font_italic">sectorial</em> for <math altimg="m53.png" altimg-height="18px" altimg-valign="-2px" altimg-width="57px" alttext="m=l" class="ltx_Math" display="inline"><mrow><mi href="./14.30#i" title="integer">m</mi><mo>=</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>” has been replaced with
+“<em class="ltx_emph ltx_font_italic">tesseral</em> for <math altimg="m63.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|&lt;l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math> and <em class="ltx_emph ltx_font_italic">sectorial</em> for <math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|=l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>”.
+
+<p><span class="ltx_font_italic">Suggested 2019-10-15 by Ching-Li Chai</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">With <math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math> and <math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math> integers such that <math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|\leq l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>, and <math altimg="m46.png" altimg-height="18px" altimg-valign="-2px" altimg-width="15px" alttext="\theta" class="ltx_Math" display="inline"><mi>θ</mi></math> and <math altimg="m43.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="\phi" class="ltx_Math" display="inline"><mi>ϕ</mi></math>
+angles such that <math altimg="m5.png" altimg-height="21px" altimg-valign="-5px" altimg-width="93px" alttext="0\leq\theta\leq\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>θ</mi><mo>≤</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></math>, <math altimg="m4.png" altimg-height="22px" altimg-valign="-6px" altimg-width="105px" alttext="0\leq\phi\leq 2\pi" class="ltx_Math" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>ϕ</mi><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mrow></math>,
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E1.png" altimg-height="133px" altimg-valign="-22px" altimg-width="320px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)=\left(\frac{(l-m)!(2l+1)}{4\pi(l+m)!}%
+\right)^{1/2}e^{im\phi}\mathsf{P}^{m}_{l}\left(\cos\theta\right)," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>−</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo>⁢</mo><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="14.3.html#E1" title="(14.3.1) ‣ Ferrers Function of the First Kind ‣ §14.3(i) Interval -1&lt;𝑥&lt;1 ‣ §14.3 Definitions and Hypergeometric Representations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="\mathsf{P}^{\NVar{\mu}}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi class="ltx_nvar" href="./14.1#p1.t1.r4" title="general degree">ν</mi><mi class="ltx_nvar" href="./14.1#p1.t1.r4" title="general order">μ</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./14.3#i" title="real variable 1&lt;𝑥&lt;1">x</mi><mo>)</mo></mrow></mrow></math>: Ferrers function of the first kind</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(i)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.p1" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#iv.p1" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E1" title="">http://dlmf.nist.gov/14.30.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E1.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E1.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E1.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#i.info" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(i)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E2.png" altimg-height="157px" altimg-valign="-7px" altimg-width="211px" alttext="Y_{l}^{m}\left(\theta,\phi\right)=\cos\left(m\phi\right)\mathsf{P}^{m}_{l}%
+\left(\cos\theta\right)\text{ or }\sin\left(m\phi\right)\mathsf{P}^{m}_{l}%
+\left(\cos\theta\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mi href="./14.30#E2" title="surface harmonic of the first kind">Y</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./14.30#i" title="integer">m</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mtext> or </mtext><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./14.30#i" title="integer">m</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text ltx_font_bold"><math altimg="m15.png" altimg-height="26px" altimg-valign="-8px" altimg-width="88px" alttext="Y_{\NVar{l}}^{\NVar{m}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.30#E2" title="surface harmonic of the first kind">Y</mi><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: surface harmonic of the first kind</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="14.3.html#E1" title="(14.3.1) ‣ Ferrers Function of the First Kind ‣ §14.3(i) Interval -1&lt;𝑥&lt;1 ‣ §14.3 Definitions and Hypergeometric Representations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><math altimg="m36.png" altimg-height="25px" altimg-valign="-7px" altimg-width="60px" alttext="\mathsf{P}^{\NVar{\mu}}_{\NVar{\nu}}\left(\NVar{x}\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi class="ltx_nvar" href="./14.1#p1.t1.r4" title="general degree">ν</mi><mi class="ltx_nvar" href="./14.1#p1.t1.r4" title="general order">μ</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./14.3#i" title="real variable 1&lt;𝑥&lt;1">x</mi><mo>)</mo></mrow></mrow></math>: Ferrers function of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#i.info" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(i)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.25.I1.ix1.p1" title="In Errata ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">14.30</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E2" title="">http://dlmf.nist.gov/14.30.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E2.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E2.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E2.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#i.info" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(i)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p"><math altimg="m18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math> are known as <em class="ltx_emph ltx_font_italic">spherical
+harmonics</em>. <math altimg="m16.png" altimg-height="26px" altimg-valign="-8px" altimg-width="88px" alttext="Y_{l}^{m}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.30#E2" title="surface harmonic of the first kind">Y</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math> are known as <em class="ltx_emph ltx_font_italic">surface
+harmonics of the first kind</em>: <em class="ltx_emph ltx_font_italic">tesseral</em> for <math altimg="m63.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|&lt;l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math> and <em class="ltx_emph ltx_font_italic">sectorial</em>
+for <math altimg="m64.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|=l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>. Sometimes <math altimg="m18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math> is denoted by
+<math altimg="m48.png" altimg-height="27px" altimg-valign="-7px" altimg-width="117px" alttext="i^{-l}\mathfrak{D}_{lm}(\theta,\phi)" class="ltx_Math" display="inline"><mrow><msup><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mrow><mo>−</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></msup><mo>⁢</mo><mrow><msub><mi>𝔇</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>; also the definition of
+<math altimg="m18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math> can differ from
+(<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>), for example, by inclusion of a factor
+<math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="(-1)^{m}" class="ltx_Math" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./14.30#i" title="integer">m</mi></msup></math>.
+</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p"><math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="P^{m}_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.21#i.p1" title="associated Legendre function of the first kind">P</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m10.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="Q^{m}_{n}\left(x\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.21#i.p1" title="associated Legendre function of the second kind">Q</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> (<math altimg="m60.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;1" class="ltx_Math" display="inline"><mrow><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>&gt;</mo><mn>1</mn></mrow></math>) are often referred
+to as the <em class="ltx_emph ltx_font_italic">prolate spheroidal harmonics of the first and second kinds</em>,
+respectively. <math altimg="m6.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="P^{m}_{n}\left(ix\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.21#i.p1" title="associated Legendre function of the first kind">P</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow></math> and <math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="75px" alttext="Q^{m}_{n}\left(ix\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.21#i.p1" title="associated Legendre function of the second kind">Q</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow></math> (<math altimg="m59.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>) are
+known as <em class="ltx_emph ltx_font_italic">oblate spheroidal harmonics of the first and second kinds</em>,
+respectively. <cite class="ltx_cite ltx_citemacro_citet">Segura and Gil (<a class="ltx_ref" href="bib/S.html#bib2045" title="Evaluation of associated Legendre functions off the cut and parabolic cylinder functions">1999</a>)</cite> introduced the scaled oblate spheroidal
+harmonics <math altimg="m11.png" altimg-height="28px" altimg-valign="-7px" altimg-width="229px" alttext="R_{n}^{m}(x)=e^{-i\pi n/2}P^{m}_{n}\left(ix\right)" class="ltx_Math" display="inline"><mrow><mrow><msubsup><mi>R</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><mrow><msubsup><mi href="./14.21#i.p1" title="associated Legendre function of the first kind">P</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math> and
+<math altimg="m12.png" altimg-height="28px" altimg-valign="-7px" altimg-width="223px" alttext="T_{n}^{m}(x)=ie^{i\pi n/2}Q^{m}_{n}\left(ix\right)" class="ltx_Math" display="inline"><mrow><mrow><msubsup><mi>T</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mrow><msubsup><mi href="./14.21#i.p1" title="associated Legendre function of the second kind">Q</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math> which are real when <math altimg="m59.png" altimg-height="18px" altimg-valign="-3px" altimg-width="54px" alttext="x&gt;0" class="ltx_Math" display="inline"><mrow><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>
+and <math altimg="m57.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§14.30(ii) </span>Basic Properties</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=basic%20properties">basic properties</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>
+</dd>
+<dt>Notes:</dt>
+<dd>For (<a class="ltx_ref" href="14.30.html#E3" title="(14.30.3) ‣ Explicit Representation ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.3</span></a>), (<a class="ltx_ref" href="14.30.html#E6" title="(14.30.6) ‣ Symmetry ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.6</span></a>), and
+(<a class="ltx_ref" href="14.30.html#E8" title="(14.30.8) ‣ Orthogonality ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.8</span></a>) see <cite class="ltx_cite ltx_citemacro_citet">Edmonds (<a class="ltx_ref" href="bib/E.html#bib727" title="Angular Momentum in Quantum Mechanics">1974</a>, pp. 20–21)</cite>.
+(Note that Edmonds’ <math altimg="m8.png" altimg-height="26px" altimg-valign="-8px" altimg-width="64px" alttext="P_{l}^{m}(x)" class="ltx_Math" display="inline"><mrow><msubsup><mi>P</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo stretchy="false">)</mo></mrow></mrow></math> differs by a factor <math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="63px" alttext="(-1)^{m}" class="ltx_Math" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./14.30#i" title="integer">m</mi></msup></math> from
+<math altimg="m37.png" altimg-height="26px" altimg-valign="-8px" altimg-width="65px" alttext="\mathsf{P}^{m}_{l}\left(x\right)" class="ltx_Math" display="inline"><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mi href="./14.30#i" title="integer">m</mi></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></math>.)
+(<a class="ltx_ref" href="14.30.html#E4" title="(14.30.4) ‣ Special Values ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.4</span></a>) may be derived from (<a class="ltx_ref" href="14.8.html#E1" title="(14.8.1) ‣ §14.8(i) 𝑥→limit-from1- or 𝑥→limit-from{-1}+ ‣ §14.8 Behavior at Singularities ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.8.1</span></a>),
+(<a class="ltx_ref" href="14.8.html#E2" title="(14.8.2) ‣ §14.8(i) 𝑥→limit-from1- or 𝑥→limit-from{-1}+ ‣ §14.8 Behavior at Singularities ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.8.2</span></a>), and (<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>).
+(<a class="ltx_ref" href="14.30.html#E5" title="(14.30.5) ‣ Special Values ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.5</span></a>) may be derived from (<a class="ltx_ref" href="14.5.html#E1" title="(14.5.1) ‣ §14.5(i) 𝑥=0 ‣ §14.5 Special Values ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.5.1</span></a>) and
+(<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>).
+(<a class="ltx_ref" href="14.30.html#E7" title="(14.30.7) ‣ Parity Operation ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.7</span></a>) may be derived from (<a class="ltx_ref" href="14.7.html#E17" title="(14.7.17) ‣ §14.7(iii) Reflection Formulas ‣ §14.7 Integer Degree and Order ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.7.17</span></a>) and
+(<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>).
+(<a class="ltx_ref" href="14.30.html#E3" title="(14.30.3) ‣ Explicit Representation ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.3</span></a>) also follows from
+(<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>) and (<a class="ltx_ref" href="14.7.html#E10" title="(14.7.10) ‣ §14.7(ii) Rodrigues-Type Formulas ‣ §14.7 Integer Degree and Order ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.7.10</span></a>).</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="errata/index.html#V1.0.19.I2.ix2.p1" title="In Other Changes ‣ Version 1.0.19 (June 22, 2018) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.19) for  Notation</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.0.I2.ix1.p1" title="In Other Changes ‣ Version 1.1.0 (December 15, 2020) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.0) for  Additions</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.ii" title="">http://dlmf.nist.gov/14.30.ii</a></dd>
+<dt>Addition (effective with 1.1.0):</dt>
+<dd>
+Paragraph <a class="ltx_ref" href="14.30.html#Px6" title="In §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_title">Herglotz generating function</span></a> was added.
+
+<p><span class="ltx_font_italic">Suggested 2020-10-21 by Anupam Garg</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Most mathematical properties of <math altimg="m18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math> can
+be derived directly from (<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>) and the properties
+of the Ferrers function of the first kind given earlier in this chapter.</p>
+</div>
+<section class="ltx_paragraph" id="Px1">
+<h3 class="ltx_title ltx_title_paragraph">Explicit Representation</h3>
+<div class="ltx_metadata ltx_info" id="Px1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px1.p1">
+<table class="ltx_equation ltx_eqn_table" id="E3">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="Y_{{l},{m}}\left(\theta,\phi\right)=\frac{(-1)^{l+m}}{2^{l}l!}\left(\frac{(l-m%
+)!(2l+1)}{4\pi(l+m)!}\right)^{1/2}e^{im\phi}\left(\sin\theta\right)^{m}\*\left%
+(\frac{\mathrm{d}}{\mathrm{d}(\cos\theta)}\right)^{l+m}\left(\sin\theta\right)%
+^{2l}." class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msup><mrow><msup><mn>2</mn><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></msup><mo>⁢</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>−</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>×</mo><msup><mrow><mo>(</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>)</mo></mrow><mi href="./14.30#i" title="integer">m</mi></msup><mo>⁢</mo><mrow><msup><mrow><mo>(</mo><mfrac><mo href="./1.4#E4" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>)</mo></mrow><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msup><mo>⁡</mo><msup><mrow><mo>(</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></msup></mrow><mo lspace="0em">.</mo></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="1.4.html#E4" title="(1.4.4) ‣ §1.4(iii) Derivatives ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m21.png" altimg-height="31px" altimg-valign="-9px" altimg-width="28px" alttext="\frac{\mathrm{d}\NVar{f}}{\mathrm{d}\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.4#E4" rspace="0em" title="derivative of 𝑓 with respect to 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: derivative of <math altimg="m47.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E3" title="">http://dlmf.nist.gov/14.30.E3</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E3.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E3.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E3.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px1.info" title="Explicit Representation ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px2">
+<h3 class="ltx_title ltx_title_paragraph">Special Values</h3>
+<div class="ltx_metadata ltx_info" id="Px2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px2.p1">
+<table class="ltx_equation ltx_eqn_table" id="E4">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.4</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E4.png" altimg-height="100px" altimg-valign="-40px" altimg-width="534px" alttext="Y_{{l},{m}}\left(0,\phi\right)=\begin{cases}\left(\dfrac{2l+1}{4\pi}\right)^{1%
+/2},&amp;m=0,\\
+0,&amp;|m|=1,2,3,\dots,\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mn>0</mn><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi href="./14.30#i" title="integer">m</mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.0.25.I1.ix1.p1" title="In Errata ‣ Version 1.0.25 (December 15, 2019) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.0.25) for  Section <span class="ltx_text ltx_ref_tag">14.30</span></span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E4" title="">http://dlmf.nist.gov/14.30.E4</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E4.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E4.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E4.png">png</a>
+</dd>
+<dt>Correction (effective with 1.0.25):</dt>
+<dd>
+Previously this equation was only given for <math altimg="m55.png" altimg-height="20px" altimg-valign="-5px" altimg-width="61px" alttext="m\geq 0" class="ltx_Math" display="inline"><mrow><mi href="./14.30#i" title="integer">m</mi><mo>≥</mo><mn>0</mn></mrow></math>.
+In this update we have extended the definition of spherical
+harmonics to include negative integer values such that
+<math altimg="m66.png" altimg-height="25px" altimg-valign="-7px" altimg-width="68px" alttext="|m|\leq l" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></math>. Hence in the second part of this equation,
+we have replaced <math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math> with <math altimg="m65.png" altimg-height="25px" altimg-valign="-7px" altimg-width="34px" alttext="|m|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi href="./14.30#i" title="integer">m</mi><mo stretchy="false">|</mo></mrow></math>.
+
+<p><span class="ltx_font_italic">Suggested 2019-10-15 by Ching-Li Chai</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px2.info" title="Special Values ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="ltx_equation ltx_eqn_table" id="E5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E5.png" altimg-height="118px" altimg-valign="-50px" altimg-width="848px" alttext="Y_{{l},{m}}\left(\tfrac{1}{2}\pi,\phi\right)=\begin{cases}\dfrac{(-1)^{(l+m)/2%
+}e^{im\phi}}{2^{l}\left(\frac{1}{2}l-\frac{1}{2}m\right)!\left(\frac{1}{2}l+%
+\frac{1}{2}m\right)!}\left(\dfrac{(l-m)!(l+m)!(2l+1)}{4\pi}\right)^{1/2},&amp;%
+\frac{1}{2}l+\frac{1}{2}m\in\mathbb{Z},\\[15.0pt]
+0,&amp;\frac{1}{2}l+\frac{1}{2}m\notin\mathbb{Z}.\end{cases}" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow><mrow><msup><mn>2</mn><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></msup><mo>⁢</mo><mrow><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi></mrow></mrow><mo>)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi></mrow></mrow><mo>)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>−</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi></mrow></mrow><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi></mrow></mrow><mo href="./front/introduction#common.t1.r11" title="not an element of">∉</mo><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r10" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m24.png" altimg-height="16px" altimg-valign="-3px" altimg-width="18px" alttext="\in" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r10" title="element of">∈</mo></math>: element of</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t2.r20" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m26.png" altimg-height="18px" altimg-valign="-2px" altimg-width="18px" alttext="\mathbb{Z}" class="ltx_Math" display="inline"><mi href="./front/introduction#common.t2.r20" title="set of all integers">ℤ</mi></math>: set of all integers</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r11" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m40.png" altimg-height="21px" altimg-valign="-3px" altimg-width="18px" alttext="\notin" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r11" title="not an element of">∉</mo></math>: not an element of</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E5" title="">http://dlmf.nist.gov/14.30.E5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E5.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E5.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px2.info" title="Special Values ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px3">
+<h3 class="ltx_title ltx_title_paragraph">Symmetry</h3>
+<div class="ltx_metadata ltx_info" id="Px3.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px3.p1">
+<table class="ltx_equation ltx_eqn_table" id="E6">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.6</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E6.png" altimg-height="41px" altimg-valign="-8px" altimg-width="399px" alttext="Y_{{l},{-m}}\left(\theta,\phi\right)=(-1)^{m}\overline{Y_{{l},{m}}\left(\theta%
+,\phi\right)}." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mrow><mo>−</mo><mi href="./14.30#i" title="integer">m</mi></mrow></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./14.30#i" title="integer">m</mi></msup><mo>⁢</mo><mover accent="true"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E11" title="(1.9.11) ‣ Complex Conjugate ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m41.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="\overline{\NVar{z}}" class="ltx_Math" display="inline"><mover accent="true"><mi class="ltx_nvar" href="./1.1#t1.r2" title="variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></math>: complex conjugate</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E6" title="">http://dlmf.nist.gov/14.30.E6</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E6.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E6.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E6.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.19):</dt>
+<dd>
+As a notational clarification, the spherical harmonic
+on the right-hand side
+has been explicity marked up as a complex conjugate.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px3.info" title="Symmetry ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px4">
+<h3 class="ltx_title ltx_title_paragraph">Parity Operation</h3>
+<div class="ltx_metadata ltx_info" id="Px4.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px4.p1">
+<table class="ltx_equation ltx_eqn_table" id="E7">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E7.png" altimg-height="70px" altimg-valign="-8px" altimg-width="193px" alttext="Y_{{l},{m}}\left(\pi-\theta,\phi+\pi\right)=(-1)^{l}Y_{{l},{m}}\left(\theta,%
+\phi\right)." class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi><mo>−</mo><mi>θ</mi></mrow><mo>,</mo><mrow><mi>ϕ</mi><mo>+</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></msup><mo>⁢</mo><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E7" title="">http://dlmf.nist.gov/14.30.E7</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E7.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E7.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E7.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px4.info" title="Parity Operation ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px5">
+<h3 class="ltx_title ltx_title_paragraph">Orthogonality</h3>
+<div class="ltx_metadata ltx_info" id="Px5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px5.p1">
+<table class="ltx_equation ltx_eqn_table" id="E8">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.8</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8.png" altimg-height="64px" altimg-valign="-21px" altimg-width="907px" alttext="\int_{0}^{2\pi}\!\!\int_{0}^{\pi}\overline{Y_{{l_{1}},{m_{1}}}\left(\theta,%
+\phi\right)}Y_{{l_{2}},{m_{2}}}\left(\theta,\phi\right)\sin\theta\,\mathrm{d}%
+\theta\,\mathrm{d}\phi=\delta_{l_{1},l_{2}}\delta_{m_{1},m_{2}}." class="ltx_Math" display="block"><mrow><mrow><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msubsup><mrow><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></msubsup><mrow><mover accent="true"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><msub><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mn>1</mn></msub><mo href="./14.30#E1" title="spherical harmonic">,</mo><msub><mi href="./14.30#i" title="integer">m</mi><mn>1</mn></msub></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>⁢</mo><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><msub><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mn>2</mn></msub><mo href="./14.30#E1" title="spherical harmonic">,</mo><msub><mi href="./14.30#i" title="integer">m</mi><mn>2</mn></msub></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>θ</mi></mrow><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><msub><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><msub><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mn>2</mn></msub></mrow></msub><mo>⁢</mo><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><msub><mi href="./14.30#i" title="integer">m</mi><mn>1</mn></msub><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><msub><mi href="./14.30#i" title="integer">m</mi><mn>2</mn></msub></mrow></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="front/introduction.html#common.t1.r4" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m20.png" altimg-height="24px" altimg-valign="-8px" altimg-width="36px" alttext="\delta_{\NVar{j},\NVar{k}}" class="ltx_Math" display="inline"><msub><mi href="./front/introduction#common.t1.r4" title="Kronecker delta">δ</mi><mrow><mi class="ltx_nvar">j</mi><mo href="./front/introduction#common.t1.r4" title="Kronecker delta">,</mo><mi class="ltx_nvar">k</mi></mrow></msub></math>: Kronecker delta</a>,
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.9.html#E11" title="(1.9.11) ‣ Complex Conjugate ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m41.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="\overline{\NVar{z}}" class="ltx_Math" display="inline"><mover accent="true"><mi class="ltx_nvar" href="./1.1#t1.r2" title="variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></math>: complex conjugate</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m33.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m25.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E8" title="">http://dlmf.nist.gov/14.30.E8</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E8.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E8.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E8.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.19):</dt>
+<dd>
+As a notational clarification, the first spherical harmonic
+in the integral over <math altimg="m46.png" altimg-height="18px" altimg-valign="-2px" altimg-width="15px" alttext="\theta" class="ltx_Math" display="inline"><mi>θ</mi></math> been explicity marked up as a complex conjugate.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px5.info" title="Orthogonality ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px5.p2">
+<p class="ltx_p">See also (<a class="ltx_ref" href="34.3.html#E22" title="(34.3.22) ‣ §34.3(vii) Relations to Legendre Polynomials and Spherical Harmonics ‣ §34.3 Basic Properties: 3⁢𝑗 Symbol ‣ Properties ‣ Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"><span class="ltx_text ltx_ref_tag">34.3.22</span></a>), and for further related integrals see
+<cite class="ltx_cite ltx_citemacro_citet">Askey<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/index.html#bib160" title="An integral of products of ultraspherical functions and a q -extension">1986</a>)</cite>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px6">
+<h3 class="ltx_title ltx_title_paragraph">Herglotz generating function</h3>
+<div class="ltx_metadata ltx_info" id="Px6.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Herglotz%20generating%20function">Herglotz generating function</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=basic%20properties">basic properties</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.0.I2.ix1.p1" title="In Other Changes ‣ Version 1.1.0 (December 15, 2020) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.0) for  Additions</span></a>
+</dd>
+<dt>Addition (effective with 1.1.0):</dt>
+<dd>
+This paragraph was added.
+
+<p><span class="ltx_font_italic">Suggested 2020-10-21 by Anupam Garg</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px6.p1">
+<p class="ltx_p">The following is the Herglotz generating function</p>
+<table class="ltx_equation ltx_eqn_table" id="E8_5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.8_5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E8_5.png" altimg-height="68px" altimg-valign="-30px" altimg-width="470px" alttext="{\mathrm{e}}^{t{\mathbf{a}}\cdot{\mathbf{x}}}=\sqrt{4\pi}\sum_{n=0}^{\infty}%
+\sum_{m=-n}^{n}\frac{t^{n}r^{n}\lambda^{m}Y_{{n},{m}}\left(\theta,\phi\right)}%
+{\sqrt{(2n+1)(n+m)!(n-m)!}}," class="ltx_Math" display="block"><mrow><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>𝐚</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝐱</mi></mrow></msup><mo>=</mo><mrow><msqrt><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow></msqrt><mo>⁢</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./14.30#i" title="integer">m</mi><mo>=</mo><mrow><mo>−</mo><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow></mrow><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></munderover><mfrac><mrow><msup><mi>t</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi>r</mi><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mo>⁢</mo><msup><mi>λ</mi><mi href="./14.30#i" title="integer">m</mi></msup><mo>⁢</mo><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></mrow><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>+</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mi href="./14.30#i" title="integer">m</mi></mrow><mo stretchy="false">)</mo></mrow><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></mrow></msqrt></mfrac></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E8_5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="front/introduction.html#common.t1.r15" title="Common Notations and Definitions ‣ Mathematical Introduction"><math altimg="m1.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="!" class="ltx_Math" display="inline"><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></math>: factorial (as in <math altimg="m56.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="n!" class="ltx_Math" display="inline"><mrow><mi>n</mi><mo href="./front/introduction#common.t1.r15" title="factorial (as in 𝑛!)">!</mo></mrow></math>)</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.1.html#p1.t1.r3" title="§14.1 Special Notation ‣ Notation ‣ Chapter 14 Legendre and Related Functions"><math altimg="m58.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./14.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a>
+</dd>
+<dt>Source:</dt>
+<dd><cite class="ltx_cite ltx_citemacro_citet">Courant and Hilbert (<a class="ltx_ref" href="bib/C.html#bib2939" title="Methods of mathematical physics. Vol. I">1953</a>, §VII.7.3)</cite></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E8_5" title="">http://dlmf.nist.gov/14.30.E8_5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E8_5.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E8_5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E8_5.png">png</a>
+</dd>
+<dt>Addition (effective with 1.1.0):</dt>
+<dd>
+This equation was added.
+
+<p><span class="ltx_font_italic">Suggested 2019-09-26 by Anupam Garg</span></p>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px6.info" title="Herglotz generating function ‣ §14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#ii.info" title="§14.30(ii) Basic Properties ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(ii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where
+<math altimg="m27.png" altimg-height="30px" altimg-valign="-9px" altimg-width="239px" alttext="\mathbf{a}=\left(\tfrac{1}{2\lambda}-\tfrac{\lambda}{2},-\tfrac{\mathrm{i}}{2%
+\lambda}-\tfrac{\mathrm{i}\lambda}{2},1\right)" class="ltx_Math" display="inline"><mrow><mi>𝐚</mi><mo>=</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow></mfrac><mo>−</mo><mfrac><mi>λ</mi><mn>2</mn></mfrac></mrow><mo>,</mo><mrow><mrow><mo>−</mo><mfrac><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow></mfrac></mrow><mo>−</mo><mfrac><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi>λ</mi></mrow><mn>2</mn></mfrac></mrow><mo>,</mo><mn>1</mn><mo>)</mo></mrow></mrow></math>
+and
+<math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="331px" alttext="\mathbf{x}=\left(r\sin\theta\cos\phi,r\sin\theta\sin\phi,r\cos\theta\right)" class="ltx_Math" display="inline"><mrow><mi>𝐱</mi><mo>=</mo><mrow><mo>(</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow></mrow><mo>,</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow></mrow><mo>,</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§14.30(iii) </span>Sums</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sums">sums</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Edmonds (<a class="ltx_ref" href="bib/E.html#bib727" title="Angular Momentum in Quantum Mechanics">1974</a>, p. 63)</cite>.</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.iii" title="">http://dlmf.nist.gov/14.30.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<section class="ltx_paragraph" id="Px7">
+<h3 class="ltx_title ltx_title_paragraph">Distributional Completeness</h3>
+<div class="ltx_metadata ltx_info" id="Px7.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=distributional%20completeness">distributional completeness</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iii.info" title="§14.30(iii) Sums ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px7.p1">
+<p class="ltx_p">For a series representation of the product of two Dirac deltas in terms of
+products of spherical harmonics see §<a class="ltx_ref" href="1.17.html#iii" title="§1.17(iii) Series Representations ‣ §1.17 Integral and Series Representations of the Dirac Delta ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.17(iii)</span></a>.</p>
+</div>
+</section>
+<section class="ltx_paragraph" id="Px8">
+<h3 class="ltx_title ltx_title_paragraph">Addition Theorem</h3>
+<div class="ltx_metadata ltx_info" id="Px8.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=addition%20theorem">addition theorem</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iii.info" title="§14.30(iii) Sums ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="Px8.p1">
+<table class="ltx_equation ltx_eqn_table" id="E9">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.9</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_Math ltx_eqn_cell ltx_align_center"><math alttext="\mathsf{P}_{l}\left(\cos\theta_{1}\cos\theta_{2}+\sin\theta_{1}\sin\theta_{2}%
+\cos\left(\phi_{1}-\phi_{2}\right)\right)=\frac{4\pi}{2l+1}\sum_{m=-l}^{l}%
+\overline{Y_{{l},{m}}\left(\theta_{1},\phi_{1}\right)}Y_{{l},{m}}\left(\theta_%
+{2},\phi_{2}\right)." class="ltx_Math" display="block"><mrow><mtable align="baseline 1" columnalign="left" displaystyle="true"><mtr><mtd class="ltx_align_left"><mrow><msub><mi href="./14.2#ii.p2" title="Ferrers function of the first kind">𝖯</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><msub><mi>θ</mi><mn>1</mn></msub></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><msub><mi>θ</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><msub><mi>θ</mi><mn>1</mn></msub></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><msub><mi>θ</mi><mn>2</mn></msub></mrow><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi>ϕ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left"><mspace width="2em"></mspace><mo>=</mo><mrow><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi href="./14.30#i" title="integer">m</mi><mo>=</mo><mrow><mo>−</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></munderover><mrow><mover accent="true"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>)</mo></mrow></mrow><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover><mo>⁢</mo><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><msub><mi>θ</mi><mn>2</mn></msub><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E9.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="3.12.html#E1" title="(3.12.1) ‣ §3.12 Mathematical Constants ‣ Areas ‣ Chapter 3 Numerical Methods"><math altimg="m44.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="\pi" class="ltx_Math" display="inline"><mi href="./3.12#E1" title="the ratio of the circumference of a circle to its diameter">π</mi></math>: the ratio of the circumference of a circle to its diameter</a>,
+<a class="ltx_ref" href="1.9.html#E11" title="(1.9.11) ‣ Complex Conjugate ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m41.png" altimg-height="17px" altimg-valign="-2px" altimg-width="15px" alttext="\overline{\NVar{z}}" class="ltx_Math" display="inline"><mover accent="true"><mi class="ltx_nvar" href="./1.1#t1.r2" title="variable">z</mi><mo href="./1.9#E11" title="complex conjugate">¯</mo></mover></math>: complex conjugate</a>,
+<a class="ltx_ref" href="4.14.html#E2" title="(4.14.2) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m19.png" altimg-height="13px" altimg-valign="-2px" altimg-width="46px" alttext="\cos\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E2" title="cosine function">cos</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: cosine function</a>,
+<a class="ltx_ref" href="14.2.html#ii.p2" title="§14.2(ii) Associated Legendre Equation ‣ §14.2 Differential Equations ‣ Real Arguments ‣ Chapter 14 Legendre and Related Functions"><math altimg="m38.png" altimg-height="26px" altimg-valign="-7px" altimg-width="142px" alttext="\mathsf{P}_{\NVar{\nu}}\left(\NVar{x}\right)=\mathsf{P}^{0}_{\nu}\left(x\right)" class="ltx_Math" display="inline"><mrow><mrow><msub><mi href="./14.2#ii.p2" title="Ferrers function of the first kind">𝖯</mi><mi class="ltx_nvar" href="./14.1#p1.t1.r4" title="general degree">ν</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar" href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mi href="./14.3#E1" title="Ferrers function of the first kind">𝖯</mi><mi href="./14.1#p1.t1.r4" title="general degree">ν</mi><mn>0</mn></msubsup><mo>⁡</mo><mrow><mo>(</mo><mi href="./14.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></mrow></math>: Ferrers function of the first kind</a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>,
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a> and
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="18.18.html#Px8.p1" title="Legendre ‣ §18.18(ii) Addition Theorems ‣ §18.18 Sums ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.18(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E9" title="">http://dlmf.nist.gov/14.30.E9</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E9.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E9.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E9.png">png</a>
+</dd>
+<dt>Notational Change (effective with 1.0.19):</dt>
+<dd>
+As a notational clarification, the first spherical harmonic
+in the sum over <math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math> has been explicity marked up as a complex conjugate.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#Px8.info" title="Addition Theorem ‣ §14.30(iii) Sums ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iii)</span></a>,
+<a class="ltx_ref" href="14.30.html#iii.info" title="§14.30(iii) Sums ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iii)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ltx_para" id="Px8.p2">
+<p class="ltx_p">See also (<a class="ltx_ref" href="18.18.html#E9" title="(18.18.9) ‣ Legendre ‣ §18.18(ii) Addition Theorems ‣ §18.18 Sums ‣ Classical Orthogonal Polynomials ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">18.18.9</span></a>) and (<a class="ltx_ref" href="34.3.html#E19" title="(34.3.19) ‣ §34.3(vii) Relations to Legendre Polynomials and Spherical Harmonics ‣ §34.3 Basic Properties: 3⁢𝑗 Symbol ‣ Properties ‣ Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"><span class="ltx_text ltx_ref_tag">34.3.19</span></a>).</p>
+</div>
+</section>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§14.30(iv) </span>Applications</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Ferrers%20functions">Ferrers functions</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=Laplace%20equation">Laplace’s equation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=angular%20momentum%20operator">angular momentum operator</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=applications">applications</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=geophysics">geophysics</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=homogeneous%20harmonic%20polynomials">homogeneous harmonic polynomials</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=reduced%20Planck%20constant">reduced Planck’s constant</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20coordinates">spherical coordinates</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=spherical%20harmonics">spherical harmonics</a>
+</dd>
+<dt>Notes:</dt>
+<dd>See <cite class="ltx_cite ltx_citemacro_citet">Edmonds (<a class="ltx_ref" href="bib/E.html#bib727" title="Angular Momentum in Quantum Mechanics">1974</a>, pp. 21–22)</cite>.</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="1.5.html#Px6.p2" title="Spherical Coordinates ‣ §1.5(ii) Coordinate Systems ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">§1.5(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.iv" title="">http://dlmf.nist.gov/14.30.iv</a></dd>
+<dt>Addition (effective with 1.1.0):</dt>
+<dd>
+This section has been modified to include the addition of Equations
+(<a class="ltx_ref" href="14.30.html#E11_5" title="(14.30.11_5) ‣ §14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.11_5</span></a>) and (<a class="ltx_ref" href="14.30.html#E13" title="(14.30.13) ‣ §14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.13</span></a>), which are the eigenvalue equation
+and the definition of the <math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./14.1#p1.t1.r2" title="complex variable">z</mi></math> component of the angular momentum operator in
+spherical coordinates.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">In general, <em class="ltx_emph ltx_font_italic">spherical harmonics</em> are defined as the class of homogeneous
+harmonic polynomials.
+See <cite class="ltx_cite ltx_citemacro_citet">Andrews<span class="ltx_text ltx_bib_etal"> et al.</span> (<a class="ltx_ref" href="bib/index.html#bib103" title="Special Functions">1999</a>, Chapter 9)</cite>. The special
+class of spherical harmonics <math altimg="m18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math>,
+defined by (<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">14.30.1</span></a>), appear in many physical
+applications. As an example, Laplace’s equation <math altimg="m39.png" altimg-height="21px" altimg-valign="-2px" altimg-width="91px" alttext="\nabla^{2}W=0" class="ltx_Math" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mi href="./14.30#iv.p1" title="solution">W</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> in spherical
+coordinates (§<a class="ltx_ref" href="1.5.html#ii" title="§1.5(ii) Coordinate Systems ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><span class="ltx_text ltx_ref_tag">1.5(ii)</span></a>):
+</p>
+<table class="ltx_equation ltx_eqn_table" id="E10">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.10</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E10.png" altimg-height="58px" altimg-valign="-22px" altimg-width="575px" alttext="{\frac{1}{\rho^{2}}\frac{\partial}{\partial\rho}\left(\rho^{2}\frac{\partial W%
+}{\partial\rho}\right)+\frac{1}{\rho^{2}\sin\theta}\frac{\partial}{\partial%
+\theta}\left(\sin\theta\frac{\partial W}{\partial\theta}\right)}+\frac{1}{\rho%
+^{2}{\sin}^{2}\theta}\frac{{\partial}^{2}W}{{\partial\phi}^{2}}=0," class="ltx_Math" display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><msup><mi>ρ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mfrac><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>ρ</mi></mrow></mfrac><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>ρ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi href="./14.30#iv.p1" title="solution">W</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>ρ</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>ρ</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mfrac><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>θ</mi></mrow></mfrac><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>⁢</mo><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi href="./14.30#iv.p1" title="solution">W</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>θ</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>ρ</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi href="./4.14#E1" title="sine function">sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><mi href="./14.30#iv.p1" title="solution">W</mi></mrow><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>ϕ</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E10.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m47.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a> and
+<a class="ltx_ref" href="14.30.html#iv.p1" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m14.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="W(\rho,\theta,\phi)" class="ltx_Math" display="inline"><mrow><mi href="./14.30#iv.p1" title="solution">W</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math>:  solution</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E10" title="">http://dlmf.nist.gov/14.30.E10</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E10.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E10.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E10.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">has solutions <math altimg="m13.png" altimg-height="28px" altimg-valign="-8px" altimg-width="229px" alttext="W(\rho,\theta,\phi)=\rho^{l}Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><mrow><mi href="./14.30#iv.p1" title="solution">W</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>ρ</mi><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></msup><mo>⁢</mo><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></mrow></mrow></math>, which are everywhere one-valued
+and continuous.</p>
+</div>
+<div class="ltx_para" id="iv.p2">
+<p class="ltx_p">In the quantization of angular momentum the spherical harmonics
+<math altimg="m18.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{l},{m}}\left(\theta,\phi\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo>)</mo></mrow></mrow></math> are normalized solutions of the
+eigenvalue equations</p>
+<table class="ltx_equation ltx_eqn_table" id="E11">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.11</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11.png" altimg-height="31px" altimg-valign="-8px" altimg-width="225px" alttext="\mathrm{L}^{2}Y_{{l},{m}}=\hbar^{2}l(l+1)Y_{{l},{m}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msup><mo href="./14.30#E12" title="angular momentum operator">L</mo><mn>2</mn></msup><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m49.png" altimg-height="22px" altimg-valign="-6px" altimg-width="122px" alttext="l=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="14.30.html#E12" title="(14.30.12) ‣ §14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="17px" alttext="\mathrm{L}" class="ltx_Math" display="inline"><mo href="./14.30#E12" title="angular momentum operator">L</mo></math>:  angular momentum operator</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="18.39.html#ii.p1" title="§18.39(ii) A 3D Separable Quantum System, the Hydrogen Atom ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.39(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E11" title="">http://dlmf.nist.gov/14.30.E11</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E11.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E11.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E11.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table" id="E11_5">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.11_5</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E11_5.png" altimg-height="26px" altimg-valign="-8px" altimg-width="169px" alttext="\mathrm{L}_{z}Y_{{l},{m}}=\hbar mY_{{l},{m}}," class="ltx_Math" display="block"><mrow><mrow><mrow><msub><mi href="./14.30#E13" mathvariant="normal" title="𝑧 component of the angular momentum operator">L</mi><mi href="./14.30#E13" title="𝑧 component of the angular momentum operator">z</mi></msub><mo>⁡</mo><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi href="./14.30#i" title="integer">m</mi><mo>⁢</mo><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi href="./14.30#i" title="integer">m</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m52.png" altimg-height="22px" altimg-valign="-6px" altimg-width="305px" alttext="m=-l,-1+1,\dots,0,\dots,l-1,l" class="ltx_Math" display="inline"><mrow><mi href="./14.30#i" title="integer">m</mi><mo>=</mo><mrow><mrow><mo>−</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow><mo>,</mo><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi href="./14.30#i.p1" title="nonnegative integer">l</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></mrow></mrow></math>,</span></td></tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E11_5.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#E1" title="(14.30.1) ‣ §14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m17.png" altimg-height="26px" altimg-valign="-8px" altimg-width="94px" alttext="Y_{{\NVar{l}},{\NVar{m}}}\left(\NVar{\theta},\NVar{\phi}\right)" class="ltx_Math" display="inline"><mrow><msub><mi href="./14.30#E1" title="spherical harmonic">Y</mi><mrow><mi class="ltx_nvar" href="./14.30#i.p1" title="nonnegative integer">l</mi><mo href="./14.30#E1" title="spherical harmonic">,</mo><mi class="ltx_nvar" href="./14.30#i" title="integer">m</mi></mrow></msub><mo>⁡</mo><mrow><mo>(</mo><mi class="ltx_nvar">θ</mi><mo>,</mo><mi class="ltx_nvar">ϕ</mi><mo>)</mo></mrow></mrow></math>: spherical harmonic</a>,
+<a class="ltx_ref" href="14.30.html#i" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m54.png" altimg-height="13px" altimg-valign="-2px" altimg-width="23px" alttext="m" class="ltx_Math" display="inline"><mi href="./14.30#i" title="integer">m</mi></math>:  integer</a>,
+<a class="ltx_ref" href="14.30.html#i.p1" title="§14.30(i) Definitions ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m50.png" altimg-height="18px" altimg-valign="-2px" altimg-width="11px" alttext="l" class="ltx_Math" display="inline"><mi href="./14.30#i.p1" title="nonnegative integer">l</mi></math>:  nonnegative integer</a> and
+<a class="ltx_ref" href="14.30.html#E13" title="(14.30.13) ‣ §14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><math altimg="m32.png" altimg-height="21px" altimg-valign="-5px" altimg-width="27px" alttext="\mathrm{L}_{z}" class="ltx_Math" display="inline"><msub><mi href="./14.30#E13" mathvariant="normal" title="𝑧 component of the angular momentum operator">L</mi><mi href="./14.30#E13" title="𝑧 component of the angular momentum operator">z</mi></msub></math>:  <math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./14.1#p1.t1.r2" title="complex variable">z</mi></math> component of the angular momentum operator</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.0.I2.ix1.p1" title="In Other Changes ‣ Version 1.1.0 (December 15, 2020) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.0) for  Additions</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E11_5" title="">http://dlmf.nist.gov/14.30.E11_5</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E11_5.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E11_5.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E11_5.png">png</a>
+</dd>
+<dt>Addition (effective with 1.1.0):</dt>
+<dd>
+This equation was added.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">where <math altimg="m23.png" altimg-height="18px" altimg-valign="-2px" altimg-width="16px" alttext="\hbar" class="ltx_Math" display="inline"><mi mathvariant="normal">ℏ</mi></math> is the reduced Planck’s constant. Here, in spherical coordinates,
+<math altimg="m31.png" altimg-height="21px" altimg-valign="-2px" altimg-width="27px" alttext="\mathrm{L}^{2}" class="ltx_Math" display="inline"><msup><mo href="./14.30#E12" title="angular momentum operator">L</mo><mn>2</mn></msup></math> is the <em class="ltx_emph ltx_font_italic">squared angular momentum operator</em>:</p>
+<table class="ltx_equation ltx_eqn_table" id="E12">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.12</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E12.png" altimg-height="111px" altimg-valign="-22px" altimg-width="424px" alttext="\mathrm{L}^{2}=-\hbar^{2}\left(\frac{1}{\sin\theta}\frac{\partial}{\partial%
+\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{{\sin}^%
+{2}\theta}\frac{{\partial}^{2}}{{\partial\phi}^{2}}\right)," class="ltx_Math" display="block"><mrow><mrow><msup><mo href="./14.30#E12" title="angular momentum operator">L</mo><mn>2</mn></msup><mo lspace="0.278em">=</mo><mrow><mo>−</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mfrac><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>θ</mi></mrow></mfrac><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>⁢</mo><mfrac><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>θ</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi href="./4.14#E1" title="sine function">sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mn>2</mn></msup><msup><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>ϕ</mi></mrow><mn href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">2</mn></msup></mfrac></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E12.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m30.png" altimg-height="18px" altimg-valign="-2px" altimg-width="17px" alttext="\mathrm{L}" class="ltx_Math" display="inline"><mo href="./14.30#E12" title="angular momentum operator">L</mo></math>:  angular momentum operator (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m47.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="4.14.html#E1" title="(4.14.1) ‣ §4.14 Definitions and Periodicity ‣ Trigonometric Functions ‣ Chapter 4 Elementary Functions"><math altimg="m45.png" altimg-height="18px" altimg-valign="-2px" altimg-width="44px" alttext="\sin\NVar{z}" class="ltx_Math" display="inline"><mrow><mi href="./4.14#E1" title="sine function">sin</mi><mo lspace="0.167em">⁡</mo><mi class="ltx_nvar" href="./4.1#t1.r4" title="complex variable">z</mi></mrow></math>: sine function</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="18.39.html#ii.p1" title="§18.39(ii) A 3D Separable Quantum System, the Hydrogen Atom ‣ §18.39 Applications in the Physical Sciences ‣ Applications ‣ Chapter 18 Orthogonal Polynomials"><span class="ltx_text ltx_ref_tag">§18.39(ii)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E12" title="">http://dlmf.nist.gov/14.30.E12</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E12.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E12.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E12.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">and <math altimg="m32.png" altimg-height="21px" altimg-valign="-5px" altimg-width="27px" alttext="\mathrm{L}_{z}" class="ltx_Math" display="inline"><msub><mi href="./14.30#E13" mathvariant="normal" title="𝑧 component of the angular momentum operator">L</mi><mi href="./14.30#E13" title="𝑧 component of the angular momentum operator">z</mi></msub></math> is the <math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./14.1#p1.t1.r2" title="complex variable">z</mi></math> <em class="ltx_emph ltx_font_italic">component of the angular momentum operator</em></p>
+<table class="ltx_equation ltx_eqn_table" id="E13">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="1"><span class="ltx_tag ltx_tag_equation ltx_align_left">14.30.13</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math altimg="E13.png" altimg-height="53px" altimg-valign="-20px" altimg-width="126px" alttext="\mathrm{L}_{z}=-\mathrm{i}\hbar\frac{\partial}{\partial\phi};" class="ltx_Math" display="block"><mrow><mrow><msub><mi href="./14.30#E13" mathvariant="normal" title="𝑧 component of the angular momentum operator">L</mi><mi href="./14.30#E13" title="𝑧 component of the angular momentum operator">z</mi></msub><mo>=</mo><mrow><mo>−</mo><mrow><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo href="./1.5#E3" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi>ϕ</mi></mrow></mfrac></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="4">
+<div class="ltx_metadata ltx_info" id="E13.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Defines:</dt>
+<dd><span class="ltx_text"><math altimg="m32.png" altimg-height="21px" altimg-valign="-5px" altimg-width="27px" alttext="\mathrm{L}_{z}" class="ltx_Math" display="inline"><msub><mi href="./14.30#E13" mathvariant="normal" title="𝑧 component of the angular momentum operator">L</mi><mi href="./14.30#E13" title="𝑧 component of the angular momentum operator">z</mi></msub></math>:  <math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./14.1#p1.t1.r2" title="complex variable">z</mi></math> component of the angular momentum operator (locally)</span></dd>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.9.html#E1" title="(1.9.1) ‣ §1.9(i) Complex Numbers ‣ §1.9 Calculus of a Complex Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m35.png" altimg-height="18px" altimg-valign="-2px" altimg-width="10px" alttext="\mathrm{i}" class="ltx_Math" display="inline"><mi href="./1.9#E1" mathvariant="normal" title="imaginary unit">i</mi></math>: imaginary unit</a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="31px" altimg-valign="-9px" altimg-width="29px" alttext="\frac{\partial\NVar{f}}{\partial\NVar{x}}" class="ltx_Math" display="inline"><mfrac><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">f</mi></mrow><mrow><mo href="./1.5#E3" rspace="0em" title="partial derivative of 𝑓 with respect to 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></mfrac></math>: partial derivative of <math altimg="m47.png" altimg-height="22px" altimg-valign="-6px" altimg-width="17px" alttext="f" class="ltx_Math" display="inline"><mi>f</mi></math> with respect to <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="1.5.html#E3" title="(1.5.3) ‣ §1.5(i) Partial Derivatives ‣ §1.5 Calculus of Two or More Variables ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m42.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\partial\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.5#E3" rspace="0em" title="partial differential of 𝑥">∂</mo><mi class="ltx_nvar">x</mi></mrow></math>: partial differential of <math altimg="m61.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a> and
+<a class="ltx_ref" href="14.1.html#p1.t1.r2" title="§14.1 Special Notation ‣ Notation ‣ Chapter 14 Legendre and Related Functions"><math altimg="m62.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./14.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a>
+</dd>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="errata/index.html#V1.1.0.I2.ix1.p1" title="In Other Changes ‣ Version 1.1.0 (December 15, 2020) ‣ Errata"><span class="ltx_text ltx_ref_tag">Erratum (V1.1.0) for  Additions</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/14.30.E13" title="">http://dlmf.nist.gov/14.30.E13</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/14.30.E13.tex">TeX</a>, <a href="http://dlmf.nist.gov/14.30.E13.pmml">pMML</a>, <a href="http://dlmf.nist.gov/14.30.E13.png">png</a>
+</dd>
+<dt>Addition (effective with 1.1.0):</dt>
+<dd>
+This equation was added.
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="14.30.html#iv.info" title="§14.30(iv) Applications ‣ §14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30(iv)</span></a>,
+<a class="ltx_ref" href="14.30.html#info" title="§14.30 Spherical and Spheroidal Harmonics ‣ Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">§14.30</span></a> and
+<a class="ltx_ref" href="14.html#info" title="Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_tag">Ch.14</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">see <cite class="ltx_cite ltx_citemacro_citet">Edmonds (<a class="ltx_ref" href="bib/E.html#bib727" title="Angular Momentum in Quantum Mechanics">1974</a>, §2.5)</cite>.</p>
+</div>
+<div class="ltx_para" id="iv.p3">
+<p class="ltx_p">For applications in geophysics see
+<cite class="ltx_cite ltx_citemacro_citet">Stacey (<a class="ltx_ref" href="bib/S.html#bib2153" title="Physics of the Earth">1977</a>, §§4.2, 6.3, and 8.1)</cite>.
+</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="14.29.html" rel="prev" title="In Complex Arguments ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14.29 </span>Generalizations</span></a><a class="ltx_ref" href="14.31.html" rel="next" title="In Applications ‣ Chapter 14 Legendre and Related Functions"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">14.31 </span>Other Applications</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>

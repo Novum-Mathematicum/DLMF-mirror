@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>DLMF: §6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals</title>
+<link href="style/DLMF-16.png" rel="shortcut icon" type="image/png"/>
+<script type="text/javascript"><!--
+	var PATH="DLMF:/6.18";
+	var ROOT="./";
+      //--></script>
+<script src="style/jquery.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/jquery.leaveNotice.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+<script src="style/DLMF.js" type="text/javascript"><!-- non-empty so ie6 will accept it --></script>
+
+<link href="style/LaTeXML.css" rel="stylesheet" type="text/css"/>
+<link href="style/DLMF.css" rel="stylesheet" type="text/css"/>
+<link href="style/print.css" media="print" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="index.html" rel="top" title="DLMF"/>
+<link href="about/notices.html" rel="copyright" title="Copyright"/>
+<link href="search/search.html" rel="search" title="Search"/>
+<link class="ltx_help" href="help/index.html" rel="help" title="Help"/>
+<link href="6.html#PT4" rel="up" title="Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.html" rel="up up" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="index.html" rel="start" title=""/>
+<link href="6.17.html" rel="prev" title="§6.17 Physical Applications ‣ Applications ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.19.html" rel="next" title="§6.19 Tables ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.1.html" rel="section" title="§6.1 Special Notation ‣ Notation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.2.html" rel="section" title="§6.2 Definitions and Interrelations ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.3.html" rel="section" title="§6.3 Graphics ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.4.html" rel="section" title="§6.4 Analytic Continuation ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.5.html" rel="section" title="§6.5 Further Interrelations ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.6.html" rel="section" title="§6.6 Power Series ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.7.html" rel="section" title="§6.7 Integral Representations ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.8.html" rel="section" title="§6.8 Inequalities ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.9.html" rel="section" title="§6.9 Continued Fraction ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.10.html" rel="section" title="§6.10 Other Series Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.11.html" rel="section" title="§6.11 Relations to Other Functions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.12.html" rel="section" title="§6.12 Asymptotic Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.13.html" rel="section" title="§6.13 Zeros ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.14.html" rel="section" title="§6.14 Integrals ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.15.html" rel="section" title="§6.15 Sums ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.16.html" rel="section" title="§6.16 Mathematical Applications ‣ Applications ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.17.html" rel="section" title="§6.17 Physical Applications ‣ Applications ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.19.html" rel="section" title="§6.19 Tables ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.20.html" rel="section" title="§6.20 Approximations ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="6.21.html" rel="section" title="§6.21 Software ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="front/foreword.html" rel="document" title="Foreword"/>
+<link href="front/preface.html" rel="document" title="Preface"/>
+<link href="front/introduction.html" rel="document" title="Mathematical Introduction"/>
+<link href="1.html" rel="chapter" title="Chapter 1 Algebraic and Analytic Methods"/>
+<link href="2.html" rel="chapter" title="Chapter 2 Asymptotic Approximations"/>
+<link href="3.html" rel="chapter" title="Chapter 3 Numerical Methods"/>
+<link href="4.html" rel="chapter" title="Chapter 4 Elementary Functions"/>
+<link href="5.html" rel="chapter" title="Chapter 5 Gamma Function"/>
+<link href="6.html" rel="chapter" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"/>
+<link href="7.html" rel="chapter" title="Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"/>
+<link href="8.html" rel="chapter" title="Chapter 8 Incomplete Gamma and Related Functions"/>
+<link href="9.html" rel="chapter" title="Chapter 9 Airy and Related Functions"/>
+<link href="10.html" rel="chapter" title="Chapter 10 Bessel Functions"/>
+<link href="11.html" rel="chapter" title="Chapter 11 Struve and Related Functions"/>
+<link href="12.html" rel="chapter" title="Chapter 12 Parabolic Cylinder Functions"/>
+<link href="13.html" rel="chapter" title="Chapter 13 Confluent Hypergeometric Functions"/>
+<link href="14.html" rel="chapter" title="Chapter 14 Legendre and Related Functions"/>
+<link href="15.html" rel="chapter" title="Chapter 15 Hypergeometric Function"/>
+<link href="16.html" rel="chapter" title="Chapter 16 Generalized Hypergeometric Functions and Meijer 𝐺-Function"/>
+<link href="17.html" rel="chapter" title="Chapter 17 𝑞-Hypergeometric and Related Functions"/>
+<link href="18.html" rel="chapter" title="Chapter 18 Orthogonal Polynomials"/>
+<link href="19.html" rel="chapter" title="Chapter 19 Elliptic Integrals"/>
+<link href="20.html" rel="chapter" title="Chapter 20 Theta Functions"/>
+<link href="21.html" rel="chapter" title="Chapter 21 Multidimensional Theta Functions"/>
+<link href="22.html" rel="chapter" title="Chapter 22 Jacobian Elliptic Functions"/>
+<link href="23.html" rel="chapter" title="Chapter 23 Weierstrass Elliptic and Modular Functions"/>
+<link href="24.html" rel="chapter" title="Chapter 24 Bernoulli and Euler Polynomials"/>
+<link href="25.html" rel="chapter" title="Chapter 25 Zeta and Related Functions"/>
+<link href="26.html" rel="chapter" title="Chapter 26 Combinatorial Analysis"/>
+<link href="27.html" rel="chapter" title="Chapter 27 Functions of Number Theory"/>
+<link href="28.html" rel="chapter" title="Chapter 28 Mathieu Functions and Hill’s Equation"/>
+<link href="29.html" rel="chapter" title="Chapter 29 Lamé Functions"/>
+<link href="30.html" rel="chapter" title="Chapter 30 Spheroidal Wave Functions"/>
+<link href="31.html" rel="chapter" title="Chapter 31 Heun Functions"/>
+<link href="32.html" rel="chapter" title="Chapter 32 Painlevé Transcendents"/>
+<link href="33.html" rel="chapter" title="Chapter 33 Coulomb Functions"/>
+<link href="34.html" rel="chapter" title="Chapter 34 3⁢𝑗,6⁢𝑗,9⁢𝑗 Symbols"/>
+<link href="35.html" rel="chapter" title="Chapter 35 Functions of Matrix Argument"/>
+<link href="36.html" rel="chapter" title="Chapter 36 Integrals with Coalescing Saddles"/>
+<link href="bib/index.html" rel="bibliography" title="Bibliography"/>
+<link href="idx/index.html" rel="index" title="Index"/>
+<link href="not/index.html" rel="glossary" title="Notations"/>
+<link href="lof/index.html" rel="document" title="List of Figures"/>
+<link href="lot/index.html" rel="document" title="List of Tables"/>
+<link href="software/index.html" rel="document" title="Software Index"/>
+<link href="errata/index.html" rel="document" title="Errata"/>
+<link href="help/index.html" rel="document" title="Need Help?"/>
+<link href="search/index.html" rel="document" title="Advanced Search"/>
+<link href="about/index.html" rel="document" title="About the Project"/>
+<meta content="auxiliary functions for sine and cosine integrals, computation, cosine integrals, exponential integrals, sine integrals, zeros" lang="en" name="keywords"/>
+</head>
+<body class="color_default textfont_default titlefont_default fontsize_default navbar_default">
+<div class="ltx_page_navbar">
+<div class="ltx_page_navlogo"><a href="index.html" title="Digital Library of Mathematical Functions"><span>DLMF</span></a></div>
+<div class="ltx_page_navitems">
+<form action="search/search.html" method="get">
+<ul>
+<li><a href="idx/index.html">Index</a></li>
+<li><a href="not/index.html">Notations</a></li>
+<li><small><input class="ltx_page_navitem_search" name="q" size="6" type="text" value=""/><button type="submit">Search</button></small></li>
+<li><a class="ltx_help" href="help/index.html">Help?</a></li>
+<li><a href="help/cite.html">Citing</a></li>
+<li><a class="ltx_customize" href="help/customize.html">Customize</a></li>
+<li id="showinfo"><a href="6.18.html" onclick="showInfo(); return false;" title="Show Annotations">Annotate</a></li>
+<li id="hideinfo"><a href="6.18.html" onclick="hideInfo(); return false;">UnAnnotate</a></li>
+</ul>
+</form>
+</div>
+<div class="ltx_page_navsponsors">
+<div><a class="ltx_page_navabout" href="about/index.html">About the Project</a></div>
+</div>
+</div>
+<div class="ltx_page_main">
+<div class="ltx_page_header">
+<a class="ltx_ref" href="6.html" rel="up up" title=""><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Exponential, Logarithmic, Sine, and <span class="ltx_text"> </span>Cosine Integrals</span></a><a class="ltx_ref" href="6.html#PT4" rel="up" title="In Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_title">Computation</span></a><a class="ltx_ref" href="6.17.html" rel="prev" title="In Applications ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.17 </span>Physical Applications</span></a><a class="ltx_ref" href="6.19.html" rel="next" title="In Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.19 </span>Tables</span></a>
+</div>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_leqno">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">§6.18 </span>Methods of Computation</h1>
+<div class="ltx_metadata ltx_info" id="info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cosine%20integrals">cosine integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=exponential%20integrals">exponential integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sine%20integrals">sine integrals</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="6.18.html" title="">http://dlmf.nist.gov/6.18</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<h6>Contents</h6>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry"><a href="6.18.html#i"><span class="ltx_tag ltx_tag_subsection">§6.18(i) </span>Main Functions</a></li>
+<li class="ltx_tocentry"><a href="6.18.html#ii"><span class="ltx_tag ltx_tag_subsection">§6.18(ii) </span>Auxiliary Functions</a></li>
+<li class="ltx_tocentry"><a href="6.18.html#iii"><span class="ltx_tag ltx_tag_subsection">§6.18(iii) </span>Zeros</a></li>
+<li class="ltx_tocentry"><a href="6.18.html#iv"><span class="ltx_tag ltx_tag_subsection">§6.18(iv) </span>Other References</a></li>
+</ol>
+<section class="ltx_subsection" id="i">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§6.18(i) </span>Main Functions</h2>
+<div class="ltx_metadata ltx_info" id="i.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd>
+<a class="ltx_ref" href="3.10.html#Px8.p4" title="Steed’s Algorithm ‣ §3.10(iii) Numerical Evaluation of Continued Fractions ‣ §3.10 Continued Fractions ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">§3.10(iii)</span></a>,
+<a class="ltx_ref" href="7.22.html#i.p1" title="§7.22(i) Main Functions ‣ §7.22 Methods of Computation ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.22(i)</span></a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/6.18.i" title="">http://dlmf.nist.gov/6.18.i</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.18.html#info" title="§6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18</span></a> and
+<a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="i.p1">
+<p class="ltx_p">For small or moderate values of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r1" title="real variable">x</mi></math> and <math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="26px" alttext="|z|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow></math>, the expansion in power series
+(§<a class="ltx_ref" href="6.6.html" title="§6.6 Power Series ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.6</span></a>) or in series of spherical Bessel functions
+(§<a class="ltx_ref" href="6.10.html#ii" title="§6.10(ii) Expansions in Series of Spherical Bessel Functions ‣ §6.10 Other Series Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.10(ii)</span></a>) can be used. For large <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r1" title="real variable">x</mi></math> or <math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="26px" alttext="|z|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow></math> these series
+suffer from slow convergence or cancellation (or both). However, this problem
+is less severe for the series of spherical Bessel functions because of their
+more rapid rate of convergence, and also (except in the case of
+(<a class="ltx_ref" href="6.10.html#E6" title="(6.10.6) ‣ §6.10(ii) Expansions in Series of Spherical Bessel Functions ‣ §6.10 Other Series Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.10.6</span></a>)) absence of cancellation when <math altimg="m35.png" altimg-height="13px" altimg-valign="-2px" altimg-width="54px" alttext="z=x" class="ltx_Math" display="inline"><mrow><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>=</mo><mi href="./6.1#p1.t1.r1" title="real variable">x</mi></mrow></math> (<math altimg="m14.png" altimg-height="18px" altimg-valign="-3px" altimg-width="37px" alttext="&gt;0" class="ltx_Math" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>0</mn></mrow></math>).</p>
+</div>
+<div class="ltx_para" id="i.p2">
+<p class="ltx_p">For large <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r1" title="real variable">x</mi></math> and <math altimg="m21.png" altimg-height="25px" altimg-valign="-7px" altimg-width="26px" alttext="\left|z\right|" class="ltx_Math" display="inline"><mrow><mo>|</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>|</mo></mrow></math>, expansions in inverse factorial series
+(§<a class="ltx_ref" href="6.10.html#i" title="§6.10(i) Inverse Factorial Series ‣ §6.10 Other Series Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.10(i)</span></a>) or asymptotic expansions (§<a class="ltx_ref" href="6.12.html" title="§6.12 Asymptotic Expansions ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.12</span></a>) are
+available. The attainable accuracy of the asymptotic expansions can be
+increased considerably by exponential improvement. Also, other ranges of
+<math altimg="m29.png" altimg-height="22px" altimg-valign="-6px" altimg-width="41px" alttext="\operatorname{ph}z" class="ltx_Math" display="inline"><mrow><mi href="./1.9#E7" title="phase">ph</mi><mo lspace="0.167em">⁡</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi></mrow></math> can be covered by use of the continuation formulas of
+§<a class="ltx_ref" href="6.4.html" title="§6.4 Analytic Continuation ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.4</span></a>.</p>
+</div>
+<div class="ltx_para" id="i.p3">
+<p class="ltx_p">Quadrature of the integral representations is another effective method. For
+example, the Gauss–Laguerre formula (§<a class="ltx_ref" href="3.5.html#v" title="§3.5(v) Gauss Quadrature ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(v)</span></a>) can be applied to
+(<a class="ltx_ref" href="6.2.html#E2" title="(6.2.2) ‣ §6.2(i) Exponential and Logarithmic Integrals ‣ §6.2 Definitions and Interrelations ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.2.2</span></a>); see <cite class="ltx_cite ltx_citemacro_citet">Todd (<a class="ltx_ref" href="bib/T.html#bib2256" title="Evaluation of the exponential integral for large complex arguments">1954</a>)</cite> and <cite class="ltx_cite ltx_citemacro_citet">Tseng and Lee (<a class="ltx_ref" href="bib/T.html#bib2283" title="Numerical evaluation of exponential integral: Theis well function approximation">1998</a>)</cite>. For
+an application of the Gauss–Legendre formula (§<a class="ltx_ref" href="3.5.html#v" title="§3.5(v) Gauss Quadrature ‣ §3.5 Quadrature ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.5(v)</span></a>) see
+<cite class="ltx_cite ltx_citemacro_citet">Tooper and Mark (<a class="ltx_ref" href="bib/T.html#bib2263" title="Simplified calculation of ⁢ Ei ( x ) for positive arguments, and a short table of ⁢ Shi ( x )">1968</a>)</cite>.</p>
+</div>
+<div class="ltx_para" id="i.p4">
+<p class="ltx_p">Lastly, the continued fraction (<a class="ltx_ref" href="6.9.html#E1" title="(6.9.1) ‣ §6.9 Continued Fraction ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.9.1</span></a>) can be used if <math altimg="m37.png" altimg-height="25px" altimg-valign="-7px" altimg-width="26px" alttext="|z|" class="ltx_Math" display="inline"><mrow><mo stretchy="false">|</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo stretchy="false">|</mo></mrow></math> is
+bounded away from the origin. Convergence becomes slow when <math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi></math> is near the
+negative real axis, however.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="ii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§6.18(ii) </span>Auxiliary Functions</h2>
+<div class="ltx_metadata ltx_info" id="ii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=auxiliary%20functions%20for%20sine%20and%20cosine%20integrals">auxiliary functions for sine and cosine integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/6.18.ii" title="">http://dlmf.nist.gov/6.18.ii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.18.html#info" title="§6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18</span></a> and
+<a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="ii.p1">
+<p class="ltx_p">Power series, asymptotic expansions, and quadrature can also be used to compute
+the functions <math altimg="m25.png" altimg-height="25px" altimg-valign="-7px" altimg-width="42px" alttext="\mathrm{f}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./6.2#E17" mathvariant="normal" title="auxiliary function for sine and cosine integrals">f</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m27.png" altimg-height="25px" altimg-valign="-7px" altimg-width="45px" alttext="\mathrm{g}\left(z\right)" class="ltx_Math" display="inline"><mrow><mi href="./6.2#E18" mathvariant="normal" title="auxiliary function for sine and cosine integrals">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow></math>. In addition,
+<cite class="ltx_cite ltx_citemacro_citet">Acton (<a class="ltx_ref" href="bib/index.html#bib27" title="Recurrence relations for the Fresnel integral ∫ 0 ∞ ⁢ exp ( - ⁢ c t ) d t ⁢ t ( + 1 t 2 ) and similar integrals">1974</a>)</cite> developed a recurrence procedure, as follows. For
+<math altimg="m31.png" altimg-height="21px" altimg-valign="-6px" altimg-width="127px" alttext="n=0,1,2,\dots" class="ltx_Math" display="inline"><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, define</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E1">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex1">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="3"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">6.18.1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m8.png" altimg-height="23px" altimg-valign="-5px" altimg-width="33px" alttext="\displaystyle A_{n}" class="ltx_Math" display="inline"><msub><mi>A</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m5.png" altimg-height="64px" altimg-valign="-22px" altimg-width="261px" alttext="\displaystyle=\int_{0}^{\infty}\frac{te^{-zt}}{1+t^{2}}\left(\frac{t^{2}}{1+t^%
+{2}}\right)^{n}\,\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>t</mi><mo>⁢</mo><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mn>2</mn></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex2">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m10.png" altimg-height="23px" altimg-valign="-5px" altimg-width="34px" alttext="\displaystyle B_{n}" class="ltx_Math" display="inline"><msub><mi>B</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m4.png" altimg-height="64px" altimg-valign="-22px" altimg-width="261px" alttext="\displaystyle=\int_{0}^{\infty}\frac{e^{-zt}}{1+t^{2}}\left(\frac{t^{2}}{1+t^{%
+2}}\right)^{n}\,\mathrm{d}t," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mn>2</mn></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex3">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m12.png" altimg-height="23px" altimg-valign="-5px" altimg-width="33px" alttext="\displaystyle C_{n}" class="ltx_Math" display="inline"><msub><mi>C</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m6.png" altimg-height="64px" altimg-valign="-22px" altimg-width="242px" alttext="\displaystyle=\int_{0}^{\infty}e^{-zt}\left(\frac{t^{2}}{1+t^{2}}\right)^{n}\,%
+\mathrm{d}t." class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo href="./1.4#iv" title="integral">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi><mrow><mo>−</mo><mrow><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mn>2</mn></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>)</mo></mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msup><mo lspace="0em">⁢</mo><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E1.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m22.png" altimg-height="18px" altimg-valign="-2px" altimg-width="28px" alttext="\,\mathrm{d}\NVar{x}" class="ltx_Math" display="inline"><mrow><mo href="./1.4#iv" rspace="0em" title="differential of 𝑥">d</mo><mi class="ltx_nvar">x</mi></mrow></math>: differential of <math altimg="m34.png" altimg-height="13px" altimg-valign="-2px" altimg-width="16px" alttext="x" class="ltx_Math" display="inline"><mi>x</mi></math></a>,
+<a class="ltx_ref" href="4.2.html#E11" title="(4.2.11) ‣ §4.2(ii) Logarithms to a General Base 𝑎 ‣ §4.2 Definitions ‣ Logarithm, Exponential, Powers ‣ Chapter 4 Elementary Functions"><math altimg="m23.png" altimg-height="13px" altimg-valign="-2px" altimg-width="14px" alttext="\mathrm{e}" class="ltx_Math" display="inline"><mi href="./4.2#E11" mathvariant="normal" title="base of natural logarithm">e</mi></math>: base of natural logarithm</a>,
+<a class="ltx_ref" href="1.4.html#iv" title="§1.4(iv) Indefinite Integrals ‣ §1.4 Calculus of One Variable ‣ Topics of Discussion ‣ Chapter 1 Algebraic and Analytic Methods"><math altimg="m20.png" altimg-height="27px" altimg-valign="-8px" altimg-width="18px" alttext="\int" class="ltx_Math" display="inline"><mo href="./1.4#iv" title="integral">∫</mo></math>: integral</a>,
+<a class="ltx_ref" href="6.1.html#p1.t1.r2" title="§6.1 Special Notation ‣ Notation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="6.1.html#p1.t1.r3" title="§6.1 Special Notation ‣ Notation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><math altimg="m33.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/6.18.E1" title="">http://dlmf.nist.gov/6.18.E1</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/6.18.E1a.tex">TeX</a>, <a href="http://dlmf.nist.gov/6.18.E1b.tex">TeX</a>, <a href="http://dlmf.nist.gov/6.18.E1c.tex">TeX</a>, <a href="http://dlmf.nist.gov/6.18.E1a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/6.18.E1b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/6.18.E1c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/6.18.E1a.png">png</a>, <a href="http://dlmf.nist.gov/6.18.E1b.png">png</a>, <a href="http://dlmf.nist.gov/6.18.E1c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.18.html#ii.info" title="§6.18(ii) Auxiliary Functions ‣ §6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18(ii)</span></a>,
+<a class="ltx_ref" href="6.18.html#info" title="§6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18</span></a> and
+<a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p">Then <math altimg="m24.png" altimg-height="25px" altimg-valign="-7px" altimg-width="95px" alttext="\mathrm{f}\left(z\right)=B_{0}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./6.2#E17" mathvariant="normal" title="auxiliary function for sine and cosine integrals">f</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>B</mi><mn>0</mn></msub></mrow></math>, <math altimg="m26.png" altimg-height="25px" altimg-valign="-7px" altimg-width="98px" alttext="\mathrm{g}\left(z\right)=A_{0}" class="ltx_Math" display="inline"><mrow><mrow><mi href="./6.2#E18" mathvariant="normal" title="auxiliary function for sine and cosine integrals">g</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>)</mo></mrow></mrow><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub></mrow></math>, and</p>
+<table class="ltx_equationgroup ltx_eqn_table" id="E2">
+<tbody>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex4">
+<td class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left" rowspan="4"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">6.18.2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m7.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="\displaystyle A_{n-1}" class="ltx_Math" display="inline"><msub><mi>A</mi><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m1.png" altimg-height="44px" altimg-valign="-16px" altimg-width="140px" alttext="\displaystyle=A_{n}+\frac{z}{2n}C_{n}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>A</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mrow><mn>2</mn><mo>⁢</mo><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>C</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex5">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m9.png" altimg-height="25px" altimg-valign="-7px" altimg-width="55px" alttext="\displaystyle B_{n-1}" class="ltx_Math" display="inline"><msub><mi>B</mi><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math altimg="m3.png" altimg-height="51px" altimg-valign="-18px" altimg-width="173px" alttext="\displaystyle=\frac{2nB_{n}+zA_{n-1}}{2n-1}," class="ltx_Math" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>⁢</mo><msub><mi>B</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub></mrow><mo>+</mo><mrow><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi><mo>⁢</mo><msub><mi>A</mi><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></mrow><mo>−</mo><mn>1</mn></mrow></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline" id="Ex6">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math altimg="m11.png" altimg-height="25px" altimg-valign="-7px" altimg-width="54px" alttext="\displaystyle C_{n-1}" class="ltx_Math" display="inline"><msub><mi>C</mi><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell">
+<math altimg="m2.png" altimg-height="25px" altimg-valign="-7px" altimg-width="128px" alttext="\displaystyle=C_{n}+B_{n-1}" class="ltx_Math" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>C</mi><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></msub><mo>+</mo><msub><mi>B</mi><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mrow></math>,</td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row"><td class="ltx_eqn_cell ltx_align_right" colspan="4"><span class="ltx_constraint"><math altimg="m32.png" altimg-height="21px" altimg-valign="-6px" altimg-width="137px" alttext="n=1,2,3,\dots." class="ltx_Math" display="inline"><mrow><mrow><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></span></td></tr>
+<tr><td class="ltx_align_right" colspan="5">
+<div class="ltx_metadata ltx_info" id="E2.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Symbols:</dt>
+<dd>
+<a class="ltx_ref" href="6.1.html#p1.t1.r2" title="§6.1 Special Notation ‣ Notation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><math altimg="m36.png" altimg-height="13px" altimg-valign="-2px" altimg-width="15px" alttext="z" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi></math>:  complex variable</a> and
+<a class="ltx_ref" href="6.1.html#p1.t1.r3" title="§6.1 Special Notation ‣ Notation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><math altimg="m33.png" altimg-height="13px" altimg-valign="-2px" altimg-width="17px" alttext="n" class="ltx_Math" display="inline"><mi href="./6.1#p1.t1.r3" title="nonnegative integer">n</mi></math>:  nonnegative integer</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/6.18.E2" title="">http://dlmf.nist.gov/6.18.E2</a></dd>
+<dt>Encodings:</dt>
+<dd>
+<a href="http://dlmf.nist.gov/6.18.E2a.tex">TeX</a>, <a href="http://dlmf.nist.gov/6.18.E2b.tex">TeX</a>, <a href="http://dlmf.nist.gov/6.18.E2c.tex">TeX</a>, <a href="http://dlmf.nist.gov/6.18.E2a.pmml">pMML</a>, <a href="http://dlmf.nist.gov/6.18.E2b.pmml">pMML</a>, <a href="http://dlmf.nist.gov/6.18.E2c.pmml">pMML</a>, <a href="http://dlmf.nist.gov/6.18.E2a.png">png</a>, <a href="http://dlmf.nist.gov/6.18.E2b.png">png</a>, <a href="http://dlmf.nist.gov/6.18.E2c.png">png</a>
+</dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.18.html#ii.info" title="§6.18(ii) Auxiliary Functions ‣ §6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18(ii)</span></a>,
+<a class="ltx_ref" href="6.18.html#info" title="§6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18</span></a> and
+<a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+</td></tr>
+</tbody>
+</table>
+<p class="ltx_p"><math altimg="m15.png" altimg-height="21px" altimg-valign="-5px" altimg-width="29px" alttext="A_{0}" class="ltx_Math" display="inline"><msub><mi>A</mi><mn>0</mn></msub></math>, <math altimg="m16.png" altimg-height="21px" altimg-valign="-5px" altimg-width="29px" alttext="B_{0}" class="ltx_Math" display="inline"><msub><mi>B</mi><mn>0</mn></msub></math>, and <math altimg="m18.png" altimg-height="21px" altimg-valign="-5px" altimg-width="28px" alttext="C_{0}" class="ltx_Math" display="inline"><msub><mi>C</mi><mn>0</mn></msub></math> can be computed by Miller’s algorithm
+(§<a class="ltx_ref" href="3.6.html#iii" title="§3.6(iii) Miller’s Algorithm ‣ §3.6 Linear Difference Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.6(iii)</span></a>), starting with initial values
+<math altimg="m13.png" altimg-height="25px" altimg-valign="-7px" altimg-width="226px" alttext="(A_{N},B_{N},C_{N})=(1,0,0)" class="ltx_Math" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>N</mi></msub><mo>,</mo><msub><mi>B</mi><mi>N</mi></msub><mo>,</mo><msub><mi>C</mi><mi>N</mi></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, say, where
+
+<math altimg="m19.png" altimg-height="18px" altimg-valign="-2px" altimg-width="23px" alttext="N" class="ltx_Math" display="inline"><mi>N</mi></math> is an arbitrary large integer, and normalizing via <math altimg="m17.png" altimg-height="25px" altimg-valign="-7px" altimg-width="87px" alttext="C_{0}=1/z" class="ltx_Math" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi href="./6.1#p1.t1.r2" title="complex variable">z</mi></mrow></mrow></math>.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iii">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§6.18(iii) </span>Zeros</h2>
+<div class="ltx_metadata ltx_info" id="iii.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Keywords:</dt>
+<dd>
+<a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=computation">computation</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=cosine%20integrals">cosine integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=sine%20integrals">sine integrals</a>, <a class="ltx_keyword" href="http://dlmf.nist.gov/search/search?q=zeros">zeros</a>
+</dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/6.18.iii" title="">http://dlmf.nist.gov/6.18.iii</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.18.html#info" title="§6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18</span></a> and
+<a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iii.p1">
+<p class="ltx_p">Zeros of <math altimg="m28.png" altimg-height="25px" altimg-valign="-7px" altimg-width="57px" alttext="\operatorname{Ci}\left(x\right)" class="ltx_Math" display="inline"><mrow><mi href="./6.2#E11" title="cosine integral">Ci</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./6.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> and <math altimg="m30.png" altimg-height="25px" altimg-valign="-7px" altimg-width="50px" alttext="\operatorname{si}\left(x\right)" class="ltx_Math" display="inline"><mrow><mi href="./6.2#E10" title="sine integral">si</mi><mo>⁡</mo><mrow><mo>(</mo><mi href="./6.1#p1.t1.r1" title="real variable">x</mi><mo>)</mo></mrow></mrow></math> can be computed to high precision by
+Newton’s rule (§<a class="ltx_ref" href="3.8.html#ii" title="§3.8(ii) Newton’s Rule ‣ §3.8 Nonlinear Equations ‣ Areas ‣ Chapter 3 Numerical Methods"><span class="ltx_text ltx_ref_tag">3.8(ii)</span></a>), using values supplied by the
+asymptotic expansion (<a class="ltx_ref" href="6.13.html#E2" title="(6.13.2) ‣ §6.13 Zeros ‣ Properties ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">6.13.2</span></a>) as initial approximations.</p>
+</div>
+</section>
+<section class="ltx_subsection" id="iv">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">§6.18(iv) </span>Other References</h2>
+<div class="ltx_metadata ltx_info" id="iv.info">
+<span class="ltx_infoicon ltx_icon" href="" title="Show Annotations"><span class="ltx_font_bold">ⓘ</span></span>
+<div class="ltx_infocontent">
+<dl>
+<dt>Referenced by:</dt>
+<dd><a class="ltx_ref" href="7.22.html#i.p1" title="§7.22(i) Main Functions ‣ §7.22 Methods of Computation ‣ Computation ‣ Chapter 7 Error Functions, Dawson’s and Fresnel Integrals"><span class="ltx_text ltx_ref_tag">§7.22(i)</span></a></dd>
+<dt>Permalink:</dt>
+<dd><a class="ltx_ref" href="http://dlmf.nist.gov/6.18.iv" title="">http://dlmf.nist.gov/6.18.iv</a></dd>
+<dt>See also:</dt>
+<dd>Annotations for <a class="ltx_ref" href="6.18.html#info" title="§6.18 Methods of Computation ‣ Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">§6.18</span></a> and
+<a class="ltx_ref" href="6.html#info" title="Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_tag">Ch.6</span></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="ltx_para" id="iv.p1">
+<p class="ltx_p">For a comprehensive survey of computational methods for the functions treated
+in this chapter, see <cite class="ltx_cite ltx_citemacro_citet">van der Laan and Temme (<a class="ltx_ref" href="bib/V.html#bib2310" title="Calculation of Special Functions: The Gamma Function, the Exponential Integrals and Error-Like Functions">1984</a>, Ch. IV)</cite>.</p>
+</div>
+</section>
+</section>
+</div>
+<div class="ltx_page_footer">
+<div class="ltx_siblings">
+<a class="ltx_ref" href="6.17.html" rel="prev" title="In Applications ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.17 </span>Physical Applications</span></a><a class="ltx_ref" href="6.19.html" rel="next" title="In Computation ‣ Chapter 6 Exponential, Logarithmic, Sine, and Cosine Integrals"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.19 </span>Tables</span></a>
+</div>
+<div class="ltx_footer_links ltx_centering">
+<a href="about/notices.html">© 2010–2025 NIST</a> / <a href="about/notices.html#S2">Disclaimer</a> / <a href="mailto:DLMF-feedback@nist.gov">Feedback</a>;
+ Version 1.2.4;
+Release date 2025-03-15.</div>
+<span id="pagesettings"></span>
+<div class="ltx_nist_logo"><a href="http://www.nist.gov/"><img alt="NIST" src="style/nistidc.png" width="500"/></a></div>
+<div class="ltx_nist_links ltx_align_right">
+<a href="https://www.nist.gov/privacy-policy">Site Privacy</a> <a href="https://www.nist.gov/oism/accessibility">Accessibility</a> <a href="https://www.nist.gov/privacy">Privacy Program</a> <a href="https://www.nist.gov/oism/copyrights">Copyrights</a> <a href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a> <a href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a> <a href="https://www.nist.gov/foia">FOIA</a> <a href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a> <a href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a> <a href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a> <a href="https://www.commerce.gov/">Commerce.gov</a> <a href="http://www.science.gov/">Science.gov</a> <a href="http://www.usa.gov/">USA.gov</a>
+</div>
+</div>
+</div>
+</body>
+</html>
